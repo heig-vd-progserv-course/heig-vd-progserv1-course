@@ -1,0 +1,7 @@
+allowLocalFiles: true
+html: true
+jpegQuality: 100
+lang: fr
+options:
+  markdown:
+    breaks: false
