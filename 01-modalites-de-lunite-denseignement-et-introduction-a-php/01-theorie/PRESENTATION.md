@@ -112,7 +112,7 @@ _paginate: false
 Selon vos préférences, vous pouvez utiliser l'un des canaux de communication
 suivants pour toute question relative au cours :
 
-- En personne, durant les séances de cours ou en dehors
+- En personne, durant les sessions de cours ou en dehors
 - Par e-mail
   ([ludovic.delafontaine@heig-vd.ch](mailto:ludovic.delafontaine@heig-vd.ch))
 - Microsoft Teams

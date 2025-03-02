@@ -72,6 +72,13 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Lister les modalités d'évaluation
 - TODO
 
+De plus, les personnes qui étudient devraient avoir pu :
+
+- Installer l'environnement de développement
+- Initialiser un projet PHP
+- Créer la structure du mini-projet
+- Créer les fichiers du mini-projet
+
 **Méthodes d'enseignement et d'apprentissage**
 
 Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
