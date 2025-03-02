@@ -9,7 +9,7 @@
 - [Installation de l'environnement de développement](#installation-de-lenvironnement-de-développement)
   - [Installation d'un éditeur de code](#installation-dun-éditeur-de-code)
   - [Installation de PHP](#installation-de-php)
-- [Création du projet PHP](#création-du-projet-php)
+- [Initialisation du projet PHP](#initialisation-du-projet-php)
   - [Création de la structure de notre projet](#création-de-la-structure-de-notre-projet)
   - [Création des fichiers de notre projet](#création-des-fichiers-de-notre-projet)
 - [Aller plus loin](#aller-plus-loin)
@@ -87,6 +87,13 @@ C'est parti !
 
 ## Objectifs de la session
 
+À l'issue de cette session, les personnes qui étudient devraient avoir pu :
+
+- Installer l'environnement de développement
+- Initialiser un projet PHP
+- Créer la structure du mini-projet
+- Créer les fichiers du mini-projet
+
 ## Installation de l'environnement de développement
 
 ### Installation d'un éditeur de code
@@ -105,7 +112,7 @@ C'est parti !
 
 #### Installation sur Linux
 
-## Création du projet PHP
+## Initialisation du projet PHP
 
 ### Création de la structure de notre projet
 
