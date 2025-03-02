@@ -28,14 +28,14 @@ eval "$MARP_CMD --parallel $(nproc) --pdf **/*/PRESENTATION.md"
 
 # Rename files
 echo "Renaming HTML files to 'index.html'..."
-find . -mindepth 2 -maxdepth 2 -type f -name "PRESENTATION.html" -exec sh -c '
+find . -mindepth 3 -maxdepth 3 -type f -name "PRESENTATION.html" -exec sh -c '
     mv "$1" "$(dirname "$1")/index.html"
 ' sh {} \;
 
 echo "Renaming presentation files to match parent directory..."
-find . -mindepth 2 -maxdepth 2 -type f -name "PRESENTATION.pdf" -exec sh -c '
+find . -mindepth 3 -maxdepth 3 -type f -name "PRESENTATION.pdf" -exec sh -c '
     for file; do
-        chapter_name=$(basename "$(dirname "$file")")
+        chapter_name=$(basename "$(dirname "$(dirname "$file")")")
         mv "$file" "$(dirname "$file")/$chapter_name-presentation.pdf"
     done
 ' sh {} +
