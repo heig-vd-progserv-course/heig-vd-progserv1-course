@@ -13,11 +13,12 @@ Suisse !
 À l'issue de cette unité d'enseignement, la personne qui étudie sera capable de
 :
 
-- Comprendre les bases de PHP et son rôle dans le développement web.
-- Écrire un code PHP propre, organisé et sécurisé.
-- Manipuler une base de données SQLite pour stocker et récupérer des données.
-- Appliquer les bonnes pratiques en accessibilité et en sécurité web.
-- Concevoir et développer une application web simple et fonctionnelle.
+- Comprendre les bases de PHP et son rôle dans le monde web.
+- Écrire un code PHP propre et organisé.
+- Gérer les formulaires HTML et les données qu'ils contiennent de manière sûre.
+- Persister des données dans une base de données SQLite.
+- Implémenter des concepts de programmation orientée objet.
+- Gérer les préférences utilisateur à l'aide de cookies.
 
 ## ➡️ Par où commencer ?
 
@@ -31,27 +32,31 @@ Les détails de chaque cours composant l'unité d'enseignement sont disponibles
 ci-dessous. Chaque cours est détaillée avec les contenus, les objectifs, les
 méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
-|          Cours | Contenu                                                                                                               |
-| -------------: | :-------------------------------------------------------------------------------------------------------------------- |
-| [1](#-cours-1) | [Modalités de l'unité d'enseignement et introduction à PHP](#modalités-de-lunité-denseignement-et-introduction-à-php) |
-| [2](#-cours-2) | [Tableaux et boucles](#tableaux-et-boucles)                                                                           |
-| [3](#-cours-3) | [Fonctions](#fonctions)                                                                                               |
-| [4](#-cours-4) | [Formulaires HTML et validation](#formulaires-html-et-validation)                                                     |
-| [5](#-cours-5) | [Base de données et PDO](#base-de-données-et-pdo)                                                                     |
-| [6](#-cours-6) | [Programmation orientée objet](#programmation-orientée-objet)                                                         |
-| [7](#-cours-7) | [Gestion des cookies et préférences utilisateur](#gestion-des-cookies-et-préférences-utilisateur)                     |
-| [8](#-cours-8) | [Finalisation de l'application et récapitulatif du cours](#finalisation-de-lapplication-et-récapitulatif-du-cours)    |
+|            Cours | Contenu(s)                                                                                                            |
+| ---------------: | :-------------------------------------------------------------------------------------------------------------------- |
+| [01](#-cours-01) | [Modalités de l'unité d'enseignement et introduction à PHP](#modalités-de-lunité-denseignement-et-introduction-à-php) |
+| [02](#-cours-02) | [Tableaux et boucles](#tableaux-et-boucles)                                                                           |
+| [03](#-cours-03) | [Fonctions](#fonctions)                                                                                               |
+| [04](#-cours-04) | [Formulaires HTML et validation](#formulaires-html-et-validation)                                                     |
+| [05](#-cours-05) | [Base de données et PDO](#base-de-données-et-pdo)                                                                     |
+| [06](#-cours-06) | [Programmation orientée objet](#programmation-orientée-objet)                                                         |
+| [07](#-cours-07) | [Gestion des cookies et préférences utilisateur](#gestion-des-cookies-et-préférences-utilisateur)                     |
+| [08](#-cours-08) | [Finalisation de l'application et récapitulatif du cours](#finalisation-de-lapplication-et-récapitulatif-du-cours)    |
 
-## 🕐 Cours 1
+## 🕐 Cours 01
 
 ### Modalités de l'unité d'enseignement et introduction à PHP
 
-- Présentation :
-  [Web](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-cours-1-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
+- Théorie :
+  [Support de cours](./01-cours-1-modalites-de-lunite-denseignement-et-introduction-a-php/02-support-de-cours/README.md)
   ·
-  [PDF](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-cours-1-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-cours-01-presentation.pdf)
-- Support de cours (théorie, exercices, mini-projet) :
-  [Markdown](./01-cours-1-modalites-de-lunite-denseignement-et-introduction-a-php/02-support-de-cours/README.md)
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-cours-1-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
+  ·
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-cours-1-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-cours-01-presentation.pdf)
+- Mini-projet :
+  [Mini-projet cours 01](./01-modalites-de-lunite-denseignement-et-introduction-a-php/02-mini-project/README.md)
+- Exercices :
+  [Exercices cours 01](./01-modalites-de-lunite-denseignement-et-introduction-a-php/03-exercices/READEME.md)
 
 <details>
 <summary>Voir les détails</summary>
@@ -60,13 +65,13 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 **Objectifs**
 
-À l'issue de cette séance, les personnes qui étudient devraient être capables de
-:
+À l'issue de ce cours, les personnes qui étudient devraient être capables de :
 
 - Lister les objectifs du cours
 - Lister les modalités d'organisation du cours
 - Lister les modalités d'évaluation
-- TODO
+- Définir une architecture client-serveur simple
+- Lister les différents outils nécessaires pour le développement web avec PHP
 
 **Méthodes d'enseignement et d'apprentissage**
 
@@ -104,7 +109,7 @@ il est recommandé pour la semaine suivante de :
 
 </details>
 
-## 🕑 Cours 2
+## 🕑 Cours 02
 
 ### Tableaux et boucles
 
@@ -122,8 +127,7 @@ il est recommandé pour la semaine suivante de :
 
 **Objectifs**
 
-À l'issue de cette séance, les personnes qui étudient devraient être capables de
-:
+À l'issue de ce cours, les personnes qui étudient devraient être capables de :
 
 - TODO
 
@@ -163,7 +167,7 @@ il est recommandé pour la semaine suivante de :
 
 </details>
 
-## 🕒 Cours 3
+## 🕒 Cours 03
 
 ### Fonctions
 
@@ -181,8 +185,7 @@ il est recommandé pour la semaine suivante de :
 
 **Objectifs**
 
-À l'issue de cette séance, les personnes qui étudient devraient être capables de
-:
+À l'issue de ce cours, les personnes qui étudient devraient être capables de :
 
 - TODO
 
@@ -222,7 +225,7 @@ il est recommandé pour la semaine suivante de :
 
 </details>
 
-## 🕓 Cours 4
+## 🕓 Cours 04
 
 ### Formulaires HTML et validation
 
@@ -240,8 +243,7 @@ il est recommandé pour la semaine suivante de :
 
 **Objectifs**
 
-À l'issue de cette séance, les personnes qui étudient devraient être capables de
-:
+À l'issue de ce cours, les personnes qui étudient devraient être capables de :
 
 - TODO
 
@@ -281,7 +283,7 @@ il est recommandé pour la semaine suivante de :
 
 </details>
 
-## 🕔 Cours 5
+## 🕔 Cours 05
 
 ### Base de données et PDO
 
@@ -299,8 +301,7 @@ il est recommandé pour la semaine suivante de :
 
 **Objectifs**
 
-À l'issue de cette séance, les personnes qui étudient devraient être capables de
-:
+À l'issue de ce cours, les personnes qui étudient devraient être capables de :
 
 - TODO
 
@@ -340,7 +341,7 @@ il est recommandé pour la semaine suivante de :
 
 </details>
 
-## 🕕 Cours 6
+## 🕕 Cours 06
 
 ### Programmation orientée objet
 
@@ -358,8 +359,7 @@ il est recommandé pour la semaine suivante de :
 
 **Objectifs**
 
-À l'issue de cette séance, les personnes qui étudient devraient être capables de
-:
+À l'issue de ce cours, les personnes qui étudient devraient être capables de :
 
 - TODO
 
@@ -399,7 +399,7 @@ il est recommandé pour la semaine suivante de :
 
 </details>
 
-## 🕖 Cours 7
+## 🕖 Cours 07
 
 ### Gestion des cookies et préférences utilisateur
 
@@ -417,8 +417,7 @@ il est recommandé pour la semaine suivante de :
 
 **Objectifs**
 
-À l'issue de cette séance, les personnes qui étudient devraient être capables de
-:
+À l'issue de ce cours, les personnes qui étudient devraient être capables de :
 
 - TODO
 
@@ -449,7 +448,7 @@ L'évaluation ne donne pas lieu à une note.
 
 </details>
 
-## 🕗 Cours 8
+## 🕗 Cours 08
 
 ### Finalisation de l'application et récapitulatif du cours
 
@@ -467,8 +466,7 @@ L'évaluation ne donne pas lieu à une note.
 
 **Objectifs**
 
-À l'issue de cette séance, les personnes qui étudient devraient être capables de
-:
+À l'issue de ce cours, les personnes qui étudient devraient être capables de :
 
 - TODO
 
@@ -498,8 +496,6 @@ Les retours se font de la manière suivante :
 L'évaluation ne donne pas lieu à une note.
 
 </details>
-
-Finalisation de l'application et récapitulatif du cours
 
 ## 📜 Licence
 
