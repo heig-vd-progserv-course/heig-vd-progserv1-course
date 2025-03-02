@@ -19,6 +19,10 @@
   - [Les constantes](#les-constantes)
   - [Les opérateurs (arithmétiques, de comparaison, logiques, etc.)](#les-opérateurs-arithmétiques-de-comparaison-logiques-etc)
   - [Les structures de contrôle conditionnelles (if, else, elseif)](#les-structures-de-contrôle-conditionnelles-if-else-elseif)
+- [Mini-projet](#mini-projet)
+  - [Présentation du mini-projet](#présentation-du-mini-projet)
+  - [Objectifs de la session](#objectifs-de-la-session)
+- [Exercices](#exercices)
 
 ## Objectifs
 
@@ -65,3 +69,11 @@
 ### Les opérateurs (arithmétiques, de comparaison, logiques, etc.)
 
 ### Les structures de contrôle conditionnelles (if, else, elseif)
+
+## Mini-projet
+
+### Présentation du mini-projet
+
+### Objectifs de la session
+
+## Exercices

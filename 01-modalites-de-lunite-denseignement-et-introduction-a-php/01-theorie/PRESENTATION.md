@@ -167,8 +167,8 @@ En résumé, vous devriez être capable de :
 - En présentiel chaque semaine dans cette même salle
 - Mélange de théorie et de pratique pour un meilleur apprentissage :
   - Théorie
-  - Exercices à faire en classe ou à la maison
   - Mini-projet accompagné à réaliser tout au long du cours
+  - Exercices à faire en classe ou à la maison
 - Espace de discussion pour poser des questions, partager vos expériences et
   obtenir de l'aide/des retours
 
@@ -267,6 +267,14 @@ pour vous, n'hésitez pas à me contacter.
 
 ### Les structures de contrôle conditionnelles (if, else, elseif)
 
+## Mini-projet
+
+### Présentation du mini-projet
+
+### Objectifs de la session
+
+## Exercices
+
 ## Questions
 
 <!-- _class: lead -->
@@ -296,7 +304,7 @@ N'hésitez pas à me contacter si vous avez des questions !
   [Nguyen Dang Hoang Nhu](https://unsplash.com/@nguyendhn) sur
   [Unsplash](https://unsplash.com/photos/person-writing-on-white-paper-qDgTQOYk6B8)
 - [Illustration][illustration-bibliographie-et-ressources] par
-  [Tim van Cleef ](https://unsplash.com/@_timvancleef) sur
+  [Tim van Cleef](https://unsplash.com/@_timvancleef) sur
   [Unsplash](https://unsplash.com/photos/wooden-ladder-by-bookshelves-1JBOZwuW7sI)
 - [Illustration][illustration-a-vous-de-jouer] par
   [Nikita Kachanovsky](https://unsplash.com/@nkachanovskyyy) sur

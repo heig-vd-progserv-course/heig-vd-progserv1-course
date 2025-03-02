@@ -1,7 +1,7 @@
 # Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP - Exercices
 
-Cette série d'exercices est conçue pour vous permettre de mettre en pratique les
-concepts vus dans le cours
+Cette série d'exercices est conçue pour vous permettre de valider les concepts
+théoriques et pratiques vus dans le cours
 _[Modalités de l'unité d'enseignement et introduction à PHP](../01-theorie/README.md)_.
 
 ## Tables des matières

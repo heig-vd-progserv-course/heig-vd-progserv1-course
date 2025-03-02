@@ -32,16 +32,16 @@ Les détails de chaque cours composant l'unité d'enseignement sont disponibles
 ci-dessous. Chaque cours est détaillée avec les contenus, les objectifs, les
 méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
-|            Cours | Contenu(s)                                                                                                            |
-| ---------------: | :-------------------------------------------------------------------------------------------------------------------- |
-| [01](#-cours-01) | [Modalités de l'unité d'enseignement et introduction à PHP](#modalités-de-lunité-denseignement-et-introduction-à-php) |
-| [02](#-cours-02) | [Tableaux et boucles](#tableaux-et-boucles)                                                                           |
-| [03](#-cours-03) | [Fonctions](#fonctions)                                                                                               |
-| [04](#-cours-04) | [Formulaires HTML et validation](#formulaires-html-et-validation)                                                     |
-| [05](#-cours-05) | [Base de données et PDO](#base-de-données-et-pdo)                                                                     |
-| [06](#-cours-06) | [Programmation orientée objet](#programmation-orientée-objet)                                                         |
-| [07](#-cours-07) | [Gestion des cookies et préférences utilisateur](#gestion-des-cookies-et-préférences-utilisateur)                     |
-| [08](#-cours-08) | [Finalisation de l'application et récapitulatif du cours](#finalisation-de-lapplication-et-récapitulatif-du-cours)    |
+|            Cours | Contenu(s)                                                                                                                                         |
+| ---------------: | :------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [01](#-cours-01) | [Modalités de l'unité d'enseignement et introduction à PHP](#modalités-de-lunité-denseignement-et-introduction-à-php)                              |
+| [02](#-cours-02) | [Tableaux et boucles](#tableaux-et-boucles)                                                                                                        |
+| [03](#-cours-03) | [Fonctions](#fonctions)                                                                                                                            |
+| [04](#-cours-04) | [Formulaires HTML et validation](#formulaires-html-et-validation)                                                                                  |
+| [05](#-cours-05) | [Base de données et PDO](#base-de-données-et-pdo)                                                                                                  |
+| [06](#-cours-06) | [Programmation orientée objet](#programmation-orientée-objet)                                                                                      |
+| [07](#-cours-07) | [Gestion des cookies et préférences utilisateur](#gestion-des-cookies-et-préférences-utilisateur)                                                  |
+| [08](#-cours-08) | [Finalisation de l'application et récapitulatif de l'unité d'enseignement](#finalisation-de-lapplication-et-récapitulatif-de-lunité-denseignement) |
 
 ## 🕐 Cours 01
 
@@ -67,11 +67,10 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 À l'issue de ce cours, les personnes qui étudient devraient être capables de :
 
-- Lister les objectifs du cours
-- Lister les modalités d'organisation du cours
+- Lister les objectifs de l'unité d'enseignement
+- Lister les modalités d'organisation de l'unité d'enseignement
 - Lister les modalités d'évaluation
-- Définir une architecture client-serveur simple
-- Lister les différents outils nécessaires pour le développement web avec PHP
+- TODO
 
 **Méthodes d'enseignement et d'apprentissage**
 
@@ -83,7 +82,7 @@ sont les suivantes :
 
 **Méthodes d'évaluation**
 
-L'évaluation prend la forme d'exercices et d'un mini-projet à réaliser en
+L'évaluation prend la forme d'un mini-projet et d'exercices à réaliser en
 autonomie en classe ou à la maison.
 
 L'évaluation se fait en utilisant les critères suivants :
@@ -93,19 +92,19 @@ L'évaluation se fait en utilisant les critères suivants :
 
 Les retours se font de la manière suivante :
 
-- Corrigé des exercices
 - Corrigé du mini-projet
+- Corrigé des exercices
 
 L'évaluation ne donne pas lieu à une note.
 
 **À faire pour la semaine suivante**
 
 Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour la semaine suivante de :
+il est recommandé pour le cours suivant de :
 
 - Relire le support de cours si nécessaire
-- Finaliser les exercices qui n'ont pas été terminés en classe
 - Finaliser la partie du mini-projet qui n'a pas été terminée en classe
+- Finaliser les exercices qui n'ont pas été terminés en classe
 
 </details>
 
@@ -141,7 +140,7 @@ sont les suivantes :
 
 **Méthodes d'évaluation**
 
-L'évaluation prend la forme d'exercices et d'un mini-projet à réaliser en
+L'évaluation prend la forme d'un mini-projet et d'exercices à réaliser en
 autonomie en classe ou à la maison.
 
 L'évaluation se fait en utilisant les critères suivants :
@@ -151,19 +150,19 @@ L'évaluation se fait en utilisant les critères suivants :
 
 Les retours se font de la manière suivante :
 
-- Corrigé des exercices
 - Corrigé du mini-projet
+- Corrigé des exercices
 
 L'évaluation ne donne pas lieu à une note.
 
 **À faire pour la semaine suivante**
 
 Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour la semaine suivante de :
+il est recommandé pour le cours suivant de :
 
 - Relire le support de cours si nécessaire
-- Finaliser les exercices qui n'ont pas été terminés en classe
 - Finaliser la partie du mini-projet qui n'a pas été terminée en classe
+- Finaliser les exercices qui n'ont pas été terminés en classe
 
 </details>
 
@@ -199,7 +198,7 @@ sont les suivantes :
 
 **Méthodes d'évaluation**
 
-L'évaluation prend la forme d'exercices et d'un mini-projet à réaliser en
+L'évaluation prend la forme d'un mini-projet et d'exercices à réaliser en
 autonomie en classe ou à la maison.
 
 L'évaluation se fait en utilisant les critères suivants :
@@ -209,19 +208,19 @@ L'évaluation se fait en utilisant les critères suivants :
 
 Les retours se font de la manière suivante :
 
-- Corrigé des exercices
 - Corrigé du mini-projet
+- Corrigé des exercices
 
 L'évaluation ne donne pas lieu à une note.
 
 **À faire pour la semaine suivante**
 
 Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour la semaine suivante de :
+il est recommandé pour le cours suivant de :
 
 - Relire le support de cours si nécessaire
-- Finaliser les exercices qui n'ont pas été terminés en classe
 - Finaliser la partie du mini-projet qui n'a pas été terminée en classe
+- Finaliser les exercices qui n'ont pas été terminés en classe
 
 </details>
 
@@ -257,7 +256,7 @@ sont les suivantes :
 
 **Méthodes d'évaluation**
 
-L'évaluation prend la forme d'exercices et d'un mini-projet à réaliser en
+L'évaluation prend la forme d'un mini-projet et d'exercices à réaliser en
 autonomie en classe ou à la maison.
 
 L'évaluation se fait en utilisant les critères suivants :
@@ -267,19 +266,19 @@ L'évaluation se fait en utilisant les critères suivants :
 
 Les retours se font de la manière suivante :
 
-- Corrigé des exercices
 - Corrigé du mini-projet
+- Corrigé des exercices
 
 L'évaluation ne donne pas lieu à une note.
 
 **À faire pour la semaine suivante**
 
 Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour la semaine suivante de :
+il est recommandé pour le cours suivant de :
 
 - Relire le support de cours si nécessaire
-- Finaliser les exercices qui n'ont pas été terminés en classe
 - Finaliser la partie du mini-projet qui n'a pas été terminée en classe
+- Finaliser les exercices qui n'ont pas été terminés en classe
 
 </details>
 
@@ -315,7 +314,7 @@ sont les suivantes :
 
 **Méthodes d'évaluation**
 
-L'évaluation prend la forme d'exercices et d'un mini-projet à réaliser en
+L'évaluation prend la forme d'un mini-projet et d'exercices à réaliser en
 autonomie en classe ou à la maison.
 
 L'évaluation se fait en utilisant les critères suivants :
@@ -325,19 +324,19 @@ L'évaluation se fait en utilisant les critères suivants :
 
 Les retours se font de la manière suivante :
 
-- Corrigé des exercices
 - Corrigé du mini-projet
+- Corrigé des exercices
 
 L'évaluation ne donne pas lieu à une note.
 
 **À faire pour la semaine suivante**
 
 Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour la semaine suivante de :
+il est recommandé pour le cours suivant de :
 
 - Relire le support de cours si nécessaire
-- Finaliser les exercices qui n'ont pas été terminés en classe
 - Finaliser la partie du mini-projet qui n'a pas été terminée en classe
+- Finaliser les exercices qui n'ont pas été terminés en classe
 
 </details>
 
@@ -373,7 +372,7 @@ sont les suivantes :
 
 **Méthodes d'évaluation**
 
-L'évaluation prend la forme d'exercices et d'un mini-projet à réaliser en
+L'évaluation prend la forme d'un mini-projet et d'exercices à réaliser en
 autonomie en classe ou à la maison.
 
 L'évaluation se fait en utilisant les critères suivants :
@@ -383,19 +382,19 @@ L'évaluation se fait en utilisant les critères suivants :
 
 Les retours se font de la manière suivante :
 
-- Corrigé des exercices
 - Corrigé du mini-projet
+- Corrigé des exercices
 
 L'évaluation ne donne pas lieu à une note.
 
 **À faire pour la semaine suivante**
 
 Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour la semaine suivante de :
+il est recommandé pour le cours suivant de :
 
 - Relire le support de cours si nécessaire
-- Finaliser les exercices qui n'ont pas été terminés en classe
 - Finaliser la partie du mini-projet qui n'a pas été terminée en classe
+- Finaliser les exercices qui n'ont pas été terminés en classe
 
 </details>
 
@@ -431,7 +430,7 @@ sont les suivantes :
 
 **Méthodes d'évaluation**
 
-L'évaluation prend la forme d'exercices et d'un mini-projet à réaliser en
+L'évaluation prend la forme d'un mini-projet et d'exercices à réaliser en
 autonomie en classe ou à la maison.
 
 L'évaluation se fait en utilisant les critères suivants :
@@ -441,16 +440,25 @@ L'évaluation se fait en utilisant les critères suivants :
 
 Les retours se font de la manière suivante :
 
-- Corrigé des exercices
 - Corrigé du mini-projet
+- Corrigé des exercices
 
 L'évaluation ne donne pas lieu à une note.
+
+**À faire pour la semaine suivante**
+
+Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
+il est recommandé pour le cours suivant de :
+
+- Relire le support de cours si nécessaire
+- Finaliser la partie du mini-projet qui n'a pas été terminée en classe
+- Finaliser les exercices qui n'ont pas été terminés en classe
 
 </details>
 
 ## 🕗 Cours 08
 
-### Finalisation de l'application et récapitulatif du cours
+### Finalisation de l'application et récapitulatif de l'unité d'enseignement
 
 - Présentation :
   [Web](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-cours-08/01-presentation/index.html)
@@ -480,7 +488,7 @@ sont les suivantes :
 
 **Méthodes d'évaluation**
 
-L'évaluation prend la forme d'exercices et d'un mini-projet à réaliser en
+L'évaluation prend la forme d'un mini-projet et d'exercices à réaliser en
 autonomie en classe ou à la maison.
 
 L'évaluation se fait en utilisant les critères suivants :
@@ -490,8 +498,8 @@ L'évaluation se fait en utilisant les critères suivants :
 
 Les retours se font de la manière suivante :
 
-- Corrigé des exercices
 - Corrigé du mini-projet
+- Corrigé des exercices
 
 L'évaluation ne donne pas lieu à une note.
 

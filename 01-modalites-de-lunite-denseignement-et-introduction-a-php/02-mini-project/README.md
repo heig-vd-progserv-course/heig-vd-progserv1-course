@@ -113,8 +113,8 @@ C'est parti !
 
 ## Aller plus loin
 
-_Ceci est une section optionnelle. Vous pouvez la sauter si vous n'avez pas de
-temps._
+_Ceci est une section optionnelle pour les personnes qui souhaitent aller plus
+loin. Vous pouvez la sauter si vous n'avez pas de temps._
 
 ## Solution
 
