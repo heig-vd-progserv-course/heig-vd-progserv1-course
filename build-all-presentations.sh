@@ -21,10 +21,10 @@ fi
 
 # Convert presentations
 echo "Converting presentations to HTML..."
-eval "$MARP_CMD --parallel $(nproc) **/*/PRESENTATION.md"
+eval "$MARP_CMD --config-file .marp/config.yaml --parallel $(nproc) **/*/PRESENTATION.md"
 
 echo "Converting presentations to PDF..."
-eval "$MARP_CMD --parallel $(nproc) --pdf **/*/PRESENTATION.md"
+eval "$MARP_CMD --config-file .marp/config.yaml --parallel $(nproc) --pdf **/*/PRESENTATION.md"
 
 # Rename files
 echo "Renaming HTML files to 'index.html'..."
