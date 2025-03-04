@@ -49,6 +49,7 @@ h4 strong,
 h5 strong,
 h6 strong {
 	font-weight: inherit;
+	color: var(--color-highlight);
 }
 
 h1::part(auto-scaling),
@@ -58,24 +59,6 @@ h4::part(auto-scaling),
 h5::part(auto-scaling),
 h6::part(auto-scaling) {
 	max-height: 580px;
-}
-
-section h1 strong,
-section h2 strong,
-section h3 strong,
-section h4 strong,
-section h5 strong,
-section h6 strong {
-	color: var(--color-highlight);
-}
-
-section:where(.lead) h1,
-section:where(.lead) h2,
-section:where(.lead) h3,
-section:where(.lead) h4,
-section:where(.lead) h5,
-section:where(.lead) h6 {
-	text-align: center;
 }
 
 h1 a:link,
@@ -162,19 +145,14 @@ mark {
 }
 
 section code {
-	background: var(--color-dimmed);
-	color: var(--color-background);
+	/* background: #f0f1f3; */
+	background-color: #f6f8fa;
+	color: #1f2328;
 }
 
 section pre {
-	background: var(--color-foreground);
-	/* TODO
 	background-color: #f6f8fa;
-	color: #333;
-	border-radius: 0.2em;
-	border: 1px solid #ccc;
 	padding: 0.2em;
-	*/
 }
 
 section pre > code {
@@ -225,11 +203,6 @@ section {
 	padding: 70px;
 	width: 1280px;
 	word-wrap: break-word;
-	--color-background: #fff8e1;
-	--color-background-stripe: rgba(69, 90, 100, 0.1);
-	--color-foreground: #455a64;
-	--color-dimmed: rgb(106.2, 121.6, 125);
-	--color-highlight: #0288d1;
 }
 
 section:has(h1) {
@@ -257,18 +230,10 @@ section > header {
 	font-size: 20px;
 }
 
-section.invert {
-	--color-background: #455a64;
-	--color-foreground: #fff8e1;
-	--color-highlight: #81d4fa;
-	--color-background-stripe: rgba(255, 248, 225, 0.1);
-}
-
 section.lead {
-	display: flex;
+	place-content: safe center center;
 	flex-flow: column nowrap;
 	align-items: stretch;
-	justify-content: center;
 }
 
 section.lead h1,
@@ -281,18 +246,15 @@ section.lead p {
 	text-align: center;
 }
 
-section.lead blockquote h1,
-section.lead blockquote h2,
-section.lead blockquote h3,
-section.lead blockquote h4,
-section.lead blockquote h5,
-section.lead blockquote h6,
-section.lead blockquote p {
-	text-align: left;
-}
-
-section.lead ul li p,
-section.lead ol li p {
+section.lead blockquote > h1,
+section.lead blockquote > h2,
+section.lead blockquote > h3,
+section.lead blockquote > h4,
+section.lead blockquote > h5,
+section.lead blockquote > h6,
+section.lead blockquote > p,
+section.lead ul > li > p,
+section.lead ol > li > p {
 	text-align: left;
 }
 
@@ -309,37 +271,6 @@ section::after {
 section > *:first-child,
 section > header:first-child + * {
 	margin-top: 0;
-}
-section:where(.invert) {
-	--color-background: #455a64;
-	--color-background-stripe: rgba(255, 248, 225, 0.1);
-	--color-foreground: #fff8e1;
-	--color-dimmed: rgb(217.8, 216.4, 200);
-	--color-highlight: #81d4fa;
-}
-section:where(.lead) {
-	place-content: safe center center;
-	/* Definitions for classic bhavior: Users can adopt flex centering by tweaking style `section.lead { display: flex }` */
-	flex-flow: column nowrap;
-	align-items: stretch;
-	/* stylelint-disable-next-line no-descending-specificity */
-}
-
-section:where(.lead) p {
-	text-align: center;
-}
-section:where(.lead) blockquote > h1,
-section:where(.lead) blockquote > h2,
-section:where(.lead) blockquote > h3,
-section:where(.lead) blockquote > h4,
-section:where(.lead) blockquote > h5,
-section:where(.lead) blockquote > h6,
-section:where(.lead) blockquote > p {
-	text-align: left;
-}
-section:where(.lead) ul > li > p,
-section:where(.lead) ol > li > p {
-	text-align: left;
 }
 
 section:not(.lead) > p,
