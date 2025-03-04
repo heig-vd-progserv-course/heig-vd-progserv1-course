@@ -3,13 +3,13 @@ marp: true
 ---
 
 <!--
-theme: gaia
+theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de Cursor
 title: HEIG-VD ProgServ1 Course - Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP
 description: Modalités de l'unité d'enseignement pour le cours ProgServ1 à la HEIG-VD, Suisse
-url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-cours-1-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html
+url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html
 header: "**Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP**"
 footer: "**HEIG-VD** - ProgServ1 Course 2024-2025 - CC BY-SA 4.0"
 style: |
@@ -143,7 +143,7 @@ consultez le [support de cours][course-material]._
 
 Selon la
 [fiche d'unité](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=7307),
-à la fin de ce cours, vous devriez être capable de :
+à la fin de cette unité d'enseignement, vous devriez être capable de :
 
 > - Connaître les principes de base de la programmation serveur
 > - Manipuler des tableaux associatifs complexes

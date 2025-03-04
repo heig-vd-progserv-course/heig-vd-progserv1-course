@@ -24,7 +24,7 @@ Suisse !
 
 Vous ne savez pas par où commencer ? Jetez un œil aux
 [Modalités de l'unité d'enseignement et introduction à PHP](#modalités-de-lunité-denseignement-et-introduction-à-php)
-pour en savoir plus sur l'unité d'enseignement.
+pour en savoir plus.
 
 ## 📅 Programme
 
@@ -48,72 +48,17 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 ### Modalités de l'unité d'enseignement et introduction à PHP
 
 - Théorie :
-  [Support de cours](./01-cours-1-modalites-de-lunite-denseignement-et-introduction-a-php/02-support-de-cours/README.md)
+  [Support de cours](./01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/README.md)
   ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-cours-1-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-cours-1-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-cours-01-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
 - Mini-projet :
   [Mini-projet cours 01](./01-modalites-de-lunite-denseignement-et-introduction-a-php/02-mini-project/README.md)
 - Exercices :
   [Exercices cours 01](./01-modalites-de-lunite-denseignement-et-introduction-a-php/03-exercices/READEME.md)
 
-<details>
-<summary>Voir les détails</summary>
-
-<br>
-
-**Objectifs**
-
-À l'issue de ce cours, les personnes qui étudient devraient être capables de :
-
-- Lister les objectifs de l'unité d'enseignement
-- Lister les modalités d'organisation de l'unité d'enseignement
-- Lister les modalités d'évaluation
-- TODO
-
-De plus, les personnes qui étudient devraient avoir pu :
-
-- Installer l'environnement de développement
-- Initialiser un projet PHP
-- Créer la structure du mini-projet
-- Créer les fichiers du mini-projet
-
-**Méthodes d'enseignement et d'apprentissage**
-
-Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
-sont les suivantes :
-
-- Présentation magistrale
-- Discussions collectives
-
-**Méthodes d'évaluation**
-
-L'évaluation prend la forme d'un mini-projet et d'exercices à réaliser en
-autonomie en classe ou à la maison.
-
-L'évaluation se fait en utilisant les critères suivants :
-
-- Capacité à répondre avec justesse
-- Capacité à argumenter
-
-Les retours se font de la manière suivante :
-
-- Corrigé du mini-projet
-- Corrigé des exercices
-
-L'évaluation ne donne pas lieu à une note.
-
-**À faire pour la semaine suivante**
-
-Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour le cours suivant de :
-
-- Relire le support de cours si nécessaire
-- Finaliser la partie du mini-projet qui n'a pas été terminée en classe
-- Finaliser les exercices qui n'ont pas été terminés en classe
-
-</details>
+[Voir les détails](./01-modalites-de-lunite-denseignement-et-introduction-a-php/README.md)
 
 ## 🕑 Cours 02
 

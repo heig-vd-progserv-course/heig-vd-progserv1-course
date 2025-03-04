@@ -89,10 +89,8 @@ C'est parti !
 
 À l'issue de cette session, les personnes qui étudient devraient avoir pu :
 
-- Installer l'environnement de développement
-- Initialiser un projet PHP
-- Créer la structure du mini-projet
-- Créer les fichiers du mini-projet
+- Installer et configurer un environnement de développement
+- Initialiser un projet PHP pour le mini-projet
 
 ## Installation de l'environnement de développement
 
@@ -114,9 +112,9 @@ C'est parti !
 
 ## Initialisation du projet PHP
 
-### Création de la structure de notre projet
+### Création de la structure du projet
 
-### Création des fichiers de notre projet
+### Création des fichiers du projet
 
 ## Aller plus loin
 
