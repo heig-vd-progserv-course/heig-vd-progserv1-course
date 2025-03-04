@@ -1,10 +1,10 @@
 # Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP
 
-[![Théorie - Support de cours](https://img.shields.io/badge/th%C3%A9orie-support%20de%20cours-blue)](./01-theorie/README.md)
-[![Théorie - Présentation (web)](<https://img.shields.io/badge/th%C3%A9orie-pr%C3%A9sentation%20(web)-blue>)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
-[![Théorie - Présentation (PDF)](<https://img.shields.io/badge/th%C3%A9orie-pr%C3%A9sentation%20(PDF)-blue>)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
-[![Mini-projet](https://img.shields.io/badge/mini--projet-cours%2001-orange)](./02-mini-project/README.md)
-[![Exercices](https://img.shields.io/badge/exercices-cours%2001-green)](./03-exercices/READEME.md)
+[![Cours 01 - Support de cours](https://img.shields.io/badge/cours%2001-support%20de%20cours-blue)](./01-theorie/README.md)
+[![Cours 01 - Présentation (web)](<https://img.shields.io/badge/cours%2001-pr%C3%A9sentation%20(web)-blue>)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
+[![Cours 01 - Présentation (PDF)](<https://img.shields.io/badge/cours%2001-pr%C3%A9sentation%20(PDF)-blue>)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
+[![Cours 01 - Mini-projet](https://img.shields.io/badge/cours%2001-mini--projet-orange)](./02-mini-project/README.md)
+[![Cours 01 - Exercices](https://img.shields.io/badge/cours%2001-exercices-green)](./03-exercices/READEME.md)
 
 ## Objectifs
 
