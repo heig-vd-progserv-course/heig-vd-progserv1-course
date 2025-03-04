@@ -1,5 +1,12 @@
 # Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP
 
+- Théorie : [Support de cours](./01-theorie/README.md) ·
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
+  ·
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
+- Mini-projet : [Mini-projet cours 01](./02-mini-project/README.md)
+- Exercices : [Exercices cours 01](./03-exercices/READEME.md)
+
 ## Objectifs
 
 À l'issue de ce cours, les personnes qui étudient devraient être capables de :
