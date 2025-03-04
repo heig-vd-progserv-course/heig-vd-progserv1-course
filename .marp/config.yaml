@@ -2,6 +2,7 @@ allowLocalFiles: true
 html: true
 jpegQuality: 100
 lang: fr
+themeSet: .
 options:
   markdown:
     breaks: false
