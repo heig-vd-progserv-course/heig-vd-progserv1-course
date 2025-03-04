@@ -3,15 +3,15 @@
 ## Ressources
 
 - Théorie :
-  [![Cours 01 - Support de cours](https://img.shields.io/badge/cours%2001-support%20de%20cours-blue)](./01-theorie/README.md)
+  [Support de cours](./01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/README.md)
   ·
-  [![Cours 01 - Présentation (web)](<https://img.shields.io/badge/cours%2001-pr%C3%A9sentation%20(web)-blue>)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
   ·
-  [![Cours 01 - Présentation (PDF)](<https://img.shields.io/badge/cours%2001-pr%C3%A9sentation%20(PDF)-blue>)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
 - Mini-projet :
-  [![Cours 01 - Mini-projet](https://img.shields.io/badge/cours%2001-mini--projet-orange)](./02-mini-project/README.md)
+  [Mini-projet cours 01](./01-modalites-de-lunite-denseignement-et-introduction-a-php/02-mini-project/README.md)
 - Exercices :
-  [![Cours 01 - Exercices](https://img.shields.io/badge/cours%2001-exercices-green)](./03-exercices/READEME.md)
+  [Exercices cours 01](./01-modalites-de-lunite-denseignement-et-introduction-a-php/03-exercices/READEME.md)
 
 ## Objectifs
 
@@ -34,6 +34,7 @@ sont les suivantes :
 
 - Présentation magistrale
 - Discussions collectives
+- Travail en autonomie
 
 ## Méthodes d'évaluation
 
