@@ -17,12 +17,15 @@
 /* Colors */
 
 :root {
-	--color-background: #fff;
-	--color-background-stripe: #f6f8fa;
+	--color-primary: #f96;
+	--color-secondary: #7d8ca3;
+	--color-normal: #333;
 	--color-dimmed: #888;
-	--color-foreground: #333;
-	--color-headings: #7d8ca3;
-	--color-highlight: #f96;
+	--color-background: #fff;
+	--color-code-background: #f6f8fa;
+	--color-code-foreground: #1f2328;
+	--color-table-stripe: #f6f8fa;
+	--color-table-border: #d1d9e0;
 }
 
 /* Headings */
@@ -33,7 +36,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: var(--color-headings);
+	color: var(--color-secondary);
 	margin: 0.5em 0 0;
 	font-size: 1.5rem;
 }
@@ -49,7 +52,7 @@ h4 strong,
 h5 strong,
 h6 strong {
 	font-weight: inherit;
-	color: var(--color-highlight);
+	color: var(--color-primary);
 }
 
 h1::part(auto-scaling),
@@ -145,13 +148,12 @@ mark {
 }
 
 section code {
-	/* background: #f0f1f3; */
-	background-color: #f6f8fa;
-	color: #1f2328;
+	background-color: var(--color-code-background);
+	color: var(--color-code-foreground);
 }
 
 section pre {
-	background-color: #f6f8fa;
+	background-color: var(--color-code-background);
 	padding: 0.2em;
 }
 
@@ -173,27 +175,27 @@ table td {
 	padding: 0.2em 0.4em;
 	border-width: 1px;
 	border-style: solid;
-	border-color: #d1d9e0;
+	border-color: var(--color-table-border);
 }
 
 section table th,
 section table td {
-	border-color: var(--color-foreground);
+	border-color: var(--color-normal);
 }
 section table thead th {
-	background: var(--color-foreground);
+	background: var(--color-normal);
 	color: var(--color-background);
 }
 section table tbody > tr:nth-child(even) td,
 section table tbody > tr:nth-child(even) th {
-	background: var(--color-background-stripe, transparent);
+	background: var(--color-table-stripe, transparent);
 }
 
 /* Section */
 
 section {
 	background-color: var(--color-background);
-	color: var(--color-foreground);
+	color: var(--color-normal);
 	font-size: 35px;
 	font-family: Lato, "Avenir Next", Avenir, "Trebuchet MS", "Segoe UI",
 		sans-serif;
@@ -211,7 +213,7 @@ section:has(h1) {
 
 section a,
 section mark {
-	color: var(--color-highlight);
+	color: var(--color-primary);
 }
 
 section header,
