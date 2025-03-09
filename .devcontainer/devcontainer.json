@@ -6,7 +6,7 @@
 	"features": {
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
 		"ghcr.io/devcontainers/features/php:1": {
-			"version": "8.4",
+			"version": "8.3",
 			"installComposer": false
 		}
 	},
@@ -15,6 +15,7 @@
 			"extensions": [
 				"DavidAnson.vscode-markdownlint",
 				"esbenp.prettier-vscode",
+				"GitHub.copilot",
 				"jebbs.plantuml",
 				"marp-team.marp-vscode",
 				"ms-vsliveshare.vsliveshare-pack",

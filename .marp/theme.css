@@ -11,18 +11,21 @@
  * @size 4:3 960px 720px
  */
 
-@import url("https://fonts.bunny.net/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css");
+@import "https://fonts.bunny.net/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap";
+@import "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css";
 
 /* Colors */
 
 :root {
-	--color-background: #fff;
-	--color-background-stripe: #f6f8fa;
+	--color-primary: #f96;
+	--color-secondary: #7d8ca3;
+	--color-normal: #333;
 	--color-dimmed: #888;
-	--color-foreground: #333;
-	--color-headings: #7d8ca3;
-	--color-highlight: #f96;
+	--color-background: #fff;
+	--color-code-background: #f6f8fa;
+	--color-code-foreground: #1f2328;
+	--color-table-stripe: #f6f8fa;
+	--color-table-border: #d1d9e0;
 }
 
 /* Headings */
@@ -33,13 +36,32 @@ h3,
 h4,
 h5,
 h6 {
-	color: var(--color-headings);
+	color: var(--color-secondary);
 	margin: 0.5em 0 0;
 	font-size: 1.5rem;
 }
 
 h1 {
 	font-size: 1.8em;
+}
+
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong {
+	font-weight: inherit;
+	color: var(--color-primary);
+}
+
+h1::part(auto-scaling),
+h2::part(auto-scaling),
+h3::part(auto-scaling),
+h4::part(auto-scaling),
+h5::part(auto-scaling),
+h6::part(auto-scaling) {
+	max-height: 580px;
 }
 
 h1 a:link,
@@ -70,6 +92,7 @@ header {
 	right: 0;
 	top: 0;
 }
+
 footer {
 	left: 0;
 	right: 0;
@@ -83,11 +106,11 @@ blockquote {
 	margin: 1em 0 0;
 }
 
-ul,
+ul > li,
 ol > li {
 	margin: 0.3em 0 0;
 }
-ul,
+ul > li > p,
 ol > li > p {
 	margin: 0.6em 0 0;
 }
@@ -98,15 +121,17 @@ code {
 	display: inline-block;
 	font-family: "Roboto Mono", monospace;
 	font-size: 0.8em;
+	letter-spacing: 0;
 	margin: -0.1em 0.15em;
 	padding: 0.1em 0.2em;
+	vertical-align: baseline;
 }
 
 pre {
 	display: block;
 	margin: 1em 0 0;
+	overflow: visible;
 }
-
 pre code {
 	box-sizing: border-box;
 	margin: 0;
@@ -114,16 +139,25 @@ pre code {
 	padding: 0.5em;
 	font-size: 0.7em;
 }
+pre::part(auto-scaling) {
+	max-height: calc(580px - 1em);
+}
+
+mark {
+	background: transparent;
+}
+
+section code {
+	background-color: var(--color-code-background);
+	color: var(--color-code-foreground);
+}
 
 section pre {
-	background-color: #f6f8fa;
-	color: #333;
-	border-radius: 0.2em;
-	border: 1px solid #ccc;
+	background-color: var(--color-code-background);
 	padding: 0.2em;
 }
 
-section pre code {
+section pre > code {
 	background: transparent;
 }
 
@@ -138,26 +172,30 @@ table {
 
 table th,
 table td {
-	padding: 6px 13px;
+	padding: 0.2em 0.4em;
 	border-width: 1px;
 	border-style: solid;
-	border-color: #d1d9e0;
+	border-color: var(--color-table-border);
 }
 
-table thead th {
-	background: #fff;
+section table th,
+section table td {
+	border-color: var(--color-normal);
 }
-
-table tbody > tr:nth-child(even) td,
-table tbody > tr:nth-child(even) th {
-	background: var(--color-background-stripe, transparent);
+section table thead th {
+	background: var(--color-normal);
+	color: var(--color-background);
+}
+section table tbody > tr:nth-child(even) td,
+section table tbody > tr:nth-child(even) th {
+	background: var(--color-table-stripe, transparent);
 }
 
 /* Section */
 
 section {
 	background-color: var(--color-background);
-	color: var(--color-foreground);
+	color: var(--color-normal);
 	font-size: 35px;
 	font-family: Lato, "Avenir Next", Avenir, "Trebuchet MS", "Segoe UI",
 		sans-serif;
@@ -173,15 +211,16 @@ section:has(h1) {
 	padding: 50px;
 }
 
-section a {
-	color: var(--color-highlight);
+section a,
+section mark {
+	color: var(--color-primary);
 }
 
 section header,
 section footer,
-section::after,
-blockquote::before,
-blockquote::after {
+section section::after,
+section blockquote::before,
+section blockquote::after {
 	color: var(--color-dimmed);
 }
 
@@ -193,18 +232,10 @@ section > header {
 	font-size: 20px;
 }
 
-section.invert {
-	--color-background: #455a64;
-	--color-foreground: #fff8e1;
-	--color-highlight: #81d4fa;
-	--color-background-stripe: rgba(255, 248, 225, 0.1);
-}
-
 section.lead {
-	display: flex;
+	place-content: safe center center;
 	flex-flow: column nowrap;
 	align-items: stretch;
-	justify-content: center;
 }
 
 section.lead h1,
@@ -217,24 +248,31 @@ section.lead p {
 	text-align: center;
 }
 
-section.lead blockquote h1,
-section.lead blockquote h2,
-section.lead blockquote h3,
-section.lead blockquote h4,
-section.lead blockquote h5,
-section.lead blockquote h6,
-section.lead blockquote p {
-	text-align: left;
-}
-
-section.lead ul li p,
-section.lead ol li p {
+section.lead blockquote > h1,
+section.lead blockquote > h2,
+section.lead blockquote > h3,
+section.lead blockquote > h4,
+section.lead blockquote > h5,
+section.lead blockquote > h6,
+section.lead blockquote > p,
+section.lead ul > li > p,
+section.lead ol > li > p {
 	text-align: left;
 }
 
 section.lead table {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+section::after {
+	right: 0;
+	bottom: 0;
+	font-size: 80%;
+}
+section > *:first-child,
+section > header:first-child + * {
+	margin-top: 0;
 }
 
 section:not(.lead) > p,
@@ -264,10 +302,15 @@ blockquote::before {
 	top: 0;
 	left: 0;
 }
+
 blockquote::after {
 	right: 0;
 	bottom: 0;
 	transform: rotate(180deg);
+}
+
+blockquote > *:first-child {
+	margin-top: 0;
 }
 
 /* Custom classes */
