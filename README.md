@@ -40,7 +40,7 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 | [04](#-cours-04) | [Formulaires HTML et validation](#formulaires-html-et-validation)                                                                                  |     🔴     |
 | [05](#-cours-05) | [Base de données et PDO](#base-de-données-et-pdo)                                                                                                  |     🔴     |
 | [06](#-cours-06) | [Programmation orientée objet](#programmation-orientée-objet)                                                                                      |     🔴     |
-| [07](#-cours-07) | [Gestion des cookies et sessions utilisateur](#gestion-des-cookies-et-sessions-utilisateur)                                                        |     🔴     |
+| [07](#-cours-07) | [Gestion des cookies et sessions utilisateurs](#gestion-des-cookies-et-sessions-utilisateurs)                                                      |     🔴     |
 | [08](#-cours-08) | [Finalisation de l'application et récapitulatif de l'unité d'enseignement](#finalisation-de-lapplication-et-récapitulatif-de-lunité-denseignement) |     🔴     |
 
 ## 🕐 Cours 01
@@ -352,7 +352,7 @@ il est recommandé pour le cours suivant de :
 
 ## 🕖 Cours 07
 
-### Gestion des cookies et sessions utilisateur
+### Gestion des cookies et sessions utilisateurs
 
 - Présentation :
   [Web](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-cours-07/01-presentation/index.html)

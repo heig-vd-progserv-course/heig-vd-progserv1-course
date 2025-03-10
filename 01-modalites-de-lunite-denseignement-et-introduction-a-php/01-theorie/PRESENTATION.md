@@ -53,8 +53,7 @@ _paginate: false
 ## Mes objectifs et souhaits pour le cours
 
 PHP va vous accompagner tout au long de vos études à la HEIG-VD (ProgServ1,
-ProgServ2, DevProdMed, etc.) et aussi plus tard dans votre carrière
-professionnelle.
+ProgServ2, DevProdMed, etc.) et aussi plus tard dans votre vie professionnelle.
 
 Mon objectif est de vous donner des bases solides et une bonne compréhension de
 ce language pour vos études et pour la suite.
@@ -81,12 +80,30 @@ suivants pour toute question relative au cours :
 _Cette présentation est un résumé du support de cours. Pour plus de détails,
 consultez le [support de cours][course-material]._
 
-## Objectifs
+## Objectifs (1/3)
 
-- Lister les objectifs du cours
-- Lister les modalités d'organisation du cours
+- Lister les objectifs de l'unité d'enseignement
+- Lister les modalités d'organisation de l'unité d'enseignement
 - Lister les modalités d'évaluation
-- TODO
+- Décrire le concept d'architecture client-serveur
+- Lister les outils nécessaires pour écrire et exécuter du code PHP
+  ![bg right:40%][illustration-objectifs]
+
+## Objectifs (2/3)
+
+- Expliquer comment PHP fonctionne dans un environnement web
+- Décrire la syntaxe de base de PHP
+- Décrire les variables en PHP
+- Décrire les constantes en PHP
+- Décrire la nature dynamique des variables et constantes en PHP
+- Expliquer les opérateurs en PHP
+
+![bg right:40%][illustration-objectifs]
+
+## Objectifs (3/3)
+
+- Expliquer les structures de contrôle conditionnelles en PHP
+- Rédiger du code PHP simple
 
 ![bg right:40%][illustration-objectifs]
 
@@ -115,19 +132,17 @@ En résumé, vous devriez être capable de :
 - Gérer les formulaires HTML et les données qu'ils contiennent de manière sûre.
 - Persister des données dans une base de données SQLite.
 - Implémenter des concepts de programmation orientée objet.
-- Gérer les préférences utilisateur à l'aide de cookies.
+- Gérer les cookies et les sessions utilisateurs.
 
-### Modalités d'organisation du cours
+### Modalités d'organisation de l'unité d'enseignement
 
 - En présentiel chaque semaine dans cette même salle
 - Mélange de théorie et de pratique pour un meilleur apprentissage :
   - Théorie
-  - Mini-projet accompagné à réaliser tout au long du cours
+  - Mini-projet à réaliser tout au long de l'unité d'enseignement
   - Exercices à faire en classe ou à la maison
-- Espace de discussion pour poser des questions, partager vos expériences et
-  obtenir de l'aide/des retours
-
-**Il n'y a pas de questions bêtes, je suis payé pour y répondre !**
+- Espace de discussion pour poser des questions et obtenir de l'aide (**il n'y a
+  pas de questions bêtes !**, je suis payé pour ça)
 
 ### Modalités d'évaluation
 
@@ -144,7 +159,7 @@ effectuer sur ordinateur :
 #### Partie théorique
 
 - Évaluation sur :
-  - Les connaissances théoriques acquises sur tout le semestre
+  - Les connaissances théoriques acquises tout au long de l'unité d'enseignement
   - Les exercices
 - Durée d'environ 45 minutes
 - Devrait utiliser la plateforme d'évaluation en ligne de la HEIG-VD
@@ -175,7 +190,7 @@ utiliserons dans les cours seront en anglais (commentaires en français par
 contre).
 
 Le reste du cours restera néanmoins en français. Si l'anglais est une barrière
-pour vous, n'hésitez pas à me contacter.
+pour vous, n'hésitez pas à nous le faire savoir.
 
 ### Bibliographie et ressources utilisées
 
