@@ -2,16 +2,12 @@
 
 ## Ressources
 
-- Théorie :
-  [Support de cours](./01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/README.md)
-  ·
+- Théorie : [Support de cours](./01-theorie/README.md) ·
   [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
   ·
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
-- Mini-projet :
-  [Mini-projet cours 01](./01-modalites-de-lunite-denseignement-et-introduction-a-php/02-mini-project/README.md)
-- Exercices :
-  [Exercices cours 01](./01-modalites-de-lunite-denseignement-et-introduction-a-php/03-exercices/READEME.md)
+- Mini-projet : [Mini-projet cours 01](./02-mini-project/README.md)
+- Exercices : [Exercices cours 01](./03-exercices/READEME.md)
 
 ## Objectifs
 
@@ -24,7 +20,7 @@
 
 De plus, les personnes qui étudient devraient avoir pu :
 
-- Installer et configurer un environnement de développement
+- Installer et configurer un environnement de développement pour PHP
 - Initialiser un projet PHP pour le mini-projet
 
 ## Méthodes d'enseignement et d'apprentissage

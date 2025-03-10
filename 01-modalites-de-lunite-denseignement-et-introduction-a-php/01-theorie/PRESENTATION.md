@@ -6,59 +6,12 @@ marp: true
 theme: custom-marp-theme
 size: 16:9
 paginate: true
-author: L. Delafontaine, avec l'aide de Cursor
+author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ1 Course - Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP
 description: Modalités de l'unité d'enseignement pour le cours ProgServ1 à la HEIG-VD, Suisse
 url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html
 header: "**Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP**"
 footer: "**HEIG-VD** - ProgServ1 Course 2024-2025 - CC BY-SA 4.0"
-style: |
-    :root {
-        --color-background: #fff;
-        --color-foreground: #333;
-        --color-highlight: #f96;
-        --color-dimmed: #888;
-        --color-headings: #7d8ca3;
-    }
-    blockquote {
-        font-style: italic;
-    }
-    table {
-        width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-        color: var(--color-headings);
-    }
-    h2, h3, h4, h5, h6 {
-        font-size: 1.5rem;
-    }
-    h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link {
-        text-decoration: none;
-    }
-    section:not(.lead) > p, blockquote {
-        text-align: justify;
-    }
-    section:has(h1) {
-        padding: 50px;
-    }
-    section:has(h1) > header {
-        display: none;
-    }
-    section > header {
-        font-size: 50%;
-    }
-    .two-columns {
-        display: grid;
-        grid-template-columns: 1fr 2fr; /* 1/3 - 2/3 split */
-        gap: 1rem;
-    }
-    .center {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
 headingDivider: 6
 -->
 
@@ -74,15 +27,53 @@ _paginate: false
 [Support de cours][course-material] · [Présentation (web)][presentation-web] ·
 [Présentation (PDF)][presentation-pdf]
 
-<small>L. Delafontaine, avec l'aide de [Cursor](https://www.cursor.com/)</small>
+<small>L. Delafontaine, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot)</small>
 
 <small>Ce travail est sous licence [CC BY-SA 4.0][license].</small>
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
-## Bienvenue à l'unité d'enseignement Programmation serveur 1 (ProgServ1) !
+## `Bienvenue` à l'unité d'**enseignement** Programmation serveur 1 (ProgServ1) !
 
 <!-- _class: lead -->
+
+```php
+<?php
+    public function show($test = "allo")
+    {
+        return view('contacts');
+    }
+?>
+```
+
+- Coucou
+- Coucou
+
+---
+
+```java
+// End of transmission character
+String EOT = "\u0004";
+
+// Read data until the delimiter is found
+String line;
+while ((line = in.readLine()) != null && !line.equals(EOT)) {
+  System.out.println(
+    "[Server] received data from client: " + line
+  );
+}
+```
+
+---
+
+<!-- _class: lead -->
+
+| Tableau | Tableau | Tableau |
+| ------- | ------- | ------- |
+| Cellule | Cellule | Cellule |
+| Cellule | Cellule | Cellule |
+| Cellule | Cellule | Cellule |
 
 ## Qui suis-je
 
@@ -269,7 +260,16 @@ pour vous, n'hésitez pas à me contacter.
 
 ## Mini-projet
 
-### Présentation du mini-projet
+### Mini-projet
+
+![bg right:40% brightness:1.3][illustration-mini-projet]
+
+- `Application` pour gérer des animaux de compagnie :
+  - Ajout
+  - Visualisation
+  - Modification
+  - Suppression
+- À réaliser tout au long du semestre
 
 ### Objectifs de la session
 
@@ -306,6 +306,9 @@ N'hésitez pas à me contacter si vous avez des questions !
 - [Illustration][illustration-bibliographie-et-ressources] par
   [Tim van Cleef](https://unsplash.com/@_timvancleef) sur
   [Unsplash](https://unsplash.com/photos/wooden-ladder-by-bookshelves-1JBOZwuW7sI)
+- [Illustration][illustration-mini-projet] par
+  [Alec Favale](https://unsplash.com/@alecfavale) sur
+  [Unsplash](https://unsplash.com/photos/short-coated-white-and-brown-puppy-Ivzo69e18nk)
 - [Illustration][illustration-a-vous-de-jouer] par
   [Nikita Kachanovsky](https://unsplash.com/@nkachanovskyyy) sur
   [Unsplash](https://unsplash.com/photos/white-sony-ps4-dualshock-controller-over-persons-palm-FJFPuE1MAOM)
@@ -337,3 +340,5 @@ N'hésitez pas à me contacter si vous avez des questions !
 	https://images.unsplash.com/photo-1554906493-4812e307243d?fit=crop&h=720
 [illustration-a-vous-de-jouer]:
 	https://images.unsplash.com/photo-1509198397868-475647b2a1e5?fit=crop&h=720
+[illustration-mini-projet]:
+	https://images.unsplash.com/photo-1563460716037-460a3ad24ba9?fit=crop&h=720

@@ -32,16 +32,16 @@ Les détails de chaque cours composant l'unité d'enseignement sont disponibles
 ci-dessous. Chaque cours est détaillée avec les contenus, les objectifs, les
 méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
-|            Cours | Contenu(s)                                                                                                                                         |
-| ---------------: | :------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [01](#-cours-01) | [Modalités de l'unité d'enseignement et introduction à PHP](#modalités-de-lunité-denseignement-et-introduction-à-php)                              |
-| [02](#-cours-02) | [Tableaux et boucles](#tableaux-et-boucles)                                                                                                        |
-| [03](#-cours-03) | [Fonctions](#fonctions)                                                                                                                            |
-| [04](#-cours-04) | [Formulaires HTML et validation](#formulaires-html-et-validation)                                                                                  |
-| [05](#-cours-05) | [Base de données et PDO](#base-de-données-et-pdo)                                                                                                  |
-| [06](#-cours-06) | [Programmation orientée objet](#programmation-orientée-objet)                                                                                      |
-| [07](#-cours-07) | [Gestion des cookies et préférences utilisateur](#gestion-des-cookies-et-préférences-utilisateur)                                                  |
-| [08](#-cours-08) | [Finalisation de l'application et récapitulatif de l'unité d'enseignement](#finalisation-de-lapplication-et-récapitulatif-de-lunité-denseignement) |
+|            Cours | Contenu(s)                                                                                                                                         | Finalisé ? |
+| ---------------: | :------------------------------------------------------------------------------------------------------------------------------------------------- | :--------- |
+| [01](#-cours-01) | [Modalités de l'unité d'enseignement et introduction à PHP](#modalités-de-lunité-denseignement-et-introduction-à-php)                              | 🔴         |
+| [02](#-cours-02) | [Tableaux et boucles](#tableaux-et-boucles)                                                                                                        | 🔴         |
+| [03](#-cours-03) | [Fonctions](#fonctions)                                                                                                                            | 🔴         |
+| [04](#-cours-04) | [Formulaires HTML et validation](#formulaires-html-et-validation)                                                                                  | 🔴         |
+| [05](#-cours-05) | [Base de données et PDO](#base-de-données-et-pdo)                                                                                                  | 🔴         |
+| [06](#-cours-06) | [Programmation orientée objet](#programmation-orientée-objet)                                                                                      | 🔴         |
+| [07](#-cours-07) | [Gestion des cookies et sessions utilisateur](#gestion-des-cookies-et-sessions-utilisateur)                                                        | 🔴         |
+| [08](#-cours-08) | [Finalisation de l'application et récapitulatif de l'unité d'enseignement](#finalisation-de-lapplication-et-récapitulatif-de-lunité-denseignement) | 🔴         |
 
 ## 🕐 Cours 01
 
@@ -56,7 +56,7 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Mini-projet :
   [Mini-projet cours 01](./01-modalites-de-lunite-denseignement-et-introduction-a-php/02-mini-project/README.md)
 - Exercices :
-  [Exercices cours 01](./01-modalites-de-lunite-denseignement-et-introduction-a-php/03-exercices/READEME.md)
+  [Exercices cours 01](./01-modalites-de-lunite-denseignement-et-introduction-a-php/03-exercices/README.md)
 
 [Voir les détails](./01-modalites-de-lunite-denseignement-et-introduction-a-php/README.md)
 
@@ -352,7 +352,7 @@ il est recommandé pour le cours suivant de :
 
 ## 🕖 Cours 07
 
-### Gestion des cookies et préférences utilisateur
+### Gestion des cookies et sessions utilisateur
 
 - Présentation :
   [Web](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-cours-07/01-presentation/index.html)
