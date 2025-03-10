@@ -184,6 +184,10 @@ PHP repose lui aussi sur cette architecture client-serveur, où le serveur
 exécute le code PHP pour générer du HTML qui sera ensuite envoyé au navigateur
 du client.
 
+Actuellement à la version 8, PHP est un langage de programmation très populaire
+pour le développement web, notamment pour les sites web dynamiques et les
+applications web.
+
 ### Comment PHP fonctionne
 
 De façon plus précise, pour qu'une application web avec PHP fonctionne, vous
@@ -203,7 +207,7 @@ Le client réceptionnera le HTML et pourra directement l'afficher.
 PHP est exécuté sur le serveur, et le code PHP est interprété par le serveur web
 pour générer du HTML, qui est ensuite envoyé au navigateur du client.
 
-TODO: Schéma PlantUML de l'architecture client-serveur avec PHP
+![Architecture client-serveur avec PHP](./images/architecture-client-serveur-avec-php.png)
 
 ### Comment écrire du code PHP
 
@@ -218,6 +222,19 @@ Voici un exemple de code PHP simple :
 echo "Hello, World!";
 ?>
 ```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+</details>
 
 Ici, la fonction `echo` est utilisée pour afficher du texte sur la page web.
 
@@ -250,13 +267,13 @@ avec PHP installé. Pour ce faire, nous avons besoin d'un environnement de
 développement qui comprend un serveur web (Apache, Nginx, etc.) et PHP.
 
 Heureusement pour nous, il existe des solutions clés en main qui nous permettent
-de démarrer rapidement avec PHP, comme par exemple WAMP[^wamp] pour Windows,
-MAMP[^mamp] pour macOS, LAMP[^lamp] pour Linux, XAMPP[^xampp] pour Windows,
-macOS et Linux, etc.
+de démarrer rapidement avec PHP, comme par exemple WAMP pour Windows[^wamp],
+MAMP pour macOS[^mamp], LAMP pour Linux[^lamp], XAMPP pour Windows, macOS et
+Linux[^xampp], etc.
 
 Ces solutions regroupent les logiciels nécessaires pour exécuter du code PHP,
 notamment un serveur web, PHP et une base de données et fonctionnent selon le
-même principe décris précédemment.
+même principe d'architecture client-serveur vu précédemment.
 
 ### Syntaxe de base de PHP
 

@@ -184,9 +184,9 @@ un interpréteur PHP. Il s'agit d'un logiciel qui lit le code PHP et le traduit
 en instructions que votre ordinateur peut comprendre et l'exécuter.
 
 Il existe plusieurs solutions pour installer cet interpréteur PHP sur votre
-ordinateur (WAMP[^wamp] pour Windows, MAMP[^mamp] pour macOS, LAMP[^lamp] pour
-Linux, XAMPP[^xampp] pour Windows, macOS et Linux, etc.). Toutes ces solutions
-embarquent un serveur web, une base de données et un interpréteur PHP.
+ordinateur (par exemple WAMP pour Windows[^wamp], MAMP pour macOS[^mamp], LAMP
+pour Linux[^lamp], XAMPP pour Windows, macOS et Linux[^xampp], etc.). Toutes ces
+solutions embarquent un serveur web, une base de données et un interpréteur PHP.
 
 Dans le contexte de ce cours, nous allons installer un interpréteur PHP en
 utilisant MAMP, autant pour Windows que pour macOS, car il s'agit d'une des
