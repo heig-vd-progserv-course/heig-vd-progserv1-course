@@ -184,9 +184,10 @@ un interpréteur PHP. Il s'agit d'un logiciel qui lit le code PHP et le traduit
 en instructions que votre ordinateur peut comprendre et l'exécuter.
 
 Il existe plusieurs solutions pour installer cet interpréteur PHP sur votre
-ordinateur (par exemple WAMP pour Windows[^wamp], MAMP pour macOS[^mamp], LAMP
-pour Linux[^lamp], XAMPP pour Windows, macOS et Linux[^xampp], etc.). Toutes ces
-solutions embarquent un serveur web, une base de données et un interpréteur PHP.
+ordinateur (par exemple WampServer pour Windows[^wamp], MAMP pour macOS[^mamp],
+LAMP pour Linux[^lamp], XAMPP pour Windows, macOS et Linux[^xampp], etc.).
+Toutes ces solutions embarquent un serveur web, une base de données et un
+interpréteur PHP.
 
 Dans le contexte de ce cours, nous allons installer un interpréteur PHP en
 utilisant MAMP, autant pour Windows que pour macOS, car il s'agit d'une des
@@ -427,7 +428,7 @@ Pour installer Visual Studio Code sur Windows, suivez les étapes suivantes :
 1. Rendez-vous sur le site web de Visual Studio Code à l'adresse suivante :
    <https://code.visualstudio.com/>.
 
-   ![Site web de Visual Studio Code](./images/visual-studio-code-website.png)
+   ![Site web de Visual Studio Code](./images/visual-studio-code-website-windows.png)
 
 2. Téléchargez la dernière version de Visual Studio Code pour Windows.
 3. Exécutez le programme d'installation que vous venez de télécharger pour
@@ -482,7 +483,7 @@ Pour installer Visual Studio Code sur macOS, suivez les étapes suivantes :
 1. Rendez-vous sur le site web de Visual Studio Code à l'adresse suivante :
    <https://code.visualstudio.com/>.
 
-   ![Site web de Visual Studio Code](./images/visual-studio-code-website.png)
+   ![Site web de Visual Studio Code](./images/visual-studio-code-website-macos.png)
 
 2. Téléchargez la dernière version de Visual Studio Code pour macOS.
 3. Ouvrez le fichier `.dmg` que vous venez de télécharger.
@@ -568,7 +569,8 @@ code. Pour ce faire, suivez les étapes suivantes :
    faut sélectionner la même version que celle configurée dans MAMP. Dans la
    capture suivante, la version 8.3.1 est utilisée. Vous pouvez vérifier la
    version de PHP dans MAMP en cliquant sur le bouton **Preferences** dans la
-   fenêtre principale de MAMP.
+   fenêtre principale de MAMP. Vous en aurez besoin pour configurer Visual
+   Studio Code par la suite.
 
    ![Emplacement de l'interpréteur PHP dans MAMP](./images/visual-studio-code-configuration-06.png)
 
@@ -588,6 +590,11 @@ code. Pour ce faire, suivez les étapes suivantes :
    Remplacez `<PATH_TO_PHP_EXECUTABLE>` par le chemin d'accès à l'exécutable PHP
    sur votre ordinateur. Rar exemple, `C:\\MAMP\\bin\\php\\php8.3.1\\php.exe`
    pour Windows ou `/Applications/MAMP/bin/php/php8.3.1/bin/php` pour macOS.
+
+   > [!WARNING]
+   >
+   > Assurez-vous de remplacer `<PATH_TO_PHP_EXECUTABLE>` par le chemin d'accès
+   > correct à l'exécutable PHP sur votre ordinateur trouvé à l'étape 2.
 
    ![Configuration de l'interpréteur PHP dans Visual Studio Code 02](./images/visual-studio-code-configuration-08.png)
 

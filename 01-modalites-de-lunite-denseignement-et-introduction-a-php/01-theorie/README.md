@@ -23,7 +23,7 @@
 - [Introduction à PHP](#introduction-à-php)
   - [Applications web et architecture client-serveur](#applications-web-et-architecture-client-serveur)
   - [Qu'est-ce que PHP](#quest-ce-que-php)
-  - [Comment PHP fonctionne](#comment-php-fonctionne)
+  - [Comment fonctionne PHP](#comment-fonctionne-php)
   - [Comment écrire du code PHP](#comment-écrire-du-code-php)
   - [Comment exécuter du code PHP](#comment-exécuter-du-code-php)
   - [Syntaxe de base de PHP](#syntaxe-de-base-de-php)
@@ -176,27 +176,28 @@ mobiles, jeux vidéos, etc.).
 ### Qu'est-ce que PHP
 
 PHP (Hypertext Preprocessor) est un langage de programmation conçu pour le
-développement web. De cette manière, PHP permet de créer des applications qui
-peuvent être accessibles via un navigateur web et par plusieurs personnes en
-même temps.
+développement web qui a connu sa première version en 1994. De cette manière, PHP
+permet de créer des applications qui peuvent être accessibles via un navigateur
+web et par plusieurs personnes en même temps.
 
 PHP repose lui aussi sur cette architecture client-serveur, où le serveur
 exécute le code PHP pour générer du HTML qui sera ensuite envoyé au navigateur
 du client.
 
-Actuellement à la version 8, PHP est un langage de programmation très populaire
-pour le développement web, notamment pour les sites web dynamiques et les
-applications web.
+Actuellement à la version 8.4, le language a évolué pour devenir un des langages
+les plus utilisés pour le développement web, notamment pour sa simplicité, sa
+flexibilité et sa compatibilité avec de nombreux serveurs web.
 
-### Comment PHP fonctionne
+### Comment fonctionne PHP
 
-De façon plus précise, pour qu'une application web avec PHP fonctionne, vous
-avez besoin de :
+De façon plus précise, pour pour écrire et exécuter du code PHP, vous avez
+besoin de :
 
 - Un serveur web (Apache, Nginx, etc.)
 - PHP installé sur le serveur web
 - Un navigateur web (Chrome, Firefox, etc.) pour effectuer les requêtes et
   afficher les pages web
+- Un éditeur de code
 
 Le serveur web reçoit les requêtes du client, les envoie à l'interpréteur PHP
 (le moteur PHP qui est capable de lire et d'exécuter du code PHP),
@@ -208,6 +209,14 @@ PHP est exécuté sur le serveur, et le code PHP est interprété par le serveur
 pour générer du HTML, qui est ensuite envoyé au navigateur du client.
 
 ![Architecture client-serveur avec PHP](./images/architecture-client-serveur-avec-php.png)
+
+Le client (votre navigateur) envoie une requête pour demander une page web au
+serveur. Ces pages web, tels que `index.php`, sont des fichiers PHP qui
+contiennent du code PHP et du HTML.
+
+Le serveur web reçoit la requête, exécute le code PHP dans le fichier
+`index.php` pour générer du HTML, et renvoie ce HTML au navigateur du client,
+qui l'affiche sur la page web.
 
 ### Comment écrire du code PHP
 
@@ -267,8 +276,8 @@ avec PHP installé. Pour ce faire, nous avons besoin d'un environnement de
 développement qui comprend un serveur web (Apache, Nginx, etc.) et PHP.
 
 Heureusement pour nous, il existe des solutions clés en main qui nous permettent
-de démarrer rapidement avec PHP, comme par exemple WAMP pour Windows[^wamp],
-MAMP pour macOS[^mamp], LAMP pour Linux[^lamp], XAMPP pour Windows, macOS et
+de démarrer rapidement avec PHP, comme par exemple WampServer pour
+Windows[^wamp], MAMP pour macOS[^mamp], XAMPP pour Windows, macOS et
 Linux[^xampp], etc.
 
 Ces solutions regroupent les logiciels nécessaires pour exécuter du code PHP,
@@ -281,7 +290,34 @@ PHP a une syntaxe similaire à celle de Java, JavaScript et d'autres langages de
 programmation.
 
 Comme n'importe quelle langue ou language de programmation, PHP a des règles
-pour écrire du code. Voici quelques bases pour commencer.
+pour écrire du code.
+
+Il s'agit de les apprendre et les comprendre pour lire et écrire du code PHP de
+manière efficace.
+
+Voici quelques bases pour commencer.
+
+#### Les commentaires
+
+Les commentaires sont des parties du code qui ne sont pas exécutées par
+l'interpréteur PHP. Ils sont utilisés pour expliquer le code et rendre le code
+plus lisible.
+
+Comme en Java, les commentaires en PHP peuvent être sur une seule ligne avec
+`//` ou sur plusieurs lignes avec `/*` et `*/`.
+
+Voici un exemple :
+
+```php
+<?php
+// Ceci est un commentaire sur une seule ligne
+
+/*
+Ceci est un commentaire
+sur plusieurs lignes
+*/
+?>
+```
 
 #### Les variables
 
@@ -349,9 +385,6 @@ $variable = 3.14;
 
 // Variable de type booléen
 $variable = true;
-
-// Variable de type tableau
-$variable = array("apple", "banana", "cherry");
 ?>
 ```
 
@@ -362,19 +395,16 @@ $variable = array("apple", "banana", "cherry");
 public class Main {
     public static void main(String[] args) {
         // Variable de type chaîne de caractères
-        String variable = "Hello, World!";
+        String variable1 = "Hello, World!";
 
         // Variable de type nombre
-        int variable = 42;
+        int variable2 = 42;
 
         // Variable de type nombre flottant
-        double variable = 3.14;
+        double variable3 = 3.14;
 
         // Variable de type booléen
-        boolean variable = true;
-
-        // Variable de type tableau
-        String[] variable = {"apple", "banana", "cherry"};
+        boolean variable4 = true;
     }
 }
 ```
@@ -391,6 +421,8 @@ Les chaînes de caractères sont des séquences de caractères. Voici un exemple
 ```php
 <?php
 $string = "Hello, World!";
+
+echo $string;
 ?>
 ```
 
@@ -401,6 +433,8 @@ $string = "Hello, World!";
 public class Main {
     public static void main(String[] args) {
         String string = "Hello, World!";
+
+        System.out.println(string);
     }
 }
 ```
@@ -435,6 +469,8 @@ public class Main {
 
 </details>
 
+TODO: Différence entre `'` et `"`
+
 Diverses fonctions sont disponibles pour manipuler les chaînes de caractères,
 comme `strlen`, `str_replace`, `substr`, etc. Nous les verrons plus en détail
 dans les prochaines sessions.
@@ -456,6 +492,25 @@ $float = 3.14;
 echo $integer;
 echo $float;
 ?>
+```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        // Entier
+        int integer = 42;
+
+        // Flottant
+        double float = 3.14;
+
+        // Affichage des nombres
+        System.out.println(integer);
+        System.out.println(float);
+    }
+}
 ```
 
 ##### Les booléens
@@ -519,7 +574,6 @@ $array = array("apple", "banana", "cherry");
 <summary>Afficher l'équivalent en Java</summary>
 
 ```java
-
 public class Main {
     public static void main(String[] args) {
         // Déclaration d'un tableau
@@ -574,7 +628,7 @@ public class Main {
 
 </details>
 
-#### Les opérateurs (arithmétiques, de comparaison, logiques, etc.)
+#### Les opérateurs
 
 Les opérateurs sont utilisés pour effectuer des opérations sur des variables et
 des valeurs. Voici quelques exemples :
@@ -620,7 +674,7 @@ public class Main {
 
 </details>
 
-#### Les structures de contrôle conditionnelles (if, elseif, else et switch)
+#### Les structures de contrôle conditionnelles
 
 Les structures de contrôle conditionnelles permettent d'exécuter du code en
 fonction de certaines conditions, en utilisant les opérateurs de comparaison
@@ -779,7 +833,8 @@ combiner.
 $age = 18;
 $country = "Switzerland";
 
-// Vérification si `$age` est supérieur ou égal à 18 et `$country` est égal à "Switzerland"
+// Vérification si `$age` est supérieur ou égal à 18
+// et si `$country` est égal à "Switzerland"
 if ($age >= 18 && $country == "Switzerland") {
     echo "You are allowed to vote in Switzerland";
 }
@@ -796,7 +851,8 @@ public class Main {
         int age = 18;
         String country = "Switzerland";
 
-        // Vérification si `$age` est supérieur ou égal à 18 et `$country` est égal à "Switzerland"
+        // Vérification si `$age` est supérieur ou égal à 18
+        // et si `$country` est égal à "Switzerland"
         if (age >= 18 && country.equals("Switzerland")) {
             System.out.println("You are allowed to vote in Switzerland");
         }
@@ -872,9 +928,14 @@ sortir du `switch`, sans quoi le code suivant serait exécuté.
 ### Conclusion
 
 PHP est un langage de programmation puissant et polyvalent qui permet de créer
-des applications web dynamiques. Dans cette première session, nous avons vu les
-bases de PHP, y compris la syntaxe, les variables, les constantes, les
-opérateurs, les structures de contrôle conditionnelles, etc.
+des applications web dynamiques.
+
+Dans cette première session, nous avons vu les bases de PHP avec son
+architecture client-serveur ainsi que sa syntaxe de base.
+
+Nous avons également vu comment écrire et exécuter du code PHP, grâce au simple
+fait de sauvegarder un fichier avec l'extension `.php` et de l'ouvrir dans un
+navigateur web.
 
 Dans les prochaines sessions, nous approfondirons ces concepts et verrons
 comment les utiliser pour créer des applications web plus complexes.
@@ -894,11 +955,6 @@ renforcer votre compréhension des concepts vus en classe.
 
 Vous trouverez les détails des exercices ici :
 [Exercices cours 01](../03-exercices/READEME.md).
-
-[^lamp]:
-    LAMP,
-    [en.wikipedia.org](<https://en.wikipedia.org/wiki/LAMP_(software_bundle)>),
-    09 mars 2025
 
 [^mamp]: MAMP, [mamp.info](https://www.mamp.info/), 09 mars 2025
 [^wamp]: WampServer, [wampserver.com](https://www.wampserver.com/), 09 mars 2025
