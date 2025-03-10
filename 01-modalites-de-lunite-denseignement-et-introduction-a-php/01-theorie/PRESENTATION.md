@@ -34,50 +34,12 @@ _paginate: false
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
-## `Bienvenue` à l'unité d'**enseignement** Programmation serveur 1 (ProgServ1) !
+## Bienvenue à l'unité d'enseignement Programmation serveur 1 (ProgServ1) !
 
 <!-- _class: lead -->
-
-```php
-<?php
-    public function show($test = "allo")
-    {
-        return view('contacts');
-    }
-?>
-```
-
-- Coucou
-- Coucou
-
----
-
-```java
-// End of transmission character
-String EOT = "\u0004";
-
-// Read data until the delimiter is found
-String line;
-while ((line = in.readLine()) != null && !line.equals(EOT)) {
-  System.out.println(
-    "[Server] received data from client: " + line
-  );
-}
-```
-
----
-
-<!-- _class: lead -->
-
-| Tableau | Tableau | Tableau |
-| ------- | ------- | ------- |
-| Cellule | Cellule | Cellule |
-| Cellule | Cellule | Cellule |
-| Cellule | Cellule | Cellule |
 
 ## Qui suis-je
 
-<div class="two-columns">
 <div class="center">
 
 ![w:300](./images/ludovic-delafontaine.png)
@@ -87,16 +49,18 @@ while ((line = in.readLine()) != null && !line.equals(EOT)) {
 [GitHub](https://github.com/ludelafo)
 
 </div>
-<div>
 
-- CFC d'informatique à l'ETML
-- Bachelor en informatique à la HEIG-VD, spécialisation en ingénierie logicielle
-- Collaborateur Ra&D à la HEIG-VD pendant presque quatre ans
-- Indépendant avec une boîte spécialisée dans les applications web sur mesure
-- Chargé de cours à la HEIG-VD pour des cours d'informatique (Java, web, etc.)
+## Mes objectifs et souhaits pour le cours
 
-</div>
-</div>
+PHP va vous accompagner tout au long de vos études à la HEIG-VD (ProgServ1,
+ProgServ2, DevProdMed, etc.) et aussi plus tard dans votre carrière
+professionnelle.
+
+Mon objectif est de vous donner des bases solides et une bonne compréhension de
+ce language pour vos études et pour la suite.
+
+Si quelque chose ne convient pas dans mon cours, n'hésitez pas à me le dire. Je
+suis ouvert à toute critique pour améliorer mon enseignement.
 
 ## Comment me contacter
 
@@ -107,7 +71,7 @@ suivants pour toute question relative au cours :
 - Par e-mail
   ([ludovic.delafontaine@heig-vd.ch](mailto:ludovic.delafontaine@heig-vd.ch))
 - Microsoft Teams
-  - Dans le canal Teams du cours (de préférence)
+  - Dans le canal Teams du de l'unité d'enseignement (de préférence)
   - Message privé sur Teams (à éviter si possible)
 
 ## _Retrouvez plus de détails dans le support de cours_

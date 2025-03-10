@@ -33,15 +33,15 @@ ci-dessous. Chaque cours est détaillée avec les contenus, les objectifs, les
 méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 |            Cours | Contenu(s)                                                                                                                                         | Finalisé ? |
-| ---------------: | :------------------------------------------------------------------------------------------------------------------------------------------------- | :--------- |
-| [01](#-cours-01) | [Modalités de l'unité d'enseignement et introduction à PHP](#modalités-de-lunité-denseignement-et-introduction-à-php)                              | 🔴         |
-| [02](#-cours-02) | [Tableaux et boucles](#tableaux-et-boucles)                                                                                                        | 🔴         |
-| [03](#-cours-03) | [Fonctions](#fonctions)                                                                                                                            | 🔴         |
-| [04](#-cours-04) | [Formulaires HTML et validation](#formulaires-html-et-validation)                                                                                  | 🔴         |
-| [05](#-cours-05) | [Base de données et PDO](#base-de-données-et-pdo)                                                                                                  | 🔴         |
-| [06](#-cours-06) | [Programmation orientée objet](#programmation-orientée-objet)                                                                                      | 🔴         |
-| [07](#-cours-07) | [Gestion des cookies et sessions utilisateur](#gestion-des-cookies-et-sessions-utilisateur)                                                        | 🔴         |
-| [08](#-cours-08) | [Finalisation de l'application et récapitulatif de l'unité d'enseignement](#finalisation-de-lapplication-et-récapitulatif-de-lunité-denseignement) | 🔴         |
+| ---------------: | :------------------------------------------------------------------------------------------------------------------------------------------------- | :--------: |
+| [01](#-cours-01) | [Modalités de l'unité d'enseignement et introduction à PHP](#modalités-de-lunité-denseignement-et-introduction-à-php)                              |     🔴     |
+| [02](#-cours-02) | [Tableaux et boucles](#tableaux-et-boucles)                                                                                                        |     🔴     |
+| [03](#-cours-03) | [Fonctions](#fonctions)                                                                                                                            |     🔴     |
+| [04](#-cours-04) | [Formulaires HTML et validation](#formulaires-html-et-validation)                                                                                  |     🔴     |
+| [05](#-cours-05) | [Base de données et PDO](#base-de-données-et-pdo)                                                                                                  |     🔴     |
+| [06](#-cours-06) | [Programmation orientée objet](#programmation-orientée-objet)                                                                                      |     🔴     |
+| [07](#-cours-07) | [Gestion des cookies et sessions utilisateur](#gestion-des-cookies-et-sessions-utilisateur)                                                        |     🔴     |
+| [08](#-cours-08) | [Finalisation de l'application et récapitulatif de l'unité d'enseignement](#finalisation-de-lapplication-et-récapitulatif-de-lunité-denseignement) |     🔴     |
 
 ## 🕐 Cours 01
 

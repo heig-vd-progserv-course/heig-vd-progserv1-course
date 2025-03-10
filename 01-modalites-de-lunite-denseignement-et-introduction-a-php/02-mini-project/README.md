@@ -1,7 +1,21 @@
 # Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP - Mini-projet
 
+Ce mini-projet est conçue pour vous permettre de mettre en pratique les concepts
+théoriques vus dans le cours
+_[Modalités de l'unité d'enseignement et introduction à PHP](../01-theorie/README.md)_.
+
+## Ressources
+
+- Théorie : [Support de cours](./README.md) ·
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
+  ·
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
+- Mini-projet : [Mini-projet cours 01](../02-mini-project/README.md)
+- Exercices : [Exercices cours 01](../03-exercices/READEME.md)
+
 ## Tables des matières
 
+- [Ressources](#ressources)
 - [Tables des matières](#tables-des-matières)
 - [Introduction à votre première session de mini-projet](#introduction-à-votre-première-session-de-mini-projet)
 - [Présentation du mini-projet](#présentation-du-mini-projet)
@@ -18,7 +32,6 @@
 - [Aller plus loin](#aller-plus-loin)
 - [Solution](#solution)
 - [Conclusion](#conclusion)
-- [Sources](#sources)
 
 ## Introduction à votre première session de mini-projet
 
@@ -716,6 +729,8 @@ exercices et du mini-projet fonctionnent correctement :
 _Ceci est une section optionnelle pour les personnes qui souhaitent aller plus
 loin. Vous pouvez la sauter si vous n'avez pas de temps._
 
+- Êtes-vous capable de modifier les fichiers PHP pour y incorporer des balises
+  HTML et CSS pour rendre les pages plus attrayantes ?
 - Êtes-vous capable de changer les messages affichés dans les fichiers PHP pour
   quelque chose de plus personnel ?
 
@@ -726,7 +741,15 @@ Vous pouvez trouver la solution du mini-projet PHP à l'adresse suivante :
 
 ## Conclusion
 
-## Sources
+Dans cette première session de mini-projet, vous avez installé et configuré un
+environnement de développement pour PHP. Grâce à MAMP et Visual Studio Code,
+vous avez mis en place un environnement de développement complet pour écrire,
+tester et déboguer des applications PHP qui vous sera utile pour les sessions et
+les unités d'enseignement à venir.
+
+Vous avez également initialisé un projet PHP pour le mini-projet et testé
+l'initialisation du projet. Vous êtes maintenant prêt.e à commencer à construire
+l'application web pour gérer les animaux de compagnie !
 
 [^docker]: Docker, [docker.com](https://www.docker.com/), 09 mars 2025
 [^lamp]:
