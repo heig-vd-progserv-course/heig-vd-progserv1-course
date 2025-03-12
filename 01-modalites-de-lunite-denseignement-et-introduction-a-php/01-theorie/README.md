@@ -21,8 +21,8 @@
   - [La programmation et l'anglais](#la-programmation-et-langlais)
   - [Bibliographie et ressources utilisées](#bibliographie-et-ressources-utilisées)
 - [Introduction à PHP](#introduction-à-php)
-  - [Applications web et architecture client-serveur](#applications-web-et-architecture-client-serveur)
   - [Qu'est-ce que PHP](#quest-ce-que-php)
+  - [Applications web et architecture client-serveur](#applications-web-et-architecture-client-serveur)
   - [Comment fonctionne PHP](#comment-fonctionne-php)
   - [Comment écrire du code PHP](#comment-écrire-du-code-php)
   - [Comment exécuter du code PHP](#comment-exécuter-du-code-php)
@@ -155,7 +155,7 @@ Les ressources suivantes ont été utilisées pour la préparation de ce cours :
 Dans cette section, nous allons aborder les bases de PHP avec son fonctionnement
 et son rôle dans le monde web.
 
-### Applications web et architecture client-serveur
+### Qu'est-ce que PHP
 
 Jusqu'à présent, vous avez appris les bases de la programmation avec Java pour
 réaliser des applications/programmes qui s'exécutent sur votre machine.
@@ -163,29 +163,28 @@ réaliser des applications/programmes qui s'exécutent sur votre machine.
 Avec PHP, vous allez apprendre à réaliser des applications web qui s'exécutent
 sur un serveur et sont accessibles via un navigateur web.
 
-C'est ce que l'on appelle l'architecture client-serveur, où le client (votre
-navigateur) envoie des requêtes au serveur. Ces requêtes, selon leur nature,
-peuvent être traitées par le serveur pour effectuer des actions (lecture de
-fichiers, accès à une base de données, etc.) et renvoyer une réponse au client.
-
-La plupart des applications réseau modernes utilisent cette architecture pour
-fournir des services à un grand nombre d'utilisateurs (sites web, applications
-mobiles, jeux vidéos, etc.).
-
-### Qu'est-ce que PHP
-
 PHP (Hypertext Preprocessor) est un langage de programmation conçu pour le
 développement web qui a connu sa première version en 1994. De cette manière, PHP
 permet de créer des applications qui peuvent être accessibles via un navigateur
 web et par plusieurs personnes en même temps.
 
-PHP repose lui aussi sur cette architecture client-serveur, où le serveur
-exécute le code PHP pour générer du HTML qui sera ensuite envoyé au navigateur
-du client.
-
 Actuellement à la version 8.4, le language a évolué pour devenir un des langages
 les plus utilisés pour le développement web, notamment pour sa simplicité, sa
 flexibilité et sa compatibilité avec de nombreux serveurs web.
+
+### Applications web et architecture client-serveur
+
+PHP repose sur le principe de l'architecture client-serveur, qui est le modèle
+de base des applications web modernes.
+
+Le client (votre navigateur) envoie des requêtes au serveur. Ces requêtes, selon
+leur nature, peuvent être traitées par le serveur pour effectuer des actions
+(lecture de fichiers, accès à une base de données, etc.) et renvoyer une réponse
+au client.
+
+La plupart des applications réseau modernes utilisent cette architecture pour
+fournir des services à un grand nombre d'utilisateurs (sites web, applications
+mobiles, jeux vidéos, etc.).
 
 ### Comment fonctionne PHP
 
@@ -226,10 +225,13 @@ est exécuté par l'interpréteur PHP.
 Voici un exemple de code PHP simple :
 
 ```php
+// Ici, il n'y a pas de balise de fermeture PHP
 <?php
 echo "Hello, World!";
-?>
 ```
+
+Vous remarquez qu'il n'y a pas de balise de fermeture `?>` à la fin du fichier
+car le fichier ne contient que du code PHP.
 
 <details>
 <summary>Afficher l'équivalent en Java</summary>
@@ -256,17 +258,24 @@ un exemple :
 ```php
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>PHP Test</title>
 </head>
+
 <body>
     <h1><?php echo "Hello, World!"; ?></h1>
 </body>
+
 </html>
 ```
 
 Dans cet exemple, le texte _"Hello, World!"_ est affiché dans un titre de niveau
 1 (`<h1>`) sur la page web.
+
+Lorsqu'il y a un mélange de PHP et de HTML, il faut spécifier le code PHP entre
+les balises `<?php` et `?>` pour que l'interpréteur PHP puisse reconnaître la
+fin du bloc de code PHP et n'exécuter que le code PHP.
 
 ### Comment exécuter du code PHP
 
@@ -315,7 +324,6 @@ Voici un exemple :
 Ceci est un commentaire
 sur plusieurs lignes
 */
-?>
 ```
 
 #### Les variables
@@ -335,7 +343,6 @@ $variable = "Goodbye, World!";
 
 // Affichage de la variable modifiée
 echo $variable;
-?>
 ```
 
 <details>
@@ -348,13 +355,13 @@ public class Main {
         String variable = "Hello, World!";
 
         // Affichage de la variable
-        System.out.println(variable);
+        System.out.print(variable);
 
         // Modification de la variable
         variable = "Goodbye, World!";
 
         // Affichage de la variable modifiée
-        System.out.println(variable);
+        System.out.print(variable);
     }
 }
 ```
@@ -386,7 +393,6 @@ $variable = 3.14;
 
 // Variable de type booléen
 $variable = true;
-?>
 ```
 
 <details>
@@ -417,14 +423,15 @@ faites pas attention à ce que vous affectez à une variable.
 
 ##### Les chaînes de caractères
 
-Les chaînes de caractères sont des séquences de caractères. Voici un exemple :
+Les chaînes de caractères sont des séquences de caractères qui peuvent former
+des mots ou des phrases et sont déclarées entre des guillemets simples (`'`) ou
+doubles (`"`). Voici un exemple :
 
 ```php
 <?php
 $string = "Hello, World!";
 
 echo $string;
-?>
 ```
 
 <details>
@@ -435,7 +442,7 @@ public class Main {
     public static void main(String[] args) {
         String string = "Hello, World!";
 
-        System.out.println(string);
+        System.out.print(string);
     }
 }
 ```
@@ -451,7 +458,6 @@ $first = "Hello, ";
 $second = "World!";
 
 echo $first . $second;
-?>
 ```
 
 <details>
@@ -463,18 +469,65 @@ public class Main {
         String first = "Hello, ";
         String second = "World!";
 
-        System.out.println(first + second);
+        System.out.print(first + second);
     }
 }
 ```
 
 </details>
 
-TODO: Différence entre `'` et `"`
+Il est aussi possible de concaténer des chaînes de caractères avec les
+guillemets doubles (`"`) :
 
-Diverses fonctions sont disponibles pour manipuler les chaînes de caractères,
-comme `strlen`, `str_replace`, `substr`, etc. Nous les verrons plus en détail
-dans les prochaines sessions.
+La différence entre les guillemets simples (`'`) et les guillemets doubles (`"`)
+est que les guillemets doubles permettent d'interpréter les variables et les
+caractères d'échappement (`\n`, `\t`, etc.) :
+
+```php
+<?php
+$greetings = "Hello";
+$name = "World";
+
+echo "$greetings, $name!";
+```
+
+Il est aussi possible d'utiliser des guillemets simples (`'`) pour déclarer des
+chaînes de caractères :
+
+```php
+<?php
+$string = 'Hello, World!';
+
+echo $string;
+```
+
+La différence entre les guillemets simples (`'`) et les guillemets doubles (`"`)
+est que les guillemets simples ne permettent pas d'interpréter les variables.
+
+```php
+<?php
+$greetings = 'Hello';
+$name = 'World';
+
+// La ligne suivante affichera littéralement "$greetings, $name!"
+echo '$greetings, $name!';
+
+// Retour à la ligne HTML
+echo "<br>";
+
+// La ligne suivante affichera "Hello, World!"
+echo "$greetings, $name!";
+```
+
+Il est possible d'échapper des caractères spéciaux avec le caractère
+d'échappement (`\`) :
+
+```php
+<?php
+$string = "Hello, \"World\"!";
+
+echo "\$string contains $string";
+```
 
 ##### Les nombres
 
@@ -490,9 +543,8 @@ $integer = 42;
 $float = 3.14;
 
 // Affichage des nombres
-echo $integer;
-echo $float;
-?>
+echo "\$integer contains $integer<br>";
+echo "\$float contains $float";
 ```
 
 <details>
@@ -502,14 +554,14 @@ echo $float;
 public class Main {
     public static void main(String[] args) {
         // Entier
-        int integer = 42;
+        int myInteger = 42;
 
         // Flottant
-        double float = 3.14;
+        double myFloat = 3.14;
 
         // Affichage des nombres
-        System.out.println(integer);
-        System.out.println(float);
+        System.out.println("myInteger contains " + myInteger);
+        System.out.print("myFloat contains " + myFloat);
     }
 }
 ```
@@ -518,7 +570,13 @@ public class Main {
 
 ##### Les booléens
 
-Les booléens représentent des valeurs vraies ou fausses. Voici un exemple :
+Les booléens représentent des valeurs vraies ou fausses. PHP utilise les
+mots-clés `true` et `false` pour représenter ces valeurs respectivement.
+
+Les booléens sont souvent utilisés pour des conditions dans les structures de
+contrôle conditionnelles.
+
+Voici un exemple :
 
 ```php
 <?php
@@ -528,10 +586,9 @@ $doILikeDogs = true;
 // Faux
 $doILikeHomework = false;
 
-// Affichage des booléens
-echo $doILikeDogs;
-echo $doILikeHomework;
-?>
+// Affichage des booléens - `false` est affiché comme une chaîne vide
+echo "\$doILikeDogs contains $doILikeDogs<br>";
+echo "\$doILikeHomework contains $doILikeHomework";
 ```
 
 <details>
@@ -547,8 +604,8 @@ public class Main {
         boolean doILikeHomework = false;
 
         // Affichage des booléens
-        System.out.println(doILikeDogs);
-        System.out.println(doILikeHomework);
+        System.out.println("doILikeDogs contains " + doILikeDogs);
+        System.out.print("doILikeHomework contains " + doILikeHomework);
     }
 }
 ```
@@ -557,8 +614,12 @@ public class Main {
 
 ##### Les tableaux
 
-Les tableaux sont des collections de valeurs. Nous les étudierons plus en
-détails dans une prochaine session mais voici un exemple :
+Les tableaux sont des collections de valeurs. Ils sont déclarés entre des
+crochets (`[]`) ou avec la fonction `array()`. Les valeurs d'un tableau sont
+indexées à partir de 0.
+
+Nous les étudierons plus en détails dans un prochain cours mais voici un exemple
+:
 
 ```php
 <?php
@@ -566,11 +627,14 @@ détails dans une prochaine session mais voici un exemple :
 $array = ["apple", "banana", "cherry"];
 
 // Affichage de la première valeur du tableau
-echo $array[0];
+// Les tableaux sont indexés à partir de 0
+echo "$array[0]<br>";
 
 // Déclaration d'un tableau (alternative)
 $array = array("apple", "banana", "cherry");
-?>
+
+// Affichage de la troisième valeur du tableau
+echo "$array[2]";
 ```
 
 <details>
@@ -584,6 +648,9 @@ public class Main {
 
         // Affichage de la première valeur du tableau
         System.out.println(array[0]);
+
+        // Affichage de la troisième valeur du tableau
+        System.out.println(array[2]);
     }
 }
 ```
@@ -593,7 +660,11 @@ public class Main {
 #### Les constantes
 
 Les constantes sont des valeurs qui ne peuvent pas être modifiées après leur
-définition. Voici un exemple :
+définition. Le mot-clé `const` ou la fonction `define()` sont utilisés pour
+définir des constantes. La convention veut que les noms des constantes soient en
+majuscules.
+
+Voici un exemple :
 
 ```php
 <?php
@@ -608,7 +679,6 @@ CONSTANT = "Goodbye, World!";
 
 // Définition d'une constante (alternative)
 define("CONSTANT", "Hello, World!");
-?>
 ```
 
 <details>
@@ -631,6 +701,13 @@ public class Main {
 
 </details>
 
+Si vous essayez d'exécuter cet example, une erreur sera générée. Elle
+ressemblera à ceci :
+
+```text
+Parse error: syntax error, unexpected token "=" in 01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/exemples/15-constants.php on line 9
+```
+
 #### Les opérateurs
 
 Les opérateurs sont utilisés pour effectuer des opérations sur des variables et
@@ -640,21 +717,21 @@ des valeurs. Voici quelques exemples :
   (multiplication), `/` (division)
 - Opérateurs de comparaison : `==` (égal), `!=` (différent), `>` (supérieur),
   `<` (inférieur)
-- Opérateurs logiques : `&&` (et), `||` (ou), `!` (non)
+- Opérateurs logiques : `&&` (et), `||` (ou), `!` (non/inversion)
 
 Voici quelques exemples :
 
 ```php
 <?php
-// Opérateurs arithmétiques
 $sum = 1 + 1; // `$sum` contiendra 2
-
-$difference = 2 - 1; // `$difference` contiendra 1
-
+$difference = $sum - 1; // `$difference` contiendra 1
 $product = 2 * 2; // `$product` contiendra 4
+$quotient = $product / 2; // `$quotient` contiendra 2
 
-$quotient = 4 / 2; // `$quotient` contiendra 2
-?>
+echo "Sum: $sum<br>";
+echo "Difference: $difference<br>";
+echo "Product: $product<br>";
+echo "Quotient: $quotient<br>";
 ```
 
 <details>
@@ -663,7 +740,6 @@ $quotient = 4 / 2; // `$quotient` contiendra 2
 ```java
 public class Main {
     public static void main(String[] args) {
-        // Opérateurs arithmétiques
         int sum = 1 + 1; // `sum` contiendra 2
 
         int difference = 2 - 1; // `difference` contiendra 1
@@ -671,6 +747,11 @@ public class Main {
         int product = 2 * 2; // `product` contiendra 4
 
         int quotient = 4 / 2; // `quotient` contiendra 2
+
+        System.out.println("Sum: " + sum);
+        System.out.println("Difference: " + difference);
+        System.out.println("Product: " + product);
+        System.out.print("Quotient: " + quotient);
     }
 }
 ```
@@ -694,11 +775,10 @@ Voici un exemple d'une structure de contrôle conditionnelle `if` :
 $a = 1;
 $b = 2;
 
-// Vérification si `$a` est supérieur à `$b`
-if ($a > $b) {
-    echo "a is greater than b";
+// Vérification si `$a` est inférieur à `$b`
+if ($a < $b) {
+    echo "a is less than b";
 }
-?>
 ```
 
 <details>
@@ -711,9 +791,9 @@ public class Main {
         int a = 1;
         int b = 2;
 
-        // Vérification si `$a` est supérieur à `$b`
-        if (a > b) {
-            System.out.println("a is greater than b");
+        // Vérification si `$a` est inférieur à `$b`
+        if (a < b) {
+            System.out.println("a is less than b");
         }
     }
 }
@@ -723,11 +803,11 @@ public class Main {
 
 Dans une première partie, nous déclarons deux variables numériques `$a` et `$b`.
 Ensuite, nous utilisons une structure de contrôle conditionnelle `if` pour
-vérifier si `$a` est supérieur à `$b`.
+vérifier si `$a` est inférieur à `$b`.
 
 Si c'est le cas, nous affichons un message.
 
-A l'inverse, si `$a` n'est pas supérieur à `$b`, le contenu du bloc `if` n'est
+A l'inverse, si `$a` n'est pas inférieur à `$b`, le contenu du bloc `if` n'est
 pas exécuté.
 
 Pour gérer le cas où la condition n'est pas remplie, nous pouvons utiliser une
@@ -739,14 +819,13 @@ structure de contrôle conditionnelle `else` :
 $a = 1;
 $b = 2;
 
-// Vérification si `$a` est supérieur à `$b`
-if ($a > $b) {
-    echo "a is greater than b";
+// Vérification si `$a` est inférieur à `$b`
+if ($a < $b) {
+    echo "a is less than b";
 // Sinon
 } else {
-    echo "a is less than b";
+    echo "a is greater than b";
 }
-?>
 ```
 
 <details>
@@ -760,11 +839,11 @@ public class Main {
         int b = 2;
 
         // Vérification si `$a` est supérieur à `$b`
-        if (a > b) {
-            System.out.println("a is greater than b");
+        if (a < b) {
+            System.out.println("a is less than b");
         // Sinon
         } else {
-            System.out.println("a is less than b");
+            System.out.println("a is greater than b");
         }
     }
 }
@@ -784,17 +863,16 @@ nous pouvons utiliser une structure de contrôle conditionnelle `elseif` :
 $a = 1;
 $b = 2;
 
-// Vérification si `$a` est supérieur à `$b`
-if ($a > $b) {
-    echo "a is greater than b";
+// Vérification si `$a` est inférieur à `$b`
+if ($a < $b) {
+    echo "a is less than b";
 // Sinon si `$a` est égal à `$b`
 } elseif ($a == $b) {
     echo "a is equal to b";
 // Sinon
 } else {
-    echo "a is less than b";
+    echo "a is greater than b";
 }
-?>
 ```
 
 <details>
@@ -807,15 +885,15 @@ public class Main {
         int a = 1;
         int b = 2;
 
-        // Vérification si `$a` est supérieur à `$b`
+        // Vérification si `$a` est inférieur à `$b`
         if (a > b) {
-            System.out.println("a is greater than b");
+            System.out.println("a is less than b");
         // Sinon si `$a` est égal à `$b`
         } else if (a == b) {
             System.out.println("a is equal to b");
         // Sinon
         } else {
-            System.out.println("a is less than b");
+            System.out.println("a is greater than b");
         }
     }
 }
@@ -839,9 +917,8 @@ $country = "Switzerland";
 // Vérification si `$age` est supérieur ou égal à 18
 // et si `$country` est égal à "Switzerland"
 if ($age >= 18 && $country == "Switzerland") {
-    echo "You are allowed to vote in Switzerland";
+    echo "You are allowed to vote in Switzerland.";
 }
-?>
 ```
 
 <details>
@@ -857,7 +934,7 @@ public class Main {
         // Vérification si `$age` est supérieur ou égal à 18
         // et si `$country` est égal à "Switzerland"
         if (age >= 18 && country.equals("Switzerland")) {
-            System.out.println("You are allowed to vote in Switzerland");
+            System.out.print("You are allowed to vote in Switzerland.");
         }
     }
 }
@@ -878,17 +955,16 @@ $color = "red";
 switch ($color) {
     // Si la variable `$color` est égale à "red"
     case "red":
-        echo "The color is red";
+        echo "The color is red.";
         break;
     // Si la variable `$color` est égale à "blue"
     case "blue":
-        echo "The color is blue";
+        echo "The color is blue.";
         break;
     // Par défaut
     default:
-        echo "The color is neither red nor blue";
+        echo "The color is neither red nor blue.";
 }
-?>
 ```
 
 <details>
@@ -904,15 +980,15 @@ public class Main {
         switch (color) {
             // Si la variable `$color` est égale à "red"
             case "red":
-                System.out.println("The color is red");
+                System.out.println("The color is red.");
                 break;
             // Si la variable `$color` est égale à "blue"
             case "blue":
-                System.out.println("The color is blue");
+                System.out.println("The color is blue.");
                 break;
             // Par défaut
             default:
-                System.out.println("The color is neither red nor blue");
+                System.out.println("The color is neither red nor blue.");
         }
     }
 }

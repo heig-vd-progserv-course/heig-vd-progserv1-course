@@ -29,9 +29,10 @@ _[Modalités de l'unité d'enseignement et introduction à PHP](../01-theorie/RE
   - [Création de la structure du projet](#création-de-la-structure-du-projet)
   - [Création des fichiers du projet](#création-des-fichiers-du-projet)
   - [Test de l'initialisation du projet](#test-de-linitialisation-du-projet)
-- [Aller plus loin](#aller-plus-loin)
 - [Solution](#solution)
 - [Conclusion](#conclusion)
+- [Aller plus loin](#aller-plus-loin)
+  - [Installation des extensions PHP dans Visual Studio Code](#installation-des-extensions-php-dans-visual-studio-code)
 
 ## Introduction à votre première session de mini-projet
 
@@ -538,7 +539,7 @@ projet dans Visual Studio Code. Pour ce faire, suivez les étapes suivantes :
 
 Votre projet est maintenant ouvert dans Visual Studio Code.
 
-#### Configuration des raccourcis clavier
+#### Configuration des raccourcis clavier pour la sauvegarde de tous les fichiers
 
 Pas défaut, Visual Studio Code ne sauvegarde que le fichier courant lorsque vous
 appuyez sur `Ctrl + S` (Windows/Linux) ou `Cmd + S` (macOS). Pour sauvegarder
@@ -600,43 +601,6 @@ code. Pour ce faire, suivez les étapes suivantes :
 
 Cela permettra de configurer Visual Studio Code pour qu'il utilise
 l'interpréteur PHP installé avec MAMP pour valider le code PHP que vous écrivez.
-
-#### Installation des extensions PHP dans Visual Studio Code
-
-Visual Studio Code dispose d'un écosystème d'extensions qui vous permettent
-d'ajouter des fonctionnalités supplémentaires à l'éditeur de code. Pour
-travailler avec PHP, nous vous recommandons d'installer l'extension
-[PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client).
-
-Elle permettra d'ajouter des fonctionnalités d'auto-complétion et de validation
-du code PHP dans Visual Studio Code, augmentant ainsi votre productivité.
-
-Pour installer l'extension PHP Intelephense, suivez les étapes suivantes :
-
-1. Cliquez sur l'icône des extensions dans la barre latérale de Visual Studio
-   Code ou appuyez sur `Ctrl + Shift + X` (Windows/Linux) ou `Cmd + Shift + X`
-   (macOS).
-
-   ![Icône des extensions dans Visual Studio Code](./images/visual-studio-code-configuration-09.png)
-
-2. Recherchez `PHP Intelephense` dans la barre de recherche.
-
-   ![Recherche de l'extension PHP Intelephense dans Visual Studio Code](./images/visual-studio-code-configuration-10.png)
-
-3. Sélectionnez l'extension `PHP Intelephense` dans les résultats de la
-   recherche.
-
-   ![Résultats de la recherche de l'extension PHP Intelephense dans Visual Studio Code](./images/visual-studio-code-configuration-11.png)
-
-4. Cliquez sur le bouton **Install** pour installer l'extension. Un
-   avertissement de sécurité vous demande si vous faites confiance aux auteurs
-   de l'extension. Cliquez sur le bouton **Trust Publisher & Install** pour
-   continuer.
-
-   ![Installation de l'extension PHP Intelephense dans Visual Studio Code](./images/visual-studio-code-configuration-12.png)
-
-5. Une fois l'extension installée, vous devriez voir une confirmation de
-   l'installation.
 
 Votre environnement de développement est maintenant configuré pour travailler
 avec PHP dans Visual Studio Code !
@@ -731,16 +695,6 @@ exercices et du mini-projet fonctionnent correctement :
 - Exercices : <http://localhost/progserv1/exercices/>
 - Mini-projet : <http://localhost/progserv1/mini-projet/>
 
-## Aller plus loin
-
-_Ceci est une section optionnelle pour les personnes qui souhaitent aller plus
-loin. Vous pouvez la sauter si vous n'avez pas de temps._
-
-- Êtes-vous capable de modifier les fichiers PHP pour y incorporer des balises
-  HTML et CSS pour rendre les pages plus attrayantes ?
-- Êtes-vous capable de changer les messages affichés dans les fichiers PHP pour
-  quelque chose de plus personnel ?
-
 ## Solution
 
 Vous pouvez trouver la solution du mini-projet PHP à l'adresse suivante :
@@ -757,6 +711,49 @@ les unités d'enseignement à venir.
 Vous avez également initialisé un projet PHP pour le mini-projet et testé
 l'initialisation du projet. Vous êtes maintenant prêt.e à commencer à construire
 l'application web pour gérer les animaux de compagnie !
+
+## Aller plus loin
+
+_Ceci est une section optionnelle pour les personnes qui souhaitent aller plus
+loin. Vous pouvez la sauter si vous n'avez pas de temps._
+
+### Installation des extensions PHP dans Visual Studio Code
+
+Visual Studio Code dispose d'un écosystème d'extensions qui vous permet
+d'ajouter des fonctionnalités supplémentaires à l'éditeur de code.
+
+Pour travailler avec PHP, nous vous recommandons d'installer l'extension
+[PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client).
+
+Elle permettra d'ajouter des fonctionnalités d'auto-complétion et de validation
+du code PHP dans Visual Studio Code, augmentant ainsi votre productivité.
+
+Pour installer l'extension PHP Intelephense, suivez les étapes suivantes :
+
+1. Cliquez sur l'icône des extensions dans la barre latérale de Visual Studio
+   Code ou appuyez sur `Ctrl + Shift + X` (Windows/Linux) ou `Cmd + Shift + X`
+   (macOS).
+
+   ![Icône des extensions dans Visual Studio Code](./images/visual-studio-code-configuration-optional-01.png)
+
+2. Recherchez `PHP Intelephense` dans la barre de recherche.
+
+   ![Recherche de l'extension PHP Intelephense dans Visual Studio Code](./images/visual-studio-code-configuration-optional-02.png)
+
+3. Sélectionnez l'extension `PHP Intelephense` dans les résultats de la
+   recherche.
+
+   ![Résultats de la recherche de l'extension PHP Intelephense dans Visual Studio Code](./images/visual-studio-code-configuration-optional-03.png)
+
+4. Cliquez sur le bouton **Install** pour installer l'extension. Un
+   avertissement de sécurité vous demande si vous faites confiance aux auteurs
+   de l'extension. Cliquez sur le bouton **Trust Publisher & Install** pour
+   continuer.
+
+   ![Installation de l'extension PHP Intelephense dans Visual Studio Code](./images/visual-studio-code-configuration-optional-04.png)
+
+5. Une fois l'extension installée, vous devriez voir une confirmation de
+   l'installation.
 
 [^docker]: Docker, [docker.com](https://www.docker.com/), 09 mars 2025
 [^lamp]:

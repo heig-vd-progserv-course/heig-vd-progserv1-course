@@ -32,16 +32,16 @@ Les détails de chaque cours composant l'unité d'enseignement sont disponibles
 ci-dessous. Chaque cours est détaillée avec les contenus, les objectifs, les
 méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
-|            Cours | Contenu(s)                                                                                                                                         | Finalisé ? |
-| ---------------: | :------------------------------------------------------------------------------------------------------------------------------------------------- | :--------: |
-| [01](#-cours-01) | [Modalités de l'unité d'enseignement et introduction à PHP](#modalités-de-lunité-denseignement-et-introduction-à-php)                              |     🔴     |
-| [02](#-cours-02) | [Tableaux et boucles](#tableaux-et-boucles)                                                                                                        |     🔴     |
-| [03](#-cours-03) | [Fonctions](#fonctions)                                                                                                                            |     🔴     |
-| [04](#-cours-04) | [Formulaires HTML et validation](#formulaires-html-et-validation)                                                                                  |     🔴     |
-| [05](#-cours-05) | [Base de données et PDO](#base-de-données-et-pdo)                                                                                                  |     🔴     |
-| [06](#-cours-06) | [Programmation orientée objet](#programmation-orientée-objet)                                                                                      |     🔴     |
-| [07](#-cours-07) | [Gestion des cookies et sessions utilisateurs](#gestion-des-cookies-et-sessions-utilisateurs)                                                      |     🔴     |
-| [08](#-cours-08) | [Finalisation de l'application et récapitulatif de l'unité d'enseignement](#finalisation-de-lapplication-et-récapitulatif-de-lunité-denseignement) |     🔴     |
+|            Cours | Contenu(s)                                                                                                                                         | État de la rédaction |
+| ---------------: | :------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------- |
+| [01](#-cours-01) | [Modalités de l'unité d'enseignement et introduction à PHP](#modalités-de-lunité-denseignement-et-introduction-à-php)                              | 🟢 Complet           |
+| [02](#-cours-02) | [Tableaux et boucles](#tableaux-et-boucles)                                                                                                        | 🔴 À faire           |
+| [03](#-cours-03) | [Fonctions](#fonctions)                                                                                                                            | 🔴 À faire           |
+| [04](#-cours-04) | [Formulaires HTML et validation](#formulaires-html-et-validation)                                                                                  | 🔴 À faire           |
+| [05](#-cours-05) | [Base de données et PDO](#base-de-données-et-pdo)                                                                                                  | 🔴 À faire           |
+| [06](#-cours-06) | [Programmation orientée objet](#programmation-orientée-objet)                                                                                      | 🔴 À faire           |
+| [07](#-cours-07) | [Gestion des cookies et sessions utilisateurs](#gestion-des-cookies-et-sessions-utilisateurs)                                                      | 🔴 À faire           |
+| [08](#-cours-08) | [Finalisation de l'application et récapitulatif de l'unité d'enseignement](#finalisation-de-lapplication-et-récapitulatif-de-lunité-denseignement) | 🔴 À faire           |
 
 ## 🕐 Cours 01
 
@@ -64,398 +64,111 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 ### Tableaux et boucles
 
-- Présentation :
-  [Web](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-cours-02/01-presentation/index.html)
+- Théorie : [Support de cours](./02-tableaux-et-boucles/01-theorie/README.md) ·
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-tableaux-et-boucles/01-theorie/index.html)
   ·
-  [PDF](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-cours-02/01-presentation/02-cours-02-presentation.pdf)
-- Support de cours (théorie, exercices, mini-projet) :
-  [Markdown](./02-cours-02/02-support-de-cours/README.md)
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-tableaux-et-boucles/01-theorie/02-tableaux-et-boucles-presentation.pdf)
+- Mini-projet :
+  [Mini-projet cours 01](./02-tableaux-et-boucles/02-mini-project/README.md)
+- Exercices :
+  [Exercices cours 01](./02-tableaux-et-boucles/03-exercices/README.md)
 
-<details>
-<summary>Voir les détails</summary>
-
-<br>
-
-**Objectifs**
-
-À l'issue de ce cours, les personnes qui étudient devraient être capables de :
-
-- TODO
-
-**Méthodes d'enseignement et d'apprentissage**
-
-Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
-sont les suivantes :
-
-- Présentation magistrale
-- Discussions collectives
-
-**Méthodes d'évaluation**
-
-L'évaluation prend la forme d'un mini-projet et d'exercices à réaliser en
-autonomie en classe ou à la maison.
-
-L'évaluation se fait en utilisant les critères suivants :
-
-- Capacité à répondre avec justesse
-- Capacité à argumenter
-
-Les retours se font de la manière suivante :
-
-- Corrigé du mini-projet
-- Corrigé des exercices
-
-L'évaluation ne donne pas lieu à une note.
-
-**À faire pour la semaine suivante**
-
-Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour le cours suivant de :
-
-- Relire le support de cours si nécessaire
-- Finaliser la partie du mini-projet qui n'a pas été terminée en classe
-- Finaliser les exercices qui n'ont pas été terminés en classe
-
-</details>
+[Voir les détails](./02-tableaux-et-boucles/README.md)
 
 ## 🕒 Cours 03
 
 ### Fonctions
 
-- Présentation :
-  [Web](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/03-cours-03/01-presentation/index.html)
+- Théorie : [Support de cours](./03-fonctions/01-theorie/README.md) ·
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/03-fonctions/01-theorie/index.html)
   ·
-  [PDF](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/03-cours-03/01-presentation/03-cours-03-presentation.pdf)
-- Support de cours (théorie, exercices, mini-projet) :
-  [Markdown](./03-cours-03/02-support-de-cours/README.md)
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/03-fonctions/01-theorie/03-fonctions-presentation.pdf)
+- Mini-projet : [Mini-projet cours 01](./03-fonctions/02-mini-project/README.md)
+- Exercices : [Exercices cours 01](./03-fonctions/03-exercices/README.md)
 
-<details>
-<summary>Voir les détails</summary>
-
-<br>
-
-**Objectifs**
-
-À l'issue de ce cours, les personnes qui étudient devraient être capables de :
-
-- TODO
-
-**Méthodes d'enseignement et d'apprentissage**
-
-Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
-sont les suivantes :
-
-- Présentation magistrale
-- Discussions collectives
-
-**Méthodes d'évaluation**
-
-L'évaluation prend la forme d'un mini-projet et d'exercices à réaliser en
-autonomie en classe ou à la maison.
-
-L'évaluation se fait en utilisant les critères suivants :
-
-- Capacité à répondre avec justesse
-- Capacité à argumenter
-
-Les retours se font de la manière suivante :
-
-- Corrigé du mini-projet
-- Corrigé des exercices
-
-L'évaluation ne donne pas lieu à une note.
-
-**À faire pour la semaine suivante**
-
-Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour le cours suivant de :
-
-- Relire le support de cours si nécessaire
-- Finaliser la partie du mini-projet qui n'a pas été terminée en classe
-- Finaliser les exercices qui n'ont pas été terminés en classe
-
-</details>
+[Voir les détails](./03-fonctions/README.md)
 
 ## 🕓 Cours 04
 
 ### Formulaires HTML et validation
 
-- Présentation :
-  [Web](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/04-cours-04/01-presentation/index.html)
+- Théorie :
+  [Support de cours](./04-formulaires-html-et-validation/01-theorie/README.md) ·
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/01-theorie/index.html)
   ·
-  [PDF](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/04-cours-04/01-presentation/04-cours-04-presentation.pdf)
-- Support de cours (théorie, exercices, mini-projet) :
-  [Markdown](./04-cours-04/02-support-de-cours/README.md)
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/01-theorie/04-formulaires-html-et-validation-presentation.pdf)
+- Mini-projet :
+  [Mini-projet cours 01](./04-formulaires-html-et-validation/02-mini-project/README.md)
+- Exercices :
+  [Exercices cours 01](./04-formulaires-html-et-validation/03-exercices/README.md)
 
-<details>
-<summary>Voir les détails</summary>
-
-<br>
-
-**Objectifs**
-
-À l'issue de ce cours, les personnes qui étudient devraient être capables de :
-
-- TODO
-
-**Méthodes d'enseignement et d'apprentissage**
-
-Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
-sont les suivantes :
-
-- Présentation magistrale
-- Discussions collectives
-
-**Méthodes d'évaluation**
-
-L'évaluation prend la forme d'un mini-projet et d'exercices à réaliser en
-autonomie en classe ou à la maison.
-
-L'évaluation se fait en utilisant les critères suivants :
-
-- Capacité à répondre avec justesse
-- Capacité à argumenter
-
-Les retours se font de la manière suivante :
-
-- Corrigé du mini-projet
-- Corrigé des exercices
-
-L'évaluation ne donne pas lieu à une note.
-
-**À faire pour la semaine suivante**
-
-Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour le cours suivant de :
-
-- Relire le support de cours si nécessaire
-- Finaliser la partie du mini-projet qui n'a pas été terminée en classe
-- Finaliser les exercices qui n'ont pas été terminés en classe
-
-</details>
+[Voir les détails](./04-formulaires-html-et-validation/README.md)
 
 ## 🕔 Cours 05
 
 ### Base de données et PDO
 
-- Présentation :
-  [Web](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-cours-05/01-presentation/index.html)
+- Théorie : [Support de cours](./05-base-de-donnees-et-pdo/01-theorie/README.md)
   ·
-  [PDF](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-cours-05/01-presentation/05-cours-05-presentation.pdf)
-- Support de cours (théorie, exercices, mini-projet) :
-  [Markdown](./05-cours-05/02-support-de-cours/README.md)
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-theorie/index.html)
+  ·
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-theorie/05-base-de-donnees-et-pdo-presentation.pdf)
+- Mini-projet :
+  [Mini-projet cours 01](./05-base-de-donnees-et-pdo/02-mini-project/README.md)
+- Exercices :
+  [Exercices cours 01](./05-base-de-donnees-et-pdo/03-exercices/README.md)
 
-<details>
-<summary>Voir les détails</summary>
-
-<br>
-
-**Objectifs**
-
-À l'issue de ce cours, les personnes qui étudient devraient être capables de :
-
-- TODO
-
-**Méthodes d'enseignement et d'apprentissage**
-
-Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
-sont les suivantes :
-
-- Présentation magistrale
-- Discussions collectives
-
-**Méthodes d'évaluation**
-
-L'évaluation prend la forme d'un mini-projet et d'exercices à réaliser en
-autonomie en classe ou à la maison.
-
-L'évaluation se fait en utilisant les critères suivants :
-
-- Capacité à répondre avec justesse
-- Capacité à argumenter
-
-Les retours se font de la manière suivante :
-
-- Corrigé du mini-projet
-- Corrigé des exercices
-
-L'évaluation ne donne pas lieu à une note.
-
-**À faire pour la semaine suivante**
-
-Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour le cours suivant de :
-
-- Relire le support de cours si nécessaire
-- Finaliser la partie du mini-projet qui n'a pas été terminée en classe
-- Finaliser les exercices qui n'ont pas été terminés en classe
-
-</details>
+[Voir les détails](./05-base-de-donnees-et-pdo/README.md)
 
 ## 🕕 Cours 06
 
 ### Programmation orientée objet
 
-- Présentation :
-  [Web](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/06-cours-06/01-presentation/index.html)
+- Théorie :
+  [Support de cours](./06-programmation-orientee-objet/01-theorie/README.md) ·
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/06-programmation-orientee-objet/01-theorie/index.html)
   ·
-  [PDF](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/06-cours-06/01-presentation/06-cours-06-presentation.pdf)
-- Support de cours (théorie, exercices, mini-projet) :
-  [Markdown](./06-cours-06/02-support-de-cours/README.md)
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/06-programmation-orientee-objet/01-theorie/06-programmation-orientee-objet-presentation.pdf)
+- Mini-projet :
+  [Mini-projet cours 01](./06-programmation-orientee-objet/02-mini-project/README.md)
+- Exercices :
+  [Exercices cours 01](./06-programmation-orientee-objet/03-exercices/README.md)
 
-<details>
-<summary>Voir les détails</summary>
-
-<br>
-
-**Objectifs**
-
-À l'issue de ce cours, les personnes qui étudient devraient être capables de :
-
-- TODO
-
-**Méthodes d'enseignement et d'apprentissage**
-
-Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
-sont les suivantes :
-
-- Présentation magistrale
-- Discussions collectives
-
-**Méthodes d'évaluation**
-
-L'évaluation prend la forme d'un mini-projet et d'exercices à réaliser en
-autonomie en classe ou à la maison.
-
-L'évaluation se fait en utilisant les critères suivants :
-
-- Capacité à répondre avec justesse
-- Capacité à argumenter
-
-Les retours se font de la manière suivante :
-
-- Corrigé du mini-projet
-- Corrigé des exercices
-
-L'évaluation ne donne pas lieu à une note.
-
-**À faire pour la semaine suivante**
-
-Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour le cours suivant de :
-
-- Relire le support de cours si nécessaire
-- Finaliser la partie du mini-projet qui n'a pas été terminée en classe
-- Finaliser les exercices qui n'ont pas été terminés en classe
-
-</details>
+[Voir les détails](./06-programmation-orientee-objet/README.md)
 
 ## 🕖 Cours 07
 
 ### Gestion des cookies et sessions utilisateurs
 
-- Présentation :
-  [Web](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-cours-07/01-presentation/index.html)
+- Théorie :
+  [Support de cours](./07-gestion-des-cookies-et-sessions-utilisateurs/01-theorie/README.md)
   ·
-  [PDF](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-cours-07/01-presentation/07-cours-07-presentation.pdf)
-- Support de cours (théorie, exercices, mini-projet) :
-  [Markdown](./07-cours-07/02-support-de-cours/README.md)
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-gestion-des-cookies-et-sessions-utilisateurs/01-theorie/index.html)
+  ·
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-gestion-des-cookies-et-sessions-utilisateurs/01-theorie/07-gestion-des-cookies-et-sessions-utilisateurs-presentation.pdf)
+- Mini-projet :
+  [Mini-projet cours 01](./07-gestion-des-cookies-et-sessions-utilisateurs/02-mini-project/README.md)
+- Exercices :
+  [Exercices cours 01](./07-gestion-des-cookies-et-sessions-utilisateurs/03-exercices/README.md)
 
-<details>
-<summary>Voir les détails</summary>
-
-<br>
-
-**Objectifs**
-
-À l'issue de ce cours, les personnes qui étudient devraient être capables de :
-
-- TODO
-
-**Méthodes d'enseignement et d'apprentissage**
-
-Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
-sont les suivantes :
-
-- Présentation magistrale
-- Discussions collectives
-
-**Méthodes d'évaluation**
-
-L'évaluation prend la forme d'un mini-projet et d'exercices à réaliser en
-autonomie en classe ou à la maison.
-
-L'évaluation se fait en utilisant les critères suivants :
-
-- Capacité à répondre avec justesse
-- Capacité à argumenter
-
-Les retours se font de la manière suivante :
-
-- Corrigé du mini-projet
-- Corrigé des exercices
-
-L'évaluation ne donne pas lieu à une note.
-
-**À faire pour la semaine suivante**
-
-Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour le cours suivant de :
-
-- Relire le support de cours si nécessaire
-- Finaliser la partie du mini-projet qui n'a pas été terminée en classe
-- Finaliser les exercices qui n'ont pas été terminés en classe
-
-</details>
+[Voir les détails](./07-gestion-des-cookies-et-sessions-utilisateurs/README.md)
 
 ## 🕗 Cours 08
 
 ### Finalisation de l'application et récapitulatif de l'unité d'enseignement
 
-- Présentation :
-  [Web](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-cours-08/01-presentation/index.html)
+- Théorie :
+  [Support de cours](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/README.md)
   ·
-  [PDF](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-cours-08/01-presentation/08-cours-08-presentation.pdf)
-- Support de cours (théorie, exercices, mini-projet) :
-  [Markdown](./08-cours-08/02-support-de-cours/README.md)
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/index.html)
+  ·
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement-presentation.pdf)
+- Mini-projet :
+  [Mini-projet cours 01](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/02-mini-project/README.md)
+- Exercices :
+  [Exercices cours 01](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/03-exercices/README.md)
 
-<details>
-<summary>Voir les détails</summary>
-
-<br>
-
-**Objectifs**
-
-À l'issue de ce cours, les personnes qui étudient devraient être capables de :
-
-- TODO
-
-**Méthodes d'enseignement et d'apprentissage**
-
-Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
-sont les suivantes :
-
-- Présentation magistrale
-- Discussions collectives
-
-**Méthodes d'évaluation**
-
-L'évaluation prend la forme d'un mini-projet et d'exercices à réaliser en
-autonomie en classe ou à la maison.
-
-L'évaluation se fait en utilisant les critères suivants :
-
-- Capacité à répondre avec justesse
-- Capacité à argumenter
-
-Les retours se font de la manière suivante :
-
-- Corrigé du mini-projet
-- Corrigé des exercices
-
-L'évaluation ne donne pas lieu à une note.
-
-</details>
+[Voir les détails](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/README.md)
 
 ## 📜 Licence
 

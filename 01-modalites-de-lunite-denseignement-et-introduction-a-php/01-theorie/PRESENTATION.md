@@ -64,7 +64,7 @@ suis ouvert à toute critique pour améliorer mon enseignement.
 ## Comment me contacter
 
 Selon vos préférences, vous pouvez utiliser l'un des canaux de communication
-suivants pour toute question relative au cours :
+suivants pour toutes questions relatives au cours :
 
 - En personne, durant les sessions de cours ou en dehors
 - Par e-mail
@@ -136,13 +136,13 @@ En résumé, vous devriez être capable de :
 
 ### Modalités d'organisation de l'unité d'enseignement
 
-- En présentiel chaque semaine dans cette même salle
+- En présentiel chaque semaine dans cette même salle.
 - Mélange de théorie et de pratique pour un meilleur apprentissage :
-  - Théorie
-  - Mini-projet à réaliser tout au long de l'unité d'enseignement
-  - Exercices à faire en classe ou à la maison
+  - Moment de théorie court pour expliquer les concepts.
+  - Mini-projet à réaliser tout au long de l'unité d'enseignement.
+  - Exercices à faire en classe ou à la maison.
 - Espace de discussion pour poser des questions et obtenir de l'aide (**il n'y a
-  pas de questions bêtes !**, je suis payé pour ça)
+  pas de questions bêtes !**, je suis payé pour ça).
 
 ### Modalités d'évaluation
 
@@ -191,7 +191,7 @@ utiliserons dans les cours seront en anglais (commentaires en français par
 contre).
 
 Le reste du cours restera néanmoins en français. Si l'anglais est une barrière
-pour vous, n'hésitez pas à nous le faire savoir.
+pour vous, n'hésitez pas à me le faire savoir.
 
 ### Bibliographie et ressources utilisées
 
@@ -207,52 +207,60 @@ pour vous, n'hésitez pas à nous le faire savoir.
 
 <!-- _class: lead -->
 
-### Applications web et architecture client-serveur (1/2)
+### Qu'est-ce que PHP (1/2)
 
 - Jusqu'ici, vous avez développé des applications Java qui s'exécutent sur une
-  seule machine
+  seule machine.
 - Avec PHP, plusieurs personnes vont pouvoir accéder à une application depuis
-  leur navigateur web
+  leur navigateur web.
+
+![bg right:40%][illustration-quest-ce-php]
+
+### Qu'est-ce que PHP (2/2)
+
+- PHP est un language de programmation datant de 1994.
+- Très utilisé pour le développement web.
+- Basé sur une architecture client-serveur.
+- Actuellement à la version 8.4.
+- Un des languages les plus utilisés pour le développement web.
 
 ![bg right:40%][illustration-principale]
 
-### Applications web et architecture client-serveur (2/2)
+### Applications web et architecture client-serveur
 
-- Architecture client-serveur :
-  - Un client envoie une requête à un serveur
-  - Le serveur répond à cette requête
-  - Le client affiche le résultat
-
-![bg right:40%][illustration-principale]
-
-### Qu'est-ce que PHP
-
-- PHP est un language de programmation datant de 1994
-- Très utilisé pour le développement web
-- Basé sur une architecture client-serveur
-- Actuellement à la version 8.4
-- Un des languages les plus utilisés pour le développement web
-
-![bg right:40%][illustration-principale]
+- La plupart des applications web modernes reposent sur une architecture dite
+  _"client-serveur"_ :
+  1. Un client (navigateur web) envoie une requête à un serveur.
+  2. Le serveur répond aux requêtes des différents clients.
+  3. Le client affiche le résultat de la requête.
+- PHP repose sur cette même architecture.
 
 ### Comment fonctionne PHP
 
-- Architecture client-serveur
-- Outils nécessaires pour écrire et exécuter du code PHP :
-  - Un serveur web
-  - PHP installé sur le serveur web
-  - Un navigateur web
-  - Un éditeur de code
+- PHP fonctionne grâce aux outils suivants :
+  - Un serveur web.
+  - PHP installé sur le serveur web.
+  - Un navigateur web.
+  - Un éditeur de code (pour le développement)
 
 ![bg right:40% contain](./images/architecture-client-serveur-avec-php.png)
 
-### Comment écrire du code PHP (1/2)
+### Comment écrire du code PHP (1/3)
+
+- Code PHP dans un fichier `.php`.
+- Le code PHP est écrit entre des balises `<?php` et `?>`.
+- Le code PHP peut être mélangé avec du HTML.
+- Uniquement `<?php` s'il n'y a que du code PHP.
+
+![bg right:40%][illustration-comment-ecrire-du-code-php]
+
+### Comment écrire du code PHP (2/3)
 
 ```php
 // Code PHP, dans un fichier `.php`
+// Ici, il n'y a pas de balise de fermeture PHP
 <?php
 echo "Hello, World!";
-?>
 ```
 
 ```java
@@ -264,10 +272,11 @@ public class Main {
 }
 ```
 
-### Comment écrire du code PHP (2/2)
+### Comment écrire du code PHP (3/3)
 
 ```php
 <!-- Code PHP, dans un fichier `.php` avec de l'HTML -->
+<!-- Il y a la balise de fermeture PHP -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -290,11 +299,11 @@ public class Main {
 
 ### Syntaxe de base de PHP
 
-- Similaire à Java, JavaScript et d'autres languages de programmation
+- Similaire à Java, JavaScript et d'autres languages de programmation.
 - Comme n'importe quelle langue ou language de programmation, PHP a ses propres
-  règles de syntaxe
+  règles de syntaxe.
 - Il s'agit de les apprendre et de les comprendre pour lire et écrire du code
-  PHP de manière efficace
+  PHP de manière efficace.
 
 ![bg right:40%][illustration-principale]
 
@@ -311,14 +320,13 @@ public class Main {
 Ceci est un commentaire
 sur plusieurs lignes
 */
-?>
 ```
 
 #### Les variables (1/2)
 
 ```php
 <?php
-// Déclaration d'une variable
+// Déclaration d'une variable - une variable commence par le signe `$`
 $variable = "Hello, World!";
 
 // Affichage de la variable
@@ -329,7 +337,6 @@ $variable = "Goodbye, World!";
 
 // Affichage de la variable modifiée
 echo $variable;
-?>
 ```
 
 #### Les variables (2/2)
@@ -341,17 +348,26 @@ public static void main(String[] args) {
     String variable = "Hello, World!";
 
     // Affichage de la variable
-    System.out.println(variable);
+    System.out.print(variable);
 
     // Modification de la variable
     variable = "Goodbye, World!";
 
     // Affichage de la variable modifiée
-    System.out.println(variable);
+    System.out.print(variable);
 }
 ```
 
-##### Type de données et typage dynamique (1/2)
+##### Type de données et typage dynamique (1/3)
+
+- PHP est un language de programmation à typage dynamique.
+- Il n'y a pas besoin de déclarer le type de données d'une variable.
+- Le type de données d'une variable est déterminé par la valeur qui lui est
+  assignée.
+
+![bg right:40%][illustration-type-de-donnees-et-typage-dynamique]
+
+##### Type de données et typage dynamique (2/3)
 
 ```php
 <?php
@@ -366,10 +382,9 @@ $variable = 3.14;
 
 // Variable de type booléen
 $variable = true;
-?>
 ```
 
-##### Type de données et typage dynamique (2/2)
+##### Type de données et typage dynamique (3/3)
 
 ```java
 // Équivalent en Java
@@ -388,28 +403,34 @@ public static void main(String[] args) {
 }
 ```
 
-##### Les chaînes de caractères (1/4)
+##### Les chaînes de caractères (1/3)
+
+- Les chaînes de caractères sont déclarées entre des guillemets simples (`'`) ou
+  doubles (`"`).
+- Permettent de créer des mots ou des phrases.
+- Pour concaténer des chaînes de caractères, on utilise le point (`.`).
+
+![bg right:40%][illustration-les-chaines-de-caracteres]
+
+##### Les chaînes de caractères (2/3)
 
 ```php
 <?php
 $string = "Hello, World!";
 
 echo $string;
-?>
 ```
-
-##### Les chaînes de caractères (2/4)
 
 ```java
 // Équivalent en Java
 public static void main(String[] args) {
     String string = "Hello, World!";
 
-    System.out.println(string);
+    System.out.print(string);
 }
 ```
 
-##### Les chaînes de caractères (3/4)
+##### Les chaînes de caractères (3/3)
 
 ```php
 <?php
@@ -417,10 +438,7 @@ $first = "Hello, ";
 $second = "World!";
 
 echo $first . $second;
-?>
 ```
-
-##### Les chaînes de caractères (4/4)
 
 ```java
 // Équivalent en Java
@@ -428,11 +446,20 @@ public static void main(String[] args) {
     String first = "Hello, ";
     String second = "World!";
 
-    System.out.println(first + second);
+    System.out.print(first + second);
 }
 ```
 
-##### Les nombres (1/2)
+##### Les nombres (1/3)
+
+- Les nombres sont déclarés sans guillemets.
+- Il existe deux types de nombres en PHP : les entiers et les flottants.
+- Les entiers sont des nombres entiers positifs ou négatifs.
+- Les flottants sont des nombres à virgule.
+
+![bg right:40%][illustration-les-nombres]
+
+##### Les nombres (2/3)
 
 ```php
 <?php
@@ -443,29 +470,38 @@ $integer = 42;
 $float = 3.14;
 
 // Affichage des nombres
-echo $integer;
-echo $float;
-?>
+echo "\$integer contains $integer<br>";
+echo "\$float contains $float";
 ```
 
-##### Les nombres (2/2)
+##### Les nombres (3/3)
 
 ```java
 // Équivalent en Java
 public static void main(String[] args) {
     // Entier
-    int integer = 42;
+    int myInteger = 42;
 
     // Flottant
-    double float = 3.14;
+    double myFloat = 3.14;
 
     // Affichage des nombres
-    System.out.println(integer);
-    System.out.println(float);
+    System.out.println("myInteger contains " + myInteger);
+    System.out.print("myFloat contains " + myFloat);
 }
 ```
 
-##### Les booléens (1/2)
+##### Les booléens (1/3)
+
+- Les booléens sont des valeurs qui peuvent être soit vraies (`true`) soit
+  fausses (`false`).
+- Les booléens sont déclarés en PHP avec les mots-clés `true` et `false`.
+- Les booléens sont souvent utilisés pour des conditions dans les structures de
+  contrôle conditionnelles.
+
+![bg right:40%][illustration-les-booleens]
+
+##### Les booléens (2/3)
 
 ```php
 <?php
@@ -475,13 +511,12 @@ $doILikeDogs = true;
 // Faux
 $doILikeHomework = false;
 
-// Affichage des booléens
-echo $doILikeDogs;
-echo $doILikeHomework;
-?>
+// Affichage des booléens - `false` est affiché comme une chaîne vide
+echo "\$doILikeDogs contains $doILikeDogs<br>";
+echo "\$doILikeHomework contains $doILikeHomework";
 ```
 
-##### Les booléens (2/2)
+##### Les booléens (3/3)
 
 ```java
 // Équivalent en Java
@@ -493,12 +528,22 @@ public static void main(String[] args) {
     boolean doILikeHomework = false;
 
     // Affichage des booléens
-    System.out.println(doILikeDogs);
-    System.out.println(doILikeHomework);
+    System.out.println("doILikeDogs contains " + doILikeDogs);
+    System.out.print("doILikeHomework contains " + doILikeHomework);
 }
 ```
 
-##### Les tableaux (1/2)
+##### Les tableaux (1/3)
+
+- Les tableaux sont des collections de valeurs.
+- Les tableaux sont déclarés entre des crochets (`[]`) ou avec la fonction
+  `array()`.
+- Les valeurs d'un tableau sont indexées à partir de 0.
+- Nous étudierons les tableaux plus en détails dans un prochain cours.
+
+![bg right:40%][illustration-les-tableaux]
+
+##### Les tableaux (2/3)
 
 ```php
 <?php
@@ -506,14 +551,17 @@ public static void main(String[] args) {
 $array = ["apple", "banana", "cherry"];
 
 // Affichage de la première valeur du tableau
-echo $array[0];
+// Les tableaux sont indexés à partir de 0
+echo "$array[0]<br>";
 
 // Déclaration d'un tableau (alternative)
 $array = array("apple", "banana", "cherry");
-?>
+
+// Affichage de la troisième valeur du tableau
+echo "$array[2]";
 ```
 
-##### Les tableaux (2/2)
+##### Les tableaux (3/3)
 
 ```java
 // Équivalent en Java
@@ -523,10 +571,22 @@ public static void main(String[] args) {
 
     // Affichage de la première valeur du tableau
     System.out.println(array[0]);
+
+    // Affichage de la troisième valeur du tableau
+    System.out.println(array[2]);
 }
 ```
 
-#### Les constantes (1/2)
+#### Les constantes (1/3)
+
+- Les constantes sont des valeurs qui ne peuvent pas être modifiées.
+- Les constantes sont déclarées avec le mot-clé `const` ou avec la fonction
+  `define()`.
+- La convention veut que les constantes soient écrites en majuscules.
+
+![bg right:40%][illustration-les-constantes]
+
+#### Les constantes (2/3)
 
 ```php
 <?php
@@ -541,10 +601,9 @@ CONSTANT = "Goodbye, World!";
 
 // Définition d'une constante (alternative)
 define("CONSTANT", "Hello, World!");
-?>
 ```
 
-#### Les constantes (2/2)
+#### Les constantes (3/3)
 
 ```java
 // Équivalent en Java
@@ -562,11 +621,11 @@ public static void main(String[] args) {
 
 #### Les opérateurs (1/3)
 
-- Opérateurs arithmétiques : `+` (addition), `-` (soustraction), `*`
-  (multiplication), `/` (division)
+- Permet d'effectuer des opérations sur des variables et des valeurs.
+- Opérateurs arithmétiques : `+`, `-`, `*`, `/`
 - Opérateurs de comparaison : `==` (égal), `!=` (différent), `>` (supérieur),
   `<` (inférieur)
-- Opérateurs logiques : `&&` (et), `||` (ou), `!` (non)
+- Opérateurs logiques : `&&` (et), `||` (ou), `!` (non/inversion)
 
 ![bg right:40%][illustration-principale]
 
@@ -574,15 +633,15 @@ public static void main(String[] args) {
 
 ```php
 <?php
-// Opérateurs arithmétiques
 $sum = 1 + 1; // `$sum` contiendra 2
-
-$difference = 2 - 1; // `$difference` contiendra 1
-
+$difference = $sum - 1; // `$difference` contiendra 1
 $product = 2 * 2; // `$product` contiendra 4
+$quotient = $product / 2; // `$quotient` contiendra 2
 
-$quotient = 4 / 2; // `$quotient` contiendra 2
-?>
+echo "Sum: $sum<br>";
+echo "Difference: $difference<br>";
+echo "Product: $product<br>";
+echo "Quotient: $quotient";
 ```
 
 #### Les opérateurs (3/3)
@@ -590,103 +649,61 @@ $quotient = 4 / 2; // `$quotient` contiendra 2
 ```java
 // Équivalent en Java
 public static void main(String[] args) {
-    // Opérateurs arithmétiques
     int sum = 1 + 1; // `sum` contiendra 2
-
     int difference = 2 - 1; // `difference` contiendra 1
-
     int product = 2 * 2; // `product` contiendra 4
-
     int quotient = 4 / 2; // `quotient` contiendra 2
+
+    System.out.println("Sum: " + sum);
+    System.out.println("Difference: " + difference);
+    System.out.println("Product: " + product);
+    System.out.print("Quotient: " + quotient);
 }
 ```
 
-#### Les structures de contrôle conditionnelles (1/10)
+#### Les structures de contrôle conditionnelles (1/7)
+
+- Permettent de contrôler le flux d'exécution d'un programme.
+- Utilisent les opérateurs de comparaison et logiques.
+- Elles se composent de `if`, `else`, `elseif` et `switch`.
+
+![bg right:40%][illustration-principale]
+
+#### Les structures de contrôle conditionnelles (2/7)
 
 ```php
 <?php
-// Déclaration de deux variables numériques
 $a = 1;
 $b = 2;
 
-// Vérification si `$a` est supérieur à `$b`
-if ($a > $b) {
-    echo "a is greater than b";
-}
-?>
-```
-
-#### Les structures de contrôle conditionnelles (2/10)
-
-```java
-// Équivalent en Java
-public static void main(String[] args) {
-    // Déclaration de deux variables numériques
-    int a = 1;
-    int b = 2;
-
-    // Vérification si `$a` est supérieur à `$b`
-    if (a > b) {
-        System.out.println("a is greater than b");
-    }
-}
-```
-
-#### Les structures de contrôle conditionnelles (3/10)
-
-```php
-<?php
-if ($a > $b) {
-    echo "a is greater than b";
-} else {
+if ($a < $b) {
     echo "a is less than b";
-}
-?>
-```
-
-#### Les structures de contrôle conditionnelles (4/10)
-
-```java
-// Équivalent en Java
-public static void main(String[] args) {
-    if (a > b) {
-        System.out.println("a is greater than b");
-    } else {
-        System.out.println("a is less than b");
-    }
-}
-```
-
-#### Les structures de contrôle conditionnelles (5/10)
-
-```php
-<?php
-if ($a > $b) {
-    echo "a is greater than b";
 } elseif ($a == $b) {
     echo "a is equal to b";
 } else {
-    echo "a is less than b";
+    echo "a is greater than b";
 }
-?>
 ```
 
-#### Les structures de contrôle conditionnelles (6/10)
+#### Les structures de contrôle conditionnelles (3/7)
 
 ```java
 // Équivalent en Java
 public static void main(String[] args) {
+    int a = 1;
+    int b = 2;
+
     if (a > b) {
-        System.out.println("a is greater than b");
+        System.out.print("a is less than b");
     } else if (a == b) {
-        System.out.println("a is equal to b");
+        System.out.print("a is equal to b");
     } else {
-        System.out.println("a is less than b");
+        System.out.print("a is greater than b");
     }
 }
 ```
 
-#### Les structures de contrôle conditionnelles (7/10)
+#### Les structures de contrôle conditionnelles (4/7)
 
 ```php
 <?php
@@ -697,12 +714,11 @@ $country = "Switzerland";
 // Vérification si `$age` est supérieur ou égal à 18
 // et si `$country` est égal à "Switzerland"
 if ($age >= 18 && $country == "Switzerland") {
-    echo "You are allowed to vote in Switzerland";
+    echo "You are allowed to vote in Switzerland.";
 }
-?>
 ```
 
-#### Les structures de contrôle conditionnelles (8/10)
+#### Les structures de contrôle conditionnelles (5/7)
 
 ```java
 // Équivalent en Java
@@ -714,12 +730,12 @@ public static void main(String[] args) {
     // Vérification si `$age` est supérieur ou égal à 18
     // et si `$country` est égal à "Switzerland"
     if (age >= 18 && country.equals("Switzerland")) {
-        System.out.println("You are allowed to vote in Switzerland");
+        System.out.print("You are allowed to vote in Switzerland.");
     }
 }
 ```
 
-#### Les structures de contrôle conditionnelles (9/10)
+#### Les structures de contrôle conditionnelles (6/7)
 
 ```php
 <?php
@@ -730,7 +746,7 @@ $color = "red";
 switch ($color) {
     // Si la variable `$color` est égale à "red"
     case "red":
-        echo "The color is red";
+        echo "The color is red.";
         break;
 ```
 
@@ -739,16 +755,15 @@ switch ($color) {
 ```php
     // Si la variable `$color` est égale à "blue"
     case "blue":
-        echo "The color is blue";
+        echo "The color is blue.";
         break;
     // Par défaut
     default:
-        echo "The color is neither red nor blue";
+        echo "The color is neither red nor blue.";
 }
-?>
 ```
 
-#### Les structures de contrôle conditionnelles (10/10)
+#### Les structures de contrôle conditionnelles (7/7)
 
 ```java
 // Équivalent en Java
@@ -760,7 +775,7 @@ public static void main(String[] args) {
     switch (color) {
         // Si la variable `$color` est égale à "red"
         case "red":
-            System.out.println("The color is red");
+            System.out.println("The color is red.");
             break;
 ```
 
@@ -769,11 +784,11 @@ public static void main(String[] args) {
 ```java
         // Si la variable `$color` est égale à "blue"
         case "blue":
-            System.out.println("The color is blue");
+            System.out.println("The color is blue.");
             break;
         // Par défaut
         default:
-            System.out.println("The color is neither red nor blue");
+            System.out.println("The color is neither red nor blue.");
     }
 }
 ```
@@ -799,29 +814,37 @@ Est-ce que vous avez des questions ?
 
 ### Mini-projet
 
-![bg right:40% brightness:1.3][illustration-mini-projet]
+- Application web en PHP pour gérer des animaux de compagnie (ajout,
+  visualisation, modification, suppression)
+- Permet de mettre en pratique le contenu théorique du cours.
+- À réaliser tout au long de l'unité d'enseignement de façon guidée.
+- Je suis là pour vous aider si besoin.
 
-- Application web en PHP pour gérer des animaux de compagnie :
-  - Ajout
-  - Visualisation
-  - Modification
-  - Suppression
-- À réaliser tout au long de l'unité d'enseignement de façon accompagnée
+![bg right:40% brightness:1.3][illustration-mini-projet]
 
 ## Exercices
 
+<!-- _class: lead -->
+
+### Exercices
+
+- Permet d'exercer les concepts vus en cours, autant théoriques que pratiques.
+
+![bg right:40%][illustration-exercices]
+
 ## À vous de jouer !
 
-- (Re)lire le [support de cours][course-material]
-- Réaliser le [mini-projet][mini-project]
-- Faire les [exercices][exercices]
-- Poser des questions si nécessaire
+- (Re)lire le [support de cours][course-material].
+- Réaliser le [mini-projet][mini-project].
+- Faire les [exercices][exercices].
+- Poser des questions si nécessaire.
 
-N'hésitez pas à me contacter si vous avez des questions !
+**Que ce soit pour le mini-projet ou les exercices, je vous encourage à vous
+entraider si vous avez des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
-## Sources
+## Sources (1/2)
 
 - [Illustration principale][illustration-principale] par
   [Richard Jacobs](https://unsplash.com/@rj2747) sur
@@ -835,9 +858,39 @@ N'hésitez pas à me contacter si vous avez des questions !
 - [Illustration][illustration-bibliographie-et-ressources] par
   [Tim van Cleef](https://unsplash.com/@_timvancleef) sur
   [Unsplash](https://unsplash.com/photos/wooden-ladder-by-bookshelves-1JBOZwuW7sI)
+- [Illustration][illustration-quest-ce-php] par
+  [Michiel Leunens](https://unsplash.com/@leunesmedia) sur
+  [Unsplash](https://unsplash.com/photos/white-ceramic-cup-on-silver-coffee-maker-fBB7FeS4Xas)
+- [Illustration][illustration-comment-ecrire-du-code-php] par
+  [Aaron Burden](https://unsplash.com/@aaronburden) sur
+  [Unsplash](https://unsplash.com/photos/fountain-pen-on-black-lined-paper-y02jEX_B0O0)
+- [Illustration][illustration-type-de-donnees-et-typage-dynamique] par
+  [Jan Huber](https://unsplash.com/@jan_huber) sur
+  [Unsplash](https://unsplash.com/photos/yellow-and-red-light-streaks-NjV34SrbM_g)
+- [Illustration][illustration-les-chaines-de-caracteres] par
+  [Kier in Sight Archives](https://unsplash.com/@kierinsightarchives) sur
+  [Unsplash](https://unsplash.com/photos/white-and-black-abstract-illustration-qXA4b_dZSbQ)
+
+## Sources (2/2)
+
+- [Illustration][illustration-les-nombres] par
+  [Nick Hillier](https://unsplash.com/@nhillier) sur
+  [Unsplash](https://unsplash.com/photos/assorted-numbers-photography-yD5rv8_WzxA)
+- [Illustration][illustration-les-booleens] par
+  [Brooke Lark](https://unsplash.com/@brookelark) sur
+  [Unsplash](https://unsplash.com/photos/person-holding-calendar-at-january-BRBjShcA8D4)
+- [Illustration][illustration-les-tableaux] par
+  [Faris Mohammed](https://unsplash.com/@pkmfaris) sur
+  [Unsplash](https://unsplash.com/photos/assorted-color-marker-pens-PQinRWK1TgU)
+- [Illustration][illustration-les-constantes] par
+  [Kenny Eliason](https://unsplash.com/@neonbrand) sur
+  [Unsplash](https://unsplash.com/photos/red-bricks-wall-XEsx2NVpqWY)
 - [Illustration][illustration-mini-projet] par
   [Alec Favale](https://unsplash.com/@alecfavale) sur
   [Unsplash](https://unsplash.com/photos/short-coated-white-and-brown-puppy-Ivzo69e18nk)
+- [Illustration][illustration-exercices] par
+  [Samuel Girven](https://unsplash.com/@samuelgirven) sur
+  [Unsplash](https://unsplash.com/photos/dumbbells-on-floor-VJ2s0c20qCo)
 - [Illustration][illustration-a-vous-de-jouer] par
   [Nikita Kachanovsky](https://unsplash.com/@nkachanovskyyy) sur
   [Unsplash](https://unsplash.com/photos/white-sony-ps4-dualshock-controller-over-persons-palm-FJFPuE1MAOM)
@@ -867,7 +920,25 @@ N'hésitez pas à me contacter si vous avez des questions !
 	https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?fit=crop&h=720
 [illustration-bibliographie-et-ressources]:
 	https://images.unsplash.com/photo-1554906493-4812e307243d?fit=crop&h=720
-[illustration-a-vous-de-jouer]:
-	https://images.unsplash.com/photo-1509198397868-475647b2a1e5?fit=crop&h=720
+[illustration-quest-ce-php]:
+	https://images.unsplash.com/photo-1585332889055-059af80a9b5f?fit=crop&h=720
+[illustration-comment-ecrire-du-code-php]:
+	https://images.unsplash.com/photo-1455390582262-044cdead277a?fit=crop&h=720
+[illustration-type-de-donnees-et-typage-dynamique]:
+	https://images.unsplash.com/photo-1604012164853-9bb541fe0296?fit=crop&h=720
+[illustration-les-chaines-de-caracteres]:
+	https://images.unsplash.com/photo-1622321786092-a3df1d448be1?fit=crop&h=720
+[illustration-les-nombres]:
+	https://images.unsplash.com/photo-1502570149819-b2260483d302?fit=crop&h=720
+[illustration-les-booleens]:
+	https://images.unsplash.com/photo-1484981184820-2e84ea0af397?fit=crop&h=720
+[illustration-les-tableaux]:
+	https://images.unsplash.com/photo-1561117089-3fb7c944887f?fit=crop&h=720
+[illustration-les-constantes]:
+	https://images.unsplash.com/photo-1495578942200-c5f5d2137def?fit=crop&h=720
 [illustration-mini-projet]:
 	https://images.unsplash.com/photo-1563460716037-460a3ad24ba9?fit=crop&h=720
+[illustration-exercices]:
+	https://images.unsplash.com/photo-1576678927484-cc907957088c?fit=crop&h=720
+[illustration-a-vous-de-jouer]:
+	https://images.unsplash.com/photo-1509198397868-475647b2a1e5?fit=crop&h=720
