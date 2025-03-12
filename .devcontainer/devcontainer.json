@@ -4,11 +4,7 @@
 	"service": "devcontainer",
 	"workspaceFolder": "/workspace",
 	"features": {
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
-		"ghcr.io/devcontainers/features/php:1": {
-			"version": "8.3",
-			"installComposer": false
-		}
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
 	},
 	"customizations": {
 		"vscode": {

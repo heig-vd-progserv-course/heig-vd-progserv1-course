@@ -174,8 +174,9 @@ effectuer sur ordinateur :
   - Le mini-projet
 - Durée d'environ 2h15
 - Petit projet à réaliser
-- Contenu du cours, notes personnelles et documentation officielle de PHP
-  autorisés
+- Contenu du cours, notes personnelles,
+  [php.net](https://www.php.net/manual/index.php) et
+  [developer.mozilla.org](https://developer.mozilla.org) autorisés
 - **Tout autre aide interdite**
 
 ![bg right:40%][illustration-modalites-devaluation]
@@ -194,14 +195,11 @@ pour vous, n'hésitez pas à nous le faire savoir.
 
 ### Bibliographie et ressources utilisées
 
-- Documentation officielle de PHP :
-  [php.net/manual/fr](https://www.php.net/manual/fr/index.php)
-- Site web pour apprendre PHP :
-  [phptherightway.com](https://phptherightway.com/)
-- Tutoriel PHP avec W3Schools :
-  [w3schools.com/php](https://www.w3schools.com/php/)
-- Liste de ressources PHP :
-  [github.com/ziadoz/awesome-php](https://github.com/ziadoz/awesome-php)
+- <https://www.php.net/manual/index.php>
+- <https://developer.mozilla.org>
+- <https://phptherightway.com/>
+- <https://www.w3schools.com/php/>
+- <https://github.com/ziadoz/awesome-php>
 
 ![bg right:40%][illustration-bibliographie-et-ressources]
 
@@ -302,6 +300,9 @@ public class Main {
 
 #### Les commentaires
 
+- Comme dans Java, `//` pour un commentaire sur une seule ligne
+- Comme dans Java, `/* ... */` pour un commentaire sur plusieurs lignes
+
 ```php
 <?php
 // Ceci est un commentaire sur une seule ligne
@@ -387,7 +388,7 @@ public static void main(String[] args) {
 }
 ```
 
-##### Les chaînes de caractères (1/2)
+##### Les chaînes de caractères (1/4)
 
 ```php
 <?php
@@ -397,7 +398,7 @@ echo $string;
 ?>
 ```
 
-##### Les chaînes de caractères (2/2)
+##### Les chaînes de caractères (2/4)
 
 ```java
 // Équivalent en Java
@@ -408,7 +409,7 @@ public static void main(String[] args) {
 }
 ```
 
-##### Les chaînes de caractères (2/2)
+##### Les chaînes de caractères (3/4)
 
 ```php
 <?php
@@ -418,6 +419,8 @@ $second = "World!";
 echo $first . $second;
 ?>
 ```
+
+##### Les chaînes de caractères (4/4)
 
 ```java
 // Équivalent en Java

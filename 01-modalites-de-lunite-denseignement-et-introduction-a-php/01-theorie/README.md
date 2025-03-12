@@ -56,8 +56,8 @@ De façon plus précise, les objectifs de ce cours sont les suivants :
 
 ## Modalités de l'unité d'enseignement
 
-Cette section a pour but de vous donner un aperçu des modalités de l'unité
-d'enseignement, y compris ses objectifs, son organisation et son évaluation.
+Cette section liste les modalités de l'unité d'enseignement, y compris ses
+objectifs, son organisation et son évaluation.
 
 ### Objectifs de l'unité d'enseignement
 
@@ -122,9 +122,11 @@ de l'unité d'enseignement avec le mini-projet et les exercices.
 Elle durera environ 2h15 et sera à réaliser sur ordinateur à l'aide de votre
 environnement de développement.
 
-Vous aurez droit au contenu du cours, à vos notes personnelles et à la
-documentation officielle de PHP. **Aucune aide ne sera autorisée pendant cette
-partie pratique** (communication, outils d'intelligence artificielle, etc.).
+Vous aurez droit au contenu du cours, à vos notes personnelles, à la
+documentation officielle de PHP (<https://www.php.net/manual/index.php>) ainsi
+qu'aux ressources de MDN (<https://developer.mozilla.org>). **Aucune aide ne
+sera autorisée pendant cette partie pratique** (communication, outils
+d'intelligence artificielle, etc.).
 
 ### La programmation et l'anglais
 
@@ -142,14 +144,11 @@ pour vous, n'hésitez pas à nous le faire savoir.
 
 Les ressources suivantes ont été utilisées pour la préparation de ce cours :
 
-- Documentation officielle de PHP :
-  [php.net/manual/fr](https://www.php.net/manual/fr/index.php)
-- Site web pour apprendre PHP :
-  [phptherightway.com](https://phptherightway.com/)
-- Tutoriel PHP avec W3Schools :
-  [w3schools.com/php](https://www.w3schools.com/php/)
-- Liste de ressources PHP :
-  [github.com/ziadoz/awesome-php](https://github.com/ziadoz/awesome-php)
+- <https://www.php.net/manual/index.php>
+- <https://developer.mozilla.org>
+- <https://phptherightway.com/>
+- <https://www.w3schools.com/php/>
+- <https://github.com/ziadoz/awesome-php>
 
 ## Introduction à PHP
 
@@ -365,9 +364,11 @@ public class Main {
 ##### Type de données et typage dynamique
 
 PHP est un langage à typage dynamique, ce qui signifie que vous n'avez pas
-besoin de déclarer le type de données d'une variable. Les types de données
-courants incluent les chaînes de caractères, les nombres, les booléens et les
-tableaux.
+besoin de déclarer le type de données d'une variable. PHP le détermine
+automatiquement en fonction de la valeur affectée à la variable.
+
+Les types de données courants incluent les chaînes de caractères, les nombres,
+les booléens et les tableaux.
 
 Cela signifie que vous pouvez affecter une chaîne de caractères à une variable
 et ensuite lui affecter un nombre sans problème, comme suit :
@@ -512,6 +513,8 @@ public class Main {
     }
 }
 ```
+
+</details>
 
 ##### Les booléens
 

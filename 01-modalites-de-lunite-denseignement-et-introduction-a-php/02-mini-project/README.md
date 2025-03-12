@@ -1,6 +1,6 @@
 # Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP - Mini-projet
 
-Ce mini-projet est conçue pour vous permettre de mettre en pratique les concepts
+Ce mini-projet est conçu pour vous permettre de mettre en pratique les concepts
 théoriques vus dans le cours
 _[Modalités de l'unité d'enseignement et introduction à PHP](../01-theorie/README.md)_.
 
