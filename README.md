@@ -35,8 +35,8 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 |            Cours | Contenu(s)                                                               | État de la rédaction[^etat-de-la-redaction] |
 | ---------------: | :----------------------------------------------------------------------- | :------------------------------------------ |
 | [01](#-cours-01) | Modalités de l'unité d'enseignement et introduction à PHP                | 🟢 Complet                                  |
-| [02](#-cours-02) | Tableaux et boucles                                                      | 🟡 En cours                                 |
-| [03](#-cours-03) | Fonctions                                                                | 🔴 À faire                                  |
+| [02](#-cours-02) | Fonctions                                                                | 🟡 En cours                                 |
+| [03](#-cours-03) | Tableaux et boucles                                                      | 🔴 À faire                                  |
 | [04](#-cours-04) | Formulaires HTML et validation                                           | 🔴 À faire                                  |
 | [05](#-cours-05) | Base de données et PDO                                                   | 🔴 À faire                                  |
 | [06](#-cours-06) | Programmation orientée objet                                             | 🔴 À faire                                  |
@@ -66,34 +66,34 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 ## 🕑 Cours 02
 
-### Tableaux et boucles
+### Fonctions
 
-- Théorie : [Support de cours](./02-tableaux-et-boucles/01-theorie/README.md) ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-tableaux-et-boucles/01-theorie/index.html)
+- Théorie : [Support de cours](./02-fonctions/01-theorie/README.md) ·
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-fonctions/01-theorie/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-tableaux-et-boucles/01-theorie/02-tableaux-et-boucles-presentation.pdf)
-- Mini-projet :
-  [Mini-projet](./02-tableaux-et-boucles/02-mini-project/README.md) ·
-  [Solution](./02-tableaux-et-boucles/02-mini-project/solution/)
-- Exercices : [Exercices](./02-tableaux-et-boucles/03-exercices/README.md) ·
-  [Solutions](./02-tableaux-et-boucles/03-exercices/solutions/)
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-fonctions/01-theorie/02-fonctions-presentation.pdf)
+- Mini-projet : [Mini-projet](./02-fonctions/02-mini-project/README.md) ·
+  [Solution](./02-fonctions/02-mini-project/solution/)
+- Exercices : [Exercices](./02-fonctions/03-exercices/README.md) ·
+  [Solutions](./02-fonctions/03-exercices/solutions/)
 
-[Voir les détails](./02-tableaux-et-boucles/README.md)
+[Voir les détails](./02-fonctions/README.md)
 
 ## 🕒 Cours 03
 
-### Fonctions
+### Tableaux et boucles
 
-- Théorie : [Support de cours](./03-fonctions/01-theorie/README.md) ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/03-fonctions/01-theorie/index.html)
+- Théorie : [Support de cours](./03-tableaux-et-boucles/01-theorie/README.md) ·
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/01-theorie/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/03-fonctions/01-theorie/03-fonctions-presentation.pdf)
-- Mini-projet : [Mini-projet](./03-fonctions/02-mini-project/README.md) ·
-  [Solution](./03-fonctions/02-mini-project/solution/)
-- Exercices : [Exercices](./03-fonctions/03-exercices/README.md) ·
-  [Solutions](./03-fonctions/03-exercices/solutions/)
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/01-theorie/03-tableaux-et-boucles-presentation.pdf)
+- Mini-projet :
+  [Mini-projet](./03-tableaux-et-boucles/02-mini-project/README.md) ·
+  [Solution](./03-tableaux-et-boucles/02-mini-project/solution/)
+- Exercices : [Exercices](./03-tableaux-et-boucles/03-exercices/README.md) ·
+  [Solutions](./03-tableaux-et-boucles/03-exercices/solutions/)
 
-[Voir les détails](./03-fonctions/README.md)
+[Voir les détails](./03-tableaux-et-boucles/README.md)
 
 ## 🕓 Cours 04
 

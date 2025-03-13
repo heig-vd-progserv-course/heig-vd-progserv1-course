@@ -1,11 +1,11 @@
-# Cours 05 - Base de données et PDO
+# Cours 03 - Fonctions
 
 ## Ressources
 
 - Théorie : [Support de cours](./01-theorie/README.md) ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-theorie/index.html)
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-fonctions/01-theorie/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-theorie/05-base-de-donnees-et-pdo-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-fonctions/01-theorie/02-fonctions-presentation.pdf)
 - Mini-projet : [Mini-projet](./02-mini-project/README.md) ·
   [Solution](./02-mini-project/solution/)
 - Exercices : [Exercices](./03-exercices/README.md) ·
