@@ -1,8 +1,8 @@
-# Cours 02 - Tableaux et boucles - Mini-projet
+# Cours 03 - Tableaux et boucles - Mini-projet
 
 Ce mini-projet est conçu pour vous permettre de mettre en pratique les concepts
 théoriques vus dans le cours
-_[Cours 02 - Tableaux et boucles](../01-theorie/README.md)_.
+_[Cours 03 - Tableaux et boucles](../01-theorie/README.md)_.
 
 ## Ressources
 

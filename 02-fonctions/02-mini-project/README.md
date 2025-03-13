@@ -1,7 +1,7 @@
-# Cours 03 - Fonctions - Mini-projet
+# Cours 02 - Fonctions - Mini-projet
 
 Ce mini-projet est conçu pour vous permettre de mettre en pratique les concepts
-théoriques vus dans le cours _[Cours 03 - Fonctions](../01-theorie/README.md)_.
+théoriques vus dans le cours _[Cours 02 - Fonctions](../01-theorie/README.md)_.
 
 ## Ressources
 

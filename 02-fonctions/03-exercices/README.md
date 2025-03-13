@@ -1,8 +1,8 @@
-# Cours 03 - Fonctions - Exercices
+# Cours 02 - Fonctions - Exercices
 
 Cette série d'exercices est conçue pour vous permettre de valider les concepts
 théoriques et pratiques vus dans le cours
-_[Cours 03 - Fonctions](../01-theorie/README.md)_.
+_[Cours 02 - Fonctions](../01-theorie/README.md)_.
 
 ## Ressources
 
