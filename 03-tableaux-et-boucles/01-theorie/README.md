@@ -1,4 +1,4 @@
-# Cours 02 - Tableaux et boucles
+# Cours 03 - Tableaux et boucles
 
 ## Ressources
 

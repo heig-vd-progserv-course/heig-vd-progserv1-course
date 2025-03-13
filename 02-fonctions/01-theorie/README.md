@@ -1,4 +1,4 @@
-# Cours 03 - Fonctions
+# Cours 02 - Fonctions
 
 ## Ressources
 

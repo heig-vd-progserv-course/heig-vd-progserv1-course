@@ -1,8 +1,8 @@
-# Cours 02 - Tableaux et boucles - Exercices
+# Cours 03 - Tableaux et boucles - Exercices
 
 Cette série d'exercices est conçue pour vous permettre de valider les concepts
 théoriques et pratiques vus dans le cours
-_[Cours 02 - Tableaux et boucles](../01-theorie/README.md)_.
+_[Cours 03 - Tableaux et boucles](../01-theorie/README.md)_.
 
 ## Ressources
 

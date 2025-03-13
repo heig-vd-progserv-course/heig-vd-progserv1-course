@@ -7,15 +7,15 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
-title: HEIG-VD ProgServ1 Course - Cours 03 - Fonctions
-description: Cours 03 - Fonctions pour le cours ProgServ1 à la HEIG-VD, Suisse
+title: HEIG-VD ProgServ1 Course - Cours 02 - Fonctions
+description: Cours 02 - Fonctions pour le cours ProgServ1 à la HEIG-VD, Suisse
 url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-fonctions/01-theorie/index.html
-header: "**Cours 03 - Fonctions**"
+header: "**Cours 02 - Fonctions**"
 footer: "**HEIG-VD** - ProgServ1 Course 2024-2025 - CC BY-SA 4.0"
 headingDivider: 6
 -->
 
-# Cours 03 - Fonctions
+# Cours 02 - Fonctions
 
 <!--
 _class: lead
