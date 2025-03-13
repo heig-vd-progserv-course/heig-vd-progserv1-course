@@ -7,15 +7,15 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
-title: HEIG-VD ProgServ1 Course - Cours 02 - Tableaux et boucles
+title: HEIG-VD ProgServ1 Course - Cours 03 - Tableaux et boucles
 description: Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP pour le cours ProgServ1 à la HEIG-VD, Suisse
 url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/01-theorie/index.html
-header: "**Cours 02 - Tableaux et boucles**"
+header: "**Cours 03 - Tableaux et boucles**"
 footer: "**HEIG-VD** - ProgServ1 Course 2024-2025 - CC BY-SA 4.0"
 headingDivider: 6
 -->
 
-# Cours 02 - Tableaux et boucles
+# Cours 03 - Tableaux et boucles
 
 <!--
 _class: lead
