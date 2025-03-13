@@ -29,7 +29,7 @@
   - [Comment écrire du code PHP](#comment-écrire-du-code-php)
   - [Comment exécuter du code PHP](#comment-exécuter-du-code-php)
   - [Syntaxe de base de PHP](#syntaxe-de-base-de-php)
-  - [Conclusion](#conclusion)
+- [Conclusion](#conclusion)
 - [Mini-projet](#mini-projet)
 - [Exercices](#exercices)
 
@@ -45,13 +45,13 @@ De façon plus précise, les objectifs de ce cours sont les suivants :
 - Lister les objectifs de l'unité d'enseignement
 - Lister les modalités d'organisation de l'unité d'enseignement
 - Lister les modalités d'évaluation
-- Décrire le concept d'architecture client-serveur
+- Expliquer le concept d'architecture client-serveur
 - Lister les outils nécessaires pour écrire et exécuter du code PHP
 - Expliquer comment PHP fonctionne dans un environnement web
-- Décrire la syntaxe de base de PHP
-- Décrire les variables en PHP
-- Décrire les constantes en PHP
-- Décrire la nature dynamique des variables et constantes en PHP
+- Expliquer la syntaxe de base de PHP
+- Expliquer les variables en PHP
+- Expliquer les constantes en PHP
+- Expliquer la nature dynamique des variables et constantes en PHP
 - Expliquer les opérateurs en PHP
 - Expliquer les structures de contrôle conditionnelles en PHP
 - Rédiger du code PHP simple
@@ -1041,7 +1041,7 @@ La valeur par défaut `default` est exécutée si aucune des valeurs ne correspo
 Le mot-clé `break` est utilisé pour arrêter l'exécution du bloc de code et
 sortir du `switch`, sans quoi le code suivant serait exécuté.
 
-### Conclusion
+## Conclusion
 
 PHP est un langage de programmation puissant et polyvalent qui permet de créer
 des applications web dynamiques.

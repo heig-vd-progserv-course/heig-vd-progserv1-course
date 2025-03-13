@@ -2,7 +2,7 @@
 
 Ce mini-projet est conçu pour vous permettre de mettre en pratique les concepts
 théoriques vus dans le cours
-_[Modalités de l'unité d'enseignement et introduction à PHP](../01-theorie/README.md)_.
+_[Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP](../01-theorie/README.md)_.
 
 ## Ressources
 
@@ -43,7 +43,7 @@ toute la durée de l'unité d'enseignement !
 
 Cette session de mini-projet est conçue pour vous permettre de mettre en
 pratique les concepts théoriques vus dans le cours
-_[Modalités de l'unité d'enseignement et introduction à PHP](../01-theorie/README.md)_.
+_[Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP](../01-theorie/README.md)_.
 N\'hésitez pas à vous y référer si vous avez besoin de rafraîchir votre mémoire.
 
 En lisant les contenus préparés pour les sessions de mini-projet, vous trouverez
@@ -367,7 +367,12 @@ fonctionne correctement avec PHP.
 
 Pour ce faire, suivez les étapes suivantes :
 
-1. Lancez MAMP.
+1. Lancez MAMP si ce n'est pas déjà fait. Vous devriez voir les icônes des
+   serveurs Apache et MySQL en vert dans la barre de menu de MAMP, indiquant que
+   les serveurs sont en cours d 'exécution
+
+   ![MAMP démarré et en cours d'exécution](./images/mamp-started-and-running.png)
+
 2. Accédez aux paramètres de MAMP au travers du menu **MAMP > Preferences**.
 3. Dans l'onglet **Start/Stop**, cochez les cases **Start Servers when starting
    MAMP** et **Stop Servers when quitting MAMP** afin de démarrer et d'arrêter
