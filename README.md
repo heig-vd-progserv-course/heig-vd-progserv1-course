@@ -32,16 +32,16 @@ Les détails de chaque cours composant l'unité d'enseignement sont disponibles
 ci-dessous. Chaque cours est détaillée avec les contenus, les objectifs, les
 méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
-|            Cours | Contenu(s)                                                                                                                                         | État de la rédaction |
-| ---------------: | :------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------- |
-| [01](#-cours-01) | [Modalités de l'unité d'enseignement et introduction à PHP](#modalités-de-lunité-denseignement-et-introduction-à-php)                              | 🟢 Complet           |
-| [02](#-cours-02) | [Tableaux et boucles](#tableaux-et-boucles)                                                                                                        | 🔴 À faire           |
-| [03](#-cours-03) | [Fonctions](#fonctions)                                                                                                                            | 🔴 À faire           |
-| [04](#-cours-04) | [Formulaires HTML et validation](#formulaires-html-et-validation)                                                                                  | 🔴 À faire           |
-| [05](#-cours-05) | [Base de données et PDO](#base-de-données-et-pdo)                                                                                                  | 🔴 À faire           |
-| [06](#-cours-06) | [Programmation orientée objet](#programmation-orientée-objet)                                                                                      | 🔴 À faire           |
-| [07](#-cours-07) | [Gestion des cookies et sessions utilisateurs](#gestion-des-cookies-et-sessions-utilisateurs)                                                      | 🔴 À faire           |
-| [08](#-cours-08) | [Finalisation de l'application et récapitulatif de l'unité d'enseignement](#finalisation-de-lapplication-et-récapitulatif-de-lunité-denseignement) | 🔴 À faire           |
+|            Cours | Contenu(s)                                                               | État de la rédaction |
+| ---------------: | :----------------------------------------------------------------------- | :------------------- |
+| [01](#-cours-01) | Modalités de l'unité d'enseignement et introduction à PHP                | 🟢 Complet           |
+| [02](#-cours-02) | Tableaux et boucles                                                      | 🔴 À faire           |
+| [03](#-cours-03) | Fonctions                                                                | 🔴 À faire           |
+| [04](#-cours-04) | Formulaires HTML et validation                                           | 🔴 À faire           |
+| [05](#-cours-05) | Base de données et PDO                                                   | 🔴 À faire           |
+| [06](#-cours-06) | Programmation orientée objet                                             | 🔴 À faire           |
+| [07](#-cours-07) | Gestion des cookies et sessions utilisateurs                             | 🔴 À faire           |
+| [08](#-cours-08) | Finalisation de l'application et récapitulatif de l'unité d'enseignement | 🔴 À faire           |
 
 ## 🕐 Cours 01
 
@@ -55,8 +55,12 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
 - Mini-projet :
   [Mini-projet cours 01](./01-modalites-de-lunite-denseignement-et-introduction-a-php/02-mini-project/README.md)
+  ·
+  [Solution](./01-modalites-de-lunite-denseignement-et-introduction-a-php/02-mini-project/solution/README.md)
 - Exercices :
   [Exercices cours 01](./01-modalites-de-lunite-denseignement-et-introduction-a-php/03-exercices/README.md)
+  ·
+  [Solutions](./01-modalites-de-lunite-denseignement-et-introduction-a-php/03-exercices/solutions/README.md)
 
 [Voir les détails](./01-modalites-de-lunite-denseignement-et-introduction-a-php/README.md)
 
@@ -69,9 +73,11 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
   ·
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-tableaux-et-boucles/01-theorie/02-tableaux-et-boucles-presentation.pdf)
 - Mini-projet :
-  [Mini-projet cours 02](./02-tableaux-et-boucles/02-mini-project/README.md)
+  [Mini-projet cours 02](./02-tableaux-et-boucles/02-mini-project/README.md) ·
+  [Solution](./02-tableaux-et-boucles/02-mini-project/solution/README.md)
 - Exercices :
-  [Exercices cours 02](./02-tableaux-et-boucles/03-exercices/README.md)
+  [Exercices cours 02](./02-tableaux-et-boucles/03-exercices/README.md) ·
+  [Solutions](./02-tableaux-et-boucles/03-exercices/solutions/README.md)
 
 [Voir les détails](./02-tableaux-et-boucles/README.md)
 
@@ -84,7 +90,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
   ·
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/03-fonctions/01-theorie/03-fonctions-presentation.pdf)
 - Mini-projet : [Mini-projet cours 03](./03-fonctions/02-mini-project/README.md)
-- Exercices : [Exercices cours 03](./03-fonctions/03-exercices/README.md)
+  · [Solution](./03-fonctions/02-mini-project/solution/README.md)
+- Exercices : [Exercices cours 03](./03-fonctions/03-exercices/README.md) ·
+  [Solutions](./03-fonctions/03-exercices/solutions/README.md)
 
 [Voir les détails](./03-fonctions/README.md)
 
@@ -99,8 +107,12 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/01-theorie/04-formulaires-html-et-validation-presentation.pdf)
 - Mini-projet :
   [Mini-projet cours 04](./04-formulaires-html-et-validation/02-mini-project/README.md)
+  ·
+  [Solution](./04-formulaires-html-et-validation/02-mini-project/solution/README.md)
 - Exercices :
   [Exercices cours 04](./04-formulaires-html-et-validation/03-exercices/README.md)
+  ·
+  [Solutions](./04-formulaires-html-et-validation/03-exercices/solutions/README.md)
 
 [Voir les détails](./04-formulaires-html-et-validation/README.md)
 
@@ -115,8 +127,10 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-theorie/05-base-de-donnees-et-pdo-presentation.pdf)
 - Mini-projet :
   [Mini-projet cours 05](./05-base-de-donnees-et-pdo/02-mini-project/README.md)
+  · [Solution](./05-base-de-donnees-et-pdo/02-mini-project/solution/README.md)
 - Exercices :
-  [Exercices cours 05](./05-base-de-donnees-et-pdo/03-exercices/README.md)
+  [Exercices cours 05](./05-base-de-donnees-et-pdo/03-exercices/README.md) ·
+  [Solutions](./05-base-de-donnees-et-pdo/03-exercices/solutions/README.md)
 
 [Voir les détails](./05-base-de-donnees-et-pdo/README.md)
 
@@ -131,8 +145,12 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/06-programmation-orientee-objet/01-theorie/06-programmation-orientee-objet-presentation.pdf)
 - Mini-projet :
   [Mini-projet cours 06](./06-programmation-orientee-objet/02-mini-project/README.md)
+  ·
+  [Solution](./06-programmation-orientee-objet/02-mini-project/solution/README.md)
 - Exercices :
   [Exercices cours 06](./06-programmation-orientee-objet/03-exercices/README.md)
+  ·
+  [Solutions](./06-programmation-orientee-objet/03-exercices/solutions/README.md)
 
 [Voir les détails](./06-programmation-orientee-objet/README.md)
 
@@ -148,8 +166,12 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-gestion-des-cookies-et-sessions-utilisateurs/01-theorie/07-gestion-des-cookies-et-sessions-utilisateurs-presentation.pdf)
 - Mini-projet :
   [Mini-projet cours 07](./07-gestion-des-cookies-et-sessions-utilisateurs/02-mini-project/README.md)
+  ·
+  [Solution](./07-gestion-des-cookies-et-sessions-utilisateurs/02-mini-project/solution/README.md)
 - Exercices :
   [Exercices cours 07](./07-gestion-des-cookies-et-sessions-utilisateurs/03-exercices/README.md)
+  ·
+  [Solutions](./07-gestion-des-cookies-et-sessions-utilisateurs/03-exercices/solutions/README.md)
 
 [Voir les détails](./07-gestion-des-cookies-et-sessions-utilisateurs/README.md)
 
@@ -165,8 +187,12 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement-presentation.pdf)
 - Mini-projet :
   [Mini-projet cours 08](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/02-mini-project/README.md)
+  ·
+  [Solution](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/02-mini-project/solution/README.md)
 - Exercices :
   [Exercices cours 08](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/03-exercices/README.md)
+  ·
+  [Solutions](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/03-exercices/solutions/README.md)
 
 [Voir les détails](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/README.md)
 

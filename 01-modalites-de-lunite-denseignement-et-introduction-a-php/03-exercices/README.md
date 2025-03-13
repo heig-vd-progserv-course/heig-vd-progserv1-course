@@ -10,8 +10,10 @@ _[Modalités de l'unité d'enseignement et introduction à PHP](../01-theorie/RE
   [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
   ·
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
-- Mini-projet : [Mini-projet cours 01](../02-mini-project/README.md)
-- Exercices : [Exercices cours 01](../03-exercices/README.md)
+- Mini-projet : [Mini-projet cours 01](../02-mini-project/README.md) ·
+  [Solution](../02-mini-project/solution/README.md)
+- Exercices : [Exercices cours 01](../03-exercices/README.md) ·
+  [Solutions](../03-exercices/solutions/README.md)
 
 ## Tables des matières
 
@@ -22,15 +24,21 @@ _[Modalités de l'unité d'enseignement et introduction à PHP](../01-theorie/RE
 - [Exercice 3](#exercice-3)
 - [Exercice 4](#exercice-4)
 - [Exercice 5](#exercice-5)
+- [Exercice 6](#exercice-6)
 - [Exercice 7](#exercice-7)
 - [Exercice 8](#exercice-8)
 - [Exercice 9](#exercice-9)
 - [Exercice 10](#exercice-10)
 - [Exercice 11](#exercice-11)
 - [Exercice 12](#exercice-12)
+- [Exercice 13](#exercice-13)
 - [Exercice 14](#exercice-14)
 - [Exercice 15](#exercice-15)
 - [Exercice 16](#exercice-16)
+- [Exercice 17](#exercice-17)
+- [Exercice 18](#exercice-18)
+- [Exercice 19](#exercice-19)
+- [Exercice 20](#exercice-20)
 
 ## Exercice 1
 
@@ -39,7 +47,6 @@ Qu'affiche le code suivant ?
 ```php
 <?php
 echo "Hello, World!";
-?>
 ```
 
 <details>
@@ -54,16 +61,16 @@ Hello, World!
 ## Exercice 2
 
 Déclarez une variable `name` contenant votre prénom et affichez-la avec le
-message _"Bonjour, [votre prénom] !"_.
+message _"Hello, [votre prénom] !"_.
 
 <details>
 <summary>Afficher la réponse</summary>
 
 ```php
 <?php
-$name = "Votre prénom";
-echo "Bonjour, $name !";
-?>
+$name = "Your name";
+
+echo "Hello, $name !";
 ```
 
 ```text
@@ -83,6 +90,7 @@ Utilisez une structure de contrôle conditionnelle pour vérifier si une variabl
 
 ```php
 <?php
+<?php
 $age = 20;
 
 if ($age >= 18) {
@@ -90,7 +98,6 @@ if ($age >= 18) {
 } else {
     echo "You are under 18.";
 }
-?>
 ```
 
 ```text
@@ -111,7 +118,6 @@ Déclarez une constante `PI` avec la valeur `3.14` et affichez-la.
 const PI = 3.14;
 
 echo PI;
-?>
 ```
 
 ```text
@@ -130,6 +136,7 @@ stockez-le dans une autre variable `double`. Affichez le résultat.
 
 ```php
 <?php
+<?php
 $number = 10;
 
 $double = $number * 2;
@@ -143,9 +150,36 @@ echo $double;
 
 </details>
 
+## Exercice 6
+
+Expliquez la différence entre les guillemets simples (`'`) et les guillemets
+doubles (`"`) en PHP. Donnez un exemple pour illustrer la différence.
+
+<details>
+<summary>Afficher la réponse</summary>
+
+Les guillemets simples (`'`) ne permettent pas d'interpréter les variables,
+tandis que les guillemets doubles (`"`) permettent d'interpréter les variables.
+
+Exemple :
+
+```php
+<?php
+$greetings = 'Hello';
+$name = 'World';
+
+// La ligne suivante affichera littéralement "$greetings, $name!"
+echo '$greetings, $name!<br>';
+
+// La ligne suivante affichera "Hello, World!"
+echo "$greetings, $name!";
+```
+
+</details>
+
 ## Exercice 7
 
-Déclarez une variable `text` avec la valeur `PHP` et affichez le message
+Déclarez une variable `text` avec la valeur `"PHP"` et affichez le message
 _"J'apprends PHP dans ce nouveau cours ProgServ1."_ en utilisant la
 concaténation (vous pouvez utiliser la méthode de concaténation de votre choix).
 
@@ -157,7 +191,6 @@ concaténation (vous pouvez utiliser la méthode de concaténation de votre choi
 $text = "PHP";
 
 echo "J'apprends " . $text . " dans ce nouveau cours ProgServ1.";
-?>
 ```
 
 ```text
@@ -200,39 +233,25 @@ You have finished the HEIG-VD, congratulations!
 
 ## Exercice 9
 
-Déclarez une variable `score` avec la valeur `85` et utilisez une structure de
-contrôle conditionnelle pour afficher _"Excellent"_ si le score est supérieur ou
-égal à `90`, _"Bien"_ si le score est entre `70` et `89`, et _"Peut mieux
-faire"_ sinon.
+Comment est-ce que le serveur web et l'interpréteur PHP interagissent pour
+afficher une page web ?
 
 <details>
 <summary>Afficher la réponse</summary>
 
-```php
-<?php
-$score = 85;
-
-if ($score >= 90) {
-    echo "Excellent";
-} elseif ($score >= 70) {
-    echo "Bien";
-} else {
-    echo "Peut mieux faire";
-}
-?>
-```
-
-```text
-Bien
-```
+Lorsqu'un utilisateur demande une page web, le serveur web reço it la requête et
+transmet le fichier PHP correspondant à l'interpréteur PHP. L'interpréteur PHP
+exécute le code PHP dans le fichier et génère du code HTML. Le serveur web
+renvoie le code HTML généré par l'interpréteur PHP à l'utilisateur, qui voit la
+page web dans son navigateur.
 
 </details>
 
 ## Exercice 10
 
 Déclarez une variable `day` avec la valeur `"Monday"` et utilisez une structure
-de contrôle `switch` pour afficher un message _"Week-day"_ pour les jours de la
-semaine et _"Week-end"_ pour le samedi et le dimanche.
+de contrôle `switch` pour afficher un message _"Weekday"_ pour les jours de la
+semaine et _"Weekend"_ pour le samedi et le dimanche.
 
 La valeur de la variable `day` peut être `"Monday"`, `"Tuesday"`, `"Wednesday"`,
 `"Thursday"`, `"Friday"`, `"Saturday"`, ou `"Sunday"`. Si la valeur n'est pas
@@ -251,16 +270,15 @@ switch ($day) {
     case "Wednesday":
     case "Thursday":
     case "Friday":
-        echo "Week-day";
+        echo "Weekday";
         break;
     case "Saturday":
     case "Sunday":
-        echo "Week-end";
+        echo "Weekend";
         break;
     default:
         echo "Unknown day";
 }
-?>
 ```
 
 ```text
@@ -272,9 +290,9 @@ Week-day
 ## Exercice 11
 
 Déclarez une variable `temperature` avec la valeur `30` et utilisez une
-structure de contrôle conditionnelle pour afficher _"Il fait chaud"_ si la
-température est supérieure à `25`, _"Il fait frais"_ si la température est entre
-`15` et `25`, et _"Il fait froid"_ sinon.
+structure de contrôle conditionnelle pour afficher _"It's hot"_ si la
+température est supérieure à `20`, _"It's cool"_ si la température est entre
+`15` et `20`, et _"It's cold"_ sinon.
 
 <details>
 <summary>Afficher la réponse</summary>
@@ -283,18 +301,17 @@ température est supérieure à `25`, _"Il fait frais"_ si la température est e
 <?php
 $temperature = 30;
 
-if ($temperature > 25) {
-    echo "Il fait chaud";
+if ($temperature > 20) {
+    echo "It's hot";
 } elseif ($temperature >= 15) {
-    echo "Il fait frais";
+    echo "It's cool";
 } else {
-    echo "Il fait froid";
+    echo "It's cold";
 }
-?>
 ```
 
 ```text
-Il fait chaud
+It's hot
 ```
 
 </details>
@@ -320,7 +337,7 @@ switch ($grade) {
         echo "Good";
         break;
     case 4:
-        echo "Passable";
+        echo "Fair";
         break;
     case 3:
         echo "Needs improvement";
@@ -334,11 +351,38 @@ switch ($grade) {
     default:
         echo "Unknown grade";
 }
-?>
 ```
 
 ```text
 Good
+```
+
+</details>
+
+## Exercice 13
+
+Expliquez ce qu'est une structure de contrôle conditionnelle et donnez un
+exemple en PHP.
+
+<details>
+<summary>Afficher la réponse</summary>
+
+Une structure de contrôle conditionnelle permet d'exécuter du code en fonction
+de certaines conditions. Elle utilise des opérateurs de comparaison et des
+conditions booléennes (vrai ou faux).
+
+Exemple en PHP :
+
+```php
+<?php
+$a = 1;
+$b = 2;
+
+if ($a < $b) {
+    echo "a is less than b";
+} else {
+    echo "a is greater than or equal to b";
+}
 ```
 
 </details>
@@ -366,7 +410,6 @@ if ($username == USERNAME && $password == PASSWORD) {
 } else {
     echo "Login failed";
 }
-?>
 ```
 
 ```text
@@ -391,15 +434,14 @@ Affichez _"Multiple of 3"_ ou _"Not a multiple of 3"_ en conséquence.
 $number = 9;
 
 if ($number % 3 == 0) {
-    echo "Multiple de 3";
+    echo "Multiple of 3";
 } else {
-    echo "Non multiple de 3";
+    echo "Not a multiple of 3";
 }
-?>
 ```
 
 ```text
-Multiple de 3
+Multiple of 3
 ```
 
 </details>
@@ -430,11 +472,108 @@ if ($number % 3 == 0 && $number % 5 == 0) {
 } else {
     echo "Not divisible by 3 or 5";
 }
-?>
 ```
 
 ```text
 Divisible by 3 and 5
 ```
+
+</details>
+
+## Exercice 17
+
+Déclarez une variable `stRochStudent` avec la valeur `true`, une variable
+`comemStudent` avec la valeur `true` et une variable `cheseauxStudent` avec la
+valeur `true`. Utilisez une structure de contrôle conditionnelle pour vérifier
+si `stRochStudent` et `comemStudent` sont vraies ou si `cheseauxStudent` est
+vraie. Si c'est le cas, affichez _"You are an engineering student"_ ou _"You are
+not an engineering student"_ sinon.
+
+<details>
+<summary>Afficher la réponse</summary>
+
+```php
+<?php
+$stRochStudent = true;
+$comemStudent = true;
+$cheseauxStudent = true;
+
+if ($stRochStudent && $comemStudent || $cheseauxStudent) {
+    echo "You are an engineering student";
+} else {
+    echo "You are not an engineering student";
+}
+```
+
+</details>
+
+## Exercice 18
+
+Déclarez une constante `USERNAME` avec la valeur `"admin"` et une constante
+`PASSWORD` avec la valeur `"1234"`. Utilisez une structure de contrôle
+conditionnelle pour vérifier si les identifiants sont corrects. Affichez _"You
+are logged in"_ si les identifiants sont corrects, et _"Login failed"_ sinon.
+
+<details>
+<summary>Afficher la réponse</summary>
+
+```php
+<?php
+const USERNAME = "admin";
+const PASSWORD = "1234";
+
+$username = "admin";
+$password = "1234";
+
+if ($username == USERNAME && $password == PASSWORD) {
+    echo "You are logged in";
+} else {
+    echo "Login failed";
+}
+```
+
+```text
+You are logged in
+```
+
+</details>
+
+## Exercice 19
+
+Déclarez une variable `number` avec la valeur `9` et utilisez une structure de
+contrôle conditionnelle pour vérifier si le nombre est un multiple de `3`.
+Affichez _"Multiple of 3"_ ou _"Not a multiple of 3"_ en conséquence.
+
+<details>
+<summary>Afficher la réponse</summary>
+
+```php
+<?php
+$number = 9;
+
+if ($number % 3 == 0) {
+    echo "Multiple de 3";
+} else {
+    echo "Non multiple de 3";
+}
+```
+
+```text
+Multiple de 3
+```
+
+</details>
+
+## Exercice 20
+
+Quel est le but et le rôle d'outils tels que WampServer, MAMP, ou encore XAMPP ?
+
+<details>
+<summary>Afficher la réponse</summary>
+
+WampServer, MAMP, et XAMPP sont des logiciels qui permettent de créer un
+environnement de développement local pour les applications web. Ils sont
+utilisés pour installer et configurer un serveur web, une base de données, et un
+langage de script (PHP) sur un ordinateur local.
 
 </details>
