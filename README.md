@@ -18,7 +18,7 @@ Suisse !
 - Gérer les formulaires HTML et les données qu'ils contiennent de manière sûre.
 - Persister des données dans une base de données SQLite.
 - Implémenter des concepts de programmation orientée objet.
-- Gérer les préférences utilisateur à l'aide de cookies.
+- Gérer les sessions et préférences utilisateurs à l'aide de cookies.
 
 ## ➡️ Par où commencer ?
 
