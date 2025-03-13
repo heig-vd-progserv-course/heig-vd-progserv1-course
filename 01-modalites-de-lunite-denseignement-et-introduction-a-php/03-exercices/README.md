@@ -10,10 +10,10 @@ _[Modalités de l'unité d'enseignement et introduction à PHP](../01-theorie/RE
   [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
   ·
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
-- Mini-projet : [Mini-projet cours 01](../02-mini-project/README.md) ·
-  [Solution](../02-mini-project/solution/README.md)
-- Exercices : [Exercices cours 01](../03-exercices/README.md) ·
-  [Solutions](../03-exercices/solutions/README.md)
+- Mini-projet : [Mini-projet](../02-mini-project/README.md) ·
+  [Solution](../02-mini-project/solution/)
+- Exercices : [Exercices](../03-exercices/README.md) ·
+  [Solutions](../03-exercices/solutions/)
 
 ## Tables des matières
 
