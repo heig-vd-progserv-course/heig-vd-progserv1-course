@@ -6,8 +6,10 @@
   [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
   ·
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
-- Mini-projet : [Mini-projet cours 01](../02-mini-project/README.md)
-- Exercices : [Exercices cours 01](../03-exercices/READEME.md)
+- Mini-projet : [Mini-projet](../02-mini-project/README.md) ·
+  [Solution](../02-mini-project/solution/)
+- Exercices : [Exercices](../03-exercices/README.md) ·
+  [Solutions](../03-exercices/solutions/)
 
 ## Tables des matières
 
@@ -476,12 +478,8 @@ public class Main {
 
 </details>
 
-Il est aussi possible de concaténer des chaînes de caractères avec les
-guillemets doubles (`"`) :
-
-La différence entre les guillemets simples (`'`) et les guillemets doubles (`"`)
-est que les guillemets doubles permettent d'interpréter les variables et les
-caractères d'échappement (`\n`, `\t`, etc.) :
+Il est aussi possible de concaténer des variables avec les guillemets doubles
+(`"`) :
 
 ```php
 <?php
@@ -714,7 +712,7 @@ Les opérateurs sont utilisés pour effectuer des opérations sur des variables 
 des valeurs. Voici quelques exemples :
 
 - Opérateurs arithmétiques : `+` (addition), `-` (soustraction), `*`
-  (multiplication), `/` (division)
+  (multiplication), `/` (division), `%` (modulo)
 - Opérateurs de comparaison : `==` (égal), `!=` (différent), `>` (supérieur),
   `<` (inférieur)
 - Opérateurs logiques : `&&` (et), `||` (ou), `!` (non/inversion)
@@ -757,6 +755,45 @@ public class Main {
 ```
 
 </details>
+
+L'opération modulo (`%`) retourne le reste de la division de deux nombres. Il
+permet notamment de déterminer si un nombre est pair ou impair :
+
+```php
+<?php
+// `$modulo` contiendra 1
+// Il reste 1 après la division de 5 par 2, 5 n'est donc pas pair.
+$modulo = 5 % 2;
+
+echo "Modulo: $modulo<br>";
+
+// `$modulo` contiendra 0
+// Il ne reste rien après la division de 6 par 2, 6 est donc pair.
+$modulo = 6 % 2;
+
+echo "Modulo: $modulo";
+```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        // `modulo` contiendra 1
+        // Il reste 1 après la division de 5 par 2, 5 n'est donc pas pair.
+        int modulo = 5 % 2;
+
+        System.out.println("Modulo: " + modulo);
+
+        // `modulo` contiendra 0
+        // Il ne reste rien après la division de 6 par 2, 6 est donc pair.
+        modulo = 6 % 2;
+
+        System.out.print("Modulo: " + modulo);
+    }
+}
+```
 
 #### Les structures de contrôle conditionnelles
 
@@ -1025,7 +1062,7 @@ Nous vous invitons maintenant à réaliser le mini-projet de cette session pour
 mettre en pratique les concepts vus en classe.
 
 Vous trouverez les détails du mini-projet ici :
-[Mini-projet cours 01](../02-mini-project/README.md).
+[Mini-projet](../02-mini-project/README.md).
 
 ## Exercices
 
@@ -1033,7 +1070,7 @@ Nous vous invitons également à réaliser les exercices de cette session pour
 renforcer votre compréhension des concepts vus en classe.
 
 Vous trouverez les détails des exercices ici :
-[Exercices cours 01](../03-exercices/READEME.md).
+[Exercices](../03-exercices/READEME.md).
 
 [^mamp]: MAMP, [mamp.info](https://www.mamp.info/), 09 mars 2025
 [^wamp]: WampServer, [wampserver.com](https://www.wampserver.com/), 09 mars 2025
