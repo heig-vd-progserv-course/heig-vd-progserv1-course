@@ -50,7 +50,7 @@ _paginate: false
 
 </div>
 
-## Mes objectifs et souhaits pour le cours
+## Mes objectifs et souhaits pour ProgServ1
 
 PHP va vous accompagner tout au long de vos études à la HEIG-VD (ProgServ1,
 ProgServ2, DevProdMed, etc.) et aussi plus tard dans votre vie professionnelle.
@@ -295,7 +295,8 @@ public class Main {
   - [WampServer](https://www.wampserver.com/)
   - [MAMP](https://www.mamp.info/)
   - [XAMPP](https://www.apachefriends.org/index.html)
-    ![bg right:40%][illustration-principale]
+
+![bg right:40%][illustration-comment-executer-du-code-php]
 
 ### Syntaxe de base de PHP
 
@@ -305,7 +306,7 @@ public class Main {
 - Il s'agit de les apprendre et de les comprendre pour lire et écrire du code
   PHP de manière efficace.
 
-![bg right:40%][illustration-principale]
+![bg right:40%][illustration-comment-ecrire-du-code-php]
 
 #### Les commentaires
 
@@ -322,7 +323,16 @@ sur plusieurs lignes
 */
 ```
 
-#### Les variables (1/2)
+#### Les variables (1/3)
+
+- Les variables sont des conteneurs pour stocker des données.
+- Les variables sont déclarées avec le signe `$`.
+- Les variables peuvent contenir des chaînes de caractères, des nombres, des
+  booléens, des tableaux, etc.
+
+![bg right:40%][illustration-les-variables]
+
+#### Les variables (2/3)
 
 ```php
 <?php
@@ -339,7 +349,7 @@ $variable = "Goodbye, World!";
 echo $variable;
 ```
 
-#### Les variables (2/2)
+#### Les variables (3/3)
 
 ```java
 // Équivalent en Java
@@ -627,7 +637,7 @@ public static void main(String[] args) {
   `<` (inférieur)
 - Opérateurs logiques : `&&` (et), `||` (ou), `!` (non/inversion)
 
-![bg right:40%][illustration-principale]
+![bg right:40%][illustration-les-operateurs]
 
 #### Les opérateurs (2/3)
 
@@ -667,7 +677,7 @@ public static void main(String[] args) {
 - Utilisent les opérateurs de comparaison et logiques.
 - Elles se composent de `if`, `else`, `elseif` et `switch`.
 
-![bg right:40%][illustration-principale]
+![bg right:40%][illustration-les-structures-de-controle-conditionnelles]
 
 #### Les structures de contrôle conditionnelles (2/7)
 
@@ -844,7 +854,7 @@ entraider si vous avez des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
-## Sources (1/2)
+## Sources (1/3)
 
 - [Illustration principale][illustration-principale] par
   [Richard Jacobs](https://unsplash.com/@rj2747) sur
@@ -861,18 +871,24 @@ entraider si vous avez des difficultés !**
 - [Illustration][illustration-quest-ce-php] par
   [Michiel Leunens](https://unsplash.com/@leunesmedia) sur
   [Unsplash](https://unsplash.com/photos/white-ceramic-cup-on-silver-coffee-maker-fBB7FeS4Xas)
+- [Illustration][illustration-comment-executer-du-code-php] par
+  [Taylor Vick](https://unsplash.com/@tvick) sur
+  [Unsplash](https://unsplash.com/photos/cable-network-M5tzZtFCOfs)
 - [Illustration][illustration-comment-ecrire-du-code-php] par
   [Aaron Burden](https://unsplash.com/@aaronburden) sur
   [Unsplash](https://unsplash.com/photos/fountain-pen-on-black-lined-paper-y02jEX_B0O0)
+- [Illustration][illustration-les-variables] par
+  [Fejuz](https://unsplash.com/@fejuz) sur
+  [Unsplash](https://unsplash.com/photos/a-large-amount-of-containers-are-stacked-on-top-of-each-other-q6j5mSRpi50)
+
+## Sources (2/3)
+
 - [Illustration][illustration-type-de-donnees-et-typage-dynamique] par
   [Jan Huber](https://unsplash.com/@jan_huber) sur
   [Unsplash](https://unsplash.com/photos/yellow-and-red-light-streaks-NjV34SrbM_g)
 - [Illustration][illustration-les-chaines-de-caracteres] par
   [Kier in Sight Archives](https://unsplash.com/@kierinsightarchives) sur
   [Unsplash](https://unsplash.com/photos/white-and-black-abstract-illustration-qXA4b_dZSbQ)
-
-## Sources (2/2)
-
 - [Illustration][illustration-les-nombres] par
   [Nick Hillier](https://unsplash.com/@nhillier) sur
   [Unsplash](https://unsplash.com/photos/assorted-numbers-photography-yD5rv8_WzxA)
@@ -885,6 +901,15 @@ entraider si vous avez des difficultés !**
 - [Illustration][illustration-les-constantes] par
   [Kenny Eliason](https://unsplash.com/@neonbrand) sur
   [Unsplash](https://unsplash.com/photos/red-bricks-wall-XEsx2NVpqWY)
+- [Illustration][illustration-les-operateurs] par
+  [charlesdeluvio](https://unsplash.com/@charlesdeluvio) sur
+  [Unsplash](https://unsplash.com/photos/white-calculator-on-white-table-GlavtG-umzE)
+- [Illustration][illustration-les-structures-de-controle-conditionnelles] par
+  [Arham Jain](https://unsplash.com/@arham_jain48) sur
+  [Unsplash](https://unsplash.com/photos/a-painting-of-blue-flowers-on-a-white-background-OkiDTYxLo34)
+
+## Sources (3/3)
+
 - [Illustration][illustration-mini-projet] par
   [Alec Favale](https://unsplash.com/@alecfavale) sur
   [Unsplash](https://unsplash.com/photos/short-coated-white-and-brown-puppy-Ivzo69e18nk)
@@ -898,17 +923,17 @@ entraider si vous avez des difficultés !**
 <!-- URLs -->
 
 [presentation-web]:
-	https://heig-vd-mvp-course.github.io/heig-vd-mvp-course/01-cours-introduction-motivation-et-organisation-de-lunite/01-presentation/
+	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-cours-introduction-motivation-et-organisation-de-lunite/01-presentation/
 [presentation-pdf]:
-	https://heig-vd-mvp-course.github.io/heig-vd-mvp-course/01-cours-introduction-motivation-et-organisation-de-lunite/01-presentation/01-cours-introduction-motivation-et-organisation-de-lunite-presentation.pdf
+	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-cours-introduction-motivation-et-organisation-de-lunite/01-presentation/01-cours-introduction-motivation-et-organisation-de-lunite-presentation.pdf
 [course-material]:
-	https://github.com/heig-vd-mvp-course/heig-vd-mvp-course/blob/main/01-cours-introduction-motivation-et-organisation-de-lunite/02-support-de-cours/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/01-cours-introduction-motivation-et-organisation-de-lunite/02-support-de-cours/README.md
 [license]:
-	https://github.com/heig-vd-mvp-course/heig-vd-mvp-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [mini-project]:
-	https://github.com/heig-vd-mvp-course/heig-vd-mvp-course/blob/main/01-cours-introduction-motivation-et-organisation-de-lunite/02-support-de-cours/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/01-cours-introduction-motivation-et-organisation-de-lunite/02-support-de-cours/README.md
 [exercices]:
-	https://github.com/heig-vd-mvp-course/heig-vd-mvp-course/blob/main/01-cours-introduction-motivation-et-organisation-de-lunite/03-exercices/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/01-cours-introduction-motivation-et-organisation-de-lunite/03-exercices/README.md
 
 <!-- Illustrations -->
 
@@ -922,8 +947,12 @@ entraider si vous avez des difficultés !**
 	https://images.unsplash.com/photo-1554906493-4812e307243d?fit=crop&h=720
 [illustration-quest-ce-php]:
 	https://images.unsplash.com/photo-1585332889055-059af80a9b5f?fit=crop&h=720
+[illustration-comment-executer-du-code-php]:
+	https://images.unsplash.com/photo-1558494949-ef010cbdcc31?fit=crop&h=720
 [illustration-comment-ecrire-du-code-php]:
 	https://images.unsplash.com/photo-1455390582262-044cdead277a?fit=crop&h=720
+[illustration-les-variables]:
+	https://images.unsplash.com/photo-1634646809203-f3b4adff9127?fit=crop&h=720
 [illustration-type-de-donnees-et-typage-dynamique]:
 	https://images.unsplash.com/photo-1604012164853-9bb541fe0296?fit=crop&h=720
 [illustration-les-chaines-de-caracteres]:
@@ -936,6 +965,10 @@ entraider si vous avez des difficultés !**
 	https://images.unsplash.com/photo-1561117089-3fb7c944887f?fit=crop&h=720
 [illustration-les-constantes]:
 	https://images.unsplash.com/photo-1495578942200-c5f5d2137def?fit=crop&h=720
+[illustration-les-operateurs]:
+	https://images.unsplash.com/photo-1587145820266-a5951ee6f620?fit=crop&h=720
+[illustration-les-structures-de-controle-conditionnelles]:
+	https://images.unsplash.com/photo-1590593162201-f67611a18b87?fit=crop&h=720
 [illustration-mini-projet]:
 	https://images.unsplash.com/photo-1563460716037-460a3ad24ba9?fit=crop&h=720
 [illustration-exercices]:

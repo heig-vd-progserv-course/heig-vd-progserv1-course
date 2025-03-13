@@ -476,12 +476,8 @@ public class Main {
 
 </details>
 
-Il est aussi possible de concaténer des chaînes de caractères avec les
-guillemets doubles (`"`) :
-
-La différence entre les guillemets simples (`'`) et les guillemets doubles (`"`)
-est que les guillemets doubles permettent d'interpréter les variables et les
-caractères d'échappement (`\n`, `\t`, etc.) :
+Il est aussi possible de concaténer des variables avec les guillemets doubles
+(`"`) :
 
 ```php
 <?php
