@@ -18,13 +18,13 @@
 - Lister les objectifs de l'unité d'enseignement
 - Lister les modalités d'organisation de l'unité d'enseignement
 - Lister les modalités d'évaluation
-- Décrire le concept d'architecture client-serveur
+- Expliquer le concept d'architecture client-serveur
 - Lister les outils nécessaires pour écrire et exécuter du code PHP
 - Expliquer comment PHP fonctionne dans un environnement web
-- Décrire la syntaxe de base de PHP
-- Décrire les variables en PHP
-- Décrire les constantes en PHP
-- Décrire la nature dynamique des variables et constantes en PHP
+- Expliquer la syntaxe de base de PHP
+- Expliquer les variables en PHP
+- Expliquer les constantes en PHP
+- Expliquer la nature dynamique des variables et constantes en PHP
 - Expliquer les opérateurs en PHP
 - Expliquer les structures de contrôle conditionnelles en PHP
 - Rédiger du code PHP simple

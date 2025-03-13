@@ -2,7 +2,7 @@
 
 Cette série d'exercices est conçue pour vous permettre de valider les concepts
 théoriques et pratiques vus dans le cours
-_[Modalités de l'unité d'enseignement et introduction à PHP](../01-theorie/README.md)_.
+_[Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP](../01-theorie/README.md)_.
 
 ## Ressources
 

@@ -8,7 +8,7 @@ size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ1 Course - Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP
-description: Modalités de l'unité d'enseignement pour le cours ProgServ1 à la HEIG-VD, Suisse
+description: Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP pour le cours ProgServ1 à la HEIG-VD, Suisse
 url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html
 header: "**Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP**"
 footer: "**HEIG-VD** - ProgServ1 Course 2024-2025 - CC BY-SA 4.0"
@@ -85,17 +85,18 @@ consultez le [support de cours][course-material]._
 - Lister les objectifs de l'unité d'enseignement
 - Lister les modalités d'organisation de l'unité d'enseignement
 - Lister les modalités d'évaluation
-- Décrire le concept d'architecture client-serveur
+- Expliquer le concept d'architecture client-serveur
 - Lister les outils nécessaires pour écrire et exécuter du code PHP
-  ![bg right:40%][illustration-objectifs]
+
+![bg right:40%][illustration-objectifs]
 
 ## Objectifs (2/3)
 
 - Expliquer comment PHP fonctionne dans un environnement web
-- Décrire la syntaxe de base de PHP
-- Décrire les variables en PHP
-- Décrire les constantes en PHP
-- Décrire la nature dynamique des variables et constantes en PHP
+- Expliquer la syntaxe de base de PHP
+- Expliquer les variables en PHP
+- Expliquer les constantes en PHP
+- Expliquer la nature dynamique des variables et constantes en PHP
 - Expliquer les opérateurs en PHP
 
 ![bg right:40%][illustration-objectifs]
@@ -959,17 +960,17 @@ entraider si vous avez des difficultés !**
 <!-- URLs -->
 
 [presentation-web]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-cours-introduction-motivation-et-organisation-de-lunite/01-presentation/
+	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-presentation/
 [presentation-pdf]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-cours-introduction-motivation-et-organisation-de-lunite/01-presentation/01-cours-introduction-motivation-et-organisation-de-lunite-presentation.pdf
+	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-presentation/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf
 [course-material]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/01-cours-introduction-motivation-et-organisation-de-lunite/02-support-de-cours/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/02-support-de-cours/README.md
 [license]:
 	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [mini-project]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/01-cours-introduction-motivation-et-organisation-de-lunite/02-support-de-cours/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/02-support-de-cours/README.md
 [exercices]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/01-cours-introduction-motivation-et-organisation-de-lunite/03-exercices/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/03-exercices/README.md
 
 <!-- Illustrations -->
 
