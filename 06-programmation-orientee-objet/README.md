@@ -1,11 +1,11 @@
-# Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP
+# Cours 06 - Programmation orientée objet
 
 ## Ressources
 
 - Théorie : [Support de cours](./01-theorie/README.md) ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/06-programmation-orientee-objet/01-theorie/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/06-programmation-orientee-objet/01-theorie/06-programmation-orientee-objet-presentation.pdf)
 - Mini-projet : [Mini-projet](./02-mini-project/README.md) ·
   [Solution](./02-mini-project/solution/)
 - Exercices : [Exercices](./03-exercices/README.md) ·
@@ -15,24 +15,11 @@
 
 À l'issue de ce cours, les personnes qui étudient devraient être capables de :
 
-- Lister les objectifs de l'unité d'enseignement
-- Lister les modalités d'organisation de l'unité d'enseignement
-- Lister les modalités d'évaluation
-- Expliquer le concept d'architecture client-serveur
-- Lister les outils nécessaires pour écrire et exécuter du code PHP
-- Expliquer comment PHP fonctionne dans un environnement web
-- Expliquer la syntaxe de base de PHP
-- Expliquer les variables en PHP
-- Expliquer les constantes en PHP
-- Expliquer la nature dynamique des variables et constantes en PHP
-- Expliquer les opérateurs en PHP
-- Expliquer les structures de contrôle conditionnelles en PHP
-- Rédiger du code PHP simple
+- TODO
 
 De plus, les personnes qui étudient devraient avoir pu :
 
-- Installer et configurer un environnement de développement pour PHP
-- Initialiser un projet PHP pour le mini-projet
+- TODO
 
 ## Méthodes d'enseignement et d'apprentissage
 
