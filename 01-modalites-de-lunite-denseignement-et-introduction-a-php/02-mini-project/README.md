@@ -10,8 +10,10 @@ _[Modalités de l'unité d'enseignement et introduction à PHP](../01-theorie/RE
   [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
   ·
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
-- Mini-projet : [Mini-projet cours 01](../02-mini-project/README.md)
-- Exercices : [Exercices cours 01](../03-exercices/READEME.md)
+- Mini-projet : [Mini-projet](../02-mini-project/README.md) ·
+  [Solution](../02-mini-project/solution/)
+- Exercices : [Exercices](../03-exercices/README.md) ·
+  [Solutions](../03-exercices/solutions/)
 
 ## Tables des matières
 
@@ -25,6 +27,7 @@ _[Modalités de l'unité d'enseignement et introduction à PHP](../01-theorie/RE
   - [Configuration de l'interpréteur PHP](#configuration-de-linterpréteur-php)
   - [Installation d'un éditeur de code](#installation-dun-éditeur-de-code)
   - [Configuration de l'éditeur de code](#configuration-de-léditeur-de-code)
+  - [Installation des extensions PHP dans Visual Studio Code](#installation-des-extensions-php-dans-visual-studio-code)
 - [Initialisation du projet PHP](#initialisation-du-projet-php)
   - [Création de la structure du projet](#création-de-la-structure-du-projet)
   - [Création des fichiers du projet](#création-des-fichiers-du-projet)
@@ -32,7 +35,6 @@ _[Modalités de l'unité d'enseignement et introduction à PHP](../01-theorie/RE
 - [Solution](#solution)
 - [Conclusion](#conclusion)
 - [Aller plus loin](#aller-plus-loin)
-  - [Installation des extensions PHP dans Visual Studio Code](#installation-des-extensions-php-dans-visual-studio-code)
 
 ## Introduction à votre première session de mini-projet
 
@@ -592,10 +594,9 @@ code. Pour ce faire, suivez les étapes suivantes :
    sur votre ordinateur. Rar exemple, `C:\\MAMP\\bin\\php\\php8.3.1\\php.exe`
    pour Windows ou `/Applications/MAMP/bin/php/php8.3.1/bin/php` pour macOS.
 
-   > [!WARNING]
-   >
-   > Assurez-vous de remplacer `<PATH_TO_PHP_EXECUTABLE>` par le chemin d'accès
-   > correct à l'exécutable PHP sur votre ordinateur trouvé à l'étape 2.
+   **Attention**, assurez-vous de remplacer `<PATH_TO_PHP_EXECUTABLE>` par le
+   chemin d'accès correct à l'exécutable PHP sur votre ordinateur trouvé à
+   l'étape 2.
 
    ![Configuration de l'interpréteur PHP dans Visual Studio Code 02](./images/visual-studio-code-configuration-08.png)
 
@@ -604,6 +605,44 @@ l'interpréteur PHP installé avec MAMP pour valider le code PHP que vous écriv
 
 Votre environnement de développement est maintenant configuré pour travailler
 avec PHP dans Visual Studio Code !
+
+### Installation des extensions PHP dans Visual Studio Code
+
+Visual Studio Code dispose d'un écosystème d'extensions qui vous permet
+d'ajouter des fonctionnalités supplémentaires à l'éditeur de code.
+
+Pour travailler avec PHP, nous vous recommandons d'installer l'extension
+[PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client).
+
+Elle permettra d'ajouter des fonctionnalités d'auto-complétion et de validation
+du code PHP dans Visual Studio Code, augmentant ainsi votre productivité.
+
+Pour installer l'extension PHP Intelephense, suivez les étapes suivantes :
+
+1. Cliquez sur l'icône des extensions dans la barre latérale de Visual Studio
+   Code ou appuyez sur `Ctrl + Shift + X` (Windows/Linux) ou `Cmd + Shift + X`
+   (macOS).
+
+   ![Icône des extensions dans Visual Studio Code](./images/visual-studio-code-configuration-09.png)
+
+2. Recherchez `PHP Intelephense` dans la barre de recherche.
+
+   ![Recherche de l'extension PHP Intelephense dans Visual Studio Code](./images/visual-studio-code-configuration-10.png)
+
+3. Sélectionnez l'extension `PHP Intelephense` dans les résultats de la
+   recherche.
+
+   ![Résultats de la recherche de l'extension PHP Intelephense dans Visual Studio Code](./images/visual-studio-code-configuration-11.png)
+
+4. Cliquez sur le bouton **Install** pour installer l'extension. Un
+   avertissement de sécurité vous demande si vous faites confiance aux auteurs
+   de l'extension. Cliquez sur le bouton **Trust Publisher & Install** pour
+   continuer.
+
+   ![Installation de l'extension PHP Intelephense dans Visual Studio Code](./images/visual-studio-code-configuration-12.png)
+
+5. Une fois l'extension installée, vous devriez voir une confirmation de
+   l'installation.
 
 ## Initialisation du projet PHP
 
@@ -651,7 +690,8 @@ progserv1/
 │   └── index.php
 ├── mini-projet
 │   └── index.php
-└── index.php
+├── index.php
+└── phpinfo.php
 ```
 
 Dans le fichier `progserv1/index.php`, ajoutez le code suivant :
@@ -660,6 +700,17 @@ Dans le fichier `progserv1/index.php`, ajoutez le code suivant :
 <?php
 echo "Bonjour à toutes les personnes du cours de Programmation serveur 1 !";
 ```
+
+Dans le fichier `progserv1/phpinfo.php`, ajoutez le code suivant :
+
+```php
+<?php
+phpinfo();
+```
+
+La fonction `phpinfo()` affiche des informations sur la configuration de PHP
+installée sur votre ordinateur. Cela vous permettra de vérifier que PHP est
+correctement installé et configuré.
 
 Dans le fichier `progserv1/exercices/index.php`, ajoutez le code suivant :
 
@@ -680,11 +731,15 @@ Sauvez tous les fichiers.
 ### Test de l'initialisation du projet
 
 Ouvrez votre navigateur web et accédez à l'adresse suivante :
-<http://localhost/progserv1/>. Vous devriez voir le message suivant :
+<http://localhost/progserv1/index.php>. Vous devriez voir le message suivant :
 
 ```text
 Bonjour à toutes les personnes du cours de Programmation serveur 1 !
 ```
+
+Si vous accédez à l'adresse <http://localhost/progserv1/phpinfo.php>, vous
+devriez voir les informations de configuration de PHP avec sa version, les
+extensions installées, les paramètres du serveur, etc.
 
 Cela signifie que l'initialisation du projet PHP pour le mini-projet a été
 réussie !
@@ -692,13 +747,13 @@ réussie !
 Testez également les adresses suivantes pour vérifier que les fichiers des
 exercices et du mini-projet fonctionnent correctement :
 
-- Exercices : <http://localhost/progserv1/exercices/>
-- Mini-projet : <http://localhost/progserv1/mini-projet/>
+- Exercices : <http://localhost/progserv1/exercices/index.php>
+- Mini-projet : <http://localhost/progserv1/mini-projet/index.php>
 
 ## Solution
 
 Vous pouvez trouver la solution du mini-projet PHP à l'adresse suivante :
-[`solution`](./solution/README.md).
+[`solution`](./solution/).
 
 ## Conclusion
 
@@ -717,43 +772,10 @@ l'application web pour gérer les animaux de compagnie !
 _Ceci est une section optionnelle pour les personnes qui souhaitent aller plus
 loin. Vous pouvez la sauter si vous n'avez pas de temps._
 
-### Installation des extensions PHP dans Visual Studio Code
-
-Visual Studio Code dispose d'un écosystème d'extensions qui vous permet
-d'ajouter des fonctionnalités supplémentaires à l'éditeur de code.
-
-Pour travailler avec PHP, nous vous recommandons d'installer l'extension
-[PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client).
-
-Elle permettra d'ajouter des fonctionnalités d'auto-complétion et de validation
-du code PHP dans Visual Studio Code, augmentant ainsi votre productivité.
-
-Pour installer l'extension PHP Intelephense, suivez les étapes suivantes :
-
-1. Cliquez sur l'icône des extensions dans la barre latérale de Visual Studio
-   Code ou appuyez sur `Ctrl + Shift + X` (Windows/Linux) ou `Cmd + Shift + X`
-   (macOS).
-
-   ![Icône des extensions dans Visual Studio Code](./images/visual-studio-code-configuration-optional-01.png)
-
-2. Recherchez `PHP Intelephense` dans la barre de recherche.
-
-   ![Recherche de l'extension PHP Intelephense dans Visual Studio Code](./images/visual-studio-code-configuration-optional-02.png)
-
-3. Sélectionnez l'extension `PHP Intelephense` dans les résultats de la
-   recherche.
-
-   ![Résultats de la recherche de l'extension PHP Intelephense dans Visual Studio Code](./images/visual-studio-code-configuration-optional-03.png)
-
-4. Cliquez sur le bouton **Install** pour installer l'extension. Un
-   avertissement de sécurité vous demande si vous faites confiance aux auteurs
-   de l'extension. Cliquez sur le bouton **Trust Publisher & Install** pour
-   continuer.
-
-   ![Installation de l'extension PHP Intelephense dans Visual Studio Code](./images/visual-studio-code-configuration-optional-04.png)
-
-5. Une fois l'extension installée, vous devriez voir une confirmation de
-   l'installation.
+- Êtes-vous capable de modifier les fichiers PHP pour y incorporer des balises
+  HTML et CSS pour rendre les pages plus attrayantes ?
+- Êtes-vous capable de changer les messages affichés dans les fichiers PHP pour
+  quelque chose de plus personnel ?
 
 [^docker]: Docker, [docker.com](https://www.docker.com/), 09 mars 2025
 [^lamp]:
