@@ -710,7 +710,7 @@ Les opérateurs sont utilisés pour effectuer des opérations sur des variables 
 des valeurs. Voici quelques exemples :
 
 - Opérateurs arithmétiques : `+` (addition), `-` (soustraction), `*`
-  (multiplication), `/` (division)
+  (multiplication), `/` (division), `%` (modulo)
 - Opérateurs de comparaison : `==` (égal), `!=` (différent), `>` (supérieur),
   `<` (inférieur)
 - Opérateurs logiques : `&&` (et), `||` (ou), `!` (non/inversion)
@@ -753,6 +753,45 @@ public class Main {
 ```
 
 </details>
+
+L'opération modulo (`%`) retourne le reste de la division de deux nombres. Il
+permet notamment de déterminer si un nombre est pair ou impair :
+
+```php
+<?php
+// `$modulo` contiendra 1
+// Il reste 1 après la division de 5 par 2, 5 n'est donc pas pair.
+$modulo = 5 % 2;
+
+echo "Modulo: $modulo<br>";
+
+// `$modulo` contiendra 0
+// Il ne reste rien après la division de 6 par 2, 6 est donc pair.
+$modulo = 6 % 2;
+
+echo "Modulo: $modulo";
+```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        // `modulo` contiendra 1
+        // Il reste 1 après la division de 5 par 2, 5 n'est donc pas pair.
+        int modulo = 5 % 2;
+
+        System.out.println("Modulo: " + modulo);
+
+        // `modulo` contiendra 0
+        // Il ne reste rien après la division de 6 par 2, 6 est donc pair.
+        modulo = 6 % 2;
+
+        System.out.print("Modulo: " + modulo);
+    }
+}
+```
 
 #### Les structures de contrôle conditionnelles
 

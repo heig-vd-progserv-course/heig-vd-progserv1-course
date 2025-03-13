@@ -629,17 +629,17 @@ public static void main(String[] args) {
 }
 ```
 
-#### Les opérateurs (1/3)
+#### Les opérateurs (1/5)
 
 - Permet d'effectuer des opérations sur des variables et des valeurs.
-- Opérateurs arithmétiques : `+`, `-`, `*`, `/`
+- Opérateurs arithmétiques : `+`, `-`, `*`, `/`, `%` (modulo)
 - Opérateurs de comparaison : `==` (égal), `!=` (différent), `>` (supérieur),
   `<` (inférieur)
 - Opérateurs logiques : `&&` (et), `||` (ou), `!` (non/inversion)
 
 ![bg right:40%][illustration-les-operateurs]
 
-#### Les opérateurs (2/3)
+#### Les opérateurs (2/5)
 
 ```php
 <?php
@@ -654,7 +654,7 @@ echo "Product: $product<br>";
 echo "Quotient: $quotient";
 ```
 
-#### Les opérateurs (3/3)
+#### Les opérateurs (3/5)
 
 ```java
 // Équivalent en Java
@@ -668,6 +668,42 @@ public static void main(String[] args) {
     System.out.println("Difference: " + difference);
     System.out.println("Product: " + product);
     System.out.print("Quotient: " + quotient);
+}
+```
+
+#### Les opérateurs (4/5)
+
+```php
+<?php
+// `$modulo` contiendra 1
+// Il reste 1 après la division de 5 par 2, 5 n'est donc pas pair.
+$modulo = 5 % 2;
+
+echo "Modulo: $modulo<br>";
+
+// `$modulo` contiendra 0
+// Il ne reste rien après la division de 6 par 2, 6 est donc pair.
+$modulo = 6 % 2;
+
+echo "Modulo: $modulo";
+```
+
+#### Les opérateurs (5/5)
+
+```java
+// Équivalent en Java
+public static void main(String[] args) {
+    // `modulo` contiendra 1
+    // Il reste 1 après la division de 5 par 2, 5 n'est donc pas pair.
+    int modulo = 5 % 2;
+
+    System.out.println("Modulo: " + modulo);
+
+    // `modulo` contiendra 0
+    // Il ne reste rien après la division de 6 par 2, 6 est donc pair.
+    modulo = 6 % 2;
+
+    System.out.print("Modulo: " + modulo);
 }
 ```
 
