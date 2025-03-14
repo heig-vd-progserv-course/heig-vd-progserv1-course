@@ -6,7 +6,7 @@ _[Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP](../01
 
 ## Ressources
 
-- Théorie : [Support de cours](./README.md) ·
+- Théorie : [Support de cours](../01-theorie/README.md) ·
   [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
   ·
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
@@ -106,6 +106,11 @@ pour apprendre et nous sommes là pour vous aider ! Travaillons en équipe pour
 que vous puissiez réussir !
 
 C'est parti !
+
+> [!TIP]
+>
+> Le [support de cours](../01-theorie/README.md) est disponible pour vous aider
+> à comprendre les concepts théoriques abordés dans ce mini-projet si besoin !
 
 ## Présentation du mini-projet
 
@@ -369,7 +374,7 @@ Pour ce faire, suivez les étapes suivantes :
 
 1. Lancez MAMP si ce n'est pas déjà fait. Vous devriez voir les icônes des
    serveurs Apache et MySQL en vert dans la barre de menu de MAMP, indiquant que
-   les serveurs sont en cours d 'exécution
+   les services sont bien en cours d'exécution.
 
    ![MAMP démarré et en cours d'exécution](./images/mamp-started-and-running.png)
 
@@ -414,7 +419,7 @@ Pour ce faire, suivez les étapes suivantes :
 
     ![MAMP installé et configuré](./images/mamp-installed-and-configured.png)
 
-Votre installation est maintenant terminée et vous êtes prêt à commencer à
+Votre installation est maintenant terminée et vous êtes prêt.e à commencer à
 développer des applications PHP avec MAMP !
 
 ### Installation d'un éditeur de code

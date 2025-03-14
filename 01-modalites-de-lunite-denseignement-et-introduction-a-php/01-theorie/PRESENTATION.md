@@ -886,8 +886,8 @@ Est-ce que vous avez des questions ?
 - Faire les [exercices][exercices].
 - Poser des questions si nécessaire.
 
-**Que ce soit pour le mini-projet ou les exercices, je vous encourage à vous
-entraider si vous avez des difficultés !**
+**Que ce soit pour le mini-projet ou les exercices, nous vous encourageons à
+vous entraider si vous avez des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 

@@ -6,7 +6,7 @@ _[Cours 05 - Base de données et PDO](../01-theorie/README.md)_.
 
 ## Ressources
 
-- Théorie : [Support de cours](./README.md) ·
+- Théorie : [Support de cours](../01-theorie/README.md) ·
   [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-theorie/index.html)
   ·
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-theorie/05-base-de-donnees-et-pdo-presentation.pdf)
