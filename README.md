@@ -23,7 +23,7 @@ Suisse !
 ## ➡️ Par où commencer ?
 
 Vous ne savez pas par où commencer ? Jetez un œil aux
-[Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP](#modalités-de-lunité-denseignement-et-introduction-à-php)
+[Modalités de l'unité d'enseignement et introduction à PHP](#modalités-de-lunité-denseignement-et-introduction-à-php)
 pour en savoir plus.
 
 ## 📅 Programme

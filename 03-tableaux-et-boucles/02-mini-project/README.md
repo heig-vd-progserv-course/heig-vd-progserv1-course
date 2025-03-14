@@ -6,7 +6,7 @@ _[Cours 03 - Tableaux et boucles](../01-theorie/README.md)_.
 
 ## Ressources
 
-- Théorie : [Support de cours](./README.md) ·
+- Théorie : [Support de cours](../01-theorie/README.md) ·
   [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/01-theorie/index.html)
   ·
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/01-theorie/03-tableaux-et-boucles-presentation.pdf)
