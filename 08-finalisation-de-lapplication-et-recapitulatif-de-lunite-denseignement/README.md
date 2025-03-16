@@ -6,10 +6,9 @@
   [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/index.html)
   ·
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement-presentation.pdf)
-- Mini-projet : [Mini-projet](./02-mini-project/README.md) ·
+- Mini-projet : [Consignes](./02-mini-project/README.md) ·
   [Solution](./02-mini-project/solution/)
-- Exercices : [Exercices](./03-exercices/README.md) ·
-  [Solutions](./03-exercices/solutions/)
+- Exercices : [Énoncés et solutions](./03-exercices/README.md)
 
 ## Objectifs
 
