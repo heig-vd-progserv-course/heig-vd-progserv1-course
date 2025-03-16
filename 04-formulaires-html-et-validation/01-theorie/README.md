@@ -42,7 +42,7 @@ Nous vous invitons maintenant à réaliser le mini-projet de cette session pour
 mettre en pratique les concepts vus en classe.
 
 Vous trouverez les détails du mini-projet ici :
-[Support de cours](../02-mini-project/README.md).
+[Consignes](../02-mini-project/README.md).
 
 ## Exercices
 
@@ -50,6 +50,6 @@ Nous vous invitons également à réaliser les exercices de cette session pour
 renforcer votre compréhension des concepts vus en classe.
 
 Vous trouverez les détails des exercices ici :
-[Support de cours](../03-exercices/READEME.md).
+[Énoncés et solutions](../03-exercices/README.md).
 
 [^example]: Example, [example.com](https://example.com/), 13 mars 2025
