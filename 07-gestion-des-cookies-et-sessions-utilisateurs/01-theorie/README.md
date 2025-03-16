@@ -6,10 +6,9 @@
   [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-gestion-des-cookies-et-sessions-utilisateurs/01-theorie/index.html)
   ·
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-gestion-des-cookies-et-sessions-utilisateurs/01-theorie/07-gestion-des-cookies-et-sessions-utilisateurs-presentation.pdf)
-- Mini-projet : [Mini-projet](../02-mini-project/README.md) ·
+- Mini-projet : [Consignes](../02-mini-project/README.md) ·
   [Solution](../02-mini-project/solution/)
-- Exercices : [Exercices](../03-exercices/README.md) ·
-  [Solutions](../03-exercices/solutions/)
+- Exercices : [Énoncés et solutions](../03-exercices/README.md)
 
 ## Tables des matières
 
@@ -18,8 +17,8 @@
 - [Objectifs](#objectifs)
 - [TODO](#todo)
 - [Conclusion](#conclusion)
-- [Mini-projet](#mini-projet)
-- [Exercices](#exercices)
+- [Support de cours](#mini-projet)
+- [Support de cours](#exercices)
 
 ## Objectifs
 
@@ -43,7 +42,7 @@ Nous vous invitons maintenant à réaliser le mini-projet de cette session pour
 mettre en pratique les concepts vus en classe.
 
 Vous trouverez les détails du mini-projet ici :
-[Mini-projet](../02-mini-project/README.md).
+[Support de cours](../02-mini-project/README.md).
 
 ## Exercices
 
@@ -51,6 +50,6 @@ Nous vous invitons également à réaliser les exercices de cette session pour
 renforcer votre compréhension des concepts vus en classe.
 
 Vous trouverez les détails des exercices ici :
-[Exercices](../03-exercices/READEME.md).
+[Support de cours](../03-exercices/READEME.md).
 
 [^example]: Example, [example.com](https://example.com/), 13 mars 2025

@@ -6,10 +6,9 @@
   [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-fonctions/01-theorie/index.html)
   ·
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-fonctions/01-theorie/02-fonctions-presentation.pdf)
-- Mini-projet : [Mini-projet](../02-mini-project/README.md) ·
+- Mini-projet : [Consignes](../02-mini-project/README.md) ·
   [Solution](../02-mini-project/solution/)
-- Exercices : [Exercices](../03-exercices/README.md) ·
-  [Solutions](../03-exercices/solutions/)
+- Exercices : [Énoncés et solutions](../03-exercices/README.md)
 
 ## Tables des matières
 
@@ -32,8 +31,8 @@
   - [Différence entre `include` et `require`](#différence-entre-include-et-require)
   - [Différence entre `include_once` et `require_once`](#différence-entre-include_once-et-require_once)
 - [Conclusion](#conclusion)
-- [Mini-projet](#mini-projet)
-- [Exercices](#exercices)
+- [Support de cours](#mini-projet)
+- [Support de cours](#exercices)
 
 ## Objectifs
 
@@ -419,7 +418,7 @@ Nous vous invitons maintenant à réaliser le mini-projet de cette session pour
 mettre en pratique les concepts vus en classe.
 
 Vous trouverez les détails du mini-projet ici :
-[Mini-projet](../02-mini-project/README.md).
+[Support de cours](../02-mini-project/README.md).
 
 ## Exercices
 
@@ -427,6 +426,6 @@ Nous vous invitons également à réaliser les exercices de cette session pour
 renforcer votre compréhension des concepts vus en classe.
 
 Vous trouverez les détails des exercices ici :
-[Exercices](../03-exercices/READEME.md).
+[Support de cours](../03-exercices/READEME.md).
 
 [^example]: Example, [example.com](https://example.com/), 13 mars 2025
