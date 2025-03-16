@@ -6,10 +6,9 @@
   [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
   ·
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
-- Mini-projet : [Mini-projet](../02-mini-project/README.md) ·
+- Mini-projet : [Consignes](../02-mini-project/README.md) ·
   [Solution](../02-mini-project/solution/)
-- Exercices : [Exercices](../03-exercices/README.md) ·
-  [Solutions](../03-exercices/solutions/)
+- Exercices : [Énoncés et solutions](../03-exercices/README.md)
 
 ## Tables des matières
 
@@ -190,8 +189,8 @@ mobiles, jeux vidéos, etc.).
 
 ### Comment fonctionne PHP
 
-De façon plus précise, pour pour écrire et exécuter du code PHP, vous avez
-besoin de :
+De façon plus précise, pour écrire et exécuter du code PHP, vous avez besoin de
+:
 
 - Un serveur web (Apache, Nginx, etc.)
 - PHP installé sur le serveur web
@@ -795,6 +794,8 @@ public class Main {
 }
 ```
 
+</details>
+
 #### Les structures de contrôle conditionnelles
 
 Les structures de contrôle conditionnelles permettent d'exécuter du code en
@@ -1062,7 +1063,7 @@ Nous vous invitons maintenant à réaliser le mini-projet de cette session pour
 mettre en pratique les concepts vus en classe.
 
 Vous trouverez les détails du mini-projet ici :
-[Mini-projet](../02-mini-project/README.md).
+[Consignes](../02-mini-project/README.md).
 
 ## Exercices
 
@@ -1070,7 +1071,7 @@ Nous vous invitons également à réaliser les exercices de cette session pour
 renforcer votre compréhension des concepts vus en classe.
 
 Vous trouverez les détails des exercices ici :
-[Exercices](../03-exercices/READEME.md).
+[Énoncés et solutions](../03-exercices/README.md).
 
 [^mamp]: MAMP, [mamp.info](https://www.mamp.info/), 09 mars 2025
 [^wamp]: WampServer, [wampserver.com](https://www.wampserver.com/), 09 mars 2025

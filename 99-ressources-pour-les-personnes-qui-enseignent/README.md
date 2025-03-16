@@ -4,18 +4,29 @@
 
 - [Table des matières](#table-des-matières)
 - [Avant le cours](#avant-le-cours)
-  - [Email envoyé aux personnes qui étudient avant le premier cours](#email-envoyé-aux-personnes-qui-étudient-avant-le-premier-cours)
-- [Context](#context)
-- [About the course](#about-the-course)
-- [Your tasks](#your-tasks)
-- [Code guidelines](#code-guidelines)
+  - [Message envoyé aux personnes qui étudient avant le premier cours](#message-envoyé-aux-personnes-qui-étudient-avant-le-premier-cours)
 
 ## Avant le cours
 
-### Email envoyé aux personnes qui étudient avant le premier cours
+### Message envoyé aux personnes qui étudient avant le premier cours
 
 ```text
-TODO
+[ProgServ1 2024-2025] Informations générales sur le cours
+
+Bonjour @ProgServ1,
+
+J'espère que vous allez bien et que le semestre a bien débuté pour tout le monde.
+
+Je serai votre enseignant pour l'unité d'enseignement "Programmation server 1 (ProgServ1)", en remplacement de M. Jean-Pierre Hess. Je me réjouis de vous retrouver la semaine prochaine pour le premier cours.
+
+Vous trouverez toutes les informations sur l'unité d'enseignement dans cette organisation GitHub à l'adresse suivante : https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course.
+
+Certains cours sont encore en cours de relecture et de mise à jour. Pas que vous soyez étonné.es si vous voyez des changements dans les prochains jours et/ou durant le semestre.
+
+Si vous avez des questions, n'hésitez pas à me contacter.
+
+Je vous souhaite une bonne journée et à bientôt,
+Ludovic Delafontaine
 ```
 
 ```md
