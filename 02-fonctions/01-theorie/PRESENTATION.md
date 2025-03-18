@@ -47,6 +47,66 @@ consultez le [support de cours][course-material]._
 
 ![bg right:40%][illustration-objectifs]
 
+## Qu'est-ce qu'une fonction ?
+
+![bg right:40%][illustration-objectifs]
+
+## Déclarer une fonction en PHP
+
+![bg right:40%][illustration-objectifs]
+
+## Appeler une fonction en PHP
+
+![bg right:40%][illustration-objectifs]
+
+## Passer des paramètres à une fonction
+
+![bg right:40%][illustration-objectifs]
+
+## Retourner une valeur depuis une fonction
+
+![bg right:40%][illustration-objectifs]
+
+## Paramètres optionnels
+
+![bg right:40%][illustration-objectifs]
+
+## Passer plusieurs paramètres à une fonction
+
+![bg right:40%][illustration-objectifs]
+
+## Portée des variables
+
+![bg right:40%][illustration-objectifs]
+
+## Fonctions prédéfinies en PHP
+
+![bg right:40%][illustration-objectifs]
+
+### Fonctions mathématiques
+
+![bg right:40%][illustration-objectifs]
+
+### Fonctions de chaînes de caractères
+
+![bg right:40%][illustration-objectifs]
+
+### Fonctions sur les variables
+
+![bg right:40%][illustration-objectifs]
+
+## Réutiliser du code avec des fonctions
+
+![bg right:40%][illustration-objectifs]
+
+### Différence entre `include` et `require`
+
+![bg right:40%][illustration-objectifs]
+
+### Différence entre `include_once` et `require_once`
+
+![bg right:40%][illustration-objectifs]
+
 ## Conclusion
 
 - TODO
@@ -89,15 +149,15 @@ vous entraider si vous avez des difficultés !**
 <!-- URLs -->
 
 [presentation-web]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-fonctions/01-presentation/
+	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-fonctions/01-theorie/index.html
 [presentation-pdf]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-fonctions/01-presentation/02-fonctions-presentation.pdf
+	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-fonctions/01-theorie/02-fonctions-presentation.pdf
 [course-material]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/02-fonctions/02-support-de-cours/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/02-fonctions/01-theorie/README.md
 [license]:
 	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [mini-project]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/02-fonctions/02-support-de-cours/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/02-fonctions/02-mini-project/README.md
 [exercices]:
 	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/02-fonctions/03-exercices/README.md
 

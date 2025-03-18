@@ -31,8 +31,8 @@
   - [Différence entre `include` et `require`](#différence-entre-include-et-require)
   - [Différence entre `include_once` et `require_once`](#différence-entre-include_once-et-require_once)
 - [Conclusion](#conclusion)
-- [Support de cours](#mini-projet)
-- [Support de cours](#exercices)
+- [Mini-projet](#mini-projet)
+- [Exercices](#exercices)
 
 ## Objectifs
 
@@ -94,6 +94,10 @@ parenthèses `()` :
 
 ```php
 <?php
+function hello() {
+    echo "Hello, world!";
+}
+
 hello();
 ```
 
@@ -121,8 +125,9 @@ personnalisé :
 
 ```php
 <?php
+<?php
 function hello($name) {
-    echo "Hello, $name!";
+    echo "Hello, $name!<br>";
 }
 ```
 
@@ -130,11 +135,14 @@ Pour appeler cette fonction, on passe un argument à la fonction :
 
 ```php
 <?php
-hello("Alice");
+hello("Alice"); // Affiche "Hello, Alice!"
+hello("Bob"); // Affiche "Hello, Bob!"
 ```
 
 Dans cet exemple, la fonction `hello` est appelée avec l'argument `"Alice"`, ce
-qui affiche le message `Hello, Alice!` à l'écran.
+qui affiche le message `Hello, Alice!` à l'écran. La fonction est ensuite
+appelée avec l'argument `"Bob"`, ce qui affiche le message `Hello, Bob!` à
+l'écran.
 
 ## Retourner une valeur depuis une fonction
 
@@ -153,6 +161,10 @@ variable :
 
 ```php
 <?php
+function square($x) {
+    return $x * $x;
+}
+
 $result = square(3);
 
 echo $result; // Affiche 9
@@ -171,7 +183,7 @@ valeur par défaut `"world"` :
 ```php
 <?php
 function hello($name = "world") {
-    echo "Hello, $name!";
+    echo "Hello, $name!<br>";
 }
 ```
 
@@ -185,6 +197,7 @@ hello(); // Affiche "Hello, world!"
 Si on appelle cette fonction avec un argument, elle affichera `Hello, Alice!` :
 
 ```php
+<?php
 <?php
 hello("Alice"); // Affiche "Hello, Alice!"
 ```
@@ -233,7 +246,17 @@ deuxième argument prendra la valeur par défaut `0` :
 <?php
 $result = add(3);
 
-echo $result; // Affiche 3
+echo "$result<br>"; // Affiche 3
+```
+
+Mais si l'on appelle la fonction `add` avec deux arguments, le deuxième argument
+prendra la valeur passée en argument :
+
+```php
+<?php
+$result = add(3, 5);
+
+echo "$result<br>"; // Affiche 8
 ```
 
 ## Portée des variables
@@ -284,7 +307,7 @@ autres) :
 - [Fonctions de chaînes de caractères](https://www.php.net/manual/fr/ref.strings.php)
 - [Fonctions de gestion de variables](https://www.php.net/manual/fr/ref.var.php)
 - [Fonctions de tableaux](https://www.php.net/manual/fr/ref.array.php)
-- [Fonctions de date et heure](https://www.php.net/manual/fr/ref.datetime.php)
+- [Fonctions de dates et heures](https://www.php.net/manual/fr/ref.datetime.php)
 - [Fonctions de fichiers](https://www.php.net/manual/fr/ref.filesystem.php)
 - [Fonctions de génération de nombres aléatoires](https://www.php.net/manual/fr/book.random.php)
 - [Fonctions de gestion des sessions](https://www.php.net/manual/fr/ref.session.php)
@@ -304,7 +327,10 @@ $result = sqrt(16);
 echo $result; // Affiche 4
 ```
 
-TODO
+Il existe évidemment d'autres fonctions mathématiques prédéfinies en PHP, comme
+`abs`, `round`, `min`, `max`, `rand`, etc.
+
+Vous allez les explorer dans le mini-projet et dans les exercices.
 
 ### Fonctions de chaînes de caractères
 
@@ -319,7 +345,10 @@ $result = strtoupper("hello, world!");
 echo $result; // Affiche "HELLO, WORLD!"
 ```
 
-TODO
+Il existe évidemment d'autres fonctions de chaînes de caractères prédéfinies en
+PHP, comme `strtolower`, `strlen`, `substr`, `str_replace`, etc.
+
+Vous allez les explorer dans le mini-projet et dans les exercices.
 
 ### Fonctions sur les variables
 
@@ -337,6 +366,8 @@ if (isset($var)) {
     echo "La variable n'est pas définie.";
 }
 
+echo "<br>"; // Retour à la ligne HTML
+
 if (isset($undefined)) {
     echo "La variable est définie.";
 } else {
@@ -348,7 +379,10 @@ Dans cet exemple, la variable `$var` est définie, donc le premier message est
 affiché. La variable `$undefined` n'est pas définie, donc le deuxième message
 est affiché.
 
-TODO
+Il existe évidemment d'autres fonctions sur les variables prédéfinies en PHP,
+comme `empty`, `is_null`, `is_array`, `is_string`, `is_numeric`, etc.
+
+Vous allez les explorer dans le mini-projet et dans les exercices.
 
 ## Réutiliser du code avec des fonctions
 
@@ -358,6 +392,7 @@ définir une fonction `hello` dans un fichier `functions.php` :
 
 ```php
 <?php
+// Fichier `functions.php`
 function hello($name) {
     echo "Hello, $name!";
 }
@@ -367,8 +402,11 @@ Et l'inclure dans un autre fichier pour l'utiliser :
 
 ```php
 <?php
-include "functions.php";
+// Fichier `index.php`
+require_once "functions.php"; // On inclut le fichier
 
+// La fonction `hello` est définie dans le fichier importé
+// et peut être utilisée ici
 hello("Alice");
 ```
 
@@ -397,6 +435,10 @@ Les fonctions `include_once` et `require_once` fonctionnent de la même manière
 que `include` et `require`, mais elles vérifient si le fichier a déjà été inclus
 et ne l'incluent qu'une seule fois. Cela permet d'éviter d'inclure plusieurs
 fois le même fichier et de générer des erreurs.
+
+Nous vous recommandons de toujours utiliser `require_once` pour inclure des
+fichiers à votre application pour éviter les erreurs de double inclusion et
+d'arrêter l'exécution du script en cas d'erreur.
 
 ## Conclusion
 
@@ -427,5 +469,3 @@ renforcer votre compréhension des concepts vus en classe.
 
 Vous trouverez les détails des exercices ici :
 [Énoncés et solutions](../03-exercices/README.md).
-
-[^example]: Example, [example.com](https://example.com/), 13 mars 2025
