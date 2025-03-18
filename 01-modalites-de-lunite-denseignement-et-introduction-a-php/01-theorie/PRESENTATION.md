@@ -960,15 +960,15 @@ vous entraider si vous avez des difficultés !**
 <!-- URLs -->
 
 [presentation-web]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-presentation/
+	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html
 [presentation-pdf]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-presentation/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf
+	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf
 [course-material]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/02-support-de-cours/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/README.md
 [license]:
 	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [mini-project]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/02-support-de-cours/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/02-mini-project/README.md
 [exercices]:
 	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/03-exercices/README.md
 
