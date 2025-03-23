@@ -89,15 +89,15 @@ vous entraider si vous avez des difficultés !**
 <!-- URLs -->
 
 [presentation-web]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-presentation/
+	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-theorie/index.html
 [presentation-pdf]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-presentation/05-base-de-donnees-et-pdo-presentation.pdf
+	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-theorie/05-base-de-donnees-et-pdo-presentation.pdf
 [course-material]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/05-base-de-donnees-et-pdo/02-support-de-cours/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/05-base-de-donnees-et-pdo/01-theorie/README.md
 [license]:
 	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [mini-project]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/05-base-de-donnees-et-pdo/02-support-de-cours/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/05-base-de-donnees-et-pdo/02-mini-project/README.md
 [exercices]:
 	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/05-base-de-donnees-et-pdo/03-exercices/README.md
 

@@ -192,11 +192,12 @@ mobiles, jeux vidéos, etc.).
 De façon plus précise, pour écrire et exécuter du code PHP, vous avez besoin de
 :
 
-- Un serveur web (Apache, Nginx, etc.)
-- PHP installé sur le serveur web
-- Un navigateur web (Chrome, Firefox, etc.) pour effectuer les requêtes et
-  afficher les pages web
-- Un éditeur de code
+- Un serveur web (Apache, Nginx, etc.) pour recevoir les requêtes du client et
+  envoyer les réponses.
+- PHP installé sur le serveur web.
+- Un navigateur web (Chrome, Firefox, etc.). pour effectuer les requêtes et
+  afficher les pages web.
+- Un éditeur de code.
 
 Le serveur web reçoit les requêtes du client, les envoie à l'interpréteur PHP
 (le moteur PHP qui est capable de lire et d'exécuter du code PHP),
@@ -924,7 +925,7 @@ public class Main {
         int b = 2;
 
         // Vérification si `$a` est inférieur à `$b`
-        if (a > b) {
+        if (a < b) {
             System.out.println("a is less than b");
         // Sinon si `$a` est égal à `$b`
         } else if (a == b) {

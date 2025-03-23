@@ -3,10 +3,13 @@
 ## Table des matières
 
 - [Table des matières](#table-des-matières)
-- [Avant le cours](#avant-le-cours)
+- [Avant l'unité d'enseignement](#avant-lunité-denseignement)
   - [Message envoyé aux personnes qui étudient avant le premier cours](#message-envoyé-aux-personnes-qui-étudient-avant-le-premier-cours)
+- [Pendant l'unité d'enseignement](#pendant-lunité-denseignement)
+  - [Message envoyé aux personnes qui étudient avant le matin du premier cours](#message-envoyé-aux-personnes-qui-étudient-avant-le-matin-du-premier-cours)
+- [Context pour des outils AI](#context-pour-des-outils-ai)
 
-## Avant le cours
+## Avant l'unité d'enseignement
 
 ### Message envoyé aux personnes qui étudient avant le premier cours
 
@@ -28,6 +31,22 @@ Si vous avez des questions, n'hésitez pas à me contacter.
 Je vous souhaite une bonne journée et à bientôt,
 Ludovic Delafontaine
 ```
+
+## Pendant l'unité d'enseignement
+
+### Message envoyé aux personnes qui étudient avant le matin du premier cours
+
+```text
+[ProgServ1 2024-2025] Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP
+
+Bonjour tout le monde,
+
+Voici les supports de cours pour la session d'aujourd'hui : https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php
+
+N'hésitez pas à me le faire savoir si vous avez des questions.
+```
+
+## Context pour des outils AI
 
 ```md
 # Project context and guidelines

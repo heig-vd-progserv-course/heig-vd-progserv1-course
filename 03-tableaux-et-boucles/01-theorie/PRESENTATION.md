@@ -89,15 +89,15 @@ vous entraider si vous avez des difficultés !**
 <!-- URLs -->
 
 [presentation-web]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/01-presentation/
+	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/01-theorie/index.html
 [presentation-pdf]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/01-presentation/03-tableaux-et-boucles-presentation.pdf
+	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/01-theorie/03-tableaux-et-boucles-presentation.pdf
 [course-material]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/03-tableaux-et-boucles/02-support-de-cours/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/03-tableaux-et-boucles/01-theorie/README.md
 [license]:
 	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [mini-project]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/03-tableaux-et-boucles/02-support-de-cours/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/03-tableaux-et-boucles/02-mini-project/README.md
 [exercices]:
 	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/03-tableaux-et-boucles/03-exercices/README.md
 

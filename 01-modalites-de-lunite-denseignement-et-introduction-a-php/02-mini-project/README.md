@@ -600,7 +600,7 @@ code. Pour ce faire, suivez les étapes suivantes :
    ```
 
    Remplacez `<PATH_TO_PHP_EXECUTABLE>` par le chemin d'accès à l'exécutable PHP
-   sur votre ordinateur. Rar exemple, `C:\\MAMP\\bin\\php\\php8.3.1\\php.exe`
+   sur votre ordinateur. Par exemple, `C:\\MAMP\\bin\\php\\php8.3.1\\php.exe`
    pour Windows ou `/Applications/MAMP/bin/php/php8.3.1/bin/php` pour macOS.
 
    **Attention**, assurez-vous de remplacer `<PATH_TO_PHP_EXECUTABLE>` par le
@@ -669,9 +669,9 @@ construire.
 Commencez par créer les dossiers suivants dans le dossier racine du projet :
 
 ```text
-progserv1
-├── exercices
-└── mini-projet
+progserv1/
+├── exercices/
+└── mini-projet/
 ```
 
 Le dossier `progserv1` permettra de contenir tous les exercices et le
@@ -695,9 +695,9 @@ Créez maintenant les fichiers suivants dans les différents dossiers du projet 
 
 ```text
 progserv1/
-├── exercices
+├── exercices/
 │   └── index.php
-├── mini-projet
+├── mini-projet/
 │   └── index.php
 ├── index.php
 └── phpinfo.php

@@ -175,10 +175,10 @@ effectuer sur ordinateur :
   - Le mini-projet
 - Durée d'environ 2h15
 - Petit projet à réaliser
-- Contenu du cours, notes personnelles,
+- Contenus du cours, notes personnelles,
   [php.net](https://www.php.net/manual/index.php) et
   [developer.mozilla.org](https://developer.mozilla.org) autorisés
-- **Tout autre aide interdite**
+- **Toute autre aide interdite**
 
 ![bg right:40%][illustration-modalites-devaluation]
 
@@ -242,7 +242,7 @@ pour vous, n'hésitez pas à me le faire savoir.
   - Un serveur web.
   - PHP installé sur le serveur web.
   - Un navigateur web.
-  - Un éditeur de code (pour le développement)
+  - Un éditeur de code (pour le développement).
 
 ![bg right:40% contain](./images/architecture-client-serveur-avec-php.png)
 
@@ -258,9 +258,9 @@ pour vous, n'hésitez pas à me le faire savoir.
 ### Comment écrire du code PHP (2/3)
 
 ```php
+<?php
 // Code PHP, dans un fichier `.php`
 // Ici, il n'y a pas de balise de fermeture PHP
-<?php
 echo "Hello, World!";
 ```
 
@@ -740,7 +740,7 @@ public static void main(String[] args) {
     int a = 1;
     int b = 2;
 
-    if (a > b) {
+    if (a < b) {
         System.out.print("a is less than b");
     } else if (a == b) {
         System.out.print("a is equal to b");
