@@ -15,10 +15,18 @@
 - [Ressources](#ressources)
 - [Tables des matières](#tables-des-matières)
 - [Objectifs](#objectifs)
-- [TODO](#todo)
+- [Formulaires HTML](#formulaires-html)
+  - [Structure d'un formulaire](#structure-dun-formulaire)
+  - [Types de champs](#types-de-champs)
+  - [Attributs](#attributs)
+  - [Groupement de champs](#groupement-de-champs)
+- [Envoyer des données des formulaires à un serveur](#envoyer-des-données-des-formulaires-à-un-serveur)
+- [Validation des formulaires](#validation-des-formulaires)
+  - [Côté client](#côté-client)
+  - [Côté serveur](#côté-serveur)
 - [Conclusion](#conclusion)
-- [Support de cours](#mini-projet)
-- [Support de cours](#exercices)
+- [Mini-projet](#mini-projet)
+- [Exercices](#exercices)
 
 ## Objectifs
 
@@ -28,9 +36,49 @@ De façon plus précise, les objectifs de ce cours sont les suivants :
 
 - TODO
 
-## TODO
+## Formulaires HTML
 
 TODO
+
+### Structure d'un formulaire
+
+### Types de champs
+
+#### Champs de texte
+
+#### Champs de mot de passe
+
+#### Champs de texte multiligne
+
+#### Champs de sélection
+
+#### Champs de sélection multiple
+
+#### Champs de case à cocher
+
+#### Champs de bouton radio
+
+#### Champs de bouton
+
+#### Champs de fichier
+
+#### Champs de date
+
+#### Champs de couleur
+
+#### Champs de nombre
+
+### Attributs
+
+### Groupement de champs
+
+## Envoyer des données des formulaires à un serveur
+
+## Validation des formulaires
+
+### Côté client
+
+### Côté serveur
 
 ## Conclusion
 

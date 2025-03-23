@@ -18,6 +18,8 @@ théoriques vus dans le cours _[Cours 02 - Fonctions](../01-theorie/README.md)_.
 - [Ressources](#ressources)
 - [Tables des matières](#tables-des-matières)
 - [Objectifs de la session](#objectifs-de-la-session)
+- [Création du ficher `functions.php`](#création-du-ficher-functionsphp)
+- [Importer et utiliser les fonctions dans le fichier `index.php`](#importer-et-utiliser-les-fonctions-dans-le-fichier-indexphp)
 - [Solution](#solution)
 - [Conclusion](#conclusion)
 - [Aller plus loin](#aller-plus-loin)
@@ -26,7 +28,167 @@ théoriques vus dans le cours _[Cours 02 - Fonctions](../01-theorie/README.md)_.
 
 À l'issue de cette session, les personnes qui étudient devraient avoir pu :
 
-- TODO
+- Mettre en place une structure de projet PHP
+- Créer des fonctions PHP pour visualiser, ajouter, modifier et supprimer des
+  animaux de compagnie de façon fictive
+
+## Création du ficher `functions.php`
+
+Afin de séparer les fonctions de notre projet, nous allons créer un fichier
+`functions.php` qui contiendra toutes les fonctions nécessaires pour notre
+mini-projet.
+
+Pour le moment, ce fichier contiendra différentes fonctions pour manipuler des
+animaux de compagnie de façon fictive. Ces fonctions ne seront donc pas
+fonctionnelles et seront à compléter dans de futurs sessions mais permettront
+d'illustrer comment séparer les fonctions de notre projet.
+
+Créez un fichier `functions.php` dans le dossier `mini-projet`.
+
+Votre structure de projet devrait ressembler à ceci :
+
+```text
+progserv1/
+├── exercices/
+│   └── index.php
+├── mini-projet/
+│   ├── functions.php
+│   └── index.php
+├── index.php
+└── phpinfo.php
+```
+
+Complétez le fichier `functions.php` avec les fonctions suivantes :
+
+```php
+<?php
+function getPets() {
+    echo "Getting pets.<br>";
+}
+
+function getPet($name) {
+    echo "Getting pet with name '$name'.<br>";
+}
+
+function addPet($name, $age) {
+    echo "Adding $name, who is $age years old.<br>";
+}
+
+function updatePet($name, $age) {
+    echo "Updating pet with name '$name' to be $age years old.<br>";
+}
+
+function removePet($name) {
+    echo "Removing pet with name '$name'.<br>";
+}
+```
+
+Prenez le temps de comprendre ce que font ces fonctions. Pour le moment, toutes
+ces fonctions sont fictives et ne font que afficher des actions que nous
+implémenterons dans de futurs sessions.
+
+## Importer et utiliser les fonctions dans le fichier `index.php`
+
+Dans le fichier `index.php`, remplacez le contenu pour importer le fichier
+`functions.php`. Cela vous permettra d'y utiliser les fonctions que vous avez
+créées dans le fichier `functions.php`.
+
+```php
+<?php
+require 'functions.php';
+```
+
+Ajoutez ensuite des appels aux fonctions pour manipuler des animaux de compagnie
+de façon fictive. Vous pourriez, par exemple :
+
+1. Créer un chat nommé _Caramel_, âgé de 3 ans
+2. Créer un chien nommé _Rex_, âgé de 8 ans
+3. Créer un oiseau nommé _Tweety_, âgé de 1 an
+4. Créer un lézard nommé _Godzilla_, âgé de 4 ans
+5. Récupérer tous les animaux
+6. Récupérer l'animal nommé _Rex_
+7. Mettre à jour l'âge de _Rex_ à 9 ans
+8. Supprimer _Tweety_ (désolé Tweety)
+
+Essayez de le faire sans regarder la solution !
+
+<details>
+<summary>Afficher la solution</summary>
+
+```php
+// Crée Caramel, un chat de 3 ans
+addPet("Caramel", 3);
+
+// Crée Rex, un chien de 8 ans
+addPet("Rex", 8);
+
+// Crée Tweety, un oiseau de 1 an
+addPet("Tweety", 1);
+
+// Crée Godzilla, un lézard de 4 ans
+addPet("Godzilla", 4);
+
+// Récupère tous les animaux
+getPets();
+
+// Récupère l'animal nommé Rex
+getPet("Rex");
+
+// Met à jour l'âge de Rex à 9 ans
+updatePet("Rex", 9);
+
+// Supprime Tweety... :(
+removePet("Tweety");
+```
+
+</details>
+
+Votre fichier `index.php` devrait ressembler à ceci :
+
+```php
+<?php
+require 'functions.php';
+
+// Crée Caramel, un chat de 3 ans
+addPet("Caramel", 3);
+
+// Crée Rex, un chien de 8 ans
+addPet("Rex", 8);
+
+// Crée Tweety, un oiseau de 1 an
+addPet("Tweety", 1);
+
+// Crée Godzilla, un lézard de 4 ans
+addPet("Godzilla", 4);
+
+// Récupère tous les animaux
+getPets();
+
+// Récupère l'animal nommé Rex
+getPet("Rex");
+
+// Met à jour l'âge de Rex à 9 ans
+updatePet("Rex", 9);
+
+// Supprime Tweety... :(
+removePet("Tweety");
+```
+
+Ouvrez votre navigateur et allez à l'adresse
+<http://localhost/progserv1/mini-projet/index.php>.
+
+Vous devriez voir les messages suivants :
+
+```text
+Adding Caramel, who is 3 years old.
+Adding Rex, who is 8 years old.
+Adding Tweety, who is 1 years old.
+Adding Godzilla, who is 4 years old.
+Getting pets.
+Getting pet with name 'Rex'.
+Updating pet with name 'Rex' to be 9 years old.
+Removing pet with name 'Tweety'.
+```
 
 ## Solution
 
@@ -35,13 +197,21 @@ Vous pouvez trouver la solution du mini-projet PHP à l'adresse suivante :
 
 ## Conclusion
 
-TODO
+Dans cette seconde session, vous avez appris à créer des fonctions en PHP pour
+manipuler des animaux de compagnie de façon fictive.
+
+Ces fonctions, dans un fichier `functions.php` séparé, ont été importées et
+utilisées dans un fichier `index.php` afin de garder une structure de projet
+propre. Cela nous permettra de réutiliser ces fonctions dans d'autres parties de
+notre projet.
+
+Dans la prochaine session, nous verrons comment utiliser ces fonctions pour
+manipuler les animaux de compagnie de façon plus réaliste à l'aide de tableaux.
 
 ## Aller plus loin
 
 _Ceci est une section optionnelle pour les personnes qui souhaitent aller plus
 loin. Vous pouvez la sauter si vous n'avez pas de temps._
 
-- TODO
-
-[^example]: Example, [example.com](https://example.com/), 13 mars 2025
+- Comment pourriez-vous modifier les fonctions pour qu'elles retournent des
+  valeurs plutôt que d'afficher des messages ?

@@ -22,7 +22,7 @@
 - [Retourner une valeur depuis une fonction](#retourner-une-valeur-depuis-une-fonction)
 - [Paramètres optionnels](#paramètres-optionnels)
 - [Passer plusieurs paramètres à une fonction](#passer-plusieurs-paramètres-à-une-fonction)
-- [Portée des variables](#portée-des-variables)
+- [Portée des variables et variables globales](#portée-des-variables-et-variables-globales)
 - [Fonctions prédéfinies en PHP](#fonctions-prédéfinies-en-php)
   - [Fonctions mathématiques](#fonctions-mathématiques)
   - [Fonctions de chaînes de caractères](#fonctions-de-chaînes-de-caractères)
@@ -47,13 +47,16 @@ comment retourner une valeur depuis une fonction.
 
 De façon plus précise, les objectifs de ce cours sont les suivants :
 
-- Comprendre ce qu'est une fonction en programmation
+- Savoir décrire ce qu'est une fonction en programmation
 - Savoir déclarer une fonction en PHP
 - Savoir appeler une fonction en PHP
 - Savoir passer des paramètres à une fonction en PHP
 - Savoir utiliser une valeur de retour
 - Comprendre ce qu'est une portée de variable
-- Lister des fonctions existantes en PHP
+- Savoir utiliser des variables globales
+- Savoir où trouver les fonctions prédéfinies en PHP
+- Savoir utiliser des fonctions prédéfinies en PHP
+- Savoir réutiliser du code avec des fonctions
 
 ## Qu'est-ce qu'une fonction ?
 
@@ -84,6 +87,17 @@ function hello() {
 }
 ```
 
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void hello() {
+        System.out.println("Hello, world!");
+    }
+}
+```
+
 Dans cet exemple, la fonction `hello` ne prend pas de paramètres et ne retourne
 pas de valeur. Elle affiche simplement le message `Hello, world!` à l'écran.
 
@@ -101,6 +115,23 @@ function hello() {
 hello();
 ```
 
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void hello() {
+        System.out.println("Hello, world!");
+    }
+
+    public static void main(String[] args) {
+        hello();
+    }
+}
+```
+
+</details>
+
 Dans cet exemple, la fonction `hello` est appelée, ce qui affiche le message
 `Hello, world!` à l'écran.
 
@@ -114,6 +145,25 @@ hello();
 hello();
 ```
 
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void hello() {
+        System.out.println("Hello, world!");
+    }
+
+    public static void main(String[] args) {
+        hello();
+        hello();
+        hello();
+    }
+}
+```
+
+</details>
+
 Dans cet exemple, la fonction `hello` est appelée trois fois, ce qui affiche le
 message `Hello, world!` trois fois à l'écran.
 
@@ -125,11 +175,23 @@ personnalisé :
 
 ```php
 <?php
-<?php
 function hello($name) {
     echo "Hello, $name!<br>";
 }
 ```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void hello(String name) {
+        System.out.println("Hello, " + name + "!");
+    }
+}
+```
+
+</details>
 
 Pour appeler cette fonction, on passe un argument à la fonction :
 
@@ -138,6 +200,24 @@ Pour appeler cette fonction, on passe un argument à la fonction :
 hello("Alice"); // Affiche "Hello, Alice!"
 hello("Bob"); // Affiche "Hello, Bob!"
 ```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void hello(String name) {
+        System.out.println("Hello, " + name + "!");
+    }
+
+    public static void main(String[] args) {
+        hello("Alice");
+        hello("Bob");
+    }
+}
+```
+
+</details>
 
 Dans cet exemple, la fonction `hello` est appelée avec l'argument `"Alice"`, ce
 qui affiche le message `Hello, Alice!` à l'écran. La fonction est ensuite
@@ -156,6 +236,19 @@ function square($x) {
 }
 ```
 
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static int square(int x) {
+        return x * x;
+    }
+}
+```
+
+</details>
+
 Pour utiliser la valeur retournée par une fonction, on peut l'assigner à une
 variable :
 
@@ -169,6 +262,25 @@ $result = square(3);
 
 echo $result; // Affiche 9
 ```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static int square(int x) {
+        return x * x;
+    }
+
+    public static void main(String[] args) {
+        int result = square(3);
+
+        System.out.println(result); // Affiche 9
+    }
+}
+```
+
+</details>
 
 Dans cet exemple, la fonction `square` est appelée avec l'argument `3`, ce qui
 retourne `9`. La valeur retournée est ensuite assignée à la variable `$result`,
@@ -187,6 +299,14 @@ function hello($name = "world") {
 }
 ```
 
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+Il n'est pas possible de définir des paramètres optionnels en Java. Ceci est
+spécifique à PHP.
+
+</details>
+
 Si on appelle cette fonction sans argument, elle affichera `Hello, world!` :
 
 ```php
@@ -194,13 +314,37 @@ Si on appelle cette fonction sans argument, elle affichera `Hello, world!` :
 hello(); // Affiche "Hello, world!"
 ```
 
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+Il n'est pas possible de définir des paramètres optionnels en Java. Ceci est
+spécifique à PHP.
+
+</details>
+
 Si on appelle cette fonction avec un argument, elle affichera `Hello, Alice!` :
 
 ```php
 <?php
-<?php
 hello("Alice"); // Affiche "Hello, Alice!"
 ```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void hello(String name) {
+        System.out.println("Hello, " + name + "!");
+    }
+
+    public static void main(String[] args) {
+        hello("Alice");
+    }
+}
+```
+
+</details>
 
 Dans cet exemple, la fonction `hello` a un paramètre `$name` avec une valeur par
 défaut `"world"`. Si on appelle la fonction sans argument, elle utilise la
@@ -219,6 +363,19 @@ function add($x, $y) {
 }
 ```
 
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static int add(int x, int y) {
+        return x + y;
+    }
+}
+```
+
+</details>
+
 Pour utiliser cette fonction, on passe deux arguments :
 
 ```php
@@ -227,6 +384,25 @@ $result = add(3, 5);
 
 echo $result; // Affiche 8
 ```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static int add(int x, int y) {
+        return x + y;
+    }
+
+    public static void main(String[] args) {
+        int result = add(3, 5);
+
+        System.out.println(result); // Affiche 8
+    }
+}
+```
+
+</details>
 
 Il est aussi possible de déclarer des paramètres optionnels après des paramètres
 obligatoires. Par exemple, la fonction suivante prend un paramètre `$x`
@@ -239,6 +415,14 @@ function add($x, $y = 0) {
 }
 ```
 
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+Il n'est pas possible de définir des paramètres optionnels en Java. Ceci est
+spécifique à PHP.
+
+</details>
+
 Dans cet exemple, si on appelle la fonction `add` avec un seul argument, le
 deuxième argument prendra la valeur par défaut `0` :
 
@@ -248,6 +432,14 @@ $result = add(3);
 
 echo "$result<br>"; // Affiche 3
 ```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+Il n'est pas possible de définir des paramètres optionnels en Java. Ceci est
+spécifique à PHP.
+
+</details>
 
 Mais si l'on appelle la fonction `add` avec deux arguments, le deuxième argument
 prendra la valeur passée en argument :
@@ -259,7 +451,26 @@ $result = add(3, 5);
 echo "$result<br>"; // Affiche 8
 ```
 
-## Portée des variables
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static int add(int x, int y) {
+        return x + y;
+    }
+
+    public static void main(String[] args) {
+        int result = add(3, 5);
+
+        System.out.println(result); // Affiche 8
+    }
+}
+```
+
+</details>
+
+## Portée des variables et variables globales
 
 Les variables déclarées à l'intérieur d'une fonction sont locales à cette
 fonction. Cela signifie qu'elles ne sont accessibles que dans le contexte de la
@@ -277,9 +488,77 @@ function square($x) {
 echo $x; // Erreur : variable $x non définie
 ```
 
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static int square(int x) {
+        return x * x;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(x); // Erreur : variable x non définie
+    }
+}
+```
+
+</details>
+
 Dans cet exemple, la variable `$x` est déclarée à l'intérieur de la fonction
 `square` et n'est pas accessible en dehors de celle-ci. Si on essaie d'afficher
 la variable `$x` en dehors de la fonction, on obtient une erreur.
+
+Il est possible de déclarer des variables globales en PHP, c'est-à-dire des
+variables qui sont accessibles dans tout le script. Pour déclarer une variable
+globale, on utilise le mot-clé `global` suivi du nom de la variable :
+
+```php
+<?php
+$x = 42;
+
+function square() {
+    global $x;
+    return $x * $x;
+}
+
+$result = square();
+
+echo $result; // Affiche 1764
+```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static int x = 42;
+
+    public static int square() {
+        return x * x;
+    }
+
+    public static void main(String[] args) {
+        int result = square();
+
+        System.out.println(result); // Affiche 1764
+    }
+}
+```
+
+</details>
+
+Dans cet exemple, la variable `$x` est déclarée en dehors de la fonction
+`square` et est rendue accessible à l'intérieur de la fonction en utilisant le
+mot-clé `global`.
+
+Sans le mot-clé `global`, la variable `$x` n'est pas accessible à l'intérieur de
+la fonction `square`.
+
+Il est généralement déconseillé d'utiliser des variables globales, car elles
+rendent le code moins lisible et plus difficile à maintenir. Il est préférable
+de passer des paramètres à une fonction plutôt que d'utiliser des variables
+globales.
 
 ## Fonctions prédéfinies en PHP
 
@@ -293,6 +572,22 @@ $length = strlen("Hello, world!");
 
 echo $length; // Affiche 13
 ```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        String s = "Hello, world!";
+        int length = s.length();
+
+        System.out.println(length); // Affiche 13
+    }
+}
+```
+
+</details>
 
 Dans cet exemple, la fonction `strlen` est appelée avec l'argument
 `"Hello, world!"`, ce qui retourne `13`. La valeur retournée est assignée à la
@@ -327,6 +622,21 @@ $result = sqrt(16);
 echo $result; // Affiche 4
 ```
 
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        double result = Math.sqrt(16);
+
+        System.out.println(result); // Affiche 4.0
+    }
+}
+```
+
+</details>
+
 Il existe évidemment d'autres fonctions mathématiques prédéfinies en PHP, comme
 `abs`, `round`, `min`, `max`, `rand`, etc.
 
@@ -345,6 +655,21 @@ $result = strtoupper("hello, world!");
 echo $result; // Affiche "HELLO, WORLD!"
 ```
 
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        String result = "hello, world!".toUpperCase();
+
+        System.out.println(result); // Affiche "HELLO, WORLD!"
+    }
+}
+```
+
+</details>
+
 Il existe évidemment d'autres fonctions de chaînes de caractères prédéfinies en
 PHP, comme `strtolower`, `strlen`, `substr`, `str_replace`, etc.
 
@@ -361,19 +686,48 @@ Par exemple, la fonction `isset` permet de vérifier si une variable est défini
 $var = 42;
 
 if (isset($var)) {
-    echo "La variable est définie.";
+    echo "The variable is defined.";
 } else {
-    echo "La variable n'est pas définie.";
+    echo "The variable is not defined.";
 }
 
 echo "<br>"; // Retour à la ligne HTML
 
 if (isset($undefined)) {
-    echo "La variable est définie.";
+    echo "The variable is defined.";
 } else {
-    echo "La variable n'est pas définie.";
+    echo "The variable is not defined.";
 }
 ```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        int var = 42;
+
+        if (var != null) {
+            System.out.println("The variable is defined.");
+        } else {
+            System.out.println("The variable is not defined.");
+        }
+
+        System.out.println(); // Retour à la ligne
+
+        int undefined;
+
+        if (undefined != null) {
+            System.out.println("The variable is defined.");
+        } else {
+            System.out.println("The variable is not defined.");
+        }
+    }
+}
+```
+
+</details>
 
 Dans cet exemple, la variable `$var` est définie, donc le premier message est
 affiché. La variable `$undefined` n'est pas définie, donc le deuxième message
