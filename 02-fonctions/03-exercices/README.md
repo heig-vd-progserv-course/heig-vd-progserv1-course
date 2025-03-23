@@ -57,7 +57,7 @@ argument.
 ```php
 <?php
 function greet($name) {
-    echo "Hello, $name!";
+    echo "Hello, $name!<br>";
 }
 
 greet("Alice");
@@ -157,13 +157,21 @@ Déclarez une fonction `absoluteValue` qui prend un paramètre `$number` et
 retourne sa valeur absolue. Utilisez cette fonction pour afficher la valeur
 absolue de `-15`.
 
+Pour rappel, la valeur absolue d'un nombre est sa valeur numérique considérée
+sans tenir compte de son signe ou encore sa distance à zéro .[^valeur-absolue]
+Par exemple, la valeur absolue de `-15` est `15`.
+
 <details>
 <summary>Afficher la réponse</summary>
 
 ```php
 <?php
 function absoluteValue($number) {
-    return abs($number);
+    if ($number < 0) {
+        return -$number;
+    } else {
+        return $number;
+    }
 }
 
 $result = absoluteValue(-15);
@@ -271,7 +279,7 @@ echo $result;
 ```
 
 ```text
-4.560606061
+4.5606060606061
 ```
 
 </details>
@@ -292,7 +300,7 @@ function isPassing($grade) {
     return $grade >= 4.0;
 }
 
-$result = isPassing(4.560606061);
+$result = isPassing(4.5606060606061);
 
 if ($result) {
     echo "Passing<br>";
@@ -313,7 +321,7 @@ Déclarez une fonction `isLeapYear` qui prend un paramètre `$year` et retourne
 `true` si l'année est bissextile (voir ci-dessous), ou `false` sinon.
 
 Une année est bissextile si elle est divisible par 4 mais pas par 100, ou si
-elle est divisible par 400.
+elle est divisible par 400[^annee-bissextile].
 
 Utilisez cette fonction pour vérifier si les années 1900, 2000, 2024 et 2025
 sont bissextiles. Affichez _"Bissextile"_ ou _"Non bissextile"_ en conséquence.
@@ -325,6 +333,18 @@ sont bissextiles. Affichez _"Bissextile"_ ou _"Non bissextile"_ en conséquence.
 <?php
 function isLeapYear($year) {
     return ($year % 4 == 0 && $year % 100 != 0) || $year % 400 == 0;
+}
+
+if (isLeapYear(1900)) {
+    echo "Bissextile<br>";
+} else {
+    echo "Non bissextile<br>";
+}
+
+if (isLeapYear(2000)) {
+    echo "Bissextile<br>";
+} else {
+    echo "Non bissextile<br>";
 }
 
 if (isLeapYear(2024)) {
@@ -341,6 +361,8 @@ if (isLeapYear(2025)) {
 ```
 
 ```text
+Non bissextile
+Bissextile
 Bissextile
 Non bissextile
 ```
@@ -351,14 +373,14 @@ Non bissextile
 
 En utilisant la documentation officielle de PHP sur la fonction `round` :
 <https://www.php.net/manual/fr/function.round.php>, utilisez cette fonction pour
-arrondir le nombre `4.560606061` à une décimale.
+arrondir le nombre `4.5606060606061` à une décimale.
 
 <details>
 <summary>Afficher la réponse</summary>
 
 ```php
 <?php
-$number = 4.560606061;
+$number = 4.5606060606061;
 $roundedNumber = round($number, 1);
 
 echo $roundedNumber;
@@ -374,14 +396,14 @@ echo $roundedNumber;
 
 En utilisant la documentation officielle de PHP sur la fonction `ceil` :
 <https://www.php.net/manual/fr/function.ceil.php>, utilisez cette fonction pour
-arrondir le nombre `4.560606061` à l'entier supérieur.
+arrondir le nombre `4.5606060606061` à l'entier supérieur.
 
 <details>
 <summary>Afficher la réponse</summary>
 
 ```php
 <?php
-$number = 4.560606061;
+$number = 4.5606060606061;
 $roundedNumber = ceil($number);
 
 echo $roundedNumber;
@@ -397,14 +419,14 @@ echo $roundedNumber;
 
 En utilisant la documentation officielle de PHP sur la fonction `floor` :
 <https://www.php.net/manual/fr/function.floor.php>, utilisez cette fonction pour
-arrondir le nombre `4.560606061` à l'entier inférieur.
+arrondir le nombre `4.5606060606061` à l'entier inférieur.
 
 <details>
 <summary>Afficher la réponse</summary>
 
 ```php
 <?php
-$number = 4.560606061;
+$number = 4.5606060606061;
 $roundedNumber = floor($number);
 
 echo $roundedNumber;
@@ -560,14 +582,16 @@ pour répéter la chaîne de caractères _"Hello, world!"_ trois fois.
 
 ```php
 <?php
-$string = "Hello, world!";
+$string = "Hello, world!<br>";
 $repeatedString = str_repeat($string, 3);
 
 echo $repeatedString;
 ```
 
 ```text
-Hello, world!Hello, world!Hello, world!
+Hello, world!
+Hello, world!
+Hello, world!
 ```
 
 </details>
@@ -778,9 +802,13 @@ function debug($variable) {
 }
 
 debug($variable1);
+echo "<br>";
 debug($variable2);
+echo "<br>";
 debug($variable3);
-debug($variable);
+echo "<br>";
+debug($variable4);
+echo "<br>";
 ```
 
 ```text
@@ -832,22 +860,23 @@ if (isDivisibleBy(10, 3)) {
 
 ## Exercice 26 - Exercice bonus
 
+> [!NOTE]
+>
+> Cet exercice est un exercice bonus. Il est totalement optionnel.
+
 Déclarez une fonction `factorial` qui prend un paramètre `$number` et retourne
 la factorielle de ce nombre. Utilisez cette fonction pour calculer `5!`.
 
 Pour rappel, la factorielle d'un nombre est le produit de tous les entiers
-positifs inférieurs ou égaux à ce nombre. Par exemple,
-`5! = 5 * 4 * 3 * 2 * 1 = 120`.
+positifs inférieurs ou égaux à ce nombre[^factorielle] :
 
-Il est possible de calculer la factorielle de manière récursive (la fonction
-s'appelle elle-même) en utilisant la propriété suivante : la factorielle d'un
-nombre est égale à ce nombre multiplié par la factorielle du nombre précédent .
+- $n! = n \times (n - 1)!$
+- $0! = 1$
 
-Par exemple, la factorielle de `5` est égale à `5 * 4!`, tout comme la
-factorielle de `4` est égale à `4 * 3!`, etc.
+Par exemple, $5! = 5 * 4 * 3 * 2 * 1 = 120$.
 
-Il est donc possible de définir la fonction `factorial` de manière récursive en
-utilisant cette propriété où la factorielle de `0` est égale à `1`.
+Il est donc possible de définir la fonction `factorial` de manière récursive (la
+fonction s'appelle elle-même) en utilisant ces propriétés.
 
 <details>
 <summary>Afficher la réponse</summary>
@@ -872,3 +901,17 @@ echo $result;
 ```
 
 </details>
+
+[^annee-bissextile]:
+    Année bissextile
+    [fr.wikipedia.org](https://fr.wikipedia.org/wiki/Ann%C3%A9e_bissextile), 23
+    mars 2025
+
+[^factorielle]:
+    Factorielle [fr.wikipedia.org](https://fr.wikipedia.org/wiki/Factorielle),
+    23 mars 2025
+
+[^valeur-absolue]:
+    Valeur absolue
+    [fr.wikipedia.org](https://fr.wikipedia.org/wiki/Valeur_absolue), 23 mars
+    2025

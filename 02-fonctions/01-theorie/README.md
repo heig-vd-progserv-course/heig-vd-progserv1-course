@@ -22,10 +22,11 @@
 - [Retourner une valeur depuis une fonction](#retourner-une-valeur-depuis-une-fonction)
 - [Paramètres optionnels](#paramètres-optionnels)
 - [Passer plusieurs paramètres à une fonction](#passer-plusieurs-paramètres-à-une-fonction)
-- [Portée des variables et variables globales](#portée-des-variables-et-variables-globales)
+- [Portée des variables](#portée-des-variables)
+- [Variables globales](#variables-globales)
 - [Fonctions prédéfinies en PHP](#fonctions-prédéfinies-en-php)
   - [Fonctions mathématiques](#fonctions-mathématiques)
-  - [Fonctions de chaînes de caractères](#fonctions-de-chaînes-de-caractères)
+  - [Fonctions sur les chaînes de caractères](#fonctions-de-chaînes-de-caractères)
   - [Fonctions sur les variables](#fonctions-sur-les-variables)
 - [Réutiliser du code avec des fonctions](#réutiliser-du-code-avec-des-fonctions)
   - [Différence entre `include` et `require`](#différence-entre-include-et-require)
@@ -60,8 +61,9 @@ De façon plus précise, les objectifs de ce cours sont les suivants :
 
 ## Qu'est-ce qu'une fonction ?
 
-Une fonction est un bloc de code qui effectue une tâche spécifique. Une fonction
-peut prendre des paramètres en entrée et retourner une valeur en sortie.
+Une fonction est un ensemble d'instructions qui effectue une tâche spécifique.
+Une fonction peut prendre des paramètres en entrée et peut retourner une valeur
+en sortie.
 
 Comme en mathématiques, une fonction en programmation prend des arguments en
 entrée et retourne une valeur en sortie. Par exemple, la fonction $f(x) = x^2$
@@ -70,7 +72,7 @@ fonction $f(3)$, on obtient $9$.
 
 En programmation, une fonction est définie par un nom, une liste de paramètres
 (optionnelle) et un bloc de code. Une fois définie, une fonction peut être
-appelée à partir d'un autre endroit du programme.
+appelée à partir d'un autre endroit du programme et permet de structurer le code
 
 ## Déclarer une fonction en PHP
 
@@ -83,7 +85,7 @@ Voici un exemple de déclaration de fonction en PHP :
 ```php
 <?php
 function hello() {
-    echo "Hello, world!";
+    echo "Hello, world!<br>";
 }
 ```
 
@@ -104,15 +106,18 @@ pas de valeur. Elle affiche simplement le message `Hello, world!` à l'écran.
 ## Appeler une fonction en PHP
 
 Pour appeler une fonction en PHP, on utilise le nom de la fonction suivi de
-parenthèses `()` :
+parenthèses `()`. Les parenthèses peuvent contenir des paramètres à passer à la
+fonction, si elle en prend.
+
+Un exemple d'appel de fonction en PHP sans paramètres :
 
 ```php
 <?php
 function hello() {
-    echo "Hello, world!";
+    echo "Hello, world!<br>";
 }
 
-hello();
+hello(); // Affiche "Hello, world!"
 ```
 
 <details>
@@ -125,7 +130,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        hello();
+        hello(); // Affiche "Hello, world!"
     }
 }
 ```
@@ -140,9 +145,13 @@ programme :
 
 ```php
 <?php
-hello();
-hello();
-hello();
+function hello() {
+    echo "Hello, world!<br>";
+}
+
+hello(); // Affiche "Hello, world!"
+hello(); // Affiche "Hello, world!"
+hello(); // Affiche "Hello, world!"
 ```
 
 <details>
@@ -155,9 +164,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        hello();
-        hello();
-        hello();
+        hello(); // Affiche "Hello, world!"
+        hello(); // Affiche "Hello, world!"
+        hello(); // Affiche "Hello, world!"
     }
 }
 ```
@@ -197,6 +206,10 @@ Pour appeler cette fonction, on passe un argument à la fonction :
 
 ```php
 <?php
+function hello($name) {
+    echo "Hello, $name!<br>";
+}
+
 hello("Alice"); // Affiche "Hello, Alice!"
 hello("Bob"); // Affiche "Hello, Bob!"
 ```
@@ -211,8 +224,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        hello("Alice");
-        hello("Bob");
+        hello("Alice"); // Affiche "Hello, Alice!"
+        hello("Bob"); // Affiche "Hello, Bob!"
     }
 }
 ```
@@ -226,8 +239,14 @@ l'écran.
 
 ## Retourner une valeur depuis une fonction
 
-Une fonction peut également retourner une valeur. Par exemple, la fonction
-suivante prend un paramètre `$x` et retourne le carré de ce paramètre :
+Une fonction peut également retourner une valeur. La valeur peut ensuite être
+utilisée dans le code appelant (= le code qui appelle la fonction).
+
+Pour retourner une valeur depuis une fonction, on utilise le mot-clé `return`.
+Une fonction ne peut retourner qu'une seule valeur.
+
+Par exemple, la fonction suivante prend un paramètre `$x` et retourne le carré
+de ce paramètre :
 
 ```php
 <?php
@@ -289,8 +308,11 @@ qui est affichée à l'écran.
 ## Paramètres optionnels
 
 En PHP, une fonction peut avoir des paramètres optionnels avec des valeurs par
-défaut. Par exemple, la fonction suivante prend un paramètre `$name` avec une
-valeur par défaut `"world"` :
+défaut. Ces paramètres optionnels doivent être définis après les paramètres
+obligatoires.
+
+Par exemple, la fonction suivante prend un paramètre `$name` avec une valeur par
+défaut `"world"` :
 
 ```php
 <?php
@@ -311,6 +333,10 @@ Si on appelle cette fonction sans argument, elle affichera `Hello, world!` :
 
 ```php
 <?php
+function hello($name = "world") {
+    echo "Hello, $name!<br>";
+}
+
 hello(); // Affiche "Hello, world!"
 ```
 
@@ -326,23 +352,18 @@ Si on appelle cette fonction avec un argument, elle affichera `Hello, Alice!` :
 
 ```php
 <?php
+function hello($name = "world") {
+    echo "Hello, $name!<br>";
+}
+
 hello("Alice"); // Affiche "Hello, Alice!"
 ```
 
 <details>
 <summary>Afficher l'équivalent en Java</summary>
 
-```java
-public class Main {
-    public static void hello(String name) {
-        System.out.println("Hello, " + name + "!");
-    }
-
-    public static void main(String[] args) {
-        hello("Alice");
-    }
-}
-```
+Il n'est pas possible de définir des paramètres optionnels en Java. Ceci est
+spécifique à PHP.
 
 </details>
 
@@ -353,8 +374,11 @@ argument.
 
 ## Passer plusieurs paramètres à une fonction
 
-Une fonction peut avoir plusieurs paramètres. Par exemple, la fonction suivante
-prend deux paramètres `$x` et `$y` et retourne la somme de ces deux paramètres :
+Une fonction peut avoir plusieurs paramètres. Les paramètres sont séparés par
+des virgules (`,`) et sont passés dans le même ordre que leur déclaration.
+
+Par exemple, la fonction suivante prend deux paramètres `$x` et `$y` et retourne
+la somme de ces deux paramètres :
 
 ```php
 <?php
@@ -470,7 +494,7 @@ public class Main {
 
 </details>
 
-## Portée des variables et variables globales
+## Portée des variables
 
 Les variables déclarées à l'intérieur d'une fonction sont locales à cette
 fonction. Cela signifie qu'elles ne sont accessibles que dans le contexte de la
@@ -508,6 +532,8 @@ public class Main {
 Dans cet exemple, la variable `$x` est déclarée à l'intérieur de la fonction
 `square` et n'est pas accessible en dehors de celle-ci. Si on essaie d'afficher
 la variable `$x` en dehors de la fonction, on obtient une erreur.
+
+## Variables globales
 
 Il est possible de déclarer des variables globales en PHP, c'est-à-dire des
 variables qui sont accessibles dans tout le script. Pour déclarer une variable
@@ -599,7 +625,7 @@ catégories. Voici quelques catégories de fonctions prédéfinies en PHP (entre
 autres) :
 
 - [Fonctions mathématiques](https://www.php.net/manual/fr/ref.math.php)
-- [Fonctions de chaînes de caractères](https://www.php.net/manual/fr/ref.strings.php)
+- [Fonctions sur les chaînes de caractères](https://www.php.net/manual/fr/ref.strings.php)
 - [Fonctions de gestion de variables](https://www.php.net/manual/fr/ref.var.php)
 - [Fonctions de tableaux](https://www.php.net/manual/fr/ref.array.php)
 - [Fonctions de dates et heures](https://www.php.net/manual/fr/ref.datetime.php)
@@ -642,7 +668,7 @@ Il existe évidemment d'autres fonctions mathématiques prédéfinies en PHP, co
 
 Vous allez les explorer dans le mini-projet et dans les exercices.
 
-### Fonctions de chaînes de caractères
+### Fonctions sur les chaînes de caractères
 
 PHP dispose de nombreuses fonctions prédéfinies pour manipuler des chaînes de
 caractères. Par exemple, la fonction `strtoupper` permet de convertir une chaîne
@@ -748,7 +774,7 @@ définir une fonction `hello` dans un fichier `functions.php` :
 <?php
 // Fichier `functions.php`
 function hello($name) {
-    echo "Hello, $name!";
+    echo "Hello, $name!<br>";
 }
 ```
 
@@ -782,17 +808,6 @@ arrête l'exécution du script.
 Nous vous recommandons de toujours utiliser `require` pour inclure des fichiers
 à votre application pour s'assurer que le script ne continue pas à s'exécuter si
 un fichier est manquant.
-
-### Différence entre `include_once` et `require_once`
-
-Les fonctions `include_once` et `require_once` fonctionnent de la même manière
-que `include` et `require`, mais elles vérifient si le fichier a déjà été inclus
-et ne l'incluent qu'une seule fois. Cela permet d'éviter d'inclure plusieurs
-fois le même fichier et de générer des erreurs.
-
-Nous vous recommandons de toujours utiliser `require_once` pour inclure des
-fichiers à votre application pour éviter les erreurs de double inclusion et
-d'arrêter l'exécution du script en cas d'erreur.
 
 ## Conclusion
 

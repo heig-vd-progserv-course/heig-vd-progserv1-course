@@ -1,6 +1,6 @@
 <?php
 function hello() {
-    echo "Hello, world!";
+    echo "Hello, world!<br>";
 }
 
-hello();
+hello(); // Affiche "Hello, world!"
