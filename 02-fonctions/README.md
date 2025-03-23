@@ -14,11 +14,22 @@
 
 À l'issue de ce cours, les personnes qui étudient devraient être capables de :
 
-- TODO
+- Savoir décrire ce qu'est une fonction en programmation
+- Savoir déclarer une fonction en PHP
+- Savoir appeler une fonction en PHP
+- Savoir passer des paramètres à une fonction en PHP
+- Savoir utiliser une valeur de retour
+- Comprendre ce qu'est une portée de variable
+- Savoir utiliser des variables globales
+- Savoir où trouver les fonctions prédéfinies en PHP
+- Savoir utiliser des fonctions prédéfinies en PHP
+- Savoir réutiliser du code avec des fonctions
 
 De plus, les personnes qui étudient devraient avoir pu :
 
-- TODO
+- Mettre en place une structure de projet PHP
+- Créer des fonctions PHP pour visualiser, ajouter, modifier et supprimer des
+  animaux de compagnie de façon fictive
 
 ## Méthodes d'enseignement et d'apprentissage
 

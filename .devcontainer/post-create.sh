@@ -12,6 +12,9 @@ sudo apt install --yes ghostscript
 ## Install packages to interact with SQLite databases
 sudo apt install --yes sqlite3
 
+## Create aliases for frequently used commands
+alias tree='tree --dirsfirst -A -F'
+
 ## Configure and start Apache server
 
 # Remove the default document root

@@ -11,6 +11,7 @@
 	"files.encoding": "utf8",
 	"files.eol": "\n",
 	"files.insertFinalNewline": true,
+	"intelephense.format.braces": "k&r",
 	"markdown.extension.toc.levels": "2..3",
 	"markdown.marp.breaks": "off",
 	"markdown.marp.html": "all",
@@ -24,6 +25,5 @@
 		"no-inline-html": false
 	},
 	"plantuml.render": "PlantUMLServer",
-	"plantuml.server": "http://localhost:9090",
-	"workbench.activityBar.orientation": "vertical"
+	"plantuml.server": "http://localhost:9090"
 }

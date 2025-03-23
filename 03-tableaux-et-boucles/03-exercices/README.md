@@ -23,3 +23,37 @@ _[Cours 03 - Tableaux et boucles](../01-theorie/README.md)_.
 ## Exercice 1
 
 TODO
+
+## Exercice 18
+
+En utilisant la documentation officielle de PHP sur les fonctions `explode` :
+<https://www.php.net/manual/fr/function.explode.php> et `implode` :
+<https://www.php.net/manual/fr/function.implode.php>, déclarez une fonction
+`reverseWords` qui prend un paramètre `$string` et retourne la chaîne de
+caractères `$string` avec les mots dans l'ordre inverse.
+
+Faites des tests avec la chaîne suivante :
+
+```php
+<?php
+$string = "Hello, world!";
+```
+
+<details>
+<summary>Afficher la réponse</summary>
+
+```php
+<?php
+$string = "Hello, world!";
+$words = explode(" ", $string);
+$reversedWords = array_reverse($words);
+$reversedString = implode(" ", $reversedWords);
+
+echo $reversedString;
+```
+
+```text
+world! Hello,
+```
+
+</details>

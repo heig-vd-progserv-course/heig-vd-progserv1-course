@@ -35,8 +35,8 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 |            Cours | Contenu(s)                                                               | État de la rédaction[^etat-de-la-redaction] |
 | ---------------: | :----------------------------------------------------------------------- | :------------------------------------------ |
 | [01](#-cours-01) | Modalités de l'unité d'enseignement et introduction à PHP                | 🟢 Complet                                  |
-| [02](#-cours-02) | Fonctions                                                                | 🟡 En cours                                 |
-| [03](#-cours-03) | Tableaux et boucles                                                      | 🔴 À faire                                  |
+| [02](#-cours-02) | Fonctions                                                                | 🟢 Complet                                  |
+| [03](#-cours-03) | Tableaux et boucles                                                      | 🟡 En cours                                 |
 | [04](#-cours-04) | Formulaires HTML et validation                                           | 🔴 À faire                                  |
 | [05](#-cours-05) | Base de données et PDO                                                   | 🔴 À faire                                  |
 | [06](#-cours-06) | Programmation orientée objet                                             | 🔴 À faire                                  |
