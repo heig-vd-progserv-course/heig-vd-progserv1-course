@@ -46,18 +46,18 @@ Dans ce cours, nous allons voir comment déclarer et appeler des fonctions en
 PHP. Nous allons également voir comment passer des paramètres à une fonction et
 comment retourner une valeur depuis une fonction.
 
-De façon plus précise, les objectifs de ce cours sont les suivants :
+De façon plus précise, les personnes qui étudient devraient être capables de :
 
-- Savoir décrire ce qu'est une fonction en programmation
-- Savoir déclarer une fonction en PHP
-- Savoir appeler une fonction en PHP
-- Savoir passer des paramètres à une fonction en PHP
-- Savoir utiliser une valeur de retour
-- Comprendre ce qu'est une portée de variable
-- Savoir utiliser des variables globales
-- Savoir où trouver les fonctions prédéfinies en PHP
-- Savoir utiliser des fonctions prédéfinies en PHP
-- Savoir réutiliser du code avec des fonctions
+- Décrire ce qu'est une fonction en programmation
+- Déclarer une fonction en PHP
+- Appeler une fonction en PHP
+- Passer des paramètres à une fonction en PHP
+- Utiliser une valeur de retour
+- Expliquer ce qu'est une portée de variable
+- Utiliser des variables globales
+- Savoir où les fonctions prédéfinies en PHP
+- Utiliser des fonctions prédéfinies en PHP
+- Réutiliser du code avec des fonctions
 
 ## Qu'est-ce qu'une fonction ?
 
@@ -545,12 +545,13 @@ $x = 42;
 
 function square() {
     global $x;
-    return $x * $x;
+
+    $x = $x * $x;
 }
 
-$result = square();
+square();
 
-echo $result; // Affiche 1764
+echo $x; // Affiche 1764
 ```
 
 <details>
@@ -561,13 +562,13 @@ public class Main {
     public static int x = 42;
 
     public static int square() {
-        return x * x;
+        x = x * x;
     }
 
     public static void main(String[] args) {
-        int result = square();
+        square();
 
-        System.out.println(result); // Affiche 1764
+        System.out.println(x); // Affiche 1764
     }
 }
 ```
@@ -655,7 +656,6 @@ echo $result; // Affiche 4
 public class Main {
     public static void main(String[] args) {
         double result = Math.sqrt(16);
-
         System.out.println(result); // Affiche 4.0
     }
 }

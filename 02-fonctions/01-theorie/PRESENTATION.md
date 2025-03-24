@@ -13,6 +13,7 @@ url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-fonc
 header: "**Cours 02 - Fonctions**"
 footer: "**HEIG-VD** - ProgServ1 Course 2024-2025 - CC BY-SA 4.0"
 headingDivider: 6
+math: mathjax
 -->
 
 # Cours 02 - Fonctions
@@ -41,28 +42,23 @@ _paginate: false
 _Cette présentation est un résumé du support de cours. Pour plus de détails,
 consultez le [support de cours][course-material]._
 
-## Objectifs (1/3)
+## Objectifs (1/2)
 
-- Savoir décrire ce qu'est une fonction en programmation
-- Savoir déclarer une fonction en PHP
-- Savoir appeler une fonction en PHP
-- Savoir passer des paramètres à une fonction en PHP
-- Savoir utiliser une valeur de retour
-
-![bg right:40%][illustration-objectifs]
-
-## Objectifs (2/3)
-
-- Comprendre ce qu'est une portée de variable
-- Savoir utiliser des variables globales
-- Savoir où trouver les fonctions prédéfinies en PHP
-- Savoir utiliser des fonctions prédéfinies en PHP
+- Décrire ce qu'est une fonction en programmation
+- Déclarer une fonction en PHP
+- Appeler une fonction en PHP
+- Passer des paramètres à une fonction en PHP
+- Utiliser une valeur de retour
+- Expliquer ce qu'est une portée de variable
 
 ![bg right:40%][illustration-objectifs]
 
-## Objectifs (3/3)
+## Objectifs (2/2)
 
-- Savoir réutiliser du code avec des fonctions
+- Utiliser des variables globales
+- Savoir où les fonctions prédéfinies en PHP
+- Utiliser des fonctions prédéfinies en PHP
+- Réutiliser du code avec des fonctions
 
 ![bg right:40%][illustration-objectifs]
 
@@ -70,9 +66,9 @@ consultez le [support de cours][course-material]._
 
 - Ensemble d'instructions pour effectuer une tâche spécifique
 - Inspirée des fonctions mathématiques :
-  - $f(x) = x^2$, où $x$ est un paramètre
+  - $f(x) = x^2$
+  - où $x$ est un paramètre
   - $f(2) = 4$, $f(3) = 9$, etc.
-  - $f(x, y) = x + y$, etc.
 
 ![bg right:40%][illustration-quest-ce-quune-fonction]
 
@@ -91,8 +87,8 @@ consultez le [support de cours][course-material]._
 
 - En PHP, une fonction est déclarée avec le mot-clé `function`
 - Suivi du nom de la fonction
-- Suivi des paramètres entre parenthèses
-- Suivi du corps de la fonction entre accolades
+- Suivi des paramètres entre parenthèses (`()`)
+- Suivi du corps de la fonction entre accolades (`{}`)
 
 ![bg right:40%][illustration-declarer-une-fonction-en-php]
 
@@ -297,7 +293,7 @@ public class Main {
 
 ## Portée des variables (1/3)
 
-- La portée d'une variable est l'endroit où elle est accessible :
+- La portée d'une variable est l'endroit où elle peut être utilisée
 - Une variable déclarée à l'intérieur d'une fonction ne peut être utilisée qu'à
   l'intérieur de cette fonction
 - Une erreur survient si une variable est utilisée en dehors de sa portée
@@ -348,12 +344,13 @@ $x = 42;
 
 function square() {
     global $x;
-    return $x * $x;
+
+    $x = $x * $x;
 }
 
-$result = square();
+square();
 
-echo $result; // Affiche 1764
+echo $x; // Affiche 1764
 ```
 
 ## Variables globales (3/3)
@@ -364,13 +361,13 @@ public class Main {
     public static int x = 42;
 
     public static int square() {
-        return x * x;
+        x = x * x;
     }
 
     public static void main(String[] args) {
-        int result = square();
+        square();
 
-        System.out.println(result); // Affiche 1764
+        System.out.println(x); // Affiche 1764
     }
 }
 ```
@@ -431,7 +428,6 @@ echo $result; // Affiche 4
 public class Main {
     public static void main(String[] args) {
         double result = Math.sqrt(16);
-
         System.out.println(result); // Affiche 4.0
     }
 }

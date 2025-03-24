@@ -20,6 +20,11 @@ théoriques vus dans le cours _[Cours 02 - Fonctions](../01-theorie/README.md)_.
 - [Objectifs de la session](#objectifs-de-la-session)
 - [Création du ficher `functions.php`](#création-du-ficher-functionsphp)
 - [Importer et utiliser les fonctions dans le fichier `index.php`](#importer-et-utiliser-les-fonctions-dans-le-fichier-indexphp)
+- [Créer les pages de base pour gérer les animaux de compagnie](#créer-les-pages-de-base-pour-gérer-les-animaux-de-compagnie)
+  - [Créer une page pour afficher un animal](#créer-une-page-pour-afficher-un-animal)
+  - [Créer une page pour ajouter un animal](#créer-une-page-pour-ajouter-un-animal)
+  - [Créer une page pour mettre à jour un animal](#créer-une-page-pour-mettre-à-jour-un-animal)
+  - [Mettre à jour la page d'accueil](#mettre-à-jour-la-page-daccueil)
 - [Solution](#solution)
 - [Conclusion](#conclusion)
 - [Aller plus loin](#aller-plus-loin)
@@ -31,6 +36,7 @@ théoriques vus dans le cours _[Cours 02 - Fonctions](../01-theorie/README.md)_.
 - Mettre en place une structure de projet PHP
 - Créer des fonctions PHP pour visualiser, ajouter, modifier et supprimer des
   animaux de compagnie de façon fictive
+- Créer les pages HTML de base pour gérer les animaux de compagnie
 
 ## Création du ficher `functions.php`
 
@@ -190,6 +196,148 @@ Updating pet with name 'Rex' to be 9 years old.
 Removing pet with name 'Tweety'.
 ```
 
+## Créer les pages de base pour gérer les animaux de compagnie
+
+Maintenant que vous avez créé des fonctions pour manipuler des animaux de
+compagnie de façon fictive, vous pouvez créer des pages pour gérer ces animaux.
+
+Pour le moment, ces pages ne seront que des squelettes pour les futures
+implémentations.
+
+### Créer une page pour afficher un animal
+
+Créez un fichier `view.php` dans le dossier `mini-projet`. Cette page permettra
+de visualiser un animal de compagnie.
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>
+			Visualise un animal de compagnie | Gestionnaire d'animaux de compagnie
+		</title>
+	</head>
+
+	<body>
+		<h1>Visualise un animal de compagnie</h1>
+		<p><a href="index.php">Retour à l'accueil</a></p>
+		<p>Utilise cette page pour visualiser un animal de compagnie.</p>
+	</body>
+</html>
+```
+
+Validez que la page `view.php` s'affiche correctement dans votre navigateur en
+allant à l'adresse <http://localhost/progserv1/mini-projet/view.php>.
+
+### Créer une page pour ajouter un animal
+
+Créez un fichier `create.php` dans le dossier `mini-projet`. Cette page
+permettra d'ajouter un nouvel animal de compagnie.
+
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Crée un nouvel animal de compagnie | Gestionnaire d'animaux de compagnie
+		</title>
+	</head>
+
+	<body>
+		<h1>Crée un nouvel animal de compagnie</h1>
+		<p><a href="index.php">Retour à l'accueil</a></p>
+		<p>Utilise cette page pour créer un nouvel animal de compagnie.</p>
+	</body>
+</html>
+```
+
+Validez que la page `create.php` s'affiche correctement dans votre navigateur en
+allant à l'adresse <http://localhost/progserv1/mini-projet/create.php>.
+
+### Créer une page pour mettre à jour un animal
+
+Créez un fichier `edit.php` dans le dossier `mini-projet`. Cette page permettra
+de mettre à jour un animal de compagnie.
+
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Édite un animal de compagnie | Gestionnaire d'animaux de compagnie
+		</title>
+	</head>
+
+	<body>
+		<h1>Édite un animal de compagnie</h1>
+		<p><a href="index.php">Retour à l'accueil</a></p>
+		<p>Utilise cette page pour éditer un animal de compagnie.</p>
+	</body>
+</html>
+```
+
+Validez que la page `edit.php` s'affiche correctement dans votre navigateur en
+allant à l'adresse <http://localhost/progserv1/mini-projet/edit.php>.
+
+### Mettre à jour la page d'accueil
+
+Modifiez la page d'accueil `index.php` pour y ajouter du contenu HTML pour
+visualiser tous les animaux de compagnie. Le contenu de cette page devrait
+ressembler à ceci :
+
+```php
+<?php
+require 'functions.php';
+
+// Crée Caramel, un chat de 3 ans
+addPet("Caramel", 3);
+
+// Crée Rex, un chien de 8 ans
+addPet("Rex", 8);
+
+// Crée Tweety, un oiseau de 1 an
+addPet("Tweety", 1);
+
+// Crée Godzilla, un lézard de 4 ans
+addPet("Godzilla", 4);
+
+// Récupère tous les animaux
+getPets();
+
+// Récupère l'animal nommé Rex
+getPet("Rex");
+
+// Met à jour l'âge de Rex à 9 ans
+updatePet("Rex", 9);
+
+// Supprime Tweety... :(
+removePet("Tweety");
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Page d'accueil | Gestionnaire d'animaux de compagnie</title>
+</head>
+
+<body>
+    <h1>Page d'accueil du gestionnaire d'animaux de compagnie</h1>
+    <p>Bienvenue sur la page d'accueil du gestionnaire d'animaux de compagnie !</p>
+    <p>Utilise cette page pour visualiser et gérer tous les animaux de compagnie.</p>
+</body>
+
+</html>
+```
+
+Validez que la page `index.php` s'affiche correctement dans votre navigateur en
+allant à l'adresse <http://localhost/progserv1/mini-projet/index.php>.
+
+Pour le moment, cette page est un mélange entre du code PHP brut pour valider le
+fonctionnement des fonctions et du HTML pour afficher le contenu de la page.
+Dans les prochaines sessions, nous verrons comment utiliser les fonctions pour
+manipuler des animaux de compagnie de façon plus réaliste.
+
 ## Solution
 
 Vous pouvez trouver la solution du mini-projet PHP à l'adresse suivante :
@@ -215,3 +363,7 @@ loin. Vous pouvez la sauter si vous n'avez pas de temps._
 
 - Comment pourriez-vous modifier les fonctions pour qu'elles retournent des
   valeurs plutôt que d'afficher des messages ?
+
+```
+
+```
