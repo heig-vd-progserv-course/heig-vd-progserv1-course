@@ -21,10 +21,10 @@ théoriques vus dans le cours _[Cours 02 - Fonctions](../01-theorie/README.md)_.
 - [Création du ficher `functions.php`](#création-du-ficher-functionsphp)
 - [Importer et utiliser les fonctions dans le fichier `index.php`](#importer-et-utiliser-les-fonctions-dans-le-fichier-indexphp)
 - [Créer les pages de base pour gérer les animaux de compagnie](#créer-les-pages-de-base-pour-gérer-les-animaux-de-compagnie)
-  - [Créer une page pour afficher un animal](#créer-une-page-pour-afficher-un-animal)
-  - [Créer une page pour ajouter un animal](#créer-une-page-pour-ajouter-un-animal)
-  - [Créer une page pour mettre à jour un animal](#créer-une-page-pour-mettre-à-jour-un-animal)
+  - [Créer une page pour visualiser et modifier un animal de compagnie](#créer-une-page-pour-visualiser-et-modifier-un-animal-de-compagnie)
+  - [Créer une page pour ajouter un animal de compagnie](#créer-une-page-pour-ajouter-un-animal-de-compagnie)
   - [Mettre à jour la page d'accueil](#mettre-à-jour-la-page-daccueil)
+- [Valider la structure de votre projet](#valider-la-structure-de-votre-projet)
 - [Solution](#solution)
 - [Conclusion](#conclusion)
 - [Aller plus loin](#aller-plus-loin)
@@ -204,80 +204,56 @@ compagnie de façon fictive, vous pouvez créer des pages pour gérer ces animau
 Pour le moment, ces pages ne seront que des squelettes pour les futures
 implémentations.
 
-### Créer une page pour afficher un animal
+### Créer une page pour visualiser et modifier un animal de compagnie
 
 Créez un fichier `view.php` dans le dossier `mini-projet`. Cette page permettra
-de visualiser un animal de compagnie.
+de visualiser et de mettre à jour un animal de compagnie.
 
-```html
+```php
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<title>
-			Visualise un animal de compagnie | Gestionnaire d'animaux de compagnie
-		</title>
-	</head>
 
-	<body>
-		<h1>Visualise un animal de compagnie</h1>
-		<p><a href="index.php">Retour à l'accueil</a></p>
-		<p>Utilise cette page pour visualiser un animal de compagnie.</p>
-	</body>
+<head>
+    <title>Visualise et modifie un animal de compagnie | Gestionnaire d'animaux de compagnie</title>
+</head>
+
+<body>
+    <h1>Visualise et modifie un animal de compagnie</h1>
+    <p><a href="index.php">Retour à l'accueil</a></p>
+    <p>Utilise cette page pour visualiser et modifier un animal de compagnie.</p>
+</body>
+
 </html>
 ```
 
 Validez que la page `view.php` s'affiche correctement dans votre navigateur en
 allant à l'adresse <http://localhost/progserv1/mini-projet/view.php>.
 
-### Créer une page pour ajouter un animal
+### Créer une page pour ajouter un animal de compagnie
 
 Créez un fichier `create.php` dans le dossier `mini-projet`. Cette page
 permettra d'ajouter un nouvel animal de compagnie.
 
-```html
+```php
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>
-			Crée un nouvel animal de compagnie | Gestionnaire d'animaux de compagnie
-		</title>
-	</head>
 
-	<body>
-		<h1>Crée un nouvel animal de compagnie</h1>
-		<p><a href="index.php">Retour à l'accueil</a></p>
-		<p>Utilise cette page pour créer un nouvel animal de compagnie.</p>
-	</body>
+<head>
+    <title>Crée un nouvel animal de compagnie | Gestionnaire d'animaux de compagnie</title>
+</head>
+
+<body>
+    <h1>Crée un nouvel animal de compagnie</h1>
+    <p><a href="index.php">Retour à l'accueil</a></p>
+    <p>Utilise cette page pour créer un nouvel animal de compagnie.</p>
+</body>
+
 </html>
+
 ```
 
 Validez que la page `create.php` s'affiche correctement dans votre navigateur en
 allant à l'adresse <http://localhost/progserv1/mini-projet/create.php>.
-
-### Créer une page pour mettre à jour un animal
-
-Créez un fichier `edit.php` dans le dossier `mini-projet`. Cette page permettra
-de mettre à jour un animal de compagnie.
-
-```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>
-			Édite un animal de compagnie | Gestionnaire d'animaux de compagnie
-		</title>
-	</head>
-
-	<body>
-		<h1>Édite un animal de compagnie</h1>
-		<p><a href="index.php">Retour à l'accueil</a></p>
-		<p>Utilise cette page pour éditer un animal de compagnie.</p>
-	</body>
-</html>
-```
-
-Validez que la page `edit.php` s'affiche correctement dans votre navigateur en
-allant à l'adresse <http://localhost/progserv1/mini-projet/edit.php>.
 
 ### Mettre à jour la page d'accueil
 
@@ -337,6 +313,23 @@ Pour le moment, cette page est un mélange entre du code PHP brut pour valider l
 fonctionnement des fonctions et du HTML pour afficher le contenu de la page.
 Dans les prochaines sessions, nous verrons comment utiliser les fonctions pour
 manipuler des animaux de compagnie de façon plus réaliste.
+
+## Valider la structure de votre projet
+
+A la fin de cette session, votre structure de projet devrait ressembler à ceci :
+
+```text
+progserv1/
+├── exercices/
+│   └── index.php
+├── mini-projet/
+│   ├── create.php
+│   ├── functions.php
+│   ├── index.php
+│   └── view.php
+├── index.php
+└── phpinfo.php
+```
 
 ## Solution
 
