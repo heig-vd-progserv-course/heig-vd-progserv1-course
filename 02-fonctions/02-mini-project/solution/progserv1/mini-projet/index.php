@@ -24,3 +24,19 @@ updatePet("Rex", 9);
 
 // Supprime Tweety... :(
 removePet("Tweety");
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Page d'accueil | Gestionnaire d'animaux de compagnie</title>
+</head>
+
+<body>
+    <h1>Page d'accueil du gestionnaire d'animaux de compagnie</h1>
+    <p>Bienvenue sur la page d'accueil du gestionnaire d'animaux de compagnie !</p>
+    <p>Utilise cette page pour visualiser et gérer tous les animaux de compagnie.</p>
+</body>
+
+</html>

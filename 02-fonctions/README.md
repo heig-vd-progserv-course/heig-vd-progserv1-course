@@ -14,22 +14,23 @@
 
 À l'issue de ce cours, les personnes qui étudient devraient être capables de :
 
-- Savoir décrire ce qu'est une fonction en programmation
-- Savoir déclarer une fonction en PHP
-- Savoir appeler une fonction en PHP
-- Savoir passer des paramètres à une fonction en PHP
-- Savoir utiliser une valeur de retour
-- Comprendre ce qu'est une portée de variable
-- Savoir utiliser des variables globales
-- Savoir où trouver les fonctions prédéfinies en PHP
-- Savoir utiliser des fonctions prédéfinies en PHP
-- Savoir réutiliser du code avec des fonctions
+- Décrire ce qu'est une fonction en programmation
+- Déclarer une fonction en PHP
+- Appeler une fonction en PHP
+- Passer des paramètres à une fonction en PHP
+- Utiliser une valeur de retour
+- Expliquer ce qu'est une portée de variable
+- Utiliser des variables globales
+- Savoir où les fonctions prédéfinies en PHP
+- Utiliser des fonctions prédéfinies en PHP
+- Réutiliser du code avec des fonctions
 
 De plus, les personnes qui étudient devraient avoir pu :
 
 - Mettre en place une structure de projet PHP
 - Créer des fonctions PHP pour visualiser, ajouter, modifier et supprimer des
   animaux de compagnie de façon fictive
+- Créer les pages HTML de base pour gérer les animaux de compagnie
 
 ## Méthodes d'enseignement et d'apprentissage
 

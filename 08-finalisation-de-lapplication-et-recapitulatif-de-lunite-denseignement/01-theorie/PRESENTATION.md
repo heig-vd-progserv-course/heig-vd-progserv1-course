@@ -13,6 +13,7 @@ url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-fina
 header: "**Cours 08 - Finalisation de l'application et récapitulatif de l'unité d'enseignement**"
 footer: "**HEIG-VD** - ProgServ1 Course 2024-2025 - CC BY-SA 4.0"
 headingDivider: 6
+math: mathjax
 -->
 
 # Cours 08 - Finalisation de l'application et récapitulatif de l'unité d'enseignement
