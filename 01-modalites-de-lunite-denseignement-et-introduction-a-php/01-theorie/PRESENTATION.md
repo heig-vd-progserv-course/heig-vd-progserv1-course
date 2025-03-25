@@ -13,6 +13,7 @@ url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-moda
 header: "**Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP**"
 footer: "**HEIG-VD** - ProgServ1 Course 2024-2025 - CC BY-SA 4.0"
 headingDivider: 6
+math: mathjax
 -->
 
 # Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP

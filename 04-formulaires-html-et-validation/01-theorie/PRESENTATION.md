@@ -13,6 +13,7 @@ url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/04-form
 header: "**Cours 04 - Formulaires HTML et validation**"
 footer: "**HEIG-VD** - ProgServ1 Course 2024-2025 - CC BY-SA 4.0"
 headingDivider: 6
+math: mathjax
 -->
 
 # Cours 04 - Formulaires HTML et validation

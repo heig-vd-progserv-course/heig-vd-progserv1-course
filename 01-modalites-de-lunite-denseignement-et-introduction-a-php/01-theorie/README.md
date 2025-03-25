@@ -39,7 +39,7 @@ d'enseignement et une introduction à PHP. Vous apprendrez les bases de PHP, y
 compris la syntaxe, les variables, les constantes, les opérateurs et les
 structures de contrôle afin de vous préparer à la suite du cours.
 
-De façon plus précise, les objectifs de ce cours sont les suivants :
+De façon plus précise, les personnes qui étudient devraient être capables de :
 
 - Lister les objectifs de l'unité d'enseignement
 - Lister les modalités d'organisation de l'unité d'enseignement
