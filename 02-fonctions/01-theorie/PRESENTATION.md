@@ -97,7 +97,7 @@ consultez le [support de cours][course-material]._
 ```php
 <?php
 function hello() {
-    echo "Hello, world!";
+    echo "Hello, world!<br>";
 }
 ```
 
@@ -127,9 +127,9 @@ function hello() {
     echo "Hello, world!<br>";
 }
 
-hello();
-hello();
-hello();
+hello(); // Affiche "Hello, world!"
+hello(); // Affiche "Hello, world!"
+hello(); // Affiche "Hello, world!"
 ```
 
 ## Appeler une fonction en PHP (3/3)
@@ -142,9 +142,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        hello();
-        hello();
-        hello();
+        hello(); // Affiche "Hello, world!"
+        hello(); // Affiche "Hello, world!"
+        hello(); // Affiche "Hello, world!"
     }
 }
 ```
@@ -446,7 +446,6 @@ public class Main {
 ### Fonctions sur les chaînes de caractères (2/2)
 
 ```php
-
 $result = strtoupper("hello, world!");
 
 echo $result; // Affiche "HELLO, WORLD!"
@@ -533,7 +532,7 @@ public class Main {
 - Les fonctions permettent de réutiliser du code
 - Le code est plus facile à lire et à maintenir
 - Il est possible d'importer des fonctions définies dans d'autres fichiers avec
-  la directive `require_once`
+  la directive `require`
 
 ![bg right:40%][illustration-reutiliser-du-code-avec-des-fonctions]
 
@@ -550,7 +549,7 @@ function hello($name) {
 ```php
 <?php
 // Fichier `index.php`
-require_once "functions.php"; // On inclut le fichier
+require "functions.php"; // On inclut le fichier
 
 // La fonction `hello` est définie dans le fichier importé
 // et peut être utilisée ici
@@ -562,7 +561,7 @@ hello("Alice");
 - Il est possible d'importer des fichiers avec `include` et `require`
 - `include` : si le fichier n'est pas trouvé, un avertissement est émis
 - `require` : si le fichier n'est pas trouvé, une erreur fatale est émise
-- Préférez `require`
+- Nous conseillons de toujours utiliser `require`
 
 ![bg right:40%][illustration-difference-entre-include-et-require]
 
@@ -581,7 +580,7 @@ hello("Alice");
 
 Est-ce que vous avez des questions ?
 
-## À vous de jouer !
+## À vous de jouer
 
 - (Re)lire le [support de cours][course-material].
 - Réaliser le [mini-projet][mini-project].
