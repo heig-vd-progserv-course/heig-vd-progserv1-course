@@ -67,7 +67,7 @@ consultez le [support de cours][course-material]._
 
 Est-ce que vous avez des questions ?
 
-## À vous de jouer
+## À vous de jouer !
 
 - (Re)lire le [support de cours][course-material].
 - Réaliser le [mini-projet][mini-project].
