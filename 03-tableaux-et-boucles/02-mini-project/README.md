@@ -53,15 +53,15 @@ informations sur vos animaux de compagnie. Chaque animal doit avoir un nom et un
 âge. Dans de futures sessions, vous pourrez ajouter d'autres informations, comme
 le type d'animal ou la couleur.
 
+Vous pouvez vous aider de la théorie (voir le
+[support de cours](../01-theorie/README.md)) pour vous aider à comprendre
+comment créer le tableau associatif contenant les animaux de compagnie.
+
 ### Création du tableau dans le fichier `functions.php`
 
 Dans le fichier `functions.php`, vous allez créer un tableau associatif pour
 stocker les informations sur vos animaux de compagnie. Ce tableau sera
 accessible depuis n'importe quelle fonction de votre projet.
-
-En vous aidant de la théorie (voir le
-[support de cours](../01-theorie/README.md)), créez un tableau associatif pour
-stocker les informations sur vos animaux de compagnie.
 
 Ce tableau aura la structure suivante :
 

@@ -17,7 +17,7 @@ _[Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP](../01
 ## Table des matières
 
 - [Ressources](#ressources)
-- [Tables des matières](#table-des-matières)
+- [Table des matières](#table-des-matières)
 - [Introduction à votre première session de mini-projet](#introduction-à-votre-première-session-de-mini-projet)
 - [Présentation du mini-projet](#présentation-du-mini-projet)
 - [Objectifs de la session](#objectifs-de-la-session)
