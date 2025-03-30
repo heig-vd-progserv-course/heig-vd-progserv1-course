@@ -147,8 +147,6 @@ updatePet("Rex", 9);
 removePet("Tweety");
 ```
 
-</details>
-
 Votre fichier `index.php` devrait ressembler à ceci :
 
 ```php
@@ -179,6 +177,8 @@ updatePet("Rex", 9);
 // Supprime Tweety... :(
 removePet("Tweety");
 ```
+
+</details>
 
 Ouvrez votre navigateur et allez à l'adresse
 <http://localhost/progserv1/mini-projet/index.php>.
@@ -356,7 +356,3 @@ loin. Vous pouvez la sauter si vous n'avez pas de temps._
 
 - Comment pourriez-vous modifier les fonctions pour qu'elles retournent des
   valeurs plutôt que d'afficher des messages ?
-
-```
-
-```

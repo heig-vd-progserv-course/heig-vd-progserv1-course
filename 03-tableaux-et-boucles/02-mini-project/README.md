@@ -71,7 +71,8 @@ Ce tableau aura la structure suivante :
   - `nom` : le nom de l'animal
   - `age` : l'âge de l'animal
 
-Vous pouvez reprendre les noms et âges des animaux suivants :
+Vous pouvez reprendre les noms et âges des animaux suivants, issus du cours
+précédent :
 
 - Caramel : 3 ans
 - Rex : 8 ans
@@ -103,8 +104,6 @@ $pets = [
     ]
 ];
 ```
-
-</details>
 
 Votre fichier `functions.php` devrait ressembler à ceci :
 
@@ -153,6 +152,14 @@ function removePet($name) {
 }
 ```
 
+</details>
+
+Vous remarquerez que nous avons utilisé des clés pour chaque animal (par
+exemple, `Caramel`, `Rex`, etc.). Ces clés sont utilisées pour identifier chaque
+animal dans le tableau associatif. Vous pouvez utiliser n'importe quel nom pour
+les clés. Dans le futur, ces clés seront remplacées par des identifiants uniques
+pour chaque animal.
+
 ### Récupération des animaux de compagnie dans le fichier `functions.php`
 
 Maintenant que nous avons un tableau associatif pour stocker les animaux de
@@ -177,8 +184,6 @@ function getPets() {
     return $pets;
 }
 ```
-
-</details>
 
 Votre fichier `functions.php` devrait ressembler à ceci :
 
@@ -232,6 +237,14 @@ function removePet($name) {
 }
 ```
 
+</details>
+
+Vous remarquerez que nous avons utilisé le mot-clé `global` pour accéder à la
+variable `$pets`. Cela permet d'accéder à la variable `$pets` définie en dehors
+de la fonction `getPets()`. Bien que ce ne soit pas une bonne pratique de
+programmer, c'est nécessaire ici pour accéder à la variable `$pets` dans la
+fonction `getPets()`.
+
 ### Récupération des animaux de compagnie dans le fichier `index.php`
 
 Maintenant que nous avons une fonction pour récupérer les animaux de compagnie,
@@ -256,8 +269,6 @@ $pets = getPets();
 // Affiche tous les animaux
 print_r($pets);
 ```
-
-</details>
 
 Votre fichier `index.php` devrait ressembler à ceci :
 
@@ -308,6 +319,8 @@ removePet("Tweety");
 
 </html>
 ```
+
+</details>
 
 Si vous accédez à la page d'accueil de votre projet dans votre navigateur
 (<http://localhost/progserv1/mini-projet/index.php>), vous devriez voir le
@@ -366,8 +379,6 @@ les valeurs des animaux de compagnie. Cette syntaxe est équivalente à
 Il s'agit simplement d'une syntaxe plus courte pour afficher une valeur. Vous
 pouvez en apprendre plus sur cette syntaxe ici :
 <https://www.php.net/manual/fr/function.echo.php#language.basic.short-tags>.
-
-</details>
 
 Votre fichier `index.php` devrait ressembler à ceci :
 
@@ -437,6 +448,8 @@ removePet("Tweety");
 
 </html>
 ```
+
+</details>
 
 Si vous accédez à la page d'accueil de votre projet dans votre navigateur
 (<http://localhost/progserv1/mini-projet/index.php>), vous devriez voir un
@@ -611,8 +624,6 @@ function addPet($name, $age) {
 }
 ```
 
-</details>
-
 Votre fichier `functions.php` devrait ressembler à ceci :
 
 ```php
@@ -738,6 +749,8 @@ removePet("Tweety");
 </html>
 ```
 
+</details>
+
 Si vous accédez à la page d'accueil de votre projet dans votre navigateur
 (<http://localhost/progserv1/mini-projet/index.php>), vous devriez voir que les
 messages de création de vos animaux de compagnie ne sont plus affichés mais que
@@ -779,8 +792,6 @@ function getPet($name) {
     }
 }
 ```
-
-</details>
 
 Votre fichier `functions.php` devrait ressembler à ceci :
 
@@ -842,6 +853,8 @@ function removePet($name) {
 }
 ```
 
+</details>
+
 ### Mise à jour d'un animal de compagnie
 
 Dans la fonction `updatePet()`, vous devez mettre à jour l'âge d'un animal de
@@ -886,8 +899,6 @@ function updatePet($name, $age) {
     }
 }
 ```
-
-</details>
 
 Votre fichier `functions.php` devrait ressembler à ceci :
 
@@ -969,6 +980,8 @@ function removePet($name) {
 }
 ```
 
+</details>
+
 ### Suppression d'un animal de compagnie
 
 Similairement à la fonction `updatePet()`, vous devez supprimer un animal de
@@ -1008,8 +1021,6 @@ function removePet($name) {
     }
 }
 ```
-
-</details>
 
 Votre fichier `functions.php` devrait ressembler à ceci :
 
@@ -1104,6 +1115,8 @@ function removePet($name) {
     }
 }
 ```
+
+</details>
 
 ## Validation du fonctionnement de l'application
 
@@ -1283,7 +1296,8 @@ tableau associatif.
 
 Ces fonctions permettent de gérer les animaux de compagnie dans l'application et
 de les afficher dans un tableau HTML et définissent la base de notre application
-de gestion d'animaux de compagnie.
+de gestion d'animaux de compagnie, mettant en avant la force de PHP pour
+mélanger le code PHP et HTML.
 
 Dans de futures sessions, vous apprendrez à utiliser ces fonctions avec des
 formulaires HTML et à interagir avec une base de données pour stocker les
