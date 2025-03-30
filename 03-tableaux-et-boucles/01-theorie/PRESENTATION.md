@@ -567,9 +567,6 @@ vous entraider si vous avez des difficultés !**
 - [Illustration][illustration-les-boucles] par
   [Justin](https://unsplash.com/@heyimsolacee) sur
   [Unsplash](https://unsplash.com/photos/silhouette-of-ferris-wheel-during-sunset-6LO03psPJnE)
-
----
-
 - [Illustration][illustration-a-vous-de-jouer] par
   [Nikita Kachanovsky](https://unsplash.com/@nkachanovskyyy) sur
   [Unsplash](https://unsplash.com/photos/white-sony-ps4-dualshock-controller-over-persons-palm-FJFPuE1MAOM)
@@ -605,8 +602,5 @@ vous entraider si vous avez des difficultés !**
 	https://images.unsplash.com/photo-1462331940025-496dfbfc7564?fit=crop&h=720
 [illustration-les-boucles]:
 	https://images.unsplash.com/photo-1605557254219-227294529bf0?fit=crop&h=720
-
----
-
 [illustration-a-vous-de-jouer]:
 	https://images.unsplash.com/photo-1509198397868-475647b2a1e5?fit=crop&h=720
