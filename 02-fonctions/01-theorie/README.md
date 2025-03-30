@@ -10,10 +10,10 @@
   [Solution](../02-mini-project/solution/)
 - Exercices : [Énoncés et solutions](../03-exercices/README.md)
 
-## Tables des matières
+## Table des matières
 
 - [Ressources](#ressources)
-- [Tables des matières](#tables-des-matières)
+- [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
 - [Qu'est-ce qu'une fonction ?](#quest-ce-quune-fonction-)
 - [Déclarer une fonction en PHP](#déclarer-une-fonction-en-php)
@@ -562,7 +562,7 @@ echo $x; // Affiche 1764
 public class Main {
     public static int x = 42;
 
-    public static int square() {
+    public static void square() {
         x = x * x;
     }
 

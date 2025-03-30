@@ -10,10 +10,10 @@
   [Solution](../02-mini-project/solution/)
 - Exercices : [Énoncés et solutions](../03-exercices/README.md)
 
-## Tables des matières
+## Table des matières
 
 - [Ressources](#ressources)
-- [Tables des matières](#tables-des-matières)
+- [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
 - [Les tableaux](#les-tableaux)
   - [Tableaux indexés](#tableaux-indexés)
@@ -34,11 +34,37 @@
 
 ## Objectifs
 
-TODO
+Les tableaux permettent de stocker plusieurs valeurs dans une seule variable.
 
-De façon plus précise, les objectifs de ce cours sont les suivants :
+En utilisant les tableaux, il nous est possible de stocker des collections de
+données, comme une liste de noms, une liste de nombres, tout comme une liste de
+tableaux.
 
-- TODO
+Ces tableaux permettent de stocker des données structurées et d'y accéder de
+manière plus intuitive.
+
+Les boucles permettent de parcourir ces tableaux ou ces collections de données.
+
+En utilisant les boucles, il nous est possible de parcourir un tableau et
+d'afficher chaque élément du tableau et de les afficher.
+
+Les tableaux et les boucles sont des concepts fondamentaux en programmation et
+sont utilisés dans de nombreux programmes et applications, notamment pour
+stocker et parcourir une collection d'animaux de compagnie.
+
+De façon plus précise, les personnes qui étudient devraient être capables de :
+
+- Décrire les tableaux et leurs caractéristiques
+- Décrire la différence entre les tableaux indexés, les tableaux associatifs et
+  les tableaux multidimensionnels
+- Utiliser les tableaux pour stocker des collections de données
+- Utiliser les fonctions de base pour travailler avec des tableaux
+- Utiliser les fonctions `print()` et `print_r()` pour afficher des informations
+  sur les tableaux
+- Décrire ce qu'est une boucle et comment elle fonctionne
+- Décrire la différence entre les boucles `for`, `while`, `do...while` et
+  `foreach`
+- Utiliser les boucles pour parcourir des tableaux ou des collections de données
 
 ## Les tableaux
 
@@ -65,11 +91,29 @@ de tableau indexé :
 <?php
 $fruits = ['apple', 'banana', 'orange', 'kiwi'];
 
-echo $fruits[0]; // Affiche 'apple'
-echo $fruits[1]; // Affiche 'banana'
-echo $fruits[2]; // Affiche 'orange'
-echo $fruits[3]; // Affiche 'kiwi'
+echo $fruits[0] . "<br>"; // Affiche 'apple'
+echo $fruits[1] . "<br>"; // Affiche 'banana'
+echo $fruits[2] . "<br>"; // Affiche 'orange'
+echo $fruits[3] . "<br>"; // Affiche 'kiwi'
 ```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        String[] fruits = {"apple", "banana", "orange", "kiwi"};
+
+        System.out.println(fruits[0]); // Affiche 'apple'
+        System.out.println(fruits[1]); // Affiche 'banana'
+        System.out.println(fruits[2]); // Affiche 'orange'
+        System.out.println(fruits[3]); // Affiche 'kiwi'
+    }
+}
+```
+
+</details>
 
 Dans cet exemple, nous avons un tableau `$fruits` qui contient plusieurs fruits.
 
@@ -85,37 +129,63 @@ caractères, des nombres, des booléens, etc., comme le montre l'exemple suivant
 <?php
 $mixed = ['apple', 123, true, 3.14];
 
-echo $mixed[0]; // Affiche 'apple'
-echo $mixed[1]; // Affiche 123
-echo $mixed[2]; // Affiche true
-echo $mixed[3]; // Affiche 3.14
+echo $mixed[0] . "<br>"; // Affiche 'apple'
+echo $mixed[1] . "<br>"; // Affiche 123
+echo $mixed[2] . "<br>"; // Affiche true
+echo $mixed[3] . "<br>"; // Affiche 3.14
 ```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+Il n'est pas possible de créer un tableau contenant des types différents en
+Java.
+
+</details>
+
+Dans cet exemple, nous avons un tableau `$mixed` qui contient des valeurs de
+différents types. Chaque valeur est stockée à un index numérique, comme dans le
+précédent exemple.
 
 ### Tableaux associatifs
 
 Un tableau associatif est un tableau qui stocke des valeurs en utilisant des
-clés (ou des noms) pour accéder à ces valeurs. Voici un exemple de tableau
-associatif :
+chaînes de caractères, appelées _clés_, pour accéder à ces valeurs. Voici un
+exemple de tableau associatif :
 
 ```php
 <?php
 $person = [
+    // Les caractères `=>` sont utilisés pour associer
+	// une clé à une valeur
     'name' => 'John Doe',
     'age' => 30,
     'city' => 'New York',
 ];
 
-echo $person['name']; // Affiche 'John Doe'
-echo $person['age']; // Affiche 30
-echo $person['city']; // Affiche 'New York'
+echo $person['name'] . "<br>"; // Affiche 'John Doe'
+echo $person['age'] . "<br>"; // Affiche 30
+echo $person['city'] . "<br>"; // Affiche 'New York'
 ```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+Il n'est pas possible de créer un tableau associatif en Java, mais nous pouvons
+utiliser une `HashMap` pour obtenir un résultat similaire (non décrit ici).
+
+</details>
 
 Dans cet exemple, nous avons un tableau `$person` qui contient des informations
 sur une personne.
 
-Chaque information est stockée avec une clé (ou un nom) qui permet d'accéder à
-cette information. Pour accéder à une information du tableau, nous utilisons sa
-clé entre crochets (`[]`).
+Chaque information est stockée avec une clé qui permet d'accéder à cette
+information. Les caractères `=>` sont utilisés pour associer une clé à une
+valeur. Par exemple, la clé `'name'` est associée à la valeur `'John Doe'`.
+
+Pour accéder à une information du tableau, nous utilisons sa clé entre crochets
+(`[]`). Par exemple, pour accéder au nom de la personne, nous utilisons
+`$person['name']`.
 
 Les tableaux associatifs sont très utiles pour stocker des données structurées
 et pour accéder à ces données de manière plus intuitive.
@@ -138,10 +208,31 @@ $matrix = [
     [7, 8, 9],
 ];
 
-echo $matrix[0][0]; // Affiche 1
-echo $matrix[1][1]; // Affiche 5
-echo $matrix[2][2]; // Affiche 9
+echo $matrix[0][0] . "<br>"; // Affiche 1
+echo $matrix[1][1] . "<br>"; // Affiche 5
+echo $matrix[2][2] . "<br>"; // Affiche 9
 ```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        System.out.println(matrix[0][0]); // Affiche 1
+        System.out.println(matrix[1][1]); // Affiche 5
+        System.out.println(matrix[2][2]); // Affiche 9
+    }
+}
+```
+
+</details>
 
 Dans cet exemple, nous avons un tableau `$matrix` qui contient d'autres tableaux
 à l'intérieur. Chaque tableau interne est un tableau indexé qui stocke des
@@ -173,10 +264,18 @@ $users = [
     ],
 ];
 
-echo $users['john']['name']; // Affiche 'John Doe'
-echo $users['jane']['age']; // Affiche 25
-echo $users['john']['city']; // Affiche 'New York'
+echo $users['john']['name'] . "<br>"; // Affiche 'John Doe'
+echo $users['jane']['age'] . "<br>"; // Affiche 25
+echo $users['john']['city'] . "<br>"; // Affiche 'New York'
 ```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+Il n'est pas possible de créer un tableau associatif en Java, mais nous pouvons
+utiliser une `HashMap` pour obtenir un résultat similaire (non décrit ici).
+
+</details>
 
 Dans cet exemple, nous avons un tableau `$users` qui contient des informations
 sur plusieurs utilisateurs. Chaque utilisateur est stocké dans un tableau
@@ -201,19 +300,34 @@ collection de données en utilisant un compteur. Voici un exemple de boucle `for
 
 ```php
 <?php
-
+// Affiche les nombres de 0 à 9
 for ($i = 0; $i < 10; $i++) {
     echo "$i<br>";
 }
 ```
 
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+            System.out.println(i);
+        }
+    }
+}
+```
+
+</details>
+
 Dans cet exemple, nous avons une boucle `for` qui affiche les nombres de 0 à 9.
 
 La boucle `for` est composée de trois parties :
 
-- L'initialisation du compteur (`$i = 0`)
-- La condition d'arrêt (`$i < 10`)
-- L'incrémentation du compteur (`$i++`)
+1. L'initialisation du compteur (`$i = 0`)
+2. La condition d'arrêt (`$i < 10`)
+3. L'incrémentation du compteur (`$i++`)
 
 Si `$i` est inférieur à 10, la boucle continue. Sinon, la boucle s'arrête.
 
@@ -233,11 +347,30 @@ collection de données en utilisant une condition. Voici un exemple de boucle
 <?php
 $i = 0;
 
+// Affiche les nombres de 0 à 9
 while ($i < 10) {
     echo "$i<br>";
     $i++;
 }
 ```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        int i = 0;
+
+        while (i < 10) {
+            System.out.println(i);
+            i++;
+        }
+    }
+}
+```
+
+</details>
 
 Dans cet exemple, nous avons une boucle `while` qui affiche les nombres de 0
 à 9. Dans ce cas, la boucle n'est pas très différente de la boucle `for`.
@@ -262,6 +395,28 @@ while ($weather == "cloudy") {
 echo "The weather in Yverdon-les-Bains is *finally* different than cloudy! Yay!";
 ```
 
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        String weather = "cloudy";
+
+        while (weather.equals("cloudy")) {
+            System.out.println("It's still cloudy...");
+
+            // Ici, on imagine un scénario où notre code va interagir avec un site web externe qui retourne la météo pour mettre à jour la variable `weather`
+            weather = getWeather("Yverdon-les-Bains");
+        }
+
+        System.out.println("The weather in Yverdon-les-Bains is *finally* different than cloudy! Yay!");
+    }
+}
+```
+
+</details>
+
 Dans cet exemple, nous avons une boucle `while` qui vérifie si le temps est
 nuageux. Tant que le temps est nuageux, la boucle continue. Une fois que le
 temps n'est plus nuageux, la boucle s'arrête.
@@ -269,26 +424,50 @@ temps n'est plus nuageux, la boucle s'arrête.
 ### Boucle `do...while`
 
 La boucle `do...while` est une boucle similaire à la boucle `while`, mais avec
-une différence importante : le code à l'intérieur de la boucle est exécuté au
-moins une fois, même si la condition est fausse. Voici un exemple de boucle
-`do...while` :
+une différence importante : la condition est vérifiée après l'exécution du code
+à l'intérieur de la boucle, à l'inverse de la boucle `while` qui vérifie la
+condition avant d'exécuter le code à l'intérieur de la boucle. Cela signifie que
+le code à l'intérieur de la boucle est exécuté au moins une fois, même si la
+condition est fausse. Voici unVoici un exemple de boucle `do...while` :
 
 ```php
 <?php
-$userInput = "";
+$randomNumber = null;
 
 do {
-    echo "Please enter your name: ";
-    $userInput = readline();
-} while ($userInput == "");
+    // La fonction `rand()` génère un nombre aléatoire entre 1 et 10
+    $randomNumber = rand(1, 10);
+    echo "The random number is $randomNumber<br>";
+} while ($randomNumber < 8);
 ```
 
-Dans cet exemple, nous avons une boucle `do...while` qui demande à l'utilisateur
-de saisir son nom. Même si l'utilisateur ne saisit rien, le message sera affiché
-au moins une fois.
+<details>
+<summary>Afficher l'équivalent en Java</summary>
 
-Une fois que son nom a été saisi, la condition est vérifiée. Si le nom est vide,
-la boucle continue. Sinon, la boucle s'arrête.
+```java
+public class Main {
+    public static void main(String[] args) {
+        int randomNumber = null;
+
+        do {
+            // La fonction `Math.random()` génère un nombre aléatoire
+            // entre 1 et 10
+            randomNumber = (int) (Math.random() * 10) + 1;
+            System.out.println("The random number is " + randomNumber);
+        } while (randomNumber < 5);
+    }
+}
+```
+
+</details>
+
+Dans cet exemple, nous avons une boucle `do...while` qui génère un nombre
+aléatoire entre 1 et 10. La boucle continue tant que le nombre aléatoire est
+inférieur à 5. La boucle s'arrête dès que le nombre aléatoire est supérieur ou
+égal à 5.
+
+La boucle `do...while` est utile lorsque vous souhaitez exécuter le code à
+l'intérieur de la boucle au moins une fois, même si la condition est fausse.
 
 ### Boucle `foreach`
 
@@ -299,10 +478,80 @@ tableaux ou des collections de données. Voici un exemple de boucle `foreach` :
 <?php
 $fruits = ['apple', 'banana', 'orange', 'kiwi'];
 
+// L'ordre des champs ici est inversé par rapport à Java !
 foreach ($fruits as $fruit) {
     echo "$fruit<br>";
 }
 ```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> fruits = Arrays.asList("apple", "banana", "orange");
+
+        // L'ordre des champs ici est inversé par rapport à PHP !
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+    }
+}
+```
+
+</details>
+
+Avec des tableaux associatifs multidimensionnels, vous pouvez également utiliser
+deux variables pour parcourir les clés et les valeurs du tableau :
+
+```php
+<?php
+$users = [
+    'john' => [
+        'name' => 'John Doe',
+        'age' => 30,
+        'city' => 'New York',
+    ],
+    'jane' => [
+        'name' => 'Jane Doe',
+        'age' => 25,
+        'city' => 'Los Angeles',
+    ],
+];
+
+// `$username` contient la clé de l'élément du tableau
+// `$user` contient la valeur de l'élément du tableau
+foreach ($users as $username => $user) {
+    echo "Key: $username<br>";
+    echo "Name: {$user['name']}<br>";
+    echo "Age: {$user['age']}<br>";
+    echo "City: {$user['city']}<br>";
+    echo "<br>";
+}
+```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+Il n'est pas possible de créer un tableau associatif en Java, mais nous pouvons
+utiliser une `HashMap` pour obtenir un résultat similaire (non décrit ici).
+
+</details>
+
+Dans cet exemple, nous avons un tableau `$users` qui contient des informations
+sur plusieurs utilisateurs. Nous utilisons une boucle `foreach` pour parcourir
+le tableau et afficher les informations de chaque utilisateur.
+
+La boucle `foreach` est très utile pour parcourir des tableaux ou des
+collections de données sans avoir à se soucier des indices ou des clés.
+
+La variable `$username` contient la clé de l'élément du tableau, et la variable
+`$user` contient la valeur de l'élément du tableau, qui peut être un tableau
+associatif.
 
 ## Fonctions utiles pour les tableaux et les boucles
 
@@ -327,13 +576,7 @@ print_r($fruits);
 ```
 
 ```text
-Array
-(
-    [0] => apple
-    [1] => banana
-    [2] => orange
-    [3] => kiwi
-)
+Array ( [0] => apple [1] => banana [2] => orange [3] => kiwi )
 ```
 
 La fonction `print_r()` affiche le tableau `$fruits` avec ses indices et ses
@@ -368,7 +611,9 @@ Sinon, la boucle s'arrête.
 ### Fonction `array_push()`
 
 La fonction `array_push()` permet d'ajouter un ou plusieurs éléments à la fin
-d'un tableau. Voici un exemple d'utilisation de la fonction `array_push()` :
+d'un tableau. Elle modifie le tableau d'origine et retourne le nombre d'éléments
+dans le tableau après l'ajout. Voici un exemple d'utilisation de la fonction
+`array_push()` :
 
 ```php
 <?php
@@ -380,14 +625,7 @@ print_r($fruits);
 ```
 
 ```text
-Array
-(
-    [0] => apple
-    [1] => banana
-    [2] => orange
-    [3] => kiwi
-    [4] => pear
-)
+Array ( [0] => apple [1] => banana [2] => orange [3] => kiwi [4] => pear )
 ```
 
 Dans cet exemple, nous avons un tableau `$fruits` qui contient trois fruits.
@@ -396,7 +634,21 @@ fin du tableau.
 
 ## Conclusion
 
-TODO
+Dans cette session, nous avons vu comment utiliser les tableaux et les boucles
+pour stocker et parcourir des collections de données.
+
+Nous avons également vu comment utiliser les fonctions de base pour travailler
+avec des tableaux.
+
+Grâce aux tableaux et aux boucles, nous pouvons stocker des données structurées
+et y accéder de manière plus intuitive.
+
+Nous avons également vu comment utiliser les fonctions `print()` et `print_r()`
+pour afficher des informations sur les tableaux ainsi que d'autres fonctions
+utiles comme `count()` et `array_push()`.
+
+Nous allons maintenant pouvoir utiliser ces concepts pour créer des applications
+plus complexes et plus puissantes.
 
 ## Mini-projet
 
