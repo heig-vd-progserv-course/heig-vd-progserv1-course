@@ -120,8 +120,7 @@ echo $mixed[3]; // Affiche 3.14
 ### Tableaux associatifs
 
 Un tableau associatif est un tableau qui stocke des valeurs en utilisant des
-clés (ou des noms) pour accéder à ces valeurs. Voici un exemple de tableau
-associatif :
+clés pour accéder à ces valeurs. Voici un exemple de tableau associatif :
 
 ```php
 <?php
@@ -139,9 +138,13 @@ echo $person['city']; // Affiche 'New York'
 Dans cet exemple, nous avons un tableau `$person` qui contient des informations
 sur une personne.
 
-Chaque information est stockée avec une clé (ou un nom) qui permet d'accéder à
-cette information. Pour accéder à une information du tableau, nous utilisons sa
-clé entre crochets (`[]`).
+Chaque information est stockée avec une clé qui permet d'accéder à cette
+information. Les caractères `=>` sont utilisés pour associer une clé à une
+valeur. Par exemple, la clé `'name'` est associée à la valeur `'John Doe'`.
+
+Pour accéder à une information du tableau, nous utilisons sa clé entre crochets
+(`[]`). Par exemple, pour accéder au nom de la personne, nous utilisons
+`$person['name']`.
 
 Les tableaux associatifs sont très utiles pour stocker des données structurées
 et pour accéder à ces données de manière plus intuitive.

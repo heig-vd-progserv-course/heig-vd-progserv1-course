@@ -57,15 +57,14 @@ $pets = getPets();
         td {
             border: 1px solid black;
             border-collapse: collapse;
-            padding: 5px;
+            padding: 8px;
         }
     </style>
-
 </head>
 
 <body>
-    <h1>Page d'accueil du gestionnaire d' animaux de compagnie</h1>
-    <p>Bienvenue sur la page d'accueil du gestionnaire d' animaux de compagnie !</p>
+    <h1>Page d'accueil du gestionnaire d'animaux de compagnie</h1>
+    <p>Bienvenue sur la page d'accueil du gestionnaire d'animaux de compagnie !</p>
     <p>Utilise cette page pour visualiser et gérer tous les animaux de compagnie.</p>
 
     <h2>Liste des animaux</h2>
@@ -75,7 +74,6 @@ $pets = getPets();
             <tr>
                 <th>Nom</th>
                 <th>Âge</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -83,7 +81,6 @@ $pets = getPets();
                 <tr>
                     <td><?= $pet['name'] ?></td>
                     <td><?= $pet['age'] ?> an(s)</td>
-                    <td>A venir...</td>
                 </tr>
             <?php } ?>
         </tbody>
