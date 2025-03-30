@@ -13,10 +13,10 @@ théoriques vus dans le cours _[Cours 02 - Fonctions](../01-theorie/README.md)_.
   [Solution](../02-mini-project/solution/)
 - Exercices : [Énoncés et solutions](../03-exercices/README.md)
 
-## Tables des matières
+## Table des matières
 
 - [Ressources](#ressources)
-- [Tables des matières](#tables-des-matières)
+- [Tables des matières](#table-des-matières)
 - [Objectifs de la session](#objectifs-de-la-session)
 - [Création du ficher `functions.php`](#création-du-ficher-functionsphp)
 - [Importer et utiliser les fonctions dans le fichier `index.php`](#importer-et-utiliser-les-fonctions-dans-le-fichier-indexphp)
@@ -147,8 +147,6 @@ updatePet("Rex", 9);
 removePet("Tweety");
 ```
 
-</details>
-
 Votre fichier `index.php` devrait ressembler à ceci :
 
 ```php
@@ -179,6 +177,8 @@ updatePet("Rex", 9);
 // Supprime Tweety... :(
 removePet("Tweety");
 ```
+
+</details>
 
 Ouvrez votre navigateur et allez à l'adresse
 <http://localhost/progserv1/mini-projet/index.php>.
@@ -356,7 +356,3 @@ loin. Vous pouvez la sauter si vous n'avez pas de temps._
 
 - Comment pourriez-vous modifier les fonctions pour qu'elles retournent des
   valeurs plutôt que d'afficher des messages ?
-
-```
-
-```

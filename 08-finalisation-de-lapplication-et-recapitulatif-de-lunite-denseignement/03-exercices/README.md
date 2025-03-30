@@ -14,10 +14,10 @@ _[Cours 08 - Finalisation de l'application et récapitulatif de l'unité d'ensei
   [Solution](../02-mini-project/solution/)
 - Exercices : [Énoncés et solutions](../03-exercices/README.md)
 
-## Tables des matières
+## Table des matières
 
 - [Ressources](#ressources)
-- [Tables des matières](#tables-des-matières)
+- [Tables des matières](#table-des-matières)
 - [Exercice 1](#exercice-1)
 
 ## Exercice 1
