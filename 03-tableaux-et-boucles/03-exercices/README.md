@@ -14,10 +14,10 @@ _[Cours 03 - Tableaux et boucles](../01-theorie/README.md)_.
   [Solution](../02-mini-project/solution/)
 - Exercices : [Énoncés et solutions](../03-exercices/README.md)
 
-## Tables des matières
+## Table des matières
 
 - [Ressources](#ressources)
-- [Tables des matières](#tables-des-matières)
+- [Table des matières](#table-des-matières)
 - [Exercice 1](#exercice-1)
 - [Exercice 2](#exercice-2)
 - [Exercice 3](#exercice-3)
@@ -30,14 +30,11 @@ _[Cours 03 - Tableaux et boucles](../01-theorie/README.md)_.
 - [Exercice 10](#exercice-10)
 - [Exercice 11](#exercice-11)
 - [Exercice 12](#exercice-12)
-- [Exercice 13](#exercice-13)
-- [Exercice 14](#exercice-14)
-- [Exercice 15](#exercice-15)
-- [Exercice 16](#exercice-16)
-- [Exercice 17](#exercice-17)
-- [Exercice 18](#exercice-18)
-- [Exercice 19](#exercice-19)
-- [Exercice 20](#exercice-20)
+- [Exercice 13 - Bonus](#exercice-13---bonus)
+- [Exercice 14 - Bonus](#exercice-14---bonus)
+- [Exercice 15 - Bonus](#exercice-15---bonus)
+- [Exercice 16 - Bonus](#exercice-16---bonus)
+- [Exercice 17 - Bonus](#exercice-17---bonus)
 
 ## Exercice 1
 
@@ -49,7 +46,8 @@ Créez un tableau indexé `$fruits` contenant les éléments suivants :
 - Cerise
 - Fraise
 
-Affichez le contenu du tableau avec la fonction `print_r`.
+Affichez le contenu du tableau avec la fonction `print_r` puis affichez le
+troisième élément du tableau.
 
 <details>
 <summary>Afficher la réponse</summary>
@@ -59,10 +57,18 @@ Affichez le contenu du tableau avec la fonction `print_r`.
 $fruits = ["Pomme", "Poire", "Banane", "Cerise", "Fraise"];
 
 print_r($fruits);
+
+echo "<br>";
+
+echo $fruits[2];
 ```
 
 ```text
 Array ( [0] => Pomme [1] => Poire [2] => Banane [3] => Cerise [4] => Fraise )
+```
+
+```text
+Banane
 ```
 
 </details>
@@ -76,7 +82,8 @@ Créez un tableau associatif `$person` contenant les éléments suivants :
 - `age` : 30
 - `city` : New York
 
-Affichez le contenu du tableau avec la fonction `print_r`.
+Affichez le contenu du tableau avec la fonction `print_r` puis affichez la
+valeur de la clé `age` du tableau `$person`.
 
 <details>
 <summary>Afficher la réponse</summary>
@@ -91,24 +98,34 @@ $person = [
 ];
 
 print_r($person);
+
+echo "<br>";
+
+echo $person["age"];
 ```
 
 ```text
 Array ( [firstName] => John [lastName] => Doe [age] => 30 [city] => New York )
 ```
 
+```text
+30
+```
+
 </details>
 
 ## Exercice 3
 
-Créez un tableau multidimensionnel `$ticTacToe` (le tic-tac-toe est le nom anglophone du jeu du morpion) composé de trois tableaux indexés
-contenant les éléments suivants :
+Créez un tableau multidimensionnel `$ticTacToe` (le tic-tac-toe est le nom
+anglophone du jeu du morpion) composé de trois tableaux indexés contenant les
+éléments suivants :
 
 - Une première ligne avec les valeurs `X`, `O` et `X`
 - Une deuxième ligne avec les valeurs `O`, `X` et `O`
 - Une troisième ligne avec les valeurs `X`, `O` et `X`
 
-Affichez le contenu du tableau avec la fonction `print_r`.
+Affichez le contenu du tableau avec la fonction `print_r` puis affichez la
+valeur de la deuxième ligne et de la troisième colonne du tableau `$ticTacToe`.
 
 <details>
 <summary>Afficher la réponse</summary>
@@ -122,23 +139,36 @@ $ticTacToe = [
 ];
 
 print_r($ticTacToe);
+
+echo "<br>";
+
+echo $ticTacToe[1][2];
 ```
 
 ```text
 Array ( [0] => Array ( [0] => X [1] => O [2] => X ) [1] => Array ( [0] => O [1] => X [2] => O ) [2] => Array ( [0] => X [1] => O [2] => X ) )
 ```
 
+```text
+O
+```
+
 </details>
 
 ## Exercice 4
 
-Créez un tableau `$people` composé de trois tableaux associatifs contenant les éléments suivants :
+Créez un tableau `$people` composé de trois tableaux associatifs contenant les
+éléments suivants :
 
-- Un tableau avec les clés `name`, `age` et `city` et les valeurs `John Doe`, `30` et `New York`
-- Un tableau avec les clés `name`, `age` et `city` et les valeurs `Jane Doe`, `25` et `Los Angeles`
-- Un tableau avec les clés `name`, `age` et `city` et les valeurs `Alice Smith`, `35` et `Chicago`
+- Un tableau avec les clés `name`, `age` et `city` et les valeurs `John Doe`,
+  `30` et `New York`
+- Un tableau avec les clés `name`, `age` et `city` et les valeurs `Jane Doe`,
+  `25` et `Los Angeles`
+- Un tableau avec les clés `name`, `age` et `city` et les valeurs `Alice Smith`,
+  `35` et `Chicago`
 
-Affichez le contenu du tableau avec la fonction `print_r`.
+Affichez le contenu du tableau avec la fonction `print_r` puis affichez la
+valeur de la clé `name` du dernier tableau du tableau `$people`.
 
 <details>
 <summary>Afficher la réponse</summary>
@@ -164,22 +194,34 @@ $people = [
 ];
 
 print_r($people);
+
+echo "<br>";
+
+echo $people[2]["name"];
 ```
 
 ```text
 Array ( [0] => Array ( [name] => John Doe [age] => 30 [city] => New York ) [1] => Array ( [name] => Jane Doe [age] => 25 [city] => Los Angeles ) [2] => Array ( [name] => Alice Smith [age] => 35 [city] => Chicago ) )
 ```
 
+```text
+Alice Smith
+```
+
 </details>
 
 ## Exercice 5
 
-Créez un tableau multidimensionnel associatif `$fruitsAndVegetables` composé de deux tableaux indexés contenant les éléments suivants :
+Créez un tableau multidimensionnel associatif `$fruitsAndVegetables` composé de
+deux tableaux indexés contenant les éléments suivants :
 
-- Un tableau avec les valeurs `Pomme`, `Poire`, `Banane`, `Cerise` et `Fraise` qui a comme clé `fruits`
-- Un tableau avec les valeurs `Carotte`, `Tomate`, `Salade`, `Concombre` et `Radis` qui a comme clé `vegetables`
+- Un tableau avec les valeurs `Pomme`, `Poire`, `Banane`, `Cerise` et `Fraise`
+  qui a comme clé `fruits`
+- Un tableau avec les valeurs `Carotte`, `Tomate`, `Salade`, `Concombre` et
+  `Radis` qui a comme clé `vegetables`
 
-Affichez le contenu du tableau avec la fonction `print_r`.
+Affichez le contenu du tableau avec la fonction `print_r` puis affichez la
+valeur de la clé `vegetables` du tableau `$fruitsAndVegetables`.
 
 <details>
 <summary>Afficher la réponse</summary>
@@ -192,134 +234,14 @@ $fruitsAndVegetables = [
 ];
 
 print_r($fruitsAndVegetables);
+
+echo "<br>";
+
+print_r($fruitsAndVegetables["vegetables"]);
 ```
 
 ```text
 Array ( [fruits] => Array ( [0] => Pomme [1] => Poire [2] => Banane [3] => Cerise [4] => Fraise ) [vegetables] => Array ( [0] => Carotte [1] => Tomate [2] => Salade [3] => Concombre [4] => Radis ) )
-```
-
-</details>
-
-## Exercice 6
-
-En reprenant l'[exercice 1](#exercice-1), affichez le troisième élément du tableau `$fruits`.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```php
-<?php
-$fruits = ["Pomme", "Poire", "Banane", "Cerise", "Fraise"];
-
-echo $fruits[2];
-```
-
-```text
-Banane
-```
-
-</details>
-
-## Exercice 7
-
-En reprenant l'[exercice 2](#exercice-2), affichez la valeur de la clé `age` du tableau `$person`.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```php
-<?php
-$person = [
-    "firstName" => "John",
-    "lastName" => "Doe",
-    "age" => 30,
-    "city" => "New York"
-];
-
-echo $person["age"];
-```
-
-```text
-30
-```
-
-</details>
-
-## Exercice 8
-
-En reprenant l'[exercice 3](#exercice-3), affichez la valeur de la deuxième ligne et de la troisième colonne du tableau `$ticTacToe`.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```php
-<?php
-$ticTacToe = [
-    ["X", "O", "X"],
-    ["O", "X", "O"],
-    ["X", "O", "X"]
-];
-
-echo $ticTacToe[1][2];
-```
-
-```text
-O
-```
-
-</details>
-
-## Exercice 9
-
-En reprenant l'[exercice 4](#exercice-4), affichez la valeur de la clé `name` du dernier tableau du tableau `$people`.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```php
-<?php
-$people = [
-    [
-        "name" => "John Doe",
-        "age" => 30,
-        "city" => "New York"
-    ],
-    [
-        "name" => "Jane Doe",
-        "age" => 25,
-        "city" => "Los Angeles"
-    ],
-    [
-        "name" => "Alice Smith",
-        "age" => 35,
-        "city" => "Chicago"
-    ]
-];
-
-echo $people[2]["name"];
-```
-
-```text
-Alice Smith
-```
-
-</details>
-
-## Exercice 10
-
-En reprenant l'[exercice 5](#exercice-5), affichez la valeur de la clé `vegetables` du tableau `$fruitsAndVegetables`.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```php
-<?php
-$fruitsAndVegetables = [
-    "fruits" => ["Pomme", "Poire", "Banane", "Cerise", "Fraise"],
-    "vegetables" => ["Carotte", "Tomate", "Salade", "Concombre", "Radis"]
-];
-
-print_r($fruitsAndVegetables["vegetables"]);
 ```
 
 ```text
@@ -328,9 +250,65 @@ Array ( [0] => Carotte [1] => Tomate [2] => Salade [3] => Concombre [4] => Radis
 
 </details>
 
-## Exercice 11
+## Exercice 6
 
-En utilisant une boucle `for`, affichez les éléments du tableau `$fruits` de l'[exercice 1](#exercice-1) un par un.
+Créez un tableau multidimensionnel associatif `$people` composé de trois
+tableaux associatifs contenant les éléments suivants :
+
+- Une clé `johnDoe` contenant un tableau associatif avec les clés `name`, `age`
+  et `city` et les valeurs `John Doe`, `30` et `New York`
+- Une clé `janeDoe` contenant un tableau associatif avec les clés `name`, `age`
+  et `city` et les valeurs `Jane Doe`, `25` et `Los Angeles`
+- Une clé `aliceSmith` contenant un tableau associatif avec les clés `name`,
+  `age` et `city` et les valeurs `Alice Smith`, `35` et `Chicago`
+
+Affichez le contenu du tableau avec la fonction `print_r` puis affichez la
+valeur de la clé `name` du tableau `$people` qui a pour clé `janeDoe`.
+
+<details>
+<summary>Afficher la réponse</summary>
+
+```php
+<?php
+$people = [
+    "johnDoe" => [
+        "name" => "John Doe",
+        "age" => 30,
+        "city" => "New York"
+    ],
+    "janeDoe" => [
+        "name" => "Jane Doe",
+        "age" => 25,
+        "city" => "Los Angeles"
+    ],
+    "aliceSmith" => [
+        "name" => "Alice Smith",
+        "age" => 35,
+        "city" => "Chicago"
+    ]
+];
+
+print_r($people);
+
+echo "<br>";
+
+echo $people["janeDoe"]["name"];
+```
+
+```text
+Array ( [johnDoe] => Array ( [name] => John Doe [age] => 30 [city] => New York ) [janeDoe] => Array ( [name] => Jane Doe [age] => 25 [city] => Los Angeles ) [aliceSmith] => Array ( [name] => Alice Smith [age] => 35 [city] => Chicago ) )
+```
+
+```text
+Jane Doe
+```
+
+</details>
+
+## Exercice 7
+
+En utilisant une boucle `for`, affichez les éléments du tableau `$fruits` de
+l'[exercice 1](#exercice-1) un par un.
 
 **Bonus** : faites de même avec les boucles `while`, `do...while` et `foreach`.
 
@@ -379,10 +357,11 @@ Fraise
 
 </details>
 
-## Exercice 12
+## Exercice 8
 
-En utilisant une boucle `for`, affichez les éléments du tableau `$ticTacToe` de l'[exercice 3](#exercice-3) avec à chaque fois le numéro de la ligne et le numéro de la colonne avec le format
-`Ligne x, colonne y : valeur`.
+En utilisant des boucles `for`, affichez les éléments du tableau `$ticTacToe` de
+l'[exercice 3](#exercice-3) avec à chaque fois le numéro de la ligne et le
+numéro de la colonne avec le format `Ligne x, colonne y : valeur`.
 
 **Bonus** : faites de même avec les boucles `while`, `do...while` et `foreach`.
 
@@ -471,9 +450,10 @@ Ligne 2, colonne 2 : X
 
 </details>
 
-## Exercice 13
+## Exercice 9
 
-En utilisant une boucle `foreach`, affichez les éléments du tableau `$people` de l'[exercice 4](#exercice-4) un par un.
+En utilisant une boucle `foreach`, affichez les éléments du tableau `$people` de
+l'[exercice 4](#exercice-4) un par un.
 
 **Bonus** : faites de même avec les boucles `for`, `while` et `do...while`.
 
@@ -556,9 +536,65 @@ Ville : Chicago
 
 </details>
 
-## Exercice 14
+## Exercice 10
 
-En utilisant la documentation officielle de PHP sur les fonctions `range` : <https://www.php.net/manual/fr/function.range.php> et `shuffle` : <https://www.php.net/manual/fr/function.shuffle.php>, déclarez une fonction `shuffleRange` qui prend deux paramètres `$start` et `$end` et retourne un tableau contenant les nombres de `$start` à `$end` inclus, mélangés.
+Ce bout de code contient différentes erreurs. Saurez-vous les identifier ? Pour
+chaque erreur, expliquez pourquoi elle est incorrecte et proposez une
+correction.
+
+Il y a un total de 5 erreurs.
+
+```php
+<?php
+function printArray($numberOfElementsToDisplay = 1, $array) {
+    for ($i = 0; $i <= $numberOfElementsToDisplay; $i++) {
+        // Affichage de l'élément ligne par ligne
+        echo $array[$i];
+    }
+}
+
+$fruits = ["Pomme", "Poire", "Banane", "Cerise", "Fraise"];
+
+$printArray(3, fruits);
+```
+
+<details>
+<summary>Afficher la réponse</summary>
+
+```php
+<?php
+// Erreur 1 : il faut déclarer les paramètres optionnels après les
+// paramètres obligatoires
+function printArray($array, $numberOfElementsToDisplay = 1) {
+    // Erreur 2 : il faut utiliser < au lieu de <=
+    for ($i = 0; $i < $numberOfElementsToDisplay; $i++) {
+        // Erreur 3 : il manque le `<br>` pour passer à la ligne
+        echo $array[$i] . "<br>";
+    }
+}
+
+$fruits = ["Pomme", "Poire", "Banane", "Cerise", "Fraise"];
+
+// Erreur 4 : pour appeler une fonction, il ne faut pas la préfixer avec `$`
+// Erreur 5 : il faut invertir l'ordre des paramètres
+printArray($fruits, 3);
+```
+
+```text
+Pomme
+Poire
+Banane
+```
+
+</details>
+
+## Exercice 11
+
+En utilisant la documentation officielle de PHP sur les fonctions `range` :
+<https://www.php.net/manual/fr/function.range.php> et `shuffle` :
+<https://www.php.net/manual/fr/function.shuffle.php>, déclarez une fonction
+`shuffleRange` qui prend deux paramètres `$start` et `$end` et retourne un
+tableau contenant les nombres de `$start` à `$end` inclus, mélangés.
 
 Faites des tests avec les valeurs suivantes :
 
@@ -592,9 +628,12 @@ Array ( [0] => 3 [1] => 6 [2] => 7 [3] => 9 [4] => 1 [5] => 10 [6] => 8 [7] => 5
 
 </details>
 
-## Exercice 15
+## Exercice 12
 
-En utilisant la documentation officielle de PHP sur la fonction `sort` : <https://www.php.net/manual/fr/function.sort.php>, utilisez la fonction `sort` pour trier le tableau `$fruits` de l'[exercice 1](#exercice-1) par ordre alphabétique.
+En utilisant la documentation officielle de PHP sur la fonction `sort` :
+<https://www.php.net/manual/fr/function.sort.php>, utilisez la fonction `sort`
+pour trier le tableau `$fruits` de l'[exercice 1](#exercice-1) par ordre
+alphabétique.
 
 Affichez le contenu du tableau avec la fonction `print_r`.
 
@@ -615,11 +654,17 @@ Array ( [0] => Banane [1] => Cerise [2] => Fraise [3] => Poire [4] => Pomme )
 
 </details>
 
-## Exercice 16
+## Exercice 13 - Bonus
 
-En utilisant la documentation officielle de PHP sur la fonction `usort` : <https://www.php.net/manual/fr/function.usort.php>, utilisez la fonction `usort` pour trier le tableau `$people` de l'[exercice 4](#exercice-4) par ordre croissant de l'âge.
+En utilisant la documentation officielle de PHP sur la fonction `usort` :
+<https://www.php.net/manual/fr/function.usort.php>, utilisez la fonction `usort`
+pour trier le tableau `$people` de l'[exercice 4](#exercice-4) par ordre
+croissant de l'âge.
 
-**Indice** : vous allez devoir déclarer une fonction de comparaison pour trier le tableau selon l'age. Cette fonction prend deux paramètres `$a` et `$b` et retourne un entier négatif si `$a` est plus petit que `$b`, un entier positif si `$a` est plus grand que `$b` et zéro si les deux sont égaux.
+**Indice** : vous allez devoir déclarer une fonction de comparaison pour trier
+le tableau selon l'age. Cette fonction prend deux paramètres `$a` et `$b` et
+retourne un entier négatif si `$a` est plus petit que `$b`, un entier positif si
+`$a` est plus grand que `$b` et zéro si les deux sont égaux.
 
 Affichez le contenu du tableau avec la fonction `print_r`.
 
@@ -661,11 +706,19 @@ usort($people, "compareAge");
 print_r($people);
 ```
 
-## Exercice 17
+## Exercice 14 - Bonus
 
-En utilisant la documentation officielle de PHP sur les fonctions `usort` : <https://www.php.net/manual/fr/function.usort.php> et `strcmp` : <https://www.php.net/manual/fr/function.strcmp.php>, utilisez la fonction `usort` pour trier le tableau `$people` de l'[exercice 4](#exercice-4) par ordre alphabétique du nom.
+En utilisant la documentation officielle de PHP sur les fonctions `usort` :
+<https://www.php.net/manual/fr/function.usort.php> et `strcmp` :
+<https://www.php.net/manual/fr/function.strcmp.php>, utilisez la fonction
+`usort` pour trier le tableau `$people` de l'[exercice 4](#exercice-4) par ordre
+alphabétique du nom.
 
-**Indice** : vous allez devoir déclarer une fonction de comparaison pour trier le tableau selon le nom. Cette fonction prend deux paramètres `$a` et `$b` et utilise la fonction `strcmp` pour comparer les noms. La fonction `strcmp` retourne un entier négatif si `$a` est plus petit que `$b`, un entier positif si `$a` est plus grand que `$b` et zéro si les deux sont égaux.
+**Indice** : vous allez devoir déclarer une fonction de comparaison pour trier
+le tableau selon le nom. Cette fonction prend deux paramètres `$a` et `$b` et
+utilise la fonction `strcmp` pour comparer les noms. La fonction `strcmp`
+retourne un entier négatif si `$a` est plus petit que `$b`, un entier positif si
+`$a` est plus grand que `$b` et zéro si les deux sont égaux.
 
 Affichez le contenu du tableau avec la fonction `print_r`.
 
@@ -702,14 +755,18 @@ print_r($people);
 ```
 
 ```text
-Array ( [0] => Array ( [name] => Alice Smith [age] => 35 [city] => Chicago ) [1] => Array ( [name] => Jane Doe [age] => 25 [city] => Los Angeles ) [2] => Array ( [name] => John Doe [age] => 30 [city] => New York ) ) 
+Array ( [0] => Array ( [name] => Alice Smith [age] => 35 [city] => Chicago ) [1] => Array ( [name] => Jane Doe [age] => 25 [city] => Los Angeles ) [2] => Array ( [name] => John Doe [age] => 30 [city] => New York ) )
 ```
 
 </details>
 
-## Exercice 18
+## Exercice 15 - Bonus
 
-En utilisant la documentation officielle de PHP sur les fonctions `range` : <https://www.php.net/manual/fr/function.range.php> et `array_sum` : <https://www.php.net/manual/fr/function.array-sum.php>, déclarez une fonction `sumRange` qui prend deux paramètres `$start` et `$end` et retourne la somme des nombres de `$start` à `$end` inclus.
+En utilisant la documentation officielle de PHP sur les fonctions `range` :
+<https://www.php.net/manual/fr/function.range.php> et `array_sum` :
+<https://www.php.net/manual/fr/function.array-sum.php>, déclarez une fonction
+`sumRange` qui prend deux paramètres `$start` et `$end` et retourne la somme des
+nombres de `$start` à `$end` inclus.
 
 Faites des tests avec les valeurs suivantes :
 
@@ -741,12 +798,11 @@ echo sumRange($start, $end);
 
 </details>
 
-## Exercice 19
+## Exercice 16 - Bonus
 
 En utilisant la documentation officielle de PHP sur les fonctions `explode` :
 <https://www.php.net/manual/fr/function.explode.php>, `array_reverse` :
-<https://www.php.net/manual/fr/function.array-reverse.php>
- et `implode` :
+<https://www.php.net/manual/fr/function.array-reverse.php> et `implode` :
 <https://www.php.net/manual/fr/function.implode.php>, déclarez une fonction
 `reverseWords` qui prend un paramètre `$string` et retourne la chaîne de
 caractères `$string` avec les mots dans l'ordre inverse.
@@ -777,7 +833,7 @@ world! Hello,
 
 </details>
 
-## Exercice 20
+## Exercice 17 - Bonus
 
 En utilisant la documentation officielle de PHP sur les fonctions `array_map` :
 <https://www.php.net/manual/fr/function.array-map.php> et `strrev` :

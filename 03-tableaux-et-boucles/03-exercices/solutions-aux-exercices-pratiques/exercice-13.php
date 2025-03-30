@@ -17,40 +17,16 @@ $people = [
     ]
 ];
 
-foreach ($people as $person) {
-    echo "Nom : " . $person["name"] . "<br>";
-    echo "Âge : " . $person["age"] . "<br>";
-    echo "Ville : " . $person["city"] . "<br>";
-    echo "<br>";
+function compareAge($a, $b) {
+    if ($a["age"] > $b["age"]) {
+        return 1;
+    } else if ($a["age"] < $b["age"]) {
+        return -1;
+    } else {
+        return 0;
+    }
 }
 
-echo "<br>";
+usort($people, "compareAge");
 
-for ($i = 0; $i < count($people); $i++) {
-    echo "Nom : " . $people[$i]["name"] . "<br>";
-    echo "Âge : " . $people[$i]["age"] . "<br>";
-    echo "Ville : " . $people[$i]["city"] . "<br>";
-    echo "<br>";
-}
-
-echo "<br>";
-
-$i = 0;
-while ($i < count($people)) {
-    echo "Nom : " . $people[$i]["name"] . "<br>";
-    echo "Âge : " . $people[$i]["age"] . "<br>";
-    echo "Ville : " . $people[$i]["city"] . "<br>";
-    echo "<br>";
-    $i++;
-}
-
-echo "<br>";
-
-$i = 0;
-do {
-    echo "Nom : " . $people[$i]["name"] . "<br>";
-    echo "Âge : " . $people[$i]["age"] . "<br>";
-    echo "Ville : " . $people[$i]["city"] . "<br>";
-    echo "<br>";
-    $i++;
-} while ($i < count($people));
+print_r($people);

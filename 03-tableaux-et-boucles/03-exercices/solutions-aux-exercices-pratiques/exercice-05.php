@@ -5,3 +5,7 @@ $fruitsAndVegetables = [
 ];
 
 print_r($fruitsAndVegetables);
+
+echo "<br>";
+
+print_r($fruitsAndVegetables["vegetables"]);

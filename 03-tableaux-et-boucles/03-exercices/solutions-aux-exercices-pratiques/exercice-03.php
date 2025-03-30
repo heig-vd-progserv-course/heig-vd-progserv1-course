@@ -6,3 +6,7 @@ $ticTacToe = [
 ];
 
 print_r($ticTacToe);
+
+echo "<br>";
+
+echo $ticTacToe[1][2];

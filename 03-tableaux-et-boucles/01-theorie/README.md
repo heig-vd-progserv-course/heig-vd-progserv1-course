@@ -10,10 +10,10 @@
   [Solution](../02-mini-project/solution/)
 - Exercices : [Énoncés et solutions](../03-exercices/README.md)
 
-## Tables des matières
+## Table des matières
 
 - [Ressources](#ressources)
-- [Tables des matières](#tables-des-matières)
+- [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
 - [Les tableaux](#les-tableaux)
   - [Tableaux indexés](#tableaux-indexés)
@@ -37,7 +37,8 @@
 Les tableaux permettent de stocker plusieurs valeurs dans une seule variable.
 
 En utilisant les tableaux, il nous est possible de stocker des collections de
-données, comme une liste de noms, une liste de nombres, tout comme une liste de tableaux.
+données, comme une liste de noms, une liste de nombres, tout comme une liste de
+tableaux.
 
 Ces tableaux permettent de stocker des données structurées et d'y accéder de
 manière plus intuitive.
@@ -48,17 +49,21 @@ En utilisant les boucles, il nous est possible de parcourir un tableau et
 d'afficher chaque élément du tableau et de les afficher.
 
 Les tableaux et les boucles sont des concepts fondamentaux en programmation et
-sont utilisés dans de nombreux programmes et applications, notamment pour stocker et parcourir une collection d'animaux de compagnie.
+sont utilisés dans de nombreux programmes et applications, notamment pour
+stocker et parcourir une collection d'animaux de compagnie.
 
 De façon plus précise, les personnes qui étudient devraient être capables de :
 
 - Décrire les tableaux et leurs caractéristiques
-- Décrire la différence entre les tableaux indexés, les tableaux associatifs et les tableaux multidimensionnels
+- Décrire la différence entre les tableaux indexés, les tableaux associatifs et
+  les tableaux multidimensionnels
 - Utiliser les tableaux pour stocker des collections de données
 - Utiliser les fonctions de base pour travailler avec des tableaux
-- Utiliser les fonctions `print()` et `print_r()` pour afficher des informations sur les tableaux
+- Utiliser les fonctions `print()` et `print_r()` pour afficher des informations
+  sur les tableaux
 - Décrire ce qu'est une boucle et comment elle fonctionne
-- Décrire la différence entre les boucles `for`, `while`, `do...while` et `foreach`
+- Décrire la différence entre les boucles `for`, `while`, `do...while` et
+  `foreach`
 - Utiliser les boucles pour parcourir des tableaux ou des collections de données
 
 ## Les tableaux
@@ -359,9 +364,9 @@ le tableau et afficher les informations de chaque utilisateur.
 La boucle `foreach` est très utile pour parcourir des tableaux ou des
 collections de données sans avoir à se soucier des indices ou des clés.
 
-La variable `$username` contient la clé (ou le nom) de l'élément du tableau, et
-la variable `$user` contient la valeur de l'élément du tableau, qui peut être un
-tableau associatif.
+La variable `$username` contient la clé de l'élément du tableau, et la variable
+`$user` contient la valeur de l'élément du tableau, qui peut être un tableau
+associatif.
 
 ## Fonctions utiles pour les tableaux et les boucles
 
@@ -455,7 +460,21 @@ fin du tableau.
 
 ## Conclusion
 
-TODO
+Dans cette session, nous avons vu comment utiliser les tableaux et les boucles
+pour stocker et parcourir des collections de données.
+
+Nous avons également vu comment utiliser les fonctions de base pour travailler
+avec des tableaux.
+
+Grâce aux tableaux et aux boucles, nous pouvons stocker des données structurées
+et y accéder de manière plus intuitive.
+
+Nous avons également vu comment utiliser les fonctions `print()` et `print_r()`
+pour afficher des informations sur les tableaux ainsi que d'autres fonctions
+utiles comme `count()` et `array_push()`.
+
+Nous allons maintenant pouvoir utiliser ces concepts pour créer des applications
+plus complexes et plus puissantes.
 
 ## Mini-projet
 

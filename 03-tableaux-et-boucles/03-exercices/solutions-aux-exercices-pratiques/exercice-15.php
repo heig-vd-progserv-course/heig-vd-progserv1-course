@@ -1,5 +1,10 @@
 <?php
-$fruits = ["Pomme", "Poire", "Banane", "Cerise", "Fraise"];
-sort($fruits);
+$start = 15;
+$end = 30;
 
-print_r($fruits);
+function sumRange($start, $end) {
+    $range = range($start, $end);
+    return array_sum($range);
+}
+
+echo sumRange($start, $end);

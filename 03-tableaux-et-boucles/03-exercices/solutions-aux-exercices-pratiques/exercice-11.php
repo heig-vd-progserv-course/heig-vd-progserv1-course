@@ -1,28 +1,11 @@
 <?php
-$fruits = ["Pomme", "Poire", "Banane", "Cerise", "Fraise"];
+$start = 1;
+$end = 10;
 
-for ($i = 0; $i < count($fruits); $i++) {
-    echo "$fruits[$i]<br>";
+function shuffleRange($start, $end) {
+    $range = range($start, $end);
+    shuffle($range);
+    return $range;
 }
 
-echo "<br>";
-
-$i = 0;
-while ($i < count($fruits)) {
-    echo "$fruits[$i]<br>";
-    $i++;
-}
-
-echo "<br>";
-
-$i = 0;
-do {
-    echo "$fruits[$i]<br>";
-    $i++;
-} while ($i < count($fruits));
-
-echo "<br>";
-
-foreach ($fruits as $fruit) {
-    echo "$fruit<br>";
-}
+print_r(shuffleRange($start, $end));

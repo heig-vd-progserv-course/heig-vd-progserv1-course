@@ -14,10 +14,10 @@ _[Cours 03 - Tableaux et boucles](../01-theorie/README.md)_.
   [Solution](../02-mini-project/solution/)
 - Exercices : [Énoncés et solutions](../03-exercices/README.md)
 
-## Tables des matières
+## Table des matières
 
 - [Ressources](#ressources)
-- [Tables des matières](#tables-des-matières)
+- [Table des matières](#table-des-matières)
 - [Objectifs de la session](#objectifs-de-la-session)
 - [Solution](#solution)
 - [Conclusion](#conclusion)
@@ -27,7 +27,11 @@ _[Cours 03 - Tableaux et boucles](../01-theorie/README.md)_.
 
 À l'issue de cette session, les personnes qui étudient devraient avoir pu :
 
-- TODO
+- Gérer des animaux de compagnie à l'aide de tableaux associatifs
+- Utiliser des boucles pour parcourir un tableau
+- Utiliser des tables HTML pour afficher des données
+- Utiliser des fonctions pour simplifier le code
+- Utiliser des styles CSS pour améliorer l'apparence de la page
 
 ## Solution
 

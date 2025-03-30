@@ -14,10 +14,10 @@ _[Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP](../01
   [Solution](../02-mini-project/solution/)
 - Exercices : [Énoncés et solutions](../03-exercices/README.md)
 
-## Tables des matières
+## Table des matières
 
 - [Ressources](#ressources)
-- [Tables des matières](#tables-des-matières)
+- [Tables des matières](#table-des-matières)
 - [Introduction à votre première session de mini-projet](#introduction-à-votre-première-session-de-mini-projet)
 - [Présentation du mini-projet](#présentation-du-mini-projet)
 - [Objectifs de la session](#objectifs-de-la-session)

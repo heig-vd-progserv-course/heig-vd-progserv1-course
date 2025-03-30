@@ -10,10 +10,10 @@
   [Solution](../02-mini-project/solution/)
 - Exercices : [Énoncés et solutions](../03-exercices/README.md)
 
-## Tables des matières
+## Table des matières
 
 - [Ressources](#ressources)
-- [Tables des matières](#tables-des-matières)
+- [Tables des matières](#table-des-matières)
 - [Objectifs](#objectifs)
 - [TODO](#todo)
 - [Conclusion](#conclusion)
@@ -51,4 +51,3 @@ renforcer votre compréhension des concepts vus en classe.
 
 Vous trouverez les détails des exercices ici :
 [Énoncés et solutions](../03-exercices/README.md).
-

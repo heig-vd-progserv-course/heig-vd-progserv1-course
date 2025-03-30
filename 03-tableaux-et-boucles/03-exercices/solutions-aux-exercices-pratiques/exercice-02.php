@@ -7,3 +7,7 @@ $person = [
 ];
 
 print_r($person);
+
+echo "<br>";
+
+echo $person["age"];

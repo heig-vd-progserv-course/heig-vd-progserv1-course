@@ -1,26 +1,8 @@
 <?php
-$people = [
-    [
-        "name" => "John Doe",
-        "age" => 30,
-        "city" => "New York"
-    ],
-    [
-        "name" => "Jane Doe",
-        "age" => 25,
-        "city" => "Los Angeles"
-    ],
-    [
-        "name" => "Alice Smith",
-        "age" => 35,
-        "city" => "Chicago"
-    ]
-];
+$string = "Hello, world!";
+$words = explode(" ", $string);
+$reversedWords = array_map('strrev', $words);
 
-function compareName($a, $b) {
-    return strcmp($a["name"], $b["name"]);
-}
+$result = implode(" ", $reversedWords);
 
-usort($people, "compareName");
-
-print_r($people);
+echo $result;

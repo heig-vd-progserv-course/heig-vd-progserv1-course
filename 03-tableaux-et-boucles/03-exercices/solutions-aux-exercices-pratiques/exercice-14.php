@@ -1,11 +1,26 @@
 <?php
-$start = 1;
-$end = 10;
+$people = [
+    [
+        "name" => "John Doe",
+        "age" => 30,
+        "city" => "New York"
+    ],
+    [
+        "name" => "Jane Doe",
+        "age" => 25,
+        "city" => "Los Angeles"
+    ],
+    [
+        "name" => "Alice Smith",
+        "age" => 35,
+        "city" => "Chicago"
+    ]
+];
 
-function shuffleRange($start, $end) {
-    $range = range($start, $end);
-    shuffle($range);
-    return $range;
+function compareName($a, $b) {
+    return strcmp($a["name"], $b["name"]);
 }
 
-print_r(shuffleRange($start, $end));
+usort($people, "compareName");
+
+print_r($people);

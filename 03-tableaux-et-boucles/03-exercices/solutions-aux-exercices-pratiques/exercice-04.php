@@ -18,3 +18,7 @@ $people = [
 ];
 
 print_r($people);
+
+echo "<br>";
+
+echo $people[2]["name"];
