@@ -43,7 +43,7 @@ _[Cours 03 - Tableaux et boucles](../01-theorie/README.md)_.
 - Gérer des animaux de compagnie à l'aide de tableaux associatifs
 - Utiliser des boucles pour parcourir un tableau
 - Utiliser des tables HTML pour afficher des données
-- Utiliser des fonctions pour simplifier le code
+- Mettre à jour les fonctions pour manipuler le tableau associatif
 - Utiliser des styles CSS pour améliorer l'apparence de la page
 
 ## Création d'un tableau associatif pour contenir des animaux de compagnie

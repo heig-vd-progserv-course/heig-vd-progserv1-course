@@ -157,7 +157,7 @@ exemple de tableau associatif :
 <?php
 $person = [
     // Les caractères `=>` sont utilisés pour associer
-	// une clé à une valeur
+    // une clé à une valeur
     'name' => 'John Doe',
     'age' => 30,
     'city' => 'New York',
