@@ -150,7 +150,7 @@ echo $mixed[3] . "<br>"; // Affiche 3.14
 <?php
 $person = [
     // Les caractères `=>` sont utilisés pour associer
-	// une clé à une valeur
+    // une clé à une valeur
     'name' => 'John Doe',
     'age' => 30,
     'city' => 'New York',
@@ -280,9 +280,9 @@ for ($i = 0; $i < 10; $i++) {
 }
 ```
 
-1. L'initialisation du compteur (`$i = 0`)
-2. La condition d'arrêt (`$i < 10`)
-3. L'incrémentation du compteur (`$i++`)
+1. L'initialisation du compteur : `$i = 0`
+2. La condition d'arrêt : `$i < 10`
+3. L'incrémentation du compteur : `$i++`
 
 ### Boucle `for` (3/3)
 
@@ -544,7 +544,7 @@ vous entraider si vous avez des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
-## Sources (1/3)
+## Sources
 
 - [Illustration principale][illustration-principale] par
   [Richard Jacobs](https://unsplash.com/@rj2747) sur
