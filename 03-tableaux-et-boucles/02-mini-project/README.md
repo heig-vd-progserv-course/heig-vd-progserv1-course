@@ -59,9 +59,9 @@ comment créer le tableau associatif contenant les animaux de compagnie.
 
 ### Création du tableau dans le fichier `functions.php`
 
-Dans le fichier `functions.php`, vous allez créer un tableau associatif pour
-stocker les informations sur vos animaux de compagnie. Ce tableau sera
-accessible depuis n'importe quelle fonction de votre projet.
+Dans le fichier `functions.php`, vous allez créer un tableau associatif `$pets`
+pour stocker les informations sur vos animaux de compagnie. Ce tableau sera
+ensuite accessible depuis n'importe quelle fonction de votre projet.
 
 Ce tableau aura la structure suivante :
 
@@ -172,6 +172,10 @@ animaux de compagnie.
 Vous devez donc modifier la fonction `getPets()` pour qu'elle retourne le
 tableau `$pets` que vous avez créé précédemment.
 
+**Astuce** : vous aurez besoin d'utiliser le mot-clé `global` pour accéder à la
+variable `$pets` () dans la fonction `getPets()`. Cela vous permettra d'accéder
+à la variable `$pets` définie en dehors de la fonction `getPets()`.
+
 Essayez de le faire sans regarder la solution !
 
 <details>
@@ -237,13 +241,13 @@ function removePet($name) {
 }
 ```
 
-</details>
-
 Vous remarquerez que nous avons utilisé le mot-clé `global` pour accéder à la
 variable `$pets`. Cela permet d'accéder à la variable `$pets` définie en dehors
 de la fonction `getPets()`. Bien que ce ne soit pas une bonne pratique de
 programmer, c'est nécessaire ici pour accéder à la variable `$pets` dans la
 fonction `getPets()`.
+
+</details>
 
 ### Récupération des animaux de compagnie dans le fichier `index.php`
 
