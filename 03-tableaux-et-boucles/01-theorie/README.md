@@ -57,14 +57,11 @@ De façon plus précise, les personnes qui étudient devraient être capables de
 - Décrire les tableaux et leurs caractéristiques
 - Décrire la différence entre les tableaux indexés, les tableaux associatifs et
   les tableaux multidimensionnels
-- Utiliser les tableaux pour stocker des collections de données
-- Utiliser les fonctions de base pour travailler avec des tableaux
-- Utiliser les fonctions `print()` et `print_r()` pour afficher des informations
-  sur les tableaux
+- Utiliser et manipuler des tableaux (indexés, associatifs et
+  multidimensionnels)
 - Décrire ce qu'est une boucle et comment elle fonctionne
-- Décrire la différence entre les boucles `for`, `while`, `do...while` et
-  `foreach`
-- Utiliser les boucles pour parcourir des tableaux ou des collections de données
+- Utiliser quelques fonctions utiles pour travailler avec les tableaux et les
+  boucles
 
 ## Les tableaux
 

@@ -47,16 +47,16 @@ consultez le [support de cours][course-material]._
 - Décrire les tableaux et leurs caractéristiques
 - Décrire la différence entre les tableaux indexés, les tableaux associatifs et
   les tableaux multidimensionnels
-- Utiliser les tableaux pour stocker des collections de données
+- Utiliser et manipuler des tableaux (indexés, associatifs et
+  multidimensionnels)
 
 ![bg right:40%][illustration-objectifs]
 
 ## Objectifs (2/3)
 
-- Utiliser les fonctions de base pour travailler avec des tableaux
-- Utiliser les fonctions `print()` et `print_r()` pour afficher des informations
-  sur les tableaux
 - Décrire ce qu'est une boucle et comment elle fonctionne
+- Utiliser quelques fonctions utiles pour travailler avec les tableaux et les
+  boucles
 
 ![bg right:40%][illustration-objectifs]
 
