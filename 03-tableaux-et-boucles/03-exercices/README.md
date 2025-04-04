@@ -706,6 +706,8 @@ usort($people, "compareAge");
 print_r($people);
 ```
 
+</details>
+
 ## Exercice 14 - Bonus
 
 En utilisant la documentation officielle de PHP sur les fonctions `usort` :
@@ -867,3 +869,5 @@ echo $result;
 ```text
 ,olleH !dlrow
 ```
+
+</details>
