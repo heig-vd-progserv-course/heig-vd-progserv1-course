@@ -60,7 +60,7 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Exercices :
   [Énoncés et solutions](./01-modalites-de-lunite-denseignement-et-introduction-a-php/03-exercices/README.md)
 
-[Voir les détails](./01-modalites-de-lunite-denseignement-et-introduction-a-php/README.md)
+[Voir les détails](./01-modalites-de-lunite-denseignement-et-introduction-a-php/)
 
 ## 🕑 Cours 02
 
@@ -74,7 +74,7 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
   [Solution](./02-fonctions/02-mini-project/solution/)
 - Exercices : [Énoncés et solutions](./02-fonctions/03-exercices/README.md)
 
-[Voir les détails](./02-fonctions/README.md)
+[Voir les détails](./02-fonctions/)
 
 ## 🕒 Cours 03
 
@@ -89,7 +89,7 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Exercices :
   [Énoncés et solutions](./03-tableaux-et-boucles/03-exercices/README.md)
 
-[Voir les détails](./03-tableaux-et-boucles/README.md)
+[Voir les détails](./03-tableaux-et-boucles/)
 
 ## 🕓 Cours 04
 
@@ -106,7 +106,7 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Exercices :
   [Énoncés et solutions](./04-formulaires-html-et-validation/03-exercices/README.md)
 
-[Voir les détails](./04-formulaires-html-et-validation/README.md)
+[Voir les détails](./04-formulaires-html-et-validation/)
 
 ## 🕔 Cours 05
 
@@ -123,7 +123,7 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Exercices :
   [Énoncés et solutions](./05-base-de-donnees-et-pdo/03-exercices/README.md)
 
-[Voir les détails](./05-base-de-donnees-et-pdo/README.md)
+[Voir les détails](./05-base-de-donnees-et-pdo/)
 
 ## 🕕 Cours 06
 
@@ -140,7 +140,7 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Exercices :
   [Énoncés et solutions](./06-programmation-orientee-objet/03-exercices/README.md)
 
-[Voir les détails](./06-programmation-orientee-objet/README.md)
+[Voir les détails](./06-programmation-orientee-objet/)
 
 ## 🕖 Cours 07
 
@@ -159,7 +159,7 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Exercices :
   [Énoncés et solutions](./07-gestion-des-cookies-et-sessions-utilisateurs/03-exercices/README.md)
 
-[Voir les détails](./07-gestion-des-cookies-et-sessions-utilisateurs/README.md)
+[Voir les détails](./07-gestion-des-cookies-et-sessions-utilisateurs/)
 
 ## 🕗 Cours 08
 
@@ -178,7 +178,7 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Exercices :
   [Énoncés et solutions](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/03-exercices/README.md)
 
-[Voir les détails](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/README.md)
+[Voir les détails](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/)
 
 ## 📜 Licence
 
