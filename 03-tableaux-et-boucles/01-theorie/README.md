@@ -610,10 +610,8 @@ $users = [
     ],
 ];
 
-// `$username` contient la clé de l'élément du tableau
 // `$user` contient la valeur de l'élément du tableau
-foreach ($users as $username => $user) {
-    echo "Key: $username<br>";
+foreach ($users as $user) {
     echo "Name: {$user['name']}<br>";
     echo "Age: {$user['age']}<br>";
     echo "City: {$user['city']}<br>";
