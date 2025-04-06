@@ -54,17 +54,17 @@ consultez le [support de cours][course-material]._
 
 ## Objectifs (2/3)
 
-- Décrire ce qu'est une boucle et comment elle fonctionne
-- Utiliser quelques fonctions utiles pour travailler avec les tableaux et les
-  boucles
+- Décrire les boucles et leurs caractéristiques
+- Décrire la différence entre les boucles `for`, `while`, `do...while` et
+  `foreach`
+- Utiliser les boucles pour parcourir des tableaux et des collections de données
 
 ![bg right:40%][illustration-objectifs]
 
 ## Objectifs (3/3)
 
-- Décrire la différence entre les boucles `for`, `while`, `do...while` et
-  `foreach`
-- Utiliser les boucles pour parcourir des tableaux ou des collections de données
+- Utiliser quelques fonctions utiles pour travailler avec les tableaux et les
+  boucles
 
 ![bg right:40%][illustration-objectifs]
 
@@ -73,12 +73,13 @@ consultez le [support de cours][course-material]._
 - Les tableaux sont des collections de valeurs.
 - Les tableaux sont déclarés entre des crochets (`[]`) ou avec la fonction
   `array()`.
-- Les valeurs d'un tableau sont indexées à partir de 0.
-- Il existe trois types de tableaux en PHP.
+- Les valeurs peuvent être de n'importe quel type.
+- Il existe trois types de tableaux en PHP : indexés, associatifs et
+  multidimensionnels.
 
 ![bg right:40%][illustration-les-tableaux]
 
-### Tableaux indexés (1/4)
+### Tableaux indexés (1/6)
 
 - Forme la plus simple de tableau.
 - Les valeurs sont indexées par des entiers.
@@ -88,7 +89,7 @@ consultez le [support de cours][course-material]._
 
 ![bg right:40%][illustration-tableaux-indexes]
 
-### Tableaux indexés (2/4)
+### Tableaux indexés (2/6)
 
 ```php
 <?php
@@ -100,7 +101,7 @@ echo $fruits[2] . "<br>"; // Affiche 'orange'
 echo $fruits[3] . "<br>"; // Affiche 'kiwi'
 ```
 
-### Tableaux indexés (3/4)
+### Tableaux indexés (3/6)
 
 ```java
 public class Main {
@@ -115,7 +116,19 @@ public class Main {
 }
 ```
 
-### Tableaux indexés (4/4)
+### Tableaux indexés (4/6)
+
+Ce tableau indexé peut être représenté sous la forme d'une table, composée de
+paires de clé-valeur :
+
+| Index | Valeur     |
+| ----- | ---------- |
+| `0`   | `'apple'`  |
+| `1`   | `'banana'` |
+| `2`   | `'orange'` |
+| `3`   | `'kiwi'`   |
+
+### Tableaux indexés (5/6)
 
 ```php
 <?php
@@ -134,12 +147,39 @@ echo $mixed[3] . "<br>"; // Affiche 3.14
 // contenant des types différents en Java.
 ```
 
+### Tableaux indexés (6/6)
+
+Imaginons maintenant que nous souhaitons représenter une personne à l'aide d'un
+tableau indexé. Nous pourrions créer un tableau `$person` qui contient le nom,
+l'âge et la ville de la personne :
+
+```php
+<?php
+$person = ['John Doe', 30, 'New York'];
+
+echo $person[0] . "<br>"; // Affiche le nom de la personne
+echo $person[1] . "<br>"; // Affiche l'âge de la personne
+echo $person[2] . "<br>"; // Affiche la ville de la personne
+```
+
+### Tableaux indexés (7/7)
+
+Ce tableau indexé peut être représenté sous la forme d'une table, composée de
+paires de clé-valeur :
+
+| Index | Valeur       |
+| ----- | ------------ |
+| `0`   | `'John Doe'` |
+| `1`   | `30`         |
+| `2`   | `'New York'` |
+
+Ce n'est pas très intuitif... Solution : les tableaux associatifs.
+
 ### Tableaux associatifs (1/3)
 
-- Les valeurs sont indexées par des chaînes de caractères.
-- Les index sont des clés associatives.
-- Les valeurs peuvent être de n'importe quel type (entier, chaîne de caractères,
-  tableau, etc.).
+- Les valeurs sont indexées par des chaînes de caractères, appelées _clés_.
+- Les clés peuvent être de n'importe quel type et peuvent être complètement
+  arbitraires.
 - Utilisés pour stocker des données sous forme de paires clé-valeur.
 
 ![bg right:40%][illustration-tableaux-associatifs]
@@ -171,7 +211,7 @@ echo $person['city'] . "<br>"; // Affiche 'New York'
 // obtenir un résultat similaire (non décrit ici).
 ```
 
-### Tableaux multidimensionnels (1/4)
+### Tableaux multidimensionnels (1/5)
 
 - Les tableaux multidimensionnels sont des tableaux qui contiennent d'autres
   tableaux.
@@ -181,30 +221,34 @@ echo $person['city'] . "<br>"; // Affiche 'New York'
 
 ![bg right:40%][illustration-tableaux-multidimensionnels]
 
-### Tableaux multidimensionnels (2/4)
+### Tableaux multidimensionnels (2/5)
 
 ```php
 <?php
+// Un tableau multidimensionnel contenant des tableaux indexés
 $matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
+    [1, 2, 3], // Un premier tableau indexé
+    [4, 5, 6], // Un deuxième tableau indexé
+    [7, 8, 9], // Un troisième tableau indexé
 ];
 
 echo $matrix[0][0] . "<br>"; // Affiche 1
 echo $matrix[1][1] . "<br>"; // Affiche 5
 echo $matrix[2][2] . "<br>"; // Affiche 9
+
 ```
 
-### Tableaux multidimensionnels (3/4)
+### Tableaux multidimensionnels (3/5)
 
 ```java
+// Équivalent en Java
 public class Main {
     public static void main(String[] args) {
+        // Un tableau multidimensionnel contenant des tableaux indexés
         int[][] matrix = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
+            {1, 2, 3}, // Un premier tableau indexé
+            {4, 5, 6}, // Un deuxième tableau indexé
+            {7, 8, 9} // Un troisième tableau indexé
         };
 
         System.out.println(matrix[0][0]); // Affiche 1
@@ -214,31 +258,39 @@ public class Main {
 }
 ```
 
-### Tableaux multidimensionnels (4/4)
+### Tableaux multidimensionnels (4/5)
 
 ```php
 <?php
+// Un tableau multidimensionnel contenant des tableaux associatifs
 $users = [
-    'john' => [
+    // `'john'` est une clé complètement arbitraire
+    // représentant un premier utilisateur
+    'john' => [ // Un premier tableau associatif
         'name' => 'John Doe',
         'age' => 30,
         'city' => 'New York',
     ],
-    'jane' => [
-        'name' => 'Jane Doe',
-        'age' => 25,
-        'city' => 'Los Angeles',
-    ],
-];
 ```
 
 ---
 
 ```php
+    // `'jane'` est une clé complètement arbitraire
+    // représentant un second utilisateur
+    'jane' => [ // Un deuxième tableau associatif
+        'name' => 'Jane Doe',
+        'age' => 25,
+        'city' => 'Los Angeles',
+    ],
+];
+
 echo $users['john']['name'] . "<br>"; // Affiche 'John Doe'
 echo $users['jane']['age'] . "<br>"; // Affiche 25
 echo $users['john']['city'] . "<br>"; // Affiche 'New York'
 ```
+
+### Tableaux multidimensionnels (5/5)
 
 ```java
 // Équivalent en Java
@@ -432,10 +484,8 @@ $users = [
 ---
 
 ```php
-// `$username` contient la clé de l'élément du tableau
 // `$user` contient la valeur de l'élément du tableau
-foreach ($users as $username => $user) {
-    echo "Key: $username<br>";
+foreach ($users as $user) {
     echo "Name: {$user['name']}<br>";
     echo "Age: {$user['age']}<br>";
     echo "City: {$user['city']}<br>";
@@ -535,11 +585,11 @@ Est-ce que vous avez des questions ?
 ## À vous de jouer !
 
 - (Re)lire le [support de cours][course-material].
-- Réaliser le [mini-projet][mini-project].
 - Faire les [exercices][exercices].
+- Réaliser le [mini-projet][mini-project].
 - Poser des questions si nécessaire.
 
-**Que ce soit pour le mini-projet ou les exercices, nous vous encourageons à
+**Que ce soit pour les exercices ou le mini-projet, nous vous encourageons à
 vous entraider si vous avez des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]

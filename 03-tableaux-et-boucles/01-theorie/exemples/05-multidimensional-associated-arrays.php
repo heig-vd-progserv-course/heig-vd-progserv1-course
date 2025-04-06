@@ -1,11 +1,16 @@
 <?php
+// Un tableau multidimensionnel contenant des tableaux associatifs
 $users = [
-    'john' => [
+    // `'john'` est une clé complètement arbitraire
+    // représentant un premier utilisateur
+    'john' => [ // Un premier tableau associatif
         'name' => 'John Doe',
         'age' => 30,
         'city' => 'New York',
     ],
-    'jane' => [
+    // `'jane'` est une clé complètement arbitraire
+    // représentant un second utilisateur
+    'jane' => [ // Un deuxième tableau associatif
         'name' => 'Jane Doe',
         'age' => 25,
         'city' => 'Los Angeles',
