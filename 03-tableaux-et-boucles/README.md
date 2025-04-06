@@ -19,7 +19,10 @@
   les tableaux multidimensionnels
 - Utiliser et manipuler des tableaux (indexés, associatifs et
   multidimensionnels)
-- Décrire ce qu'est une boucle et comment elle fonctionne
+- Décrire les boucles et leurs caractéristiques
+- Décrire la différence entre les boucles `for`, `while`, `do...while` et
+  `foreach`
+- Utiliser les boucles pour parcourir des tableaux et des collections de données
 - Utiliser quelques fonctions utiles pour travailler avec les tableaux et les
   boucles
 
