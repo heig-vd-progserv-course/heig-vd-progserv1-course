@@ -118,13 +118,13 @@ consulter, modifier et supprimer des animaux de compagnie.
 
 Chaque animal de compagnie aura les attributs suivants :
 
+- Nom (un champ texte)
 - Espèce (un champ de sélection contenant, par exemple : chien, chat, lézard,
   serpent, oiseau, lapin, autre)
-- Nom (un champ texte)
 - Surnom (un champ texte facultatif)
 - Sexe (un champ boutons radio)
 - Âge (un champ numérique)
-- Photo (un champ de téléversement de fichier facultatif)
+- Couleur (un champ de saisie de couleur facultatif)
 - Personnalité (un champ cases à cocher facultatif)
 - Taille en cm (un champ numérique facultatif)
 - Notes (un champ de texte libre facultatif)

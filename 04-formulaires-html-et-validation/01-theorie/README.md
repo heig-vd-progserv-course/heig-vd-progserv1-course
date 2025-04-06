@@ -23,11 +23,10 @@
   - [Méthodes `GET` et `POST`](#méthodes-get-et-post)
 - [Réception des données des formulaires](#réception-des-données-des-formulaires)
   - [Traitement des données à l'aide des superglobales PHP](#traitement-des-données-à-laide-des-superglobales-php)
+  - [Sauvegarde des données saisies](#sauvegarde-des-données-saisies)
 - [Validation des formulaires](#validation-des-formulaires)
   - [Côté serveur](#côté-serveur)
   - [Côté client](#côté-client)
-  - [Gestion des erreurs](#gestion-des-erreurs)
-- [Contenus optionnels](#contenus-optionnels)
 - [Conclusion](#conclusion)
 - [Mini-projet](#mini-projet)
 - [Exercices](#exercices)
@@ -71,20 +70,27 @@ Voici un exemple de structure de formulaire HTML :
 ```html
 <form action="register.php" method="POST">
 	<label for="username">Pseudo :</label>
-	<input type="text" name="username" />
+	<input type="text" id="username" name="username" />
 
 	<label for="password">Mot de passe :</label>
-	<input type="password" name="password" />
+	<input type="password" id="password" name="password" />
 
 	<button type="submit">Envoyer</button>
 </form>
 ```
 
 Dans cet exemple, le formulaire contient deux champs de texte (email et mot de
-passe) et un bouton de soumission. L'attribut `action` spécifie l'URL à laquelle
-les données du formulaire seront envoyées lorsque l'utilisateur cliquera sur le
-bouton "Envoyer". L'attribut `method` spécifie la méthode HTTP à utiliser pour
-envoyer les données (dans ce cas, `POST`).
+passe) et un bouton de soumission.
+
+Chacun de ces champs a un nom (`name`) qui est utilisé pour identifier les
+données lors de l'envoi au serveur. De plus, chaque champ a un identifiant
+(`id`) qui est utilisé pour lier une étiquette (`<label>`) au champ de
+formulaire. Cela permet d'améliorer l'accessibilité et l'expérience utilisateur.
+
+L'attribut `action` spécifie l'URL à laquelle les données du formulaire seront
+envoyées lorsque l'utilisateur cliquera sur le bouton "Envoyer". L'attribut
+`method` spécifie la méthode HTTP à utiliser pour envoyer les données (dans ce
+cas, `POST`).
 
 Tous les champs de formulaire sont documentés dans la
 [documentation de MDN](https://developer.mozilla.org/fr/). Voici quelques champs
@@ -192,12 +198,17 @@ Illustrons la différence entre ces deux méthodes à l'aide du formulaire suiva
 
 ```html
 <!-- La méthode peut être `GET` ou `POST` -->
-<form action="form.php" method="">
+<form action="login.php" method="">
 	<label for="username">Pseudo : </label>
-	<input type="text" name="username" value="xXBestOf1400Xx" />
+	<input type="text" id="username" name="username" value="xXBestOf1400Xx" />
 
 	<label for="password">Mot de passe :</label>
-	<input type="password" name="password" value="m0n-sup3r-m0t-de-p4asse" />
+	<input
+		type="password"
+		id="password"
+		name="password"
+		value="m0n-sup3r-m0t-de-p4asse"
+	/>
 
 	<button type="submit">Envoyer</button>
 </form>
@@ -209,7 +220,7 @@ Illustrons la différence entre ces deux méthodes à l'aide du formulaire suiva
   Par exemple, si une personne soumet un formulaire avec la méthode `GET`, les
   données seront envoyées à l'URL `form.php` avec les paramètres `username` et
   `password` :
-  `http://localhost/form.php?username=xXBestOf1400Xx&password=m0n-sup3r-m0t-de-p4asse`.
+  `http://localhost/form.php?userid=xXBestOf1400Xx&password=m0n-sup3r-m0t-de-p4asse`.
 
   Les données sont ajoutées à l'URL après le point d'interrogation (`?`) et sont
   séparées par des esperluettes (`&`) si plusieurs champs sont présents.
@@ -279,12 +290,12 @@ la page `login.php` :
     <h1>Se connecter</h1>
     <form action="login.php" method="POST">
         <label for="username">Pseudo :</label>
-        <input type="text" name="username" />
+        <input type="text" id="username" name="username" />
 
         <br>
 
         <label for="password">Mot de passe :</label>
-        <input type="password" name="password" />
+        <input type="password" id="password" name="password" />
 
         <br>
 
@@ -311,20 +322,98 @@ Ici, nous avons un code PHP séparé en deux parties : la première partie gén�
 le formulaire HTML en lui-même et la deuxième partie traite les données soumises
 lorsque le formulaire est envoyé.
 
-Lorsque l'utilisateur accède à la page `register.php`, il voit le formulaire
-HTML. Ce formulaire contient deux champs de texte pour le prénom et le nom,
-ainsi qu'un bouton "Envoyer". Le formulaire est configuré pour envoyer les
-données à la même page (`register.php`) lorsque l'utilisateur clique sur le
-bouton "Envoyer".
+Lorsque l'utilisateur accède à la page `login.php`, il voit le formulaire HTML.
+Ce formulaire contient deux champs de texte pour le prénom et le nom, ainsi
+qu'un bouton "Envoyer". Le formulaire est configuré pour envoyer les données à
+la même page (`login.php`) lorsque l'utilisateur clique sur le bouton "Envoyer".
 
-Lorsque l'utilisateur remplit le formulaire et clique sur le bouton
-**"Envoyer"**, les données sont envoyées à la même page (`register.php`) en
-utilisant la méthode `POST`. Le code PHP vérifie si la méthode de la requête est
-`POST` et récupère les valeurs des champs `firstName` et `lastName` à l'aide de
-la superglobale `$_POST`.
+Lorsque l'utilisateur remplit le formulaire et clique sur le bouton "Envoyer",
+les données sont envoyées à la même page (`register.php`) en utilisant la
+méthode `POST`. Le code PHP vérifie si la méthode de la requête est `POST` et
+récupère les valeurs des champs `firstName` et `lastName` à l'aide de la
+superglobale `$_POST`.
 
 Ensuite, il affiche un message de bienvenue avec le prénom et le nom de
 l'utilisateur qui aura été saisi dans le formulaire.
+
+### Sauvegarde des données saisies
+
+Lors de la soumission du formulaire, les données saisies par l'utilisateur sont
+perdues.
+
+Afin de conserver les valeurs saisies par l'utilisateur et améliorer
+l'expérience utilisateur, il est possible de pré-remplir les champs du
+formulaire avec les valeurs précédemment saisies.
+
+Voici un exemple de code PHP qui sauvegarde des valeurs saisies par
+l'utilisateur :
+
+```php
+<?php
+// Gère la soumission du formulaire
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+}
+?>
+
+<!-- Gère l'affichage du formulaire -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Authentification</title>
+</head>
+
+<body>
+    <h1>Se connecter</h1>
+    <form action="02-login-form-with-saved-values.php" method="POST">
+        <label for="username">Pseudo :</label>
+        <input
+            type="text"
+            id="username"
+            name="username"
+            value="<?php echo isset($username) ? $username : ''; ?>" />
+
+        <br>
+
+        <label for="password">Mot de passe :</label>
+        <input
+            type="password"
+            id="password"
+            name="password" />
+
+        <br>
+
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <?php
+    echo "Le nom d'utilisateur est : " . $username . "<br>";
+    echo "Le mot de passe est : " . $password . "<br>";
+    ?>
+
+</body>
+
+</html>
+```
+
+Dans cet exemple, nous avons déplacé la section PHP au début du fichier pour
+gérer la soumission du formulaire. Cela nous permet de conserver les valeurs
+saisies par l'utilisateur dans les champs de formulaire en cas d'erreur.
+
+Nous avons également ajouté un attribut `value` au champ de saisie du pseudo
+pour conserver la valeur saisie par l'utilisateur si elle existe (grâce à la
+fonction `isset()` qui vérifie si la variable `$username` est définie). Si elle
+n'existe pas, nous laissons le champ vide. Cela permet à l'utilisateur de ne pas
+avoir à ressaisir son pseudo s'il a déjà été saisi précédemment.
+
+Nous ne souhaitons pas conserver le mot de passe pour des raisons de sécurité,
+donc nous n'avons pas ajouté d'attribut `value` au champ de mot de passe.
+
+Nous avons également ajouté une section PHP à la fin du fichier pour afficher le
+résultat de la soumission du formulaire. Cela permet à l'utilisateur de voir les
+données qu'il a saisies après avoir cliqué sur le bouton "Envoyer".
 
 ## Validation des formulaires
 
@@ -342,13 +431,7 @@ La validation des formulaires peut inclure des vérifications telles que :
 
 - Vérifier que les champs obligatoires sont remplis.
 - Vérifier que les données saisies respectent un format spécifique (par exemple,
-  une adresse e-mail valide).
-- Vérifier que les valeurs saisies sont dans une plage acceptable (par exemple,
-  un âge compris entre 0 et 120).
-- Vérifier que les mots de passe respectent des critères de sécurité (par
-  exemple, longueur minimale, présence de caractères spéciaux, etc.).
-- Vérifier que les données saisies ne contiennent pas de caractères dangereux ou
-  malveillants (par exemple, éviter les balises HTML ou les scripts).
+  une adresse e-mail valide ou longueur minimale, etc.).
 
 Voici un exemple de validation côté serveur en PHP :
 
@@ -356,67 +439,99 @@ Voici un exemple de validation côté serveur en PHP :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $firstName = $_POST["firstName"];
-    $lastName = $_POST["lastName"];
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    // Par défaut, il n'y a pas d'erreurs
+    $errors = [];
 
     // Validation des données
-    if (empty($firstName) || empty($lastName)) {
-        echo "Tous les champs sont obligatoires.";
-    } elseif (!preg_match("/[a-zA-Z- ]*/", $firstName)) {
-        echo "Le prénom ne doit contenir que des lettres et des espaces.";
-    } elseif (!preg_match("/[a-zA-Z- ]*/", $lastName)) {
-        echo "Le nom ne doit contenir que des lettres et des espaces.";
-    } else {
-        echo "Bonjour, " . htmlspecialchars($firstName) . " " . htmlspecialchars($lastName) . " !";
+    if (empty($username)) {
+        // On ajoute un message d'erreur au tableau
+        array_push($errors, "Le pseudo est obligatoire.");
+    }
+
+    if (strlen($username) < 2) {
+        // On ajoute un message d'erreur au tableau
+        array_push($errors, "Le pseudo doit contenir au moins 2 caractères.");
+    }
+
+    if (empty($password)) {
+        // On ajoute un message d'erreur au tableau
+        array_push($errors, "Le mot de passe est obligatoire.");
+    }
+
+    if (strlen($password) < 8) {
+        // On ajoute un message d'erreur au tableau
+        array_push($errors, "Le mot de passe doit contenir au moins 8 caractères.");
     }
 }
 ?>
+
+<!-- Gère l'affichage du formulaire -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Authentification</title>
+</head>
+
+<body>
+    <h1>Se connecter</h1>
+    <form action="login.php" method="POST">
+        <label for="username">Pseudo :</label>
+        <input
+            type="text"
+            id="username"
+            name="username"
+            value="<?php echo isset($username) ? $username : ''; ?>" />
+
+        <br>
+
+        <label for="password">Mot de passe :</label>
+        <input
+            type="password"
+            id="password"
+            name="password" />
+
+        <br>
+
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <?php
+    // On affiche les données si le formulaire a été soumis
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // S'il n'y a pas d'erreurs, on affiche les données
+        if (empty($errors)) {
+            echo "<p style='color: green;'>Le nom d'utilisateur est : $username</p>";
+            echo "<p style='color: green;'>Le mot de passe est : $password</p>";
+        } else {
+            // S'il y a des erreurs, on les affiche
+            foreach ($errors as $error) {
+                echo "<p style='color: red;'>$error<p>";
+            }
+        }
+    }
+    ?>
+</body>
+
+</html>
 ```
 
-Dans cet exemple, nous vérifions si les champs `firstName` et `lastName` sont
-vides. Si l'un des champs est vide, un message d'erreur est affiché. Ensuite,
-nous vérifions si les valeurs saisies ne contiennent que des lettres et des
-espaces à l'aide de la fonction
-[`preg_match()`](https://www.php.net/manual/fr/function.preg-match.php) et d'une
-expression régulière. Si les valeurs ne respectent pas ce format, un message
-d'erreur est affiché. Sinon, un message de bienvenue est affiché avec le prénom
-et le nom de l'utilisateur.
+Dans cet exemple, nous avons ajouté une validation côté serveur pour vérifier
+que les champs `username` et `password` ne sont pas vides et respectent
+certaines contraintes de longueur.
 
-> [!NOTE]
->
-> Une expression régulière est une séquence de caractères qui forme un modèle de
-> recherche. Elle est utilisée pour effectuer des correspondances de motifs dans
-> des chaînes de caractères.
->
-> Les expressions régulières sont souvent utilisées pour valider des formats de
-> données, rechercher des motifs spécifiques ou effectuer des remplacements dans
-> des chaînes de caractères.
->
-> Dans l'exemple ci-dessus, l'expression régulière `/^[a-zA-Z\- ]*$/` est
-> utilisée pour vérifier que la chaîne ne contient que des lettres (minuscules
-> et majuscules), des tirets et des espaces. Voici une explication de chaque
-> partie de l'expression :
->
-> - `/` : délimiteurs de l'expression régulière.
-> - `[a-zA-Z- ]` : définit une classe de caractères qui inclut les lettres
->   miniscules (`a-z`), les lettres majuscules (`A-Z`), le tiret (`-`) et
->   l'espace (` `).
-> - `*` : indique que la classe de caractères peut apparaître zéro ou plusieurs
->   fois.
+Si les données ne sont pas valides, les messages d'erreurs associés sont ajoutés
+à un tableau `$errors`.
 
-La fonction
-[`htmlspecialchars()`](https://www.php.net/manual/fr/function.htmlspecialchars.php)
-est utilisée pour échapper les caractères spéciaux afin d'éviter les attaques
-XSS (Cross-Site Scripting). Cela garantit que les valeurs saisies par
-l'utilisateur sont affichées correctement dans notre page sans exécuter de code
-malveillant (comme du code JavaScript par exemple).
+Nous vérifions ensuite si le tableau `$errors` est vide. Si c'est le cas, cela
+signifie que toutes les validations ont réussi et nous affichons les données
+saisies par l'utilisateur dans une couleur verte.
 
-> [!CAUTION]
->
-> Même si la validation côté client est effectuée, il est important de valider à
-> nouveau les données côté serveur avant de les traiter ou de les stocker. Cela
-> permet de s'assurer que les données sont valables et conformes aux attentes,
-> même si l'utilisateur a contourné la validation côté client.
+Sinon, nous parcourons le tableau `$errors` et affichons chaque message d'erreur
+dans une couleur rouge.
 
 ### Côté client
 
@@ -428,10 +543,6 @@ utilisateur.
 Pour cela, les champs de formulaire HTML peuvent être configurés avec des
 attributs pour effectuer une validation de base.
 
-Par exemple, l'attribut `required` peut être utilisé pour indiquer qu'un champ
-est obligatoire, et l'attribut `type` peut être utilisé pour spécifier le type
-de données attendu (par exemple, `type="email"` pour un champ d'adresse e-mail).
-
 Il existe plusieurs attributs HTML qui peuvent être utilisés pour valider les
 données côté client, certaines spécifiques selon le type de champ. Ces attributs
 sont décrits dans la documentation MDN présentée ci-dessus (section
@@ -439,166 +550,136 @@ sont décrits dans la documentation MDN présentée ci-dessus (section
 
 Voici un exemple de validation côté client à l'aide d'attributs HTML :
 
-```html
-<form action="register.php" method="POST">
-	<label for="firstName">Prénom :</label>
-	<input type="text" name="firstName" required minlength="2" maxlength="50" />
-
-	<label for="lastName">Nom :</label>
-	<input type="text" name="lastName" required minlength="2" maxlength="50" />
-
-	<button type="submit">Envoyer</button>
-</form>
-```
-
-Dans cet exemple, nous avons ajouté les attributs `required`, `minlength` et
-`maxlength` aux champs `firstName` et `lastName`. Cela signifie que ces champs
-sont obligatoires, et que la longueur minimale et maximale des valeurs saisies
-doit être respectée. Si l'utilisateur essaie de soumettre le formulaire sans
-remplir ces champs ou en saisissant des valeurs qui ne respectent pas les
-contraintes de longueur, le navigateur affichera un message d'erreur et
-empêchera la soumission du formulaire.
-
-L'exemple complet de validation côté client pourrait ressembler à ceci :
-
 ```php
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $firstName = $_POST["firstName"];
-    $lastName = $_POST["lastName"];
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 
-    echo "Bonjour, $firstName $lastName !";
-}
-?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Créer son compte</title>
-</head>
-<body>
-    <h1>Créer son compte</h1>
-    <form action="register.php" method="POST">
-        <label for="firstName">Prénom :</label>
-        <input
-            type="text"
-            name="firstName"
-            required
-            minlength="2"
-            maxlength="50"
-        />
-
-        <label for="lastName">Nom :</label>
-        <input
-            type="text"
-            name="lastName"
-            required
-            minlength="2"
-            maxlength="50"
-        />
-
-        <button type="submit">Envoyer</button>
-    </form>
-</body>
-</html>
-```
-
-### Gestion des erreurs
-
-Lorsque des erreurs de validation se produisent, il est important de fournir des
-messages d'erreur clairs et utiles à l'utilisateur. Cela lui permet de
-comprendre ce qui ne va pas et de corriger les erreurs.
-
-De plus, il est important de conserver les données saisies par l'utilisateur
-dans le formulaire afin qu'il n'ait pas à les ressaisir. Cela peut être fait en
-récupérant les valeurs des champs de formulaire et en les réaffichant dans le
-formulaire en cas d'erreur.
-
-Voici un exemple de gestion des erreurs dans le formulaire :
-
-```php
-<?php
-// Gère la soumission du formulaire
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $firstName = $_POST["firstName"];
-    $lastName = $_POST["lastName"];
+    // Par défaut, il n'y a pas d'erreurs
+    $errors = [];
 
     // Validation des données
-    if (empty($firstName) || empty($lastName)) {
-        $error = "Tous les champs sont obligatoires.";
-    } elseif (!preg_match("/[a-zA-Z- ]*/", $firstName)) {
-        $error = "Le prénom ne doit contenir que des lettres et des espaces.";
-    } elseif (!preg_match("/[a-zA-Z- ]*/", $lastName)) {
-        $error = "Le nom ne doit contenir que des lettres et des espaces.";
-    } else {
-        echo "Bonjour, " . htmlspecialchars($firstName) . " " . htmlspecialchars($lastName) . " !";
+    if (empty($username)) {
+        // On ajoute un message d'erreur au tableau
+        array_push($errors, "Le pseudo est obligatoire.");
+    }
+
+    if (strlen($username) < 2) {
+        // On ajoute un message d'erreur au tableau
+        array_push($errors, "Le pseudo doit contenir au moins 2 caractères.");
+    }
+
+    if (empty($password)) {
+        // On ajoute un message d'erreur au tableau
+        array_push($errors, "Le mot de passe est obligatoire.");
+    }
+
+    if (strlen($password) < 8) {
+        // On ajoute un message d'erreur au tableau
+        array_push($errors, "Le mot de passe doit contenir au moins 8 caractères.");
     }
 }
 ?>
 
+<!-- Gère l'affichage du formulaire -->
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Créer son compte</title>
+    <title>Authentification</title>
 </head>
 
 <body>
-    <h1>Créer son compte</h1>
-    <form action="register.php" method="POST">
-        <label for="firstName">Prénom :</label>
+    <h1>Se connecter</h1>
+    <form action="login.php" method="POST">
+        <label for="username">Pseudo :</label>
         <input
             type="text"
-            id="firstName"
-            name="firstName"
+            id="username"
+            name="username"
+            value="<?php echo isset($username) ? $username : ''; ?>"
             required
-            minlength="2"
-            maxlength="50"
-            value="<?= isset($firstName) ? htmlspecialchars($firstName) : ''; ?>"
-        />
+            minlength="2" />
 
-        <label for="lastName">Nom :</label>
+        <br>
+
+        <label for="password">Mot de passe :</label>
         <input
-            type="text"
-            id="lastName"
-            name="lastName"
+            type="password"
+            id="password"
+            name="password"
             required
-            minlength="2"
-            maxlength="50"
-            value="<?= isset($lastName) ? htmlspecialchars($lastName) : ''; ?>"
-        />
+            minlength="8" />
 
-        <?php if (isset($error)) { ?>
-            <p style="color: red;"><?php echo $error; ?></p>
-        <?php } ?>
+        <br>
 
         <button type="submit">Envoyer</button>
     </form>
+
+    <?php if ($_SERVER["REQUEST_METHOD"] == "POST") { ?>
+        <?php if (empty($errors)) { ?>
+            <p style="color: green;">Le formulaire a été soumis avec succès !</p>
+        <?php } else { ?>
+            <p style="color: red;">Le formulaire contient des erreurs :</p>
+            <ul>
+                <?php foreach ($errors as $error) { ?>
+                    <li><?php echo $error; ?></li>
+                <?php } ?>
+            </ul>
+        <?php } ?>
+    <?php } ?>
 </body>
+
 </html>
 ```
 
-Dans cet exemple, nous avons ajouté une variable `$error` pour stocker le
-message d'erreur en cas de validation échouée. Si une erreur se produit, la
-variable `$error` est définie avec le message d'erreur approprié. Ensuite, nous
-affichons le message d'erreur dans le formulaire à l'aide d'une condition `if`.
-Si la variable `$error` est définie, le message d'erreur est affiché en rouge.
+Dans cet exemple, nous avons ajouté les attributs `required` et `minlength` aux
+champs de formulaire. L'attribut `required` indique que le champ est obligatoire
+et doit être rempli avant la soumission du formulaire. L'attribut `minlength`
+spécifie la longueur minimale requise pour le champ.
 
-Nous avons également ajouté l'attribut `value` aux champs de formulaire pour
-conserver les valeurs saisies par l'utilisateur en cas d'erreur.
+Lorsque l'utilisateur essaie de soumettre le formulaire sans remplir les champs
+ou en saisissant des valeurs qui ne respectent pas les contraintes de longueur,
+le navigateur affichera automatiquement un message d'erreur et empêchera la
+soumission du formulaire.
 
-Cela permet à l'utilisateur de voir ce qu'il a déjà saisi et de corriger
-facilement les erreurs sans avoir à ressaisir toutes les données.
+Cela permet de fournir un retour immédiat à l'utilisateur sans avoir besoin
+d'envoyer les données au serveur.
 
-## Contenus optionnels
+De plus, l'affichage de la soumission réussie ou des erreurs de validation a été
+amélioré en ajoutant des messages de succès ou d'erreur après la soumission du
+formulaire en mélangeant PHP et HTML.
 
-_Ces contenus sont optionnels et ne sont pas obligatoires pour la compréhension
-des concepts de la session. Ils sont fournis à titre d'information et peuvent
-être consultés si vous souhaitez approfondir vos connaissances sur le sujet._
+Pour préserver la sécurité des données, les données soumises ne sont plus
+affichées après la soumission du formulaire. Au lieu de cela, un message de
+soumission réussie est affiché si le formulaire a été soumis avec succès.
+
+> [!CAUTION]
+>
+> Il est important de noter que la validation côté client ne remplace pas la
+> validation côté serveur.
+>
+> Il est toujours recommandé de valider les données côté serveur pour garantir
+> la sécurité et l'intégrité des données, même si l'utilisateur a contourné la
+> validation côté client.
 
 ## Conclusion
 
-TODO
+Dans cette session, nous avons exploré les formulaires HTML et la validation des
+données saisies par les utilisateurs. Nous avons appris à créer des formulaires
+HTML, à envoyer des données au serveur et à traiter ces données à l'aide de PHP.
+
+Nous avons également abordé la validation des formulaires, tant côté serveur que
+côté client grâce à l'utilisation d'attributs HTML.
+
+En cas de validation échouée, nous avons vu comment afficher des messages
+d'erreur clairs et comment conserver les valeurs saisies par l'utilisateur dans
+le formulaire.
+
+La validation est essentielle pour garantir la sécurité et l'intégrité des
+données, ainsi que pour améliorer l'expérience utilisateur.
 
 ## Mini-projet
 

@@ -10,12 +10,12 @@
     <h1>Se connecter</h1>
     <form action="01-login-form.php" method="POST">
         <label for="username">Pseudo :</label>
-        <input type="text" name="username" />
+        <input type="text" id="username" name="username" />
 
         <br>
 
         <label for="password">Mot de passe :</label>
-        <input type="password" name="password" />
+        <input type="password" id="password" name="password" />
 
         <br>
 
