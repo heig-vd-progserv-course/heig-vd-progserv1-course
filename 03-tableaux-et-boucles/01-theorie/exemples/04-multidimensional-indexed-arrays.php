@@ -1,8 +1,9 @@
 <?php
+// Un tableau multidimensionnel contenant des tableaux indexés
 $matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
+    [1, 2, 3], // Un premier tableau indexé
+    [4, 5, 6], // Un deuxième tableau indexé
+    [7, 8, 9], // Un troisième tableau indexé
 ];
 
 echo $matrix[0][0] . "<br>"; // Affiche 1

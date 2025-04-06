@@ -59,7 +59,10 @@ De façon plus précise, les personnes qui étudient devraient être capables de
   les tableaux multidimensionnels
 - Utiliser et manipuler des tableaux (indexés, associatifs et
   multidimensionnels)
-- Décrire ce qu'est une boucle et comment elle fonctionne
+- Décrire les boucles et leurs caractéristiques
+- Décrire la différence entre les boucles `for`, `while`, `do...while` et
+  `foreach`
+- Utiliser les boucles pour parcourir des tableaux et des collections de données
 - Utiliser quelques fonctions utiles pour travailler avec les tableaux et les
   boucles
 
@@ -114,13 +117,33 @@ public class Main {
 
 Dans cet exemple, nous avons un tableau `$fruits` qui contient plusieurs fruits.
 
-Chaque fruit est stocké à un index numérique, qui commence à 0 pour le premier
-élément du tableau. Pour accéder à un élément du tableau, nous utilisons son
-index entre crochets (`[]`).
+Un tableau indexé est une structure de données qui stocke des valeurs dans un
+ordre séquentiel. Chaque valeur est associée à un index numérique, qui permet
+d'accéder à cette valeur.
 
-Comme PHP est un langage de programmation dynamique, les tableaux indexés
-peuvent contenir des valeurs de différents types, comme des chaînes de
-caractères, des nombres, des booléens, etc., comme le montre l'exemple suivant :
+Chaque fruit est stocké à un index numérique, qui commence à 0 pour le premier
+élément du tableau.
+
+Ce tableau indexé peut être représenté sous la forme d'une table, composée de
+paires de clé-valeur :
+
+| Index | Valeur     |
+| ----- | ---------- |
+| `0`   | `'apple'`  |
+| `1`   | `'banana'` |
+| `2`   | `'orange'` |
+| `3`   | `'kiwi'`   |
+
+Le tableau `$fruits` contient quatre éléments, chacun associé à un index
+numérique. Pour accéder à un élément du tableau, nous utilisons son index entre
+crochets (`[]`).
+
+Par exemple, pour accéder au premier fruit du tableau, nous utilisons
+`$fruits[0]`, qui renvoie la valeur `'apple'`.
+
+Comme PHP est un langage de programmation dynamique, les tableaux peuvent
+contenir des valeurs de différents types, comme des chaînes de caractères, des
+nombres, des booléens, etc., comme le montre l'exemple suivant :
 
 ```php
 <?php
@@ -143,6 +166,47 @@ Java.
 Dans cet exemple, nous avons un tableau `$mixed` qui contient des valeurs de
 différents types. Chaque valeur est stockée à un index numérique, comme dans le
 précédent exemple.
+
+Les tableaux indexés sont très utiles pour stocker des collections de données et
+pour accéder à ces données de manière séquentielle.
+
+> [!NOTE]
+>
+> Imaginons maintenant que nous souhaitons représenter une personne à l'aide
+> d'un tableau indexé. Nous pourrions créer un tableau `$person` qui contient le
+> nom, l'âge et la ville de la personne :
+>
+> ```php
+> <?php
+> $person = ['John Doe', 30, 'New York'];
+>
+> echo $person[0] . "<br>"; // Affiche le nom de la personne
+> echo $person[1] . "<br>"; // Affiche l'âge de la personne
+> echo $person[2] . "<br>"; // Affiche la ville de la personne
+> ```
+>
+> Ce tableau indexé peut être représenté sous la forme d'une table, composée de
+> paires de clé-valeur :
+>
+> | Index | Valeur       |
+> | ----- | ------------ |
+> | `0`   | `'John Doe'` |
+> | `1`   | `30`         |
+> | `2`   | `'New York'` |
+>
+> Bien que nous ayons utilisé un tableau indexé pour représenter une personne,
+> il n'est pas très intuitif d'accéder à ses informations. Par exemple, pour
+> accéder au nom de la personne, nous devrions utiliser `$person[0]`, ce qui
+> n'est pas très significatif.
+>
+> Nous aurions peut-être le souhait de pouvoir accéder aux propriétés de la
+> personne par des noms plus explicites, comme `$person['name']` ou
+> `$person['age']`, où `'name'` et `'age'` sont des clés qui représentent les
+> propriétés de la personne (le nom et l'âge de la personne, respectivement).
+>
+> Cependant, cela n'est pas possible avec un tableau indexé.
+>
+> Heureusement, PHP propose une solution pour cela : les tableaux associatifs.
 
 ### Tableaux associatifs
 
@@ -176,13 +240,31 @@ utiliser une `HashMap` pour obtenir un résultat similaire (non décrit ici).
 Dans cet exemple, nous avons un tableau `$person` qui contient des informations
 sur une personne.
 
+Un tableau associatif est une structure de données qui stocke des valeurs en
+utilisant des chaînes de caractères, appelées _clés_, pour accéder à ces
+valeurs. Chaque valeur est associée à une clé, qui permet d'accéder à cette
+valeur. Les clés sont des chaînes de caractères, qui peuvent être complètement
+arbitraire, comme des mots, des phrases ou même des nombres.
+
 Chaque information est stockée avec une clé qui permet d'accéder à cette
 information. Les caractères `=>` sont utilisés pour associer une clé à une
-valeur. Par exemple, la clé `'name'` est associée à la valeur `'John Doe'`.
+valeur.
 
-Pour accéder à une information du tableau, nous utilisons sa clé entre crochets
-(`[]`). Par exemple, pour accéder au nom de la personne, nous utilisons
-`$person['name']`.
+Ce tableau associatif peut être représenté sous la forme d'une table, composée
+de paires de clé-valeur :
+
+| Clé    | Valeur       |
+| ------ | ------------ |
+| `name` | `'John Doe'` |
+| `age`  | `30`         |
+| `city` | `'New York'` |
+
+Le tableau `$person` contient trois éléments, chacun associé à une clé
+arbitraire. Pour accéder à un élément du tableau, nous utilisons sa clé entre
+crochets (`[]`).
+
+Par exemple, pour accéder au nom de la personne, nous utilisons
+`$person['name']`, qui renvoie la valeur `'John Doe'`.
 
 Les tableaux associatifs sont très utiles pour stocker des données structurées
 et pour accéder à ces données de manière plus intuitive.
@@ -199,10 +281,11 @@ multidimensionnels. Voici un exemple de tableau multidimensionnel :
 
 ```php
 <?php
+// Un tableau multidimensionnel contenant des tableaux indexés
 $matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
+    [1, 2, 3], // Un premier tableau indexé
+    [4, 5, 6], // Un deuxième tableau indexé
+    [7, 8, 9], // Un troisième tableau indexé
 ];
 
 echo $matrix[0][0] . "<br>"; // Affiche 1
@@ -216,10 +299,11 @@ echo $matrix[2][2] . "<br>"; // Affiche 9
 ```java
 public class Main {
     public static void main(String[] args) {
+        // Un tableau multidimensionnel contenant des tableaux indexés
         int[][] matrix = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
+            {1, 2, 3}, // Un premier tableau indexé
+            {4, 5, 6}, // Un deuxième tableau indexé
+            {7, 8, 9} // Un troisième tableau indexé
         };
 
         System.out.println(matrix[0][0]); // Affiche 1
@@ -248,13 +332,18 @@ tableaux associatifs :
 
 ```php
 <?php
+// Un tableau multidimensionnel contenant des tableaux associatifs
 $users = [
-    'john' => [
+    // `'john'` est une clé complètement arbitraire
+    // représentant un premier utilisateur
+    'john' => [ // Un premier tableau associatif
         'name' => 'John Doe',
         'age' => 30,
         'city' => 'New York',
     ],
-    'jane' => [
+    // `'jane'` est une clé complètement arbitraire
+    // représentant un second utilisateur
+    'jane' => [ // Un deuxième tableau associatif
         'name' => 'Jane Doe',
         'age' => 25,
         'city' => 'Los Angeles',
@@ -264,6 +353,7 @@ $users = [
 echo $users['john']['name'] . "<br>"; // Affiche 'John Doe'
 echo $users['jane']['age'] . "<br>"; // Affiche 25
 echo $users['john']['city'] . "<br>"; // Affiche 'New York'
+
 ```
 
 <details>
