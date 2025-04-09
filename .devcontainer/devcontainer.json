@@ -28,5 +28,7 @@
 		"type=bind,source=${localEnv:HOME}/.ssh,target=${localEnv:HOME}/.ssh,type=bind,consistency=cached"
 	],
 	// Execute the post-create.sh script once the container is created
-	"postCreateCommand": ".devcontainer/post-create.sh"
+	"postCreateCommand": ".devcontainer/post-create.sh",
+	// Execute the post-start.sh script once the container is started
+	"postStartCommand": ".devcontainer/post-start.sh"
 }

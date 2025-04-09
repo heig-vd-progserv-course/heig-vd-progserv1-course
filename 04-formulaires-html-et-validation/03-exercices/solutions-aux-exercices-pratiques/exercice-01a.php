@@ -7,7 +7,7 @@
 
 <body>
     <h1>Formulaire de contact</h1>
-    <form action="contact.php" method="POST">
+    <form action="exercice-01a.php" method="POST">
         <label for="firstName">Prénom :</label><br>
         <input type="text" id="firstName" name="firstName">
 
@@ -22,9 +22,6 @@
         <input type="email" id="email" name="email">
 
         <br>
-
-        <label for="phoneNumber">Numéro de téléphone :</label><br>
-        <input type="tel" id="phoneNumber" name="phoneNumber">
 
         <br>
 
