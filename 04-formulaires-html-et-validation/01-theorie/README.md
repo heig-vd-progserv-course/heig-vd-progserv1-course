@@ -18,7 +18,7 @@
 - [Formulaires HTML](#formulaires-html)
   - [Structure d'un formulaire](#structure-dun-formulaire)
   - [Attributs](#attributs)
-- [Envoyer des données des formulaires](#envoyer-des-données-des-formulaires)
+- [Envoyer les données des formulaires](#envoyer-les-données-des-formulaires)
   - [URL d'action](#url-daction)
   - [Méthodes `GET` et `POST`](#méthodes-get-et-post)
 - [Réception des données des formulaires](#réception-des-données-des-formulaires)
@@ -33,11 +33,24 @@
 
 ## Objectifs
 
-TODO
+Dans ce cours, nous allons explorer les formulaires HTML et la validation des
+données saisies par les utilisateurs. Nous allons apprendre à créer des
+formulaires HTML, à envoyer des données au serveur et à traiter ces données à
+l'aide de PHP.
+
+Nous allons également aborder la validation des formulaires, tant côté serveur
+que côté client. La validation est essentielle pour garantir la sécurité et
+l'intégrité des données, ainsi que pour améliorer l'expérience utilisateur.
 
 De façon plus précise, les personnes qui étudient devraient être capables de :
 
-- TODO
+- Créer des formulaires HTML pour collecter des données utilisateur.
+- Envoyer des données de formulaires au serveur à l'aide de PHP.
+- Récupérer les données envoyées par le formulaire à l'aide de PHP.
+- Expliquer la différence entre les méthodes `GET` et `POST`.
+- Valider les données saisies par l'utilisateur côté serveur et côté client.
+- Afficher des messages d'erreur clairs en cas de validation échouée.
+- Pré-remplir les champs de formulaire avec les valeurs précédemment saisies.
 
 ## Formulaires HTML
 
@@ -51,6 +64,10 @@ Un formulaire HTML est constitué de divers éléments tels que des champs de
 texte, des boutons, des cases à cocher, des listes déroulantes, etc. Ces
 éléments permettent aux utilisateurs de saisir des informations et d'interagir
 avec l'application web.
+
+Les formulaires sont souvent utilisés pour des actions telles que l'inscription,
+la connexion, la recherche, la soumission de commentaires, etc. Ils sont
+essentiels pour créer des applications web interactives et conviviales.
 
 ### Structure d'un formulaire
 
@@ -69,11 +86,13 @@ Voici un exemple de structure de formulaire HTML :
 
 ```html
 <form action="register.php" method="POST">
-	<label for="username">Pseudo :</label>
+	<label for="username">Pseudo :</label><br />
 	<input type="text" id="username" name="username" />
 
-	<label for="password">Mot de passe :</label>
+	<label for="password">Mot de passe :</label><br />
 	<input type="password" id="password" name="password" />
+
+	<br />
 
 	<button type="submit">Envoyer</button>
 </form>
@@ -142,11 +161,54 @@ l'aide de la balise `<option>`. Voici un exemple de champ `<select>` :
 </select>
 ```
 
+Chaque option a une valeur (`value`) qui sera envoyée au serveur lorsque le
+formulaire sera soumis. La valeur affichée à l'utilisateur est le texte entre la
+balise `<option>` et la balise de fermeture `</option>`.
+
+#### Champ `<textarea>`
+
+Le champ `<textarea>` est utilisé pour créer un champ de saisie de texte
+multiligne. Il permet à l'utilisateur de saisir de grandes quantités de texte.
+
+Voici un exemple de champ `<textarea>` :
+
+```html
+<textarea name="message" rows="4" cols="50">
+    Écrivez votre message ici...
+</textarea>
+```
+
+Le champ `<textarea>` peut inclure des attributs pour spécifier la taille du
+champ, tels que `rows` (nombre de lignes) et `cols` (nombre de colonnes).
+
+Il peut également être pré-rempli avec du texte par défaut en plaçant le texte
+entre la balise d'ouverture `<textarea>` et la balise de fermeture
+`</textarea>`.
+
+#### Champs `<button>`
+
+Le champ `<button>` est utilisé pour créer un bouton cliquable. Il peut être
+utilisé pour soumettre le formulaire ou effectuer d'autres actions.
+
+Voici quelques types de champs `<button>` courants :
+
+```html
+<!-- Ce bouton soumet le formulaire -->
+<button type="submit">Envoyer</button>
+
+<!-- Ce bouton réinitialise le formulaire -->
+<button type="reset">Réinitialiser</button>
+```
+
+Le bouton de type `submit` envoie les données du formulaire au serveur lorsque
+l'utilisateur clique dessus. Le bouton de type `reset` réinitialise tous les
+champs du formulaire à leurs valeurs par défaut.
+
 ### Attributs
 
 Les éléments de formulaire HTML peuvent avoir divers attributs qui permettent de
-personnaliser leur comportement et leur apparence. Voici quelques attributs
-courants que l'on peut utiliser avec les éléments de formulaire (entre autres) :
+personnaliser leur comportement. Voici quelques attributs courants que l'on peut
+utiliser avec les éléments de formulaire (entre autres) :
 
 - `name` : spécifie le nom du champ de formulaire. Ce nom est utilisé pour
   identifier le champ lors de l'envoi des données au serveur.
@@ -172,12 +234,13 @@ La documentation MDN fournit des informations détaillées sur les attributs des
 - [Champ `<label>`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/label)
 - [Champ `<fieldset>`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/fieldset)
 
-## Envoyer des données des formulaires
+## Envoyer les données des formulaires
 
 Lorsqu'un utilisateur remplit un formulaire et clique sur le bouton de
-soumission, les données saisies sont envoyées à un serveur pour traitement. Cela
-permet de collecter des informations, d'enregistrer des données dans une base de
-données ou d'effectuer d'autres actions en fonction des données saisies.
+soumission ( `<button type="submit">` ou `<input type="submit">`), les données
+saisies sont envoyées à un serveur pour traitement. Cela permet de collecter des
+informations, d'enregistrer des données dans une base de données ou d'effectuer
+d'autres actions en fonction des données saisies.
 
 ### URL d'action
 
@@ -199,10 +262,10 @@ Illustrons la différence entre ces deux méthodes à l'aide du formulaire suiva
 ```html
 <!-- La méthode peut être `GET` ou `POST` -->
 <form action="login.php" method="">
-	<label for="username">Pseudo : </label>
+	<label for="username">Pseudo : </label><br />
 	<input type="text" id="username" name="username" value="xXBestOf1400Xx" />
 
-	<label for="password">Mot de passe :</label>
+	<label for="password">Mot de passe :</label><br />
 	<input
 		type="password"
 		id="password"
@@ -255,11 +318,14 @@ Illustrons la différence entre ces deux méthodes à l'aide du formulaire suiva
   telles que l'envoi de données sensibles (comme des mots de passe) ou la
   soumission de formulaires contenant de grandes quantités de données.
 
-## Réception des données des formulaires
+## Réceptionner les données des formulaires
 
 Lorsque le formulaire est soumis, le serveur reçoit les données envoyées par
 l'utilisateur. Ces données peuvent être traitées de différentes manières selon
 la technologie utilisée côté serveur.
+
+Avec PHP par exemple, les données sont accessibles via les superglobales `$_GET`
+ou `$_POST`.
 
 ### Traitement des données à l'aide des superglobales PHP
 
@@ -267,8 +333,8 @@ Avec PHP par exemple, vous pouvez accéder aux données du formulaire en utilisa
 les superglobales `$_GET` ou `$_POST`, selon la méthode utilisée pour envoyer
 les données (`GET` ou `POST`).
 
-Ces superglobales contiennent des tableaux associatifs qui associent les noms
-des champs du formulaire aux valeurs soumises.
+Ces superglobales sont des tableaux associatifs qui associent les noms des
+champs (à l'aide de l'attribut `name`) du formulaire aux valeurs soumises.
 
 Vous pouvez ensuite utiliser ces données pour effectuer des opérations telles
 que l'insertion dans une base de données, l'envoi d'e-mails ou la génération de
@@ -289,12 +355,12 @@ la page `login.php` :
 <body>
     <h1>Se connecter</h1>
     <form action="login.php" method="POST">
-        <label for="username">Pseudo :</label>
+        <label for="username">Pseudo :</label><br>
         <input type="text" id="username" name="username" />
 
         <br>
 
-        <label for="password">Mot de passe :</label>
+        <label for="password">Mot de passe :</label><br>
         <input type="password" id="password" name="password" />
 
         <br>
@@ -367,8 +433,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <h1>Se connecter</h1>
-    <form action="02-login-form-with-saved-values.php" method="POST">
-        <label for="username">Pseudo :</label>
+    <form action="login.php" method="POST">
+        <label for="username">Pseudo :</label><br>
         <input
             type="text"
             id="username"
@@ -377,7 +443,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <br>
 
-        <label for="password">Mot de passe :</label>
+        <label for="password">Mot de passe :</label><br>
         <input
             type="password"
             id="password"
@@ -432,6 +498,7 @@ La validation des formulaires peut inclure des vérifications telles que :
 - Vérifier que les champs obligatoires sont remplis.
 - Vérifier que les données saisies respectent un format spécifique (par exemple,
   une adresse e-mail valide ou longueur minimale, etc.).
+- Etc.
 
 Voici un exemple de validation côté serveur en PHP :
 
@@ -479,7 +546,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <h1>Se connecter</h1>
     <form action="login.php" method="POST">
-        <label for="username">Pseudo :</label>
+        <label for="username">Pseudo :</label><br>
         <input
             type="text"
             id="username"
@@ -488,7 +555,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <br>
 
-        <label for="password">Mot de passe :</label>
+        <label for="password">Mot de passe :</label><br>
         <input
             type="password"
             id="password"
@@ -594,7 +661,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <h1>Se connecter</h1>
     <form action="login.php" method="POST">
-        <label for="username">Pseudo :</label>
+        <label for="username">Pseudo :</label><br>
         <input
             type="text"
             id="username"
@@ -605,7 +672,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <br>
 
-        <label for="password">Mot de passe :</label>
+        <label for="password">Mot de passe :</label><br>
         <input
             type="password"
             id="password"

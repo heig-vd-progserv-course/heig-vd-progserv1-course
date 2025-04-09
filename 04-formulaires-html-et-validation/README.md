@@ -14,7 +14,13 @@
 
 À l'issue de ce cours, les personnes qui étudient devraient être capables de :
 
-- TODO
+- Créer des formulaires HTML pour collecter des données utilisateur.
+- Envoyer des données de formulaires au serveur à l'aide de PHP.
+- Récupérer les données envoyées par le formulaire à l'aide de PHP.
+- Expliquer la différence entre les méthodes `GET` et `POST`.
+- Valider les données saisies par l'utilisateur côté serveur et côté client.
+- Afficher des messages d'erreur clairs en cas de validation échouée.
+- Pré-remplir les champs de formulaire avec les valeurs précédemment saisies.
 
 De plus, les personnes qui étudient devraient avoir pu :
 

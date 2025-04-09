@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <h1>Se connecter</h1>
     <form action="02-login-form-with-saved-values.php" method="POST">
-        <label for="username">Pseudo :</label>
+        <label for="username">Pseudo :</label><br>
         <input
             type="text"
             id="username"
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <br>
 
-        <label for="password">Mot de passe :</label>
+        <label for="password">Mot de passe :</label><br>
         <input
             type="password"
             id="password"
