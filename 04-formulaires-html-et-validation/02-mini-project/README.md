@@ -2223,7 +2223,7 @@ Essayez de rajouter la validation des données côté client pour le champ "Sexe
 Pour cela, vous devez ajouter l'attribut `required` sur le champ "Sexe".
 
 <details>
-<summary>Afficher la solution</details>
+<summary>Afficher la solution</summary>
 
 ```php
         <fieldset>
@@ -3485,6 +3485,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </html>
 ```
 
+</details>
+
 #### Validation des données côté client
 
 Il n'est pas nécessaire de rajouter la validation des données côté client pour
@@ -3554,6 +3556,170 @@ dans un tableau.
             </div>
         </fieldset>
 ```
+
+Votre fichier `create.php` devrait ressembler à ceci :
+
+```php
+
+<?php
+// Gère la soumission du formulaire
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $species = $_POST["species"];
+    $nickname = $_POST["nickname"];
+    $sex = $_POST["sex"];
+    $age = $_POST["age"];
+    $color = $_POST["color"];
+
+    // Par défaut, il n'y a pas d'erreurs
+    $errors = [];
+
+    // Validation des données
+    if (empty($name)) {
+        // On ajoute un message d'erreur au tableau
+        array_push($errors, "Le nom est obligatoire.");
+    }
+
+    if (strlen($name) < 2) {
+        // On ajoute un message d'erreur au tableau
+        array_push($errors, "Le nom doit contenir au moins 2 caractères.");
+    }
+
+    if (empty($species)) {
+        // On ajoute un message d'erreur au tableau
+        array_push($errors, "L'espèce est obligatoire.");
+    }
+
+    if (empty($sex)) {
+        // On ajoute un message d'erreur au tableau
+        array_push($errors, "Le sexe est obligatoire.");
+    }
+
+    if (empty($age)) {
+        // On ajoute un message d'erreur au tableau
+        array_push($errors, "L'âge est obligatoire.");
+    }
+
+    if (!is_numeric($age) || $age < 0) {
+        // On ajoute un message d'erreur au tableau
+        array_push($errors, "L'âge doit être un nombre entier positif.");
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Crée un nouvel animal de compagnie | Gestionnaire d'animaux de compagnie</title>
+</head>
+
+<body>
+    <h1>Crée un nouvel animal de compagnie</h1>
+    <p><a href="index.php">Retour à l'accueil</a></p>
+    <p>Utilise cette page pour créer un nouvel animal de compagnie.</p>
+
+    <?php if ($_SERVER["REQUEST_METHOD"] == "POST") { ?>
+        <?php if (empty($errors)) { ?>
+            <p style="color: green;">Le formulaire a été soumis avec succès !</p>
+        <?php } else { ?>
+            <p style="color: red;">Le formulaire contient des erreurs :</p>
+            <ul>
+                <?php foreach ($errors as $error) { ?>
+                    <li><?php echo $error; ?></li>
+                <?php } ?>
+            </ul>
+        <?php } ?>
+    <?php } ?>
+
+    <form action="create.php" method="POST">
+        <label for="name">Nom :</label><br>
+        <input type="text" id="name" name="name" value="<?php if (isset($name)) { echo $name; } ?>" required minlength="2">
+
+        <br>
+
+        <label for="species">Espèce :</label><br>
+        <select id="species" name="species" required>
+            <option value="dog" <?php if (isset($species) && $species == "dog") echo "selected"; ?>>Chien</option>
+            <option value="cat" <?php if (isset($species) && $species == "cat") echo "selected"; ?>>Chat</option>
+            <option value="lizard" <?php if (isset($species) && $species == "lizard") echo "selected"; ?>>Lézard</option>
+            <option value="snake" <?php if (isset($species) && $species == "snake") echo "selected"; ?>>Serpent</option>
+            <option value="bird" <?php if (isset($species) && $species == "bird") echo "selected"; ?>>Oiseau</option>
+            <option value="rabbit" <?php if (isset($species) && $species == "rabbit") echo "selected"; ?>>Lapin</option>
+            <option value="other" <?php if (isset($species) && $species == "other") echo "selected"; ?>>Autre</option>
+        </select>
+
+        <br>
+
+        <label for="nickname">Surnom :</label><br>
+        <input type="text" id="nickname" name="nickname" value="<?php if (isset($nickname)) echo $nickname; ?>" />
+
+        <fieldset>
+            <legend>Sexe :</legend>
+
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <label for="male">Mâle</label><br>
+
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <label for="female">Femelle</label>
+        </fieldset>
+
+        <br>
+
+        <label for="age">Âge :</label><br>
+        <input type="number" id="age" name="age" value="<?php if (isset($age)) echo $age; ?>" required min="0" />
+
+        <br>
+
+        <label for="color">Couleur :</label><br>
+        <input type="color" id="color" name="color" value="<?php if (isset($color)) echo $color; ?>" />
+
+        <fieldset>
+            <legend>Personnalité :</legend>
+
+            <div>
+                <input type="checkbox" id="gentil" name="personalities[]" value="gentil" />
+                <label for="gentil">Gentil</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="playful" name="personalities[]" value="playful" />
+                <label for="playful">Joueur</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="curious" name="personalities[]" value="curious" />
+                <label for="curious">Curieux</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="lazy" name="personalities[]" value="lazy" />
+                <label for="lazy">Paresseux</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="scared" name="personalities[]" value="scared" />
+                <label for="scared">Peureux</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="aggressive" name="personalities[]" value="aggressive" />
+                <label for="aggressive">Agressif</label>
+            </div>
+        </fieldset>
+
+        <br>
+        <br>
+
+        <button type="submit">Créer</button><br>
+        <button type="reset">Réinitialiser</button>
+    </form>
+</body>
+
+</html>
+```
+
+</details>
 
 #### Réception des données côté serveur
 
