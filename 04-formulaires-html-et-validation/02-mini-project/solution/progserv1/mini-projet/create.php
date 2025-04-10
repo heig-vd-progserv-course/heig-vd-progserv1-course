@@ -318,7 +318,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <br>
 
-        <button type="submit">Créer</button>
+        <button type="submit">Créer</button><br>
+        <button type="reset">Réinitialiser</button>
     </form>
 </body>
 
