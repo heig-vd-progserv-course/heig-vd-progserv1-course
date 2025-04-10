@@ -5710,7 +5710,7 @@ Pour le moment, le formulaire est très basique. Vous pouvez améliorer
 l'interface en ajoutant des styles CSS.
 
 Pour ce faire, nous allons ajouter les styles CSS dans la balise `<head>` de
-notre page HTML:
+notre page HTML :
 
 ```php
     <style>
@@ -6094,6 +6094,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </html>
 ```
+
+Vous pouvez maintenant tester votre formulaire en l'ouvrant dans votre
+navigateur à l'adresse <http://localhost/progserv1/mini-projet/create.php>.
+
+Vous devriez voir un formulaire avec des styles CSS appliqués.
 
 ## Solution
 
