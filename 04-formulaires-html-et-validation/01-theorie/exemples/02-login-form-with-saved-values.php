@@ -38,8 +38,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
 
     <?php
-    echo "Le nom d'utilisateur est : " . $username . "<br>";
-    echo "Le mot de passe est : " . $password . "<br>";
+    // Gère la soumission du formulaire
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+        echo "Le nom d'utilisateur est : " . $username . "<br>";
+        echo "Le mot de passe est : " . $password . "<br>";
+    }
     ?>
 
 </body>

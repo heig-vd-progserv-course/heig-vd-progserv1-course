@@ -42,7 +42,7 @@ _paginate: false
 _Cette présentation est un résumé du support de cours. Pour plus de détails,
 consultez le [support de cours][course-material]._
 
-## Objectifs (1/3)
+## Objectifs (1/2)
 
 - Créer des formulaires HTML pour collecter des données utilisateur.
 - Envoyer des données de formulaires au serveur à l'aide de PHP.
