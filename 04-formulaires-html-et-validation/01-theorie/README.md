@@ -21,9 +21,9 @@
 - [Envoyer les données des formulaires](#envoyer-les-données-des-formulaires)
   - [URL d'action](#url-daction)
   - [Méthodes `GET` et `POST`](#méthodes-get-et-post)
-- [Réception des données des formulaires](#réception-des-données-des-formulaires)
+- [Réceptionner les données des formulaires](#réceptionner-les-données-des-formulaires)
   - [Traitement des données à l'aide des superglobales PHP](#traitement-des-données-à-laide-des-superglobales-php)
-  - [Sauvegarde des données saisies](#sauvegarde-des-données-saisies)
+  - [Conservation des données saisies](#conservation-des-données-saisies)
 - [Validation des formulaires](#validation-des-formulaires)
   - [Côté serveur](#côté-serveur)
   - [Côté client](#côté-client)
@@ -402,7 +402,7 @@ superglobale `$_POST`.
 Ensuite, il affiche un message de bienvenue avec le prénom et le nom de
 l'utilisateur qui aura été saisi dans le formulaire.
 
-### Sauvegarde des données saisies
+### Conservation des données saisies
 
 Lors de la soumission du formulaire, les données saisies par l'utilisateur sont
 perdues.
@@ -411,8 +411,8 @@ Afin de conserver les valeurs saisies par l'utilisateur et améliorer
 l'expérience utilisateur, il est possible de pré-remplir les champs du
 formulaire avec les valeurs précédemment saisies.
 
-Voici un exemple de code PHP qui sauvegarde des valeurs saisies par
-l'utilisateur :
+Voici un exemple de code PHP qui conserve des valeurs saisies par l'utilisateur
+:
 
 ```php
 <?php
