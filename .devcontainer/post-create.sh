@@ -25,6 +25,3 @@ sudo ln -s /workspace /var/www/html
 
 # Allow directory listing
 sudo sed -i 's/Options -Indexes/Options +Indexes/' /etc/apache2/conf-available/docker-php.conf
-
-# Start Apache server
-sudo service apache2 start
