@@ -69,6 +69,7 @@ Pour rappel, le formulaire sera composé de plusieurs champs :
 - Créer un formulaire HTML permettant de créer un nouvel animal de compagnie
 - Valider les données du formulaire côté serveur
 - Afficher les erreurs de validation
+- Conserver les données saisies en cas d'erreur de validation
 - Valider les données du formulaire côté client
 
 ## Mise en place du formulaire
