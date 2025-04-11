@@ -79,7 +79,7 @@ consultez le [support de cours][course-material]._
 
 ![bg right:40%][illustration-les-tableaux]
 
-### Tableaux indexés (1/6)
+### Tableaux indexés (1/7)
 
 - Forme la plus simple de tableau.
 - Les valeurs sont indexées par des entiers.
@@ -89,7 +89,7 @@ consultez le [support de cours][course-material]._
 
 ![bg right:40%][illustration-tableaux-indexes]
 
-### Tableaux indexés (2/6)
+### Tableaux indexés (2/7)
 
 ```php
 <?php
@@ -101,7 +101,7 @@ echo $fruits[2] . "<br>"; // Affiche 'orange'
 echo $fruits[3] . "<br>"; // Affiche 'kiwi'
 ```
 
-### Tableaux indexés (3/6)
+### Tableaux indexés (3/7)
 
 ```java
 public class Main {
@@ -116,7 +116,7 @@ public class Main {
 }
 ```
 
-### Tableaux indexés (4/6)
+### Tableaux indexés (4/7)
 
 Ce tableau indexé peut être représenté sous la forme d'une table, composée de
 paires de clé-valeur :
@@ -128,7 +128,7 @@ paires de clé-valeur :
 | `2`   | `'orange'` |
 | `3`   | `'kiwi'`   |
 
-### Tableaux indexés (5/6)
+### Tableaux indexés (5/7)
 
 ```php
 <?php
@@ -147,7 +147,7 @@ echo $mixed[3] . "<br>"; // Affiche 3.14
 // contenant des types différents en Java.
 ```
 
-### Tableaux indexés (6/6)
+### Tableaux indexés (6/7)
 
 Imaginons maintenant que nous souhaitons représenter une personne à l'aide d'un
 tableau indexé. Nous pourrions créer un tableau `$person` qui contient le nom,
@@ -175,7 +175,7 @@ paires de clé-valeur :
 
 Ce n'est pas très intuitif... Solution : les tableaux associatifs.
 
-### Tableaux associatifs (1/3)
+### Tableaux associatifs (1/4)
 
 - Les valeurs sont indexées par des chaînes de caractères, appelées _clés_.
 - Les clés peuvent être de n'importe quel type et peuvent être complètement
@@ -184,7 +184,7 @@ Ce n'est pas très intuitif... Solution : les tableaux associatifs.
 
 ![bg right:40%][illustration-tableaux-associatifs]
 
-### Tableaux associatifs (2/3)
+### Tableaux associatifs (2/4)
 
 ```php
 <?php
@@ -201,7 +201,20 @@ echo $person['age'] . "<br>"; // Affiche 30
 echo $person['city'] . "<br>"; // Affiche 'New York'
 ```
 
-### Tableaux associatifs (3/3)
+### Tableaux associatifs (3/4)
+
+Ce tableau associatif peut être représenté sous la forme d'une table, composée
+de paires de clé-valeur :
+
+| Clé    | Valeur       |
+| ------ | ------------ |
+| `name` | `'John Doe'` |
+| `age`  | `30`         |
+| `city` | `'New York'` |
+
+Plus intuitif que le tableau indexé !
+
+### Tableaux associatifs (4/4)
 
 ```java
 // Équivalent en Java
