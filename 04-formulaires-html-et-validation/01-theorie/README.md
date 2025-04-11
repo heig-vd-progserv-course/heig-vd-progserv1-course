@@ -281,9 +281,9 @@ Illustrons la différence entre ces deux méthodes à l'aide du formulaire suiva
   HTTP.
 
   Par exemple, si une personne soumet un formulaire avec la méthode `GET`, les
-  données seront envoyées à l'URL `form.php` avec les paramètres `username` et
+  données seront envoyées à l'URL `login.php` avec les paramètres `username` et
   `password` :
-  `http://localhost/form.php?userid=xXBestOf1400Xx&password=m0n-sup3r-m0t-de-p4asse`.
+  `http://localhost/login.php?userid=xXBestOf1400Xx&password=m0n-sup3r-m0t-de-p4asse`.
 
   Les données sont ajoutées à l'URL après le point d'interrogation (`?`) et sont
   séparées par des esperluettes (`&`) si plusieurs champs sont présents.
@@ -305,7 +305,7 @@ Illustrons la différence entre ces deux méthodes à l'aide du formulaire suiva
   En reprenant l'exemple précédent, si une personne soumet un formulaire avec la
   méthode `POST`, les données ne seront pas visibles dans l'URL. Au lieu de
   cela, elles seront envoyées dans le corps de la requête HTTP : l'URL de la
-  requête ressemblera à ceci : `http://localhost/form.php`, et les données
+  requête ressemblera à ceci : `http://localhost/login.php`, et les données
   seront envoyées dans le corps de la requête.
 
   Cela signifie que les données sont envoyées de manière plus sécurisée, car

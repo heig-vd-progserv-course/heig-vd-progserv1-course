@@ -160,10 +160,11 @@ consultez le [support de cours][course-material]._
 
 #### Champs `<button>` (1/2)
 
-- Champ de saisie de texte multiligne.
-- Utilisé pour des commentaires, des messages, etc.
-- Défini à l'aide de la balise `<textarea>`.
-- Peut inclure des attributs pour spécifier la taille, le nombre de lignes, etc.
+- Boutons pour soumettre ou réinitialiser le formulaire.
+- Défini à l'aide de la balise `<button>`.
+- Peut inclure des attributs pour spécifier le type de bouton (`submit`,
+  `reset`, etc.).
+- Peut contenir du texte ou des images.
 
 ![bg right:40%][illustration-formulaires-html]
 
@@ -259,7 +260,7 @@ serveur. Il existe deux méthodes principales :
 Les données sont ajoutées à l'URL de la requête, séparées par un `?` et des `&`
 :
 
-`http://localhost/form.php?userid=xXBestOf1400Xx&password=m0n-sup3r-m0t-de-p4asse`
+`http://localhost/login.php?userid=xXBestOf1400Xx&password=m0n-sup3r-m0t-de-p4asse`
 
 Problème de sécurité...
 
@@ -269,7 +270,7 @@ Problème de sécurité...
 
 Les données sont envoyées dans le corps de la requête :
 
-`http://localhost/form.php`
+`http://localhost/login.php`
 
 Les données ne sont plus visibles dans l'URL.
 

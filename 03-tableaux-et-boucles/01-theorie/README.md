@@ -186,7 +186,7 @@ pour accéder à ces données de manière séquentielle.
 > ```
 >
 > Ce tableau indexé peut être représenté sous la forme d'une table, composée de
-> paires de clé-valeur :
+> paires d'index-valeur :
 >
 > | Index | Valeur       |
 > | ----- | ------------ |
