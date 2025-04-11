@@ -1,6 +1,10 @@
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];

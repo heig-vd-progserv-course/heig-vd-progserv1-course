@@ -42,7 +42,7 @@ _paginate: false
 _Cette présentation est un résumé du support de cours. Pour plus de détails,
 consultez le [support de cours][course-material]._
 
-## Objectifs (1/3)
+## Objectifs (1/2)
 
 - Créer des formulaires HTML pour collecter des données utilisateur.
 - Envoyer des données de formulaires au serveur à l'aide de PHP.
@@ -390,7 +390,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <h1>Se connecter</h1>
-    <form action="02-login-form-with-saved-values.php" method="POST">
+    <form action="login.php" method="POST">
         <label for="username">Pseudo :</label><br>
         <input
             type="text"
@@ -414,16 +414,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <button type="submit">Envoyer</button>
     </form>
-
-    <?php
-    echo "Le nom d'utilisateur est : " . $username . "<br>";
-    echo "Le mot de passe est : " . $password . "<br>";
-    ?>
 ```
 
 ---
 
 ```php
+    <?php
+    // Gère la soumission du formulaire
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+        echo "Le nom d'utilisateur est : " . $username . "<br>";
+        echo "Le mot de passe est : " . $password . "<br>";
+    }
+    ?>
 </body>
 
 </html>
