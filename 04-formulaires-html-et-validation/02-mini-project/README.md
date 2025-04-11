@@ -31,7 +31,6 @@ _[Cours 04 - Formulaires HTML et validation](../01-theorie/README.md)_.
   - [Conservation des données saisies](#conservation-des-données-saisies)
   - [Validation des données côté client](#validation-des-données-côté-client)
   - [Contourner la validation côté client](#contourner-la-validation-côté-client)
-  - [Désactiver l'affichage des valeurs des champs](#désactiver-laffichage-des-valeurs-des-champs)
 - [Mise en place des autres champs](#mise-en-place-des-autres-champs)
   - [Ajout du champ espèce](#ajout-du-champ-espèce)
   - [Ajout du champ surnom](#ajout-du-champ-surnom)
@@ -228,21 +227,27 @@ code suivant au début de votre fichier `create.php` :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["name"];
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
 
-    echo "Valeur du champ nom : $name<br>";
+    // Récupération des données du formulaire
+    $name = $_POST["name"];
 }
 ?>
 ```
 
 Le code `$_SERVER["REQUEST_METHOD"]` permet de vérifier la méthode de la requête
 HTTP utilisée pour accéder à la page. Si la méthode est `POST`, cela signifie
-que le formulaire a été soumis. Dans ce cas, le code récupère la valeur du champ
-"Nom" à l'aide de `$_POST["name"]` et l'affiche à l'écran.
+que le formulaire a été soumis. Dans ce cas, le code affiche le contenu de la
+variable `$_POST`, qui contient les données envoyées par le formulaire. Pour
+rappel, la fonction
+[`var_dump()`](https://www.php.net/manual/fr/function.var-dump.php) permet
+d'afficher le contenu d'une variable avec tous ses détails pour mieux comprendre
+sa structure.
 
-Pour le moment, le code ne fait que récupérer la valeur du champ "Nom" et
-l'afficher à l'écran. Nous allons ajouter la validation des données et
-l'affichage des erreurs de validation dans les sections suivantes.
+Pour le moment, le code ne fait que récupérer la valeur du champ "Nom". Nous
+allons ajouter la validation des données et l'affichage des erreurs de
+validation dans les sections suivantes.
 
 Votre page `create.php` devrait ressembler à ceci :
 
@@ -250,9 +255,11 @@ Votre page `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["name"];
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
 
-    echo "Valeur du champ nom : $name<br>";
+    // Récupération des données du formulaire
+    $name = $_POST["name"];
 }
 ?>
 
@@ -313,9 +320,11 @@ Ajoutez le code suivant à la suite de la récupération de la valeur du champ
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["name"];
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
 
-    echo "Valeur du champ nom : $name<br>";
+    // Récupération des données du formulaire
+    $name = $_POST["name"];
 
     // Par défaut, il n'y a pas d'erreurs
     $errors = [];
@@ -353,9 +362,11 @@ Votre page `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["name"];
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
 
-    echo "Valeur du champ nom : $name<br>";
+    // Récupération des données du formulaire
+    $name = $_POST["name"];
 
     // Par défaut, il n'y a pas d'erreurs
     $errors = [];
@@ -432,9 +443,11 @@ Votre page `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["name"];
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
 
-    echo "Valeur du champ nom : $name<br>";
+    // Récupération des données du formulaire
+    $name = $_POST["name"];
 
     // Par défaut, il n'y a pas d'erreurs
     $errors = [];
@@ -536,9 +549,11 @@ Votre page `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["name"];
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
 
-    echo "Valeur du champ nom : $name<br>";
+    // Récupération des données du formulaire
+    $name = $_POST["name"];
 
     // Par défaut, il n'y a pas d'erreurs
     $errors = [];
@@ -654,9 +669,11 @@ Votre page `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["name"];
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
 
-    echo "Valeur du champ nom : $name<br>";
+    // Récupération des données du formulaire
+    $name = $_POST["name"];
 
     // Par défaut, il n'y a pas d'erreurs
     $errors = [];
@@ -739,85 +756,6 @@ développement de votre navigateur.
    et cliquez sur le bouton "Créer". Vous devriez voir les messages d'erreur
    affichés à l'écran.
 
-### Désactiver l'affichage des valeurs des champs
-
-Maintenant que tout le processus de validation est en place, nous allons
-désactiver l'affichage des valeurs des champs dans le code HTML.
-
-Il suffit pour cela de supprimer la ligne suivante :
-
-```php
-    echo "Valeur du champ nom : $name<br>";
-```
-
-Cette ligne n'est pas nécessaire pour le fonctionnement du formulaire et affiche
-la valeur du champ "Nom" à l'écran. Elle peut être supprimée pour rendre le code
-plus propre.
-
-Votre page `create.php` devrait ressembler à ceci :
-
-```php
-<?php
-// Gère la soumission du formulaire
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["name"];
-
-    // Par défaut, il n'y a pas d'erreurs
-    $errors = [];
-
-    // Validation des données
-    if (empty($name)) {
-        // On ajoute un message d'erreur au tableau
-        array_push($errors, "Le nom est obligatoire.");
-    }
-
-    if (strlen($name) < 2) {
-        // On ajoute un message d'erreur au tableau
-        array_push($errors, "Le nom doit contenir au moins 2 caractères.");
-    }
-}
-?>
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Crée un nouvel animal de compagnie | Gestionnaire d'animaux de compagnie</title>
-</head>
-
-<body>
-    <h1>Crée un nouvel animal de compagnie</h1>
-    <p><a href="index.php">Retour à l'accueil</a></p>
-    <p>Utilise cette page pour créer un nouvel animal de compagnie.</p>
-
-    <?php if ($_SERVER["REQUEST_METHOD"] == "POST") { ?>
-        <?php if (empty($errors)) { ?>
-            <p style="color: green;">Le formulaire a été soumis avec succès !</p>
-        <?php } else { ?>
-            <p style="color: red;">Le formulaire contient des erreurs :</p>
-            <ul>
-                <?php foreach ($errors as $error) { ?>
-                    <li><?php echo $error; ?></li>
-                <?php } ?>
-            </ul>
-        <?php } ?>
-    <?php } ?>
-
-    <form action="create.php" method="POST">
-        <label for="name">Nom :</label><br>
-        <input type="text" id="name" name="name" value="<?php if (isset($name)) { echo $name; } ?>" required minlength="2">
-
-        <br>
-        <br>
-
-        <button type="submit">Créer</button><br>
-        <button type="reset">Réinitialiser</button>
-    </form>
-</body>
-
-</html>
-```
-
 ## Mise en place des autres champs
 
 Dans cette section, nous allons créer les autres champs du formulaire. Le
@@ -874,6 +812,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
 
     // Par défaut, il n'y a pas d'erreurs
@@ -952,6 +894,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 Essayez de rajouter la réception des données côté serveur pour le champ
 "Espèce".
 
+Vous pouvez maintenant tester votre formulaire en l'ouvrant dans votre
+navigateur à l'adresse <http://localhost/progserv1/mini-projet/create.php>.
+
+Vous devriez voir la valeur du champ affichée à l'écran.
+
 <details>
 <summary>Afficher la solution</summary>
 
@@ -965,6 +912,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
 
@@ -1064,6 +1015,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
 
@@ -1184,6 +1139,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
 
@@ -1292,6 +1251,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
 
@@ -1397,6 +1360,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
 
@@ -1486,6 +1453,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 Essayez de rajouter la réception des données côté serveur pour le champ
 "Surnom".
 
+Vous pouvez maintenant tester votre formulaire en l'ouvrant dans votre
+navigateur à l'adresse <http://localhost/progserv1/mini-projet/create.php>.
+
+Vous devriez voir la valeur du champ affichée à l'écran.
+
 <details>
 <summary>Afficher la solution</summary>
 
@@ -1499,6 +1471,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -1617,6 +1593,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -1741,6 +1721,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -1840,6 +1824,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 Essayez de rajouter la réception des données côté serveur pour le champ "Sexe".
 
+Vous pouvez maintenant tester votre formulaire en l'ouvrant dans votre
+navigateur à l'adresse <http://localhost/progserv1/mini-projet/create.php>.
+
+Vous devriez voir la valeur du champ affichée à l'écran.
+
 <details>
 <summary>Afficher la solution</summary>
 
@@ -1853,6 +1842,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -1973,6 +1966,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -2113,6 +2110,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -2244,6 +2245,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -2371,6 +2376,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -2481,6 +2490,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 Essayez de rajouter la réception des données côté serveur pour le champ "Âge".
 
+Vous pouvez maintenant tester votre formulaire en l'ouvrant dans votre
+navigateur à l'adresse <http://localhost/progserv1/mini-projet/create.php>.
+
+Vous devriez voir la valeur du champ affichée à l'écran.
+
 <details>
 <summary>Afficher la solution</summary>
 
@@ -2494,6 +2508,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -2640,6 +2658,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -2785,6 +2807,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -2926,6 +2952,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -3069,6 +3099,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -3196,6 +3230,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 Essayez de rajouter la réception des données côté serveur pour le champ
 "Couleur".
 
+Vous pouvez maintenant tester votre formulaire en l'ouvrant dans votre
+navigateur à l'adresse <http://localhost/progserv1/mini-projet/create.php>.
+
+Vous devriez voir la valeur du champ affichée à l'écran.
+
 <details>
 <summary>Afficher la solution</summary>
 
@@ -3205,9 +3244,14 @@ Essayez de rajouter la réception des données côté serveur pour le champ
 
 Votre fichier `create.php` devrait ressembler à ceci :
 
-```php<?php
+```php
+<?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -3365,6 +3409,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -3565,6 +3613,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -3727,6 +3779,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 Essayez de rajouter la réception des données côté serveur pour le champ
 "Personnalité".
 
+**Note** : vous devez vérifier si la variable `$_POST["personalities"]` existe
+avant de l'utiliser. En effet, si l'utilisateur ne coche aucune case, la
+variable `$_POST["personalities"]` n'existera pas et nous aurons une erreur PHP
+sinon.
+
+Si la variable `$_POST["personalities"]` n'existe pas, nous initialisons la
+variable `$personalities` à un tableau vide.
+
+Vous pouvez maintenant tester votre formulaire en l'ouvrant dans votre
+navigateur à l'adresse <http://localhost/progserv1/mini-projet/create.php>.
+
+Vous devriez voir la valeur du champ affichée à l'écran.
+
+Vous devriez remarquer que la valeur du champ "Personnalité" est un tableau.
+Cela est possible grâce au nom `personalities[]`. Cela permet de récupérer les
+valeurs des cases à cocher dans un tableau.
+
 <details>
 <summary>Afficher la solution</summary>
 
@@ -3740,6 +3809,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -3965,6 +4038,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -4155,6 +4232,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -4323,6 +4404,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 Essayez de rajouter la réception des données côté serveur pour le champ
 "Taille".
 
+Vous pouvez maintenant tester votre formulaire en l'ouvrant dans votre
+navigateur à l'adresse <http://localhost/progserv1/mini-projet/create.php>.
+
+Vous devriez voir la valeur du champ affichée à l'écran.
+
 <details>
 <summary>Afficher la solution</summary>
 
@@ -4336,6 +4422,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -4534,6 +4624,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -4731,6 +4825,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -4928,6 +5026,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -5124,6 +5226,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -5302,6 +5408,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 Essayez de rajouter la réception des données côté serveur pour le champ "Notes".
 
+Vous pouvez maintenant tester votre formulaire en l'ouvrant dans votre
+navigateur à l'adresse <http://localhost/progserv1/mini-projet/create.php>.
+
+Vous devriez voir la valeur du champ affichée à l'écran.
+
 <details>
 <summary>Afficher la solution</summary>
 
@@ -5315,6 +5426,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -5523,6 +5638,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -5821,6 +5940,10 @@ Votre fichier `create.php` devrait ressembler à ceci :
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Le contenu de la variable `\$_POST` est : ";
+    var_dump($_POST);
+
+    // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
