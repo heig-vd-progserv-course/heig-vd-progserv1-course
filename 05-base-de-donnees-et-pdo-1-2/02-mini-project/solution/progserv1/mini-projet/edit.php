@@ -1,10 +1,34 @@
 <?php
-// Gère la soumission du formulaire
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo "Le contenu de la variable `\$_POST` est : ";
-    var_dump($_POST);
+require 'functions.php';
+
+// On vérifie si l'ID de l'animal est passé dans l'URL
+if (isset($_GET["id"])) {
+    $petId = $_GET["id"];
+
+    // On récupère l'animal correspondant à l'ID
+    $pet = getPet($petId);
+
+    // Si l'animal n'existe pas, on redirige vers la page d'accueil
+    if (!$pet) {
+        header("Location: index.php");
+    } else {
+        // Sinon, on initialise les variables
+        $id = $pet['id'];
+        $name = $pet['name'];
+        $species = $pet['species'];
+        $nickname = $pet['nickname'];
+        $sex = $pet['sex'];
+        $age = $pet['age'];
+        $color = $pet['color'];
+        $personalities = $pet['personalities'];
+        $size = $pet['size'];
+        $notes = $pet['notes'];
+    }
+} else if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Gère la soumission du formulaire
 
     // Récupération des données du formulaire
+    $id = $_POST["id"];
     $name = $_POST["name"];
     $species = $_POST["species"];
     $nickname = $_POST["nickname"];
@@ -53,14 +77,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // On ajoute un message d'erreur au tableau
         array_push($errors, "La taille doit être un nombre entier positif.");
     }
+
+    // Si le formulaire est valide, on met à jour l'animal
+    if (empty($errors)) {
+        // On ajoute l'animal à la base de données
+        $success = updatePet(
+            $id,
+            $name,
+            $species,
+            $nickname,
+            $sex,
+            $age,
+            $color,
+            $personalities,
+            $size,
+            $notes
+        );
+
+        // On vérifie si la mise à jour a réussi
+        if ($success) {
+            // On redirige vers la page de l'animal modifié
+            header("Location: view.php?id=$id");
+        } else {
+            // Si la mise à jour a échoué, on affiche un message d'erreur
+            $errors[] = "La mise à jour a échoué.";
+        }
+    }
+} else {
+    // Si l'ID n'est pas passé dans l'URL, on redirige vers la page d'accueil
+    header("Location: index.php");
 }
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
-    <title>Crée un nouvel animal de compagnie | Gestionnaire d'animaux de compagnie</title>
+    <title>Modifie un animal de compagnie | Gestionnaire d'animaux de compagnie</title>
 
     <style>
         body {
@@ -165,9 +218,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-    <h1>Crée un nouvel animal de compagnie</h1>
+    <h1>Modifie un animal de compagnie</h1>
     <p><a href="index.php">Retour à l'accueil</a></p>
-    <p>Utilise cette page pour créer un nouvel animal de compagnie.</p>
+    <p>Utilise cette page pour modifier un animal de compagnie.</p>
 
     <?php if ($_SERVER["REQUEST_METHOD"] == "POST") { ?>
         <?php if (empty($errors)) { ?>
@@ -182,7 +235,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php } ?>
     <?php } ?>
 
-    <form action="create.php" method="POST">
+    <form action="edit.php" method="POST">
+        <input type="hidden" name="id" value="<?= $pet["id"] ?>" />
+
         <label for="name">Nom :</label><br>
         <input type="text" id="name" name="name" value="<?php if (isset($name)) echo $name; ?>" required minlength="2">
 
@@ -228,32 +283,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <legend>Personnalité :</legend>
 
             <div>
-                <input type="checkbox" id="gentil" name="personalities[]" value="gentil" <?php echo (isset($personalities) && in_array("gentil", $personalities)) ? 'checked' : ''; ?> />
+                <input type="checkbox" id="gentil" name="personalities[]" value="gentil" <?php echo (!empty($personalities) && in_array("gentil", $personalities)) ? 'checked' : ''; ?> />
                 <label for="gentil">Gentil</label>
             </div>
 
             <div>
-                <input type="checkbox" id="playful" name="personalities[]" value="playful" <?php echo (isset($personalities) && in_array("playful", $personalities)) ? 'checked' : ''; ?> />
+                <input type="checkbox" id="playful" name="personalities[]" value="playful" <?php echo (!empty($personalities) && in_array("playful", $personalities)) ? 'checked' : ''; ?> />
                 <label for="playful">Joueur</label>
             </div>
 
             <div>
-                <input type="checkbox" id="curious" name="personalities[]" value="curious" <?php echo (isset($personalities) && in_array("curious", $personalities)) ? 'checked' : ''; ?> />
+                <input type="checkbox" id="curious" name="personalities[]" value="curious" <?php echo (!empty($personalities) && in_array("curious", $personalities)) ? 'checked' : ''; ?> />
                 <label for="curious">Curieux</label>
             </div>
 
             <div>
-                <input type="checkbox" id="lazy" name="personalities[]" value="lazy" <?php echo (isset($personalities) && in_array("lazy", $personalities)) ? 'checked' : ''; ?> />
+                <input type="checkbox" id="lazy" name="personalities[]" value="lazy" <?php echo (!empty($personalities) && in_array("lazy", $personalities)) ? 'checked' : ''; ?> />
                 <label for="lazy">Paresseux</label>
             </div>
 
             <div>
-                <input type="checkbox" id="scared" name="personalities[]" value="scared" <?php echo (isset($personalities) && in_array("scared", $personalities)) ? 'checked' : ''; ?> />
+                <input type="checkbox" id="scared" name="personalities[]" value="scared" <?php echo (!empty($personalities) && in_array("scared", $personalities)) ? 'checked' : ''; ?> />
                 <label for="scared">Peureux</label>
             </div>
 
             <div>
-                <input type="checkbox" id="aggressive" name="personalities[]" value="aggressive" <?php echo (isset($personalities) && in_array("aggressive", $personalities)) ? 'checked' : ''; ?> />
+                <input type="checkbox" id="aggressive" name="personalities[]" value="aggressive" <?php echo (!empty($personalities) && in_array("aggressive", $personalities)) ? 'checked' : ''; ?> />
                 <label for="aggressive">Agressif</label>
             </div>
         </fieldset>
@@ -271,9 +326,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
         <br>
 
-        <button type="submit">Créer</button><br>
+        <button type="submit">Mettre à jour</button><br>
         <button type="reset">Réinitialiser</button>
     </form>
 </body>
 
 </html>
+
+</head>

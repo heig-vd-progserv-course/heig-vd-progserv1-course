@@ -6,7 +6,8 @@
 - [Avant l'unité d'enseignement](#avant-lunité-denseignement)
   - [Message envoyé aux personnes qui étudient avant le premier cours](#message-envoyé-aux-personnes-qui-étudient-avant-le-premier-cours)
 - [Pendant l'unité d'enseignement](#pendant-lunité-denseignement)
-  - [Message envoyé aux personnes qui étudient avant le matin du premier cours](#message-envoyé-aux-personnes-qui-étudient-avant-le-matin-du-premier-cours)
+  - [Formulaire de retours sur Framaform](#formulaire-de-retours-sur-framaform)
+  - [Message envoyé aux personnes qui étudient avant chaque cours](#message-envoyé-aux-personnes-qui-étudient-avant-chaque-cours)
 - [Context pour des outils AI](#context-pour-des-outils-ai)
 
 ## Avant l'unité d'enseignement
@@ -34,7 +35,75 @@ Ludovic Delafontaine
 
 ## Pendant l'unité d'enseignement
 
-### Message envoyé aux personnes qui étudient avant le matin du premier cours
+### Formulaire de retours sur Framaform
+
+> [!TIP]
+>
+> Pour dupliquer un formulaire, il suffit de cliquer sur le bouton
+> **"Partager"**, puis accéder au lien pour cloner le formulaire.
+
+#### Titre
+
+ProgServ1 2024-2025 - Feedback
+
+#### Description
+
+Ce questionnaire de quelques minutes nous permet de savoir comment vous avez
+vécu le cours jusqu'ici et si une aide supplémentaire est nécessaire.
+
+Il est important pour nous de savoir ce que vous en pensez, car cela nous aide à
+améliorer le cours et à mieux répondre à vos besoins.
+
+Toutes les données sont anonymes et elles ne sont utilisées que pour améliorer
+le cours.
+
+Merci pour votre collaboration !
+
+#### Questions
+
+- Le cours est (boutons radio)
+  - Trop théorique
+  - Adapté
+  - Trop pratique
+- Le rythme du cours est (boutons radio)
+  - Trop lent
+  - Adapté
+  - Trop rapide
+- Les mini-projets sont (boutons radio)
+  - Trop simples
+  - Adaptés
+  - Trop complexes
+- Les exercices sont (boutons radio)
+  - Trop simples
+  - Adaptés
+  - Trop complexes
+- J'ai l'impression d'avoir appris des éléments qui me seront utiles dans ma
+  formation et pour mon futur (boutons radio)
+  - Non
+  - Plutôt non
+  - Plutôt oui
+  - Oui
+- J'ai eu des difficultés à comprendre les sujets suivants (cases à cocher)
+  - Introduction à PHP
+  - Fonctions
+  - Tableaux et boucles
+  - Formulaires HTML et validation
+  - Base de données et PDO
+  - Programmation orientée objet
+  - Gestion des cookies et sessions utilisateurs
+- J'aurais le souhait d'avoir un ou des cours d'appui (cases à cocher)
+  - Option : J'aurais le souhait d'avoir un ou des cours d'appui
+  - Description : Si nous voyons qu'il y a des personnes intéressées, une date
+    sera fixée prochainement avec l'aide de Daniela et une invitation par e-mail
+    vous sera envoyée.
+- J'ai moins apprécié et je propose... (zone de texte)
+- J'ai particulièrement apprécié... (zone de texte)
+- Autres remarques et commentaires (zone de texte)
+  - Description: Sentez-vous libre d'exprimer votre ressenti pour le cours. Si
+    celui-ci vous a déplu, n'hésitez pas à nous le faire savoir pour que nous
+    puissions faire mieux dans le futur.
+
+### Message envoyé aux personnes qui étudient avant chaque cours
 
 ```text
 [ProgServ1 2024-2025] Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP
@@ -42,6 +111,36 @@ Ludovic Delafontaine
 Bonjour tout le monde,
 
 Voici les supports de cours pour la session d'aujourd'hui : https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php
+
+N'hésitez pas à me le faire savoir si vous avez des questions.
+```
+
+```text
+[ProgServ1 2024-2025] Cours 02 - Fonctions
+
+Bonjour tout le monde,
+
+Voici les supports de cours pour la session d'aujourd'hui : https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/02-fonctions
+
+N'hésitez pas à me le faire savoir si vous avez des questions.
+```
+
+```text
+[ProgServ1 2024-2025] Cours 03 - Tableaux et boucles
+
+Bonjour tout le monde,
+
+Voici les supports de cours pour la session d'aujourd'hui : https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/03-tableaux-et-boucles
+
+N'hésitez pas à me le faire savoir si vous avez des questions.
+```
+
+```text
+[ProgServ1 2024-2025] Cours 04 - Formulaires HTML et validation
+
+Bonjour tout le monde,
+
+Voici les supports de cours pour la session d'aujourd'hui : https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/04-formulaires-html-et-validation
 
 N'hésitez pas à me le faire savoir si vous avez des questions.
 ```

@@ -1,3 +1,6 @@
+## SQLite databases
+*.db
+
 ## Linux
 
 # Temporary files

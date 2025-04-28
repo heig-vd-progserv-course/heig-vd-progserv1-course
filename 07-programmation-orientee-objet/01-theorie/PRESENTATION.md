@@ -7,16 +7,16 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
-title: HEIG-VD ProgServ1 Course - Cours 08 - Finalisation de l'application et récapitulatif de l'unité d'enseignement
-description: Cours 08 - Finalisation de l'application et récapitulatif de l'unité d'enseignement pour le cours ProgServ1 à la HEIG-VD, Suisse
-url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/index.html
-header: "**Cours 08 - Finalisation de l'application et récapitulatif de l'unité d'enseignement**"
+title: HEIG-VD ProgServ1 Course - Cours 06 - Programmation orientée objet
+description: Cours 06 - Programmation orientée objet pour le cours ProgServ1 à la HEIG-VD, Suisse
+url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/index.html
+header: "**Cours 06 - Programmation orientée objet**"
 footer: "**HEIG-VD** - ProgServ1 Course 2024-2025 - CC BY-SA 4.0"
 headingDivider: 6
 math: mathjax
 -->
 
-# Cours 08 - Finalisation de l'application et récapitulatif de l'unité d'enseignement
+# Cours 06 - Programmation orientée objet
 
 <!--
 _class: lead
@@ -60,15 +60,26 @@ consultez le [support de cours][course-material]._
 
 Est-ce que vous avez des questions ?
 
+## Feedback
+
+Le [formulaire de feedback][feedback] vous **permet de partager votre retour**
+sur l'unité d'enseignement _"ProgServ1"_.
+
+Il ne prend **que quelques minutes** et est **anonyme**. Vous pouvez aussi y
+**demander un/des cours d'appui**.
+
+Les résultats seront discutés au prochain cours. **Merci beaucoup !**
+
+[![bg right:40% w:85%][feedback-qr-code]][feedback]
+
 ## À vous de jouer !
 
 - (Re)lire le [support de cours][course-material].
 - Réaliser le [mini-projet][mini-project].
 - Faire les [exercices][exercices].
 - Poser des questions si nécessaire.
+- Partager vos retours à l'aide du [formulaire de feedback][feedback].
 
-\
-\
 **Entraidez-vous si vous avez des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
@@ -91,17 +102,20 @@ Est-ce que vous avez des questions ?
 <!-- URLs -->
 
 [presentation-web]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/index.html
+	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/index.html
 [presentation-pdf]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement-presentation.pdf
+	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/07-programmation-orientee-objet-presentation.pdf
 [course-material]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/07-programmation-orientee-objet/01-theorie/README.md
 [license]:
 	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [mini-project]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/02-mini-project/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/07-programmation-orientee-objet/02-mini-project/README.md
 [exercices]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/03-exercices/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/07-programmation-orientee-objet/03-exercices/README.md
+[feedback]: https://framaforms.org/progserv1-2024-2025-feedback-1745321495
+[feedback-qr-code]:
+	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/progserv1-2024-2025-feedback-1745321495
 
 <!-- Illustrations -->
 

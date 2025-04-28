@@ -795,7 +795,7 @@ Essayez de rajouter ce champ à l'aide des ressources disponibles sur MDN :
 
 ```php
         <label for="species">Espèce :</label><br>
-        <select id="species" name="species" required>
+        <select id="species" name="species">
             <option value="dog">Chien</option>
             <option value="cat">Chat</option>
             <option value="lizard">Lézard</option>
@@ -2096,10 +2096,10 @@ l'attribut `checked` à l'option.
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> />
             <label for="female">Femelle</label>
         </fieldset>
 ```
@@ -2195,10 +2195,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -2231,10 +2231,10 @@ Pour cela, vous devez ajouter l'attribut `required` sur le champ "Sexe".
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 ```
@@ -2330,10 +2330,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -2461,10 +2461,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -2594,10 +2594,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -2754,10 +2754,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -2903,10 +2903,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -3048,10 +3048,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -3195,10 +3195,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -3345,10 +3345,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -3506,10 +3506,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -3710,10 +3710,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -3907,10 +3907,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -4136,10 +4136,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -4330,10 +4330,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -4521,10 +4521,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -4728,10 +4728,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -4929,10 +4929,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -5130,10 +5130,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -5330,10 +5330,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -5531,10 +5531,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -5743,10 +5743,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -6146,10 +6146,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 

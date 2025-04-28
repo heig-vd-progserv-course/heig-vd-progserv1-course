@@ -1,9 +1,8 @@
 <?php
+require 'functions.php';
+
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo "Le contenu de la variable `\$_POST` est : ";
-    var_dump($_POST);
-
     // Récupération des données du formulaire
     $name = $_POST["name"];
     $species = $_POST["species"];
@@ -52,6 +51,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($size) && (!is_numeric($size) || $size < 0)) {
         // On ajoute un message d'erreur au tableau
         array_push($errors, "La taille doit être un nombre entier positif.");
+    }
+
+    // Si le formulaire est valide, on ajoute l'animal
+    if (empty($errors)) {
+        // On ajoute l'animal à la base de données
+        $petId = addPet(
+            $name,
+            $species,
+            $nickname,
+            $sex,
+            $age,
+            $color,
+            $personalities,
+            $size,
+            $notes
+        );
+
+        // On redirige vers la page d'accueil avec tous les animaux
+        header("Location: index.php");
+        exit();
     }
 }
 ?>
@@ -168,19 +187,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <h1>Crée un nouvel animal de compagnie</h1>
     <p><a href="index.php">Retour à l'accueil</a></p>
     <p>Utilise cette page pour créer un nouvel animal de compagnie.</p>
-
-    <?php if ($_SERVER["REQUEST_METHOD"] == "POST") { ?>
-        <?php if (empty($errors)) { ?>
-            <p style="color: green;">Le formulaire a été soumis avec succès !</p>
-        <?php } else { ?>
-            <p style="color: red;">Le formulaire contient des erreurs :</p>
-            <ul>
-                <?php foreach ($errors as $error) { ?>
-                    <li><?php echo $error; ?></li>
-                <?php } ?>
-            </ul>
-        <?php } ?>
-    <?php } ?>
 
     <form action="create.php" method="POST">
         <label for="name">Nom :</label><br>

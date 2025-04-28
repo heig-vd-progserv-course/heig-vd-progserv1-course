@@ -260,7 +260,7 @@ serveur. Il existe deux méthodes principales :
 Les données sont ajoutées à l'URL de la requête, séparées par un `?` et des `&`
 :
 
-`http://localhost/login.php?userid=xXBestOf1400Xx&password=m0n-sup3r-m0t-de-p4asse`
+`http://localhost/login.php?username=xXBestOf1400Xx&password=m0n-sup3r-m0t-de-p4asse`
 
 Problème de sécurité...
 
@@ -725,8 +725,9 @@ Est-ce que vous avez des questions ?
 - Faire les [exercices][exercices].
 - Poser des questions si nécessaire.
 
-**Que ce soit pour le mini-projet ou les exercices, nous vous encourageons à
-vous entraider si vous avez des difficultés !**
+\
+\
+**Entraidez-vous si vous avez des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 

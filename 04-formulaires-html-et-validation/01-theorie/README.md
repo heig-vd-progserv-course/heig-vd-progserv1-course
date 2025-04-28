@@ -283,7 +283,7 @@ Illustrons la différence entre ces deux méthodes à l'aide du formulaire suiva
   Par exemple, si une personne soumet un formulaire avec la méthode `GET`, les
   données seront envoyées à l'URL `login.php` avec les paramètres `username` et
   `password` :
-  `http://localhost/login.php?userid=xXBestOf1400Xx&password=m0n-sup3r-m0t-de-p4asse`.
+  `http://localhost/login.php?username=xXBestOf1400Xx&password=m0n-sup3r-m0t-de-p4asse`.
 
   Les données sont ajoutées à l'URL après le point d'interrogation (`?`) et sont
   séparées par des esperluettes (`&`) si plusieurs champs sont présents.

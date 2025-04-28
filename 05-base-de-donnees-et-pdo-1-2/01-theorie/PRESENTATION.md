@@ -7,16 +7,16 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
-title: HEIG-VD ProgServ1 Course - Cours 08 - Finalisation de l'application et récapitulatif de l'unité d'enseignement
-description: Cours 08 - Finalisation de l'application et récapitulatif de l'unité d'enseignement pour le cours ProgServ1 à la HEIG-VD, Suisse
-url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/index.html
-header: "**Cours 08 - Finalisation de l'application et récapitulatif de l'unité d'enseignement**"
+title: HEIG-VD ProgServ1 Course - Cours 05 - Base de données et PDO (1/2)
+description: Cours 05 - Base de données et PDO (1/2) pour le cours ProgServ1 à la HEIG-VD, Suisse
+url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo-1-2/01-theorie/index.html
+header: "**Cours 05 - Base de données et PDO (1/2)**"
 footer: "**HEIG-VD** - ProgServ1 Course 2024-2025 - CC BY-SA 4.0"
 headingDivider: 6
 math: mathjax
 -->
 
-# Cours 08 - Finalisation de l'application et récapitulatif de l'unité d'enseignement
+# Cours 05 - Base de données et PDO (1/2)
 
 <!--
 _class: lead
@@ -91,17 +91,17 @@ Est-ce que vous avez des questions ?
 <!-- URLs -->
 
 [presentation-web]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/index.html
+	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo-1-2/01-theorie/index.html
 [presentation-pdf]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement-presentation.pdf
+	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo-1-2/01-theorie/05-base-de-donnees-et-pdo-1-2-presentation.pdf
 [course-material]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/05-base-de-donnees-et-pdo-1-2/01-theorie/README.md
 [license]:
 	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [mini-project]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/02-mini-project/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/05-base-de-donnees-et-pdo-1-2/02-mini-project/README.md
 [exercices]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/03-exercices/README.md
+	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/05-base-de-donnees-et-pdo-1-2/03-exercices/README.md
 
 <!-- Illustrations -->
 

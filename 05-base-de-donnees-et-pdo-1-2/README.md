@@ -1,16 +1,14 @@
-# Cours 08 - Finalisation de l'application et récapitulatif de l'unité d'enseignement
+# Cours 05 - Base de données et PDO (1/2)
 
 ## Ressources
 
 - Théorie : [Support de cours](./01-theorie/README.md) ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/index.html)
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo-1-2/01-theorie/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo-1-2/01-theorie/05-base-de-donnees-et-pdo-1-2-presentation.pdf)
 - Mini-projet : [Consignes](./02-mini-project/README.md) ·
   [Solution](./02-mini-project/solution/)
 - Exercices : [Énoncés et solutions](./03-exercices/README.md)
-- Examen blanc :
-  [Énoncé](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/04-examen-blanc/README.md)
 
 ## Objectifs
 
