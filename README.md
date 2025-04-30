@@ -42,7 +42,7 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 | [05](#-cours-05) | Base de données et PDO                                                   | 🟢 Complet                                  |
 | [06](#-cours-06) | Sécurité et nettoyage des saisies utilisateurs                           | 🟡 En cours                                 |
 | [07](#-cours-07) | Programmation orientée objet                                             | 🔴 À faire                                  |
-| [08](#-cours-08) | Finalisation de l'application et récapitulatif de l'unité d'enseignement | 🔴 À faire                                  |
+| [08](#-cours-08) | Récapitulatif de l'unité d'enseignement et finalisation de l'application | 🔴 À faire                                  |
 
 ## 🕐 Cours 01
 
@@ -164,24 +164,22 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 ## 🕗 Cours 08
 
-### Finalisation de l'application et récapitulatif de l'unité d'enseignement
+### Récapitulatif de l'unité d'enseignement et finalisation de l'application
 
 - Théorie :
-  [Support de cours](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/README.md)
+  [Support de cours](./08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/01-theorie/README.md)
   ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/index.html)
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/01-theorie/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/01-theorie/08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication-presentation.pdf)
 - Mini-projet :
-  [Consignes](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/02-mini-project/README.md)
+  [Consignes](./08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/02-mini-project/README.md)
   ·
-  [Solution](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/02-mini-project/solution/)
-- Exercices :
-  [Énoncés et solutions](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/03-exercices/README.md)
+  [Solution](./08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/02-mini-project/solution/)
 - Examen blanc :
-  [Énoncé](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/04-examen-blanc/README.md)
+  [Énoncé](./08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/03-examen-blanc/README.md)
 
-[Voir les détails](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/)
+[Voir les détails](./08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/)
 
 ## 📜 Licence
 
