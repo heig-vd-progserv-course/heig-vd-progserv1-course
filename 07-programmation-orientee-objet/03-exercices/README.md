@@ -1,8 +1,8 @@
-# Cours 06 - Programmation orientée objet - Exercices
+# Cours 07 - Programmation orientée objet - Exercices
 
 Cette série d'exercices est conçue pour vous permettre de valider les concepts
 théoriques et pratiques vus dans le cours
-_[Cours 06 - Programmation orientée objet](../01-theorie/README.md)_.
+_[Cours 07 - Programmation orientée objet](../01-theorie/README.md)_.
 
 ## Ressources
 

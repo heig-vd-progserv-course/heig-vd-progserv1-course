@@ -61,14 +61,19 @@ Merci pour votre collaboration !
 
 #### Questions
 
-- Le cours est (boutons radio)
+- L'unité d'enseignement est (boutons radio)
   - Trop théorique
   - Adapté
   - Trop pratique
-- Le rythme du cours est (boutons radio)
+- Le rythme de l'unité d'enseignement est (boutons radio)
   - Trop lent
   - Adapté
   - Trop rapide
+- Les contenus (supports, présentations, consignes, énoncés, etc.) sont (boutons
+  radio)
+  - Trop simples
+  - Adaptés
+  - Trop complexes
 - Les mini-projets sont (boutons radio)
   - Trop simples
   - Adaptés
@@ -89,19 +94,20 @@ Merci pour votre collaboration !
   - Tableaux et boucles
   - Formulaires HTML et validation
   - Base de données et PDO
+  - Sécurité et nettoyage des saisies utilisateurs
   - Programmation orientée objet
-  - Gestion des cookies et sessions utilisateurs
-- J'aurais le souhait d'avoir un ou des cours d'appui (cases à cocher)
-  - Option : J'aurais le souhait d'avoir un ou des cours d'appui
+- Inscription à un ou des cours d'appui (cases à cocher)
+  - Option : J'aimerais pouvoir avoir un ou des cours d'appui
   - Description : Si nous voyons qu'il y a des personnes intéressées, une date
     sera fixée prochainement avec l'aide de Daniela et une invitation par e-mail
-    vous sera envoyée.
+    vous sera envoyée (dans la mesure du possible ; il n'est pas garanti qu'il
+    soit possible d'organiser ces cours d'appui).
 - J'ai moins apprécié et je propose... (zone de texte)
 - J'ai particulièrement apprécié... (zone de texte)
 - Autres remarques et commentaires (zone de texte)
-  - Description: Sentez-vous libre d'exprimer votre ressenti pour le cours. Si
-    celui-ci vous a déplu, n'hésitez pas à nous le faire savoir pour que nous
-    puissions faire mieux dans le futur.
+  - Description: Sentez-vous libre d'exprimer votre ressenti sur l'unité
+    d'enseignement. Si celui-ci vous a déplu, n'hésitez pas à nous le faire
+    savoir pour que nous puissions faire mieux dans le futur.
 
 ### Message envoyé aux personnes qui étudient avant chaque cours
 

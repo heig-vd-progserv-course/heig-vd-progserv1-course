@@ -7,16 +7,16 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
-title: HEIG-VD ProgServ1 Course - Cours 06 - Programmation orientée objet
-description: Cours 06 - Programmation orientée objet pour le cours ProgServ1 à la HEIG-VD, Suisse
+title: HEIG-VD ProgServ1 Course - Cours 07 - Programmation orientée objet
+description: Cours 07 - Programmation orientée objet pour le cours ProgServ1 à la HEIG-VD, Suisse
 url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/index.html
-header: "**Cours 06 - Programmation orientée objet**"
+header: "**Cours 07 - Programmation orientée objet**"
 footer: "**HEIG-VD** - ProgServ1 Course 2024-2025 - CC BY-SA 4.0"
 headingDivider: 6
 math: mathjax
 -->
 
-# Cours 06 - Programmation orientée objet
+# Cours 07 - Programmation orientée objet
 
 <!--
 _class: lead

@@ -15,8 +15,10 @@ Suisse !
 
 - Comprendre les bases de PHP et son rôle dans le monde web.
 - Écrire un code PHP propre et organisé.
-- Gérer les formulaires HTML et les données qu'ils contiennent de manière sûre.
+- Gérer les formulaires HTML et les données qu'ils contiennent.
 - Persister des données dans une base de données SQLite.
+- Implémenter les mécanismes de sécurité de base pour protéger une application
+  web.
 - Implémenter des concepts de programmation orientée objet.
 
 ## ➡️ Par où commencer ?
@@ -37,8 +39,8 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 | [02](#-cours-02) | Fonctions                                                                | 🟢 Complet                                  |
 | [03](#-cours-03) | Tableaux et boucles                                                      | 🟢 Complet                                  |
 | [04](#-cours-04) | Formulaires HTML et validation                                           | 🟢 Complet                                  |
-| [05](#-cours-05) | Base de données et PDO (1/2)                                             | 🟢 Complet                                  |
-| [06](#-cours-06) | Base de données et PDO (2/2)                                             | 🟡 En cours                                 |
+| [05](#-cours-05) | Base de données et PDO                                                   | 🟢 Complet                                  |
+| [06](#-cours-06) | Sécurité et nettoyage des saisies utilisateurs                           | 🟡 En cours                                 |
 | [07](#-cours-07) | Programmation orientée objet                                             | 🔴 À faire                                  |
 | [08](#-cours-08) | Finalisation de l'application et récapitulatif de l'unité d'enseignement | 🔴 À faire                                  |
 
@@ -109,37 +111,39 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 ## 🕔 Cours 05
 
-### Base de données et PDO (1/2)
+### Base de données et PDO
 
-- Théorie :
-  [Support de cours](./05-base-de-donnees-et-pdo-1-2/01-theorie/README.md) ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo-1-2/01-theorie/index.html)
+- Théorie : [Support de cours](./05-base-de-donnees-et-pdo/01-theorie/README.md)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo-1-2/01-theorie/05-base-de-donnees-et-pdo-1-2-presentation.pdf)
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-theorie/index.html)
+  ·
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-theorie/05-base-de-donnees-et-pdo-presentation.pdf)
 - Mini-projet :
-  [Consignes](./05-base-de-donnees-et-pdo-1-2/02-mini-project/README.md) ·
-  [Solution](./05-base-de-donnees-et-pdo-1-2/02-mini-project/solution/)
+  [Consignes](./05-base-de-donnees-et-pdo/02-mini-project/README.md) ·
+  [Solution](./05-base-de-donnees-et-pdo/02-mini-project/solution/)
 - Exercices :
-  [Énoncés et solutions](./05-base-de-donnees-et-pdo-1-2/03-exercices/README.md)
+  [Énoncés et solutions](./05-base-de-donnees-et-pdo/03-exercices/README.md)
 
-[Voir les détails](./05-base-de-donnees-et-pdo-1-2/)
+[Voir les détails](./05-base-de-donnees-et-pdo/)
 
 ## 🕕 Cours 06
 
-### Base de données et PDO (2/2)
+### Sécurité et nettoyage des saisies utilisateurs
 
 - Théorie :
-  [Support de cours](./06-base-de-donnees-et-pdo-2-2/01-theorie/README.md) ·
+  [Support de cours](./06-securite-et-nettoyage-des-saisies-utilisateurs/01-theorie/README.md)
+  ·
   [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/index.html)
   ·
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/07-programmation-orientee-objet-presentation.pdf)
 - Mini-projet :
-  [Consignes](./06-base-de-donnees-et-pdo-2-2/02-mini-project/README.md) ·
-  [Solution](./06-base-de-donnees-et-pdo-2-2/02-mini-project/solution/)
+  [Consignes](./06-securite-et-nettoyage-des-saisies-utilisateurs/02-mini-project/README.md)
+  ·
+  [Solution](./06-securite-et-nettoyage-des-saisies-utilisateurs/02-mini-project/solution/)
 - Exercices :
-  [Énoncés et solutions](./06-base-de-donnees-et-pdo-2-2/03-exercices/README.md)
+  [Énoncés et solutions](./06-securite-et-nettoyage-des-saisies-utilisateurs/03-exercices/README.md)
 
-[Voir les détails](./06-base-de-donnees-et-pdo-2-2/)
+[Voir les détails](./06-securite-et-nettoyage-des-saisies-utilisateurs/)
 
 ## 🕖 Cours 07
 

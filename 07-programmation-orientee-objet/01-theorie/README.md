@@ -1,4 +1,4 @@
-# Cours 06 - Programmation orientée objet
+# Cours 07 - Programmation orientée objet
 
 ## Ressources
 

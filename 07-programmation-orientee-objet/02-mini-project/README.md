@@ -1,8 +1,8 @@
-# Cours 06 - Programmation orientée objet - Mini-projet
+# Cours 07 - Programmation orientée objet - Mini-projet
 
 Ce mini-projet est conçu pour vous permettre de mettre en pratique les concepts
 théoriques vus dans le cours
-_[Cours 06 - Programmation orientée objet](../01-theorie/README.md)_.
+_[Cours 07 - Programmation orientée objet](../01-theorie/README.md)_.
 
 ## Ressources
 
