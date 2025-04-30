@@ -14,7 +14,8 @@
 
 À l'issue de ce cours, les personnes qui étudient devraient être capables de :
 
-- Expliquer les concepts de base des bases de données et des SGBD
+- Expliquer les concepts de base des bases de données et des systèmes de gestion
+  de base de données (SGBD)
 - Utiliser l'extension PDO de PHP pour interagir avec une base de données
 - Créer une base de données SQLite et des tables avec PDO
 - Insérer, mettre à jour, récupérer et supprimer des données dans une base de

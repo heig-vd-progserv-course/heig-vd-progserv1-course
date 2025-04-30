@@ -49,13 +49,14 @@ ProgServ1 2024-2025 - Feedback
 #### Description
 
 Ce questionnaire de quelques minutes nous permet de savoir comment vous avez
-vécu le cours jusqu'ici et si une aide supplémentaire est nécessaire.
+vécu l'unité d'enseignement jusqu'ici et si une aide supplémentaire est
+nécessaire.
 
 Il est important pour nous de savoir ce que vous en pensez, car cela nous aide à
-améliorer le cours et à mieux répondre à vos besoins.
+améliorer l'unité d'enseignement et à mieux répondre à vos besoins.
 
 Toutes les données sont anonymes et elles ne sont utilisées que pour améliorer
-le cours.
+l'unité d'enseignement.
 
 Merci pour votre collaboration !
 

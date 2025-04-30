@@ -44,7 +44,8 @@ consultez le [support de cours][course-material]._
 
 ## Objectifs (1/2)
 
-- Expliquer les concepts de base des bases de données et des SGBD
+- Expliquer les concepts de base des bases de données et des systèmes de gestion
+  de base de données (SGBD)
 - Utiliser l'extension PDO de PHP pour interagir avec une base de données
 - Créer une base de données SQLite et des tables avec PDO
 
@@ -66,7 +67,7 @@ consultez le [support de cours][course-material]._
   - Lignes : enregistrements uniques
   - Colonnes : champs de données
 
-![bg right:40%][illustration-objectifs]
+![bg right:40%][illustration-base-de-donnees]
 
 ### Système de gestion de base de données (SGBD)
 
@@ -75,7 +76,7 @@ consultez le [support de cours][course-material]._
   mise à jour, suppression)
 - Chacun avec ces caractéristiques mais avec les mêmes concepts de base
 
-![bg right:40%][illustration-objectifs]
+![bg right:40%][illustration-systeme-de-gestion-de-base-de-donnees]
 
 ### SQLite
 
@@ -85,7 +86,7 @@ consultez le [support de cours][course-material]._
 - Prise en charge de SQL standard
 - Idéal pour les applications de petite à moyenne taille
 
-![bg right:40%][illustration-objectifs]
+![bg right:40% w:80%](https://www.sqlite.org/images/sqlite370_banner.svg)
 
 ## PDO
 
@@ -96,23 +97,158 @@ consultez le [support de cours][course-material]._
 - Fournit une API cohérente pour effectuer des opérations sur des base de
   données
 
-![bg right:40%][illustration-objectifs]
+![bg right:40%][illustration-systeme-de-gestion-de-base-de-donnees]
 
 ### Connexion à une base de données SQLite
 
+```php
+<?php
+// Chemin vers le fichier de base de données SQLite
+const DATABASE_FILE = 'path/to/database.db';
+
+// Création d'une instance de PDO pour se connecter à la base de données
+$pdo = new PDO("sqlite:" . DATABASE_FILE);
+```
+
 ### Création d'une table
+
+```php
+// Création d'une table `users`
+$sql = 'CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE
+)';
+
+// On exécute la requête SQL pour créer la table
+$pdo->exec($sql);
+```
 
 ### Insertion de données
 
+```php
+// On définit la requête SQL pour ajouter un utilisateur
+$sql = "INSERT INTO users (
+    name,
+    email
+) VALUES (
+    'John Doe',
+    'john.doe@heig-vd.ch'
+)";
+
+// On exécute la requête SQL pour ajouter l'utilisateur
+$pdo->exec($sql);
+```
+
+---
+
+```php
+// On définit la requête SQL pour ajouter un utilisateur
+$sql = "INSERT INTO users (
+    name,
+    email
+) VALUES (
+    'Jane Doe',
+    'jane.doe@heig-vd.ch'
+)";
+
+// On exécute la requête SQL pour ajouter l'utilisateur
+$pdo->exec($sql);
+```
+
+---
+
+```php
+// On récupère l'identifiant de l'utilisateur inséré
+$janeDoeId = $pdo->lastInsertId();
+
+// On affiche l'identifiant de l'utilisateur inséré
+echo "L'identifiant de l'utilisateur inséré est : $janeDoeId<br>";
+```
+
 ### Récupération de données
+
+```php
+// On définit la requête SQL pour récupérer l'utilisateur `Jane Doe`
+$sql = "SELECT * FROM users WHERE id = '$janeDoeId'";
+
+// On récupère l'utilisateur spécifique
+$user = $pdo->query($sql);
+
+// On transforme le résultat en tableau associatif
+$user = $user->fetch();
+
+// On affiche l'utilisateur
+print_r($user);
+```
+
+---
+
+```php
+// On définit la requête SQL pour récupérer tous les utilisateurs
+$sql = "SELECT * FROM users";
+
+// On récupère tous les utilisateurs
+$users = $pdo->query($sql);
+
+// On transforme le résultat en tableau associatif
+$users = $users->fetchAll();
+
+// On affiche les utilisateurs
+print_r($users);
+```
 
 ### Mise à jour de données
 
+```php
+// On définit la requête SQL pour mettre à jour l'utilisateur `Jane Doe`
+$sql = "UPDATE users SET
+    name = 'Jane Smith',
+    email = 'jane.smith@heig-vd.ch'
+    WHERE id = '$janeDoeId'
+";
+
+// On exécute la requête SQL pour mettre à jour l'utilisateur
+$pdo->exec($sql);
+```
+
+---
+
+```php
+// On récupère l'utilisateur mis à jour
+$sql = "SELECT * FROM users WHERE id = '$janeDoeId'";
+$user = $pdo->query($sql);
+$user = $user->fetch();
+
+// On affiche l'utilisateur mis à jour
+print_r($user);
+```
+
 ### Suppression de données
+
+```php
+// On définit la requête SQL pour supprimer l'utilisateur
+$sql = "DELETE FROM users WHERE id = '$janeDoeId'";
+
+// On exécute la requête SQL pour supprimer l'utilisateur
+$pdo->exec($sql);
+
+// On récupère tous les utilisateurs
+$sql = "SELECT * FROM users";
+$users = $pdo->query($sql);
+$users = $users->fetchAll();
+
+// On affiche les utilisateurs restants
+print_r($users);
+```
 
 ## Conclusion
 
-- TODO
+- Les bases de données permettent de stocker et de gérer des données
+- SQLite est un système de gestion de base de données (SGBD)
+- PDO est une extension PHP qui permet d'interagir avec SGBDs
+- Les opérations de base incluent la création, l'insertion, la mise à jour et la
+  suppression de données
 
 ![bg right:40%][illustration-principale]
 
@@ -143,6 +279,12 @@ Est-ce que vous avez des questions ?
 - [Illustration][illustration-objectifs] par
   [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- [Illustration][illustration-base-de-donnees] par
+  [Jan Antonin Kolar](https://unsplash.com/@jankolar) sur
+  [Unsplash](https://unsplash.com/photos/brown-wooden-drawer-lRoX0shwjUQ)
+- [Illustration][illustration-systeme-de-gestion-de-base-de-donnees] par
+  [israel palacio](https://unsplash.com/@othentikisra) sur
+  [Unsplash](https://unsplash.com/photos/two-square-blue-led-lights-ImcUkZ72oUs)
 
 ---
 
@@ -171,6 +313,10 @@ Est-ce que vous avez des questions ?
 	https://images.unsplash.com/photo-1517486430290-35657bdcef51?fit=crop&h=720
 [illustration-objectifs]:
 	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
+[illustration-base-de-donnees]:
+	https://images.unsplash.com/photo-1544383835-bda2bc66a55d?fit=crop&h=720
+[illustration-systeme-de-gestion-de-base-de-donnees]:
+	https://images.unsplash.com/photo-1534224039826-c7a0eda0e6b3?fit=crop&h=720
 
 ---
 

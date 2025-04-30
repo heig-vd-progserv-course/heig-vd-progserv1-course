@@ -46,7 +46,8 @@ pour accéder et interagir avec différentes bases de données
 
 De façon plus précise, les personnes qui étudient devraient être capables de :
 
-- Expliquer les concepts de base des bases de données et des SGBD
+- Expliquer les concepts de base des bases de données et des systèmes de gestion
+  de base de données (SGBD)
 - Utiliser l'extension PDO de PHP pour interagir avec une base de données
 - Créer une base de données SQLite et des tables avec PDO
 - Insérer, mettre à jour, récupérer et supprimer des données dans une base de
@@ -148,7 +149,6 @@ Pour créer une table dans une base de données SQLite avec PDO, nous utilisons 
 méthode `exec()` de l'objet `PDO`. Voici un exemple de code :
 
 ```php
-<?php
 // Création d'une table `users`
 $sql = 'CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -156,6 +156,7 @@ $sql = 'CREATE TABLE IF NOT EXISTS users (
     email TEXT NOT NULL UNIQUE
 )';
 
+// On exécute la requête SQL pour créer la table
 $pdo->exec($sql);
 ```
 
@@ -179,14 +180,13 @@ Pour insérer des données dans une table, nous utilisons la méthode `exec()` d
 l'objet `PDO`. Voici un exemple de code :
 
 ```php
-<?php
 // On définit la requête SQL pour ajouter un utilisateur
 $sql = "INSERT INTO users (
     name,
     email
 ) VALUES (
     'John Doe',
-    'john.doe@heig-vd.ch
+    'john.doe@heig-vd.ch'
 )";
 
 // On exécute la requête SQL pour ajouter l'utilisateur
@@ -198,7 +198,7 @@ $sql = "INSERT INTO users (
     email
 ) VALUES (
     'Jane Doe',
-    'jane.doe@heig-vd.ch
+    'jane.doe@heig-vd.ch'
 )";
 
 // On exécute la requête SQL pour ajouter l'utilisateur
@@ -219,21 +219,23 @@ Il est possible de récupérer l'identifiant de l'utilisateur inséré en utilis
 la méthode `lastInsertId()` de l'objet `PDO`. Voici un exemple de code :
 
 ```php
-<?php
 // On définit la requête SQL pour ajouter un utilisateur
 $sql = "INSERT INTO users (
     name,
     email
 ) VALUES (
-    'Jane Smith',
-    'jane.smith@heig-vd.ch
+    'Jane Doe',
+    'jane.doe@heig-vd.ch'
 )";
 
 // On exécute la requête SQL pour ajouter l'utilisateur
 $pdo->exec($sql);
 
 // On récupère l'identifiant de l'utilisateur inséré
-$id = $pdo->lastInsertId();
+$janeDoeId = $pdo->lastInsertId();
+
+// On affiche l'identifiant de l'utilisateur inséré
+echo "L'identifiant de l'utilisateur inséré est : $janeDoeId<br>";
 ```
 
 Cette méthode retourne l'identifiant de la dernière ligne insérée dans la table.
@@ -247,15 +249,14 @@ Pour récupérer des données d'une table, nous utilisons la méthode `query()` 
 l'objet `PDO`. Voici un exemple de code :
 
 ```php
-<?php
-// On définit la requête SQL pour récupérer l'utilisateur `Jane Smith`
-$sql = "SELECT * FROM users WHERE id = '$id'";
+// On définit la requête SQL pour récupérer l'utilisateur `Jane Doe`
+$sql = "SELECT * FROM users WHERE id = '$janeDoeId'";
 
 // On récupère l'utilisateur spécifique
 $user = $pdo->query($sql);
 
 // On transforme le résultat en tableau associatif
-$user = $pet->fetch();
+$user = $user->fetch();
 
 // On affiche l'utilisateur
 print_r($user);
@@ -305,15 +306,18 @@ Pour mettre à jour des données dans une table, nous utilisons la méthode
 `exec()` de l'objet `PDO`. Voici un exemple de code :
 
 ```php
-<?php
-// On définit la requête SQL pour mettre à jour l'utilisateur `Jane Smith`
-$sql = "UPDATE users SET name = 'Jane Bloggs' WHERE id = '$id'";
+// On définit la requête SQL pour mettre à jour l'utilisateur `Jane Doe`
+$sql = "UPDATE users SET
+    name = 'Jane Smith',
+    email = 'jane.smith@heig-vd.ch'
+    WHERE id = '$janeDoeId'
+";
 
 // On exécute la requête SQL pour mettre à jour l'utilisateur
 $pdo->exec($sql);
 
 // On récupère l'utilisateur mis à jour
-$sql = "SELECT * FROM users WHERE id = '$id'";
+$sql = "SELECT * FROM users WHERE id = '$janeDoeId'";
 $user = $pdo->query($sql);
 $user = $user->fetch();
 
@@ -321,8 +325,8 @@ $user = $user->fetch();
 print_r($user);
 ```
 
-Dans cet exemple, nous mettons à jour le nom de l'utilisateur `Jane Smith` en
-`Jane Bloggs`.
+Dans cet exemple, nous mettons à jour le nom de l'utilisateur `Jane Doe` en
+`Jane Smith` ainsi que son adresse e-mail.
 
 Nous utilisons la méthode `exec()` pour exécuter la requête SQL de mise à jour.
 
@@ -337,9 +341,8 @@ Pour supprimer des données d'une table, nous utilisons la méthode `exec()` de
 l'objet `PDO`. Voici un exemple de code :
 
 ```php
-<?php
 // On définit la requête SQL pour supprimer l'utilisateur
-$sql = "DELETE FROM users WHERE id = '$id'";
+$sql = "DELETE FROM users WHERE id = '$janeDoeId'";
 
 // On exécute la requête SQL pour supprimer l'utilisateur
 $pdo->exec($sql);
@@ -353,7 +356,7 @@ $users = $users->fetchAll();
 print_r($users);
 ```
 
-Dans cet exemple, nous supprimons l'utilisateur `Jane Bloggs` de la table
+Dans cet exemple, nous supprimons l'utilisateur `Jane Smith` de la table
 `users`. Nous utilisons la méthode `exec()` pour exécuter la requête SQL de
 suppression. Cette méthode ne retourne pas de résultats. Nous utilisons la
 clause `WHERE` pour spécifier quel utilisateur nous souhaitons supprimer.
