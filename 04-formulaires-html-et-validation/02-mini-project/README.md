@@ -47,7 +47,7 @@ _[Cours 04 - Formulaires HTML et validation](../01-theorie/README.md)_.
 
 ## Objectifs de la session
 
-Dans cette séance, vous allez créer le formulaire permettant de créer un nouvel
+Dans cette session, vous allez créer le formulaire permettant de créer un nouvel
 animal de compagnie.
 
 Pour rappel, le formulaire sera composé de plusieurs champs :
@@ -791,11 +791,11 @@ Essayez de rajouter ce champ à l'aide des ressources disponibles sur MDN :
 [Champ `<select>`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/select).
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <label for="species">Espèce :</label><br>
-        <select id="species" name="species" required>
+        <select id="species" name="species">
             <option value="dog">Chien</option>
             <option value="cat">Chat</option>
             <option value="lizard">Lézard</option>
@@ -900,7 +900,7 @@ navigateur à l'adresse <http://localhost/progserv1/mini-projet/create.php>.
 Vous devriez voir la valeur du champ affichée à l'écran.
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
     $species = $_POST["species"];
@@ -1000,7 +1000,7 @@ Essayez de rajouter la validation des données côté serveur pour le champ
 "Espèce".
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
     if (empty($species)) {
@@ -1118,7 +1118,7 @@ valeur saisie dans le champ "Espèce". Si c'est le cas, vous devez ajouter
 l'attribut `selected` à l'option.
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <label for="species">Espèce :</label><br>
@@ -1233,7 +1233,7 @@ Essayez de rajouter la validation des données côté client pour le champ
 Pour cela, il faut ajouter l'attribut `required` au champ "Espèce".
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <select id="species" name="species" required>
@@ -1347,7 +1347,7 @@ Essayez de rajouter ce champ à l'aide des ressources disponibles sur MDN :
 [Champ `<input type="text">`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/input/text).
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <label for="nickname">Surnom :</label>
@@ -1459,7 +1459,7 @@ navigateur à l'adresse <http://localhost/progserv1/mini-projet/create.php>.
 Vous devriez voir la valeur du champ affichée à l'écran.
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
     $nickname = $_POST["nickname"];
@@ -1580,7 +1580,7 @@ formulaire est soumis et qu'il y a des erreurs de validation.
 Pour cela, il faut utiliser l'attribut `value` sur le champ "Surnom".
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <label for="nickname">Surnom :</label><br>
@@ -1701,7 +1701,7 @@ Essayez de rajouter ce champ à l'aide des ressources disponibles sur MDN :
 [Champ `<input type="radio">`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/input/radio).
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <fieldset>
@@ -1830,7 +1830,7 @@ navigateur à l'adresse <http://localhost/progserv1/mini-projet/create.php>.
 Vous devriez voir la valeur du champ affichée à l'écran.
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
     $sex = $_POST["sex"];
@@ -1951,7 +1951,7 @@ d'erreur.
 Essayez de rajouter la validation des données côté serveur pour le champ "Sexe".
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
     if (empty($sex)) {
@@ -2090,16 +2090,16 @@ la valeur saisie dans le champ "Sexe". Si c'est le cas, vous devez ajouter
 l'attribut `checked` à l'option.
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> />
             <label for="female">Femelle</label>
         </fieldset>
 ```
@@ -2195,10 +2195,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -2225,16 +2225,16 @@ Essayez de rajouter la validation des données côté client pour le champ "Sexe
 Pour cela, vous devez ajouter l'attribut `required` sur le champ "Sexe".
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 ```
@@ -2330,10 +2330,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -2363,7 +2363,7 @@ Essayez de rajouter ce champ à l'aide des ressources disponibles sur MDN :
 [Champ `<input type="number">`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/input/number).
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <label for="age">Âge :</label><br>
@@ -2461,10 +2461,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -2496,7 +2496,7 @@ navigateur à l'adresse <http://localhost/progserv1/mini-projet/create.php>.
 Vous devriez voir la valeur du champ affichée à l'écran.
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
     $age = $_POST["age"];
@@ -2594,10 +2594,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -2638,7 +2638,7 @@ ou égale à 0.
 Essayez de rajouter la validation des données côté serveur pour le champ "Âge".
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
     if (empty($age)) {
@@ -2754,10 +2754,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -2794,7 +2794,7 @@ est soumis et qu'il y a des erreurs de validation.
 Pour cela, il faut utiliser l'attribut `value` sur le champ "Âge".
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <label for="age">Âge :</label><br>
@@ -2903,10 +2903,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -2939,7 +2939,7 @@ Pour cela, il faut utiliser les attributs `required` et `min` sur le champ
 "Âge".
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <label for="age">Âge :</label><br>
@@ -3048,10 +3048,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -3086,7 +3086,7 @@ Essayez de rajouter ce champ à l'aide des ressources disponibles sur MDN :
 [Champ `<input type="color">`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/input/color).
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <label for="color">Couleur :</label><br>
@@ -3195,10 +3195,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -3236,7 +3236,7 @@ navigateur à l'adresse <http://localhost/progserv1/mini-projet/create.php>.
 Vous devriez voir la valeur du champ affichée à l'écran.
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
     $color = $_POST["color"];
@@ -3345,10 +3345,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -3396,7 +3396,7 @@ formulaire est soumis et qu'il y a des erreurs de validation.
 Pour cela, il faut utiliser l'attribut `value` sur le champ "Couleur".
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <label for="color">Couleur :</label><br>
@@ -3506,10 +3506,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -3568,7 +3568,7 @@ Pour regrouper les cases à cocher, vous pouvez nommer le champ
 dans un tableau.
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <fieldset>
@@ -3710,10 +3710,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -3797,7 +3797,7 @@ Cela est possible grâce au nom `personalities[]`. Cela permet de récupérer le
 valeurs des cases à cocher dans un tableau.
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
     $personalities = isset($_POST["personalities"]) ? $_POST["personalities"] : [];
@@ -3907,10 +3907,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -3994,7 +3994,7 @@ valeur de la personnalité est présente dans le tableau `$personalities` grâce
 la fonction [`in_array`](https://www.php.net/manual/fr/function.in-array.php).
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <fieldset>
@@ -4136,10 +4136,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -4219,7 +4219,7 @@ Essayez de rajouter ce champ à l'aide des ressources disponibles sur MDN :
 [Champ `<input type="number">`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/input/number).
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <label for="size">Taille :</label><br>
@@ -4330,10 +4330,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -4410,7 +4410,7 @@ navigateur à l'adresse <http://localhost/progserv1/mini-projet/create.php>.
 Vous devriez voir la valeur du champ affichée à l'écran.
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
     $size = $_POST["size"];
@@ -4521,10 +4521,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -4609,7 +4609,7 @@ Essayez de rajouter la validation des données côté serveur pour le champ
 "Taille".
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
     if (!empty($size) && (!is_numeric($size) || $size < 0)) {
@@ -4728,10 +4728,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -4812,7 +4812,7 @@ formulaire est soumis et qu'il y a des erreurs de validation.
 Pour cela, il faut utiliser l'attribut `value` sur le champ "Taille".
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <label for="size">Taille :</label><br>
@@ -4929,10 +4929,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -5013,7 +5013,7 @@ Essayez de rajouter la validation des données côté client pour le champ
 "Taille".
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <label for="size">Taille :</label><br>
@@ -5130,10 +5130,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -5213,7 +5213,7 @@ Essayez de rajouter ce champ à l'aide des ressources disponibles sur MDN :
 [Champ `<textarea>`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/textarea).
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <label for="notes">Notes :</label><br>
@@ -5330,10 +5330,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -5414,7 +5414,7 @@ navigateur à l'adresse <http://localhost/progserv1/mini-projet/create.php>.
 Vous devriez voir la valeur du champ affichée à l'écran.
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
     $notes = $_POST["notes"];
@@ -5531,10 +5531,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -5626,7 +5626,7 @@ Pour cela, il faut mettre la valeur du champ "Notes" dans la balise
 `<textarea>`.
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
         <textarea id="notes" name="notes" rows="4" cols="50"><?php if (isset($notes)) echo $notes; ?></textarea>
@@ -5743,10 +5743,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -6146,10 +6146,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex === 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex === 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
@@ -6230,7 +6230,7 @@ Vous pouvez trouver la solution du mini-projet PHP à l'adresse suivante :
 
 ## Conclusion
 
-Dans cette séance, vous avez créé un formulaire HTML permettant de créer un
+Dans cette session, vous avez créé un formulaire HTML permettant de créer un
 nouvel animal de compagnie.
 
 Vous avez également validé les données du formulaire côté serveur et côté

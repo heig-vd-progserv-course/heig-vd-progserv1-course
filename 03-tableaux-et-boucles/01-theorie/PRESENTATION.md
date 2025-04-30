@@ -598,8 +598,8 @@ Est-ce que vous avez des questions ?
 ## À vous de jouer !
 
 - (Re)lire le [support de cours][course-material].
-- Faire les [exercices][exercices].
 - Réaliser le [mini-projet][mini-project].
+- Faire les [exercices][exercices].
 - Poser des questions si nécessaire.
 
 **Que ce soit pour les exercices ou le mini-projet, nous vous encourageons à

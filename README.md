@@ -15,10 +15,11 @@ Suisse !
 
 - Comprendre les bases de PHP et son rôle dans le monde web.
 - Écrire un code PHP propre et organisé.
-- Gérer les formulaires HTML et les données qu'ils contiennent de manière sûre.
+- Gérer les formulaires HTML et les données qu'ils contiennent.
 - Persister des données dans une base de données SQLite.
+- Implémenter les mécanismes de sécurité de base pour protéger une application
+  web.
 - Implémenter des concepts de programmation orientée objet.
-- Gérer les sessions et préférences utilisateurs à l'aide de cookies.
 
 ## ➡️ Par où commencer ?
 
@@ -38,10 +39,10 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 | [02](#-cours-02) | Fonctions                                                                | 🟢 Complet                                  |
 | [03](#-cours-03) | Tableaux et boucles                                                      | 🟢 Complet                                  |
 | [04](#-cours-04) | Formulaires HTML et validation                                           | 🟢 Complet                                  |
-| [05](#-cours-05) | Base de données et PDO                                                   | 🟡 En cours                                 |
-| [06](#-cours-06) | Programmation orientée objet                                             | 🔴 À faire                                  |
-| [07](#-cours-07) | Gestion des cookies et sessions utilisateurs                             | 🔴 À faire                                  |
-| [08](#-cours-08) | Finalisation de l'application et récapitulatif de l'unité d'enseignement | 🔴 À faire                                  |
+| [05](#-cours-05) | Base de données et PDO                                                   | 🟢 Complet                                  |
+| [06](#-cours-06) | Sécurité et nettoyage des saisies utilisateurs                           | 🟡 En cours                                 |
+| [07](#-cours-07) | Programmation orientée objet                                             | 🔴 À faire                                  |
+| [08](#-cours-08) | Récapitulatif de l'unité d'enseignement et finalisation de l'application | 🔴 À faire                                  |
 
 ## 🕐 Cours 01
 
@@ -127,58 +128,58 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 ## 🕕 Cours 06
 
-### Programmation orientée objet
+### Sécurité et nettoyage des saisies utilisateurs
 
 - Théorie :
-  [Support de cours](./06-programmation-orientee-objet/01-theorie/README.md) ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/06-programmation-orientee-objet/01-theorie/index.html)
+  [Support de cours](./06-securite-et-nettoyage-des-saisies-utilisateurs/01-theorie/README.md)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/06-programmation-orientee-objet/01-theorie/06-programmation-orientee-objet-presentation.pdf)
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/index.html)
+  ·
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/07-programmation-orientee-objet-presentation.pdf)
 - Mini-projet :
-  [Consignes](./06-programmation-orientee-objet/02-mini-project/README.md) ·
-  [Solution](./06-programmation-orientee-objet/02-mini-project/solution/)
+  [Consignes](./06-securite-et-nettoyage-des-saisies-utilisateurs/02-mini-project/README.md)
+  ·
+  [Solution](./06-securite-et-nettoyage-des-saisies-utilisateurs/02-mini-project/solution/)
 - Exercices :
-  [Énoncés et solutions](./06-programmation-orientee-objet/03-exercices/README.md)
+  [Énoncés et solutions](./06-securite-et-nettoyage-des-saisies-utilisateurs/03-exercices/README.md)
 
-[Voir les détails](./06-programmation-orientee-objet/)
+[Voir les détails](./06-securite-et-nettoyage-des-saisies-utilisateurs/)
 
 ## 🕖 Cours 07
 
-### Gestion des cookies et sessions utilisateurs
+### Programmation orientée objet
 
 - Théorie :
-  [Support de cours](./07-gestion-des-cookies-et-sessions-utilisateurs/01-theorie/README.md)
+  [Support de cours](./07-programmation-orientee-objet/01-theorie/README.md) ·
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/index.html)
   ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-gestion-des-cookies-et-sessions-utilisateurs/01-theorie/index.html)
-  ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-gestion-des-cookies-et-sessions-utilisateurs/01-theorie/07-gestion-des-cookies-et-sessions-utilisateurs-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/07-programmation-orientee-objet-presentation.pdf)
 - Mini-projet :
-  [Consignes](./07-gestion-des-cookies-et-sessions-utilisateurs/02-mini-project/README.md)
-  ·
-  [Solution](./07-gestion-des-cookies-et-sessions-utilisateurs/02-mini-project/solution/)
+  [Consignes](./07-programmation-orientee-objet/02-mini-project/README.md) ·
+  [Solution](./07-programmation-orientee-objet/02-mini-project/solution/)
 - Exercices :
-  [Énoncés et solutions](./07-gestion-des-cookies-et-sessions-utilisateurs/03-exercices/README.md)
+  [Énoncés et solutions](./07-programmation-orientee-objet/03-exercices/README.md)
 
-[Voir les détails](./07-gestion-des-cookies-et-sessions-utilisateurs/)
+[Voir les détails](./07-programmation-orientee-objet/)
 
 ## 🕗 Cours 08
 
-### Finalisation de l'application et récapitulatif de l'unité d'enseignement
+### Récapitulatif de l'unité d'enseignement et finalisation de l'application
 
 - Théorie :
-  [Support de cours](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/README.md)
+  [Support de cours](./08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/01-theorie/README.md)
   ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/index.html)
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/01-theorie/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/01-theorie/08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/01-theorie/08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication-presentation.pdf)
 - Mini-projet :
-  [Consignes](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/02-mini-project/README.md)
+  [Consignes](./08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/02-mini-project/README.md)
   ·
-  [Solution](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/02-mini-project/solution/)
-- Exercices :
-  [Énoncés et solutions](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/03-exercices/README.md)
+  [Solution](./08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/02-mini-project/solution/)
+- Examen blanc :
+  [Énoncé](./08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/03-examen-blanc/README.md)
 
-[Voir les détails](./08-finalisation-de-lapplication-et-recapitulatif-de-lunite-denseignement/)
+[Voir les détails](./08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/)
 
 ## 📜 Licence
 

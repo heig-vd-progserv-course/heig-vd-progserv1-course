@@ -82,7 +82,7 @@ précédent :
 Essayez de le faire sans regarder la solution !
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
 $pets = [
@@ -179,7 +179,7 @@ variable `$pets` () dans la fonction `getPets()`. Cela vous permettra d'accéder
 Essayez de le faire sans regarder la solution !
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
 function getPets() {
@@ -264,7 +264,7 @@ associatif contenant les animaux de compagnie.
 Essayez de le faire sans regarder la solution !
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
 // Récupère tous les animaux
@@ -355,7 +355,7 @@ tableau HTML : <https://developer.mozilla.org/fr/docs/Web/HTML/Element/table>.
 Essayez de le faire sans regarder la solution !
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
     <table>
@@ -606,7 +606,7 @@ personnes utilisant la fonction puissent directement utiliser l'animal ajouté.
 Essayez de le faire sans regarder la solution !
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
 function addPet($name, $age) {
@@ -778,7 +778,7 @@ existe, vous pouvez utiliser la fonction `array_key_exists()` :
 Essayez de le faire sans regarder la solution !
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
 function getPet($name) {
@@ -876,7 +876,7 @@ pas, vous devez retourner un booléen `false`.
 Essayez de le faire sans regarder la solution !
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
 function updatePet($name, $age) {
@@ -1004,7 +1004,7 @@ supprime une variable ou un élément d'un tableau.
 Essayez de le faire sans regarder la solution !
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
 function removePet($name) {

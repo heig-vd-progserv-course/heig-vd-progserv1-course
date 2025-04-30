@@ -16,7 +16,7 @@ théoriques vus dans le cours _[Cours 02 - Fonctions](../01-theorie/README.md)_.
 ## Table des matières
 
 - [Ressources](#ressources)
-- [Tables des matières](#table-des-matières)
+- [Table des matières](#table-des-matières)
 - [Objectifs de la session](#objectifs-de-la-session)
 - [Création du ficher `functions.php`](#création-du-ficher-functionsphp)
 - [Importer et utiliser les fonctions dans le fichier `index.php`](#importer-et-utiliser-les-fonctions-dans-le-fichier-indexphp)
@@ -64,7 +64,7 @@ progserv1/
 └── phpinfo.php
 ```
 
-Complétez le fichier `functions.php` avec les fonctions suivantes :
+Complétez le fichier `functions.php` avec le code suivant :
 
 ```php
 <?php
@@ -119,7 +119,7 @@ de façon fictive. Vous pourriez, par exemple :
 Essayez de le faire sans regarder la solution !
 
 <details>
-<summary>Afficher la solution</summary>
+<summary>Afficher la réponse</summary>
 
 ```php
 // Crée Caramel, un chat de 3 ans
@@ -180,7 +180,7 @@ removePet("Tweety");
 
 </details>
 
-Ouvrez votre navigateur et allez à l'adresse
+Ouvrez votre navigateur et accédez à l'adresse
 <http://localhost/progserv1/mini-projet/index.php>.
 
 Vous devriez voir les messages suivants :
