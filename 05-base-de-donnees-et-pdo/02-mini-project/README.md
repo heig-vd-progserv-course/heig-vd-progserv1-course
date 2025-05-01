@@ -219,7 +219,7 @@ Pour créer la table, nous allons exécuter une requête SQL dans le fichier
 ```php
 <?php
 // Chemin vers le fichier de base de données SQLite
-const DATABASE_FILE = '/workspace/db/petsmanager.db';
+const DATABASE_FILE = './petsmanager.db';
 
 // Création d'une instance de PDO pour se connecter à la base de données
 $pdo = new PDO("sqlite:" . DATABASE_FILE);
