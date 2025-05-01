@@ -74,11 +74,10 @@ print_r($users);
 echo "<br>";
 
 // On définit la requête SQL pour mettre à jour l'utilisateur `Jane Doe`
-$sql = "UPDATE users SET 
+$sql = "UPDATE users SET
     name = 'Jane Smith',
     email = 'jane.smith@heig-vd.ch'
-    WHERE id = '$janeDoeId'
-";
+WHERE id = '$janeDoeId'";
 
 // On exécute la requête SQL pour mettre à jour l'utilisateur
 $pdo->exec($sql);

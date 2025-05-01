@@ -310,8 +310,7 @@ Pour mettre à jour des données dans une table, nous utilisons la méthode
 $sql = "UPDATE users SET
     name = 'Jane Smith',
     email = 'jane.smith@heig-vd.ch'
-    WHERE id = '$janeDoeId'
-";
+WHERE id = '$janeDoeId'";
 
 // On exécute la requête SQL pour mettre à jour l'utilisateur
 $pdo->exec($sql);
