@@ -205,8 +205,7 @@ print_r($users);
 $sql = "UPDATE users SET
     name = 'Jane Smith',
     email = 'jane.smith@heig-vd.ch'
-    WHERE id = '$janeDoeId'
-";
+WHERE id = '$janeDoeId'";
 
 // On exécute la requête SQL pour mettre à jour l'utilisateur
 $pdo->exec($sql);
@@ -271,7 +270,7 @@ Est-ce que vous avez des questions ?
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
-## Sources (1/3)
+## Sources
 
 - [Illustration principale][illustration-principale] par
   [Richard Jacobs](https://unsplash.com/@rj2747) sur
@@ -285,9 +284,6 @@ Est-ce que vous avez des questions ?
 - [Illustration][illustration-systeme-de-gestion-de-base-de-donnees] par
   [israel palacio](https://unsplash.com/@othentikisra) sur
   [Unsplash](https://unsplash.com/photos/two-square-blue-led-lights-ImcUkZ72oUs)
-
----
-
 - [Illustration][illustration-a-vous-de-jouer] par
   [Nikita Kachanovsky](https://unsplash.com/@nkachanovskyyy) sur
   [Unsplash](https://unsplash.com/photos/white-sony-ps4-dualshock-controller-over-persons-palm-FJFPuE1MAOM)
@@ -317,8 +313,5 @@ Est-ce que vous avez des questions ?
 	https://images.unsplash.com/photo-1544383835-bda2bc66a55d?fit=crop&h=720
 [illustration-systeme-de-gestion-de-base-de-donnees]:
 	https://images.unsplash.com/photo-1534224039826-c7a0eda0e6b3?fit=crop&h=720
-
----
-
 [illustration-a-vous-de-jouer]:
 	https://images.unsplash.com/photo-1509198397868-475647b2a1e5?fit=crop&h=720
