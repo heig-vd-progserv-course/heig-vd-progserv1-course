@@ -27,6 +27,7 @@ _[Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP](../01
   - [Installation d'un éditeur de code](#installation-dun-éditeur-de-code)
   - [Configuration de l'éditeur de code](#configuration-de-léditeur-de-code)
   - [Installation des extensions PHP dans Visual Studio Code](#installation-des-extensions-php-dans-visual-studio-code)
+  - [Activation des messages d'erreurs de PHP dans le navigateur](#activation-des-messages-derreurs-de-php-dans-le-navigateur)
 - [Initialisation du projet PHP](#initialisation-du-projet-php)
   - [Création de la structure du projet](#création-de-la-structure-du-projet)
   - [Création des fichiers du projet](#création-des-fichiers-du-projet)
@@ -392,7 +393,8 @@ Pour ce faire, suivez les étapes suivantes :
 
 5. Dans l'onglet **PHP**, sélectionnez la version de PHP que vous souhaitez
    utiliser pour le projet. Nous vous recommandons d'utiliser la dernière
-   version de PHP disponible.
+   version de PHP disponible. **Notez la version de PHP que vous sélectionnez,
+   vous en aurez besoin pour la suite**.
 
    ![Préférences de MAMP - PHP](./images/mamp-preferences-php.png)
 
@@ -489,8 +491,8 @@ Pour installer Visual Studio Code sur macOS, suivez les étapes suivantes :
 >
 > Sélectionnez la bonne version de Visual Studio Code pour macOS en fonction de
 > l'architecture de votre processeur (Intel ou Apple Silicon). Les personnes
-> avec des appareils Apple M1, M2 ou M3 doivent télécharger la version ARM de
-> Visual Studio Code.
+> avec des appareils Apple M1, M2, M3 ou M4 doivent télécharger la version ARM
+> de Visual Studio Code.
 
 1. Rendez-vous sur le site web de Visual Studio Code à l'adresse suivante :
    <https://code.visualstudio.com/>.
@@ -574,10 +576,10 @@ Pour que Visual Studio Code puisse vous aidez lors de la rédaction de code PHP,
 vous devez configurer l'interpréteur PHP dans les paramètres de l'éditeur de
 code. Pour ce faire, suivez les étapes suivantes :
 
-1. Identifier où est installé l'interpréteur PHP sur votre ordinateur. Avec
+1. Identifiez où est installé l'interpréteur PHP sur votre ordinateur. Avec
    MAMP, il est installé par défaut dans le dossier `C:\MAMP\bin\php` pour
    Windows ou `/Applications/MAMP/bin/php` pour macOS.
-2. Identifier la version de PHP à utiliser. Selon votre configuration MAMP, il
+2. Identifiez la version de PHP à utiliser. Selon votre configuration MAMP, il
    faut sélectionner la même version que celle configurée dans MAMP. Dans la
    capture suivante, la version 8.3.1 est utilisée. Vous pouvez vérifier la
    version de PHP dans MAMP en cliquant sur le bouton **Preferences** dans la
@@ -652,6 +654,81 @@ Pour installer l'extension PHP Intelephense, suivez les étapes suivantes :
 
 5. Une fois l'extension installée, vous devriez voir une confirmation de
    l'installation.
+
+### Activation des messages d'erreurs de PHP dans le navigateur
+
+Il se peut que vous rencontriez des erreurs dans votre code PHP durant le
+développement de l'application web. Pour vous aider à déboguer votre code, il
+est important d'activer les messages d'erreur dans le navigateur. Cela vous
+permettra de voir les erreurs et les avertissements générés par PHP lorsque
+celles-ci se produisent.
+
+Par défaut, PHP n'affiche pas les messages d'erreur dans le navigateur pour
+éviter de divulguer des informations sensibles sur votre application. Cela peut
+rendre le débogage de votre code plus difficile, car vous ne saurez pas
+exactement où se trouvent les erreurs et seule une page blanche s'affichera dans
+le navigateur.
+
+Pour activer les messages d'erreur avec PHP, vous devez modifier le fichier
+`php.ini` qui se trouve dans le dossier de configuration de PHP. Ce fichier est
+utilisé par l'interpréteur PHP pour configurer son comportement et ses
+paramètres. Il est important de le configurer correctement pour que PHP affiche
+les messages d'erreur et de débogage.
+
+Pour ce faire, suivez les étapes suivantes :
+
+> [!NOTE]
+>
+> La configuration ci-dessous peut varier en fonction de la version de PHP/MAMP
+> que vous utilisez. Il se peut que ces options soient déjà activées par défaut
+> dans votre installation de MAMP. Si c'est le cas, vous n'avez pas besoin de
+> les modifier.
+
+1. En utilisant la version de PHP notée préalablement, ouvrez le fichier
+   `php.ini` de l'interpréteur PHP qui est utilisé avec MAMP dans Visual Studio
+   Code.
+
+   Par exemple, si vous utilisez la version 8.3.1 de PHP, le fichier `php.ini`
+   se trouve dans le dossier `C:\MAMP\conf\php8.3.1\php.ini` pour Windows ou
+   `/Applications/MAMP/conf/php8.3.1/php.ini` pour macOS.
+
+2. Cherchez la chaîne de caractères `display_errors` dans le fichier `php.ini`.
+   Vous pouvez utiliser la fonction de recherche de Visual Studio Code en
+   appuyant sur `Ctrl + F` (Windows/Linux) ou `Cmd + F` (macOS) et en entrant
+   `display_errors` dans la barre de recherche. Vous devriez trouver une ligne
+   qui ressemble à ceci :
+
+   ```ini
+   display_errors = off
+   ```
+
+   ou
+
+   ```ini
+   display_errors = on
+   ```
+
+   Il se peut que vous trouviez plusieurs occurrences de cette ligne dans le
+   fichier `php.ini`. Assurez-vous de modifier la ligne qui n'est pas commentée
+   (sans point-virgule (`;`) au début de la ligne).
+
+3. Si besoin, modifiez cette ligne pour qu'elle ressemble à ceci :
+
+   ```ini
+   display_errors = on
+   ```
+
+   Cela indique à PHP d'afficher les messages d'erreur.
+
+4. Sauvegardez le fichier `php.ini` et fermez-le.
+5. Redémarrez MAMP pour appliquer les changements.
+6. Ouvrez votre navigateur web et accédez à l'adresse
+   <http://localhost/progserv1/phpinfo.php>. Vous devriez la section
+   `display_errors` pour valider que les messages d'erreur sont affichés (avec
+   une valeur `On`).
+7. Si vous avez des erreurs dans votre code PHP, elles devraient maintenant
+   s'afficher dans le navigateur lorsque vous accédez à vos fichiers PHP plutôt
+   qu'une page blanche.
 
 ## Initialisation du projet PHP
 
