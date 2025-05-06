@@ -723,9 +723,9 @@ Pour ce faire, suivez les étapes suivantes :
 4. Sauvegardez le fichier `php.ini` et fermez-le.
 5. Redémarrez MAMP pour appliquer les changements.
 6. Ouvrez votre navigateur web et accédez à l'adresse
-   <http://localhost/phpinfo.php>. Vous devriez voir les informations de
-   configuration de PHP de la section `display_errors` pour valider que les
-   messages d'erreur sont affichés.
+   <http://localhost/progserv1/phpinfo.php>. Vous devriez la section
+   `display_errors` pour valider que les messages d'erreur sont affichés (avec
+   une valeur `On`).
 7. Si vous avez des erreurs dans votre code PHP, elles devraient maintenant
    s'afficher dans le navigateur lorsque vous accédez à vos fichiers PHP plutôt
    qu'une page blanche.

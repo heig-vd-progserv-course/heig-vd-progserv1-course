@@ -70,6 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // On redirige vers la page d'accueil avec tous les animaux
         header("Location: index.php");
+        exit();
     }
 }
 ?>
