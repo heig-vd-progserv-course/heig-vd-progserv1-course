@@ -501,6 +501,16 @@ Vous remarquerez alors qu'une erreur s'affiche :
 Warning: Array to string conversion
 ```
 
+> [!NOTE]
+>
+> Le message d'erreur ne s'affiche pas ? Une simple page blanche s'affiche à la
+> place ?
+>
+> Vérifiez que l'affichage des erreurs est activé dans le fichier `php.ini` de
+> votre serveur local. Vous pouvez suivre les instructions suivantes pour
+> activer les messages d'erreurs dans le navigateur :
+> [Activation des messages d'erreurs de PHP dans le navigateur](../../01-modalites-de-lunite-denseignement-et-introduction-a-php/02-mini-project/README.md#activation-des-messages-derreurs-de-php-dans-le-navigateur).
+
 En effet, notre table `pets` contient un champ `personalities` qui est un champ
 texte.
 
