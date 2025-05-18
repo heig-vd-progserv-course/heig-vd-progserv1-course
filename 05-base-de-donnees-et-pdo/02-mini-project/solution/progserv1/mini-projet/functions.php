@@ -33,19 +33,13 @@ function getPet($id) {
     global $pdo;
 
     // On définit la requête SQL pour récupérer un animal
-    $sql = "SELECT * FROM pets WHERE id = :id";
+    $sql = "SELECT * FROM pets WHERE id = '$id'";
 
-    // On prépare la requête SQL
-    $stmt = $pdo->prepare($sql);
+    // On récupère l'animal spécifique
+    $pet = $pdo->query($sql);
 
-    // On lie le paramètre
-    $stmt->bindParam(':id', $id);
-
-    // On exécute la requête SQL
-    $stmt->execute();
-
-    // On récupère le résultat comme tableau associatif
-    $pet = $stmt->fetch();
+    // On transforme le résultat en tableau associatif
+    $pet = $pet->fetch();
 
     // On transforme la chaîne `personalities` en tableau si elle existe
     if ($pet && !empty($pet['personalities'])) {
@@ -86,33 +80,19 @@ function addPet(
         size,
         notes
     ) VALUES (
-        :name,
-        :species,
-        :nickname,
-        :sex,
-        :age,
-        :color,
-        :personalities,
-        :size,
-        :notes
+        '$name',
+        '$species',
+        '$nickname',
+        '$sex',
+        $age,
+        '$color',
+        '$personalitiesAsString',
+        $size,
+        '$notes'
     )";
 
-    // On prépare la requête SQL
-    $stmt = $pdo->prepare($sql);
-
-    // On lie les paramètres
-    $stmt->bindParam(':name', $name);
-    $stmt->bindParam(':species', $species);
-    $stmt->bindParam(':nickname', $nickname);
-    $stmt->bindParam(':sex', $sex);
-    $stmt->bindParam(':age', $age);
-    $stmt->bindParam(':color', $color);
-    $stmt->bindParam(':personalities', $personalitiesAsString);
-    $stmt->bindParam(':size', $size);
-    $stmt->bindParam(':notes', $notes);
-
     // On exécute la requête SQL pour ajouter un animal
-    $stmt->execute();
+    $pdo->exec($sql);
 
     // On récupère l'identifiant de l'animal ajouté
     $petId = $pdo->lastInsertId();
@@ -151,14 +131,8 @@ function removePet($id) {
     global $pdo;
 
     // On définit la requête SQL pour supprimer un animal
-    $sql = "DELETE FROM pets WHERE id = :id";
-
-    // On prépare la requête SQL
-    $stmt = $pdo->prepare($sql);
-
-    // On lie le paramètre
-    $stmt->bindParam(':id', $id);
+    $sql = "DELETE FROM pets WHERE id = '$id'";
 
     // On exécute la requête SQL pour supprimer un animal
-    return $stmt->execute();
+    return $pdo->exec($sql);
 }
