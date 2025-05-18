@@ -68,8 +68,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $notes
         );
 
-        // On redirige vers la page d'accueil avec tous les animaux
-        header("Location: index.php");
+        // // On redirige vers la page d'accueil avec tous les animaux
+        // header("Location: index.php");
     }
 }
 ?>

@@ -226,6 +226,9 @@ if (isset($_GET["id"])) {
         <a href="delete.php?id=<?= $pet["id"] ?>">
             <button type="button">Supprimer</button>
         </a>
+        <a href="edit.php?id=<?= $pet["id"] ?>">
+            <button type="button">Mettre à jour</button>
+        </a>
     </form>
 </body>
 
