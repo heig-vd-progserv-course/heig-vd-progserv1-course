@@ -233,86 +233,86 @@ if (isset($_GET["id"])) {
             <p style="color: red;">Le formulaire contient des erreurs :</p>
             <ul>
                 <?php foreach ($errors as $error) { ?>
-                    <li><?php echo $error; ?></li>
+                    <li><?= $error; ?></li>
                 <?php } ?>
             </ul>
         <?php } ?>
     <?php } ?>
 
     <form action="edit.php" method="POST">
-        <input type="hidden" name="id" value="<?= $pet["id"] ?>" />
+        <input type="hidden" name="id" value="<?= htmlentities($pet["id"]) ?>" />
 
         <label for="name">Nom :</label><br>
-        <input type="text" id="name" name="name" value="<?php if (isset($name)) echo $name; ?>" required minlength="2">
+        <input type="text" id="name" name="name" value="<?= isset($name) ? htmlspecialchars($name) : "" ?>" required minlength="2">
 
         <br>
 
         <label for="species">Espèce :</label><br>
         <select id="species" name="species" required>
-            <option value="dog" <?php if (isset($species) && $species == "dog") echo "selected"; ?>>Chien</option>
-            <option value="cat" <?php if (isset($species) && $species == "cat") echo "selected"; ?>>Chat</option>
-            <option value="lizard" <?php if (isset($species) && $species == "lizard") echo "selected"; ?>>Lézard</option>
-            <option value="snake" <?php if (isset($species) && $species == "snake") echo "selected"; ?>>Serpent</option>
-            <option value="bird" <?php if (isset($species) && $species == "bird") echo "selected"; ?>>Oiseau</option>
-            <option value="rabbit" <?php if (isset($species) && $species == "rabbit") echo "selected"; ?>>Lapin</option>
-            <option value="other" <?php if (isset($species) && $species == "other") echo "selected"; ?>>Autre</option>
+            <option value="dog" <?= isset($species) && $species == "dog" ? "selected" : "" ?>>Chien</option>
+            <option value="cat" <?= isset($species) && $species == "cat" ? "selected" : "" ?>>Chat</option>
+            <option value="lizard" <?= isset($species) && $species == "lizard" ? "selected" : "" ?>>Lézard</option>
+            <option value="snake" <?= isset($species) && $species == "snake" ? "selected" : "" ?>>Serpent</option>
+            <option value="bird" <?= isset($species) && $species == "bird" ? "selected" : "" ?>>Oiseau</option>
+            <option value="rabbit" <?= isset($species) && $species == "rabbit" ? "selected" : "" ?>>Lapin</option>
+            <option value="other" <?= isset($species) && $species == "other" ? "selected" : "" ?>>Autre</option>
         </select>
 
         <br>
 
         <label for="nickname">Surnom :</label><br>
-        <input type="text" id="nickname" name="nickname" value="<?php if (isset($nickname)) echo $nickname; ?>" />
+        <input type="text" id="nickname" name="nickname" value="<?= isset($nickname) ? htmlspecialchars($nickname) : "" ?>" />
 
         <fieldset>
             <legend>Sexe :</legend>
 
-            <input type="radio" id="male" name="sex" value="male" <?php echo (isset($sex) && $sex == 'male') ? 'checked' : ''; ?> required />
+            <input type="radio" id="male" name="sex" value="male" <?= isset($sex) && $sex == "male" ? "checked" : "" ?> required />
             <label for="male">Mâle</label><br>
 
-            <input type="radio" id="female" name="sex" value="female" <?php echo (isset($sex) && $sex == 'female') ? 'checked' : ''; ?> required />
+            <input type="radio" id="female" name="sex" value="female" <?= isset($sex) && $sex == "female" ? "checked" : ""; ?> required />
             <label for="female">Femelle</label>
         </fieldset>
 
         <br>
 
         <label for="age">Âge :</label><br>
-        <input type="number" id="age" name="age" value="<?php if (isset($age)) echo $age; ?>" required min="0" />
+        <input type="number" id="age" name="age" value="<?= isset($age) ? htmlspecialchars($age) : "" ?>" required min="0" />
 
         <br>
 
         <label for="color">Couleur :</label><br>
-        <input type="color" id="color" name="color" value="<?php if (isset($color)) echo $color; ?>" />
+        <input type="color" id="color" name="color" value="<?= isset($color) ? htmlspecialchars($color) : "" ?>" />
 
         <fieldset>
             <legend>Personnalité :</legend>
 
             <div>
-                <input type="checkbox" id="gentil" name="personalities[]" value="gentil" <?php echo (!empty($personalities) && in_array("gentil", $personalities)) ? 'checked' : ''; ?> />
+                <input type="checkbox" id="gentil" name="personalities[]" value="gentil" <?= !empty($personalities) && in_array("gentil", $personalities) ? "checked" : "" ?> />
                 <label for="gentil">Gentil</label>
             </div>
 
             <div>
-                <input type="checkbox" id="playful" name="personalities[]" value="playful" <?php echo (!empty($personalities) && in_array("playful", $personalities)) ? 'checked' : ''; ?> />
+                <input type="checkbox" id="playful" name="personalities[]" value="playful" <?= !empty($personalities) && in_array("playful", $personalities) ? "checked" : "" ?> />
                 <label for="playful">Joueur</label>
             </div>
 
             <div>
-                <input type="checkbox" id="curious" name="personalities[]" value="curious" <?php echo (!empty($personalities) && in_array("curious", $personalities)) ? 'checked' : ''; ?> />
+                <input type="checkbox" id="curious" name="personalities[]" value="curious" <?= !empty($personalities) && in_array("curious", $personalities) ? "checked" : "" ?> />
                 <label for="curious">Curieux</label>
             </div>
 
             <div>
-                <input type="checkbox" id="lazy" name="personalities[]" value="lazy" <?php echo (!empty($personalities) && in_array("lazy", $personalities)) ? 'checked' : ''; ?> />
+                <input type="checkbox" id="lazy" name="personalities[]" value="lazy" <?= !empty($personalities) && in_array("lazy", $personalities) ? "checked" : "" ?> />
                 <label for="lazy">Paresseux</label>
             </div>
 
             <div>
-                <input type="checkbox" id="scared" name="personalities[]" value="scared" <?php echo (!empty($personalities) && in_array("scared", $personalities)) ? 'checked' : ''; ?> />
+                <input type="checkbox" id="scared" name="personalities[]" value="scared" <?= !empty($personalities) && in_array("scared", $personalities) ? "checked" : "" ?> />
                 <label for="scared">Peureux</label>
             </div>
 
             <div>
-                <input type="checkbox" id="aggressive" name="personalities[]" value="aggressive" <?php echo (!empty($personalities) && in_array("aggressive", $personalities)) ? 'checked' : ''; ?> />
+                <input type="checkbox" id="aggressive" name="personalities[]" value="aggressive" <?= !empty($personalities) && in_array("aggressive", $personalities) ? "checked" : "" ?> />
                 <label for="aggressive">Agressif</label>
             </div>
         </fieldset>
@@ -320,17 +320,17 @@ if (isset($_GET["id"])) {
         <br>
 
         <label for="size">Taille :</label><br>
-        <input type="number" id="size" name="size" value="<?php if (isset($size)) echo $size; ?>" min="0" step="0.1" />
+        <input type="number" id="size" name="size" value="<?= isset($size) ? htmlspecialchars($size) : "" ?>" min="0" step="0.1" />
 
         <br>
 
         <label for="notes">Notes :</label><br>
-        <textarea id="notes" name="notes" rows="4" cols="50"><?php if (isset($notes)) echo $notes; ?></textarea>
+        <textarea id="notes" name="notes" rows="4" cols="50"><?= isset($notes) ? htmlspecialchars($notes) : "" ?></textarea>
 
         <br>
         <br>
 
-        <a href="delete.php?id=<?= $pet["id"] ?>">
+        <a href="delete.php?id=<?= htmlspecialchars($pet["id"]) ?>">
             <button type="button">Supprimer</button>
         </a><br>
         <button type="submit">Mettre à jour</button><br>

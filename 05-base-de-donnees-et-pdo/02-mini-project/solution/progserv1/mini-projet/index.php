@@ -51,6 +51,7 @@ $pets = getPets();
                     <td>
                         <a href="delete.php?id=<?= $pet['id'] ?>"><button>Supprimer</button></a>
                         <a href="view.php?id=<?= $pet['id'] ?>"><button>Visualiser</button></a>
+                    </td>
                 </tr>
             <?php } ?>
         </tbody>

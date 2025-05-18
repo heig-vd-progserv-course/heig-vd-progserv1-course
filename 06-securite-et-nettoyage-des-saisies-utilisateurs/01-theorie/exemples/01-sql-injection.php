@@ -8,7 +8,6 @@ $pdo = new PDO("sqlite:" . DATABASE_FILE);
 // Création d'une table `users`
 $sql = "CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    email TEXT NOT NULL UNIQUE,
     password TEXT NOT NULL
 )";
 

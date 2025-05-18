@@ -42,7 +42,13 @@ d'attaques.
 
 De façon plus précise, les personnes qui étudient devraient être capables de :
 
-- TODO
+- Lister les différences entre la validation et le nettoyage des saisies
+  utilisateurs
+- Lister les implications de sécurité des saisies utilisateurs
+- Décrire les attaques par injection SQL et XSS
+- Se prémunir contre les injections SQL et les attaques XSS
+- Utiliser des requêtes préparées avec PDO
+- Échapper les données avant de les afficher dans une page web
 
 ## Validation et nettoyage des saisies utilisateurs
 
@@ -407,18 +413,37 @@ Si l'on reprend l'exemple précédent, voici comment utiliser des requêtes
 préparées pour éviter les injections SQL :
 
 ```php
-// On définit la requête SQL avec des paramètres
-$sql = "INSERT INTO users (email, password) VALUES (:username, :password)";
+    // On prépare la requête SQL pour ajouter un utilisateur
+    $sql = "INSERT INTO users (email, password) VALUES (:username, :password)";
 
-// On prépare la requête SQL
-$stmt = $pdo->prepare($sql);
+    // On prépare la requête SQL
+    $stmt = $pdo->prepare($sql);
 
-// On lie les paramètres aux valeurs réelles
-$stmt->bindParam(':email', $password);
-$stmt->bindParam(':password', $password);
+    // On lie les paramètres aux valeurs réelles
+    $stmt->bindParam(':email', $password);
+    $stmt->bindParam(':password', $password);
 
-// On exécute la requête
-$stmt->execute();
+    // On exécute la requête
+    $stmt->execute();
+```
+
+Les différences sont les suivantes :
+
+```diff
+     // On prépare la requête SQL pour ajouter un utilisateur
+-    $sql = "INSERT INTO users (email, password) VALUES ('$email', '$password')";
++    $sql = "INSERT INTO users (email, password) VALUES (:email, :password)";
++
++    // On prépare la requête
++    $stmt = $pdo->prepare($sql);
++
++    // On lie les paramètres
++    $stmt->bindParam(':email', $email);
++    $stmt->bindParam(':password', $password);
+
+     // On exécute la requête SQL pour ajouter l'utilisateur
+-    $pdo->exec($sql);
++    $stmt->execute();
 ```
 
 Dans cet exemple, les valeurs de `$email` et `$password` sont liées aux
@@ -476,9 +501,22 @@ Si l'on reprend l'exemple précédent, voici comment échapper les données avan
 les afficher dans une page web :
 
 ```php
+    <ul>
         <?php foreach ($users as $user) : ?>
             <li><?= htmlspecialchars($user["email"]) ?></li>
         <?php endforeach; ?>
+    </ul>
+```
+
+Les différences sont les suivantes :
+
+```diff
+     <ul>
+         <?php foreach ($users as $user) : ?>
+-            <li><?= $user["email"] ?></li>
++            <li><?= htmlspecialchars($user["email"]) ?></li>
+         <?php endforeach; ?>
+     </ul>
 ```
 
 Dans cet exemple, la fonction `htmlspecialchars` est utilisée pour échapper les
@@ -505,6 +543,29 @@ En suivant ces bonnes pratiques, vous pouvez améliorer la sécurité de votre
 application et vous prémunir contre les attaques par injection SQL et les
 attaques XSS.
 
+> [!CAUTION]
+>
+> Dans la vraie vie, vous n'aurez sans doute pas accès au code source de
+> l'application que vous utilisez. Il serait donc nécessaire de tester
+> l'application à tâtons pour essayer de trouver des failles de sécurité, avec
+> tous les risques que cela comporte.
+>
+> Les conséquences d'une injection SQL ou d'une attaque XSS peuvent être graves
+> et peuvent entraîner la perte de données, la compromission de la sécurité de
+> l'application ou la fuite de données sensibles.
+>
+> Vous pourriez être tenu.e responsable des conséquences des dégâts causés par
+> une injection SQL ou une attaque XSS sur une application réelle.
+>
+> Il est donc important de vous former à la sécurité avec des applications de
+> test et de ne pas tester des applications réelles sans l'autorisation
+> explicite de l'entreprise ou de la personne responsable de l'application.
+>
+> Si une faille de sécurité est trouvée, il est important de la signaler à
+> l'entreprise ou à la personne responsable de l'application afin qu'elle puisse
+> être corrigée. Cela permet de garantir la sécurité de l'application et de
+> protéger les données des utilisateurs.
+
 ## Mini-projet
 
 Nous vous invitons maintenant à réaliser le mini-projet de cette session pour
@@ -520,7 +581,3 @@ renforcer votre compréhension des concepts vus en classe.
 
 Vous trouverez les détails des exercices ici :
 [Énoncés et solutions](../03-exercices/README.md).
-
-```
-
-```

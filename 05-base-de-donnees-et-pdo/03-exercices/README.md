@@ -92,8 +92,6 @@ fonction `addGrade` doit donc prendre trois paramètres : `name`, `grade`, et
 ```php
 <?php
 
-<?php
-
 // Fonction pour ajouter une note dans la table `courses`
 // Comme l'acronyme est facultatif, on lui donne une valeur par défaut `null`.
 function addGrade($name, $grade, $acronym = null) {

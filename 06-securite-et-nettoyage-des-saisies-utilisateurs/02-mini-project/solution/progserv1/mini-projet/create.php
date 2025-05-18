@@ -68,8 +68,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $notes
         );
 
-        // // On redirige vers la page d'accueil avec tous les animaux
-        // header("Location: index.php");
+        // On redirige vers la page d'accueil avec tous les animaux
+        header("Location: index.php");
+        exit();
     }
 }
 ?>
@@ -202,7 +203,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <form action="create.php" method="POST">
         <label for="name">Nom :</label><br>
-        <input type="text" id="name" name="name" value="<?php if (isset($name)) echo $name; ?>" required minlength="2">
+        <input type="text" id="name" name="name" value="<?php if (isset($name)) echo htmlspecialchars($name); ?>" required minlength="2">
 
         <br>
 
@@ -220,7 +221,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
 
         <label for="nickname">Surnom :</label><br>
-        <input type="text" id="nickname" name="nickname" value="<?php if (isset($nickname)) echo $nickname; ?>" />
+        <input type="text" id="nickname" name="nickname" value="<?php if (isset($nickname)) echo htmlspecialchars($nickname); ?>" />
 
         <fieldset>
             <legend>Sexe :</legend>
@@ -235,12 +236,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
 
         <label for="age">Âge :</label><br>
-        <input type="number" id="age" name="age" value="<?php if (isset($age)) echo $age; ?>" required min="0" />
+        <input type="number" id="age" name="age" value="<?php if (isset($age)) echo htmlspecialchars($age); ?>" required min="0" />
 
         <br>
 
         <label for="color">Couleur :</label><br>
-        <input type="color" id="color" name="color" value="<?php if (isset($color)) echo $color; ?>" />
+        <input type="color" id="color" name="color" value="<?php if (isset($color)) echo htmlspecialchars($color); ?>" />
 
         <fieldset>
             <legend>Personnalité :</legend>
@@ -279,12 +280,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
 
         <label for="size">Taille :</label><br>
-        <input type="number" id="size" name="size" value="<?php if (isset($size)) echo $size; ?>" min="0" step="0.1" />
+        <input type="number" id="size" name="size" value="<?php if (isset($size)) echo htmlspecialchars($size); ?>" min="0" step="0.1" />
 
         <br>
 
         <label for="notes">Notes :</label><br>
-        <textarea id="notes" name="notes" rows="4" cols="50"><?php if (isset($notes)) echo $notes; ?></textarea>
+        <textarea id="notes" name="notes" rows="4" cols="50"><?php if (isset($notes)) echo htmlspecialchars($notes); ?></textarea>
 
         <br>
         <br>

@@ -44,13 +44,15 @@ $pets = getPets();
         <tbody>
             <?php foreach ($pets as $pet) { ?>
                 <tr>
-                    <td><?= $pet['name'] ?></td>
-                    <td><?= $pet['species'] ?></td>
-                    <td><?= $pet['sex'] ?></td>
-                    <td><?= $pet['age'] ?></td>
+                    <td><?= htmlspecialchars($pet['name']) ?></td>
+                    <td><?= htmlspecialchars($pet['species']) ?></td>
+                    <td><?= htmlspecialchars($pet['sex']) ?></td>
+                    <td><?= htmlspecialchars($pet['age']) ?></td>
                     <td>
-                        <a href="delete.php?id=<?= $pet['id'] ?>"><button>Supprimer</button></a>
-                        <a href="view.php?id=<?= $pet['id'] ?>"><button>Visualiser</button></a>
+                        <a href="delete.php?id=<?= htmlspecialchars($pet['id']) ?>"><button>Supprimer</button></a>
+                        <a href="edit.php?id=<?= htmlspecialchars($pet['id']) ?>"><button>Éditer</button></a>
+                        <a href="view.php?id=<?= htmlspecialchars($pet['id']) ?>"><button>Visualiser</button></a>
+                    </td>
                 </tr>
             <?php } ?>
         </tbody>

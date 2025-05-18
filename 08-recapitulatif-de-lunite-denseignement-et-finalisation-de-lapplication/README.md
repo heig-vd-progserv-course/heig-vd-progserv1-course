@@ -2,10 +2,12 @@
 
 ## Ressources
 
-- Théorie : [Support de cours](./01-theorie/README.md) ·
+- Récapitulatif de l'unité d'enseignement :
   [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/01-theorie/index.html)
   ·
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/01-theorie/08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication-presentation.pdf)
+  ·
+  [Résultats des formulaires de feedback](./01-recapitulatif-de-lunite-denseignement/)
 - Mini-projet : [Consignes](./02-mini-project/README.md) ·
   [Solution](./02-mini-project/solution/)
 - Examen blanc : [Énoncé](./03-examen-blanc/README.md)

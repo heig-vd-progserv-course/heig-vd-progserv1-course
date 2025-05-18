@@ -302,7 +302,7 @@ compagnie de la base de données.
 Suite au travail effectué dans le cours précédent
 ([Cours 04 - Formulaires HTML et validation](../../04-formulaires-html-et-validation/02-mini-project/README.md)),
 vous avez déjà un formulaire pour créer un nouvel animal de compagnie. Vous
-allez maintenant mettre à jour la fonction `createPet()` dans le fichier
+allez maintenant mettre à jour la fonction `addPet()` dans le fichier
 `functions.php` pour insérer un nouvel animal de compagnie dans la base de
 données.
 
@@ -311,7 +311,7 @@ données de l'animal de compagnie dans la table `pets`.
 
 #### Mise à jour du fichier `functions.php`
 
-Mettez à jour la fonction `createPet()` dans le fichier `functions.php` avec le
+Mettez à jour la fonction `addPet()` dans le fichier `functions.php` avec le
 code suivant :
 
 ```php
@@ -1050,6 +1050,7 @@ Mettez à jour le fichier `index.php` avec le code suivant :
                     <td><?= $pet['age'] ?></td>
                     <td>
                         <a href="view.php?id=<?= $pet['id'] ?>"><button>Visualiser</button></a>
+                    </td>
                 </tr>
             <?php } ?>
         </tbody>
@@ -1479,6 +1480,7 @@ Mettez à jour le fichier `index.php` avec le code suivant :
                     <td>
                         <a href="delete.php?id=<?= $pet['id'] ?>"><button>Supprimer</button></a>
                         <a href="view.php?id=<?= $pet['id'] ?>"><button>Visualiser</button></a>
+                    </td>
                 </tr>
             <?php } ?>
         </tbody>

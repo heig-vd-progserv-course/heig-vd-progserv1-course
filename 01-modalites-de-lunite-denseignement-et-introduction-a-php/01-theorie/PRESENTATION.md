@@ -60,18 +60,19 @@ Mon objectif est de vous donner des bases solides et une bonne compréhension de
 ce language pour vos études et pour la suite.
 
 Si quelque chose ne convient pas dans mon cours, n'hésitez pas à me le dire. Je
-suis ouvert à toute critique pour améliorer mon enseignement.
+suis ouvert à toutes critiques pour améliorer mon enseignement.
 
 ## Comment me contacter
 
-Selon vos préférences, vous pouvez utiliser l'un des canaux de communication
-suivants pour toutes questions relatives au cours :
+Selon vos préférences, vous pouvez utiliser l'un des canaux suivants pour toutes
+questions relatives à l'unité d'enseignement :
 
 - En personne, durant les sessions de cours ou en dehors
 - Par e-mail
   ([ludovic.delafontaine@heig-vd.ch](mailto:ludovic.delafontaine@heig-vd.ch))
 - Microsoft Teams
-  - Dans le canal Teams du de l'unité d'enseignement (de préférence)
+  - Dans le canal Teams de l'unité d'enseignement (de préférence - n'hésitez pas
+    à vous entraider si je ne suis pas disponible)
   - Message privé sur Teams (à éviter si possible)
 
 ## _Retrouvez plus de détails dans le support de cours_
