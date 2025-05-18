@@ -1,4 +1,6 @@
 <?php
+// Fichier favorite-artists.php
+
 // Constante pour le fichier de base de données SQLite
 const DATABASE_FILE = "./favorite-artists.db";
 
@@ -20,16 +22,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $bandName = $_POST["band-name"];
 
     // On prépare la requête SQL pour ajouter un.e artiste favori.te
-    $sql = "INSERT INTO favorite_artists (band_name) VALUES (:bandName)";
-
-    // On prépare la requête
-    $stmt = $pdo->prepare($sql);
-
-    // On lie les paramètres
-    $stmt->bindParam(':bandName', $bandName);
+    $sql = "INSERT INTO favorite_artists (band_name) VALUES ('$bandName')";
 
     // On exécute la requête SQL pour ajouter l'artiste favori.te
-    $stmt->execute();
+    $pdo->exec($sql);
 }
 
 // On prépare la requête SQL pour récupérer tous les artistes favori.tes
@@ -59,13 +55,13 @@ $favoriteArtists = $favoriteArtists->fetchAll();
 
     <ul>
         <?php foreach ($favoriteArtists as $favoriteArtist) : ?>
-            <li><?= htmlspecialchars($favoriteArtist["band_name"]) ?></li>
+            <li><?= $favoriteArtist["band_name"] ?></li>
         <?php endforeach; ?>
     </ul>
 
     <h2>Ajouter un.e artiste favori.te</h2>
 
-    <form action="exercice-01-without-vulnerabilities.php" method="POST">
+    <form action="exercice-01-with-vulnerabilities.php" method="POST">
         <label for="band-name">Artiste</label><br>
         <input
             type="text"
