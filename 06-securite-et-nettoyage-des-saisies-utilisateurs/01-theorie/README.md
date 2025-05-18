@@ -33,7 +33,8 @@ Jusqu'à présent, nous avons vu comment créer une base de données et interagi
 avec elle à l'aide de PHP et de PDO. Cependant, il est important de s'assurer
 que les données saisies par les utilisateurs sont sécurisées et valables avant
 de les insérer dans la base de données. Cela est particulièrement important pour
-éviter les attaques par injection SQL et les attaques XSS.
+éviter les attaques par injection SQL et les attaques XSS (Cross-Site
+Scripting).
 
 Cette session vise à vous familiariser avec les concepts de sécurité et de
 nettoyage des saisies utilisateurs. Nous allons aborder les injections SQL et
@@ -66,10 +67,11 @@ est bien une adresse e-mail valide. Si la valeur saisie ne respecte pas les
 règles de validation, elle sera rejetée et l'utilisateur sera invité à corriger
 sa saisie.
 
-Le nettoyage consiste à supprimer ou échapper les caractères spéciaux ou
-malveillants dans les données saisies par les utilisateurs. Cela permet de
-s'assurer que les données saisies ne contiennent pas de code malveillant qui
-pourrait être injecté dans une requête SQL ou exécuté dans une page web.
+Le nettoyage consiste à supprimer ou échapper (= modifier) les caractères
+spéciaux ou malveillants dans les données saisies par les utilisateurs. Cela
+permet de s'assurer que les données saisies ne contiennent pas de code
+malveillant qui pourrait être injecté dans une requête SQL ou exécuté dans une
+page web.
 
 Jusqu'à présent, nous avons vu comment comment valider les saisies utilisateurs
 dans le
@@ -120,14 +122,17 @@ Voici un exemple de code PHP qui utilise la fonction `htmlspecialchars` pour
 
 ```php
 // On définit une chaîne de caractères HTML avec des caractères spéciaux
-$string = "<a href='test'>Test</a>";
+$string = "<a href='index.php'>Accueil</a>";
+
+// Affiche un lien cliquable - à éviter à tout prix
+echo $string;
 
 // On échappe les caractères spéciaux
-// La chaîne échappée sera : &lt;a href='test'&gt;Test&lt;/a&gt;
+// La chaîne échappée sera : &lt;a href='index.php'&gt;Accueil&lt;/a&gt;
 $escapedString = htmlspecialchars($string);
 
 // On affiche la chaîne échappée, qui sera littéralement
-// <a href='test'>Test</a>
+// <a href='index.php'>Accueil</a>
 // et non un lien cliquable
 echo $escapedString;
 ```
@@ -191,7 +196,6 @@ $pdo = new PDO("sqlite:" . DATABASE_FILE);
 // Création d'une table `users`
 $sql = "CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    email TEXT NOT NULL UNIQUE,
     password TEXT NOT NULL
 )";
 
@@ -222,7 +226,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <h1>Création d'un compte</h1>
-    <form action="register.php" method="POST">
+    <a href="view-accounts.php"><button>Voir les comptes</button></a>
+
+    <form action="create-account.php" method="POST">
         <label for="email">E-mail :</label><br>
         <input
             type="text"
@@ -327,19 +333,19 @@ aux attaques XSS :
 ```php
 <?php
 // Constante pour le fichier de base de données SQLite
-const DATABASE_FILE = './users.db';
+const DATABASE_FILE = "./users.db";
 
-    // Connexion à la base de données
-    $pdo = new PDO("sqlite:" . DATABASE_FILE);
+// Connexion à la base de données
+$pdo = new PDO("sqlite:" . DATABASE_FILE);
 
-    // Création d'une table `users`
-    $sql = 'SELECT * FROM users';
+// On prépare la requête SQL pour récupérer tous les utilisateurs
+$sql = "SELECT * FROM users";
 
-    // On exécute la requête SQL pour récupérer les utilisateurs
-    $users = $pdo->query($sql);
+// On exécute la requête SQL pour récupérer les utilisateurs
+$users = $pdo->query($sql);
 
-    // On transforme le résultat en tableau
-    $users = $users->fetchAll();
+// On transforme le résultat en tableau
+$users = $users->fetchAll();
 ?>
 
 <!-- Gère l'affichage du formulaire -->
@@ -347,38 +353,53 @@ const DATABASE_FILE = './users.db';
 <html>
 
 <head>
-    <title>Affichage de tous les utilisateurs</title>
+    <title>Comptes utilisateurs</title>
 </head>
 
 <body>
-    <h1>Création d'un compte</h1>
-    <form action="register.php" method="POST">
-        <label for="email">E-mail :</label><br>
-        <input
-            type="email"
-            id="email"
-            name="email" />
+    <h1>Comptes utilisateurs</h1>
 
-        <br>
+    <a href="create-account.php"><button>Créer un compte</button></a>
 
-        <label for="password">Mot de passe :</label><br>
-        <input
-            type="password"
-            id="password"
-            name="password" />
-
-        <br>
-
-        <button type="submit">Envoyer</button>
-    </form>
-
-    <?php if ($_SERVER["REQUEST_METHOD"] == "POST") { ?>
-        <p>Le formulaire a été soumis avec succès.</p>
-    <?php } ?>
+    <ul>
+        <?php foreach ($users as $user) : ?>
+            <li><?= $user["email"] ?></li>
+        <?php endforeach; ?>
+    </ul>
 </body>
 
 </html>
 ```
+
+Dans cet exemple, la valeur de `$user["email"]` est directement affichée dans la
+page web sans être échappée. Cela signifie qu'une personne attaquante pourrait
+entrer une chaîne de caractères malveillante dans le champ `email` qui
+injecterait du code JavaScript dans la page web.
+
+Par exemple, une personne attaquante pourrait entrer la valeur suivante dans le
+champ `email` :
+
+```html
+<script>
+	alert("Vous avez été piraté !");
+</script>
+```
+
+Cela injecterait le code JavaScript dans la page web et afficherait une boîte de
+dialogue avec le message _"Vous avez été piraté !"_.
+
+Dans cet exemple, la personne attaquante a réussi à injecter du code JavaScript
+dans la page web en utilisant le champ `email`.
+
+Bien que cet exemple paraisse relativement inoffensif, il illustre comment une
+personne attaquante pourrait injecter du code JavaScript dans une page web sans
+que l'utilisateur ne s'en rende compte. Cela pourrait être utilisé pour voler
+des cookies de session, rediriger l'utilisateur vers un site malveillant ou
+exécuter d'autres actions malveillantes.
+
+Il est donc important de toujours valider et nettoyer les saisies utilisateurs
+avant de les afficher dans une page web. Cela garantit que seules les données
+valides et sûres sont affichées dans l'application.
 
 ## Se prémunir conte les injections SQL et les attaques XSS
 
@@ -386,12 +407,15 @@ Pour se protéger contre les injections SQL et les attaques XSS, il est importan
 de suivre certaines bonnes pratiques lors de la manipulation des données saisies
 par les utilisateurs. Voici quelques-unes des meilleures pratiques à suivre :
 
+- Ne jamais faire confiance aux saisies utilisateurs. Les saisies utilisateurs
+  peuvent être manipulées par des personnes attaquantes pour injecter du code
+  malveillant dans l'application.
 - Toujours valider et filtrer les entrées utilisateur avant de les utiliser dans
   une requête SQL ou de les afficher dans une page web. Cela garantit que seules
   les données valides et sûres sont utilisées dans l'application. Cette étape a
   déjà été vue dans le
   [Cours 04 - Formulaires HTML et validation](../../04-formulaires-html-et-validation/01-theorie/README.md).
-- Toujours utiliser des requêtes préparées lors de l'interaction avec une base
+- Toujours nettoyer les donnés utilisateur lors de l'interaction avec une base
   de données. Cela garantit que les entrées utilisateur sont correctement
   échappées et que le code SQL malveillant ne peut pas être injecté dans la
   requête.
@@ -489,7 +513,9 @@ $pdo->exec($sql);
 
 Dans cet exemple, la requête SQL pour créer la table `users` ne contient pas de
 données saisies par les utilisateurs. Il n'est donc pas nécessaire d'utiliser
-des requêtes préparées.
+des requêtes préparées mais cela reste une bonne pratique de le faire pour
+toutes les requêtes SQL, même celles qui ne contiennent pas de données saisies
+par les utilisateurs.
 
 ### Échapper les données
 
@@ -531,21 +557,19 @@ valides et sûres sont utilisées dans l'application.
 ## Conclusion
 
 Dans cette session, nous avons vu l'importance de la validation et du nettoyage
-des saisies utilisateurs pour garantir la sécurité des applications web. Nous
-avons abordé les injections SQL et les attaques XSS, ainsi que les bonnes
-pratiques pour éviter ces types d'attaques.
+des saisies utilisateurs pour garantir la sécurité des applications web.
+
+Nous avons abordé les injections SQL et les attaques XSS, pourquoi il ne faut
+pas faire confiance aux saisies utilisateurs ainsi que les bonnes pratiques pour
+éviter ces types d'attaques.
 
 Nous avons vu comment utiliser des requêtes préparées avec PDO pour éviter les
 injections SQL et comment échapper les données avant de les afficher dans une
 page web pour éviter les attaques XSS.
 
-En suivant ces bonnes pratiques, vous pouvez améliorer la sécurité de votre
-application et vous prémunir contre les attaques par injection SQL et les
-attaques XSS.
-
 > [!CAUTION]
 >
-> Dans la vraie vie, vous n'aurez sans doute pas accès au code source de
+> Dans la vie réelle, vous n'aurez sans doute pas accès au code source de
 > l'application que vous utilisez. Il serait donc nécessaire de tester
 > l'application à tâtons pour essayer de trouver des failles de sécurité, avec
 > tous les risques que cela comporte.
@@ -565,6 +589,10 @@ attaques XSS.
 > l'entreprise ou à la personne responsable de l'application afin qu'elle puisse
 > être corrigée. Cela permet de garantir la sécurité de l'application et de
 > protéger les données des utilisateurs.
+
+En suivant ces bonnes pratiques, vous pouvez améliorer la sécurité de votre
+application, vous prémunir contre les attaques par injection SQL/attaques XSS et
+ainsi garantir la sécurité de vos utilisateurs.
 
 ## Mini-projet
 

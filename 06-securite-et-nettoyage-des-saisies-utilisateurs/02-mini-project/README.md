@@ -2818,6 +2818,8 @@ if (isset($_GET["id"])) {
 </head>
 ```
 
+Prenez le temps de lire le code et de comprendre son fonctionnement.
+
 Vous remarquerez peut-être que le code est très similaire à celui des fichiers
 `create.php` et `view.php`. Cela est normal car le formulaire de mise à jour est
 une fusion de ces deux fonctionnalités.
@@ -2908,7 +2910,7 @@ n'est pas passé dans l'URL. Cela permet d'éviter d'afficher le formulaire de
 mise à jour sans avoir d'animal à mettre à jour.
 
 Concentrons-nous maintenant sur la partie d'affichage du formulaire de mise à
-jour de l'animal (4.)
+jour de l'animal (point 4)
 
 ```php
     <form action="edit.php" method="POST">
@@ -3020,9 +3022,18 @@ de mise à jour de l'animal avec les données pré-remplies issues des variables
 initialisées précédemment.
 
 Un point important à noter est que nous avons ajouté un champ caché
-`<input type="hidden" name="id" value="<?= htmlentities($pet["id"]) ?>" />` qui
-contient l'ID de l'animal à mettre à jour. Cela nous permet de savoir quel
-animal mettre à jour lorsque le formulaire est soumis.
+[`<input type="hidden" />`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/hidden)
+qui contient l'ID de l'animal à mettre à jour.
+
+Un champ caché est un champ de formulaire qui n'est pas visible pour
+l'utilisateur, mais qui est envoyé avec le formulaire lors de la soumission. Il
+est utilisé pour stocker des informations que l'utilisateur ne doit pas
+modifier, mais qui sont nécessaires pour le traitement du formulaire.
+
+Dans ce cas, nous utilisons le champ caché pour stocker l'ID de l'animal à
+mettre à jour. Lorsque le formulaire est soumis, l'ID de l'animal est envoyé
+avec les autres données du formulaire. Cela nous permet de savoir quel animal
+mettre à jour lorsque le formulaire est soumis.
 
 Lorsque l'utilisateur soumet le formulaire, nous transmettons toutes les
 informations nécessaires à la page `edit.php` (la page elle-même) pour mettre à
