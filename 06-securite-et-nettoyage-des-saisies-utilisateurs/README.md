@@ -14,11 +14,19 @@
 
 À l'issue de ce cours, les personnes qui étudient devraient être capables de :
 
-- TODO
+- Lister les différences entre la validation et le nettoyage des saisies
+  utilisateurs
+- Lister les implications de sécurité des saisies utilisateurs
+- Décrire les attaques par injection SQL et XSS
+- Se prémunir contre les injections SQL et les attaques XSS
+- Utiliser des requêtes préparées avec PDO
+- Échapper les données avant de les afficher dans une page web
 
 De plus, les personnes qui étudient devraient avoir pu :
 
-- TODO
+- Réaliser une injection SQL sur une application PHP
+- Réaliser une attaque XSS sur une application PHP
+- Corriger les vulnérabilités de l'application PHP
 
 ## Méthodes d'enseignement et d'apprentissage
 

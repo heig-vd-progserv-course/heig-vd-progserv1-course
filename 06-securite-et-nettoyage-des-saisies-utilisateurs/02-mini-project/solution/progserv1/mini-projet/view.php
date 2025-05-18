@@ -12,10 +12,12 @@ if (isset($_GET["id"])) {
     // Si l'animal n'existe pas, on redirige vers la page d'accueil
     if (!$pet) {
         header("Location: index.php");
+        exit();
     }
 } else {
     // Si l'ID n'est pas passé dans l'URL, on redirige vers la page d'accueil
     header("Location: index.php");
+    exit();
 }
 ?>
 
@@ -134,7 +136,7 @@ if (isset($_GET["id"])) {
 
     <form>
         <label for="name">Nom :</label><br>
-        <input type="text" id="name" value="<?= $pet["name"] ?>" disabled />
+        <input type="text" id="name" value="<?= htmlspecialchars($pet["name"]) ?>" disabled />
 
         <br>
 
@@ -152,7 +154,7 @@ if (isset($_GET["id"])) {
         <br>
 
         <label for="nickname">Surnom :</label><br>
-        <input type="text" id="nickname" value="<?= $pet["nickname"] ?>" disabled />
+        <input type="text" id="nickname" value="<?= htmlspecialchars($pet["nickname"]) ?>" disabled />
 
         <fieldset>
             <legend>Sexe :</legend>
@@ -167,12 +169,12 @@ if (isset($_GET["id"])) {
         <br>
 
         <label for="age">Âge :</label><br>
-        <input type="number" id="age" value="<?= $pet["age"] ?>" disabled />
+        <input type="number" id="age" value="<?= htmlspecialchars($pet["age"]) ?>" disabled />
 
         <br>
 
         <label for="color">Couleur :</label><br>
-        <input type="color" id="color" value="<?= $pet["color"] ?>" disabled />
+        <input type="color" id="color" value="<?= htmlspecialchars($pet["color"]) ?>" disabled />
 
         <fieldset>
             <legend>Personnalité :</legend>
@@ -211,25 +213,23 @@ if (isset($_GET["id"])) {
         <br>
 
         <label for="size">Taille :</label><br>
-        <input type="number" id="size" value="<?= $pet["size"] ?>" disabled />
+        <input type="number" id="size" value="<?= htmlspecialchars($pet["size"]) ?>" disabled />
 
         <br>
 
         <label for="notes">Notes :</label><br>
-        <textarea id="notes" rows="4" cols="50" disabled><?= $pet["notes"] ?></textarea>
+        <textarea id="notes" rows="4" cols="50" disabled><?= htmlspecialchars($pet["notes"]) ?></textarea>
 
         <br>
         <br>
 
-        <a href="delete.php?id=<?= $pet["id"] ?>">
+        <a href="delete.php?id=<?= htmlspecialchars($pet["id"]) ?>">
             <button type="button">Supprimer</button>
         </a><br>
-        <a href="edit.php?id=<?= $pet["id"] ?>">
-            <button type="button">Modifier</button>
+        <a href="edit.php?id=<?= htmlspecialchars($pet["id"]) ?>">
+            <button type="button">Mettre à jour</button>
         </a>
     </form>
 </body>
 
 </html>
-
-</head>

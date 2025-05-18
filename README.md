@@ -166,12 +166,12 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 ### Récapitulatif de l'unité d'enseignement et finalisation de l'application
 
-- Théorie :
-  [Support de cours](./08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/01-theorie/README.md)
-  ·
+- Récapitulatif de l'unité d'enseignement :
   [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/01-theorie/index.html)
   ·
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/01-theorie/08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication-presentation.pdf)
+  ·
+  [Résultats des formulaires de feedback](./08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement/)
 - Mini-projet :
   [Consignes](./08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/02-mini-project/README.md)
   ·

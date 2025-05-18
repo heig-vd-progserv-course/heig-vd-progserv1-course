@@ -188,9 +188,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <p><a href="index.php">Retour à l'accueil</a></p>
     <p>Utilise cette page pour créer un nouvel animal de compagnie.</p>
 
+    <?php if ($_SERVER["REQUEST_METHOD"] == "POST") { ?>
+        <?php if (empty($errors)) { ?>
+            <p style="color: green;">Le formulaire a été soumis avec succès !</p>
+        <?php } else { ?>
+            <p style="color: red;">Le formulaire contient des erreurs :</p>
+            <ul>
+                <?php foreach ($errors as $error) { ?>
+                    <li><?php echo $error; ?></li>
+                <?php } ?>
+            </ul>
+        <?php } ?>
+    <?php } ?>
+
     <form action="create.php" method="POST">
         <label for="name">Nom :</label><br>
-        <input type="text" id="name" name="name" value="<?php if (isset($name)) echo $name; ?>" required minlength="2">
+        <input type="text" id="name" name="name" value="<?php if (isset($name)) echo htmlspecialchars($name); ?>" required minlength="2">
 
         <br>
 
@@ -208,7 +221,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
 
         <label for="nickname">Surnom :</label><br>
-        <input type="text" id="nickname" name="nickname" value="<?php if (isset($nickname)) echo $nickname; ?>" />
+        <input type="text" id="nickname" name="nickname" value="<?php if (isset($nickname)) echo htmlspecialchars($nickname); ?>" />
 
         <fieldset>
             <legend>Sexe :</legend>
@@ -223,12 +236,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
 
         <label for="age">Âge :</label><br>
-        <input type="number" id="age" name="age" value="<?php if (isset($age)) echo $age; ?>" required min="0" />
+        <input type="number" id="age" name="age" value="<?php if (isset($age)) echo htmlspecialchars($age); ?>" required min="0" />
 
         <br>
 
         <label for="color">Couleur :</label><br>
-        <input type="color" id="color" name="color" value="<?php if (isset($color)) echo $color; ?>" />
+        <input type="color" id="color" name="color" value="<?php if (isset($color)) echo htmlspecialchars($color); ?>" />
 
         <fieldset>
             <legend>Personnalité :</legend>
@@ -267,12 +280,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
 
         <label for="size">Taille :</label><br>
-        <input type="number" id="size" name="size" value="<?php if (isset($size)) echo $size; ?>" min="0" step="0.1" />
+        <input type="number" id="size" name="size" value="<?php if (isset($size)) echo htmlspecialchars($size); ?>" min="0" step="0.1" />
 
         <br>
 
         <label for="notes">Notes :</label><br>
-        <textarea id="notes" name="notes" rows="4" cols="50"><?php if (isset($notes)) echo $notes; ?></textarea>
+        <textarea id="notes" name="notes" rows="4" cols="50"><?php if (isset($notes)) echo htmlspecialchars($notes); ?></textarea>
 
         <br>
         <br>

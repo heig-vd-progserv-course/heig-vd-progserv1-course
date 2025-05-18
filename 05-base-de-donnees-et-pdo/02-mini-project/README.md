@@ -45,7 +45,7 @@ animaux de compagnie qui sont stockés dans un tableau.
 
 A chaque fois que vous rechargez la page, le tableau est réinitialisé et les
 animaux de compagnie sont recréés en dur dans le code. Cela signifie que les
-données ne sont pas persistées (= conserver) et que vous perdez toutes les
+données ne sont pas persistées (= conservées) et que vous perdez toutes les
 données lorsque vous rechargez la page.
 
 Dans cette session, vous allez apprendre à persister (= conserver) les données
@@ -90,7 +90,7 @@ Créez un nouveau fichier `database.php` dans le dossier de votre projet.
 Votre structure de projet devrait ressembler à ceci :
 
 ```text
-./
+progserv1/
 ├── exercices/
 │   └── index.php
 ├── mini-projet/
@@ -162,6 +162,23 @@ Ouvrez votre navigateur et accédez à l'adresse
 Vous devriez voir la page d'accueil de votre application. Pour le moment, le
 comportement de l'application n'a pas changé mais vous devriez remarquer qu'un
 nouveau fichier `petsmanager.db` a été créé dans le dossier de votre projet.
+
+Votre structure de projet devrait ressembler à ceci :
+
+```text
+progserv1/
+├── exercices/
+│   └── index.php
+├── mini-projet/
+│   ├── create.php
+│   ├── database.php
+│   ├── functions.php
+│   ├── index.php
+│   ├── petsmanager.db
+│   └── view.php
+├── index.php
+└── phpinfo.php
+```
 
 Notre base de données SQLite a été créée avec succès !
 
@@ -285,7 +302,7 @@ compagnie de la base de données.
 Suite au travail effectué dans le cours précédent
 ([Cours 04 - Formulaires HTML et validation](../../04-formulaires-html-et-validation/02-mini-project/README.md)),
 vous avez déjà un formulaire pour créer un nouvel animal de compagnie. Vous
-allez maintenant mettre à jour la fonction `createPet()` dans le fichier
+allez maintenant mettre à jour la fonction `addPet()` dans le fichier
 `functions.php` pour insérer un nouvel animal de compagnie dans la base de
 données.
 
@@ -294,7 +311,7 @@ données de l'animal de compagnie dans la table `pets`.
 
 #### Mise à jour du fichier `functions.php`
 
-Mettez à jour la fonction `createPet()` dans le fichier `functions.php` avec le
+Mettez à jour la fonction `addPet()` dans le fichier `functions.php` avec le
 code suivant :
 
 ```php
@@ -1033,6 +1050,7 @@ Mettez à jour le fichier `index.php` avec le code suivant :
                     <td><?= $pet['age'] ?></td>
                     <td>
                         <a href="view.php?id=<?= $pet['id'] ?>"><button>Visualiser</button></a>
+                    </td>
                 </tr>
             <?php } ?>
         </tbody>
@@ -1384,7 +1402,7 @@ Créez un nouveau fichier `delete.php`.
 Votre structure de projet devrait ressembler à ceci :
 
 ```text
-./
+progserv1/
 ├── exercices/
 │   └── index.php
 ├── mini-projet/
@@ -1393,6 +1411,7 @@ Votre structure de projet devrait ressembler à ceci :
 │   ├── delete.php
 │   ├── functions.php
 │   ├── index.php
+│   ├── petsmanager.db
 │   └── view.php
 ├── index.php
 └── phpinfo.php
@@ -1461,6 +1480,7 @@ Mettez à jour le fichier `index.php` avec le code suivant :
                     <td>
                         <a href="delete.php?id=<?= $pet['id'] ?>"><button>Supprimer</button></a>
                         <a href="view.php?id=<?= $pet['id'] ?>"><button>Visualiser</button></a>
+                    </td>
                 </tr>
             <?php } ?>
         </tbody>
