@@ -40,8 +40,8 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 | [03](#-cours-03) | Tableaux et boucles                                                      | 🟢 Complet                                  |
 | [04](#-cours-04) | Formulaires HTML et validation                                           | 🟢 Complet                                  |
 | [05](#-cours-05) | Base de données et PDO                                                   | 🟢 Complet                                  |
-| [06](#-cours-06) | Sécurité et nettoyage des saisies utilisateurs                           | 🟡 En cours                                 |
-| [07](#-cours-07) | Programmation orientée objet                                             | 🔴 À faire                                  |
+| [06](#-cours-06) | Sécurité et nettoyage des saisies utilisateurs                           | 🟢 Complet                                  |
+| [07](#-cours-07) | Programmation orientée objet                                             | 🟡 En cours                                 |
 | [08](#-cours-08) | Récapitulatif de l'unité d'enseignement et finalisation de l'application | 🔴 À faire                                  |
 
 ## 🕐 Cours 01
