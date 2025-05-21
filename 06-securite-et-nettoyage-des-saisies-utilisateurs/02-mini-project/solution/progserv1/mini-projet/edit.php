@@ -82,7 +82,7 @@ if (isset($_GET["id"])) {
 
     // Si le formulaire est valide, on met à jour l'animal
     if (empty($errors)) {
-        // On ajoute l'animal à la base de données
+        // On met à jour l'animal dans la base de données
         $success = updatePet(
             $id,
             $name,
