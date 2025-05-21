@@ -321,7 +321,7 @@ $users = $users->fetchAll();
 
 - Fonctionnalité de PDO pour éviter les injections SQL.
 - Permet de préparer une requête SQL avec des paramètres.
-- Les paramètres sont remplacés et échapés automatiquement par des valeurs lors
+- Les paramètres sont remplacés et échappés automatiquement par des valeurs lors
   de l'exécution de la requête.
 
 ![bg right:40%][illustration-injections-sql]
@@ -330,13 +330,13 @@ $users = $users->fetchAll();
 
 ```php
     // On prépare la requête SQL pour ajouter un utilisateur
-    $sql = "INSERT INTO users (email, password) VALUES (:username, :password)";
+    $sql = "INSERT INTO users (email, password) VALUES (:email, :password)";
 
     // On prépare la requête SQL
     $stmt = $pdo->prepare($sql);
 
     // On lie les paramètres aux valeurs réelles
-    $stmt->bindParam(':email', $password);
+    $stmt->bindParam(':email', $email);
     $stmt->bindParam(':password', $password);
 
     // On exécute la requête
