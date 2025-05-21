@@ -444,8 +444,8 @@ préparées pour éviter les injections SQL :
     $stmt = $pdo->prepare($sql);
 
     // On lie les paramètres aux valeurs réelles
-    $stmt->bindParam(':email', $email);
-    $stmt->bindParam(':password', $password);
+    $stmt->bindValue(':email', $email);
+    $stmt->bindValue(':password', $password);
 
     // On exécute la requête
     $stmt->execute();
@@ -462,8 +462,8 @@ Les différences sont les suivantes :
 +    $stmt = $pdo->prepare($sql);
 +
 +    // On lie les paramètres
-+    $stmt->bindParam(':email', $email);
-+    $stmt->bindParam(':password', $password);
++    $stmt->bindValue(':email', $email);
++    $stmt->bindValue(':password', $password);
 
      // On exécute la requête SQL pour ajouter l'utilisateur
 -    $pdo->exec($sql);

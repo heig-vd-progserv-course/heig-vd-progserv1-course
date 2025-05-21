@@ -28,8 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $pdo->prepare($sql);
 
     // On lie les paramètres
-    $stmt->bindParam(':email', $email);
-    $stmt->bindParam(':password', $password);
+    $stmt->bindValue(':email', $email);
+    $stmt->bindValue(':password', $password);
 
     // On exécute la requête SQL pour ajouter l'utilisateur
     $stmt->execute();

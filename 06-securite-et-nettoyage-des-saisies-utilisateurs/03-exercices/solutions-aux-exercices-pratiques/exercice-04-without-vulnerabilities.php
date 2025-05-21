@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $pdo->prepare($sql);
 
     // On lie les paramètres
-    $stmt->bindParam(':bandName', $bandName);
+    $stmt->bindValue(':bandName', $bandName);
 
     // On exécute la requête SQL pour ajouter l'artiste favori.te
     $stmt->execute();

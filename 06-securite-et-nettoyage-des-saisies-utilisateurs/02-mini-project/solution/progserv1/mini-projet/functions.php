@@ -42,7 +42,7 @@ function getPet($id) {
     $stmt = $pdo->prepare($sql);
 
     // On lie le paramètre
-    $stmt->bindParam(':id', $id);
+    $stmt->bindValue(':id', $id);
 
     // On exécute la requête SQL
     $stmt->execute();
@@ -104,15 +104,15 @@ function addPet(
     $stmt = $pdo->prepare($sql);
 
     // On lie les paramètres
-    $stmt->bindParam(':name', $name);
-    $stmt->bindParam(':species', $species);
-    $stmt->bindParam(':nickname', $nickname);
-    $stmt->bindParam(':sex', $sex);
-    $stmt->bindParam(':age', $age);
-    $stmt->bindParam(':color', $color);
-    $stmt->bindParam(':personalities', $personalitiesAsString);
-    $stmt->bindParam(':size', $size);
-    $stmt->bindParam(':notes', $notes);
+    $stmt->bindValue(':name', $name);
+    $stmt->bindValue(':species', $species);
+    $stmt->bindValue(':nickname', $nickname);
+    $stmt->bindValue(':sex', $sex);
+    $stmt->bindValue(':age', $age);
+    $stmt->bindValue(':color', $color);
+    $stmt->bindValue(':personalities', $personalitiesAsString);
+    $stmt->bindValue(':size', $size);
+    $stmt->bindValue(':notes', $notes);
 
     // On exécute la requête SQL pour ajouter un animal
     $stmt->execute();
@@ -160,16 +160,16 @@ function updatePet(
     $stmt = $pdo->prepare($sql);
 
     // On lie les paramètres
-    $stmt->bindParam(':id', $id);
-    $stmt->bindParam(':name', $name);
-    $stmt->bindParam(':species', $species);
-    $stmt->bindParam(':nickname', $nickname);
-    $stmt->bindParam(':sex', $sex);
-    $stmt->bindParam(':age', $age);
-    $stmt->bindParam(':color', $color);
-    $stmt->bindParam(':personalities', $personalitiesAsString);
-    $stmt->bindParam(':size', $size);
-    $stmt->bindParam(':notes', $notes);
+    $stmt->bindValue(':id', $id);
+    $stmt->bindValue(':name', $name);
+    $stmt->bindValue(':species', $species);
+    $stmt->bindValue(':nickname', $nickname);
+    $stmt->bindValue(':sex', $sex);
+    $stmt->bindValue(':age', $age);
+    $stmt->bindValue(':color', $color);
+    $stmt->bindValue(':personalities', $personalitiesAsString);
+    $stmt->bindValue(':size', $size);
+    $stmt->bindValue(':notes', $notes);
 
     // On exécute la requête SQL pour mettre à jour un animal
     return $stmt->execute();
@@ -187,7 +187,7 @@ function removePet($id) {
     $stmt = $pdo->prepare($sql);
 
     // On lie le paramètre
-    $stmt->bindParam(':id', $id);
+    $stmt->bindValue(':id', $id);
 
     // On exécute la requête SQL pour supprimer un animal
     return $stmt->execute();

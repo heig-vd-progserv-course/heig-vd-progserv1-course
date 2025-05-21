@@ -80,8 +80,8 @@ $sql = "SELECT * FROM users WHERE username = :username AND password = :password"
 
 $stmt = $pdo->prepare($sql);
 
-$stmt->bindParam(':username', $username);
-$stmt->bindParam(':password', $password);
+$stmt->bindValue(':username', $username);
+$stmt->bindValue(':password', $password);
 
 $stmt->execute();
 $result = $stmt->fetch();
@@ -93,7 +93,7 @@ un attaquant d'injecter du code SQL malveillant.
 
 Dans le second cas, la requête SQL utilise des paramètres nommés (`:username` et
 `:password`) qui sont liés aux variables `$username` et `$password` avec la
-méthode `bindParam()`. Cela permet de s'assurer que les données saisies par
+méthode `bindValue()`. Cela permet de s'assurer que les données saisies par
 l'utilisateur sont traitées comme des valeurs et non comme du code SQL. Cela
 empêche les injections SQL.
 
@@ -291,7 +291,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $pdo->prepare($sql);
 
     // On lie les paramètres
-    $stmt->bindParam(':bandName', $bandName);
+    $stmt->bindValue(':bandName', $bandName);
 
     // On exécute la requête SQL pour ajouter l'artiste favori.te
     $stmt->execute();
