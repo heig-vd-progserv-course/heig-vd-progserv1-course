@@ -17,9 +17,13 @@ Suisse !
 - Écrire un code PHP propre et organisé.
 - Gérer les formulaires HTML et les données qu'ils contiennent.
 - Persister des données dans une base de données SQLite.
-- Implémenter les mécanismes de sécurité de base pour protéger une application
-  web.
-- Implémenter des concepts de programmation orientée objet.
+- Implémenter les mécanismes de base de la sécurité web.
+- Implémenter des concepts de base de la programmation orientée objet.
+
+Grâce à ces compétences, la personne qui étudie sera en mesure de développer des
+applications web simples pour gérer une collection de données (par exemple, un
+carnet d'adresses, un gestionnaire de tâches, sa liste favorites de jeux vidéo,
+etc.).
 
 ## ➡️ Par où commencer ?
 
@@ -33,16 +37,16 @@ Les détails de chaque cours composant l'unité d'enseignement sont disponibles
 ci-dessous. Chaque cours est détaillée avec les contenus, les objectifs, les
 méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
-|            Cours | Contenu(s)                                                               | État de la rédaction[^etat-de-la-redaction] |
-| ---------------: | :----------------------------------------------------------------------- | :------------------------------------------ |
-| [01](#-cours-01) | Modalités de l'unité d'enseignement et introduction à PHP                | 🟢 Complet                                  |
-| [02](#-cours-02) | Fonctions                                                                | 🟢 Complet                                  |
-| [03](#-cours-03) | Tableaux et boucles                                                      | 🟢 Complet                                  |
-| [04](#-cours-04) | Formulaires HTML et validation                                           | 🟢 Complet                                  |
-| [05](#-cours-05) | Base de données et PDO                                                   | 🟢 Complet                                  |
-| [06](#-cours-06) | Sécurité et nettoyage des saisies utilisateurs                           | 🟢 Complet                                  |
-| [07](#-cours-07) | Programmation orientée objet                                             | 🟡 En cours                                 |
-| [08](#-cours-08) | Récapitulatif de l'unité d'enseignement et finalisation de l'application | 🔴 À faire                                  |
+|            Cours | Contenu(s)                                                                                           | État de la rédaction[^etat-de-la-redaction] |
+| ---------------: | :--------------------------------------------------------------------------------------------------- | :------------------------------------------ |
+| [01](#-cours-01) | Modalités de l'unité d'enseignement et introduction à PHP                                            | 🟢 Complet                                  |
+| [02](#-cours-02) | Fonctions                                                                                            | 🟢 Complet                                  |
+| [03](#-cours-03) | Tableaux et boucles                                                                                  | 🟢 Complet                                  |
+| [04](#-cours-04) | Formulaires HTML et validation                                                                       | 🟢 Complet                                  |
+| [05](#-cours-05) | Base de données et PDO                                                                               | 🟢 Complet                                  |
+| [06](#-cours-06) | Sécurité et nettoyage des saisies utilisateurs                                                       | 🟢 Complet                                  |
+| [07](#-cours-07) | Programmation orientée objet                                                                         | 🟡 En cours                                 |
+| [08](#-cours-08) | Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application | 🔴 À faire                                  |
 
 ## 🕐 Cours 01
 
@@ -133,9 +137,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Théorie :
   [Support de cours](./06-securite-et-nettoyage-des-saisies-utilisateurs/01-theorie/README.md)
   ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/index.html)
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/06-securite-et-nettoyage-des-saisies-utilisateurs/01-theorie/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/07-programmation-orientee-objet-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/06-securite-et-nettoyage-des-saisies-utilisateurs/01-theorie/06-securite-et-nettoyage-des-saisies-utilisateurs-presentation.pdf)
 - Mini-projet :
   [Consignes](./06-securite-et-nettoyage-des-saisies-utilisateurs/02-mini-project/README.md)
   ·
@@ -164,22 +168,22 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 ## 🕗 Cours 08
 
-### Récapitulatif de l'unité d'enseignement et finalisation de l'application
+### Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application
 
-- Récapitulatif de l'unité d'enseignement :
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/01-theorie/index.html)
+- Récapitulatif de l'unité d'enseignement avec préparation à l'examen :
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-theorie/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/01-theorie/08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-theorie/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf)
   ·
-  [Résultats des formulaires de feedback](./08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement/)
+  [Résultats des formulaires de feedback](./08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement/)
 - Mini-projet :
-  [Consignes](./08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/02-mini-project/README.md)
+  [Consignes](./08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/02-mini-project/README.md)
   ·
-  [Solution](./08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/02-mini-project/solution/)
+  [Solution](./08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/02-mini-project/solution/)
 - Examen blanc :
-  [Énoncé](./08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/03-examen-blanc/README.md)
+  [Énoncé](./08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/03-examen-blanc/README.md)
 
-[Voir les détails](./08-recapitulatif-de-lunite-denseignement-et-finalisation-de-lapplication/)
+[Voir les détails](./08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/)
 
 ## 📜 Licence
 

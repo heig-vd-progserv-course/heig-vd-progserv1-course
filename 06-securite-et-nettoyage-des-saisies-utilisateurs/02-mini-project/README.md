@@ -705,13 +705,13 @@ La fonction `getPet()` est également vulnérable aux injections SQL. Vous devez
 donc la corriger de la même manière que la fonction `addPet()` :
 
 ```php
-function removePet($id) {
+function getPet($id) {
     // On utilise le mot-clé `global` pour accéder à la variable `$pdo`.
     // Même si c'est une mauvaise pratique, c'est nécessaire ici.
     global $pdo;
 
-    // On définit la requête SQL pour supprimer un animal
-    $sql = "DELETE FROM pets WHERE id = :id";
+    // On définit la requête SQL pour récupérer un animal
+    $sql = "SELECT * FROM pets WHERE id = :id";
 
     // On prépare la requête SQL
     $stmt = $pdo->prepare($sql);
@@ -719,8 +719,19 @@ function removePet($id) {
     // On lie le paramètre
     $stmt->bindValue(':id', $id);
 
-    // On exécute la requête SQL pour supprimer un animal
-    return $stmt->execute();
+    // On exécute la requête SQL
+    $stmt->execute();
+
+    // On récupère le résultat comme tableau associatif
+    $pet = $stmt->fetch();
+
+    // On transforme la chaîne `personalities` en tableau si elle existe
+    if ($pet && !empty($pet['personalities'])) {
+        $pet['personalities'] = explode(',', $pet['personalities']);
+    }
+
+    // On retourne l'animal
+    return $pet;
 }
 ```
 
@@ -763,19 +774,24 @@ function removePet($id) {
      global $pdo;
 
      // On définit la requête SQL pour récupérer un animal
-     $sql = "SELECT * FROM pets WHERE id = :id";
+-    $sql = "SELECT * FROM pets WHERE id = '$id'";
++    $sql = "SELECT * FROM pets WHERE id = :id";
++
++    // On prépare la requête SQL
++    $stmt = $pdo->prepare($sql);
 
-     // On prépare la requête SQL
-     $stmt = $pdo->prepare($sql);
+-    // On récupère l'animal spécifique
+-    $pet = $pdo->query($sql);
++    // On lie le paramètre
++    $stmt->bindValue(':id', $id);
 
-     // On lie le paramètre
-     $stmt->bindValue(':id', $id);
-
-     // On exécute la requête SQL
-     $stmt->execute();
-
-     // On récupère le résultat comme tableau associatif
-     $pet = $stmt->fetch();
+-    // On transforme le résultat en tableau associatif
+-    $pet = $pet->fetch();
++    // On exécute la requête SQL
++    $stmt->execute();
++
++    // On récupère le résultat comme tableau associatif
++    $pet = $stmt->fetch();
 
      // On transforme la chaîne `personalities` en tableau si elle existe
      if ($pet && !empty($pet['personalities'])) {
@@ -881,18 +897,16 @@ function removePet($id) {
      global $pdo;
 
      // On définit la requête SQL pour supprimer un animal
--    $sql = "DELETE FROM pets WHERE id = '$id'";
-+    $sql = "DELETE FROM pets WHERE id = :id";
-+
-+    // On prépare la requête SQL
-+    $stmt = $pdo->prepare($sql);
-+
-+    // On lie le paramètre
-+    $stmt->bindValue(':id', $id);
+     $sql = "DELETE FROM pets WHERE id = :id";
+
+     // On prépare la requête SQL
+     $stmt = $pdo->prepare($sql);
+
+     // On lie le paramètre
+     $stmt->bindValue(':id', $id);
 
      // On exécute la requête SQL pour supprimer un animal
--    return $pdo->exec($sql);
-+    return $stmt->execute();
+     return $stmt->execute();
  }
 ```
 
