@@ -38,7 +38,7 @@ _[Cours 03 - Tableaux et boucles](../01-theorie/README.md)_.
 
 ## Objectifs de la session
 
-À l'issue de cette session, les personnes qui étudient devraient avoir pu :
+De façon plus concise, les personnes qui étudient devraient avoir pu :
 
 - Gérer des animaux de compagnie à l'aide de tableaux associatifs
 - Utiliser des boucles pour parcourir un tableau

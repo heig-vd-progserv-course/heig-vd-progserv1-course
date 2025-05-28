@@ -167,7 +167,7 @@ mini-projet.
 
 ## Objectifs de la session
 
-À l'issue de cette session, les personnes qui étudient devraient avoir pu :
+De façon plus concise, les personnes qui étudient devraient avoir pu :
 
 - Installer et configurer un environnement de développement pour PHP
 - Initialiser un projet PHP pour le mini-projet
@@ -816,8 +816,7 @@ Sauvez tous les fichiers.
 
 ### Test de l'initialisation du projet
 
-Ouvrez votre navigateur web et accédez à l'adresse suivante :
-<http://localhost/progserv1/index.php>. Vous devriez voir le message suivant :
+Vous devriez voir le message suivant :
 
 ```text
 Bonjour à toutes les personnes du cours de Programmation serveur 1 !

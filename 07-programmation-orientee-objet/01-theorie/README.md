@@ -24,7 +24,7 @@
 
 TODO
 
-De façon plus précise, les personnes qui étudient devraient être capables de :
+De façon plus concise, les personnes qui étudient devraient être capables de :
 
 - TODO
 

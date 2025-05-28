@@ -31,7 +31,7 @@ théoriques vus dans le cours _[Cours 02 - Fonctions](../01-theorie/README.md)_.
 
 ## Objectifs de la session
 
-À l'issue de cette session, les personnes qui étudient devraient avoir pu :
+De façon plus concise, les personnes qui étudient devraient avoir pu :
 
 - Mettre en place une structure de projet PHP
 - Créer des fonctions PHP pour visualiser, ajouter, modifier et supprimer des
