@@ -18,6 +18,7 @@ _[Cours 07 - Programmation orientée objet](../01-theorie/README.md)_.
 
 - [Ressources](#ressources)
 - [Table des matières](#table-des-matières)
+- [Objectifs de la session](#objectifs-de-la-session)
 - [Identification des problèmes de conception](#identification-des-problèmes-de-conception)
 - [Correction des problèmes de conception](#correction-des-problèmes-de-conception)
   - [Séparation des pages publiques et la logique métier](#séparation-des-pages-publiques-et-la-logique-métier)
@@ -30,6 +31,8 @@ _[Cours 07 - Programmation orientée objet](../01-theorie/README.md)_.
 - [Solution](#solution)
 - [Conclusion](#conclusion)
 - [Aller plus loin](#aller-plus-loin)
+
+## Objectifs de la session
 
 Vous avez maintenant une petite application PHP qui vous permet de gérer des
 animaux de compagnie. Vous pouvez ajouter, modifier et supprimer des animaux,
