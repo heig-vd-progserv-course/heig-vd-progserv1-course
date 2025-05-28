@@ -13,7 +13,7 @@
 ## Table des matières
 
 - [Ressources](#ressources)
-- [Tables des matières](#table-des-matières)
+- [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
 - [TODO](#todo)
 - [Conclusion](#conclusion)

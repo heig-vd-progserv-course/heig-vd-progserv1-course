@@ -17,7 +17,7 @@ _[Cours 08 - Récapitulatif de l'unité d'enseignement avec préparation à l'ex
 ## Table des matières
 
 - [Ressources](#ressources)
-- [Tables des matières](#table-des-matières)
+- [Table des matières](#table-des-matières)
 - [Objectifs de la session](#objectifs-de-la-session)
 - [Solution](#solution)
 - [Conclusion](#conclusion)
