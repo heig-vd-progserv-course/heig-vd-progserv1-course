@@ -14,11 +14,24 @@
 
 À l'issue de ce cours, les personnes qui étudient devraient être capables de :
 
-- TODO
+- Lister les concepts clés de la POO.
+- Expliquer les avantages et les désavantages de la POO.
+- Créer et utiliser des classes et des objets en PHP.
+- Définir des attributs et des méthodes dans une classe.
+- Utiliser l'encapsulation pour protéger les données des objets.
+- Définir des constructeurs et des destructeurs pour initialiser et nettoyer les
+  objets.
+- Utiliser des constantes dans les classes.
 
 De plus, les personnes qui étudient devraient avoir pu :
 
-- TODO
+- Appliquer les concepts de la programmation orientée objet (POO) en PHP pour
+  structurer une application simple.
+- Créer des classes et des objets pour représenter les entités de l'application.
+- Instancier des objets et utiliser leurs méthodes pour interagir avec
+  l'application.
+- Améliorer la lisibilité et la maintenabilité du code en utilisant les
+  principes de la POO.
 
 ## Méthodes d'enseignement et d'apprentissage
 

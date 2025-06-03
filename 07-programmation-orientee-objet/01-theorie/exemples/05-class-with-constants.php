@@ -1,0 +1,34 @@
+<?php
+class Person {
+    const ROLE_MANAGER = 'Manager';
+    const ROLE_DEVELOPER = 'Developer';
+    const ROLE_DESIGNER = 'Designer';
+    const ROLE_EMPLOYEE = 'Employee';
+
+    private $name;
+    private $role;
+
+    public function __construct($name, $role) {
+        $this->name = $name;
+        $this->role = $role;
+    }
+
+    public function greet() {
+        return "Hi, my name is " . $this->name . ". I work as a " . $this->role . " at my company.";
+    }
+}
+
+$alice = new Person("Alice", Person::ROLE_DEVELOPER);
+$bob = new Person("Bob", Person::ROLE_MANAGER);
+$evelyn = new Person("Evelyn", Person::ROLE_DESIGNER);
+$alice = new Person("Alice", Person::ROLE_DEVELOPER);
+$bob = new Person("Bob", Person::ROLE_MANAGER);
+$evelyn = new Person("Evelyn", Person::ROLE_DESIGNER);
+
+echo $alice->greet(); // Affiche "Hi, my name is Alice. I work as a Developer at my company."
+echo "<br>";
+
+echo $bob->greet(); // Affiche "Hi, my name is Bob. I work as a Manager at my company."
+echo "<br>";
+
+echo $evelyn->greet(); // Affiche "Hi, my name is Evelyn. I work as a Designer at my company."

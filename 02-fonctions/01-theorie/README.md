@@ -72,6 +72,7 @@ fonction $f(3)$, on obtient $9$.
 En programmation, une fonction est définie par un nom, une liste de paramètres
 (optionnelle) et un bloc de code. Une fois définie, une fonction peut être
 appelée à partir d'un autre endroit du programme et permet de structurer le code
+en le découpant en morceaux plus petits et plus faciles à comprendre.
 
 ## Déclarer une fonction en PHP
 
