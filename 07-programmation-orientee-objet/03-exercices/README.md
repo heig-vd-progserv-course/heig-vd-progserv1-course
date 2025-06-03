@@ -246,6 +246,8 @@ if (empty($johnSmithEmailDomain)) {
 echo "Email Domain: " . $johnSmithEmailDomain . "<br>";
 ```
 
+</details>
+
 ## Exercice 2a
 
 Réalisez une classe `Vehicle` avec PHP qui représente un véhicule avec les
@@ -271,6 +273,11 @@ Contraintes :
 
 - Utilisez la visibilité `private` pour les attributs.
 - Utilisez la visibilité `public` pour les méthodes.
+- Utilisez une ou des constantes pour définir les marques de véhicules (par
+  exemple, `TOYOTA`, `YAMAHA`, etc.) et/ou les types de véhicule si vous le
+  souhaitez. **Astuce** : vous pouvez utiliser la syntaxe `self::` pour accéder
+  aux constantes de la classe depuis l'intérieur de la classe, notamment dans la
+  méthode `type()`.
 
 <details>
 <summary>Afficher la solution</summary>
@@ -278,6 +285,15 @@ Contraintes :
 ```php
 <?php
 class Vehicle {
+    const BRAND_TOYOTA = 'Toyota';
+    const BRAND_YAMAHA = 'Yamaha';
+    const BRAND_VOLVO = 'Volvo';
+
+    const TYPE_CAR = 'Car';
+    const TYPE_MOTORCYCLE = 'Motorcycle';
+    const TYPE_TRUCK = 'Truck';
+    const TYPE_UNKNOWN = 'Unknown';
+
     private $numberOfWheels;
     private $color;
     private $brand;
@@ -328,13 +344,13 @@ class Vehicle {
 
     public function type() {
         if ($this->numberOfWheels == 2) {
-            return "Motorcycle";
+            return self::TYPE_MOTORCYCLE;
         } elseif ($this->numberOfWheels == 4) {
-            return "Car";
+            return self::TYPE_CAR;
         } elseif ($this->numberOfWheels > 4) {
-            return "Truck";
+            return self::TYPE_TRUCK;
         } else {
-            return "Unknown";
+            return self::TYPE_UNKNOWN;
         }
     }
 }
@@ -380,6 +396,15 @@ Ensuite, effectuez les opérations suivantes :
 ```php
 <?php
 class Vehicle {
+    const BRAND_TOYOTA = 'Toyota';
+    const BRAND_YAMAHA = 'Yamaha';
+    const BRAND_VOLVO = 'Volvo';
+
+    const TYPE_CAR = 'Car';
+    const TYPE_MOTORCYCLE = 'Motorcycle';
+    const TYPE_TRUCK = 'Truck';
+    const TYPE_UNKNOWN = 'Unknown';
+
     private $numberOfWheels;
     private $color;
     private $brand;
@@ -430,20 +455,20 @@ class Vehicle {
 
     public function type() {
         if ($this->numberOfWheels == 2) {
-            return "Motorcycle";
+            return self::TYPE_MOTORCYCLE;
         } elseif ($this->numberOfWheels == 4) {
-            return "Car";
+            return self::TYPE_CAR;
         } elseif ($this->numberOfWheels > 4) {
-            return "Truck";
+            return self::TYPE_TRUCK;
         } else {
-            return "Unknown";
+            return self::TYPE_UNKNOWN;
         }
     }
 }
 
-$toyota = new Vehicle(4, 'Red', 'Toyota', 'Corolla');
-$yamaha = new Vehicle(2, 'Black', 'Yamaha', 'MT-07');
-$volvo = new Vehicle(6, 'Blue', 'Volvo', 'FH16');
+$toyota = new Vehicle(4, 'Red', Vehicle::BRAND_TOYOTA, 'Corolla');
+$yamaha = new Vehicle(2, 'Black', Vehicle::BRAND_YAMAHA, 'MT-07');
+$volvo = new Vehicle(6, 'Blue', Vehicle::BRAND_VOLVO, 'FH16');
 $ufo = new Vehicle(0, 'Green', 'UFO', 'X-2000');
 
 echo $toyota->getDescription() . " - Type: " . $toyota->type() . "<br>";

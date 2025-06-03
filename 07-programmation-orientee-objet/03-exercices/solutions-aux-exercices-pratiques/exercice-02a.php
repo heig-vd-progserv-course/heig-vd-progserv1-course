@@ -1,5 +1,14 @@
 <?php
 class Vehicle {
+    const BRAND_TOYOTA = 'Toyota';
+    const BRAND_YAMAHA = 'Yamaha';
+    const BRAND_VOLVO = 'Volvo';
+
+    const TYPE_CAR = 'Car';
+    const TYPE_MOTORCYCLE = 'Motorcycle';
+    const TYPE_TRUCK = 'Truck';
+    const TYPE_UNKNOWN = 'Unknown';
+
     private $numberOfWheels;
     private $color;
     private $brand;
@@ -50,13 +59,13 @@ class Vehicle {
 
     public function type() {
         if ($this->numberOfWheels == 2) {
-            return "Motorcycle";
+            return self::TYPE_MOTORCYCLE;
         } elseif ($this->numberOfWheels == 4) {
-            return "Car";
+            return self::TYPE_CAR;
         } elseif ($this->numberOfWheels > 4) {
-            return "Truck";
+            return self::TYPE_TRUCK;
         } else {
-            return "Unknown";
+            return self::TYPE_UNKNOWN;
         }
     }
 }
