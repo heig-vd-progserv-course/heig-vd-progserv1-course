@@ -176,14 +176,12 @@ public class Person {
 
 ![bg right:40%][illustration-instanciation-dobjets]
 
-````php
-
 ### Instanciation d'objets (2/2)
 
 ```php
 $person1 = new Person();
 $person2 = new Person();
-````
+```
 
 ```java
 // Équivalent en Java
@@ -717,7 +715,7 @@ Les résultats seront discutés au prochain cours. **Merci beaucoup !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
-## Sources (1/3)
+## Sources (1/2)
 
 - [Illustration principale][illustration-principale] par
   [Richard Jacobs](https://unsplash.com/@rj2747) sur
@@ -744,7 +742,7 @@ Les résultats seront discutés au prochain cours. **Merci beaucoup !**
   [Pearse O'Halloran](https://unsplash.com/@pearseoh) sur
   [Unsplash](https://unsplash.com/photos/black-and-white-wooden-wall-decor-t0N-LwOu0hg)
 
-## Sources (2/3)
+## Sources (2/2)
 
 - [Illustration][illustration-methodes] par
   [Birmingham Museums Trust](https://unsplash.com/@birminghammuseumstrust) sur

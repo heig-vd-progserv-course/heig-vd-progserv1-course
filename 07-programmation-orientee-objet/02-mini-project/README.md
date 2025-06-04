@@ -955,7 +955,6 @@ données par la suite.
 Modifiez le fichier `Pet.php` pour ajouter les constantes publiques suivantes :
 
 ```php
-
     const SPECIES = [
         'dog' => 'Chien',
         'cat' => 'Chat',
@@ -966,7 +965,7 @@ Modifiez le fichier `Pet.php` pour ajouter les constantes publiques suivantes :
         'other' => 'Autre'
     ];
 
-    const SEX = [
+    const SEXES = [
         'male' => 'Mâle',
         'female' => 'Femelle'
     ];
@@ -988,7 +987,7 @@ class Pet {
         'other' => 'Autre'
     ];
 
-    const SEX = [
+    const SEXES = [
         'male' => 'Mâle',
         'female' => 'Femelle'
     ];
@@ -1103,7 +1102,7 @@ compagnie dans la classe `Pet`. Nous avons défini deux constantes publiques :
 
 - `SPECIES` : un tableau associatif contenant les espèces d'animaux de
   compagnie.
-- `SEX` : un tableau associatif contenant les sexes des animaux de compagnie.
+- `SEXES` : un tableau associatif contenant les sexes des animaux de compagnie.
 
 #### Utilisation des constantes dans la page d'accueil
 
@@ -1120,7 +1119,7 @@ Modifiez le fichier `public/index.php` pour utiliser les constantes de la classe
                 <tr>
                     <td><?= htmlspecialchars($pet['name']) ?></td>
                     <td><?= Pet::SPECIES[htmlspecialchars($pet['species'])] ?></td>
-                    <td><?= Pet::SEX[htmlspecialchars($pet['sex'])] ?></td>
+                    <td><?= Pet::SEXES[htmlspecialchars($pet['sex'])] ?></td>
                     <td><?= htmlspecialchars($pet['age']) ?></td>
                     <td>
                         <a href="delete.php?id=<?= htmlspecialchars($pet['id']) ?>"><button>Supprimer</button></a>
@@ -1132,7 +1131,7 @@ Modifiez le fichier `public/index.php` pour utiliser les constantes de la classe
 ```
 
 Vous remarquerez que nous avons utilisé les constantes `Pet::SPECIES` et
-`Pet::SEX` pour accéder aux espèces et au sexe des animaux de compagnie. Cela
+`Pet::SEXES` pour accéder aux espèces et au sexe des animaux de compagnie. Cela
 permet d'afficher les valeurs lisibles plutôt que les codes.
 
 La notation `::` est utilisé pour accéder aux constantes publiques d'une classe
@@ -1205,7 +1204,7 @@ Modifiez le fichier `Pet.php` pour ajouter la méthode `validate()` comme suit :
             array_push($errors, "Le sexe est obligatoire.");
         }
 
-        if (!array_key_exists($this->sex, self::SEX)) {
+        if (!array_key_exists($this->sex, self::SEXES)) {
             array_push($errors, "Le sexe sélectionné n'est pas valide.");
         }
 
@@ -1429,7 +1428,7 @@ loin. Vous pouvez la sauter si vous n'avez pas de temps._
   publiques pour afficher les espèces et le sexe des animaux de compagnie ?
 
   - **Astuce** : utilisez une boucle `foreach` pour parcourir les constantes
-    `Pet::SPECIES` et `Pet::SEX` et afficher les valeurs lisibles dans les
+    `Pet::SPECIES` et `Pet::SEXES` et afficher les valeurs lisibles dans les
     formulaires de création et de modification des animaux de compagnie.
   - **Astuce** : pour séparer la clé et la valeur, vous pouvez utiliser la
     notation `as` dans la boucle `foreach`, par exemple :
