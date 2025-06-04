@@ -18,19 +18,20 @@ class Person {
 }
 
 $alice = new Person("Alice", 30);
-
-echo $alice->greet() . "<br>"; // Affiche "Hi, my name is Alice and I am 30 years old."
-
 $bob = new Person("Bob", 25);
-
-echo $bob->greet() . "<br>"; // Affiche "Hi, my name is Bob and I am 25 years old."
-
 $evelyn = new Person("Evelyn", 40);
 
-echo $evelyn->greet() . "<br>"; // Affiche "Hi, my name is Evelyn and I am 40 years old."
+echo $alice->greet() . "<br>";
+echo $bob->greet() . "<br>";
+echo $evelyn->greet() . "<br>";
 
-$bob = null; // Détruit l'objet $bob, le destructeur est appelé
+// L'objet `$bob` a maintenant la valeur `null`.
+// L'objet est donc détruit et le destructeur est appelé.
+$bob = null;
 
-$evelyn = $alice; // $evelyn référence maintenant le même objet que $alice, $evelyn n'est plus utilisé et est donc détruit.
+// L'objet `$evelyn` référence maintenant le même objet que `$alice`.
+// L'objet `$evelyn` n'est plus utilisé et est donc détruit.
+$evelyn = $alice; 
 
-// L'objet $alice sera automatiquement détruit à la fin du script, et le destructeur sera appelé.
+// L'objet `$alice` sera automatiquement détruit à la fin du script.
+// Son destructeur sera appelé.

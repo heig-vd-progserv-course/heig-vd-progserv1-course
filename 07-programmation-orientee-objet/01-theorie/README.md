@@ -55,41 +55,57 @@ De façon plus concise, les personnes qui étudient devraient être capables de 
 La programmation orientée objet (POO) est un paradigme de programmation (= une
 façon de penser/représenter l'information) qui permet de structurer le code en
 regroupant les données et les comportements dans des entités appelées classes.
+
 Les classes sont des modèles qui définissent les propriétés et les méthodes des
 objets. Les objets sont des instances de ces classes et représentent des entités
 concrètes de l'application.
 
+La POO permet de créer des applications plus modulaires, réutilisables et
+maintenables. Elle offre une approche plus naturelle pour modéliser le monde
+réel, en regroupant les données et les comportements liés dans des entités
+cohérentes.
+
 ## Concepts clés de la POO
 
-- **Classes** : Modèles qui définissent les propriétés et les méthodes des
+- **Classes** : modèles qui définissent les propriétés et les comportements des
   objets.
-- **Objets** : Instances des classes qui représentent des entités concrètes.
-- **Attributs** : Propriétés des objets, définies dans les classes.
-- **Méthodes** : Comportements des objets, définies dans les classes.
-- **Encapsulation** : Pratique consistant à regrouper les données et les
+- **Objets** : instances (= création en mémoire) des classes qui représentent
+  des entités concrètes.
+- **Attributs** : propriétés des objets (définies dans les classes) qui stockent
+  l'état des objets.
+- **Méthodes** : fonctions (définies dans les classes) qui définissent les
+  comportements des objets.
+- **Encapsulation** : pratique consistant à regrouper les données et les
   comportements dans des classes, en limitant l'accès direct aux attributs pour
   protéger l'intégrité des données.
+- **Constructeurs et destructeurs** : méthodes spéciales pour initialiser et
+  nettoyer les objets. Les constructeurs sont appelés lors de la création d'un
+  objet, tandis que les destructeurs sont appelés lors de la destruction de
+  l'objet.
 
 Il existe d'autres concepts clés de la POO, tels que l'héritage et le
 polymorphisme, qui permettent de créer des relations entre les classes et de
-réutiliser le code. Cependant, ces concepts ne seront pas abordés dans ce cours.
+réutiliser le code ainsi que les méthodes statiques et pleins d'autres concepts
+avancés comme les interfaces, les traits, les namespaces, les exceptions, etc.
+
+Cependant, ces concepts ne seront pas abordés dans ce cours.
 
 ## Avantages de la POO
 
-- **Lisibilité** : Le code est plus facile à lire et à comprendre, car les
+- **Lisibilité** : le code est plus facile à lire et à comprendre, car les
   classes regroupent les données et les comportements liés.
-- **Réutilisabilité** : Les classes peuvent être réutilisées dans d'autres
+- **Réutilisabilité** : les classes peuvent être réutilisées dans d'autres
   parties de l'application ou dans d'autres applications, ce qui réduit la
   duplication du code.
-- **Maintenabilité** : Le code est plus facile à maintenir, car les classes
-  permettent de structurer le code de manière logique et cohérente.
+- **Maintenabilité** : les modifications apportées à une classe n'affectent pas
+  les autres classes, ce qui facilite la maintenance du code.
 
 ## Désavantages de la POO
 
-- **Complexité** : La POO peut introduire une certaine complexité, surtout pour
+- **Complexité** : la POO peut introduire une certaine complexité, surtout pour
   les petites applications où une approche procédurale pourrait être plus
   simple.
-- **Performance** : La POO peut être moins performante que la programmation
+- **Performance** : la POO peut être moins performante que la programmation
   procédurale, car elle nécessite une gestion supplémentaire des objets et des
   classes. Cependant, cette différence de performance est souvent négligeable
   dans la plupart des applications modernes.
@@ -103,9 +119,14 @@ l'héritage, le polymorphisme et les interfaces.
 
 ### Classes
 
+Une classe est un modèle qui définit les propriétés et les comportements des
+objets.
+
 Les classes en PHP sont définies à l'aide du mot-clé `class`. Elles peuvent
-avoir des attributs (propriétés) et des méthodes (comportements). Voici un
-exemple simple de classe en PHP :
+avoir des attributs (variables qui définissent des propriétés) et des méthodes
+(fonctions qui définissent des comportements).
+
+Voici un exemple simple de classe en PHP :
 
 ```php
 <?php
@@ -134,7 +155,13 @@ chaque mot commence par une majuscule).
 ### Instanciation d'objets
 
 Pour créer des objets à partir d'une classe, on utilise le mot-clé `new` suivi
-du nom de la classe. Voici comment instancier un objet de la classe `Person` :
+du nom de la classe suivi de parenthèses (`()`).
+
+Par convention, les noms d'objets sont écrits en Camel case (c'est-à-dire que le
+premier mot commence par une minuscule et les mots suivants commencent par une
+majuscule).
+
+Voici comment instancier un objet de la classe `Person` :
 
 ```php
 $person = new Person();
@@ -170,11 +197,15 @@ Person person2 = new Person();
 
 ### Attributs
 
-Les attributs d'une classe sont des variables qui stockent les données de
-l'objet. Ils sont définis dans la classe et peuvent être accédées selon leur
-visibilité (`public`, `protected` ou `private`). Les attributs sont déclarés à
-l'intérieur de la classe, et ils peuvent être de n'importe quel type de données,
-y compris d'autres objets.
+Les attributs d'une classe sont des variables qui stockent l'état/les données de
+l'objet.
+
+Ils sont définis dans la classe et peuvent être accédées selon leur visibilité
+(`public` - accessibles de partout, `protected` - accessibles dans la classe et
+ses sous-classes ou `private` - accessibles uniquement dans la classe).
+
+Les attributs sont déclarés à l'intérieur de la classe, et ils peuvent être de
+n'importe quel type de données, y compris d'autres objets.
 
 Les attributs d'un objet sont accessibles via l'opérateur `->`.
 
@@ -207,15 +238,12 @@ person.age = 30;
 </details>
 
 L'opérateur `->` permet d'accéder aux attributs d'un objet. Dans cet exemple,
-nous avons créé un objet `$person` de la classe `Person`, puis nous avons
-assigné des valeurs aux attributs `name` et `age` de cet objet. On peut
-également accéder aux attributs d'un objet pour les lire :
+nous avons créé un objet `$person` de la classe `Person` présentée précédemment.
+Puis nous avons assigné des valeurs aux attributs `name` et `age` de cet objet.
+On peut également accéder aux attributs d'un objet pour les lire :
 
 ```php
-echo $person->name; // Affiche "Alice"
-
-echo "<br>";
-
+echo $person->name . "<br>"; // Affiche "Alice"
 echo $person->age;  // Affiche 30
 ```
 
@@ -232,9 +260,14 @@ System.out.println(person.age);  // Affiche 30
 ### Méthodes
 
 Les méthodes d'une classe sont des fonctions qui définissent les comportements
-de l'objet. Elles sont définies à l'intérieur de la classe et peuvent être
-appelées sur les objets de cette classe. Voici un exemple de classe avec une
-méthode :
+de l'objet. Tout comme les attributs, les méthodes sont définies à l'intérieur
+de la classe et peuvent être accédées selon leur visibilité (`public`,
+`protected` ou `private`).
+
+Elles sont définies à l'intérieur de la classe et peuvent être appelées sur les
+objets de cette classe.
+
+Voici un exemple de classe avec une méthode :
 
 ```php
 <?php
@@ -243,7 +276,9 @@ class Person {
     public $age;
 
     public function greet() {
-        return "Hi, my name is " . $this->name . " and I am " . $this->age . " years old.";
+        return "Hi, my name is " . $this->name .
+            " and I am " . $this->age .
+            " years old.";
     }
 }
 ```
@@ -257,7 +292,9 @@ public class Person {
     public int age;
 
     public String greet() {
-        return "Hi, my name is " + this.name + " and I am " + this.age + " years old.";
+        return "Hi, my name is " + this.name +
+            " and I am " + this.age +
+            " years old.";
     }
 }
 ```
@@ -304,8 +341,9 @@ L'encapsulation est une pratique importante en POO qui consiste à protéger les
 données d'un objet en limitant l'accès direct à ses attributs.
 
 Ce mécanisme permet de contrôler comment les données sont modifiées et lues, en
-fournissant des méthodes d'accès (appelées _"getters"_) et de modification
-(appelées _"setters"_) avec des validations des données si nécessaire.
+fournissant des méthodes d'accès (appelées _"getters"_ en anglais) et de
+modification (appelées _"setters"_ en anglais) avec des validations des données
+si nécessaire.
 
 En PHP, on peut utiliser les modificateurs d'accès `public`, `protected` et
 `private` pour contrôler la visibilité des attributs et des méthodes. Voici un
@@ -313,7 +351,6 @@ exemple :
 
 ```php
 <?php
-
 class Person {
     private $name; // Attribut privé
     private $age; // Attribut privé
@@ -356,7 +393,9 @@ public class Person {
         if (name.length() < 3) {
             return "Name must be at least 3 characters long.";
         }
+
         this.name = name;
+
         return null;
     }
 
@@ -368,7 +407,9 @@ public class Person {
         if (age < 0) {
             return "Age cannot be negative.";
         }
+
         this.age = age;
+
         return null;
     }
 
@@ -388,9 +429,8 @@ attributs.
 
 Grâce aux getters, on peut lire les valeurs des attributs, et grâce aux setters,
 on peut les modifier. Les setters peuvent également inclure des validations pour
-s'assurer que les valeurs assignées sont valides, comme présenté dans l'exemple
-ci-dessus. Cela permet de garantir que les données de l'objet sont toujours dans
-un état cohérent et valide.
+s'assurer que les valeurs assignées sont valides. Cela permet de garantir que
+les données de l'objet sont toujours dans un état cohérent et valide.
 
 > [!TIP]
 >
@@ -409,19 +449,17 @@ $person = new Person();
 $error = $person->setName("Alice");
 
 if (!empty($error)) {
-    echo $error;
+	echo $error . "<br>";
 }
 
 $error = $person->setAge(30);
 
 if (!empty($error)) {
-    echo $error;
+	echo $error . "<br>";
 }
 
-echo $person->getName(); // Affiche "Alice"
-echo "<br>";
-echo $person->getAge();  // Affiche 30
-echo "<br>";
+echo $person->getName() . "<br>"; // Affiche "Alice"
+echo $person->getAge() . "<br>";  // Affiche 30
 
 $error = $person->setName("AS");
 
@@ -550,22 +588,23 @@ Voici comment on peut utiliser cette classe :
 
 ```php
 $alice = new Person("Alice", 30);
-
-echo $alice->greet() . "<br>"; // Affiche "Hi, my name is Alice and I am 30 years old."
-
 $bob = new Person("Bob", 25);
-
-echo $bob->greet() . "<br>"; // Affiche "Hi, my name is Bob and I am 25 years old."
-
 $evelyn = new Person("Evelyn", 40);
 
-echo $evelyn->greet() . "<br>"; // Affiche "Hi, my name is Evelyn and I am 40 years old."
+echo $alice->greet() . "<br>";
+echo $bob->greet() . "<br>";
+echo $evelyn->greet() . "<br>";
 
-$bob = null; // Détruit l'objet $bob, le destructeur est appelé
+// L'objet `$bob` a maintenant la valeur `null`.
+// L'objet est donc détruit et le destructeur est appelé.
+$bob = null;
 
-$evelyn = $alice; // $evelyn référence maintenant le même objet que $alice, $evelyn n'est plus utilisé et est donc détruit.
+// L'objet `$evelyn` référence maintenant le même objet que `$alice`.
+// L'objet `$evelyn` n'est plus utilisé et est donc détruit.
+$evelyn = $alice;
 
-// L'objet $alice sera automatiquement détruit à la fin du script, et le destructeur sera appelé.
+// L'objet `$alice` sera automatiquement détruit à la fin du script.
+// Son destructeur sera appelé.
 ```
 
 <details>
@@ -573,22 +612,22 @@ $evelyn = $alice; // $evelyn référence maintenant le même objet que $alice, $
 
 ```java
 Person alice = new Person("Alice", 30);
-
-System.out.println(alice.greet()); // Affiche "Hi, my name is Alice and I am 30 years old."
-
 Person bob = new Person("Bob", 25);
-
-System.out.println(bob.greet()); // Affiche "Hi, my name is Bob and I am 25 years old."
-
 Person evelyn = new Person("Evelyn", 40);
 
-System.out.println(evelyn.greet()); // Affiche "Hi, my name is Evelyn and I am 40 years old."
+System.out.println(alice.greet());
+System.out.println(bob.greet());
+System.out.println(evelyn.greet());
 
-bob = null; // En Java, il n'y a pas de destructeur explicite, mais l'objet bob sera éligible pour le garbage collector.
+// En Java, il n'y a pas de destructeur explicite.
+// Mais tout objet avec une valeur `null` est éligible pour le garbage collector.
+bob = null;
 
-evelyn = alice; // evelyn référence maintenant le même objet que alice, evelyn n'est plus utilisé et sera éligible pour le garbage collector.
+// L'objet `evelyn` référence maintenant le même objet que `alice`.
+// L'objet `evelyn` n'est plus utilisé et sera éligible pour le garbage collector.
+evelyn = alice;
 
-// L'objet alice sera éligible pour le garbage collector à la fin du programme.
+// L'objet `alice` sera éligible pour le garbage collector à la fin du programme.
 ```
 
 </details>
@@ -661,13 +700,14 @@ $alice = new Person("Alice", Person::ROLE_DEVELOPER);
 $bob = new Person("Bob", Person::ROLE_MANAGER);
 $evelyn = new Person("Evelyn", Person::ROLE_DESIGNER);
 
-echo $alice->greet(); // Affiche "Hi, my name is Alice. I work as a Developer at my company."
-echo "<br>";
+// Affiche "Hi, my name is Alice. I work as a Developer at my company."
+echo $alice->greet() . "<br>";
 
-echo $bob->greet(); // Affiche "Hi, my name is Bob. I work as a Manager at my company."
-echo "<br>";
+// Affiche "Hi, my name is Bob. I work as a Manager at my company."
+echo $bob->greet() . "<br>";
 
-echo $evelyn->greet(); // Affiche "Hi, my name is Evelyn. I work as a Designer at my company."
+// Affiche "Hi, my name is Evelyn. I work as a Designer at my company."
+echo $evelyn->greet();
 ```
 
 <details>
@@ -678,11 +718,14 @@ Person alice = new Person("Alice", Person.ROLE_DEVELOPER);
 Person bob = new Person("Bob", Person.ROLE_MANAGER);
 Person evelyn = new Person("Evelyn", Person.ROLE_DESIGNER);
 
-System.out.println(alice.greet()); // Affiche "Hi, my name is Alice. I work as a Developer at my company."
+// Affiche "Hi, my name is Alice. I work as a Developer at my company."
+System.out.println(alice.greet());
 
-System.out.println(bob.greet()); // Affiche "Hi, my name is Bob. I work as a Manager at my company."
+// Affiche "Hi, my name is Bob. I work as a Manager at my company."
+System.out.println(bob.greet());
 
-System.out.println(evelyn.greet()); // Affiche "Hi, my name is Evelyn. I work as a Designer at my company."
+// Affiche "Hi, my name is Evelyn. I work as a Designer at my company."
+System.out.println(evelyn.greet());
 ```
 
 </details>

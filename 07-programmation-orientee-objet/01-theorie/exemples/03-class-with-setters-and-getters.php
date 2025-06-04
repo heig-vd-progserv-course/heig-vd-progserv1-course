@@ -1,5 +1,4 @@
 <?php
-
 class Person {
     private $name; // Attribut privé
     private $age; // Attribut privé
@@ -34,19 +33,17 @@ $person = new Person();
 $error = $person->setName("Alice");
 
 if (!empty($error)) {
-    echo $error;
+    echo $error . "<br>";
 }
 
 $error = $person->setAge(30);
 
 if (!empty($error)) {
-    echo $error;
+    echo $error . "<br>";
 }
 
-echo $person->getName(); // Affiche "Alice"
-echo "<br>";
-echo $person->getAge();  // Affiche 30
-echo "<br>";
+echo $person->getName() . "<br>"; // Affiche "Alice"
+echo $person->getAge() . "<br>";  // Affiche 30
 
 $error = $person->setName("AS");
 

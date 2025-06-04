@@ -21,14 +21,12 @@ class Person {
 $alice = new Person("Alice", Person::ROLE_DEVELOPER);
 $bob = new Person("Bob", Person::ROLE_MANAGER);
 $evelyn = new Person("Evelyn", Person::ROLE_DESIGNER);
-$alice = new Person("Alice", Person::ROLE_DEVELOPER);
-$bob = new Person("Bob", Person::ROLE_MANAGER);
-$evelyn = new Person("Evelyn", Person::ROLE_DESIGNER);
 
-echo $alice->greet(); // Affiche "Hi, my name is Alice. I work as a Developer at my company."
-echo "<br>";
+// Affiche "Hi, my name is Alice. I work as a Developer at my company."
+echo $alice->greet() . "<br>";
 
-echo $bob->greet(); // Affiche "Hi, my name is Bob. I work as a Manager at my company."
-echo "<br>";
+// Affiche "Hi, my name is Bob. I work as a Manager at my company."
+echo $bob->greet() . "<br>";
 
-echo $evelyn->greet(); // Affiche "Hi, my name is Evelyn. I work as a Designer at my company."
+// Affiche "Hi, my name is Evelyn. I work as a Designer at my company."
+echo $evelyn->greet();
