@@ -176,14 +176,12 @@ public class Person {
 
 ![bg right:40%][illustration-instanciation-dobjets]
 
-````php
-
 ### Instanciation d'objets (2/2)
 
 ```php
 $person1 = new Person();
 $person2 = new Person();
-````
+```
 
 ```java
 // Équivalent en Java
