@@ -2,52 +2,42 @@
 
 ## Ressources
 
-- Théorie : [Support de cours](../01-theorie/README.md) ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-theorie/index.html)
+- Théorie :
+  [Support de cours](../01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/README.md)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-theorie/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf)
+  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/index.html)
+  ·
+  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf)
 - Mini-projet : [Consignes](../02-mini-project/README.md) ·
   [Solution](../02-mini-project/solution/)
-- Exercices : [Énoncés et solutions](../03-exercices/README.md)
+- [Énoncé](../03-examen-blanc/README.md)
 
 ## Table des matières
 
 - [Ressources](#ressources)
 - [Table des matières](#table-des-matières)
-- [Objectifs](#objectifs)
-- [TODO](#todo)
-- [Conclusion](#conclusion)
-- [Support de cours](#mini-projet)
-- [Support de cours](#exercices)
+- [Récapitulatif de l'unité d'enseignement avec préparation à l'examen](#récapitulatif-de-lunité-denseignement-avec-préparation-à-lexamen)
+- [Mini-projet](#mini-projet)
+- [Examen blanc](#examen-blanc)
 
-## Objectifs
+## Récapitulatif de l'unité d'enseignement avec préparation à l'examen
 
-TODO
-
-De façon plus concise, les personnes qui étudient devraient être capables de :
-
-- TODO
-
-## TODO
-
-TODO
-
-## Conclusion
-
-TODO
+Nous vous invitons à consulter la présentation de cette session pour obtenir
+toutes les informations nécessaires à la préparation de l'examen final.
 
 ## Mini-projet
 
 Nous vous invitons maintenant à réaliser le mini-projet de cette session pour
-mettre en pratique les concepts vus en classe.
+finaliser l'application avec quelques fonctionnalités supplémentaires (styles
+CSS, amélioration du code, etc.).
 
 Vous trouverez les détails du mini-projet ici :
 [Consignes](../02-mini-project/README.md).
 
-## Exercices
+## Examen blanc
 
-Nous vous invitons également à réaliser les exercices de cette session pour
-renforcer votre compréhension des concepts vus en classe.
+Nous vous invitons également à réaliser l'examen blanc de cette unité
+d'enseignement pour vous préparer à l'examen final.
 
-Vous trouverez les détails des exercices ici :
-[Énoncés et solutions](../03-exercices/README.md).
+Vous trouverez les détails de l'examen blanc ici :
+[Examen blanc](../03-examen-blanc/README.md).
