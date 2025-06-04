@@ -45,7 +45,7 @@ Dans ce cours, nous allons voir comment déclarer et appeler des fonctions en
 PHP. Nous allons également voir comment passer des paramètres à une fonction et
 comment retourner une valeur depuis une fonction.
 
-De façon plus précise, les personnes qui étudient devraient être capables de :
+De façon plus concise, les personnes qui étudient devraient être capables de :
 
 - Décrire ce qu'est une fonction en programmation
 - Déclarer une fonction en PHP
@@ -72,6 +72,7 @@ fonction $f(3)$, on obtient $9$.
 En programmation, une fonction est définie par un nom, une liste de paramètres
 (optionnelle) et un bloc de code. Une fois définie, une fonction peut être
 appelée à partir d'un autre endroit du programme et permet de structurer le code
+en le découpant en morceaux plus petits et plus faciles à comprendre.
 
 ## Déclarer une fonction en PHP
 
