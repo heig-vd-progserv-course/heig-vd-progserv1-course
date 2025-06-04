@@ -49,7 +49,7 @@ $pets = $petsManager->getPets();
                 <tr>
                     <td><?= htmlspecialchars($pet['name']) ?></td>
                     <td><?= Pet::SPECIES[htmlspecialchars($pet['species'])] ?></td>
-                    <td><?= Pet::SEX[htmlspecialchars($pet['sex'])] ?></td>
+                    <td><?= Pet::SEXES[htmlspecialchars($pet['sex'])] ?></td>
                     <td><?= htmlspecialchars($pet['age']) ?></td>
                     <td>
                         <a href="delete.php?id=<?= htmlspecialchars($pet['id']) ?>"><button>Supprimer</button></a>

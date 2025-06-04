@@ -11,7 +11,7 @@ class Pet {
         'other' => 'Autre'
     ];
 
-    const SEX = [
+    const SEXES = [
         'male' => 'Mâle',
         'female' => 'Femelle'
     ];
@@ -71,7 +71,7 @@ class Pet {
             array_push($errors, "Le sexe est obligatoire.");
         }
 
-        if (!array_key_exists($this->sex, self::SEX)) {
+        if (!array_key_exists($this->sex, self::SEXES)) {
             array_push($errors, "Le sexe sélectionné n'est pas valide.");
         }
 
