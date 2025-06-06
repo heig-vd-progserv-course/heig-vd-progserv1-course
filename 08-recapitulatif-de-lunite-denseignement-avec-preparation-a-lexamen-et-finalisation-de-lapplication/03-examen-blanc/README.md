@@ -147,7 +147,14 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 > de compagnie, etc.), etc.). Des points peuvent être retirés si le code
 > contient des éléments inutiles ou hors contexte.
 
-##### Page d'accueil
+**Global**
+
+|   # | Description                                                                                             | Points |
+| --: | :------------------------------------------------------------------------------------------------------ | -----: |
+|  33 | Le code est lisible, agréable à lire et utilise des noms de variables/fichiers/dossiers/etc. explicites |      2 |
+|  34 | Le code est structuré avec les principes de la programmation objet (OOP)                                |      2 |
+
+**Page d'accueil**
 
 |   # | Description                                                                                            | Points |
 | --: | :----------------------------------------------------------------------------------------------------- | -----: |
@@ -159,7 +166,7 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 |   6 | La page d'accueil permet de naviguer vers la page d'édition d'un projet                                |      2 |
 |   7 | La page d'accueil permet de naviguer vers la page de suppression d'un projet                           |      2 |
 
-##### Page de création d'un projet
+**Page de création d'un projet**
 
 |   # | Description                                                                                                                                            | Points |
 | --: | :----------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
@@ -171,7 +178,7 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 |  13 | La page de création sauvegarde le nouveau projet dans la base de données et redirige la personne vers la page d'accueil après la création d'un projet  |      2 |
 |  14 | La page de création est protégée contre les injections SQL et les attaques XSS                                                                         |      2 |
 
-##### Page de visualisation d'un projet
+**Page de visualisation d'un projet**
 
 |   # | Description                                                                                                                         | Points |
 | --: | :---------------------------------------------------------------------------------------------------------------------------------- | -----: |
@@ -182,7 +189,7 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 |  19 | La page de visualisation permet de supprimer un projet                                                                              |      2 |
 |  20 | La page de visualisation redirige l'utilisateur vers la page d'accueil si le projet n'existe pas                                    |      2 |
 
-##### Page d'édition d'un projet
+**Page d'édition d'un projet**
 
 |   # | Description                                                                                                                                          | Points |
 | --: | :--------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
@@ -195,7 +202,7 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 |  27 | La page d'édition est protégée contre les injections SQL et les attaques XSS                                                                         |      2 |
 |  28 | La page d'édition redirige l'utilisateur vers la page d'accueil si le projet n'existe pas                                                            |      2 |
 
-##### Page de suppression d'un projet
+**Page de suppression d'un projet**
 
 |   # | Description                                                                                                                           | Points |
 | --: | :------------------------------------------------------------------------------------------------------------------------------------ | -----: |
@@ -203,10 +210,3 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 |  30 | La page de suppression redirige l'utilisateur vers la page d'accueil si le projet n'existe pas                                        |      2 |
 |  31 | La page de suppression supprime le projet de la base de données et redirige l'utilisateur vers la page d'accueil après la suppression |      2 |
 |  32 | La page de suppression est protégée contre les injections SQL                                                                         |      2 |
-
-##### Global
-
-|   # | Description                                                                                             | Points |
-| --: | :------------------------------------------------------------------------------------------------------ | -----: |
-|  33 | Le code est lisible, agréable à lire et utilise des noms de variables/fichiers/dossiers/etc. explicites |      2 |
-|  34 | Le code est structuré avec les principes de la programmation objet (OOP)                                |      2 |
