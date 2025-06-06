@@ -54,7 +54,7 @@ Vous l'avez fait, bravo ! 🎉
 
 Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
-### _Objectifs de l'unité d'enseignement_
+### Objectifs de l'unité d'enseignement
 
 > En résumé, vous devriez être capable de :
 >
@@ -176,7 +176,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 - La POO permet de structurer le code de manière modulaire et réutilisable.
 - PHP supporte les concepts de POO.
 
-## Feedback
+## Résultats des formulaires de feedback
 
 <!-- _class: lead -->
 
@@ -228,9 +228,18 @@ Tout ce que vous devez savoir pour réussir l'examen final.
 
 <center>
 
-**Aucune aide autorisée**.
+**Aucune ressources autorisée**.
 
 </center>
+
+##### Critères d'évaluation
+
+Pour les questions ouvertes, la note est attribuée selon les critères suivants :
+
+- 0 point - La réponse est incorrecte ou absente
+- 1 point - La réponse est partiellement correcte (manque de précision ou de
+  détails)
+- 2 points - La réponse est correcte et complète
 
 #### Partie pratique
 
@@ -254,7 +263,7 @@ Tout ce que vous devez savoir pour réussir l'examen final.
 
 <center>
 
-**Aides autorisées** :
+**Ressources autorisées** :
 [**dépôt Git du cours**](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course),
 **notes et code personnels**,
 [**php.net**](https://www.php.net/manual/index.php) et
@@ -262,7 +271,14 @@ Tout ce que vous devez savoir pour réussir l'examen final.
 
 </center>
 
-### Sanctions possibles en cas de triche (1/3)
+### Calcul de la note finale
+
+La note finale de l'examen est calculée en combinant les notes des deux parties
+de l'examen :
+
+$$\text{Note finale} = \text{Note pour la partie théorique} * 0.4 + \text{Note pour la partie pratique} * 0.6$$
+
+### Sanctions possibles en cas de tricherie (1/3)
 
 Source :
 [Règlement d'études Bachelor de la HEIG-VD](https://intra.heig-vd.ch/academique/cadre-de-reference/Documents/Rglt-Etudes-HEIG-VD.pdf).
@@ -275,7 +291,7 @@ Source :
 > correspondants, voire l'invalidation du titre, et peut faire l'objet d'une des
 > sanctions prévues à l'article 14.
 
-### Sanctions possibles en cas de triche (2/3)
+### Sanctions possibles en cas de tricherie (2/3)
 
 > **Art. 14. - Sanctions**
 >
@@ -288,7 +304,7 @@ Source :
 > 3. **l'exclusion de la filière, voire du domaine** si les règlements du
 >    domaine le prévoient.
 
-### Sanctions possibles en cas de triche (3/3)
+### Sanctions possibles en cas de tricherie (3/3)
 
 **Les personnes qui surveilleront l'examen seront informées des règles
 d'évaluation et des sanctions possibles en cas de triche.**
