@@ -103,12 +103,12 @@ Chaque projet a les attributs suivants :
   caractères).
 - Description du projet (texte long, optionnel, minimum 10 caractères, maximum
   500 caractères).
-- Statut du projet (sélection, obligatoire, valeurs possibles : "En cours",
-  "Terminé", "Annulé").
-- Priorité du projet (boutons radio, obligatoire, valeurs possibles : "Basse",
-  "Moyenne", "Haute").
-- Catégories du projet (cases à cocher, obligatoire, valeurs possibles : "Web",
-  "Mobile", "Desktop").
+- Statut du projet (sélection, obligatoire, valeurs possibles : _"En cours"_,
+  _"Terminé"_, _"Annulé"_).
+- Priorité du projet (boutons radio, obligatoire, valeurs possibles : _"Basse"_,
+  _"Moyenne"_, _"Haute"_).
+- Catégories du projet (cases à cocher, optionnel, valeurs possibles :
+  _"Développement"_, _"Finances"_, _"Administration"_ ou _"Marketing"_).
 
 La requête pour créer la base de données vous a été fournie afin de vous
 simplifier le travail :
@@ -120,7 +120,7 @@ CREATE TABLE IF NOT EXISTS projets (
     description TEXT,
     status TEXT NOT NULL,
     priority TEXT NOT NULL,
-    categories TEXT NOT NULL,
+    categories TEXT,
 );
 ```
 
