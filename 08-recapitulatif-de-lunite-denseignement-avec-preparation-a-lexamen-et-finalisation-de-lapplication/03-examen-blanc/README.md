@@ -147,13 +147,6 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 > de compagnie, etc.), etc.). Des points peuvent être retirés si le code
 > contient des éléments inutiles ou hors contexte.
 
-**Global**
-
-|   # | Description                                                                                             | Points |
-| --: | :------------------------------------------------------------------------------------------------------ | -----: |
-|  33 | Le code est lisible, agréable à lire et utilise des noms de variables/fichiers/dossiers/etc. explicites |      2 |
-|  34 | Le code est structuré avec les principes de la programmation objet (OOP)                                |      2 |
-
 **Page d'accueil**
 
 |   # | Description                                                                                            | Points |
@@ -184,7 +177,7 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 | --: | :---------------------------------------------------------------------------------------------------------------------------------- | -----: |
 |  15 | Une page de visualisation permet de visualiser les détails d'un projet                                                              |      2 |
 |  16 | La page de visualisation affiche les détails du projet avec les attributs suivants : nom, description, statut, priorité, catégories |      2 |
-|  17 | La page de visualisation est protégée contre les attaques XSS                                                                       |      2 |
+|  17 | La page de visualisation est protégée contre les injections SQL et les attaques XSS                                                 |      2 |
 |  18 | La page de visualisation permet de naviguer vers la page d'édition d'un projet                                                      |      2 |
 |  19 | La page de visualisation permet de supprimer un projet                                                                              |      2 |
 |  20 | La page de visualisation redirige l'utilisateur vers la page d'accueil si le projet n'existe pas                                    |      2 |
@@ -210,3 +203,10 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 |  30 | La page de suppression redirige l'utilisateur vers la page d'accueil si le projet n'existe pas                                        |      2 |
 |  31 | La page de suppression supprime le projet de la base de données et redirige l'utilisateur vers la page d'accueil après la suppression |      2 |
 |  32 | La page de suppression est protégée contre les injections SQL                                                                         |      2 |
+
+**Global**
+
+|   # | Description                                                                                                       | Points |
+| --: | :---------------------------------------------------------------------------------------------------------------- | -----: |
+|  33 | Le code est lisible, agréable à lire et utilise des noms de variables/fonctions/fichiers/dossiers/etc. explicites |      2 |
+|  34 | Le code est structuré avec les principes de la programmation orientée objet (POO)                                 |      2 |
