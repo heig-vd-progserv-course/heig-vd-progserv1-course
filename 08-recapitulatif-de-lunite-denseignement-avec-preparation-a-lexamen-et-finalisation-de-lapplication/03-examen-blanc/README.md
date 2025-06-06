@@ -24,8 +24,7 @@ L'examen est composé de deux parties :
 > [!CAUTION]
 >
 > Toute tentative de tricherie ou d'utilisation de ressources non autorisées
-> entraînera la note de 1 pour l'ensemble de l'examen, sans aucune possibilité
-> de rattrapage.
+> entraînera la note de 1 pour l'ensemble de l'examen.
 
 ### Partie théorique
 
@@ -33,7 +32,7 @@ L'examen est composé de deux parties :
 >
 > Quitter la plateforme (changement de fenêtre, fermeture du navigateur, etc.)
 > durant la partie théorique de l'examen entraînera la note de 1 pour l'ensemble
-> de l'examen, sans aucune possibilité de rattrapage.
+> de l'examen.
 
 **Ressources autorisées**
 
@@ -55,7 +54,7 @@ ensuite accès à la partie pratique de l'examen.
 >
 > Le rendu doit être effectué **avant** la fin de la partie pratique de
 > l'examen. En cas de non-remise ou de retard, la note de 1 sera attribuée pour
-> la partie pratique de l'examen, sans aucune possibilité de rattrapage.
+> la partie pratique de l'examen.
 
 **Ressources autorisées**
 
