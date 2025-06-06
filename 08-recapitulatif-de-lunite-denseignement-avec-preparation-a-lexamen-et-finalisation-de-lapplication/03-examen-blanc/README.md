@@ -34,15 +34,15 @@ L'examen est composé de deux parties :
 > durant la partie théorique de l'examen entraînera la note de 1 pour l'ensemble
 > de l'examen.
 
-**Ressources autorisées**
+#### Ressources autorisées
 
 - Aucune
 
-**Lien vers la plateforme d'évaluation**
+#### Lien vers la plateforme d'évaluation
 
 [Lien sur la plateforme d'évaluation en ligne de la HEIG-VD](https://eval.heig-vd.ch/TODO).
 
-**Rendu**
+#### Rendu
 
 Soumettre les réponses via la plateforme d'évaluation en ligne de la HEIG-VD et
 faire valider le rendu par la personne qui surveille l'examen. Vous aurez
@@ -56,7 +56,7 @@ ensuite accès à la partie pratique de l'examen.
 > l'examen. En cas de non-remise ou de retard, la note de 1 sera attribuée pour
 > la partie pratique de l'examen.
 
-**Ressources autorisées**
+#### Ressources autorisées
 
 - Un environnement de développement local (par exemple, MAMP + Visual Studio
   Code).
@@ -72,7 +72,7 @@ ensuite accès à la partie pratique de l'examen.
 - Documentation officielle de PHP (<https://www.php.net/>).
 - Ressources MDN (<https://developer.mozilla.org>).
 
-**Rendu**
+#### Rendu
 
 Le rendu de la partie pratique se fait via mail à l'adresse
 [ludovic.delafontaine@heig-vd.ch](mailto:ludovic.delafontaine@heig-vd.ch) dans
@@ -85,7 +85,7 @@ Vous êtes responsable de son contenu.
 
 Le travail et la consigne doivent être rendus avant la fin de l'examen.
 
-**Consignes**
+#### Consignes
 
 Vous venez de rejoindre une nouvelle équipe de développement web. Votre
 responsable vous a demandé de créer une application web de gestion de projets.
@@ -127,7 +127,7 @@ CREATE TABLE IF NOT EXISTS projets (
 Réalisez cette application avec PHP en utilisant toutes les bonnes pratiques de
 développement web que vous avez acquises durant l'unité d'enseignement.
 
-**Grille d'évaluation**
+#### Grille d'évaluation
 
 - 0 point - Le travail est insuffisant
 - 1 point - Le travail est réalisé mais nécessite des améliorations (manque de
@@ -147,7 +147,7 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 > de compagnie, etc.), etc.). Des points peuvent être retirés si le code
 > contient des éléments inutiles ou hors contexte.
 
-**Page d'accueil**
+##### Page d'accueil
 
 |   # | Description                                                                                            | Points |
 | --: | :----------------------------------------------------------------------------------------------------- | -----: |
@@ -159,7 +159,7 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 |   6 | La page d'accueil permet de naviguer vers la page d'édition d'un projet                                |      2 |
 |   7 | La page d'accueil permet de naviguer vers la page de suppression d'un projet                           |      2 |
 
-**Page de création d'un projet**
+##### Page de création d'un projet
 
 |   # | Description                                                                                                                                            | Points |
 | --: | :----------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
@@ -171,7 +171,7 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 |  13 | La page de création sauvegarde le nouveau projet dans la base de données et redirige la personne vers la page d'accueil après la création d'un projet  |      2 |
 |  14 | La page de création est protégée contre les injections SQL et les attaques XSS                                                                         |      2 |
 
-**Page de visualisation d'un projet**
+##### Page de visualisation d'un projet
 
 |   # | Description                                                                                                                         | Points |
 | --: | :---------------------------------------------------------------------------------------------------------------------------------- | -----: |
@@ -182,7 +182,7 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 |  19 | La page de visualisation permet de supprimer un projet                                                                              |      2 |
 |  20 | La page de visualisation redirige l'utilisateur vers la page d'accueil si le projet n'existe pas                                    |      2 |
 
-**Page d'édition d'un projet**
+##### Page d'édition d'un projet
 
 |   # | Description                                                                                                                                          | Points |
 | --: | :--------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
@@ -195,7 +195,7 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 |  27 | La page d'édition est protégée contre les injections SQL et les attaques XSS                                                                         |      2 |
 |  28 | La page d'édition redirige l'utilisateur vers la page d'accueil si le projet n'existe pas                                                            |      2 |
 
-**Page de suppression d'un projet**
+##### Page de suppression d'un projet
 
 |   # | Description                                                                                                                           | Points |
 | --: | :------------------------------------------------------------------------------------------------------------------------------------ | -----: |
@@ -204,13 +204,9 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 |  31 | La page de suppression supprime le projet de la base de données et redirige l'utilisateur vers la page d'accueil après la suppression |      2 |
 |  32 | La page de suppression est protégée contre les injections SQL                                                                         |      2 |
 
-**Global**
+##### Global
 
 |   # | Description                                                                                             | Points |
 | --: | :------------------------------------------------------------------------------------------------------ | -----: |
 |  33 | Le code est lisible, agréable à lire et utilise des noms de variables/fichiers/dossiers/etc. explicites |      2 |
 |  34 | Le code est structuré avec les principes de la programmation objet (OOP)                                |      2 |
-
-**Total des points**
-
-$34 * 2 = 68 \text{ points}$
