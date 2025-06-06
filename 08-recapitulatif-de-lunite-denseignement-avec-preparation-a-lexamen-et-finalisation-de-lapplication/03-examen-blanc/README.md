@@ -31,9 +31,9 @@ L'examen est composé de deux parties :
 
 > [!CAUTION]
 >
-> Si une personne quitte la plateforme (changement de fenêtre, fermeture du
-> navigateur, etc.) durant la partie théorique de l'examen, elle recevra la note
-> de 1 pour l'ensemble de l'examen, sans aucune possibilité de rattrapage.
+> Quitter la plateforme (changement de fenêtre, fermeture du navigateur, etc.)
+> durant la partie théorique de l'examen entraînera la note de 1 pour l'ensemble
+> de l'examen, sans aucune possibilité de rattrapage.
 
 **Ressources autorisées**
 
@@ -77,10 +77,14 @@ ensuite accès à la partie pratique de l'examen.
 
 Le rendu de la partie pratique se fait via mail à l'adresse
 [ludovic.delafontaine@heig-vd.ch](mailto:ludovic.delafontaine@heig-vd.ch) dans
-une archive ZIP ayant le format `prenom_nom.zip`.
+une archive ZIP ayant pour format `prenom_nom.zip`.
 
 Par exemple, pour une personne nommée _Ludovic Delafontaine_, le rendu de
 l'archive sera `ludovic_delafontaine.zip`.
+
+Vous êtes responsable de son contenu.
+
+Le travail et la consigne doivent être rendus avant la fin de l'examen.
 
 **Consignes**
 
@@ -137,10 +141,17 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 > utiliser du HTML et du CSS de base (CSS optionnel), mais l'accent doit être
 > mis sur la fonctionnalité et la structure du code.
 
+> [!WARNING]
+>
+> Le code ne doit pas contenir de code sortant du contexte de l'application (pas
+> de code ou commentaires inutiles, pas de code lié à d'autres projets (animaux
+> de compagnie, etc.), etc.). Des points peuvent être retirés si le code
+> contient des éléments inutiles ou hors contexte.
+
 **Page d'accueil**
 
 |   # | Description                                                                                            | Points |
-| --: | ------------------------------------------------------------------------------------------------------ | -----: |
+| --: | :----------------------------------------------------------------------------------------------------- | -----: |
 |   1 | Une page d'accueil permet d'afficher la liste des projets                                              |      2 |
 |   2 | La page d'accueil affiche les projets avec les attributs suivants : nom, description, statut, priorité |      2 |
 |   3 | La page d'accueil est protégée contre les attaques XSS                                                 |      2 |
@@ -152,7 +163,7 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 **Page de création d'un projet**
 
 |   # | Description                                                                                                                                            | Points |
-| --: | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -----: |
+| --: | :----------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
 |   8 | Une page de création permet de créer un nouveau projet                                                                                                 |      2 |
 |   9 | La page de création affiche un formulaire avec les champs suivants : nom, description, statut, priorité, catégories                                    |      2 |
 |  10 | La page de création supporte la validation des champs du formulaire (obligatoire, longueur minimale et maximale), autant côté serveur que côté serveur |      2 |
@@ -164,7 +175,7 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 **Page de visualisation d'un projet**
 
 |   # | Description                                                                                                                         | Points |
-| --: | ----------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| --: | :---------------------------------------------------------------------------------------------------------------------------------- | -----: |
 |  15 | Une page de visualisation permet de visualiser les détails d'un projet                                                              |      2 |
 |  16 | La page de visualisation affiche les détails du projet avec les attributs suivants : nom, description, statut, priorité, catégories |      2 |
 |  17 | La page de visualisation est protégée contre les attaques XSS                                                                       |      2 |
@@ -175,7 +186,7 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 **Page d'édition d'un projet**
 
 |   # | Description                                                                                                                                          | Points |
-| --: | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| --: | :--------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
 |  21 | Une page d'édition permet de modifier un projet                                                                                                      |      2 |
 |  22 | La page d'édition affiche un formulaire pré-rempli avec les données du projet                                                                        |      2 |
 |  23 | La page d'édition supporte la validation des champs du formulaire (obligatoire, longueur minimale et maximale), autant côté serveur que côté serveur |      2 |
@@ -188,7 +199,7 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 **Page de suppression d'un projet**
 
 |   # | Description                                                                                                                           | Points |
-| --: | ------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| --: | :------------------------------------------------------------------------------------------------------------------------------------ | -----: |
 |  29 | Une page de suppression permet de supprimer un projet                                                                                 |      2 |
 |  30 | La page de suppression redirige l'utilisateur vers la page d'accueil si le projet n'existe pas                                        |      2 |
 |  31 | La page de suppression supprime le projet de la base de données et redirige l'utilisateur vers la page d'accueil après la suppression |      2 |
@@ -196,12 +207,11 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 
 **Global**
 
-|   # | Description                                                                                                                                                                    | Points |
-| --: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----: |
-|  33 | Le code est lisible, agréable à lire et utilise des noms de variables/fichiers/dossiers/etc. explicites                                                                        |      2 |
-|  34 | Le code est structuré avec les principes de la programmation objet (OOP)                                                                                                       |      2 |
-|  35 | Le code ne contient pas de code sortant du contexte de l'application (pas de code ou commentaires inutiles, du code lié à d'autres projets (animaux de compagnie, etc.), etc.) |      2 |
+|   # | Description                                                                                             | Points |
+| --: | :------------------------------------------------------------------------------------------------------ | -----: |
+|  33 | Le code est lisible, agréable à lire et utilise des noms de variables/fichiers/dossiers/etc. explicites |      2 |
+|  34 | Le code est structuré avec les principes de la programmation objet (OOP)                                |      2 |
 
 **Total des points**
 
-$35 * 2 = 70 \text{ points}$
+$34 * 2 = 68 \text{ points}$

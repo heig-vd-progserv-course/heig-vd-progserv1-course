@@ -211,9 +211,9 @@ l'examen.
 
 > [!CAUTION]
 >
-> Si une personne quitte la plateforme (changement de fenêtre, fermeture du
-> navigateur, etc.) durant la partie théorique de l'examen, elle recevra la note
-> de 1 pour l'ensemble de l'examen.
+> Quitter la plateforme (changement de fenêtre, fermeture du navigateur, etc.)
+> durant la partie théorique de l'examen entraînera la note de 1 pour l'ensemble
+> de l'examen, sans aucune possibilité de rattrapage.
 
 Une fois la partie théorique terminée, les personnes doivent remettre leurs
 réponses aux personnes qui surveillent l'examen. Les personnes peuvent ensuite
@@ -225,8 +225,9 @@ Aucune ressource n'est autorisée pour la partie théorique de l'examen.
 
 > [!CAUTION]
 >
-> L'utilisation de ressources non autorisées pendant l'examen entraînera la note
-> de 1 pour l'ensemble de l'examen.
+> Toute tentative de tricherie ou d'utilisation de ressources non autorisées
+> entraînera la note de 1 pour l'ensemble de l'examen, sans aucune possibilité
+> de rattrapage.
 
 #### Critères d'évaluation
 
@@ -264,7 +265,7 @@ ne sera toléré.
 >
 > Le rendu doit être effectué **avant** la fin de la partie pratique de
 > l'examen. En cas de non-remise ou de retard, la note de 1 sera attribuée pour
-> la partie pratique de l'examen.
+> la partie pratique de l'examen, sans aucune possibilité de rattrapage.
 
 #### Ressources autorisées
 
