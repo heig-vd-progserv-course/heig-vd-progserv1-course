@@ -24,7 +24,7 @@ _[Cours 07 - Programmation orientée objet](../01-theorie/README.md)_.
   - [Séparation des pages publiques et la logique métier](#séparation-des-pages-publiques-et-la-logique-métier)
   - [Création de la classe `Pet`](#création-de-la-classe-pet)
   - [Création de la classe `Database`](#création-de-la-classe-database)
-  - [Création de la classe `PetManager`](#création-de-la-classe-petmanager)
+  - [Création de la classe `PetsManager`](#création-de-la-classe-petmanager)
   - [Utilisation des classes dans les pages publiques](#utilisation-des-classes-dans-les-pages-publiques)
   - [Centralisation des espèces et du sexe d'un animal](#centralisation-des-espèces-et-du-sexe-dun-animal)
   - [Centralisation de la logique de validation](#centralisation-de-la-logique-de-validation)
@@ -332,14 +332,14 @@ c'est-à-dire dans le dossier `mini-projet` grâce au chemin `../petsmanager.db`
 Cela permet de ne pas mélanger les fichiers de l'application avec la base de
 données.
 
-### Création de la classe `PetManager`
+### Création de la classe `PetsManager`
 
-Nous allons maintenant créer une classe `PetManager` qui gérera les opérations
+Nous allons maintenant créer une classe `PetsManager` qui gérera les opérations
 de création, de modification, de suppression et de récupération des animaux de
 compagnie dans la base de données en utilisant les classes `Pet` et `Database`
 créées précédemment.
 
-Renommez le fichier `functions.php` en `PetManager.php`. Par convention, un
+Renommez le fichier `functions.php` en `PetsManager.php`. Par convention, un
 fichier contenant une classe en PHP doit être nommé en Pascal case (c'est-à-dire
 que chaque mot commence par une majuscule) et doit être suivi de `.php`.
 
@@ -666,7 +666,7 @@ Dans cette page, nous avons inclus le fichier `PetsManager.php` pour pouvoir
 utiliser la classe `PetsManager`. Nous avons ensuite créé une instance de
 `PetsManager` pour pouvoir ajouter un animal de compagnie à la base de données.
 
-Comme `PetManager` inclut déjà la classe `Pet`, nous pouvons créer un objet
+Comme `PetsManager` inclut déjà la classe `Pet`, nous pouvons créer un objet
 `Pet` avec les données du formulaire et nous utilisons la méthode `addPet()` de
 la classe `PetsManager` pour ajouter l'animal à la base de données et rediriger
 l'utilisateur vers la page d'accueil.
@@ -861,7 +861,7 @@ identifiant.
 
 Nous avons également géré la soumission du formulaire pour modifier un animal de
 compagnie. Nous avons récupéré les données du formulaire, validé les données et
-créé un nouvel objet `Pet` avec les données du formulaire ( comme `PetManager`
+créé un nouvel objet `Pet` avec les données du formulaire ( comme `PetsManager`
 inclut déjà la classe `Pet`, il n'est pas nécessaire de l'importer à nouveau).
 Nous avons ensuite utilisé la méthode `updatePet()` de la classe `PetsManager`
 pour mettre à jour l'animal de compagnie dans la base de données et rediriger
