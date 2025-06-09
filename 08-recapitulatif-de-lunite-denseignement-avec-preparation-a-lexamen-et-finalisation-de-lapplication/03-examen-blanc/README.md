@@ -14,7 +14,7 @@
   [Solution](../02-mini-project/solution/)
 - Examen blanc : [Énoncé](../03-examen-blanc/README.md)
 
-## Examen blanc
+## [ProgServ1 2024-2025] Examen blanc
 
 L'examen est composé de deux parties :
 
@@ -40,7 +40,13 @@ L'examen est composé de deux parties :
 
 #### Lien vers la plateforme d'évaluation
 
-[Lien sur la plateforme d'évaluation en ligne de la HEIG-VD](https://eval.heig-vd.ch/TODO).
+> [!NOTE]
+>
+> Vous devez être connecté au réseau Wi-Fi _"HEIG-VD"_ ou utiliser le VPN pour
+> accéder à la plateforme d'évaluation en ligne de la HEIG-VD.
+
+Lien :
+<https://eval.iict-heig-vd.in/users/evaluations/cmbphhzz400ntrdfmr8ve8ijd>.
 
 #### Rendu
 
@@ -115,7 +121,7 @@ simplifier le travail :
 
 ```sql
 CREATE TABLE IF NOT EXISTS projets (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
     description TEXT,
     status TEXT NOT NULL,
@@ -144,7 +150,7 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 >
 > Le code ne doit pas contenir de code sortant du contexte de l'application (pas
 > de code ou commentaires inutiles, pas de code lié à d'autres projets (animaux
-> de compagnie, etc.), etc.). Des points peuvent être retirés si le code
+> de compagnie par exemple), etc.). Des points peuvent être retirés si le code
 > contient des éléments inutiles ou hors contexte.
 
 **Page d'accueil**

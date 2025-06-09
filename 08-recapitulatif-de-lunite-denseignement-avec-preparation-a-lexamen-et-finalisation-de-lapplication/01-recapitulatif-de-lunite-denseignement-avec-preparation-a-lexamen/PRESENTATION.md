@@ -198,7 +198,8 @@ Tout ce que vous devez savoir pour réussir l'examen final.
 ### Examen final
 
 - L'unité d'enseignement se termine par un examen final.
-- L'examen aura lieu le **24.06.2025**, de **9h00 à 12h00**.
+- L'examen aura lieu le **24.06.2025**, de **9h00 à 12h00** dans les locaux
+  communiqués par e-mail.
 - L'examen est composé de deux parties :
   1. Une partie théorique.
   2. Une partie pratique.
@@ -218,7 +219,8 @@ Tout ce que vous devez savoir pour réussir l'examen final.
 </div>
 <div>
 
-- Sur la plateforme d'évaluation en ligne de la HEIG-VD.
+- Sur la plateforme d'évaluation en ligne de la HEIG-VD (réseau _"HEIG-VD"_ ou
+  VPN)
 - Vous gérez votre temps.
 - Une fois la partie terminée, nous vous fournissons la consigne de la partie
   pratique.
@@ -352,14 +354,14 @@ des difficultés !**
 
 ### Vous avez réussi ! Félicitations !
 
-Vous pouvez être fier.es de vous ! Vous avez tous fait du bon travail ! J'ai eu
+Vous pouvez être fier.es de vous ! Tout le monde fait du bon travail ! J'ai eu
 énormément de plaisir à suivre vos progrès au cours de ce semestre.
 
 Ce cours est maintenant terminé, mais j'espère que vous l'avez apprécié et que
 vous avez beaucoup appris.
 
-Ce cours fait partie d'un programme plus large, et nous espérons que vous serez
-en mesure d'appliquer ce que vous avez appris dans les prochains cours.
+Ce cours fait partie d'un programme plus large, et j'espère que vous serez en
+mesure d'appliquer ce que vous avez appris dans les prochains cours.
 
 ### Et maintenant ?
 
@@ -368,7 +370,8 @@ Utilisez ces connaissances à bon escient. Un grand pouvoir s'accompagne d'une
 grande responsabilité. Vous pouvez maintenant :
 
 - Approfondir le monde du développement web
-- Développer des applications web plus complexes (ProgServ2 permettra cela)
+- Développer des applications web plus complexes (je vous souhaite que ProgServ2
+  permette cela)
 
 Apprenez toujours plus, et n'hésitez à partager vos connaissances avec les
 autres.

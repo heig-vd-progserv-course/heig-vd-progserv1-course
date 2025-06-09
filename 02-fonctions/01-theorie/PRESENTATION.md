@@ -56,7 +56,7 @@ consultez le [support de cours][course-material]._
 ## Objectifs (2/2)
 
 - Utiliser des variables globales
-- Savoir où les fonctions prédéfinies en PHP
+- Savoir où trouver la documentation sur les fonctions prédéfinies en PHP
 - Utiliser des fonctions prédéfinies en PHP
 - Réutiliser du code avec des fonctions
 
@@ -588,7 +588,8 @@ Est-ce que vous avez des questions ?
 - Poser des questions si nécessaire.
 
 \
-**Pour le mini-projet ou les exercices, n'hésitez pas à vous entraidez si vous avez des difficultés !**
+**Pour le mini-projet ou les exercices, n'hésitez pas à vous entraidez si vous avez
+des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 

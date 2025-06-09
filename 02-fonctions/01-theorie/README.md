@@ -54,7 +54,7 @@ De façon plus concise, les personnes qui étudient devraient être capables de 
 - Utiliser une valeur de retour
 - Expliquer ce qu'est une portée de variable
 - Utiliser des variables globales
-- Savoir où les fonctions prédéfinies en PHP
+- Savoir où trouver la documentation sur les fonctions prédéfinies en PHP
 - Utiliser des fonctions prédéfinies en PHP
 - Réutiliser du code avec des fonctions
 

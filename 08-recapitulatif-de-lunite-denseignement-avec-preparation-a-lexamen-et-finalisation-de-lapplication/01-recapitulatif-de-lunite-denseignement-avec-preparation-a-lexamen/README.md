@@ -182,7 +182,8 @@ Tout ce que vous devez savoir pour réussir l'examen final.
 ### Examen final
 
 - L'unité d'enseignement se termine par un examen final.
-- L'examen aura lieu le **24.06.2025**, de **9h00 à 12h00**.
+- L'examen aura lieu le **24.06.2025**, de **9h00 à 12h00** dans les locaux
+  communiqués par la HEIG-VD (voir e-mail du secrétariat).
 - L'examen est composé de deux parties :
   1. Partie théorique (~45 minutes, 40% de la note).
   2. Partie pratique (~2 heures 15 minutes, 60% de la note).
@@ -207,7 +208,8 @@ l'examen.
 
 Elle sera à réaliser en ligne, sur la plateforme d'évaluation de la HEIG-VD. Il
 n'est pas autorisé de quitter la plateforme durant la partie théorique de
-l'examen.
+l'examen. Vous devez être connecté au réseau Wi-Fi _"HEIG-VD"_ ou au VPN pour
+pouvoir accéder à la plateforme d'évaluation.
 
 > [!CAUTION]
 >
@@ -230,7 +232,8 @@ Aucune ressource n'est autorisée pour la partie théorique de l'examen.
 
 #### Critères d'évaluation
 
-Pour les questions ouvertes, la note est attribuée selon les critères suivants :
+Pour certaines questions ouvertes, la note peut être attribuée selon les
+critères suivants :
 
 - 0 point - La réponse est incorrecte ou absente
 - 1 point - La réponse est partiellement correcte (manque de précision ou de
