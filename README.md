@@ -22,7 +22,7 @@ Suisse !
 
 Grâce à ces compétences, la personne qui étudie sera en mesure de développer des
 applications web simples pour gérer une collection de données (par exemple, un
-carnet d'adresses, un gestionnaire de tâches, sa liste favorites de jeux vidéo,
+carnet d'adresses, un gestionnaire de tâches, sa liste favorite de jeux vidéo,
 etc.).
 
 ## ➡️ Par où commencer ?
@@ -46,7 +46,7 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 | [05](#-cours-05) | Base de données et PDO                                                                               | 🟢 Complet                                  |
 | [06](#-cours-06) | Sécurité et nettoyage des saisies utilisateurs                                                       | 🟢 Complet                                  |
 | [07](#-cours-07) | Programmation orientée objet                                                                         | 🟢 Complet                                  |
-| [08](#-cours-08) | Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application | 🟡 En cours                                 |
+| [08](#-cours-08) | Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application | 🟢 Complet                                  |
 
 ## 🕐 Cours 01
 
