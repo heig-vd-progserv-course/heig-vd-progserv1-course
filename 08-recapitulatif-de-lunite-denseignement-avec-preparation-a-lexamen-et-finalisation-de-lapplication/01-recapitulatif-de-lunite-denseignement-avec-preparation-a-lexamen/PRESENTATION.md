@@ -176,7 +176,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 - La POO permet de structurer le code de manière modulaire et réutilisable.
 - PHP supporte les concepts de POO.
 
-## Résultats des formulaires de feedback
+## Résultats des formulaires de feedback et évaluations GAPS
 
 <!-- _class: lead -->
 

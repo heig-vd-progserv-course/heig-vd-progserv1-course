@@ -8,7 +8,7 @@
   [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/index.html)
   ·
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf)
-  [Résultats des formulaires de feedback](./feedback)
+  [Résultats des formulaires de feedback et évaluations GAPS](./resultats-des-formulaires-de-feedback-et-evaluations-gaps)
 - Mini-projet : [Consignes](../02-mini-project/README.md) ·
   [Solution](../02-mini-project/solution/)
 - Examen blanc : [Énoncé](../03-examen-blanc/README.md)
@@ -27,7 +27,7 @@
   - [Cours 05 - Base de données et PDO](#cours-05---base-de-données-et-pdo)
   - [Cours 06 - Sécurité et nettoyage des saisies utilisateurs](#cours-06---sécurité-et-nettoyage-des-saisies-utilisateurs)
   - [Cours 07 - Programmation orientée objet](#cours-07---programmation-orientée-objet)
-- [Résultats des formulaires de feedback](#résultats-des-formulaires-de-feedback)
+- [Résultats des formulaires de feedback et évaluations GAPS](#résultats-des-formulaires-de-feedback-et-évaluations-gaps)
 - [Préparation à l'examen final](#préparation-à-lexamen-final)
   - [Examen final](#examen-final)
   - [Partie théorique](#partie-théorique)
@@ -168,7 +168,7 @@ d'enseignement.
 - La POO permet de structurer le code de manière modulaire et réutilisable.
 - PHP supporte les concepts de POO.
 
-## Résultats des formulaires de feedback
+## Résultats des formulaires de feedback et évaluations GAPS
 
 Discussions et retours sur l'unité d'enseignement.
 
