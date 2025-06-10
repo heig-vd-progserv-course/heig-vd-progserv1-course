@@ -72,6 +72,8 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php).
 
+![bg brightness:2 opacity:0.2][illustration-principale]
+
 #### Éléments clés à retenir
 
 - PHP est un langage de programmation côté serveur, principalement utilisé pour
@@ -87,6 +89,8 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/02-fonctions).
 
+![bg brightness:2 opacity:0.2][illustration-principale]
+
 #### Éléments clés à retenir
 
 - Les fonctions en PHP permettent de regrouper du code réutilisable.
@@ -101,6 +105,8 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 <!-- _class: lead -->
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/03-tableaux-et-boucles).
+
+![bg brightness:2 opacity:0.2][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -118,12 +124,14 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/04-formulaires-html-et-validation).
 
+![bg brightness:2 opacity:0.2][illustration-principale]
+
 #### Éléments clés à retenir
 
 - Les formulaires HTML permettent aux utilisateurs de soumettre des données à un
   serveur.
-- En PHP, les données des formulaires peuvent être récupérées via superglobales
-  `$_GET` et `$_POST` qui sont des tableaux associatifs.
+- En PHP, les données des formulaires peuvent être récupérées via les
+  superglobales `$_GET` et `$_POST` qui sont des tableaux associatifs.
 - La validation des données est essentielle pour garantir la sécurité et
   l'intégrité des données.
 - La validation peut être effectuée côté client (JavaScript - optionnel) et côté
@@ -134,6 +142,8 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 <!-- _class: lead -->
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/05-base-de-donnees-et-pdo).
+
+![bg brightness:2 opacity:0.2][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -149,6 +159,8 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 <!-- _class: lead -->
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/06-securite-et-nettoyage-des-saisies-utilisateurs).
+
+![bg brightness:2 opacity:0.2][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -167,6 +179,8 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/07-programmation-orientee-objet).
 
+![bg brightness:2 opacity:0.2][illustration-principale]
+
 #### Éléments clés à retenir
 
 - La programmation orientée objet (POO) est un paradigme de programmation qui
@@ -184,7 +198,7 @@ Discussions et retours sur l'unité d'enseignement.
 
 <small>
 
-Vous pouvez retrouver les feedbacks sur le [dépôt Git de l'unité
+Vous pourrez les retrouver sur le [dépôt Git de l'unité
 d'enseignement][course-material].
 
 </small>
@@ -200,9 +214,8 @@ Tout ce que vous devez savoir pour réussir l'examen final.
 - L'unité d'enseignement se termine par un examen final.
 - L'examen aura lieu le **24.06.2025**, de **9h00 à 12h00** dans les locaux
   communiqués par e-mail.
-- L'examen est composé de deux parties :
-  1. Une partie théorique.
-  2. Une partie pratique.
+- **Venez à 8h30 pour vous installer et vous préparer.**
+- L'examen est composé de deux parties (théorique + pratique)
 
 ![bg right:40%][illustration-modalites-devaluation]
 
@@ -219,8 +232,8 @@ Tout ce que vous devez savoir pour réussir l'examen final.
 </div>
 <div>
 
-- Sur la plateforme d'évaluation en ligne de la HEIG-VD (réseau _"HEIG-VD"_ ou
-  VPN)
+- Sur la plateforme d'évaluation en ligne de la HEIG-VD (via réseau _"HEIG-VD"_
+  ou VPN)
 - Vous gérez votre temps.
 - Une fois la partie terminée, nous vous fournissons la consigne de la partie
   pratique.
@@ -230,18 +243,9 @@ Tout ce que vous devez savoir pour réussir l'examen final.
 
 <center>
 
-**Aucune ressources autorisée**.
+**Aucune ressource autorisée**.
 
 </center>
-
-##### Critères d'évaluation
-
-Pour les questions ouvertes, la note est attribuée selon les critères suivants :
-
-- 0 point - La réponse est incorrecte ou absente
-- 1 point - La réponse est partiellement correcte (manque de précision ou de
-  détails)
-- 2 points - La réponse est correcte et complète
 
 #### Partie pratique
 
@@ -328,7 +332,7 @@ de vous faire renvoyer**.
 - Relire les supports de cours avec leurs objectifs respectifs (utilisez ces
   objectifs pour valider vos acquis).
 - Refaire les mini-projets et les exercices.
-- Réaliser l'examen blanc [à disposition][course-material].
+- Réaliser l'[examen blanc][mock-exam] à disposition.
 
 ## Questions
 
