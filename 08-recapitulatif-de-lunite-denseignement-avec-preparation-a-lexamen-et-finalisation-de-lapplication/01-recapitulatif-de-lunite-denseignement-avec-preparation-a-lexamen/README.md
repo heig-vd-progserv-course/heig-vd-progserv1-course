@@ -172,7 +172,7 @@ d'enseignement.
 
 Discussions et retours sur l'unité d'enseignement.
 
-Vous pouvez retrouver les feedbacks sur le
+Vous pourrez les retrouver sur le
 [dépôt Git de l'unité d'enseignement](./feedback).
 
 ## Préparation à l'examen final
@@ -184,6 +184,7 @@ Tout ce que vous devez savoir pour réussir l'examen final.
 - L'unité d'enseignement se termine par un examen final.
 - L'examen aura lieu le **24.06.2025**, de **9h00 à 12h00** dans les locaux
   communiqués par la HEIG-VD (voir e-mail du secrétariat).
+- **Venez à 8h30 pour vous installer et vous préparer.**
 - L'examen est composé de deux parties :
   1. Partie théorique (~45 minutes, 40% de la note).
   2. Partie pratique (~2 heures 15 minutes, 60% de la note).
@@ -229,16 +230,6 @@ Aucune ressource n'est autorisée pour la partie théorique de l'examen.
 >
 > Toute tentative de tricherie ou d'utilisation de ressources non autorisées
 > entraînera la note de 1 pour l'ensemble de l'examen.
-
-#### Critères d'évaluation
-
-Pour certaines questions ouvertes, la note peut être attribuée selon les
-critères suivants :
-
-- 0 point - La réponse est incorrecte ou absente
-- 1 point - La réponse est partiellement correcte (manque de précision ou de
-  détails)
-- 2 points - La réponse est correcte et complète
 
 ### Partie pratique
 
