@@ -126,7 +126,7 @@ CREATE TABLE IF NOT EXISTS projets (
     description TEXT,
     status TEXT NOT NULL,
     priority TEXT NOT NULL,
-    categories TEXT,
+    categories TEXT
 );
 ```
 
