@@ -9,7 +9,7 @@
   ·
   [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf)
   ·
-  [Résultats des formulaires de feedback et évaluations GAPS](./01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/resultats-des-formulaires-de-feedback-et-evaluations-gaps)
+  [Résultats des formulaires de feedback et évaluations GAPS](./01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/resultats-des-formulaires-de-feedback-et-evaluations-gaps/)
 - Mini-projet : [Consignes](./02-mini-project/README.md) ·
   [Solution](./02-mini-project/solution/)
 - Examen blanc : [Énoncé](./03-examen-blanc/README.md)
