@@ -167,15 +167,15 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 
 **Page de création d'un projet**
 
-|   # | Description                                                                                                                                            | Points |
-| --: | :----------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-|   8 | Une page de création permet de créer un nouveau projet                                                                                                 |      2 |
-|   9 | La page de création affiche un formulaire avec les champs suivants : nom, description, statut, priorité, catégories                                    |      2 |
-|  10 | La page de création supporte la validation des champs du formulaire (obligatoire, longueur minimale et maximale), autant côté serveur que côté serveur |      2 |
-|  11 | La page de création affiche les erreurs de validation de manière claire et précise                                                                     |      2 |
-|  12 | La page de création sauvegarde les données du formulaire en cas d'erreur de validation (pré-remplissage)                                               |      2 |
-|  13 | La page de création sauvegarde le nouveau projet dans la base de données et redirige la personne vers la page d'accueil après la création d'un projet  |      2 |
-|  14 | La page de création est protégée contre les injections SQL et les attaques XSS                                                                         |      2 |
+|   # | Description                                                                                                                                           | Points |
+| --: | :---------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+|   8 | Une page de création permet de créer un nouveau projet                                                                                                |      2 |
+|   9 | La page de création affiche un formulaire avec les champs suivants : nom, description, statut, priorité, catégories                                   |      2 |
+|  10 | La page de création supporte la validation des champs du formulaire (obligatoire, longueur minimale et maximale), autant côté serveur que côté client |      2 |
+|  11 | La page de création affiche les erreurs de validation de manière claire et précise                                                                    |      2 |
+|  12 | La page de création sauvegarde les données du formulaire en cas d'erreur de validation (pré-remplissage)                                              |      2 |
+|  13 | La page de création sauvegarde le nouveau projet dans la base de données et redirige la personne vers la page d'accueil après la création d'un projet |      2 |
+|  14 | La page de création est protégée contre les injections SQL et les attaques XSS                                                                        |      2 |
 
 **Page de visualisation d'un projet**
 

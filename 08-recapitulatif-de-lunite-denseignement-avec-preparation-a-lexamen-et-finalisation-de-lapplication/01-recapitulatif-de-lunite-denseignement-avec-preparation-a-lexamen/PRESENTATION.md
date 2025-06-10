@@ -409,7 +409,7 @@ Mes remarques finales personnelles sont les suivantes :
 
 Apéro time! 🎉
 
-## Sources (1/3)
+## Sources
 
 - [Illustration principale][illustration-principale] par
   [Richard Jacobs](https://unsplash.com/@rj2747) sur
