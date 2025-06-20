@@ -134,8 +134,8 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
   superglobales `$_GET` et `$_POST` qui sont des tableaux associatifs.
 - La validation des données est essentielle pour garantir la sécurité et
   l'intégrité des données.
-- La validation peut être effectuée côté client (JavaScript - optionnel) et côté
-  serveur (PHP - obligatoire).
+- La validation peut être effectuée côté client (attributs HTML - optionnel) et
+  côté serveur (PHP - obligatoire).
 
 ### Cours 05 - Base de données et PDO
 
@@ -408,6 +408,101 @@ Mes remarques finales personnelles sont les suivantes :
 <!-- _class: lead -->
 
 Apéro time! 🎉
+
+## Examen final
+
+<!-- _class: lead -->
+
+## Déroulement
+
+<div class="columns-half">
+<div>
+
+**Partie théorique**
+
+- ~45 minutes.
+- Lien pour la plateforme en ligne envoyé par mail.
+- Une fois la partie théorique terminée, vous recevez la partie pratique.
+- **Aucune ressource autorisée**.
+
+</div>
+<div>
+
+**Partie pratique**
+
+- ~2 heures 15 minutes.
+- Rendu à faire avant la fin de l'examen par mail (sinon 1).
+- **Ressources autorisées** :
+  - [dépôt Git du cours](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course),
+    notes et code personnels, [php.net](https://www.php.net/manual/index.php) et
+    [developer.mozilla.org](https://developer.mozilla.org).
+
+</div>
+</div>
+
+## Sanctions possibles en cas de tricherie (1/3)
+
+Source :
+[Règlement d'études Bachelor de la HEIG-VD](https://intra.heig-vd.ch/academique/cadre-de-reference/Documents/Rglt-Etudes-HEIG-VD.pdf).
+
+> **Art. 16. - Fraude, plagiat et usage de faux**
+>
+> 1 - Toute fraude, y compris le plagiat ou la tentative de fraude dans les
+> travaux d'évaluation, les examens et le travail de bachelor, **entraîne la
+> note de 1.0 au module**, impliquant la non-acquisition des crédits ECTS
+> correspondants, voire l'invalidation du titre, et peut faire l'objet d'une des
+> sanctions prévues à l'article 14.
+
+## Sanctions possibles en cas de tricherie (2/3)
+
+> **Art. 14. - Sanctions**
+>
+> 1 - L'étudiant qui ne respecte pas les règles ainsi que les directives ou les
+> consignes de la HEIG-VD, [...] est passible des sanctions disciplinaires
+> suivantes :
+>
+> 1. l'avertissement ;
+> 2. l'exclusion temporaire ;
+> 3. **l'exclusion de la filière, voire du domaine** si les règlements du
+>    domaine le prévoient.
+
+## Sanctions possibles en cas de tricherie (3/3)
+
+**Les personnes qui surveilleront l'examen sont informées des règles
+d'évaluation et des sanctions possibles en cas de triche.**
+
+Elles sont en charge de surveiller le bon déroulement de l'examen et de signaler
+les éventuels cas de triche. **Aucune tolérance ne sera accordée en cas de
+triche avérée ou de doute sur la bonne conduite de l'examen**.
+
+Vous avez travaillé dur pour arriver jusqu'ici et nous avons confiance en vos
+capacités à réussir cet examen. **Ne prenez pas le risque de nous décevoir et/ou
+de vous faire renvoyer**.
+
+---
+
+<div class="columns-half">
+<div>
+
+**Partie théorique**
+
+- ~45 minutes.
+- Vous recevez la partie pratique une fois cette partie terminée.
+
+</div>
+<div>
+
+**Partie pratique**
+
+- ~2 heures 15 minutes.
+- Rendu à faire avant la fin de l'examen par mail.
+
+</div>
+</div>
+
+<div style="left:0; width:100%; height:0; position:relative; padding-bottom:25%; margin:0 auto">
+  <iframe src="https://www.tickcounter.com/widget/countdown/7530784" style="top:0; left:0; width:100%; height:100%; position:absolute; border:0; overflow:hidden" title="[ProgServ1 2024-2025] Examen final"></iframe>
+</div>
 
 ## Sources
 

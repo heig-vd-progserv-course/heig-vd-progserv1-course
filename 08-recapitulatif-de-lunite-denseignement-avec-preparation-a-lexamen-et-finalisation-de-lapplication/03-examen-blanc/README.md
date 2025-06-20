@@ -42,7 +42,7 @@ L'examen est composé de deux parties :
 
 > [!NOTE]
 >
-> Vous devez être connecté au réseau Wi-Fi _"HEIG-VD"_ ou utiliser le VPN pour
+> Vous devez être connecté.e au réseau Wi-Fi _"HEIG-VD"_ ou utiliser le VPN pour
 > accéder à la plateforme d'évaluation en ligne de la HEIG-VD.
 
 Lien :
@@ -120,7 +120,7 @@ La requête pour créer la base de données vous a été fournie afin de vous
 simplifier le travail :
 
 ```sql
-CREATE TABLE IF NOT EXISTS projets (
+CREATE TABLE IF NOT EXISTS projects (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
     description TEXT,
