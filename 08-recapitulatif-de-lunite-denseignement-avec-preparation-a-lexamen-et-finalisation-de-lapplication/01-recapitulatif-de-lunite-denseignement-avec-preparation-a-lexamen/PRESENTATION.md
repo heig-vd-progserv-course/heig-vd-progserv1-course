@@ -312,12 +312,12 @@ Source :
 
 ### Sanctions possibles en cas de tricherie (3/3)
 
-**Les personnes qui surveilleront l'examen seront informées des règles
+**Les personnes qui surveilleront l'examen sont informées des règles
 d'évaluation et des sanctions possibles en cas de triche.**
 
-Elles seront en charge de surveiller le bon déroulement de l'examen et de
-signaler les éventuels cas de triche. **Aucune tolérance ne sera accordée en cas
-de triche avérée ou de doute sur la bonne conduite de l'examen**.
+Elles sont en charge de surveiller le bon déroulement de l'examen et de signaler
+les éventuels cas de triche. **Aucune tolérance ne sera accordée en cas de
+triche avérée ou de doute sur la bonne conduite de l'examen**.
 
 Vous avez travaillé dur pour arriver jusqu'ici et nous avons confiance en vos
 capacités à réussir cet examen. **Ne prenez pas le risque de nous décevoir et/ou
@@ -413,7 +413,7 @@ Apéro time! 🎉
 
 <!-- _class: lead -->
 
-## Déroulement
+### Déroulement
 
 <div class="columns-half">
 <div>
@@ -440,7 +440,7 @@ Apéro time! 🎉
 </div>
 </div>
 
-## Sanctions possibles en cas de tricherie (1/3)
+### Sanctions possibles en cas de tricherie (1/3)
 
 Source :
 [Règlement d'études Bachelor de la HEIG-VD](https://intra.heig-vd.ch/academique/cadre-de-reference/Documents/Rglt-Etudes-HEIG-VD.pdf).
@@ -453,7 +453,7 @@ Source :
 > correspondants, voire l'invalidation du titre, et peut faire l'objet d'une des
 > sanctions prévues à l'article 14.
 
-## Sanctions possibles en cas de tricherie (2/3)
+### Sanctions possibles en cas de tricherie (2/3)
 
 > **Art. 14. - Sanctions**
 >
@@ -466,7 +466,7 @@ Source :
 > 3. **l'exclusion de la filière, voire du domaine** si les règlements du
 >    domaine le prévoient.
 
-## Sanctions possibles en cas de tricherie (3/3)
+### Sanctions possibles en cas de tricherie (3/3)
 
 **Les personnes qui surveilleront l'examen sont informées des règles
 d'évaluation et des sanctions possibles en cas de triche.**
