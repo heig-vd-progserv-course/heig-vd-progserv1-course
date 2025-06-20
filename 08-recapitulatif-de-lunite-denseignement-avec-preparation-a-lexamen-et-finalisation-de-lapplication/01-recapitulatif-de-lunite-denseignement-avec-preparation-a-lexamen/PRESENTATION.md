@@ -501,7 +501,7 @@ de vous faire renvoyer**.
 </div>
 
 <div style="left:0; width:100%; height:0; position:relative; padding-bottom:25%; margin:0 auto">
-  <iframe src="https://www.tickcounter.com/widget/countdown/7530784" style="top:0; left:0; width:100%; height:100%; position:absolute; border:0; overflow:hidden" title="[ProgServ1 2024-2025] Examen final"></iframe>
+  <iframe src="https://www.tickcounter.com/widget/clock/61896" style="top:0; left:0; width:100%; height:100%; position:absolute; border:0; overflow:hidden" title="Time In Zurich"></iframe>
 </div>
 
 ## Sources
