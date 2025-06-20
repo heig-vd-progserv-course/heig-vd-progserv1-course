@@ -124,8 +124,8 @@ d'enseignement.
   `$_GET` et `$_POST` qui sont des tableaux associatifs.
 - La validation des données est essentielle pour garantir la sécurité et
   l'intégrité des données.
-- La validation peut être effectuée côté client (JavaScript - optionnel) et côté
-  serveur (PHP - obligatoire).
+- La validation peut être effectuée côté client (attributs HTML - optionnel) et
+  côté serveur (PHP - obligatoire).
 
 ### Cours 05 - Base de données et PDO
 
@@ -209,7 +209,7 @@ l'examen.
 
 Elle sera à réaliser en ligne, sur la plateforme d'évaluation de la HEIG-VD. Il
 n'est pas autorisé de quitter la plateforme durant la partie théorique de
-l'examen. Vous devez être connecté au réseau Wi-Fi _"HEIG-VD"_ ou au VPN pour
+l'examen. Vous devez être connecté.e au réseau Wi-Fi _"HEIG-VD"_ ou au VPN pour
 pouvoir accéder à la plateforme d'évaluation.
 
 > [!CAUTION]
