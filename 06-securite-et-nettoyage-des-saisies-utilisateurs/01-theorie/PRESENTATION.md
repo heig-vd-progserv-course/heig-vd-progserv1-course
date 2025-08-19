@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ1 Course - Cours 06 - Sécurité et nettoyage des saisies utilisateurs
 description: Cours 06 - Sécurité et nettoyage des saisies utilisateurs pour le cours ProgServ1 à la HEIG-VD, Suisse
-url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/06-securite-et-nettoyage-des-saisies-utilisateurs/01-theorie/index.html
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/06-securite-et-nettoyage-des-saisies-utilisateurs/01-theorie/index.html
 header: "**Cours 06 - Sécurité et nettoyage des saisies utilisateurs**"
 footer: "**HEIG-VD** - ProgServ1 Course 2024-2025 - CC BY-SA 4.0"
 headingDivider: 6
@@ -23,7 +23,7 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-progserv1-course>
+<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course>
 
 [Support de cours][course-material] · [Présentation (web)][presentation-web] ·
 [Présentation (PDF)][presentation-pdf]
@@ -476,17 +476,17 @@ des difficultés !**
 <!-- URLs -->
 
 [presentation-web]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/06-securite-et-nettoyage-des-saisies-utilisateurs/01-theorie/index.html
+	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/06-securite-et-nettoyage-des-saisies-utilisateurs/01-theorie/index.html
 [presentation-pdf]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/06-securite-et-nettoyage-des-saisies-utilisateurs/01-theorie/06-securite-et-nettoyage-des-saisies-utilisateurs-presentation.pdf
+	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/06-securite-et-nettoyage-des-saisies-utilisateurs/01-theorie/06-securite-et-nettoyage-des-saisies-utilisateurs-presentation.pdf
 [course-material]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/06-securite-et-nettoyage-des-saisies-utilisateurs/01-theorie/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/06-securite-et-nettoyage-des-saisies-utilisateurs/01-theorie/README.md
 [license]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [mini-project]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/06-securite-et-nettoyage-des-saisies-utilisateurs/02-mini-project/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/06-securite-et-nettoyage-des-saisies-utilisateurs/02-mini-project/README.md
 [exercices]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/06-securite-et-nettoyage-des-saisies-utilisateurs/03-exercices/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/06-securite-et-nettoyage-des-saisies-utilisateurs/03-exercices/README.md
 
 <!-- Illustrations -->
 

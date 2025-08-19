@@ -21,9 +21,9 @@ Bonjour @ProgServ1,
 
 J'espère que vous allez bien et que le semestre a bien débuté pour tout le monde.
 
-Je serai votre enseignant pour l'unité d'enseignement "Programmation server 1 (ProgServ1)", en remplacement de M. Jean-Pierre Hess. Je me réjouis de vous retrouver la semaine prochaine pour le premier cours.
+Je serai votre enseignant pour l'unité d'enseignement "Programmation serveur 1 (ProgServ1)", en remplacement de M. Jean-Pierre Hess. Je me réjouis de vous retrouver la semaine prochaine pour le premier cours.
 
-Vous trouverez toutes les informations sur l'unité d'enseignement dans cette organisation GitHub à l'adresse suivante : https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course.
+Vous trouverez toutes les informations sur l'unité d'enseignement dans cette organisation GitHub à l'adresse suivante : https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course.
 
 Certains cours sont encore en cours de relecture et de mise à jour. Pas que vous soyez étonné.es si vous voyez des changements dans les prochains jours et/ou durant le semestre.
 
@@ -125,7 +125,7 @@ barre de progression** : Désactivée
 
 Bonjour tout le monde,
 
-Voici les supports de cours pour la session d'aujourd'hui : https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php
+Voici les supports de cours pour la session d'aujourd'hui : https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php
 
 N'hésitez pas à me le faire savoir si vous avez des questions.
 ```
@@ -135,7 +135,7 @@ N'hésitez pas à me le faire savoir si vous avez des questions.
 
 Bonjour tout le monde,
 
-Voici les supports de cours pour la session d'aujourd'hui : https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/02-fonctions
+Voici les supports de cours pour la session d'aujourd'hui : https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/02-fonctions
 
 N'hésitez pas à me le faire savoir si vous avez des questions.
 ```
@@ -145,7 +145,7 @@ N'hésitez pas à me le faire savoir si vous avez des questions.
 
 Bonjour tout le monde,
 
-Voici les supports de cours pour la session d'aujourd'hui : https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/03-tableaux-et-boucles
+Voici les supports de cours pour la session d'aujourd'hui : https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/03-tableaux-et-boucles
 
 N'hésitez pas à me le faire savoir si vous avez des questions.
 ```
@@ -155,7 +155,7 @@ N'hésitez pas à me le faire savoir si vous avez des questions.
 
 Bonjour tout le monde,
 
-Voici les supports de cours pour la session d'aujourd'hui : https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/04-formulaires-html-et-validation
+Voici les supports de cours pour la session d'aujourd'hui : https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/04-formulaires-html-et-validation
 
 N'hésitez pas à me le faire savoir si vous avez des questions.
 ```
@@ -165,7 +165,7 @@ N'hésitez pas à me le faire savoir si vous avez des questions.
 
 Bonjour tout le monde,
 
-Voici les supports de cours pour la session d'aujourd'hui : https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/05-base-de-donnees-et-pdo
+Voici les supports de cours pour la session d'aujourd'hui : https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/05-base-de-donnees-et-pdo
 
 N'hésitez pas à me le faire savoir si vous avez des questions.
 ```
@@ -175,7 +175,7 @@ N'hésitez pas à me le faire savoir si vous avez des questions.
 
 Bonjour tout le monde,
 
-Voici les supports de cours pour la session d'aujourd'hui : https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/06-securite-et-nettoyage-des-saisies-utilisateurs
+Voici les supports de cours pour la session d'aujourd'hui : https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/06-securite-et-nettoyage-des-saisies-utilisateurs
 
 N'hésitez pas à me le faire savoir si vous avez des questions.
 ```
@@ -185,7 +185,7 @@ N'hésitez pas à me le faire savoir si vous avez des questions.
 
 Bonjour tout le monde,
 
-Voici les supports de cours pour la session d'aujourd'hui : https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/07-programmation-orientee-objet
+Voici les supports de cours pour la session d'aujourd'hui : https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/07-programmation-orientee-objet
 
 Le formulaire de feedback est disponible ici : https://framaforms.org/progserv1-2024-2025-feedback-1745321495
 

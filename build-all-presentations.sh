@@ -5,7 +5,6 @@ WORKDIR=$(pwd)
 MARP_DOCKER_IMAGE="marpteam/marp-cli:v4.1.1"
 
 ## Script
-
 echo "Removing all previous generated presentations..."
 rm -f **/*-presentation.pdf || true
 rm -f **/index.html || true

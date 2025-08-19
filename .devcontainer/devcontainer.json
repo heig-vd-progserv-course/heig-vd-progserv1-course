@@ -1,6 +1,6 @@
 {
 	"name": "HEIG-VD ProgServ1 Course Development Container",
-	"dockerComposeFile": "docker-compose.yaml",
+	"dockerComposeFile": "compose.yaml",
 	"service": "devcontainer",
 	"workspaceFolder": "/workspace",
 	"features": {
@@ -14,7 +14,6 @@
 				"GitHub.copilot",
 				"jebbs.plantuml",
 				"marp-team.marp-vscode",
-				"ms-vsliveshare.vsliveshare-pack",
 				"qwtel.sqlite-viewer",
 				"redhat.vscode-yaml",
 				"streetsidesoftware.code-spell-checker",
@@ -28,6 +27,14 @@
 	"mounts": [
 		"type=bind,source=${localEnv:HOME}/.ssh,target=${localEnv:HOME}/.ssh,type=bind,consistency=cached"
 	],
+	// Ports to expose on the container's network host
+	"forwardPorts": [8080],
+	"portsAttributes": {
+		"8080": {
+			"label": "Apache HTTP Server"
+		}
+	},
+
 	// Execute the post-create.sh script once the container is created
 	"postCreateCommand": ".devcontainer/post-create.sh",
 	// Execute the post-start.sh script once the container is started

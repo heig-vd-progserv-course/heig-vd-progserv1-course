@@ -5,9 +5,9 @@
 - Récapitulatif de l'unité d'enseignement :
   [Support de cours](../01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/README.md)
   ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/index.html)
+  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf)
   [Résultats des formulaires de feedback et évaluations GAPS](./resultats-des-formulaires-de-feedback-et-evaluations-gaps)
 - Mini-projet : [Consignes](../02-mini-project/README.md) ·
   [Solution](../02-mini-project/solution/)
@@ -74,7 +74,7 @@ d'enseignement.
 
 ### Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php).
 
 #### Éléments clés à retenir
 
@@ -87,7 +87,7 @@ d'enseignement.
 
 ### Cours 02 - Fonctions
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/02-fonctions).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/02-fonctions).
 
 #### Éléments clés à retenir
 
@@ -100,7 +100,7 @@ d'enseignement.
 
 ### Cours 03 - Tableaux et boucles
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/03-tableaux-et-boucles).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/03-tableaux-et-boucles).
 
 #### Éléments clés à retenir
 
@@ -114,7 +114,7 @@ d'enseignement.
 
 ### Cours 04 - Formulaires HTML et validation
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/04-formulaires-html-et-validation).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/04-formulaires-html-et-validation).
 
 #### Éléments clés à retenir
 
@@ -129,7 +129,7 @@ d'enseignement.
 
 ### Cours 05 - Base de données et PDO
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/05-base-de-donnees-et-pdo).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/05-base-de-donnees-et-pdo).
 
 #### Éléments clés à retenir
 
@@ -142,7 +142,7 @@ d'enseignement.
 
 ### Cours 06 - Sécurité et nettoyage des saisies utilisateurs
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/06-securite-et-nettoyage-des-saisies-utilisateurs).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/06-securite-et-nettoyage-des-saisies-utilisateurs).
 
 #### Éléments clés à retenir
 
@@ -157,7 +157,7 @@ d'enseignement.
 
 ### Cours 07 - Programmation orientée objet
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/07-programmation-orientee-objet).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/07-programmation-orientee-objet).
 
 #### Éléments clés à retenir
 
@@ -269,7 +269,7 @@ Les ressources autorisées pour la partie pratique de l'examen sont les suivante
   Code).
 - Un navigateur web.
 - Le
-  [dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course),
+  [dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course),
   comprenant :
   - La théorie.
   - Le mini-projet et sa solution.
@@ -350,7 +350,7 @@ de vous faire renvoyer**.
 ### Comment se préparer ?
 
 - Avoir un environnement de développement fonctionnel (cf. cours
-  [01 - Modalités de l'unité d'enseignement et introduction à PHP](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php),
+  [01 - Modalités de l'unité d'enseignement et introduction à PHP](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php),
   plus particulièrement le mini-projet).
 - **Désactiver toutes aides externes (Copilot, ChatGPT, etc.)**.
 - Relire les supports de cours avec leurs objectifs respectifs (utilisez ces

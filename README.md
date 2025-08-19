@@ -1,10 +1,10 @@
 # HEIG-VD ProgServ1 Course
 
-[![Licence](https://img.shields.io/github/license/heig-vd-progserv1-course/heig-vd-progserv1-course)](./LICENSE.md)
+[![Licence](https://img.shields.io/github/license/heig-vd-progserv-course/heig-vd-progserv1-course)](./LICENSE.md)
 
 Bienvenue sur le dépôt principal de l'unité d'enseignement
-[_Programmation server 1 (ProgServ1)_](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=7307)
-enseigné à la
+[_Programmation serveur 1 (ProgServ1)_](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=7307)
+enseignée à la
 [Haute Ecole d'Ingénierie et de Gestion du Canton de Vaud (HEIG-VD)](https://heig-vd.ch),
 Suisse !
 
@@ -55,9 +55,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Théorie :
   [Support de cours](./01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/README.md)
   ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
+  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
 - Mini-projet :
   [Consignes](./01-modalites-de-lunite-denseignement-et-introduction-a-php/02-mini-project/README.md)
   ·
@@ -72,9 +72,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 ### Fonctions
 
 - Théorie : [Support de cours](./02-fonctions/01-theorie/README.md) ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-fonctions/01-theorie/index.html)
+  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/02-fonctions/01-theorie/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/02-fonctions/01-theorie/02-fonctions-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/02-fonctions/01-theorie/02-fonctions-presentation.pdf)
 - Mini-projet : [Consignes](./02-fonctions/02-mini-project/README.md) ·
   [Solution](./02-fonctions/02-mini-project/solution/)
 - Exercices : [Énoncés et solutions](./02-fonctions/03-exercices/README.md)
@@ -86,9 +86,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 ### Tableaux et boucles
 
 - Théorie : [Support de cours](./03-tableaux-et-boucles/01-theorie/README.md) ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/01-theorie/index.html)
+  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/01-theorie/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/01-theorie/03-tableaux-et-boucles-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/01-theorie/03-tableaux-et-boucles-presentation.pdf)
 - Mini-projet : [Consignes](./03-tableaux-et-boucles/02-mini-project/README.md)
   · [Solution](./03-tableaux-et-boucles/02-mini-project/solution/)
 - Exercices :
@@ -102,9 +102,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 - Théorie :
   [Support de cours](./04-formulaires-html-et-validation/01-theorie/README.md) ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/01-theorie/index.html)
+  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/01-theorie/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/01-theorie/04-formulaires-html-et-validation-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/01-theorie/04-formulaires-html-et-validation-presentation.pdf)
 - Mini-projet :
   [Consignes](./04-formulaires-html-et-validation/02-mini-project/README.md) ·
   [Solution](./04-formulaires-html-et-validation/02-mini-project/solution/)
@@ -119,9 +119,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 - Théorie : [Support de cours](./05-base-de-donnees-et-pdo/01-theorie/README.md)
   ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-theorie/index.html)
+  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-theorie/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-theorie/05-base-de-donnees-et-pdo-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-theorie/05-base-de-donnees-et-pdo-presentation.pdf)
 - Mini-projet :
   [Consignes](./05-base-de-donnees-et-pdo/02-mini-project/README.md) ·
   [Solution](./05-base-de-donnees-et-pdo/02-mini-project/solution/)
@@ -137,9 +137,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Théorie :
   [Support de cours](./06-securite-et-nettoyage-des-saisies-utilisateurs/01-theorie/README.md)
   ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/06-securite-et-nettoyage-des-saisies-utilisateurs/01-theorie/index.html)
+  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/06-securite-et-nettoyage-des-saisies-utilisateurs/01-theorie/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/06-securite-et-nettoyage-des-saisies-utilisateurs/01-theorie/06-securite-et-nettoyage-des-saisies-utilisateurs-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/06-securite-et-nettoyage-des-saisies-utilisateurs/01-theorie/06-securite-et-nettoyage-des-saisies-utilisateurs-presentation.pdf)
 - Mini-projet :
   [Consignes](./06-securite-et-nettoyage-des-saisies-utilisateurs/02-mini-project/README.md)
   ·
@@ -155,9 +155,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 - Théorie :
   [Support de cours](./07-programmation-orientee-objet/01-theorie/README.md) ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/index.html)
+  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/07-programmation-orientee-objet-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/07-programmation-orientee-objet-presentation.pdf)
 - Mini-projet :
   [Consignes](./07-programmation-orientee-objet/02-mini-project/README.md) ·
   [Solution](./07-programmation-orientee-objet/02-mini-project/solution/)
@@ -171,9 +171,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 ### Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application
 
 - Récapitulatif de l'unité d'enseignement avec préparation à l'examen :
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/index.html)
+  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf)
   ·
   [Résultats des formulaires de feedback et évaluations GAPS](./08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/resultats-des-formulaires-de-feedback-et-evaluations-gaps/)
 - Mini-projet :

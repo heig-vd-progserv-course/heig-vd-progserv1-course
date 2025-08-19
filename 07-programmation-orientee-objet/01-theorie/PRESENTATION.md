@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ1 Course - Cours 07 - Programmation orientée objet
 description: Cours 07 - Programmation orientée objet pour le cours ProgServ1 à la HEIG-VD, Suisse
-url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/index.html
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/index.html
 header: "**Cours 07 - Programmation orientée objet**"
 footer: "**HEIG-VD** - ProgServ1 Course 2024-2025 - CC BY-SA 4.0"
 headingDivider: 6
@@ -23,7 +23,7 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-progserv1-course>
+<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course>
 
 [Support de cours][course-material] · [Présentation (web)][presentation-web] ·
 [Présentation (PDF)][presentation-pdf]
@@ -763,17 +763,17 @@ Les résultats seront discutés au prochain cours. **Merci beaucoup !**
 <!-- URLs -->
 
 [presentation-web]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/index.html
+	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/index.html
 [presentation-pdf]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/07-programmation-orientee-objet-presentation.pdf
+	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/07-programmation-orientee-objet-presentation.pdf
 [course-material]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/07-programmation-orientee-objet/01-theorie/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/07-programmation-orientee-objet/01-theorie/README.md
 [license]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [mini-project]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/07-programmation-orientee-objet/02-mini-project/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/07-programmation-orientee-objet/02-mini-project/README.md
 [exercices]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/07-programmation-orientee-objet/03-exercices/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/07-programmation-orientee-objet/03-exercices/README.md
 [feedback]: https://framaforms.org/progserv1-2024-2025-feedback-1745321495
 [feedback-qr-code]:
 	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/progserv1-2024-2025-feedback-1745321495
