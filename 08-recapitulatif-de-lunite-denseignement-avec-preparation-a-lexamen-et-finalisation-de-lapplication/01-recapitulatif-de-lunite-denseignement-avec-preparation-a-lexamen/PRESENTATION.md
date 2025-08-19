@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ1 Course - Cours 08 - Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application
 description: Cours 08 - Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application pour le cours ProgServ1 à la HEIG-VD, Suisse
-url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/index.html
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/index.html
 header: "**Cours 08 - Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application**"
 footer: "**HEIG-VD** - ProgServ1 Course 2024-2025 - CC BY-SA 4.0"
 headingDivider: 6
@@ -23,7 +23,7 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-progserv1-course>
+<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course>
 
 [Support de cours][course-material] · [Présentation (web)][presentation-web] ·
 [Présentation (PDF)][presentation-pdf]
@@ -70,7 +70,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php).
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -87,7 +87,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/02-fonctions).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/02-fonctions).
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -104,7 +104,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/03-tableaux-et-boucles).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/03-tableaux-et-boucles).
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -122,7 +122,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/04-formulaires-html-et-validation).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/04-formulaires-html-et-validation).
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -141,7 +141,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/05-base-de-donnees-et-pdo).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/05-base-de-donnees-et-pdo).
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -158,7 +158,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/06-securite-et-nettoyage-des-saisies-utilisateurs).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/06-securite-et-nettoyage-des-saisies-utilisateurs).
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -177,7 +177,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/07-programmation-orientee-objet).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/07-programmation-orientee-objet).
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -221,7 +221,7 @@ Tout ce que vous devez savoir pour réussir l'examen final.
 
 #### Partie théorique
 
-<div class="columns-half">
+<div class="two-columns">
 <div>
 
 - ~45 minutes.
@@ -249,7 +249,7 @@ Tout ce que vous devez savoir pour réussir l'examen final.
 
 #### Partie pratique
 
-<div class="columns-half">
+<div class="two-columns">
 <div>
 
 - ~2 heures 15 minutes.
@@ -270,7 +270,7 @@ Tout ce que vous devez savoir pour réussir l'examen final.
 <center>
 
 **Ressources autorisées** :
-[**dépôt Git du cours**](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course),
+[**dépôt Git du cours**](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course),
 **notes et code personnels**,
 [**php.net**](https://www.php.net/manual/index.php) et
 [**developer.mozilla.org**](https://developer.mozilla.org).
@@ -326,7 +326,7 @@ de vous faire renvoyer**.
 ### Comment se préparer ?
 
 - Avoir un environnement de développement fonctionnel (cf. cours
-  [01 - Modalités de l'unité d'enseignement et introduction à PHP](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php),
+  [01 - Modalités de l'unité d'enseignement et introduction à PHP](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php),
   plus particulièrement le mini-projet).
 - **Désactiver toutes aides externes (Copilot, ChatGPT, etc.)**.
 - Relire les supports de cours avec leurs objectifs respectifs (utilisez ces
@@ -384,7 +384,7 @@ autres.
 
 Mes remarques finales personnelles sont les suivantes :
 
-<div class="columns-half">
+<div class="two-columns">
 <div>
 
 - **Posez-vous toujours les bonnes questions** : _pourquoi ? est-ce que je fais
@@ -415,7 +415,7 @@ Apéro time! 🎉
 
 ### Déroulement
 
-<div class="columns-half">
+<div class="two-columns">
 <div>
 
 **Partie théorique**
@@ -433,7 +433,7 @@ Apéro time! 🎉
 - ~2 heures 15 minutes.
 - Rendu à faire avant la fin de l'examen par mail (sinon 1).
 - **Ressources autorisées** :
-  - [dépôt Git du cours](https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course),
+  - [dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course),
     notes et code personnels, [php.net](https://www.php.net/manual/index.php) et
     [developer.mozilla.org](https://developer.mozilla.org).
 
@@ -481,7 +481,7 @@ de vous faire renvoyer**.
 
 ---
 
-<div class="columns-half">
+<div class="two-columns">
 <div>
 
 **Partie théorique**
@@ -522,17 +522,17 @@ de vous faire renvoyer**.
 <!-- URLs -->
 
 [presentation-web]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/index.html
+	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/index.html
 [presentation-pdf]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf
+	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf
 [course-material]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/README.md
 [license]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [mini-project]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/02-mini-project/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/02-mini-project/README.md
 [mock-exam]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/03-examen-blanc/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/03-examen-blanc/README.md
 
 <!-- Illustrations -->
 

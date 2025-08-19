@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ1 Course - Cours 04 - Formulaires HTML et validation
 description: Cours 04 - Formulaires HTML et validation pour le cours ProgServ1 à la HEIG-VD, Suisse
-url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/01-theorie/index.html
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/01-theorie/index.html
 header: "**Cours 04 - Formulaires HTML et validation**"
 footer: "**HEIG-VD** - ProgServ1 Course 2024-2025 - CC BY-SA 4.0"
 headingDivider: 6
@@ -23,7 +23,7 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-progserv1-course>
+<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course>
 
 [Support de cours][course-material] · [Présentation (web)][presentation-web] ·
 [Présentation (PDF)][presentation-pdf]
@@ -213,7 +213,7 @@ consultez le [support de cours][course-material]._
 La méthode (`method`) du formulaire définit comment les données sont envoyées au
 serveur. Il existe deux méthodes principales :
 
-<div class="columns-half">
+<div class="two-columns">
 <div>
 
 **`GET`** : envoie les données dans l'URL (visible dans la barre d'adresse)
@@ -767,17 +767,17 @@ des difficultés !**
 <!-- URLs -->
 
 [presentation-web]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/01-theorie/index.html
+	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/01-theorie/index.html
 [presentation-pdf]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/01-theorie/04-formulaires-html-et-validation-presentation.pdf
+	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/01-theorie/04-formulaires-html-et-validation-presentation.pdf
 [course-material]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/04-formulaires-html-et-validation/01-theorie/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/04-formulaires-html-et-validation/01-theorie/README.md
 [license]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [mini-project]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/04-formulaires-html-et-validation/02-mini-project/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/04-formulaires-html-et-validation/02-mini-project/README.md
 [exercices]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/04-formulaires-html-et-validation/03-exercices/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/04-formulaires-html-et-validation/03-exercices/README.md
 
 <!-- Illustrations -->
 

@@ -19,7 +19,6 @@ sudo apt install --yes ghostscript
 sudo apt install --yes sqlite3
 
 ## Configure Apache server
-
 # Remove the default document root
 sudo rm -rf /var/www/html
 

@@ -5,9 +5,9 @@
 - Récapitulatif de l'unité d'enseignement :
   [Support de cours](./01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/README.md)
   ·
-  [Présentation (web)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/index.html)
+  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf)
   ·
   [Résultats des formulaires de feedback et évaluations GAPS](./01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/resultats-des-formulaires-de-feedback-et-evaluations-gaps/)
 - Mini-projet : [Consignes](./02-mini-project/README.md) ·

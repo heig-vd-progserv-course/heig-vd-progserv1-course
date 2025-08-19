@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ1 Course - Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP
 description: Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP pour le cours ProgServ1 à la HEIG-VD, Suisse
-url: https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html
 header: "**Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP**"
 footer: "**HEIG-VD** - ProgServ1 Course 2024-2025 - CC BY-SA 4.0"
 headingDivider: 6
@@ -23,7 +23,7 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-progserv1-course>
+<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course>
 
 [Support de cours][course-material] · [Présentation (web)][presentation-web] ·
 [Présentation (PDF)][presentation-pdf]
@@ -43,7 +43,7 @@ _paginate: false
 
 <div class="center">
 
-![w:300](./images/ludovic-delafontaine.png)
+<img src="https://avatars.githubusercontent.com/u/5037444?v=4" alt="Ludovic Delafontaine" width="200" class="rounded">
 
 **Ludovic Delafontaine**  
 [E-mail](mailto:ludovic.delafontaine@heig-vd.ch) ·
@@ -132,10 +132,19 @@ En résumé, vous devriez être capable de :
 
 - Comprendre les bases de PHP et son rôle dans le monde web.
 - Écrire un code PHP propre et organisé.
-- Gérer les formulaires HTML et les données qu'ils contiennent de manière sûre.
+- Gérer les formulaires HTML et les données qu'ils contiennent.
 - Persister des données dans une base de données SQLite.
-- Implémenter des concepts de programmation orientée objet.
-- Gérer les cookies et les sessions utilisateurs.
+- Implémenter les mécanismes de base de la sécurité web.
+- Implémenter des concepts de base de la programmation orientée objet.
+
+---
+
+<!-- _class: lead -->
+
+Grâce à ces compétences, la personne qui étudie sera en mesure de développer des
+applications web simples pour gérer une collection de données (par exemple, un
+carnet d'adresses, un gestionnaire de tâches, sa liste favorite de jeux vidéo,
+etc.).
 
 ### Modalités d'organisation de l'unité d'enseignement
 
@@ -963,17 +972,17 @@ des difficultés !**
 <!-- URLs -->
 
 [presentation-web]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html
+	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html
 [presentation-pdf]:
-	https://heig-vd-progserv1-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf
+	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf
 [course-material]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/README.md
 [license]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [mini-project]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/02-mini-project/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/02-mini-project/README.md
 [exercices]:
-	https://github.com/heig-vd-progserv1-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/03-exercices/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/03-exercices/README.md
 
 <!-- Illustrations -->
 
