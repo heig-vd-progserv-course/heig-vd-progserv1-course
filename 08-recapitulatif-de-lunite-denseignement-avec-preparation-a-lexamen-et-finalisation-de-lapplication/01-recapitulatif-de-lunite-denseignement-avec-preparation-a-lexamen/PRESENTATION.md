@@ -221,7 +221,7 @@ Tout ce que vous devez savoir pour réussir l'examen final.
 
 #### Partie théorique
 
-<div class="columns-half">
+<div class="two-columns">
 <div>
 
 - ~45 minutes.
@@ -249,7 +249,7 @@ Tout ce que vous devez savoir pour réussir l'examen final.
 
 #### Partie pratique
 
-<div class="columns-half">
+<div class="two-columns">
 <div>
 
 - ~2 heures 15 minutes.
@@ -384,7 +384,7 @@ autres.
 
 Mes remarques finales personnelles sont les suivantes :
 
-<div class="columns-half">
+<div class="two-columns">
 <div>
 
 - **Posez-vous toujours les bonnes questions** : _pourquoi ? est-ce que je fais
@@ -415,7 +415,7 @@ Apéro time! 🎉
 
 ### Déroulement
 
-<div class="columns-half">
+<div class="two-columns">
 <div>
 
 **Partie théorique**
@@ -481,7 +481,7 @@ de vous faire renvoyer**.
 
 ---
 
-<div class="columns-half">
+<div class="two-columns">
 <div>
 
 **Partie théorique**

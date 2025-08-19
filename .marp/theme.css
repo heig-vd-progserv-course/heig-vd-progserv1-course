@@ -93,10 +93,20 @@ header {
 	top: 0;
 }
 
+header a {
+	color: var(--color-dimmed);
+	text-decoration: none;
+}
+
 footer {
 	left: 0;
 	right: 0;
 	bottom: 0;
+}
+
+footer a {
+	color: var(--color-dimmed);
+	text-decoration: none;
 }
 
 /* Paragraphs and lists */
@@ -315,16 +325,27 @@ blockquote > *:first-child {
 
 /* Custom classes */
 
-.columns-half {
+.two-columns {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 1rem;
 }
 
+.three-columns {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1rem;
+}
+
 .center {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	text-align: center;
+}
+
+.rounded {
+	margin: 1em 0 0;
+	border-radius: 50%;
+}
+
+.rounded img {
+	border-radius: 50%;
 }

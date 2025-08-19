@@ -43,7 +43,7 @@ _paginate: false
 
 <div class="center">
 
-![w:300](./images/ludovic-delafontaine.png)
+<img src="https://avatars.githubusercontent.com/u/5037444?v=4" alt="Ludovic Delafontaine" width="200" class="rounded">
 
 **Ludovic Delafontaine**  
 [E-mail](mailto:ludovic.delafontaine@heig-vd.ch) ·

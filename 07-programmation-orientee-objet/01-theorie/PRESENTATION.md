@@ -71,7 +71,7 @@ consultez le [support de cours][course-material]._
 
 ## Concepts clés de la POO (1/2)
 
-<div class="columns-half">
+<div class="two-columns">
 <div>
 
 - **Classes** : modèles qui définissent les propriétés et les comportements des
@@ -202,7 +202,7 @@ Person person2 = new Person();
 
 ### Attributs (2/2)
 
-<div class="columns-half">
+<div class="two-columns">
 <div>
 
 ```php

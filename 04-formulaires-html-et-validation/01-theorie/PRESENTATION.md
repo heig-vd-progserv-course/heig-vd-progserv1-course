@@ -213,7 +213,7 @@ consultez le [support de cours][course-material]._
 La méthode (`method`) du formulaire définit comment les données sont envoyées au
 serveur. Il existe deux méthodes principales :
 
-<div class="columns-half">
+<div class="two-columns">
 <div>
 
 **`GET`** : envoie les données dans l'URL (visible dans la barre d'adresse)
