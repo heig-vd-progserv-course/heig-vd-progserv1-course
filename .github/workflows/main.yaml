@@ -7,14 +7,14 @@ concurrency:
 
 on:
   push:
-    # branches:
-    #   - main
-    # tags:
-    #   - "*"
-    # paths:
-    #   - ".github/workflows/main.yml"
-    #   - "**/**/PRESENTATION.md"
-    #   - "**/**/QUIZ.md"
+    branches:
+      - main
+    tags:
+      - "*"
+    paths:
+      - ".github/workflows/main.yml"
+      - "**/*/PRESENTATION.md"
+      - "**/*/QUIZ.md"
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages and to release to GitHub Releases
 permissions:
@@ -97,7 +97,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           body: |
-            Cette nouvelle version contient les présentations au format PDF pour l'unité d'enseignement [_Programmation serveur 1 (ProgServ1)_](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=7307) enseignée à la [Haute Ecole d'Ingénierie et de Gestion du Canton de Vaud (HEIG-VD)](https://heig-vd.ch), Suisse !
+            Cette nouvelle version contient les présentations au format PDF pour le cours [_Programmation serveur 1 (ProgServ1)_](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=7307) enseignée à la [Haute Ecole d'Ingénierie et de Gestion du Canton de Vaud (HEIG-VD)](https://heig-vd.ch), Suisse !
 
             Vous pouvez directement accéder aux supports de cours de cette version avec le tag Git suivant : [`${{ github.ref_name }}`](${{ github.event.repository.html_url }}/tree/${{ github.ref_name }}).
           files: |

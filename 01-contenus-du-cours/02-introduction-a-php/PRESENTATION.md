@@ -774,7 +774,7 @@ Est-ce que vous avez des questions ?
 
 - Application web en PHP pour gérer des animaux de compagnie.
 - Permet de mettre en pratique le contenu théorique du cours.
-- À réaliser tout au long de l'unité d'enseignement de façon guidée.
+- À réaliser tout au long du cours de façon guidée.
 - Je suis là pour vous aider si besoin.
 
 ![bg right:40% brightness:1.3][illustration-mini-projet]

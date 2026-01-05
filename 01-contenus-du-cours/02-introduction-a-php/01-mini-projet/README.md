@@ -20,9 +20,12 @@ théoriques vus dans le contenu _["Introduction à PHP"](../README.md)_.
   - [Création de la structure du projet](#création-de-la-structure-du-projet)
   - [Création des fichiers du projet](#création-des-fichiers-du-projet)
   - [Test de l'initialisation du projet](#test-de-linitialisation-du-projet)
+- [Intégration de HTML avec PHP](#intégration-de-html-avec-php)
+  - [Ajout de styles CSS personnalisés](#ajout-de-styles-css-personnalisés)
+  - [Ajout d'un logo pour l'application](#ajout-dun-logo-pour-lapplication)
+- [Création des pages supplémentaires](#création-des-pages-supplémentaires)
 - [Solution](#solution)
 - [Conclusion](#conclusion)
-- [Aller plus loin](#aller-plus-loin)
 
 ## Introduction à votre première session de mini-projet
 
@@ -408,7 +411,7 @@ avantages.
 Nous vous recommandons d'utiliser Visual Studio Code, un éditeur de code gratuit
 et open-source développé par Microsoft[^visual-studio-code], mais vous pouvez
 utiliser n'importe quel éditeur de code avec lequel vous êtes à l'aise pour le
-reste de cette unité d'enseignement.
+reste de ce cours.
 
 #### Installation sur Windows
 
@@ -507,7 +510,7 @@ projet dans Visual Studio Code. Pour ce faire, suivez les étapes suivantes :
    dossier racine de votre projet PHP. Sélectionnez le dossier racine de votre
    projet PHP (par exemple, `C:\MAMP\htdocs` pour Windows ou
    `/Applications/MAMP/htdocs` pour macOS) et cliquez sur le bouton **Open**. Il
-   s'agira de votre dossier de travail pour le reste de l'unité d'enseignement.
+   s'agira de votre dossier de travail pour le reste du cours.
 
    ![Sélection du dossier racine du projet dans Visual Studio Code](./images/visual-studio-code-configuration-02.png)
 
@@ -727,19 +730,17 @@ progserv1/
 ```
 
 Le dossier `progserv1` permettra de contenir tous les exercices et le
-mini-projet de l'unité d'enseignement "Programmation serveur 1". De cette
-manière, vous pourrez réutiliser la même structure de dossiers pour de futurs
-unités d'enseignement, notamment "Programmation serveur 2" ou "Développement de
-produits média".
+mini-projet du cours "Programmation serveur 1". De cette manière, vous pourrez
+réutiliser la même structure de dossiers pour de futurs unités d'enseignement,
+notamment "Programmation serveur 2" ou "Développement de produits média".
 
-Le dossier `exercices` contiendra tous les exercices réalisés durant l'unité
-d'enseignement "Programmation serveur 1". Vous pourrez l'utiliser pour stocker
-les exercices de chaque session et faire des tests et expérimentations.
+Le dossier `exercices` contiendra tous les exercices réalisés durant le cours
+"Programmation serveur 1". Vous pourrez l'utiliser pour stocker les exercices de
+chaque session et faire des tests et expérimentations.
 
 Le dossier `mini-projet` contiendra tous les fichiers et dossiers nécessaires
-pour le mini-projet de l'unité d'enseignement "Programmation serveur 1". C'est
-dans ce dossier que vous allez construire l'application web pour gérer les
-animaux de compagnie.
+pour le mini-projet du cours "Programmation serveur 1". C'est dans ce dossier
+que vous allez construire l'application web pour gérer les animaux de compagnie.
 
 ### Création des fichiers du projet
 
@@ -777,14 +778,14 @@ Dans le fichier `progserv1/exercices/index.php`, ajoutez le code suivant :
 
 ```php
 <?php
-echo "Bienvenue dans les exercices de l'unité d'enseignement Programmation serveur 1 !";
+echo "Bienvenue dans le dossier <code>exercices</code> du cours <i>Programmation serveur 1</i> !";
 ```
 
 Dans le fichier `progserv1/mini-projet/index.php`, ajoutez le code suivant :
 
 ```php
 <?php
-echo "Bienvenue dans le mini-projet de l'unité d'enseignement Programmation serveur 1 !";
+echo "Bienvenue dans le dossier <code>mini-projet</code> du cours <i>Programmation serveur 1</i> !";
 ```
 
 Sauvez tous les fichiers.
@@ -800,7 +801,8 @@ Bonjour à toutes les personnes du cours de Programmation serveur 1 !
 
 Si vous accédez à l'adresse <http://localhost/progserv1/phpinfo.php>, vous
 devriez voir les informations de configuration de PHP avec sa version, les
-extensions installées, les paramètres du serveur, etc.
+extensions installées, les paramètres du serveur, etc. Ce fichier est utile pour
+vérifier que PHP est correctement installé et configuré.
 
 Cela signifie que l'initialisation du projet PHP pour le mini-projet a été
 réussie !
@@ -808,8 +810,388 @@ réussie !
 Testez également les adresses suivantes pour vérifier que les fichiers des
 exercices et du mini-projet fonctionnent correctement :
 
-- Exercices : <http://localhost/progserv1/exercices/index.php>
-- Mini-projet : <http://localhost/progserv1/mini-projet/index.php>
+- Exercices : <http://localhost/progserv1/exercices/index.php>.
+- Mini-projet : <http://localhost/progserv1/mini-projet/index.php>.
+
+Vous remarquerez que les fichiers respectent la structure de dossiers que nous
+avons créée précédemment.
+
+## Intégration de HTML avec PHP
+
+PHP a la force de pouvoir mélanger du code PHP avec du code HTML. Cela signifie
+que vous pouvez écrire du code PHP pour générer du contenu HTML dynamique. Par
+exemple, vous pouvez modifier le fichier `progserv1/index.php` comme suit :
+
+```php
+<?php
+const PAGE_TITLE = "Page d'accueil du cours Programmation serveur 1";
+const WELCOME_MESSAGE = "Bienvenue sur la page d'accueil du cours de Programmation serveur 1 !";
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo PAGE_TITLE; ?></title>
+</head>
+
+<body>
+    <h1><?php echo PAGE_TITLE; ?></h1>
+    <p><?php echo WELCOME_MESSAGE; ?></p>
+    <p>Accéder aux <a href="./exercices/index.php">exercices</a>.</p>
+    <p>Accéder au <a href="./mini-projet/index.php">mini-projet</a>.</p>
+</body>
+
+</html>
+```
+
+Sauvegardez le fichier et rechargez la page dans votre navigateur. Vous devriez
+voir une page HTML avec un titre et un message de bienvenue.
+
+En effet, le code PHP est exécuté sur le serveur web en utilisant le code PHP et
+les structures HTML. L'interpréteur PHP analyse ce code et génère du code HTML
+qui est ensuite envoyé au navigateur web pour être affiché. Cela permet de créer
+des pages web dynamiques qui peuvent s'adapter en fonction des données et des
+interactions de l'utilisateur.
+
+Vous remarquez l'utilisation de la syntaxe courte `<?= ... ?>` pour afficher des
+valeurs PHP dans le code HTML. Cette syntaxe est équivalente à
+`<?php echo ...; ?>` et est souvent utilisée pour rendre le code plus concis et
+lisible.
+
+### Ajout de styles CSS personnalisés
+
+Comme vous l'avez étudié dans un précédent cours, vous pouvez ajouter des styles
+CSS à vos pages HTML pour les rendre plus attrayantes visuellement. Vous pouvez
+le faire en ajoutant des balises `<style>` dans la section `<head>` de votre
+page HTML ou en liant un fichier CSS externe à l'aide de la balise `<link>`.
+
+Tout ce que vous avez appris sur HTML et CSS s'applique également lorsque vous
+utilisez PHP pour générer du contenu HTML. Vous pouvez utiliser les mêmes
+balises HTML et les mêmes propriétés CSS pour styliser vos pages web.
+
+Pour cela, nous allons ajouter un fichier `styles.css` dans le dossier
+`progserv1/assets` (créez-le si nécessaire) avec le contenu suivant :
+
+```css
+body {
+	font-family: Arial, sans-serif;
+	margin: 20px;
+	background-color: #f0f0f0;
+}
+
+h1 {
+	color: #333333;
+}
+
+p {
+	font-size: 16px;
+	line-height: 1.5;
+	color: #666666;
+}
+
+a {
+	color: #007bff;
+	text-decoration: none;
+}
+```
+
+Incluez ensuite ce fichier CSS dans le fichier `progserv1/mini-projet/index.php`
+en ajoutant la ligne suivante dans la section `<head>` :
+
+```html
+<link rel="stylesheet" href="assets/styles.css" />
+```
+
+Vous pourriez ainsi personnaliser l'apparence de votre page web en utilisant les
+styles définis dans le fichier `styles.css`.
+
+Comme les styles CSS ne sont pas le cœur de ce cours, nous n'allons pas réaliser
+d'interfaces complètes avec du CSS personnalisé.
+
+A la place, nous allons utiliser un framework CSS léger appelé
+[PicoCSS](https://picocss.com/) pour ajouter des styles de base à nos pages web
+sans avoir à écrire beaucoup de CSS personnalisé.
+
+Pour utiliser PicoCSS dans votre projet PHP, nous allons mettre à jour le
+fichier `progserv1/mini-projet/index.php` avec le contenu suivant :
+
+```php
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+    <title>Page d'accueil | Gestionnaire d'animaux de compagnie</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Page d'accueil du gestionnaire d'animaux de compagnie</h1>
+
+        <p>Bienvenue sur la page d'accueil du gestionnaire d'animaux de compagnie !</p>
+
+        <p>Cette application vous permet de gérer facilement vos animaux de compagnie.</p>
+
+        <button><a href="create.php">Créer un nouvel animal</a></button>
+    </main>
+</body>
+
+</html>
+```
+
+Sauvegardez le fichier et rechargez la page dans votre navigateur. Vous devriez
+voir une page web avec des styles de base appliqués grâce à PicoCSS.
+
+### Ajout d'un logo pour l'application
+
+Pour finaliser la page d'accueil, vous pouvez également ajouter un logo pour
+l'application. Vous pouvez utiliser n'importe quel logo de votre choix, mais
+pour cet exemple, nous allons utiliser un logo fictif.
+
+Pour ajouter un logo, vous pouvez créer un fichier image dans le dossier
+`assets` de votre application. Par exemple, vous pouvez créer un fichier
+`logo.svg` dans le dossier `assets/images`.
+
+Nous allons utiliser un logo SVG pour cet exemple, mais vous pouvez utiliser
+n'importe quel format d'image (PNG, JPEG, etc.) que vous préférez : [Logo
+SVG][illustration-logo-svg].
+
+Ensuite, vous pouvez ajouter le logo dans la page `index.php` en l'insérant
+au-dessus du titre de la page. Voici comment vous pouvez le faire :
+
+```php
+        <div class="logo">
+            <img src="assets/images/logo.svg" alt="Logo du gestionnaire d'animaux de compagnie">
+        </div>
+```
+
+Puis, vous pouvez ajouter un peu de style CSS pour centrer le logo et l'adapter
+à la taille de l'écran. Vous pouvez ajouter le code CSS suivant dans le fichier
+`assets/css/styles.css` de la même manière que celui que vous créé précédemment
+:
+
+```css
+/* Classe personnalisée pour le logo */
+.logo {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	padding: 40px;
+	border-radius: 100%;
+	background-color: #0172ad;
+}
+```
+
+La structure du dossier `mini-projet` devrait ressembler à ceci :
+
+```text
+mini-projet/
+├── assets/
+│   ├── css/
+│   │   └── styles.css
+│   └── images/
+│       └── logo.svg
+└── index.php
+```
+
+Ensuite, mettez à jour le fichier `progserv1/mini-projet/index.php` pour inclure
+le logo et le style CSS personnalisé, comme réalisé précédemment :
+
+```html
+<link rel="stylesheet" href="assets/css/styles.css" />
+```
+
+Voici le code complet du fichier `progserv1/mini-projet/index.php` avec le logo
+ajouté et les styles CSS personnalisés :
+
+```php
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Page d'accueil | Gestionnaire d'animaux de compagnie</title>
+</head>
+
+<body>
+    <main class="container">
+        <div class="logo">
+            <img src="assets/images/logo.svg" alt="Logo du gestionnaire d'animaux de compagnie">
+        </div>
+
+        <h1>Page d'accueil du gestionnaire d'animaux de compagnie</h1>
+
+        <p>Bienvenue sur la page d'accueil du gestionnaire d'animaux de compagnie !</p>
+
+        <p>Cette application vous permet de gérer facilement vos animaux de compagnie.</p>
+
+        <a href="create.php"><button>Créer un nouvel animal</button></a>
+    </main>
+</body>
+
+</html>
+```
+
+Sauvegardez les fichiers et rechargez la page dans votre navigateur. Vous
+devriez voir le logo centré au-dessus du titre de la page.
+
+Notez que le bouton ne mène actuellement nulle part, car nous n'avons pas encore
+créé la page `create.php`.
+
+## Création des pages supplémentaires
+
+Dans cette dernière section, nous allons créer des pages supplémentaires pour le
+mini-projet. Ces pages permettront de naviguer entre les différentes sections de
+l'application web.
+
+Essayez de créer les fichiers suivants dans le dossier `progserv1/mini-projet/`
+:
+
+- `create.php` : Cette page permettra de créer un nouvel animal de compagnie.
+- `edit.php` : Cette page permettra de modifier les informations d'un animal de
+  compagnie existant.
+- `view.php` : Cette page affichera les détails d'un animal de compagnie
+  spécifique.
+
+La structure finale du dossier `mini-projet` devrait ressembler à ceci :
+
+```text
+mini-projet/
+├── assets/
+│   ├── css/
+│   │   └── styles.css
+│   └── images/
+│       └── logo.svg
+├── create.php
+├── edit.php
+├── index.php
+└── view.php
+```
+
+Pour chaque fichier, vous pouvez ajouter un code similaire à celui du fichier
+`index.php`, en adaptant le titre et le contenu de la page en fonction de son
+objectif. Par exemple, pour le fichier `create.php`, vous pouvez ajouter le code
+suivant :
+
+```php
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Page de création | Gestionnaire d'animaux de compagnie</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Page de création du gestionnaire d'animaux de compagnie</h1>
+
+        <p>Utilise cette page pour créer un nouvel animal de compagnie.</p>
+
+        <p><a href="index.php">Retour à l'accueil</a></p>
+    </main>
+</body>
+
+</html>
+```
+
+Sauvegardez le fichier et créez les autres fichiers de la même manière.
+
+<details>
+<summary>Afficher le contenu du fichier <code>edit.php</code></summary>
+
+```php
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Page de mise à jour | Gestionnaire d'animaux de compagnie</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Page de mise à jour du gestionnaire d'animaux de compagnie</h1>
+
+        <p>Utilise cette page pour mettre à jour un animal de compagnie existant.</p>
+
+        <p><a href="index.php">Retour à l'accueil</a></p>
+    </main>
+</body>
+
+</html>
+```
+
+</details>
+
+<details>
+<summary>Afficher le contenu du fichier <code>view.php</code></summary>
+
+```php
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Page de visualisation | Gestionnaire d'animaux de compagnie</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Page de visualisation du gestionnaire d'animaux de compagnie</h1>
+
+        <p>Utilise cette page pour visualiser les détails d'un animal de compagnie.</p>
+
+        <p><a href="index.php">Retour à l'accueil</a></p>
+    </main>
+</body>
+
+</html>
+```
+
+</details>
+
+Sauvegardez tous les fichiers et testez-les dans votre navigateur en accédant
+aux adresses suivantes :
+
+- <http://localhost/progserv1/mini-projet/create.php>
+- <http://localhost/progserv1/mini-projet/edit.php>
+- <http://localhost/progserv1/mini-projet/view.php>
+
+Vous avez maintenant toutes les pages nécessaires pour le mini-projet !
+
+Ces pages serviront de point de départ pour le mini-projet. Vous pourrez
+commencer à ajouter des fonctionnalités pour gérer les animaux de compagnie dans
+l'application web dans les prochaines sessions.
 
 ## Solution
 
@@ -825,18 +1207,11 @@ tester et déboguer des applications PHP qui vous sera utile pour les sessions e
 les unités d'enseignement à venir.
 
 Vous avez également initialisé un projet PHP pour le mini-projet et testé
-l'initialisation du projet. Vous êtes maintenant prêt.e à commencer à construire
+l'initialisation du projet avec les différentes pages HTML qui seront utilisées
+durant le reste du cours. Vous êtes maintenant prêt.e à commencer à construire
 l'application web pour gérer les animaux de compagnie !
 
-## Aller plus loin
-
-_Ceci est une section optionnelle pour les personnes qui souhaitent aller plus
-loin. Vous pouvez la sauter si vous n'avez pas de temps._
-
-- Êtes-vous capable de modifier les fichiers PHP pour y incorporer des balises
-  HTML et CSS pour rendre les pages plus attrayantes ?
-- Êtes-vous capable de changer les messages affichés dans les fichiers PHP pour
-  quelque chose de plus personnel ?
+<!-- Footnotes -->
 
 [^docker]: Docker, [docker.com](https://www.docker.com/), 09 mars 2025
 [^lamp]:
@@ -852,3 +1227,8 @@ loin. Vous pouvez la sauter si vous n'avez pas de temps._
 [^wamp]: WampServer, [wampserver.com](https://www.wampserver.com/), 09 mars 2025
 [^xampp]:
     XAMPP, [apachefriends.org](https://www.apachefriends.org/), 09 mars 2025
+
+<!-- URLs -->
+
+[illustration-logo-svg]:
+	https://unsplash.com/photos/ygsmi5ushr0/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzQ5MDM5ODM3fA&force=true&fm=svg

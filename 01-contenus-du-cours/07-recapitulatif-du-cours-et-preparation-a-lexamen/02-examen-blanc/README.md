@@ -14,7 +14,7 @@
   [Solution](../01-mini-projet/solution/README.md)
 - Examen blanc : [Énoncé](../03-examen-blanc/README.md)
 
-## [ProgServ1 2024-2025] Examen blanc
+## [ProgServ1 2025-2026] Examen blanc
 
 L'examen est composé de deux parties :
 

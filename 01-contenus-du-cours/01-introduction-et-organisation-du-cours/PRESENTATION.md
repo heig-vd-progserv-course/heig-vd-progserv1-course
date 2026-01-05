@@ -67,14 +67,14 @@ suis ouvert à toutes critiques pour améliorer mon enseignement.
 ## Comment me contacter
 
 Selon vos préférences, vous pouvez utiliser l'un des canaux suivants pour toutes
-questions relatives à l'unité d'enseignement :
+questions relatives au cours :
 
 - En personne, durant les sessions de cours ou en dehors.
 - Par e-mail
   ([ludovic.delafontaine@heig-vd.ch](mailto:ludovic.delafontaine@heig-vd.ch)).
 - Microsoft Teams :
-  - Dans le canal Teams de l'unité d'enseignement (de préférence - n'hésitez pas
-    à vous entraider si je ne suis pas disponible).
+  - Dans le canal Teams du cours (de préférence - n'hésitez pas à vous entraider
+    si je ne suis pas disponible).
   - Message privé sur Teams (à éviter si possible).
 
 ## Retrouvez le contenu complet de cette présentation sur GitHub
@@ -122,7 +122,7 @@ etc.).
 - En présentiel chaque semaine dans cette même salle.
 - Mélange de théorie et de pratique pour un apprentissage efficace :
   - Moment de théorie court pour expliquer les concepts.
-  - Mini-projet à réaliser tout au long de l'unité d'enseignement.
+  - Mini-projet à réaliser tout au long du cours.
   - Exercices à faire en classe ou à la maison.
 - Espace de discussion pour poser des questions et obtenir de l'aide (**il n'y a
   pas de questions bêtes !**, je suis payé pour ça).
