@@ -10,7 +10,10 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 >
 > **Ressources annexes**
 >
-> - Autres formats : [Présentation (web)]() · [Présentation (PDF)]()
+> - Autres formats :
+>   [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/01-introduction-et-organisation-du-cours/presentation.html)
+>   ·
+>   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/01-introduction-et-organisation-du-cours/01-introduction-et-organisation-du-cours-presentation.pdf)
 >
 > **Objectifs**
 >
@@ -143,4 +146,4 @@ Les ressources suivantes ont été utilisées pour la préparation de ce cours :
 <!-- URLs -->
 
 [license]:
-	https://github.com/heig-vd-mvp-course/heig-vd-mvp-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md

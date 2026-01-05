@@ -1,4 +1,4 @@
-# Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application - Examen blanc
+# Récapitulatif du cours et préparation à l'examen - Examen blanc
 
 ## Ressources
 
@@ -9,9 +9,9 @@
   ·
   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf)
   ·
-  [Résultats des formulaires de feedback et évaluations GAPS](../01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/resultats-des-formulaires-de-feedback-et-evaluations-gaps/)
+  [Résultats des formulaires de feedback et évaluations GAPS](../01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/resultats-des-formulaires-de-feedback-et-evaluations-gaps/README.md)
 - Mini-projet : [Consignes](../01-mini-projet/README.md) ·
-  [Solution](../01-mini-projet/solution/)
+  [Solution](../01-mini-projet/solution/README.md)
 - Examen blanc : [Énoncé](../03-examen-blanc/README.md)
 
 ## [ProgServ1 2024-2025] Examen blanc

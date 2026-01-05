@@ -1,23 +1,19 @@
 ---
 marp: true
----
-
-<!--
 theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
-title: HEIG-VD ProgServ1 Course - Tableaux et boucles
 description: Introduction à PHP pour le cours ProgServ1 à la HEIG-VD, Suisse
-url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/01-theorie/index.html
-header: "**Tableaux et boucles**"
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours//01-contenus-du-cours/04-tableaux-et-boucles/presentation.html
+header: "[**Tableaux et boucles**][contenu-complet-sur-github]"
 footer:
   "[**HEIG-VD**](https://heig-vd.ch) - [ProgServ1 Course
   2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
   - [CC BY-SA 4.0][license]"
 headingDivider: 6
 math: mathjax
--->
+---
 
 # Tableaux et boucles
 
@@ -38,12 +34,15 @@ adresse][contenu-complet-sur-github].
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
-## _Retrouvez plus de détails dans le support de cours_
+## Retrouvez le contenu complet de cette présentation sur GitHub
 
 <!-- _class: lead -->
 
-_Cette présentation est un résumé du support de cours. Pour plus de détails,
-consultez le [support de cours][contenu-complet-sur-github]._
+_Cette présentation est un résumé du contenu complet disponible sur GitHub._
+
+_Pour plus de détails, retrouvez le [contenu complet sur
+GitHub][contenu-complet-sur-github] ou en cliquant sur l'en-tête de ce
+document._
 
 ## Objectifs (1/3)
 
@@ -640,18 +639,14 @@ des difficultés !**
 
 <!-- URLs -->
 
-[presentation-web]:
-	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/01-theorie/index.html
-[presentation-pdf]:
-	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/01-theorie/03-tableaux-et-boucles-presentation.pdf
-[contenu-complet-sur-github]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/03-tableaux-et-boucles/01-theorie/README.md
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
+[contenu-complet-sur-github]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-tableaux-et-boucles/README.md
 [mini-projet]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/03-tableaux-et-boucles/01-mini-projet/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-tableaux-et-boucles/01-mini-projet/README.md
 [exercices]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/03-tableaux-et-boucles/02-exercices/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-tableaux-et-boucles/02-exercices/README.md
 
 <!-- Illustrations -->
 

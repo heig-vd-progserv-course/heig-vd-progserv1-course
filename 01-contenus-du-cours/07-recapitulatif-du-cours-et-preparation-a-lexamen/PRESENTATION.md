@@ -1,25 +1,25 @@
 ---
 marp: true
----
-
-<!--
 theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
-title: HEIG-VD ProgServ1 Course - Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application
-description: Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application pour le cours ProgServ1 à la HEIG-VD, Suisse
-url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/index.html
-header: "**Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application**"
+description:
+  Récapitulatif du cours et préparation à l'examen pour le cours ProgServ1 à la
+  HEIG-VD, Suisse
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/07-recapitulatif-du-cours-et-preparation-a-lexamen/presentation.html
+header:
+  "[**Récapitulatif du cours et préparation à
+  l'examen**][contenu-complet-sur-github]"
 footer:
   "[**HEIG-VD**](https://heig-vd.ch) - [ProgServ1 Course
   2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
   - [CC BY-SA 4.0][license]"
 headingDivider: 6
 math: mathjax
--->
+---
 
-# Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application
+# Récapitulatif du cours et préparation à l'examen
 
 <!--
 _class: lead
@@ -38,14 +38,17 @@ adresse][contenu-complet-sur-github].
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
-## _Retrouvez plus de détails dans le support de cours_
+## Retrouvez le contenu complet de cette présentation sur GitHub
 
 <!-- _class: lead -->
 
-_Cette présentation est un résumé du support de cours. Pour plus de détails,
-consultez le [support de cours][contenu-complet-sur-github]._
+_Cette présentation est un résumé du contenu complet disponible sur GitHub._
 
-## Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application
+_Pour plus de détails, retrouvez le [contenu complet sur
+GitHub][contenu-complet-sur-github] ou en cliquant sur l'en-tête de ce
+document._
+
+## Récapitulatif du cours et préparation à l'examen
 
 <!-- _class: lead -->
 
@@ -329,13 +332,13 @@ de vous faire renvoyer**.
 ### Comment se préparer ?
 
 - Avoir un environnement de développement fonctionnel (cf. cours
-  [01 - Introduction à PHP](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php),
+  [Introduction à PHP](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php),
   plus particulièrement le mini-projet).
 - **Désactiver toutes aides externes (Copilot, ChatGPT, etc.)**.
 - Relire les supports de cours avec leurs objectifs respectifs (utilisez ces
   objectifs pour valider vos acquis).
 - Refaire les mini-projets et les exercices.
-- Réaliser l'[examen blanc][mock-exam] à disposition.
+- Réaliser l'[examen blanc][examen-blanc] à disposition.
 
 ## Questions
 
@@ -345,8 +348,7 @@ Est-ce que vous avez des questions ?
 
 ## À vous de jouer !
 
-- Réaliser le [mini-projet][mini-projet] (optionnel).
-- Réaliser l'[examen blanc][mock-exam].
+- Réaliser l'[examen blanc][examen-blanc].
 - Poser des questions si nécessaire.
 
 \
@@ -524,18 +526,12 @@ de vous faire renvoyer**.
 
 <!-- URLs -->
 
-[presentation-web]:
-	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/index.html
-[presentation-pdf]:
-	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf
-[contenu-complet-sur-github]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/README.md
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
-[mini-projet]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-mini-projet/README.md
-[mock-exam]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/03-examen-blanc/README.md
+[contenu-complet-sur-github]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/07-recapitulatif-du-cours-et-preparation-a-lexamen/README.md
+[examen-blanc]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/07-recapitulatif-du-cours-et-preparation-a-lexamen/03-examen-blanc/README.md
 
 <!-- Illustrations -->
 

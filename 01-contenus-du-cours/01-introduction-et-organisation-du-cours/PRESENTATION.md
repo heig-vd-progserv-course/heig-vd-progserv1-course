@@ -7,7 +7,7 @@ author: L. Delafontaine, avec l'aide de GitHub Copilot
 description:
   Introduction et organisation du cours pour le cours ProgServ1 à la HEIG-VD,
   Suisse
-url: https://google.com
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/01-introduction-et-organisation-du-cours/presentation.html
 header:
   "[**Introduction et organisation du cours**][contenu-complet-sur-github]"
 footer:
@@ -77,13 +77,13 @@ questions relatives à l'unité d'enseignement :
     à vous entraider si je ne suis pas disponible).
   - Message privé sur Teams (à éviter si possible).
 
-## Plus de détails sur GitHub
+## Retrouvez le contenu complet de cette présentation sur GitHub
 
 <!-- _class: lead -->
 
 _Cette présentation est un résumé du contenu complet disponible sur GitHub._
 
-_Pour plus de détails, consulter le [contenu complet sur
+_Pour plus de détails, retrouvez le [contenu complet sur
 GitHub][contenu-complet-sur-github] ou en cliquant sur l'en-tête de ce
 document._
 

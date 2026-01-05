@@ -5,8 +5,8 @@ size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 description: Introduction à PHP pour le cours ProgServ1 à la HEIG-VD, Suisse
-url: TODO
-header: "**Introduction à PHP**"
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/02-introduction-a-php/presentation.html
+header: "[**Introduction à PHP**][contenu-complet-sur-github]"
 footer:
   "[**HEIG-VD**](https://heig-vd.ch) - [ProgServ1 Course
   2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
@@ -33,6 +33,36 @@ adresse][contenu-complet-sur-github].
 <small>Ce travail est sous licence [CC BY-SA 4.0][license].</small>
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
+
+## Retrouvez le contenu complet de cette présentation sur GitHub
+
+<!-- _class: lead -->
+
+_Cette présentation est un résumé du contenu complet disponible sur GitHub._
+
+_Pour plus de détails, retrouvez le [contenu complet sur
+GitHub][contenu-complet-sur-github] ou en cliquant sur l'en-tête de ce
+document._
+
+## Objectifs (1)
+
+- Expliquer le concept d'architecture client-serveur.
+- Lister les outils nécessaires pour écrire et exécuter du code PHP.
+- Expliquer comment PHP fonctionne dans un environnement web.
+- Expliquer la syntaxe de base de PHP.
+- Expliquer les variables en PHP.
+
+![bg right:40%][illustration-objectifs]
+
+## Objectifs (2)
+
+- Expliquer les constantes en PHP.
+- Expliquer la nature dynamique des variables et constantes en PHP.
+- Expliquer les opérateurs en PHP.
+- Expliquer les structures de contrôle conditionnelles en PHP.
+- Rédiger du code PHP simple.
+
+![bg right:40%][illustration-objectifs]
 
 ## Qu'est-ce que PHP (1/2)
 

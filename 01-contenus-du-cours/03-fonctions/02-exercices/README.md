@@ -1,17 +1,16 @@
 # Fonctions - Exercices
 
 Cette série d'exercices est conçue pour vous permettre de valider les concepts
-théoriques et pratiques vus dans le cours
-_[Fonctions](../01-theorie/README.md)_.
+théoriques et pratiques vus dans le cours _["Fonctions"](../README.md)_.
 
 ## Ressources
 
-- Théorie : [Support de cours](../01-theorie/README.md) ·
-  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/02-fonctions/01-theorie/index.html)
+- Théorie : [Support de cours](../README.md) ·
+  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/02-fonctions/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/02-fonctions/01-theorie/02-fonctions-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/02-fonctions/02-fonctions-presentation.pdf)
 - Mini-projet : [Consignes](../01-mini-projet/README.md) ·
-  [Solution](../01-mini-projet/solution/)
+  [Solution](../01-mini-projet/solution/README.md)
 - Exercices : [Énoncés et solutions](../02-exercices/README.md)
 
 ## Table des matières

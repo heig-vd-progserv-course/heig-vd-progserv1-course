@@ -2,21 +2,10 @@
 
 Cette série d'exercices est conçue pour vous permettre de valider les concepts
 théoriques et pratiques vus dans le cours
-_[Introduction à PHP](../01-theorie/README.md)_.
-
-## Ressources
-
-- Théorie : [Support de cours](../01-theorie/README.md) ·
-  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
-  ·
-  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
-- Mini-projet : [Consignes](../01-mini-projet/README.md) ·
-  [Solution](../01-mini-projet/solution/)
-- Exercices : [Énoncés et solutions](../02-exercices/README.md)
+_["Introduction à PHP"](../README.md)_.
 
 ## Table des matières
 
-- [Ressources](#ressources)
 - [Table des matières](#table-des-matières)
 - [Exercice 1](#exercice-1)
 - [Exercice 2](#exercice-2)

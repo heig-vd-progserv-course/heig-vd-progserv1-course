@@ -10,7 +10,13 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 >
 > **Ressources annexes**
 >
-> - Autres formats : [Présentation (web)]() · [Présentation (PDF)]()
+> - Autres formats :
+>   [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/02-introduction-a-php/presentation.html)
+>   ·
+>   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/02-introduction-a-php/02-introduction-a-php-presentation.pdf)
+> - Mini-projet : [Consignes](./01-mini-projet/README.md) ·
+>   [Solution](./01-mini-projet/solution/README.md)
+> - Exercices : [Énoncés et solutions](./02-exercices/README.md)
 >
 > **Objectifs**
 >
@@ -27,7 +33,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 > - Expliquer les structures de contrôle conditionnelles en PHP.
 > - Rédiger du code PHP simple.
 >
-> - **Méthodes d'enseignement et d'apprentissage**
+> **Méthodes d'enseignement et d'apprentissage**
 >
 > Les méthodes d'enseignement et d'apprentissage utilisées pour animer le
 > contenu sont les suivantes :
@@ -53,15 +59,25 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 >
 > L'évaluation ne donne pas lieu à une note.
 
-## Ressources
+## Table des matières
 
-- Théorie : [Support de cours](./01-theorie/README.md) ·
-  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
-  ·
-  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
-- Mini-projet : [Consignes](./01-mini-projet/README.md) ·
-  [Solution](./01-mini-projet/solution/)
-- Exercices : [Énoncés et solutions](./02-exercices/README.md)
+- [Table des matières](#table-des-matières)
+- [Objectifs](#objectifs)
+- [Qu'est-ce que PHP](#quest-ce-que-php)
+- [Applications web et architecture client-serveur](#applications-web-et-architecture-client-serveur)
+- [Comment fonctionne PHP](#comment-fonctionne-php)
+- [Comment écrire du code PHP](#comment-écrire-du-code-php)
+- [Comment exécuter du code PHP](#comment-exécuter-du-code-php)
+- [Syntaxe de base de PHP](#syntaxe-de-base-de-php)
+  - [Les commentaires](#les-commentaires)
+  - [Les variables](#les-variables)
+  - [Les constantes](#les-constantes)
+  - [Les opérateurs](#les-opérateurs)
+  - [Les structures de contrôle conditionnelles](#les-structures-de-contrôle-conditionnelles)
+- [Conclusion](#conclusion)
+- [Mini-projet](#mini-projet)
+- [Exercices](#exercices)
+- [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
 
 ## Objectifs
 
@@ -630,7 +646,7 @@ Si vous essayez d'exécuter cet exemple, une erreur sera générée. Elle
 ressemblera à ceci :
 
 ```text
-Parse error: syntax error, unexpected token "=" in 01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/exemples/15-constants.php on line 9
+Parse error: syntax error, unexpected token "=" in 01-modalites-de-lunite-denseignement-et-introduction-a-php/exemples/15-constants.php on line 9
 ```
 
 ### Les opérateurs
@@ -1001,10 +1017,10 @@ renforcer votre compréhension des concepts vus en classe.
 Vous trouverez les détails des exercices ici :
 [Énoncés et solutions](../02-exercices/README.md).
 
-## À faire pour la prochaine séance
+## À faire pour la semaine suivante
 
 Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour la prochaine séance de :
+il est recommandé pour la séance suivante de :
 
 - Relire le support de cours si nécessaire.
 - Finaliser la partie du mini-projet qui n'a pas été terminée en classe.
@@ -1013,7 +1029,7 @@ il est recommandé pour la prochaine séance de :
 <!-- URLs -->
 
 [license]:
-	https://github.com/heig-vd-mvp-course/heig-vd-mvp-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 
 <!-- Footnotes -->
 

@@ -1,21 +1,10 @@
 # Introduction à PHP - Mini-projet
 
 Ce mini-projet est conçu pour vous permettre de mettre en pratique les concepts
-théoriques vus dans le cours _[Introduction à PHP](../01-theorie/README.md)_.
-
-## Ressources
-
-- Théorie : [Support de cours](../01-theorie/README.md) ·
-  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/index.html)
-  ·
-  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/01-modalites-de-lunite-denseignement-et-introduction-a-php-presentation.pdf)
-- Mini-projet : [Consignes](../01-mini-projet/README.md) ·
-  [Solution](../01-mini-projet/solution/)
-- Exercices : [Énoncés et solutions](../02-exercices/README.md)
+théoriques vus dans le contenu _["Introduction à PHP"](../README.md)_.
 
 ## Table des matières
 
-- [Ressources](#ressources)
 - [Table des matières](#table-des-matières)
 - [Introduction à votre première session de mini-projet](#introduction-à-votre-première-session-de-mini-projet)
 - [Présentation du mini-projet](#présentation-du-mini-projet)
@@ -38,12 +27,12 @@ théoriques vus dans le cours _[Introduction à PHP](../01-theorie/README.md)_.
 ## Introduction à votre première session de mini-projet
 
 Bienvenue dans la première session du mini-projet qui va vous accompagner durant
-toute la durée de l'unité d'enseignement !
+toute la durée du cours _"Programmation serveur 1 (ProgServ1)"_ !
 
 Cette session de mini-projet est conçue pour vous permettre de mettre en
 pratique les concepts théoriques vus dans le cours
-_[Introduction à PHP](../01-theorie/README.md)_. N\'hésitez pas à vous y référer
-si vous avez besoin de rafraîchir votre mémoire.
+_["Introduction à PHP"](../README.md)_. N'hésitez pas à vous y référer si vous
+avez besoin de rafraîchir votre mémoire.
 
 En lisant les contenus préparés pour les sessions de mini-projet, vous trouverez
 peut-être ce que l'on appelle des _"avertissements"_ ou des _"alertes"_.
@@ -90,8 +79,8 @@ plus sur un sujet spécifique.
 Ces ressources externes sont là pour vous aider. Nous vous redirigeons vers
 elles pour éviter de répéter ce qui est déjà bien maintenu et expliqué ailleurs.
 
-Ce que vous voyez et faites dans un chapitre actuel peut être utilisé dans un
-chapitre futur.
+Ce que vous voyez et faites dans une session actuelle peut être utilisé dans une
+session future.
 
 C'est pourquoi il est important de suivre les étapes et de comprendre ce que
 vous faites. Vous devez conserver le code que vous écrivez pour les sessions
@@ -108,8 +97,8 @@ C'est parti !
 
 > [!TIP]
 >
-> Le [support de cours](../01-theorie/README.md) est disponible pour vous aider
-> à comprendre les concepts théoriques abordés dans ce mini-projet si besoin !
+> Le [support de cours](../README.md) est disponible pour vous aider à
+> comprendre les concepts théoriques abordés dans ce mini-projet si besoin !
 
 ## Présentation du mini-projet
 
@@ -838,7 +827,7 @@ exercices et du mini-projet fonctionnent correctement :
 ## Solution
 
 Vous pouvez trouver la solution du mini-projet PHP à l'adresse suivante :
-[`solution`](./solution/).
+[`solution`](./solution/README.md).
 
 ## Conclusion
 

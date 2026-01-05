@@ -1,32 +1,75 @@
-# Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application
+# Récapitulatif du cours et préparation à l'examen
 
-## Ressources
+L. Delafontaine, avec l'aide de GitHub Copilot.
 
-- Récapitulatif de l'unité d'enseignement :
-  [Support de cours](../01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/README.md)
-  ·
-  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/index.html)
-  ·
-  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf)
-  [Résultats des formulaires de feedback et évaluations GAPS](./resultats-des-formulaires-de-feedback-et-evaluations-gaps)
-- Mini-projet : [Consignes](../01-mini-projet/README.md) ·
-  [Solution](../01-mini-projet/solution/)
-- Examen blanc : [Énoncé](../03-examen-blanc/README.md)
+Ce travail est sous licence [CC BY-SA 4.0][license].
+
+> [!TIP]
+>
+> Voici quelques informations relatives à ce contenu.
+>
+> **Ressources annexes**
+>
+> - Autres formats :
+>   [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/presentation.html)
+>   ·
+>   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/03-fonctions-presentation.pdf)
+> - Résultats des formulaires de feedback et évaluations GAPS :
+>   [Accéder aux contenus](./01-resultats-des-formulaires-de-feedback-et-evaluations-gaps/README.md)
+> - Examen blanc : [Accéder au contenu](./02-examen-blanc/README.md)
+>
+> **Objectifs**
+>
+> À l'issue de ce contenu, les personnes devraient être capables de :
+>
+> - Lister les modalités de l'examen final.
+> - Lister les ressources autorisées pour l'examen final.
+> - Lister les sanctions possibles en cas de tricherie durant l'examen final.
+> - Lister des stratégies pour bien se préparer à l'examen final.
+> - Préparer efficacement son environnement de développement pour l'examen
+>   final.
+> - Réviser les concepts clés abordés durant l'unité d'enseignement.
+> - Mettre en pratique les concepts appris à travers un examen blanc.
+>
+> **Méthodes d'enseignement et d'apprentissage**
+>
+> Les méthodes d'enseignement et d'apprentissage utilisées pour animer le
+> contenu sont les suivantes :
+>
+> - Présentation.
+> - Discussions collectives.
+> - Travail en autonomie.
+>
+> **Méthodes d'évaluation**
+>
+> L'évaluation du contenu prend la forme d'un examen blanc et d'exercices à
+> réaliser en autonomie en classe ou à la maison.
+>
+> L'évaluation se fait en utilisant les critères suivants :
+>
+> - Capacité à répondre avec justesse.
+> - Capacité à argumenter.
+>
+> Les retours se font de la manière suivante :
+>
+> - Corrigé du mini-projet.
+> - Corrigé des exercices.
+>
+> L'évaluation ne donne pas lieu à une note.
 
 ## Table des matières
 
-- [Ressources](#ressources)
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
 - [Retrospective](#retrospective)
   - [Objectifs de l'unité d'enseignement](#objectifs-de-lunité-denseignement)
-  - [Introduction à PHP](#cours-01---modalités-de-lunité-denseignement-et-introduction-à-php)
-  - [Fonctions](#cours-02---fonctions)
-  - [Tableaux et boucles](#cours-03---tableaux-et-boucles)
-  - [Formulaires HTML et validation](#cours-04---formulaires-html-et-validation)
-  - [Base de données et PDO](#cours-05---base-de-données-et-pdo)
-  - [Sécurité et nettoyage des saisies utilisateurs](#cours-06---sécurité-et-nettoyage-des-saisies-utilisateurs)
-  - [Programmation orientée objet](#cours-07---programmation-orientée-objet)
+  - [Introduction à PHP](#introduction-à-php)
+  - [Fonctions](#fonctions)
+  - [Tableaux et boucles](#tableaux-et-boucles)
+  - [Formulaires HTML et validation](#formulaires-html-et-validation)
+  - [Base de données et PDO](#base-de-données-et-pdo)
+  - [Sécurité et nettoyage des saisies utilisateurs](#sécurité-et-nettoyage-des-saisies-utilisateurs)
+  - [Programmation orientée objet](#programmation-orientée-objet)
 - [Résultats des formulaires de feedback et évaluations GAPS](#résultats-des-formulaires-de-feedback-et-évaluations-gaps)
 - [Préparation à l'examen final](#préparation-à-lexamen-final)
   - [Examen final](#examen-final)
@@ -35,7 +78,6 @@
   - [Calcul de la note finale](#calcul-de-la-note-finale)
   - [Sanctions possibles en cas de tricherie](#sanctions-possibles-en-cas-de-tricherie)
   - [Comment se préparer ?](#comment-se-préparer-)
-- [Mini-projet](#mini-projet)
 - [Examen blanc](#examen-blanc)
 
 ## Objectifs
@@ -43,6 +85,16 @@
 Le but de cette dernière session de cours est de récapituler les connaissances
 acquises durant l'unité d'enseignement, de préparer les personnes à l'examen
 final et de finaliser l'application développée durant l'unité d'enseignement.
+
+De façon plus concise, les personnes qui étudient devraient être capables de :
+
+- Lister les modalités de l'examen final.
+- Lister les ressources autorisées pour l'examen final.
+- Lister les sanctions possibles en cas de tricherie durant l'examen final.
+- Lister des stratégies pour bien se préparer à l'examen final.
+- Préparer efficacement son environnement de développement pour l'examen final.
+- Réviser les concepts clés abordés durant l'unité d'enseignement.
+- Mettre en pratique les concepts appris à travers un examen blanc.
 
 ## Retrospective
 
@@ -350,7 +402,7 @@ de vous faire renvoyer**.
 ### Comment se préparer ?
 
 - Avoir un environnement de développement fonctionnel (cf. cours
-  [01 - Introduction à PHP](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php),
+  [Introduction à PHP](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php),
   plus particulièrement le mini-projet).
 - **Désactiver toutes aides externes (Copilot, ChatGPT, etc.)**.
 - Relire les supports de cours avec leurs objectifs respectifs (utilisez ces
@@ -358,19 +410,15 @@ de vous faire renvoyer**.
 - Refaire les mini-projets et les exercices.
 - Réaliser l'examen blanc à disposition.
 
-## Mini-projet
-
-Nous vous invitons maintenant à réaliser le mini-projet de cette session pour
-finaliser l'application avec quelques fonctionnalités supplémentaires (styles
-CSS, amélioration du code, etc.).
-
-Vous trouverez les détails du mini-projet ici :
-[Consignes](../01-mini-projet/README.md).
-
 ## Examen blanc
 
 Nous vous invitons également à réaliser l'examen blanc de cette unité
 d'enseignement pour vous préparer à l'examen final.
 
 Vous trouverez les détails de l'examen blanc ici :
-[Examen blanc](../03-examen-blanc/README.md).
+[Examen blanc](../02-examen-blanc/README.md).
+
+<!-- URLs -->
+
+[license]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md

@@ -1,17 +1,16 @@
 # Formulaires HTML et validation - Mini-projet
 
 Ce mini-projet est conçu pour vous permettre de mettre en pratique les concepts
-théoriques vus dans le cours
-_[Formulaires HTML et validation](../01-theorie/README.md)_.
+théoriques vus dans le cours _["Formulaires HTML et validation"](../README.md)_.
 
 ## Ressources
 
-- Théorie : [Support de cours](../01-theorie/README.md) ·
-  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/01-theorie/index.html)
+- Théorie : [Support de cours](../README.md) ·
+  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/01-theorie/04-formulaires-html-et-validation-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/04-formulaires-html-et-validation-presentation.pdf)
 - Mini-projet : [Consignes](../01-mini-projet/README.md) ·
-  [Solution](../01-mini-projet/solution/)
+  [Solution](../01-mini-projet/solution/README.md)
 - Exercices : [Énoncés et solutions](../02-exercices/README.md)
 
 ## Table des matières
@@ -6226,7 +6225,7 @@ Vous devriez voir un formulaire avec des styles CSS appliqués.
 ## Solution
 
 Vous pouvez trouver la solution du mini-projet PHP à l'adresse suivante :
-[`solution`](./solution/).
+[`solution`](./solution/README.md).
 
 ## Conclusion
 

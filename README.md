@@ -43,7 +43,7 @@ d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 |     03 | [Tableaux et boucles](./01-contenus-du-cours/04-tableaux-et-boucles/README.md)                                                                                                                    | 🔴 À faire  |
 |     04 | [Formulaires HTML et validation](./01-contenus-du-cours/05-formulaires-html-et-validation/README.md)                                                                                              | 🔴 À faire  |
 |     05 | [Base de données et PDO](./01-contenus-du-cours/06-base-de-donnees-et-pdo/README.md)                                                                                                              | 🔴 À faire  |
-|     06 | [Récapitulatif du cours avec préparation à l'examen](./01-contenus-du-cours/07-recapitulatif-du-cours-avec-preparation-a-lexamen/README.md)                                                       | 🔴 À faire  |
+|     06 | [Récapitulatif du cours et préparation à l'examen](./01-contenus-du-cours/07-recapitulatif-du-cours-et-preparation-a-lexamen/README.md)                                                           | 🔴 À faire  |
 
 <details>
 <summary>Voir le détail des séances de cours</summary>
@@ -108,11 +108,12 @@ d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 ## 🕕 Séance 06
 
-### Récapitulatif du cours avec préparation à l'examen
+### Récapitulatif du cours et préparation à l'examen
 
 - Supports de cours :
   [Accéder au contenu (Markdown)](./01-contenus-du-cours/07-recapitulatif-du-cours-avec-preparation-a-lexamen/README.md)
   · [Accéder à la présentation (web)]() · [Accéder à la présentation (PDF)]()
+-
 
 </details>
 

@@ -1,23 +1,19 @@
 ---
 marp: true
----
-
-<!--
 theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
-title: HEIG-VD ProgServ1 Course - Base de données et PDO
 description: Base de données et PDO pour le cours ProgServ1 à la HEIG-VD, Suisse
-url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-theorie/index.html
-header: "**Base de données et PDO**"
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/06-base-de-donnees-et-pdo/presentation.html
+header: "[**Base de données et PDO**][contenu-complet-sur-github]"
 footer:
   "[**HEIG-VD**](https://heig-vd.ch) - [ProgServ1 Course
   2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
   - [CC BY-SA 4.0][license]"
 headingDivider: 6
 math: mathjax
--->
+---
 
 # Base de données et PDO
 
@@ -38,12 +34,15 @@ adresse][contenu-complet-sur-github].
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
-## _Retrouvez plus de détails dans le support de cours_
+## Retrouvez le contenu complet de cette présentation sur GitHub
 
 <!-- _class: lead -->
 
-_Cette présentation est un résumé du support de cours. Pour plus de détails,
-consultez le [support de cours][contenu-complet-sur-github]._
+_Cette présentation est un résumé du contenu complet disponible sur GitHub._
+
+_Pour plus de détails, retrouvez le [contenu complet sur
+GitHub][contenu-complet-sur-github] ou en cliquant sur l'en-tête de ce
+document._
 
 ## Objectifs (1/2)
 
@@ -293,18 +292,14 @@ des difficultés !**
 
 <!-- URLs -->
 
-[presentation-web]:
-	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-theorie/index.html
-[presentation-pdf]:
-	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/01-theorie/05-base-de-donnees-et-pdo-presentation.pdf
-[contenu-complet-sur-github]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/05-base-de-donnees-et-pdo/01-theorie/README.md
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
+[contenu-complet-sur-github]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/06-base-de-donnees-et-pdo/README.md
 [mini-projet]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/05-base-de-donnees-et-pdo/01-mini-projet/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/06-base-de-donnees-et-pdo/01-mini-projet/README.md
 [exercices]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/05-base-de-donnees-et-pdo/02-exercices/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/06-base-de-donnees-et-pdo/02-exercices/README.md
 
 <!-- Illustrations -->
 

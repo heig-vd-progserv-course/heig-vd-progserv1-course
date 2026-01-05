@@ -1,16 +1,16 @@
 # Tableaux et boucles - Mini-projet
 
 Ce mini-projet est conçu pour vous permettre de mettre en pratique les concepts
-théoriques vus dans le cours _[Tableaux et boucles](../01-theorie/README.md)_.
+théoriques vus dans le cours _["Tableaux et boucles"](../README.md)_.
 
 ## Ressources
 
-- Théorie : [Support de cours](../01-theorie/README.md) ·
-  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/01-theorie/index.html)
+- Théorie : [Support de cours](../README.md) ·
+  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/index.html)
   ·
-  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/01-theorie/03-tableaux-et-boucles-presentation.pdf)
+  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/03-tableaux-et-boucles-presentation.pdf)
 - Mini-projet : [Consignes](../01-mini-projet/README.md) ·
-  [Solution](../01-mini-projet/solution/)
+  [Solution](../01-mini-projet/solution/README.md)
 - Exercices : [Énoncés et solutions](../02-exercices/README.md)
 
 ## Table des matières
@@ -52,9 +52,9 @@ informations sur vos animaux de compagnie. Chaque animal doit avoir un nom et un
 âge. Dans de futures sessions, vous pourrez ajouter d'autres informations, comme
 le type d'animal ou la couleur.
 
-Vous pouvez vous aider de la théorie (voir le
-[support de cours](../01-theorie/README.md)) pour vous aider à comprendre
-comment créer le tableau associatif contenant les animaux de compagnie.
+Vous pouvez vous aider de la théorie (voir le [support de cours](../README.md))
+pour vous aider à comprendre comment créer le tableau associatif contenant les
+animaux de compagnie.
 
 ### Création du tableau dans le fichier `functions.php`
 
@@ -573,8 +573,8 @@ Dans cette section, vous allez modifier les fonctions `addPet()`, `getPet()`,
 associatif contenant les animaux de compagnie.
 
 N'oubliez que vous pouvez utiliser la théorie vue dans le support de cours (voir
-le [support de cours](../01-theorie/README.md)) pour vous aider à comprendre
-comment modifier le tableau associatif contenant les animaux de compagnie.
+le [support de cours](../README.md)) pour vous aider à comprendre comment
+modifier le tableau associatif contenant les animaux de compagnie.
 
 ### Repartir sur un tableau vide
 
@@ -1288,7 +1288,7 @@ informations sur les animaux de compagnie affichées à l'écran.
 ## Solution
 
 Vous pouvez trouver la solution du mini-projet PHP à l'adresse suivante :
-[`solution`](./solution/).
+[`solution`](./solution/README.md).
 
 ## Conclusion
 
