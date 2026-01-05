@@ -30,7 +30,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 > - Expliquer les constantes en PHP.
 > - Expliquer la nature dynamique des variables et constantes en PHP.
 > - Expliquer les opérateurs en PHP.
-> - Expliquer les structures de contrôle conditionnelles en PHP.
+> - Expliquer Les structures conditionnelles en PHP.
 > - Rédiger du code PHP simple.
 >
 > **Méthodes d'enseignement et d'apprentissage**
@@ -73,7 +73,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
   - [Les variables](#les-variables)
   - [Les constantes](#les-constantes)
   - [Les opérateurs](#les-opérateurs)
-  - [Les structures de contrôle conditionnelles](#les-structures-de-contrôle-conditionnelles)
+  - [Les structures conditionnelles](#les-structures-conditionnelles)
 - [Conclusion](#conclusion)
 - [Mini-projet](#mini-projet)
 - [Exercices](#exercices)
@@ -96,7 +96,7 @@ De façon plus concise, les personnes qui étudient devraient être capables de 
 - Expliquer les constantes en PHP.
 - Expliquer la nature dynamique des variables et constantes en PHP.
 - Expliquer les opérateurs en PHP.
-- Expliquer les structures de contrôle conditionnelles en PHP.
+- Expliquer Les structures conditionnelles en PHP.
 - Rédiger du code PHP simple.
 
 ## Qu'est-ce que PHP
@@ -656,7 +656,7 @@ des valeurs. Voici quelques exemples :
 
 - Opérateurs arithmétiques : `+` (addition), `-` (soustraction), `*`
   (multiplication), `/` (division), `%` (modulo)
-- Opérateurs de comparaison : `==` (égal), `!=` (différent), `>` (supérieur),
+- Opérateurs de comparaison : `===` (égal), `!==` (différent), `>` (supérieur),
   `<` (inférieur)
 - Opérateurs logiques : `&&` (et), `||` (ou), `!` (non/inversion)
 
@@ -740,11 +740,12 @@ public class Main {
 
 </details>
 
-### Les structures de contrôle conditionnelles
+### Les structures conditionnelles
 
-Les structures de contrôle conditionnelles permettent d'exécuter du code en
-fonction de certaines conditions, en utilisant les opérateurs de comparaison
-énoncés précédemment et des conditions booléennes (vrai ou faux).
+Les structures conditionnelles (parfois appelées _"structures de contrôle
+conditionnelles"_) permettent d'exécuter du code en fonction de certaines
+conditions, en utilisant les opérateurs de comparaison énoncés précédemment et
+des conditions booléennes (vrai ou faux).
 
 Ces structures opèrent sur des blocs de code qui sont exécutés selon les
 conditions qui leur sont associées.
@@ -849,7 +850,7 @@ $b = 2;
 if ($a < $b) {
     echo "a is less than b";
 // Sinon si `$a` est égal à `$b`
-} elseif ($a == $b) {
+} elseif ($a === $b) {
     echo "a is equal to b";
 // Sinon
 } else {
@@ -898,7 +899,7 @@ $country = "Switzerland";
 
 // Vérification si `$age` est supérieur ou égal à 18
 // et si `$country` est égal à "Switzerland"
-if ($age >= 18 && $country == "Switzerland") {
+if ($age >= 18 && $country === "Switzerland") {
     echo "You are allowed to vote in Switzerland.";
 }
 ```
@@ -924,9 +925,9 @@ public class Main {
 
 </details>
 
-Les structures de contrôle conditionnelles `switch` permettent de vérifier une
-variable pour plusieurs valeurs possibles. Il s'agit en quelque sorte d'une
-alternative à une série de `if` et `elseif`. Voici un exemple :
+Les structures conditionnelles `switch` permettent de vérifier une variable pour
+plusieurs valeurs possibles. Il s'agit en quelque sorte d'une alternative à une
+série de `if` et `elseif`. Voici un exemple :
 
 ```php
 <?php
@@ -985,6 +986,51 @@ La valeur par défaut `default` est exécutée si aucune des valeurs ne correspo
 
 Le mot-clé `break` est utilisé pour arrêter l'exécution du bloc de code et
 sortir du `switch`, sans quoi le code suivant serait exécuté.
+
+Il existe deux formes d'opérateurs conditionnels :
+
+- L'opérateur `==` qui vérifie l'égalité entre deux valeurs en comparant
+  uniquement leur contenu.
+- L'opérateur `===` qui vérifie l'égalité entre deux valeurs en comparant à la
+  fois leur contenu et leur type.
+
+```php
+<?php
+// Déclaration de deux variables numériques
+$a = 0;
+$b = 0;
+$c = "0";
+
+// Vérification si `$a` est égal à `$b`)
+if ($a == $b) {
+    echo "a is equal to b (same value)";
+}
+
+// Vérification si `$a` est égal à `$c`)
+if ($a == $c) {
+    echo "a is equal to c (same value)";
+}
+
+// Vérification si `$a` est égal (identique) à `$b`
+if ($a === $b) {
+    echo "a is identical to b (same value and type)";
+}
+
+// Vérification si `$a` est égal (identique) à `$c`
+if ($a === $c) {
+    echo "a is identical to c (same value and type)";
+} else {
+    echo "a is not identical to c (different type)";
+}
+```
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+Il n'existe pas d'équivalent direct en Java pour les opérateurs `==` et `===` de
+PHP.
+
+</details>
 
 ## Conclusion
 

@@ -38,11 +38,13 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
-  - [Objectifs du cours](#objectifs-du-cours)
-  - [Organisation du cours](#organisation-du-cours)
-  - [Modalités d'évaluation](#modalités-dévaluation)
-  - [La programmation et l'anglais](#la-programmation-et-langlais)
-  - [Bibliographie et ressources utilisées](#bibliographie-et-ressources-utilisées)
+- [Objectifs du cours](#objectifs-du-cours)
+- [Organisation du cours](#organisation-du-cours)
+- [Modalités d'évaluation](#modalités-dévaluation)
+  - [Partie théorique](#partie-théorique)
+  - [Partie pratique](#partie-pratique)
+- [La programmation et l'anglais](#la-programmation-et-langlais)
+- [Bibliographie et ressources utilisées](#bibliographie-et-ressources-utilisées)
 
 ## Objectifs
 
@@ -55,7 +57,7 @@ De façon plus concise, les personnes qui étudient devraient être capables de 
 - Lister les modalités d'organisation du cours.
 - Lister les modalités d'évaluation.
 
-### Objectifs du cours
+## Objectifs du cours
 
 Selon [GAPS](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=7307), à
 la fin de ce cours, vous devriez être capable de :
@@ -73,7 +75,7 @@ applications web simples pour gérer une collection de données (par exemple, un
 carnet d'adresses, un gestionnaire de tâches, sa liste favorite de jeux vidéo,
 etc.).
 
-### Organisation du cours
+## Organisation du cours
 
 Le cours a lieu chaque semaine et est organisé en sessions théoriques et
 pratique pour un meilleur apprentissage.
@@ -87,7 +89,7 @@ en classe.
 Des exercices viennent compléter la formation pour renforcer la compréhension
 des concepts, autant théoriques que pratiques.
 
-### Modalités d'évaluation
+## Modalités d'évaluation
 
 L'évaluation de cette unité d'enseignement se fait à travers d'un seul examen
 final comprenant une partie théorique et une partie pratique, tous deux à faire
@@ -96,7 +98,7 @@ sur ordinateur :
 - Partie théorique (40% de la note finale).
 - Partie pratique (60% de la note finale).
 
-#### Partie théorique
+### Partie théorique
 
 La partie théorique portera sur les connaissances théoriques acquises tout au
 long de l'unité d'enseignement ainsi que les exercices.
@@ -107,7 +109,7 @@ ligne de la HEIG-VD (Eval).
 **Aucune aide ne sera autorisée pendant cette partie théorique** (notes
 personnelles, communication, etc.).
 
-#### Partie pratique
+### Partie pratique
 
 La partie pratique portera sur les compétences pratiques acquises tout au long
 de l'unité d'enseignement avec le mini-projet et les exercices.
@@ -121,7 +123,7 @@ qu'aux ressources de MDN (<https://developer.mozilla.org>). **Aucune autre aide
 ne sera autorisée pendant cette partie pratique** (communication, outils
 d'intelligence artificielle, etc.).
 
-### La programmation et l'anglais
+## La programmation et l'anglais
 
 Le domaine de la programmation est très largement anglophone. La majorité des
 ressources que vous trouverez dans votre carrière sont en anglais.
@@ -133,7 +135,7 @@ contre).
 Le reste du cours restera néanmoins en français. Si l'anglais est une barrière
 pour vous, n'hésitez pas à nous le faire savoir.
 
-### Bibliographie et ressources utilisées
+## Bibliographie et ressources utilisées
 
 Les ressources suivantes ont été utilisées pour la préparation de ce cours :
 

@@ -107,16 +107,16 @@ consulter, modifier et supprimer des animaux de compagnie.
 
 Chaque animal de compagnie aura les attributs suivants :
 
-- Nom (un champ texte)
+- Nom (un champ texte).
 - Espèce (un champ de sélection contenant, par exemple : chien, chat, lézard,
-  serpent, oiseau, lapin, autre)
-- Surnom (un champ texte facultatif)
-- Sexe (un champ boutons radio)
-- Âge (un champ numérique)
-- Couleur (un champ de saisie de couleur facultatif)
-- Personnalité (un champ cases à cocher facultatif)
-- Taille en cm (un champ numérique facultatif)
-- Notes (un champ de texte libre facultatif)
+  serpent, oiseau, lapin, autre).
+- Surnom (un champ texte facultatif).
+- Sexe (un champ boutons radio).
+- Âge (un champ numérique).
+- Couleur (un champ de saisie de couleur facultatif).
+- Personnalité (un champ cases à cocher facultatif).
+- Taille en cm (un champ numérique facultatif).
+- Notes (un champ de texte libre facultatif).
 
 L'application web comportera les pages suivantes :
 
@@ -135,19 +135,6 @@ L'application web comportera les pages suivantes :
 - **Suppression d'un animal** : une page permettant à l'utilisateur de supprimer
   un animal de la base de données.
 
-De plus, les pages suivantes seront disponibles :
-
-- **Page d'inscription** : une page permettant à l'utilisateur de s'inscrire à
-  l'application avec un nom d'utilisateur et un mot de passe.
-- **Page de connexion** : une page permettant à l'utilisateur de se connecter à
-  l'application avec un nom d'utilisateur et un mot de passe.
-- **Page de déconnexion** : une page permettant à l'utilisateur de se
-  déconnecter de l'application.
-
-L'application web utilisera un cookie pour stocker la langue préférée de
-l'utilisateur (anglais ou français) et les notions de sessions pour gérer
-l'authentification des utilisateurs.
-
 Nous construirons cette application web ensemble durant la durée de l'unité
 d'enseignement en plusieurs étapes. Dans cette session, nous allons mettre en
 place l'environnement de développement et initialiser le projet PHP pour le
@@ -157,8 +144,8 @@ mini-projet.
 
 À l'issue de cette session, les personnes qui étudient devraient avoir pu :
 
-- Installer et configurer un environnement de développement pour PHP
-- Initialiser un projet PHP pour le mini-projet
+- Installer et configurer un environnement de développement pour PHP.
+- Initialiser un projet PHP pour le mini-projet.
 
 ## Installation de l'environnement de développement
 
@@ -322,7 +309,7 @@ Pour installer MAMP sur macOS, suivez les étapes suivantes :
 >
 > Sélectionnez la bonne version de MAMP pour macOS en fonction de l'architecture
 > de votre processeur (Intel ou Apple Silicon). Les personnes avec des appareils
-> Apple M1, M2 ou M3 doivent télécharger la version ARM de MAMP.
+> Apple M1, M2, M3 ou M4 doivent télécharger la version ARM de MAMP.
 
 1. Rendez-vous sur le site web de MAMP à l'adresse suivante :
    <https://www.mamp.info/en/downloads/>.

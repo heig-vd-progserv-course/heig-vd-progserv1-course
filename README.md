@@ -28,7 +28,8 @@ etc.).
 ## ➡️ Par où commencer ?
 
 Vous ne savez pas par où commencer ? Jetez un œil aux
-[Introduction et organisation du cours]() pour en savoir plus.
+[Introduction et organisation du cours](./01-contenus-du-cours/01-introduction-et-organisation-du-cours/README.md)
+pour en savoir plus.
 
 ## 📅 Programme
 
@@ -38,7 +39,7 @@ d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 | Séance | Contenu(s)                                                                                                                                                                                        | État[^etat] |
 | -----: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :---------- |
-|     01 | [Introduction et organisation du cours](./01-contenus-du-cours/01-introduction-et-organisation-du-cours/README.md) + [Introduction à PHP](./01-contenus-du-cours/02-introduction-a-php/README.md) | 🔴 À faire  |
+|     01 | [Introduction et organisation du cours](./01-contenus-du-cours/01-introduction-et-organisation-du-cours/README.md) + [Introduction à PHP](./01-contenus-du-cours/02-introduction-a-php/README.md) | 🟡 En cours |
 |     02 | [Fonctions](./01-contenus-du-cours/03-fonctions/README.md)                                                                                                                                        | 🔴 À faire  |
 |     03 | [Tableaux et boucles](./01-contenus-du-cours/04-tableaux-et-boucles/README.md)                                                                                                                    | 🔴 À faire  |
 |     04 | [Formulaires HTML et validation](./01-contenus-du-cours/05-formulaires-html-et-validation/README.md)                                                                                              | 🔴 À faire  |
@@ -54,17 +55,25 @@ d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 - Supports de cours :
   [Accéder au contenu (Markdown)](./01-contenus-du-cours/01-introduction-et-organisation-du-cours/README.md)
-  · [Accéder à la présentation (web)]() · [Accéder à la présentation (PDF)]()
-- Mini-projet : [Consignes]() · [Solution]()
-- Exercices : [Énoncés et solutions]()
+  ·
+  [Accéder à la présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/01-introduction-et-organisation-du-cours/presentation.html)
+  ·
+  [Accéder à la présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/01-introduction-et-organisation-du-cours/01-introduction-et-organisation-du-cours-presentation.pdf)
 
 ### Introduction à PHP
 
 - Supports de cours :
   [Accéder au contenu (Markdown)](./01-contenus-du-cours/02-introduction-a-php/README.md)
-  · [Accéder à la présentation (web)]() · [Accéder à la présentation (PDF)]()
-- Mini-projet : [Consignes]() · [Solution]()
-- Exercices : [Énoncés et solutions]()
+  ·
+  [Accéder à la présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/02-introduction-a-php/presentation.html)
+  ·
+  [Accéder à la présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/02-introduction-a-php/02-introduction-a-php-presentation.pdf)
+- Mini-projet :
+  [Consignes](./01-contenus-du-cours/02-introduction-a-php/01-mini-projet/README.md)
+  ·
+  [Solution](./01-contenus-du-cours/02-introduction-a-php/01-mini-projet/solution/README.md)
+- Exercices : [Énoncés et
+  solutions](./01-contenus-du-cours/02-introduction-a-php/02-exercices/README.md
 
 ## 🕑 Séance 02
 
@@ -72,9 +81,15 @@ d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 - Supports de cours :
   [Accéder au contenu (Markdown)](./01-contenus-du-cours/03-fonctions/README.md)
-  · [Accéder à la présentation (web)]() · [Accéder à la présentation (PDF)]()
-- Mini-projet : [Consignes]() · [Solution]()
-- Exercices : [Énoncés et solutions]()
+  ·
+  [Accéder à la présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/presentation.html)
+  ·
+  [Accéder à la présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/03-fonctions-presentation.pdf)
+- Mini-projet :
+  [Consignes](./01-contenus-du-cours/03-fonctions/01-mini-projet/README.md) ·
+  [Solution](./01-contenus-du-cours/03-fonctions/01-mini-projet/solution/README.md)
+- Exercices :
+  [Énoncés et solutions](./01-contenus-du-cours/03-fonctions/02-exercices/README.md)
 
 ## 🕒 Séance 03
 
@@ -82,9 +97,16 @@ d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 - Supports de cours :
   [Accéder au contenu (Markdown)](./01-contenus-du-cours/04-tableaux-et-boucles/README.md)
-  · [Accéder à la présentation (web)]() · [Accéder à la présentation (PDF)]()
-- Mini-projet : [Consignes]() · [Solution]()
-- Exercices : [Énoncés et solutions]()
+  ·
+  [Accéder à la présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/04-tableaux-et-boucles/presentation.html)
+  ·
+  [Accéder à la présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/04-tableaux-et-boucles/04-tableaux-et-boucles-presentation.pdf)
+- Mini-projet :
+  [Consignes](./01-contenus-du-cours/04-tableaux-et-boucles/01-mini-projet/README.md)
+  ·
+  [Solution](./01-contenus-du-cours/04-tableaux-et-boucles/01-mini-projet/solution/README.md)
+- Exercices :
+  [Énoncés et solutions](./01-contenus-du-cours/04-tableaux-et-boucles/02-exercices/README.md)
 
 ## 🕓 Séance 04
 
@@ -92,9 +114,16 @@ d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 - Supports de cours :
   [Accéder au contenu (Markdown)](./01-contenus-du-cours/05-formulaires-html-et-validation/README.md)
-  · [Accéder à la présentation (web)]() · [Accéder à la présentation (PDF)]()
-- Mini-projet : [Consignes]() · [Solution]()
-- Exercices : [Énoncés et solutions]()
+  ·
+  [Accéder à la présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/05-formulaires-html-et-validation/presentation.html)
+  ·
+  [Accéder à la présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/05-formulaires-html-et-validation/05-formulaires-html-et-validation-presentation.pdf)
+- Mini-projet :
+  [Consignes](./01-contenus-du-cours/05-formulaires-html-et-validation/01-mini-projet/README.md)
+  ·
+  [Solution](./01-contenus-du-cours/05-formulaires-html-et-validation/01-mini-projet/solution/README.md)
+- Exercices :
+  [Énoncés et solutions](./01-contenus-du-cours/05-formulaires-html-et-validation/02-exercices/README.md)
 
 ## 🕔 Séance 05
 
@@ -102,9 +131,16 @@ d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 - Supports de cours :
   [Accéder au contenu (Markdown)](./01-contenus-du-cours/06-base-de-donnees-et-pdo/README.md)
-  · [Accéder à la présentation (web)]() · [Accéder à la présentation (PDF)]()
-- Mini-projet : [Consignes]() · [Solution]()
-- Exercices : [Énoncés et solutions]()
+  ·
+  [Accéder à la présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/06-base-de-donnees-et-pdo/presentation.html)
+  ·
+  [Accéder à la présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/06-base-de-donnees-et-pdo/06-base-de-donnees-et-pdo-presentation.pdf)
+- Mini-projet :
+  [Consignes](./01-contenus-du-cours/06-base-de-donnees-et-pdo/01-mini-projet/README.md)
+  ·
+  [Solution](./01-contenus-du-cours/06-base-de-donnees-et-pdo/01-mini-projet/solution/README.md)
+- Exercices :
+  [Énoncés et solutions](./01-contenus-du-cours/06-base-de-donnees-et-pdo/02-exercices/README.md)
 
 ## 🕕 Séance 06
 
@@ -112,8 +148,14 @@ d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 - Supports de cours :
   [Accéder au contenu (Markdown)](./01-contenus-du-cours/07-recapitulatif-du-cours-avec-preparation-a-lexamen/README.md)
-  · [Accéder à la présentation (web)]() · [Accéder à la présentation (PDF)]()
--
+  ·
+  [Accéder à la présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/07-recapitulatif-du-cours-avec-preparation-a-lexamen/presentation.html)
+  ·
+  [Accéder à la présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/07-recapitulatif-du-cours-avec-preparation-a-lexamen/07-recapitulatif-du-cours-et-preparation-a-lexamen-presentation.pdf)
+- Résultats des formulaires de feedback et évaluations GAPS :
+  [Accéder aux contenus](./01-contenus-du-cours/07-recapitulatif-du-cours-et-preparation-a-lexamen/01-resultats-des-formulaires-de-feedback-et-evaluations-gaps/README.md)
+- Examen blanc :
+  [Accéder au contenu](./01-contenus-du-cours/07-recapitulatif-du-cours-et-preparation-a-lexamen/02-examen-blanc/README.md)
 
 </details>
 
