@@ -2,9 +2,12 @@
 	"name": "HEIG-VD ProgServ1 Course Development Container",
 	"dockerComposeFile": "compose.yaml",
 	"service": "devcontainer",
+	"runServices": ["plantuml"],
 	"workspaceFolder": "/workspace",
 	"features": {
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"moby": false
+		}
 	},
 	"customizations": {
 		"vscode": {
@@ -28,13 +31,15 @@
 		"type=bind,source=${localEnv:HOME}/.ssh,target=${localEnv:HOME}/.ssh,type=bind,consistency=cached"
 	],
 	// Ports to expose on the container's network host
-	"forwardPorts": [8080],
+	"forwardPorts": [8080, 9090],
 	"portsAttributes": {
 		"8080": {
 			"label": "Apache HTTP Server"
+		},
+		"9090": {
+			"label": "PlantUML Server"
 		}
 	},
-
 	// Execute the post-create.sh script once the container is created
 	"postCreateCommand": ".devcontainer/post-create.sh",
 	// Execute the post-start.sh script once the container is started
