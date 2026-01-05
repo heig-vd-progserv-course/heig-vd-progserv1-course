@@ -15,15 +15,15 @@
 ### Message envoyé aux personnes qui étudient avant le premier cours
 
 ```text
-[ProgServ1 2024-2025] Informations générales sur le cours
+[ProgServ1 2025-2026] Informations générales sur le cours
 
 Bonjour @ProgServ1,
 
 J'espère que vous allez bien et que le semestre a bien débuté pour tout le monde.
 
-Je serai votre enseignant pour l'unité d'enseignement "Programmation serveur 1 (ProgServ1)", en remplacement de M. Jean-Pierre Hess. Je me réjouis de vous retrouver la semaine prochaine pour le premier cours.
+Je serai votre enseignant pour l'unité d'enseignement "Programmation serveur 1 (ProgServ1)". Je me réjouis de vous retrouver la semaine prochaine pour le premier cours.
 
-Vous trouverez toutes les informations sur l'unité d'enseignement dans cette organisation GitHub à l'adresse suivante : https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course.
+Vous trouverez toutes les informations sur l'unité d'enseignement dans ce dépôt GitHub à l'adresse suivante : https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course.
 
 Certains cours sont encore en cours de relecture et de mise à jour. Pas que vous soyez étonné.es si vous voyez des changements dans les prochains jours et/ou durant le semestre.
 
@@ -44,7 +44,7 @@ Ludovic Delafontaine
 
 #### Titre
 
-ProgServ1 2024-2025 - Feedback
+ProgServ1 2025-2026 - Feedback
 
 #### Description
 
@@ -121,7 +121,7 @@ barre de progression** : Désactivée
 ### Message envoyé aux personnes qui étudient avant chaque cours
 
 ```text
-[ProgServ1 2024-2025] Introduction à PHP
+[ProgServ1 2025-2026] Introduction à PHP
 
 Bonjour tout le monde,
 
@@ -131,7 +131,7 @@ N'hésitez pas à me le faire savoir si vous avez des questions.
 ```
 
 ```text
-[ProgServ1 2024-2025] Fonctions
+[ProgServ1 2025-2026] Fonctions
 
 Bonjour tout le monde,
 
@@ -141,7 +141,7 @@ N'hésitez pas à me le faire savoir si vous avez des questions.
 ```
 
 ```text
-[ProgServ1 2024-2025] Tableaux et boucles
+[ProgServ1 2025-2026] Tableaux et boucles
 
 Bonjour tout le monde,
 
@@ -151,7 +151,7 @@ N'hésitez pas à me le faire savoir si vous avez des questions.
 ```
 
 ```text
-[ProgServ1 2024-2025] Formulaires HTML et validation
+[ProgServ1 2025-2026] Formulaires HTML et validation
 
 Bonjour tout le monde,
 
@@ -161,7 +161,7 @@ N'hésitez pas à me le faire savoir si vous avez des questions.
 ```
 
 ```text
-[ProgServ1 2024-2025] Base de données et PDO
+[ProgServ1 2025-2026] Base de données et PDO
 
 Bonjour tout le monde,
 
@@ -171,7 +171,7 @@ N'hésitez pas à me le faire savoir si vous avez des questions.
 ```
 
 ```text
-[ProgServ1 2024-2025] Sécurité et nettoyage des saisies utilisateurs
+[ProgServ1 2025-2026] Sécurité et nettoyage des saisies utilisateurs
 
 Bonjour tout le monde,
 
@@ -181,7 +181,7 @@ N'hésitez pas à me le faire savoir si vous avez des questions.
 ```
 
 ```text
-[ProgServ1 2024-2025] Programmation orientée objet
+[ProgServ1 2025-2026] Programmation orientée objet
 
 Bonjour tout le monde,
 

@@ -72,8 +72,8 @@ d'enseignement et d'apprentissage, et les méthodes d'évaluation.
   [Consignes](./01-contenus-du-cours/02-introduction-a-php/01-mini-projet/README.md)
   ·
   [Solution](./01-contenus-du-cours/02-introduction-a-php/01-mini-projet/solution/README.md)
-- Exercices : [Énoncés et
-  solutions](./01-contenus-du-cours/02-introduction-a-php/02-exercices/README.md
+- Exercices :
+  [Énoncés et solutions](./01-contenus-du-cours/02-introduction-a-php/02-exercices/README.md)
 
 ## 🕑 Séance 02
 
@@ -153,7 +153,7 @@ d'enseignement et d'apprentissage, et les méthodes d'évaluation.
   ·
   [Accéder à la présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/07-recapitulatif-du-cours-avec-preparation-a-lexamen/07-recapitulatif-du-cours-et-preparation-a-lexamen-presentation.pdf)
 - Résultats des formulaires de feedback et évaluations GAPS :
-  [Accéder aux contenus](./01-contenus-du-cours/07-recapitulatif-du-cours-et-preparation-a-lexamen/01-resultats-des-formulaires-de-feedback-et-evaluations-gaps/README.md)
+  [Accéder au contenu](./01-contenus-du-cours/07-recapitulatif-du-cours-et-preparation-a-lexamen/01-resultats-des-formulaires-de-feedback-et-evaluations-gaps/README.md)
 - Examen blanc :
   [Accéder au contenu](./01-contenus-du-cours/07-recapitulatif-du-cours-et-preparation-a-lexamen/02-examen-blanc/README.md)
 

@@ -19,8 +19,8 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 >
 > À l'issue de ce contenu, les personnes devraient être capables de :
 >
-> - Lister les objectifs de l'unité d'enseignement.
-> - Lister les modalités d'organisation de l'unité d'enseignement.
+> - Lister les objectifs du cours.
+> - Lister les modalités d'organisation du cours.
 > - Lister les modalités d'évaluation.
 >
 > **Méthodes d'enseignement et d'apprentissage**
@@ -91,9 +91,8 @@ des concepts, autant théoriques que pratiques.
 
 ## Modalités d'évaluation
 
-L'évaluation de cette unité d'enseignement se fait à travers d'un seul examen
-final comprenant une partie théorique et une partie pratique, tous deux à faire
-sur ordinateur :
+L'évaluation de ce cours se fait à travers d'un seul examen final comprenant une
+partie théorique et une partie pratique, tous deux à faire sur ordinateur :
 
 - Partie théorique (40% de la note finale).
 - Partie pratique (60% de la note finale).
@@ -101,7 +100,7 @@ sur ordinateur :
 ### Partie théorique
 
 La partie théorique portera sur les connaissances théoriques acquises tout au
-long de l'unité d'enseignement ainsi que les exercices.
+long du cours ainsi que les exercices.
 
 Elle durera environ 45 minutes et devrait utiliser la plateforme d'évaluation en
 ligne de la HEIG-VD (Eval).
@@ -112,7 +111,7 @@ personnelles, communication, etc.).
 ### Partie pratique
 
 La partie pratique portera sur les compétences pratiques acquises tout au long
-de l'unité d'enseignement avec le mini-projet et les exercices.
+du cours avec le mini-projet et les exercices.
 
 Elle durera environ 2h15 et sera à réaliser sur ordinateur à l'aide de votre
 environnement de développement.
