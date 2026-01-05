@@ -1,4 +1,4 @@
-# Cours 04 - Formulaires HTML et validation
+# Formulaires HTML et validation
 
 ## Ressources
 
@@ -6,9 +6,9 @@
   [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/01-theorie/index.html)
   ·
   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/01-theorie/04-formulaires-html-et-validation-presentation.pdf)
-- Mini-projet : [Consignes](./02-mini-project/README.md) ·
-  [Solution](./02-mini-project/solution/)
-- Exercices : [Énoncés et solutions](./03-exercices/README.md)
+- Mini-projet : [Consignes](./01-mini-projet/README.md) ·
+  [Solution](./01-mini-projet/solution/)
+- Exercices : [Énoncés et solutions](./02-exercices/README.md)
 
 ## Objectifs
 

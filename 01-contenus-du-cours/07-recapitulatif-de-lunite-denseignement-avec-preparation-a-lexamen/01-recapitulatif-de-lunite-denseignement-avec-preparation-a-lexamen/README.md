@@ -1,4 +1,4 @@
-# Cours 08 - Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application
+# Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application
 
 ## Ressources
 
@@ -9,8 +9,8 @@
   ·
   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf)
   [Résultats des formulaires de feedback et évaluations GAPS](./resultats-des-formulaires-de-feedback-et-evaluations-gaps)
-- Mini-projet : [Consignes](../02-mini-project/README.md) ·
-  [Solution](../02-mini-project/solution/)
+- Mini-projet : [Consignes](../01-mini-projet/README.md) ·
+  [Solution](../01-mini-projet/solution/)
 - Examen blanc : [Énoncé](../03-examen-blanc/README.md)
 
 ## Table des matières
@@ -20,13 +20,13 @@
 - [Objectifs](#objectifs)
 - [Retrospective](#retrospective)
   - [Objectifs de l'unité d'enseignement](#objectifs-de-lunité-denseignement)
-  - [Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP](#cours-01---modalités-de-lunité-denseignement-et-introduction-à-php)
-  - [Cours 02 - Fonctions](#cours-02---fonctions)
-  - [Cours 03 - Tableaux et boucles](#cours-03---tableaux-et-boucles)
-  - [Cours 04 - Formulaires HTML et validation](#cours-04---formulaires-html-et-validation)
-  - [Cours 05 - Base de données et PDO](#cours-05---base-de-données-et-pdo)
-  - [Cours 06 - Sécurité et nettoyage des saisies utilisateurs](#cours-06---sécurité-et-nettoyage-des-saisies-utilisateurs)
-  - [Cours 07 - Programmation orientée objet](#cours-07---programmation-orientée-objet)
+  - [Introduction à PHP](#cours-01---modalités-de-lunité-denseignement-et-introduction-à-php)
+  - [Fonctions](#cours-02---fonctions)
+  - [Tableaux et boucles](#cours-03---tableaux-et-boucles)
+  - [Formulaires HTML et validation](#cours-04---formulaires-html-et-validation)
+  - [Base de données et PDO](#cours-05---base-de-données-et-pdo)
+  - [Sécurité et nettoyage des saisies utilisateurs](#cours-06---sécurité-et-nettoyage-des-saisies-utilisateurs)
+  - [Programmation orientée objet](#cours-07---programmation-orientée-objet)
 - [Résultats des formulaires de feedback et évaluations GAPS](#résultats-des-formulaires-de-feedback-et-évaluations-gaps)
 - [Préparation à l'examen final](#préparation-à-lexamen-final)
   - [Examen final](#examen-final)
@@ -72,7 +72,7 @@ objectifs.
 Parcourons maintenant les cours et les concepts clés abordés durant l'unité
 d'enseignement.
 
-### Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP
+### Introduction à PHP
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php).
 
@@ -85,7 +85,7 @@ d'enseignement.
   serveur avant d'envoyer le contenu au navigateur.
 - La syntaxe de PHP est similaire à d'autres langages de programmation.
 
-### Cours 02 - Fonctions
+### Fonctions
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/02-fonctions).
 
@@ -98,7 +98,7 @@ d'enseignement.
 - L'utilisation de fonctions permet d'améliorer la lisibilité et la
   maintenabilité du code.
 
-### Cours 03 - Tableaux et boucles
+### Tableaux et boucles
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/03-tableaux-et-boucles).
 
@@ -112,7 +112,7 @@ d'enseignement.
 - Les boucles `for`, `foreach`, `while` et `do...while` sont couramment
   utilisées en PHP.
 
-### Cours 04 - Formulaires HTML et validation
+### Formulaires HTML et validation
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/04-formulaires-html-et-validation).
 
@@ -127,7 +127,7 @@ d'enseignement.
 - La validation peut être effectuée côté client (attributs HTML - optionnel) et
   côté serveur (PHP - obligatoire).
 
-### Cours 05 - Base de données et PDO
+### Base de données et PDO
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/05-base-de-donnees-et-pdo).
 
@@ -140,7 +140,7 @@ d'enseignement.
 - PDO offre une interface orientée objet pour exécuter des requêtes SQL et
   récupérer des résultats.
 
-### Cours 06 - Sécurité et nettoyage des saisies utilisateurs
+### Sécurité et nettoyage des saisies utilisateurs
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/06-securite-et-nettoyage-des-saisies-utilisateurs).
 
@@ -155,7 +155,7 @@ d'enseignement.
 - Les fonctions de nettoyage comme `htmlspecialchars()` aident à sécuriser les
   données affichées dans le navigateur en échappant les caractères spéciaux.
 
-### Cours 07 - Programmation orientée objet
+### Programmation orientée objet
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/07-programmation-orientee-objet).
 
@@ -350,7 +350,7 @@ de vous faire renvoyer**.
 ### Comment se préparer ?
 
 - Avoir un environnement de développement fonctionnel (cf. cours
-  [01 - Modalités de l'unité d'enseignement et introduction à PHP](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php),
+  [01 - Introduction à PHP](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php),
   plus particulièrement le mini-projet).
 - **Désactiver toutes aides externes (Copilot, ChatGPT, etc.)**.
 - Relire les supports de cours avec leurs objectifs respectifs (utilisez ces
@@ -365,7 +365,7 @@ finaliser l'application avec quelques fonctionnalités supplémentaires (styles
 CSS, amélioration du code, etc.).
 
 Vous trouverez les détails du mini-projet ici :
-[Consignes](../02-mini-project/README.md).
+[Consignes](../01-mini-projet/README.md).
 
 ## Examen blanc
 

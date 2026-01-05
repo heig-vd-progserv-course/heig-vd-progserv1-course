@@ -121,7 +121,7 @@ barre de progression** : Désactivée
 ### Message envoyé aux personnes qui étudient avant chaque cours
 
 ```text
-[ProgServ1 2024-2025] Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP
+[ProgServ1 2024-2025] Introduction à PHP
 
 Bonjour tout le monde,
 
@@ -131,7 +131,7 @@ N'hésitez pas à me le faire savoir si vous avez des questions.
 ```
 
 ```text
-[ProgServ1 2024-2025] Cours 02 - Fonctions
+[ProgServ1 2024-2025] Fonctions
 
 Bonjour tout le monde,
 
@@ -141,7 +141,7 @@ N'hésitez pas à me le faire savoir si vous avez des questions.
 ```
 
 ```text
-[ProgServ1 2024-2025] Cours 03 - Tableaux et boucles
+[ProgServ1 2024-2025] Tableaux et boucles
 
 Bonjour tout le monde,
 
@@ -151,7 +151,7 @@ N'hésitez pas à me le faire savoir si vous avez des questions.
 ```
 
 ```text
-[ProgServ1 2024-2025] Cours 04 - Formulaires HTML et validation
+[ProgServ1 2024-2025] Formulaires HTML et validation
 
 Bonjour tout le monde,
 
@@ -161,7 +161,7 @@ N'hésitez pas à me le faire savoir si vous avez des questions.
 ```
 
 ```text
-[ProgServ1 2024-2025] Cours 05 - Base de données et PDO
+[ProgServ1 2024-2025] Base de données et PDO
 
 Bonjour tout le monde,
 
@@ -171,7 +171,7 @@ N'hésitez pas à me le faire savoir si vous avez des questions.
 ```
 
 ```text
-[ProgServ1 2024-2025] Cours 06 - Sécurité et nettoyage des saisies utilisateurs
+[ProgServ1 2024-2025] Sécurité et nettoyage des saisies utilisateurs
 
 Bonjour tout le monde,
 
@@ -181,7 +181,7 @@ N'hésitez pas à me le faire savoir si vous avez des questions.
 ```
 
 ```text
-[ProgServ1 2024-2025] Cours 07 - Programmation orientée objet
+[ProgServ1 2024-2025] Programmation orientée objet
 
 Bonjour tout le monde,
 

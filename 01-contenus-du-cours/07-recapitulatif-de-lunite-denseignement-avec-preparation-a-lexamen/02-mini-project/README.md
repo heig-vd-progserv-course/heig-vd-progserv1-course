@@ -1,8 +1,8 @@
-# Cours 08 - Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application - Mini-projet
+# Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application - Mini-projet
 
 Ce mini-projet est conçu pour vous permettre de mettre en pratique les concepts
 théoriques vus dans le cours
-_[Cours 08 - Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application](../01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/README.md)_.
+_[Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application](../01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/README.md)_.
 
 ## Ressources
 
@@ -14,8 +14,8 @@ _[Cours 08 - Récapitulatif de l'unité d'enseignement avec préparation à l'ex
   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf)
   ·
   [Résultats des formulaires de feedback et évaluations GAPS](../01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/resultats-des-formulaires-de-feedback-et-evaluations-gaps/)
-- Mini-projet : [Consignes](../02-mini-project/README.md) ·
-  [Solution](../02-mini-project/solution/)
+- Mini-projet : [Consignes](../01-mini-projet/README.md) ·
+  [Solution](../01-mini-projet/solution/)
 - Examen blanc : [Énoncé](../03-examen-blanc/README.md)
 
 ## Table des matières

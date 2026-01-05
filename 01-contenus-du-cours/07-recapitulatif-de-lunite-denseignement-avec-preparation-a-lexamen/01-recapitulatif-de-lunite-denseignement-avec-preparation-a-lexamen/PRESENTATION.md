@@ -7,16 +7,19 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
-title: HEIG-VD ProgServ1 Course - Cours 08 - Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application
-description: Cours 08 - Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application pour le cours ProgServ1 à la HEIG-VD, Suisse
+title: HEIG-VD ProgServ1 Course - Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application
+description: Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application pour le cours ProgServ1 à la HEIG-VD, Suisse
 url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/index.html
-header: "**Cours 08 - Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application**"
-footer: "**HEIG-VD** - ProgServ1 Course 2025-2026 - CC BY-SA 4.0"
+header: "**Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application**"
+footer:
+  "[**HEIG-VD**](https://heig-vd.ch) - [ProgServ1 Course
+  2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
+  - [CC BY-SA 4.0][license]"
 headingDivider: 6
 math: mathjax
 -->
 
-# Cours 08 - Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application
+# Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application
 
 <!--
 _class: lead
@@ -25,8 +28,8 @@ _paginate: false
 
 <https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course>
 
-[Support de cours][course-material] · [Présentation (web)][presentation-web] ·
-[Présentation (PDF)][presentation-pdf]
+Visualiser le contenu complet sur GitHub [à cette
+adresse][contenu-complet-sur-github].
 
 <small>L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -40,7 +43,7 @@ _paginate: false
 <!-- _class: lead -->
 
 _Cette présentation est un résumé du support de cours. Pour plus de détails,
-consultez le [support de cours][course-material]._
+consultez le [support de cours][contenu-complet-sur-github]._
 
 ## Récapitulatif de l'unité d'enseignement avec préparation à l'examen et finalisation de l'application
 
@@ -66,7 +69,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 > - Implémenter des concepts de programmation orientée objet.
 > - ~~Gérer les cookies et les sessions utilisateurs.~~
 
-### Cours 01 - Modalités de l'unité d'enseignement et introduction à PHP
+### Introduction à PHP
 
 <!-- _class: lead -->
 
@@ -83,7 +86,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
   serveur avant d'envoyer le contenu au navigateur.
 - La syntaxe de PHP est similaire à d'autres langages de programmation.
 
-### Cours 02 - Fonctions
+### Fonctions
 
 <!-- _class: lead -->
 
@@ -100,7 +103,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 - L'utilisation de fonctions permet d'améliorer la lisibilité et la
   maintenabilité du code.
 
-### Cours 03 - Tableaux et boucles
+### Tableaux et boucles
 
 <!-- _class: lead -->
 
@@ -118,7 +121,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 - Les boucles `for`, `foreach`, `while` et `do...while` sont couramment
   utilisées en PHP.
 
-### Cours 04 - Formulaires HTML et validation
+### Formulaires HTML et validation
 
 <!-- _class: lead -->
 
@@ -137,7 +140,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 - La validation peut être effectuée côté client (attributs HTML - optionnel) et
   côté serveur (PHP - obligatoire).
 
-### Cours 05 - Base de données et PDO
+### Base de données et PDO
 
 <!-- _class: lead -->
 
@@ -154,7 +157,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 - PDO offre une interface orientée objet pour exécuter des requêtes SQL et
   récupérer des résultats.
 
-### Cours 06 - Sécurité et nettoyage des saisies utilisateurs
+### Sécurité et nettoyage des saisies utilisateurs
 
 <!-- _class: lead -->
 
@@ -173,7 +176,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 - Les fonctions de nettoyage comme `htmlspecialchars()` aident à sécuriser les
   données affichées dans le navigateur en échappant les caractères spéciaux.
 
-### Cours 07 - Programmation orientée objet
+### Programmation orientée objet
 
 <!-- _class: lead -->
 
@@ -199,7 +202,7 @@ Discussions et retours sur l'unité d'enseignement.
 <small>
 
 Vous pourrez les retrouver sur le [dépôt Git de l'unité
-d'enseignement][course-material].
+d'enseignement][contenu-complet-sur-github].
 
 </small>
 
@@ -326,7 +329,7 @@ de vous faire renvoyer**.
 ### Comment se préparer ?
 
 - Avoir un environnement de développement fonctionnel (cf. cours
-  [01 - Modalités de l'unité d'enseignement et introduction à PHP](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php),
+  [01 - Introduction à PHP](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php),
   plus particulièrement le mini-projet).
 - **Désactiver toutes aides externes (Copilot, ChatGPT, etc.)**.
 - Relire les supports de cours avec leurs objectifs respectifs (utilisez ces
@@ -342,7 +345,7 @@ Est-ce que vous avez des questions ?
 
 ## À vous de jouer !
 
-- Réaliser le [mini-projet][mini-project] (optionnel).
+- Réaliser le [mini-projet][mini-projet] (optionnel).
 - Réaliser l'[examen blanc][mock-exam].
 - Poser des questions si nécessaire.
 
@@ -525,12 +528,12 @@ de vous faire renvoyer**.
 	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/index.html
 [presentation-pdf]:
 	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf
-[course-material]:
+[contenu-complet-sur-github]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/README.md
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
-[mini-project]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/02-mini-project/README.md
+[mini-projet]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-mini-projet/README.md
 [mock-exam]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/03-examen-blanc/README.md
 
