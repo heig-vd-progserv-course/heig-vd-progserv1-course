@@ -407,7 +407,7 @@ public static void main(String[] args) {
 - Les tableaux sont déclarés entre des crochets (`[]`) ou avec la fonction
   `array()`.
 - Les valeurs d'un tableau sont indexées à partir de 0.
-- Nous étudierons les tableaux plus en détails dans un prochain cours.
+- Nous les étudierons plus en détails dans une prochaine séance.
 
 ![bg right:40%][illustration-les-tableaux]
 

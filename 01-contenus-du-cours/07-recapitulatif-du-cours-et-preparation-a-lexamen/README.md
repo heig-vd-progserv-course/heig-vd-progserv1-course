@@ -1,4 +1,4 @@
-# Récapitulatif du cours et préparation à l'examen
+# Récapitulatif du cours
 
 L. Delafontaine, avec l'aide de GitHub Copilot.
 

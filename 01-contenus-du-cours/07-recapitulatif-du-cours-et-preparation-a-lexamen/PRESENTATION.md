@@ -531,7 +531,7 @@ de vous faire renvoyer**.
 [contenu-complet-sur-github]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/07-recapitulatif-du-cours-et-preparation-a-lexamen/README.md
 [examen-blanc]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/07-recapitulatif-du-cours-et-preparation-a-lexamen/03-examen-blanc/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/07-recapitulatif-du-cours-et-preparation-a-lexamen/02-examen-blanc/README.md
 
 <!-- Illustrations -->
 

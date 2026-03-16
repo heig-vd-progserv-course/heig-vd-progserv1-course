@@ -144,18 +144,18 @@ d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 ## 🕕 Séance 06
 
-### Récapitulatif du cours et préparation à l'examen
+### Récapitulatif du cours
 
 - Supports de cours :
   [Accéder au contenu (Markdown)](./01-contenus-du-cours/07-recapitulatif-du-cours-avec-preparation-a-lexamen/README.md)
   ·
   [Accéder à la présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/07-recapitulatif-du-cours-avec-preparation-a-lexamen/presentation.html)
   ·
-  [Accéder à la présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/07-recapitulatif-du-cours-avec-preparation-a-lexamen/07-recapitulatif-du-cours-et-preparation-a-lexamen-presentation.pdf)
+  [Accéder à la présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/07-recapitulatif-du-cours-avec-preparation-a-lexamen/07-recapitulatif-du-cours-presentation.pdf)
 - Résultats des formulaires de feedback et évaluations GAPS :
-  [Accéder au contenu](./01-contenus-du-cours/07-recapitulatif-du-cours-et-preparation-a-lexamen/01-resultats-des-formulaires-de-feedback-et-evaluations-gaps/README.md)
+  [Accéder au contenu](./01-contenus-du-cours/07-recapitulatif-du-cours/01-resultats-des-formulaires-de-feedback-et-evaluations-gaps/README.md)
 - Examen blanc :
-  [Accéder au contenu](./01-contenus-du-cours/07-recapitulatif-du-cours-et-preparation-a-lexamen/02-examen-blanc/README.md)
+  [Accéder au contenu](./01-contenus-du-cours/07-recapitulatif-du-cours/02-examen-blanc/README.md)
 
 </details>
 

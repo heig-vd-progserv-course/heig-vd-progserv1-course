@@ -110,6 +110,7 @@ consulter, modifier et supprimer des animaux de compagnie.
 
 Chaque animal de compagnie aura les attributs suivants :
 
+- Un identifiant unique (généré automatiquement par la base de données).
 - Nom (un champ texte).
 - Espèce (un champ de sélection contenant, par exemple : chien, chat, lézard,
   serpent, oiseau, lapin, autre).
@@ -124,15 +125,13 @@ Chaque animal de compagnie aura les attributs suivants :
 L'application web comportera les pages suivantes :
 
 - **Page d'accueil** : une page d'accueil avec une brève introduction à
-  l'application et un lien vers la liste des animaux.
-- **Liste des animaux** : une page affichant tous les animaux de la base de
-  données avec leur nom, espèce, âge et photo. Chaque animal doit être cliquable
-  pour afficher plus de détails.
-- **Détail d'un animal** : une page affichant les informations détaillées sur un
-  animal spécifique, y compris tous ses attributs. L'utilisateur doit pouvoir
-  modifier ou supprimer l'animal depuis cette page.
-- **Ajout d'un animal** : une page permettant à l'utilisateur de créer un nouvel
-  animal en remplissant un formulaire avec tous les attributs.
+  l'application et la liste des animaux de compagnie. Chaque animal doit être
+  cliquable pour afficher plus de détails.
+- **Visualisation d'un animal** : une page affichant les informations détaillées
+  sur un animal spécifique, y compris tous ses attributs. L'utilisateur doit
+  pouvoir modifier ou supprimer l'animal depuis cette page.
+- **Création d'un animal** : une page permettant à l'utilisateur de créer un
+  nouvel animal en remplissant un formulaire avec tous les attributs.
 - **Modification d'un animal** : une page permettant à l'utilisateur de mettre à
   jour un animal existant en modifiant ses attributs dans un formulaire.
 - **Suppression d'un animal** : une page permettant à l'utilisateur de supprimer
@@ -1180,12 +1179,25 @@ Sauvegardez le fichier et créez les autres fichiers de la même manière.
 
 </details>
 
+La dernière page, `delete.php`, sera une page particulière qui ne nécessitera
+pas d'interface utilisateur. Créez le fichier `delete.php` avec le contenu
+suivant :
+
+```php
+<?php
+
+echo "Cette page sera utilisée pour supprimer un animal de compagnie.";
+```
+
+Elle sera complétée dans une prochaine session du mini-projet.
+
 Sauvegardez tous les fichiers et testez-les dans votre navigateur en accédant
 aux adresses suivantes :
 
 - <http://localhost/progserv1/mini-projet/create.php>
 - <http://localhost/progserv1/mini-projet/edit.php>
 - <http://localhost/progserv1/mini-projet/view.php>
+- <http://localhost/progserv1/mini-projet/delete.php>
 
 Vous avez maintenant toutes les pages nécessaires pour le mini-projet !
 

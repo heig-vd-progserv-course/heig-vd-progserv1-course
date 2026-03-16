@@ -18,6 +18,7 @@ théoriques vus dans le cours _["Fonctions"](../README.md)_.
 - [Ressources](#ressources)
 - [Table des matières](#table-des-matières)
 - [Objectifs de la session](#objectifs-de-la-session)
+- [Rappel de la structure des animaux de compagnie](#rappel-de-la-structure-des-animaux-de-compagnie)
 - [Création du ficher `functions.php`](#création-du-ficher-functionsphp)
 - [Importer et utiliser les fonctions dans le fichier `index.php`](#importer-et-utiliser-les-fonctions-dans-le-fichier-indexphp)
 - [Créer les pages de base pour gérer les animaux de compagnie](#créer-les-pages-de-base-pour-gérer-les-animaux-de-compagnie)
@@ -33,10 +34,29 @@ théoriques vus dans le cours _["Fonctions"](../README.md)_.
 
 À l'issue de cette session, les personnes qui étudient devraient avoir pu :
 
-- Mettre en place une structure de projet PHP
 - Créer des fonctions PHP pour visualiser, ajouter, modifier et supprimer des
-  animaux de compagnie de façon fictive
-- Créer les pages HTML de base pour gérer les animaux de compagnie
+  animaux de compagnie de façon fictive.
+
+## Rappel de la structure des animaux de compagnie
+
+Pour rappel, chaque animal de compagnie a les attributs suivants :
+
+- Un identifiant unique (généré automatiquement par la base de données).
+- Nom (un champ texte).
+- Espèce (un champ de sélection contenant, par exemple : chien, chat, lézard,
+  serpent, oiseau, lapin, autre).
+- Surnom (un champ texte facultatif).
+- Sexe (un champ boutons radio).
+- Âge (un champ numérique).
+- Couleur (un champ de saisie de couleur facultatif).
+- Personnalité (un champ cases à cocher facultatif).
+- Taille en cm (un champ numérique facultatif).
+- Notes (un champ de texte libre facultatif).
+
+Nous allons donc créer des fonctions pour manipuler ces animaux de compagnie de
+façon fictive. Pour le moment, les données ne seront pas persistées (=
+sauvegardées) dans une base de données, mais nous verrons cela dans une future
+session.
 
 ## Création du ficher `functions.php`
 
@@ -46,23 +66,35 @@ mini-projet.
 
 Pour le moment, ce fichier contiendra différentes fonctions pour manipuler des
 animaux de compagnie de façon fictive. Ces fonctions ne seront donc pas
-fonctionnelles et seront à compléter dans de futurs sessions mais permettront
+fonctionnelles et seront à compléter dans de futurs sessions. Elles permettront
 d'illustrer comment séparer les fonctions de notre projet.
 
-Créez un fichier `functions.php` dans le dossier `mini-projet`.
+Créez un fichier `functions.php` dans le dossier `mini-projet/src` (créez-le si
+nécessaire).
 
-Votre structure de projet devrait ressembler à ceci :
+La structure du dossier `mini-projet` devrait ressembler à ceci :
 
 ```text
-progserv1/
-├── exercices/
-│   └── index.php
-├── mini-projet/
-│   ├── functions.php
-│   └── index.php
+mini-projet/
+├── assets/
+│   ├── css/
+│   │   └── styles.css
+│   └── images/
+│       └── logo.svg
+├── src/
+│   └── functions.php
+├── create.php
+├── delete.php
+├── edit.php
 ├── index.php
-└── phpinfo.php
+└── view.php
 ```
+
+Cette structure vous permettra de garder votre projet organisé en séparant les
+différents types de fichiers (les pages PHP, les ressources statiques comme les
+images et les feuilles de style CSS, et le code source PHP).
+
+## Création des fonctions
 
 Complétez le fichier `functions.php` avec le code suivant :
 

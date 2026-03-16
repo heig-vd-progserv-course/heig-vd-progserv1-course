@@ -1,2 +1,2 @@
 <?php
-echo "Bienvenue dans les exercices de l'unité d'enseignement Programmation serveur 1 !";
+echo "Bienvenue dans le dossier <code>exercices</code> du cours <i>Programmation serveur 1</i> !";

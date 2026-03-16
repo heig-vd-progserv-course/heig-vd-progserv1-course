@@ -1,42 +1,30 @@
-<?php
-require 'functions.php';
-
-// Crée Caramel, un chat de 3 ans
-addPet("Caramel", 3);
-
-// Crée Rex, un chien de 8 ans
-addPet("Rex", 8);
-
-// Crée Tweety, un oiseau de 1 an
-addPet("Tweety", 1);
-
-// Crée Godzilla, un lézard de 4 ans
-addPet("Godzilla", 4);
-
-// Récupère tous les animaux
-getPets();
-
-// Récupère l'animal nommé Rex
-getPet("Rex");
-
-// Met à jour l'âge de Rex à 9 ans
-updatePet("Rex", 9);
-
-// Supprime Tweety... :(
-removePet("Tweety");
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
     <title>Page d'accueil | Gestionnaire d'animaux de compagnie</title>
 </head>
 
 <body>
-    <h1>Page d'accueil du gestionnaire d'animaux de compagnie</h1>
-    <p>Bienvenue sur la page d'accueil du gestionnaire d'animaux de compagnie !</p>
-    <p>Utilise cette page pour visualiser et gérer tous les animaux de compagnie.</p>
+    <main class="container">
+        <div class="logo">
+            <img src="assets/images/logo.svg" alt="Logo du gestionnaire d'animaux de compagnie">
+        </div>
+
+        <h1>Page d'accueil du gestionnaire d'animaux de compagnie</h1>
+
+        <p>Bienvenue sur la page d'accueil du gestionnaire d'animaux de compagnie !</p>
+
+        <p>Cette application vous permet de gérer facilement vos animaux de compagnie.</p>
+
+        <a href="create.php"><button>Créer un nouvel animal</button></a>
+    </main>
 </body>
 
 </html>

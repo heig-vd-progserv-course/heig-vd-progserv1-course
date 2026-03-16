@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <title>Page de création | Gestionnaire d'animaux de compagnie</title>
+    <title>Page de mise à jour | Gestionnaire d'animaux de compagnie</title>
 </head>
 
 <body>
     <main class="container">
-        <h1>Page de création du gestionnaire d'animaux de compagnie</h1>
+        <h1>Page de mise à jour du gestionnaire d'animaux de compagnie</h1>
 
-        <p>Utilise cette page pour créer un nouvel animal de compagnie.</p>
+        <p>Utilise cette page pour mettre à jour un animal de compagnie existant.</p>
 
         <p><a href="index.php">Retour à l'accueil</a></p>
     </main>

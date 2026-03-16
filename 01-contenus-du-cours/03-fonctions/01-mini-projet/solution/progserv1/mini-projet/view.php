@@ -2,13 +2,23 @@
 <html lang="fr">
 
 <head>
-    <title>Visualise et modifie un animal de compagnie | Gestionnaire d'animaux de compagnie</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Page de visualisation | Gestionnaire d'animaux de compagnie</title>
 </head>
 
 <body>
-    <h1>Visualise et modifie un animal de compagnie</h1>
-    <p><a href="index.php">Retour à l'accueil</a></p>
-    <p>Utilise cette page pour visualiser et modifier un animal de compagnie.</p>
+    <main class="container">
+        <h1>Page de visualisation du gestionnaire d'animaux de compagnie</h1>
+
+        <p>Utilise cette page pour visualiser les détails d'un animal de compagnie.</p>
+
+        <p><a href="index.php">Retour à l'accueil</a></p>
+    </main>
 </body>
 
 </html>
