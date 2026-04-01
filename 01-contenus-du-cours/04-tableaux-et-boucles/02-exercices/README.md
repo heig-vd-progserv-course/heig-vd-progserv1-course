@@ -1,42 +1,52 @@
 # Tableaux et boucles - Exercices
 
-Cette série d'exercices est conçue pour vous permettre de valider les concepts
-théoriques et pratiques vus dans le cours
-_["Tableaux et boucles"](../README.md)_.
+L. Delafontaine, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot).
 
-## Ressources
+Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-- Théorie : [Support de cours](../README.md) ·
-  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/index.html)
-  ·
-  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/03-tableaux-et-boucles-presentation.pdf)
-- Mini-projet : [Consignes](../01-mini-projet/README.md) ·
-  [Solution](../01-mini-projet/solution/README.md)
-- Exercices : [Énoncés et solutions](../02-exercices/README.md)
+> [!TIP]
+>
+> Toutes les informations relatives à ce contenu sont décrites dans le
+> [contenu principal](../README.md).
 
 ## Table des matières
 
-- [Ressources](#ressources)
 - [Table des matières](#table-des-matières)
-- [Exercice 1](#exercice-1)
-- [Exercice 2](#exercice-2)
-- [Exercice 3](#exercice-3)
-- [Exercice 4](#exercice-4)
-- [Exercice 5](#exercice-5)
-- [Exercice 6](#exercice-6)
-- [Exercice 7](#exercice-7)
-- [Exercice 8](#exercice-8)
-- [Exercice 9](#exercice-9)
-- [Exercice 10](#exercice-10)
-- [Exercice 11](#exercice-11)
-- [Exercice 12](#exercice-12)
-- [Exercice 13 - Bonus](#exercice-13---bonus)
-- [Exercice 14 - Bonus](#exercice-14---bonus)
-- [Exercice 15 - Bonus](#exercice-15---bonus)
-- [Exercice 16 - Bonus](#exercice-16---bonus)
-- [Exercice 17 - Bonus](#exercice-17---bonus)
+- [Exercices](#exercices)
+  - [Exercice 1](#exercice-1)
+  - [Exercice 2](#exercice-2)
+  - [Exercice 3](#exercice-3)
+  - [Exercice 4](#exercice-4)
+  - [Exercice 5](#exercice-5)
+  - [Exercice 6](#exercice-6)
+  - [Exercice 7](#exercice-7)
+  - [Exercice 8](#exercice-8)
+  - [Exercice 9](#exercice-9)
+  - [Exercice 10](#exercice-10)
+  - [Exercice 11](#exercice-11)
+  - [Exercice 12](#exercice-12)
+  - [Exercice 13 - Bonus](#exercice-13---bonus)
+  - [Exercice 14 - Bonus](#exercice-14---bonus)
+  - [Exercice 15 - Bonus](#exercice-15---bonus)
+  - [Exercice 16 - Bonus](#exercice-16---bonus)
+  - [Exercice 17 - Bonus](#exercice-17---bonus)
 
-## Exercice 1
+## Exercices
+
+> [!NOTE]
+>
+> Bien que ces exercices puissent paraître simples et que leur solution est
+> disponible dans ce même document, il est fortement recommandé de les réaliser
+> sans consulter les solutions au préalable.
+>
+> Ils ont pour but de vous former et de pratiquer les concepts vus dans le
+> contenu de cours.
+>
+> Il est donc important de les faire par vous-même avant de vérifier vos
+> réponses avec les solutions fournies.
+
+### Exercice 1
 
 Créez un tableau indexé `$fruits` contenant les éléments suivants :
 
@@ -73,7 +83,7 @@ Banane
 
 </details>
 
-## Exercice 2
+### Exercice 2
 
 Créez un tableau associatif `$person` contenant les éléments suivants :
 
@@ -114,7 +124,7 @@ Array ( [firstName] => John [lastName] => Doe [age] => 30 [city] => New York )
 
 </details>
 
-## Exercice 3
+### Exercice 3
 
 Créez un tableau multidimensionnel `$ticTacToe` (le tic-tac-toe est le nom
 anglophone du jeu du morpion) composé de trois tableaux indexés contenant les
@@ -155,7 +165,7 @@ O
 
 </details>
 
-## Exercice 4
+### Exercice 4
 
 Créez un tableau `$people` composé de trois tableaux associatifs contenant les
 éléments suivants :
@@ -210,7 +220,7 @@ Alice Smith
 
 </details>
 
-## Exercice 5
+### Exercice 5
 
 Créez un tableau multidimensionnel associatif `$fruitsAndVegetables` composé de
 deux tableaux indexés contenant les éléments suivants :
@@ -250,7 +260,7 @@ Array ( [0] => Carotte [1] => Tomate [2] => Salade [3] => Concombre [4] => Radis
 
 </details>
 
-## Exercice 6
+### Exercice 6
 
 Créez un tableau multidimensionnel associatif `$people` composé de trois
 tableaux associatifs contenant les éléments suivants :
@@ -305,7 +315,7 @@ Jane Doe
 
 </details>
 
-## Exercice 7
+### Exercice 7
 
 En utilisant une boucle `for`, affichez les éléments du tableau `$fruits` de
 l'[exercice 1](#exercice-1) un par un.
@@ -357,7 +367,7 @@ Fraise
 
 </details>
 
-## Exercice 8
+### Exercice 8
 
 En utilisant des boucles `for`, affichez les éléments du tableau `$ticTacToe` de
 l'[exercice 3](#exercice-3) avec à chaque fois le numéro de la ligne et le
@@ -450,7 +460,7 @@ Ligne 2, colonne 2 : X
 
 </details>
 
-## Exercice 9
+### Exercice 9
 
 En utilisant une boucle `foreach`, affichez les éléments du tableau `$people` de
 l'[exercice 4](#exercice-4) un par un.
@@ -536,7 +546,7 @@ Ville : Chicago
 
 </details>
 
-## Exercice 10
+### Exercice 10
 
 Ce bout de code contient différentes erreurs. Saurez-vous les identifier ? Pour
 chaque erreur, expliquez pourquoi elle est incorrecte et proposez une
@@ -588,7 +598,7 @@ Banane
 
 </details>
 
-## Exercice 11
+### Exercice 11
 
 En utilisant la documentation officielle de PHP sur les fonctions `range` :
 <https://www.php.net/manual/fr/function.range.php> et `shuffle` :
@@ -628,7 +638,7 @@ Array ( [0] => 3 [1] => 6 [2] => 7 [3] => 9 [4] => 1 [5] => 10 [6] => 8 [7] => 5
 
 </details>
 
-## Exercice 12
+### Exercice 12
 
 En utilisant la documentation officielle de PHP sur la fonction `sort` :
 <https://www.php.net/manual/fr/function.sort.php>, utilisez la fonction `sort`
@@ -654,7 +664,7 @@ Array ( [0] => Banane [1] => Cerise [2] => Fraise [3] => Poire [4] => Pomme )
 
 </details>
 
-## Exercice 13 - Bonus
+### Exercice 13 - Bonus
 
 En utilisant la documentation officielle de PHP sur la fonction `usort` :
 <https://www.php.net/manual/fr/function.usort.php>, utilisez la fonction `usort`
@@ -708,7 +718,7 @@ print_r($people);
 
 </details>
 
-## Exercice 14 - Bonus
+### Exercice 14 - Bonus
 
 En utilisant la documentation officielle de PHP sur les fonctions `usort` :
 <https://www.php.net/manual/fr/function.usort.php> et `strcmp` :
@@ -762,7 +772,7 @@ Array ( [0] => Array ( [name] => Alice Smith [age] => 35 [city] => Chicago ) [1]
 
 </details>
 
-## Exercice 15 - Bonus
+### Exercice 15 - Bonus
 
 En utilisant la documentation officielle de PHP sur les fonctions `range` :
 <https://www.php.net/manual/fr/function.range.php> et `array_sum` :
@@ -800,7 +810,7 @@ echo sumRange($start, $end);
 
 </details>
 
-## Exercice 16 - Bonus
+### Exercice 16 - Bonus
 
 En utilisant la documentation officielle de PHP sur les fonctions `explode` :
 <https://www.php.net/manual/fr/function.explode.php>, `array_reverse` :
@@ -835,7 +845,7 @@ world! Hello,
 
 </details>
 
-## Exercice 17 - Bonus
+### Exercice 17 - Bonus
 
 En utilisant la documentation officielle de PHP sur les fonctions `array_map` :
 <https://www.php.net/manual/fr/function.array-map.php> et `strrev` :
@@ -871,3 +881,8 @@ echo $result;
 ```
 
 </details>
+
+<!-- URLs -->
+
+[licence]:
+	https://github.com/heig-vd-devprodmed-course/heig-vd-devprodmed-course/blob/main/LICENSE.md

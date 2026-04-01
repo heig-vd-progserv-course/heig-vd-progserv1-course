@@ -1,50 +1,61 @@
 # Fonctions - Exercices
 
-Cette série d'exercices est conçue pour vous permettre de valider les concepts
-théoriques et pratiques vus dans le cours _["Fonctions"](../README.md)_.
+L. Delafontaine, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot).
 
-## Ressources
+Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-- Théorie : [Support de cours](../README.md) ·
-  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/02-fonctions/index.html)
-  ·
-  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/02-fonctions/02-fonctions-presentation.pdf)
-- Mini-projet : [Consignes](../01-mini-projet/README.md) ·
-  [Solution](../01-mini-projet/solution/README.md)
-- Exercices : [Énoncés et solutions](../02-exercices/README.md)
+> [!TIP]
+>
+> Toutes les informations relatives à ce contenu sont décrites dans le
+> [contenu principal](../README.md).
 
 ## Table des matières
 
-- [Ressources](#ressources)
 - [Table des matières](#table-des-matières)
-- [Exercice 1](#exercice-1)
-- [Exercice 2](#exercice-2)
-- [Exercice 3](#exercice-3)
-- [Exercice 4](#exercice-4)
-- [Exercice 5](#exercice-5)
-- [Exercice 6](#exercice-6)
-- [Exercice 7](#exercice-7)
-- [Exercice 8](#exercice-8)
-- [Exercice 9](#exercice-9)
-- [Exercice 10](#exercice-10)
-- [Exercice 11](#exercice-11)
-- [Exercice 12](#exercice-12)
-- [Exercice 13](#exercice-13)
-- [Exercice 14](#exercice-14)
-- [Exercice 15](#exercice-15)
-- [Exercice 16](#exercice-16)
-- [Exercice 17](#exercice-17)
-- [Exercice 18](#exercice-18)
-- [Exercice 19](#exercice-19)
-- [Exercice 20](#exercice-20)
-- [Exercice 21](#exercice-21)
-- [Exercice 22](#exercice-22)
-- [Exercice 23](#exercice-23)
-- [Exercice 24](#exercice-24)
-- [Exercice 25](#exercice-25)
-- [Exercice 26 - Exercice bonus](#exercice-26---exercice-bonus)
+- [Exercices](#exercices)
+  - [Exercice 1](#exercice-1)
+  - [Exercice 2](#exercice-2)
+  - [Exercice 3](#exercice-3)
+  - [Exercice 4](#exercice-4)
+  - [Exercice 5](#exercice-5)
+  - [Exercice 6](#exercice-6)
+  - [Exercice 7](#exercice-7)
+  - [Exercice 8](#exercice-8)
+  - [Exercice 9](#exercice-9)
+  - [Exercice 10](#exercice-10)
+  - [Exercice 11](#exercice-11)
+  - [Exercice 12](#exercice-12)
+  - [Exercice 13](#exercice-13)
+  - [Exercice 14](#exercice-14)
+  - [Exercice 15](#exercice-15)
+  - [Exercice 16](#exercice-16)
+  - [Exercice 17](#exercice-17)
+  - [Exercice 18](#exercice-18)
+  - [Exercice 19](#exercice-19)
+  - [Exercice 20](#exercice-20)
+  - [Exercice 21](#exercice-21)
+  - [Exercice 22](#exercice-22)
+  - [Exercice 23](#exercice-23)
+  - [Exercice 24](#exercice-24)
+  - [Exercice 25](#exercice-25)
+  - [Exercice 26 - Exercice bonus](#exercice-26---exercice-bonus)
 
-## Exercice 1
+## Exercices
+
+> [!NOTE]
+>
+> Bien que ces exercices puissent paraître simples et que leur solution est
+> disponible dans ce même document, il est fortement recommandé de les réaliser
+> sans consulter les solutions au préalable.
+>
+> Ils ont pour but de vous former et de pratiquer les concepts vus dans le
+> contenu de cours.
+>
+> Il est donc important de les faire par vous-même avant de vérifier vos
+> réponses avec les solutions fournies.
+
+### Exercice 1
 
 Déclarez une fonction `greet` qui prend un paramètre `$name` et affiche le
 message _"Hello, [name]!"_. Appelez cette fonction avec votre prénom comme
@@ -68,7 +79,7 @@ Hello, Alice!
 
 </details>
 
-## Exercice 2
+### Exercice 2
 
 Déclarez une fonction square qui prend un paramètre `$number` et retourne le
 carré de ce nombre. Appelez cette fonction avec le nombre `4` et affichez le
@@ -94,7 +105,7 @@ echo $result;
 
 </details>
 
-## Exercice 3
+### Exercice 3
 
 Déclarez une fonction multiply qui prend deux paramètres `$a` et `$b` et
 retourne leur produit. Appelez cette fonction avec les nombres 6 et 7, puis
@@ -120,7 +131,7 @@ echo $result;
 
 </details>
 
-## Exercice 4
+### Exercice 4
 
 Déclarez une fonction divide qui prend deux paramètres `$a` et `$b` et retourne
 le résultat de la division de `$a` par `$b`. Si `$b` est égal à 0, la fonction
@@ -150,7 +161,7 @@ echo $result . "<br>";
 
 </details>
 
-## Exercice 5
+### Exercice 5
 
 Déclarez une fonction `absoluteValue` qui prend un paramètre `$number` et
 retourne sa valeur absolue. Utilisez cette fonction pour afficher la valeur
@@ -184,7 +195,7 @@ echo $result;
 
 </details>
 
-## Exercice 6
+### Exercice 6
 
 Déclarez une fonction `maxOfTwo` qui prend deux paramètres `$a` et `$b` et
 retourne le plus grand des deux. Appelez cette fonction avec les nombres `12` et
@@ -214,7 +225,7 @@ echo $result;
 
 </details>
 
-## Exercice 7
+### Exercice 7
 
 Déclarez une fonction isEven qui prend un paramètre `$number` et retourne `true`
 si le nombre est pair, ou `false` sinon. Utilisez cette fonction pour vérifier
@@ -247,7 +258,7 @@ Even
 
 </details>
 
-## Exercice 8
+### Exercice 8
 
 Déclarez une fonction `grade` qui calcule la note finale d'un.e étudiant.e en
 fonction du barème fédéral suisse (voir ci-dessous). La fonction prend deux
@@ -283,7 +294,7 @@ echo $result;
 
 </details>
 
-## Exercice 9
+### Exercice 9
 
 Déclarez une fonction `isPassing` qui prend un paramètre `$grade` et retourne
 `true` si la note est supérieure ou égale à 4.0, ou `false` sinon. Utilisez
@@ -314,7 +325,7 @@ Passing
 
 </details>
 
-## Exercice 10
+### Exercice 10
 
 Déclarez une fonction `isLeapYear` qui prend un paramètre `$year` et retourne
 `true` si l'année est bissextile (voir ci-dessous), ou `false` sinon.
@@ -368,7 +379,7 @@ Non bissextile
 
 </details>
 
-## Exercice 11
+### Exercice 11
 
 En utilisant la documentation officielle de PHP sur la fonction `round` :
 <https://www.php.net/manual/fr/function.round.php>, utilisez cette fonction pour
@@ -391,7 +402,7 @@ echo $roundedNumber;
 
 </details>
 
-## Exercice 12
+### Exercice 12
 
 En utilisant la documentation officielle de PHP sur la fonction `ceil` :
 <https://www.php.net/manual/fr/function.ceil.php>, utilisez cette fonction pour
@@ -414,7 +425,7 @@ echo $roundedNumber;
 
 </details>
 
-## Exercice 13
+### Exercice 13
 
 En utilisant la documentation officielle de PHP sur la fonction `floor` :
 <https://www.php.net/manual/fr/function.floor.php>, utilisez cette fonction pour
@@ -437,7 +448,7 @@ echo $roundedNumber;
 
 </details>
 
-## Exercice 14
+### Exercice 14
 
 En reprenant l'[exercice 5](#exercice-5) et la documentation officielle de PHP
 sur la fonction `abs` : <https://www.php.net/manual/fr/function.abs.php>,
@@ -464,7 +475,7 @@ echo $result;
 
 </details>
 
-## Exercice 15
+### Exercice 15
 
 En utilisant la documentation officielle de PHP sur la fonction `pow` :
 <https://www.php.net/manual/fr/function.pow.php>, déclarez une fonction `power`
@@ -493,7 +504,7 @@ echo $result;
 
 </details>
 
-## Exercice 16
+### Exercice 16
 
 En utilisant la documentation officielle de PHP sur la fonction `str_replace` :
 <https://www.php.net/manual/fr/function.str-replace.php>, utilisez cette
@@ -517,7 +528,7 @@ Hello, PHP!
 
 </details>
 
-## Exercice 17
+### Exercice 17
 
 En utilisant la documentation officielle de PHP sur la fonction `str_word_count`
 : <https://www.php.net/manual/fr/function.str-word-count.php>, utilisez cette
@@ -541,7 +552,7 @@ echo $wordCount;
 
 </details>
 
-## Exercice 18
+### Exercice 18
 
 En utilisant la documentation officielle de PHP sur la fonction
 `str_starts_with` :
@@ -570,7 +581,7 @@ if ($result) {
 
 </details>
 
-## Exercice 19
+### Exercice 19
 
 En utilisant la documentation officielle de PHP sur la fonction `str_repeat` :
 <https://www.php.net/manual/fr/function.str-repeat.php>, utilisez cette fonction
@@ -595,7 +606,7 @@ Hello, world!
 
 </details>
 
-## Exercice 20
+### Exercice 20
 
 En utilisant la documentation officielle de PHP sur la fonction `strpos` :
 <https://www.php.net/manual/fr/function.strpos.php>, utilisez cette fonction
@@ -619,7 +630,7 @@ echo $position;
 
 </details>
 
-## Exercice 21
+### Exercice 21
 
 En utilisant la documentation officielle de PHP sur les fonctions `is_string` :
 <https://www.php.net/manual/fr/function.is-string.php> et `is_int` :
@@ -673,7 +684,7 @@ Unknown
 
 </details>
 
-## Exercice 22
+### Exercice 22
 
 En utilisant la documentation officielle de PHP sur les fonctions `isset` :
 <https://www.php.net/manual/fr/function.isset.php> et `empty` :
@@ -727,7 +738,7 @@ Not set
 
 </details>
 
-## Exercice 23
+### Exercice 23
 
 En utilisant la documentation officielle de PHP sur les fonctions `strlen` :
 <https://www.php.net/manual/fr/function.strlen.php> et `substr` :
@@ -769,7 +780,7 @@ Hello...
 
 </details>
 
-## Exercice 24
+### Exercice 24
 
 En utilisant la documentation officielle de PHP sur la fonction `var_dump` :
 <https://www.php.net/manual/fr/function.var-dump.php>, déclarez une fonction
@@ -819,7 +830,7 @@ bool(true)
 
 </details>
 
-## Exercice 25
+### Exercice 25
 
 Déclarez une fonction `isDivisibleBy` qui prend deux paramètres `$a` et `$b` et
 retourne `true` si `$a` est divisible par `$b`, ou `false` sinon. Utilisez cette
@@ -857,7 +868,7 @@ if (isDivisibleBy(10, 3)) {
 
 </details>
 
-## Exercice 26 - Exercice bonus
+### Exercice 26 - Exercice bonus
 
 > [!NOTE]
 >
@@ -914,3 +925,8 @@ echo $result;
     Valeur absolue
     [fr.wikipedia.org](https://fr.wikipedia.org/wiki/Valeur_absolue), 23 mars
     2025
+
+<!-- URLs -->
+
+[licence]:
+	https://github.com/heig-vd-devprodmed-course/heig-vd-devprodmed-course/blob/main/LICENSE.md

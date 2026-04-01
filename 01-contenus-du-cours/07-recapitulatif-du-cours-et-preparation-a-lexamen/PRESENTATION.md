@@ -143,7 +143,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 - La validation peut être effectuée côté client (attributs HTML - optionnel) et
   côté serveur (PHP - obligatoire).
 
-### Base de données et PDO
+### Bases de données et PDO
 
 <!-- _class: lead -->
 
@@ -352,8 +352,8 @@ Est-ce que vous avez des questions ?
 - Poser des questions si nécessaire.
 
 \
-**Pour le mini-projet ou l'examen blanc, n'hésitez pas à vous entraidez si vous avez
-des difficultés !**
+**Pour le mini-projet ou l'examen blanc, n'hésitez pas à vous entraidez si vous
+avez des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 

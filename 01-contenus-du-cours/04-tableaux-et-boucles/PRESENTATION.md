@@ -605,8 +605,8 @@ Est-ce que vous avez des questions ?
 - Poser des questions si nécessaire.
 
 \
-**Pour le mini-projet ou les exercices, n'hésitez pas à vous entraidez si vous avez
-des difficultés !**
+**Pour le mini-projet ou les exercices, n'hésitez pas à vous entraidez si vous
+avez des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
@@ -644,7 +644,7 @@ des difficultés !**
 [contenu-complet-sur-github]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-tableaux-et-boucles/README.md
 [mini-projet]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-tableaux-et-boucles/01-mini-projet/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-tableaux-et-boucles/03-mini-projet/README.md
 [exercices]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-tableaux-et-boucles/02-exercices/README.md
 

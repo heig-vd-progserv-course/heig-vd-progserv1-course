@@ -13,10 +13,10 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 > - Autres formats :
 >   [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/presentation.html)
 >   ·
->   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/03-fonctions-presentation.pdf)
+>   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/03-fonctions-presentation.pdf).
 > - Résultats des formulaires de feedback et évaluations GAPS :
->   [Accéder aux contenus](./01-resultats-des-formulaires-de-feedback-et-evaluations-gaps/README.md)
-> - Examen blanc : [Accéder au contenu](./02-examen-blanc/README.md)
+>   [Accéder aux résultats](./01-resultats-des-formulaires-de-feedback-et-evaluations-gaps/README.md)
+> - Examen blanc : [Accéder au contenu](./02-examen-blanc/README.md).
 >
 > **Objectifs**
 >
@@ -67,7 +67,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
   - [Fonctions](#fonctions)
   - [Tableaux et boucles](#tableaux-et-boucles)
   - [Formulaires HTML et validation](#formulaires-html-et-validation)
-  - [Base de données et PDO](#base-de-données-et-pdo)
+  - [Bases de données et PDO](#base-de-données-et-pdo)
   - [Sécurité et nettoyage des saisies utilisateurs](#sécurité-et-nettoyage-des-saisies-utilisateurs)
   - [Programmation orientée objet](#programmation-orientée-objet)
 - [Résultats des formulaires de feedback et évaluations GAPS](#résultats-des-formulaires-de-feedback-et-évaluations-gaps)
@@ -179,7 +179,7 @@ d'enseignement.
 - La validation peut être effectuée côté client (attributs HTML - optionnel) et
   côté serveur (PHP - obligatoire).
 
-### Base de données et PDO
+### Bases de données et PDO
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/05-base-de-donnees-et-pdo).
 

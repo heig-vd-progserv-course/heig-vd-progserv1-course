@@ -100,7 +100,7 @@ document._
   - Un navigateur web.
   - Un éditeur de code (pour le développement).
 
-![bg right:40% contain](./images/architecture-client-serveur-avec-php.png)
+![bg right:40% contain](./images/architecture-client-serveur-avec-php.svg)
 
 ## Comment écrire du code PHP (1)
 
@@ -775,9 +775,21 @@ Est-ce que vous avez des questions ?
 - Application web en PHP pour gérer des animaux de compagnie.
 - Permet de mettre en pratique le contenu théorique du cours.
 - À réaliser tout au long du cours de façon guidée.
-- Je suis là pour vous aider si besoin.
+- A déployer en ligne pour être utilisée depuis n'importe où.
+- Je suis là pour vous aider.
 
 ![bg right:40% brightness:1.3][illustration-mini-projet]
+
+## Exemples de code
+
+<!-- _class: lead -->
+
+### Exemples de code
+
+- Permet de voir prendre en main et comprendre les exemples de code PHP
+  présentés en cours.
+
+![bg right:40%][illustration-exemples-de-code]
 
 ## Exercices
 
@@ -797,8 +809,8 @@ Est-ce que vous avez des questions ?
 - Poser des questions si nécessaire.
 
 \
-**Pour le mini-projet ou les exercices, n'hésitez pas à vous entraidez si vous avez
-des difficultés !**
+**Pour le mini-projet ou les exercices, n'hésitez pas à vous entraidez si vous
+avez des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
@@ -852,12 +864,15 @@ des difficultés !**
 - [Illustration][illustration-mini-projet] par
   [Alec Favale](https://unsplash.com/@alecfavale) sur
   [Unsplash](https://unsplash.com/photos/short-coated-white-and-brown-puppy-Ivzo69e18nk)
-- [Illustration][illustration-exercices] par
-  [Samuel Girven](https://unsplash.com/@samuelgirven) sur
-  [Unsplash](https://unsplash.com/photos/dumbbells-on-floor-VJ2s0c20qCo)
+- [Illustration][illustration-exemples-de-code] par
+  [American Jael](https://unsplash.com/@americanjael) sur
+  [Unsplash](https://unsplash.com/photos/a-person-writing-on-a-notebook-with-colored-pens-OEvLi8LM7cc)
 
 ## Sources (3)
 
+- [Illustration][illustration-exercices] par
+  [Samuel Girven](https://unsplash.com/@samuelgirven) sur
+  [Unsplash](https://unsplash.com/photos/dumbbells-on-floor-VJ2s0c20qCo)
 - [Illustration][illustration-a-vous-de-jouer] par
   [Nikita Kachanovsky](https://unsplash.com/@nkachanovskyyy) sur
   [Unsplash](https://unsplash.com/photos/white-sony-ps4-dualshock-controller-over-persons-palm-FJFPuE1MAOM)
@@ -869,7 +884,7 @@ des difficultés !**
 [contenu-complet-sur-github]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/02-introduction-a-php/README.md
 [mini-projet]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-mini-projet/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/03-mini-projet/README.md
 [exercices]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/02-exercices/README.md
 
@@ -905,11 +920,9 @@ des difficultés !**
 	https://images.unsplash.com/photo-1590593162201-f67611a18b87?fit=crop&h=720
 [illustration-mini-projet]:
 	https://images.unsplash.com/photo-1563460716037-460a3ad24ba9?fit=crop&h=720
+[illustration-exemples-de-code]:
+	https://images.unsplash.com/photo-1712762056200-50d8f803ba10?fit=crop&h=720
 [illustration-exercices]:
 	https://images.unsplash.com/photo-1576678927484-cc907957088c?fit=crop&h=720
 [illustration-a-vous-de-jouer]:
 	https://images.unsplash.com/photo-1509198397868-475647b2a1e5?fit=crop&h=720
-
-```
-
-```

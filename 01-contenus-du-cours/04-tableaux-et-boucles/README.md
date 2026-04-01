@@ -13,10 +13,10 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 > - Autres formats :
 >   [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/04-tableaux-et-boucles/presentation.html)
 >   ·
->   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/04-tableaux-et-boucles/04-tableaux-et-boucles-presentation.pdf)
-> - Mini-projet : [Consignes](./01-mini-projet/README.md) ·
->   [Solution](./01-mini-projet/solution/README.md)
-> - Exercices : [Énoncés et solutions](./02-exercices/README.md)
+>   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/04-tableaux-et-boucles/04-tableaux-et-boucles-presentation.pdf).
+> - Exemples de code : [Code source](./01-exemples-de-code/README.md).
+> - Exercices : [Énoncés et solutions](./02-exercices/README.md).
+> - Mini-projet : [Consignes](./03-mini-projet/README.md).
 >
 > **Objectifs**
 >
@@ -79,8 +79,9 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
   - [Fonction `count()`](#fonction-count)
   - [Fonction `array_push()`](#fonction-array_push)
 - [Conclusion](#conclusion)
-- [Mini-projet](#mini-projet)
+- [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
+- [Mini-projet](#mini-projet)
 - [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
 
 ## Objectifs
@@ -787,21 +788,29 @@ utiles comme `count()` et `array_push()`.
 Nous allons maintenant pouvoir utiliser ces concepts pour créer des applications
 plus complexes et plus puissantes.
 
-## Mini-projet
+## Exemples de code
 
-Nous vous invitons maintenant à réaliser le mini-projet de cette session pour
-mettre en pratique les concepts vus en classe.
+Nous vous invitons maintenant à consulter les exemples de code de la séance afin
+de mieux comprendre les concepts abordés.
 
-Vous trouverez les détails du mini-projet ici :
-[Consignes](../02-mini-project/README.md).
+Vous trouverez les exemples de code ici :
+[Exemples de code](./01-exemples-de-code/README.md).
 
 ## Exercices
 
-Nous vous invitons également à réaliser les exercices de cette session pour
-renforcer votre compréhension des concepts vus en classe.
+Nous vous invitons maintenant à réaliser les exercices de la séance afin de
+mettre en pratique les concepts abordés.
 
-Vous trouverez les détails des exercices ici :
-[Énoncés et solutions](../03-exercices/README.md).
+Vous trouverez les exercices et leur corrigé ici :
+[Exercices](./02-exercices/README.md).
+
+## Mini-projet
+
+Nous vous invitons maintenant à réaliser le mini-projet de la séance afin de
+mettre en pratique les concepts abordés.
+
+Vous trouverez les détails du mini-projet ici :
+[Mini-projet](./03-mini-projet/README.md).
 
 ## À faire pour la semaine suivante
 
@@ -810,6 +819,8 @@ il est recommandé pour la séance suivante de :
 
 - Relire le support de cours si nécessaire.
 - Finaliser la partie du mini-projet qui n'a pas été terminée en classe.
+- Finaliser la compréhension des exemples de code vus qui n'ont pas été compris
+  en classe.
 - Finaliser les exercices qui n'ont pas été terminés en classe.
 
 <!-- URLs -->

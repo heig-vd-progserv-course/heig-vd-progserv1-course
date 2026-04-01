@@ -13,10 +13,10 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 > - Autres formats :
 >   [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/presentation.html)
 >   ·
->   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/03-fonctions-presentation.pdf)
-> - Mini-projet : [Consignes](./01-mini-projet/README.md) ·
->   [Solution](./01-mini-projet/solution/README.md)
-> - Exercices : [Énoncés et solutions](./02-exercices/README.md)
+>   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/03-fonctions-presentation.pdf).
+> - Exemples de code : [Code source](./01-exemples-de-code/README.md).
+> - Exercices : [Énoncés et solutions](./02-exercices/README.md).
+> - Mini-projet : [Consignes](./03-mini-projet/README.md).
 >
 > **Objectifs**
 >
@@ -79,8 +79,9 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 - [Réutiliser du code avec des fonctions](#réutiliser-du-code-avec-des-fonctions)
   - [Différence entre `include` et `require`](#différence-entre-include-et-require)
 - [Conclusion](#conclusion)
-- [Mini-projet](#mini-projet)
+- [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
+- [Mini-projet](#mini-projet)
 - [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
 
 ## Objectifs
@@ -874,21 +875,29 @@ sur le site officiel de PHP.
 Dans les prochains cours, nous verrons comment utiliser certaines fonctions plus
 en détails pour résoudre des problèmes concrets.
 
-## Mini-projet
+## Exemples de code
 
-Nous vous invitons maintenant à réaliser le mini-projet de cette session pour
-mettre en pratique les concepts vus en classe.
+Nous vous invitons maintenant à consulter les exemples de code de la séance afin
+de mieux comprendre les concepts abordés.
 
-Vous trouverez les détails du mini-projet ici :
-[Consignes](../01-mini-projet/README.md).
+Vous trouverez les exemples de code ici :
+[Exemples de code](./01-exemples-de-code/README.md).
 
 ## Exercices
 
-Nous vous invitons également à réaliser les exercices de cette session pour
-renforcer votre compréhension des concepts vus en classe.
+Nous vous invitons maintenant à réaliser les exercices de la séance afin de
+mettre en pratique les concepts abordés.
 
-Vous trouverez les détails des exercices ici :
-[Énoncés et solutions](../02-exercices/README.md).
+Vous trouverez les exercices et leur corrigé ici :
+[Exercices](./02-exercices/README.md).
+
+## Mini-projet
+
+Nous vous invitons maintenant à réaliser le mini-projet de la séance afin de
+mettre en pratique les concepts abordés.
+
+Vous trouverez les détails du mini-projet ici :
+[Mini-projet](./03-mini-projet/README.md).
 
 ## À faire pour la semaine suivante
 
@@ -897,6 +906,8 @@ il est recommandé pour la séance suivante de :
 
 - Relire le support de cours si nécessaire.
 - Finaliser la partie du mini-projet qui n'a pas été terminée en classe.
+- Finaliser la compréhension des exemples de code vus qui n'ont pas été compris
+  en classe.
 - Finaliser les exercices qui n'ont pas été terminés en classe.
 
 <!-- URLs -->

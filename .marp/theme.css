@@ -289,7 +289,7 @@ blockquote::before,
 blockquote::after {
 	content: "“";
 	display: block;
-	font-family: "Times New Roman", serif;
+	font-family: "Atkinson Hyperlegible", serif;
 	font-weight: bold;
 	position: absolute;
 }
@@ -355,4 +355,18 @@ blockquote > *:first-child {
 
 .margin-0 {
 	margin: 0;
+}
+
+.thumbnail {
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
+	color: white;
+	-webkit-text-stroke: 0.5px black;
+	font-weight: bold;
+}
+
+.thumbnail a {
+	color: white;
+	text-decoration: none;
 }

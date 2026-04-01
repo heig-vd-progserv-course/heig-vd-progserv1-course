@@ -43,14 +43,43 @@ adresse][contenu-complet-sur-github].
 
 ## Qui suis-je
 
+<div class="one-third-two-thirds-columns">
 <div class="center">
+
+**Ludovic  
+Delafontaine**
 
 <img src="https://avatars.githubusercontent.com/u/5037444?v=4" alt="Ludovic Delafontaine" width="200" class="rounded">
 
-**Ludovic Delafontaine**  
-[E-mail](mailto:ludovic.delafontaine@heig-vd.ch) ·
-[GitHub](https://github.com/ludelafo)
+[Mail](mailto:ludovic.delafontaine@heig-vd.ch) ·
+[GitHub](https://github.com/ludelafo) ·
+[LinkedIn](https://www.linkedin.com/in/ludelafo/)
 
+</div>
+<div>
+
+<small>
+
+**Parcours**
+
+- 2011-2015 : CFC en informatique @ ETML.
+- 2015-2019 : BSc en informatique @ HEIG-VD.
+- 2020-2024 : Collaborateur Ra&D @ HEIG-VD.
+- 2023-2026 : Artios + Enseignement @ HEIG-VD.
+
+**Enseignement**
+
+- [DAI](https://github.com/heig-vd-dai-course/heig-vd-dai-course) &
+  [MVP](https://github.com/heig-vd-mvp-course/heig-vd-mvp-course) @ TIC.
+- [ProgServ1](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course),
+  [ProgServ2](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course)
+  &
+  [DévProdMéd](https://github.com/heig-vd-devprodmed-course/heig-vd-devprodmed-course)
+  @ COMEM.
+
+</small>
+
+</div>
 </div>
 
 ## Mes objectifs et souhaits pour ProgServ1
@@ -77,16 +106,6 @@ questions relatives au cours :
     si je ne suis pas disponible).
   - Message privé sur Teams (à éviter si possible).
 
-## Retrouvez le contenu complet de cette présentation sur GitHub
-
-<!-- _class: lead -->
-
-_Cette présentation est un résumé du contenu complet disponible sur GitHub._
-
-_Pour plus de détails, retrouvez le [contenu complet sur
-GitHub][contenu-complet-sur-github] ou en cliquant sur l'en-tête de ce
-document._
-
 ## Objectifs
 
 - Lister les objectifs du cours.
@@ -97,8 +116,7 @@ document._
 
 ## Objectifs du cours
 
-Selon [GAPS](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=7307), à
-la fin de ce cours, vous devriez être capable de :
+À la fin de ce cours, vous devriez être capable de :
 
 > - Expliquer les bases d'un langage de programmation serveur comme PHP et son
 >   rôle dans le monde web.
@@ -112,60 +130,86 @@ la fin de ce cours, vous devriez être capable de :
 
 <!-- _class: lead -->
 
-Grâce à ces compétences, la personne qui étudie sera en mesure de développer des
-applications web simples pour gérer une collection de données (par exemple, un
-carnet d'adresses, un gestionnaire de tâches, sa liste favorite de jeux vidéo,
-etc.).
+> Grâce à ces compétences, la personne qui étudie sera en mesure de développer
+> des applications web simples pour gérer une collection de données (par
+> exemple, un carnet d'adresses, un gestionnaire de tâches, sa liste favorite de
+> jeux vidéo, etc.).
 
-### Organisation du cours
+## Organisation du cours
 
-- En présentiel chaque semaine dans cette même salle.
-- Mélange de théorie et de pratique pour un apprentissage efficace :
+- En présentiel dans cette même salle.
+- Mélange de théorie/pratique pour un apprentissage efficace :
   - Moment de théorie court pour expliquer les concepts.
-  - Mini-projet à réaliser tout au long du cours.
+  - Exemples de code à explorer et tester.
   - Exercices à faire en classe ou à la maison.
+  - Mini-projet à réaliser tout au long du cours.
 - Espace de discussion pour poser des questions et obtenir de l'aide (**il n'y a
   pas de questions bêtes !**, je suis payé pour ça).
 
-### Modalités d'évaluation
+## Modalités d'évaluation
 
-Le cours sera évalué à l'aide d'un seul examen final composé de deux parties, à
-effectuer sur ordinateur :
+Un seul examen final composé de deux parties :
 
-- Partie théorique :
-  - 40% de la note finale.
-- Partie pratique :
+- **Partie 1 - Compréhension**
   - 60% de la note finale.
+  - 90 minutes.
+- **Partie 2 - Exécution**
+  - 40% de la note finale.
+  - 90 minutes.
 
 ![bg right:40%][illustration-modalites-devaluation]
 
-#### Partie théorique
+### Partie 1
 
-- Évaluation sur :
-  - Les connaissances théoriques acquises tout au long de l'unité
-    d'enseignement.
-  - Les exercices.
-- Durée d'environ 45 minutes.
-- Devrait utiliser la plateforme d'évaluation en ligne Eval.
-- **Aucune aide autorisée**.
+- Papier et crayon.
+- Capacité de :
+  - raisonner,
+  - analyser,
+  - et expliquer des concepts.
+- Sans aucune ressource.
 
-![bg right:40%][illustration-modalites-devaluation]
-
-#### Partie pratique
-
-- Évaluation sur :
-  - Les exercices.
-  - Le mini-projet.
-- Durée d'environ 2h15.
-- Petit projet à réaliser.
-- Contenus du cours, notes personnelles,
-  [php.net](https://www.php.net/manual/index.php) et
-  [developer.mozilla.org](https://developer.mozilla.org) autorisés.
-- **Toute autre aide interdite**.
+➡️ **Basé sur votre compréhension.**
 
 ![bg right:40%][illustration-modalites-devaluation]
 
-### La programmation et l'anglais
+### Partie 2
+
+- Ordinateur avec accès à Internet.
+- Capacité de :
+  - organiser,
+  - planifier,
+  - et développer une solution.
+- Avec certaines ressources.
+
+➡️ **Basé sur votre exécution.**
+
+![bg right:40%][illustration-modalites-devaluation]
+
+---
+
+<!-- _class: lead -->
+
+**Les deux parties peuvent vous demander de coder (expliquer, compléter,
+réaliser, etc.).**
+
+But : tester tout ce que vous avez appris sur tous les aspects.
+
+Tout est décrit dans le document [Évaluation finale](TODO).
+
+## Comment se préparer ?
+
+- Relire les supports de cours.
+- Pratiquer les exercices.
+- Travailler sur le mini-projet.
+- Discuter avec les autres étudiant.es et poser des questions.
+
+**Il n'y a pas de secret** : la meilleure façon de se préparer est de pratiquer
+et de travailler sur le mini-projet.
+
+**Il est attendu à ce que vous travailliez hors du cours (peu mais
+régulièrement) pour acquérir correctement les compétences.**
+
+## La programmation et l'anglais
 
 Le domaine de la programmation est très largement anglophone. La majorité des
 ressources que vous trouverez dans votre carrière sont en anglais.
@@ -177,7 +221,91 @@ contre).
 Le reste du cours restera néanmoins en français. Si l'anglais est une barrière
 pour vous, n'hésitez pas à me le faire savoir.
 
-### Bibliographie et ressources utilisées
+## _"Qu'en est-il de ChatGPT, etc. ?"_
+
+<!-- _class: lead -->
+
+## _"Qu'en est-il de ChatGPT, etc. ?"_ (1)
+
+**Vous pouvez utiliser tous les outils que vous souhaitez** (notes personnelles,
+Internet, outils d'IA, etc.), **sauf pendant les évaluations** (sauf mention
+contraire). Vous pouvez les utiliser dans la vie réelle ; il serait utopique de
+ma part de vous en priver.
+
+Cependant, d'après mon expérience, **ces outils ne sont pas suffisamment
+fiables** pour être utilisés sans supervision. **Ils peuvent vous aider, mais
+ils ne remplacent pas vos propres connaissances et compétences**.
+
+## _"Qu'en est-il de ChatGPT, etc. ?"_ (2)
+
+Concentrez-vous sur la compréhension des concepts et des principes qui
+sous-tendent les tâches sur lesquelles vous travaillez.
+
+Une fois que vous maîtrisez les concepts, vous pouvez utiliser ces outils pour
+vous aider dans la mise en œuvre.
+
+Au risque d'utiliser une analogie un peu vieillotte : apprenez à calculer avant
+de vouloir utiliser une calculatrice.
+
+Une excellente vidéo sur le sujet :
+[_"La Fabrique à Idiots"_ - Micode](https://www.youtube.com/watch?v=4xq6bVbS-Pw).
+
+## _"Qu'en est-il de ChatGPT, etc. ?"_ (3)
+
+Quelques règles concernant l'utilisation de ces outils pour vos rendus :
+
+- Vous **devez indiquer quand, pourquoi et comment vous avez utilisé une aide
+  externe** (la raison, outils, sources, etc.), **soit dans le code, soit dans
+  un rapport annexe**.
+- Vous **devez expliquer le fonctionnement du code que vous avez utilisé**, que
+  ce soit du code généré par des outils d'intelligence artificielle ou du code
+  copié depuis des sources externes, **et comment il s'intègre dans votre
+  travail**.
+
+## _Qu'en est-il de ChatGPT, etc. ?"_ (4)
+
+- En cas de doutes de notre part, vous pourriez être questionné.e.
+- **Si vos explications ne sont pas convaincantes, injustifiées dans le contexte
+  ou si vous n'êtes pas transparent.e sur l'utilisation de ces outils**, je
+  considère que vous n'avez pas acquis les compétences nécessaires du cours.
+  **Vous serez alors pénalisé.e avec la note 1 pour l'évaluation concernée**.
+- En cas de doutes, n'hésitez pas à me contacter pour discuter de votre
+  utilisation de ces outils.
+
+<center>
+
+**Votre intégrité personnelle et académique est en jeu**.
+
+</center>
+
+## _Qu'en est-il de ChatGPT, etc. ?"_ (5)
+
+**Tout le monde va utiliser l'AI lorsque vous sortirez de vos études.**
+
+**C'est justement grâce à un esprit critique et une bonne compréhension des
+concepts** que vous saurez utiliser efficacement les outils à disposition (AI ou
+autre) et **que vous pourrez vous démarquer des autres**.
+
+À titre personnel, je pense qu'une personne issue du monde de l'ingénierie ne
+fait bien son travail que si elle le remet en question.
+
+---
+
+<!--
+_header: ""
+_footer: ""
+_paginate: false
+-->
+
+<div class="thumbnail">
+
+[_"La Fabrique à Idiots"_ - Micode, 15.01.2026](https://www.youtube.com/watch?v=4xq6bVbS-Pw)
+
+![bg](./images/la-fabrique-a-idiots-micode.jpg)
+
+</div>
+
+## Bibliographie et ressources utilisées
 
 - <https://www.php.net/manual/index.php>
 - <https://developer.mozilla.org>

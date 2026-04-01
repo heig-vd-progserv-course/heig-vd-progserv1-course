@@ -13,10 +13,10 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 > - Autres formats :
 >   [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/02-introduction-a-php/presentation.html)
 >   ·
->   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/02-introduction-a-php/02-introduction-a-php-presentation.pdf)
-> - Mini-projet : [Consignes](./01-mini-projet/README.md) ·
->   [Solution](./01-mini-projet/solution/README.md)
-> - Exercices : [Énoncés et solutions](./02-exercices/README.md)
+>   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/02-introduction-a-php/02-introduction-a-php-presentation.pdf).
+> - Mini-projet : [Consignes](./01-mini-projet/README.md).
+> - Exemples de code : [Code source](./02-exemples-de-code/README.md).
+> - Exercices : [Énoncés et solutions](./03-exercices/README.md).
 >
 > **Objectifs**
 >
@@ -76,6 +76,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
   - [Les structures conditionnelles](#les-structures-conditionnelles)
 - [Conclusion](#conclusion)
 - [Mini-projet](#mini-projet)
+- [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
 - [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
 
@@ -107,7 +108,7 @@ réaliser des applications/programmes qui s'exécutent sur votre machine.
 Avec PHP, vous allez apprendre à réaliser des applications web qui s'exécutent
 sur un serveur et sont accessibles depuis un navigateur web.
 
-PHP (Hypertext Preprocessor) est un langage de programmation conçu pour le
+PHP (PHP: Hypertext Preprocessor) est un langage de programmation conçu pour le
 développement web qui a connu sa première version en 1994. De cette manière, PHP
 permet de créer des applications qui peuvent être accessibles via un navigateur
 web et par plusieurs personnes en même temps.
@@ -135,8 +136,8 @@ mobiles, jeux vidéos, etc.).
 De façon plus concise, pour écrire et exécuter du code PHP, vous avez besoin de
 :
 
-- Un serveur web (Apache, Nginx, etc.) pour recevoir les requêtes du client et
-  envoyer les réponses.
+- Un serveur web (Apache, Nginx, etc.) pour recevoir les requêtes du client
+  (votre navigateur) et envoyer les réponses (des pages HTML générées).
 - PHP installé sur le serveur web.
 - Un navigateur web (Chrome, Firefox, etc.). pour effectuer les requêtes et
   afficher les pages web.
@@ -148,10 +149,11 @@ l'interpréteur PHP exécute le code PHP qui va générer du HTML, l'interpréte
 renvoie au serveur web qui enverra ensuite le résultat au navigateur du client.
 Le client réceptionnera le HTML et pourra directement l'afficher.
 
-PHP est exécuté sur le serveur, et le code PHP est interprété par le serveur web
-pour générer du HTML, qui est ensuite envoyé au navigateur du client.
+PHP est exécuté sur le serveur en partenariat avec le serveur web, pour générer
+du HTML, qui est ensuite envoyé au navigateur du client qui l'affiche
+simplement.
 
-![Architecture client-serveur avec PHP](./images/architecture-client-serveur-avec-php.png)
+![Architecture client-serveur avec PHP](./images/architecture-client-serveur-avec-php.svg)
 
 Le client (votre navigateur) envoie une requête pour demander une page web au
 serveur. Ces pages web, tels que `index.php`, sont des fichiers PHP qui
@@ -176,7 +178,9 @@ echo "Hello, World!";
 ```
 
 Vous remarquez qu'il n'y a pas de balise de fermeture `?>` à la fin du fichier
-car le fichier ne contient que du code PHP.
+car le fichier ne contient que du code PHP. S'il y a du code HTML après le code
+PHP, il faut alors fermer le bloc de code PHP avec `?>` pour que l'interpréteur
+puisse reconnaître la fin du code PHP et n'exécuter que le code PHP.
 
 <details>
 <summary>Afficher l'équivalent en Java</summary>
@@ -191,7 +195,16 @@ public class Main {
 
 </details>
 
-Ici, la fonction `echo` est utilisée pour afficher du texte sur la page web.
+Ici, la fonction `echo` est utilisée pour "afficher du texte sur la page web".
+
+Pour être exact, la fonction `echo` va être interprétée par l'interpréteur PHP.
+Celui-ci va générer un document HTML avec le contenu désiré puis le transmettre
+au serveur web. Le serveur web va ensuite envoyer ce document HTML au navigateur
+du client, qui l'affichera sur la page web.
+
+Ainsi, la formulation "afficher du texte sur la page web" est une simplification
+pour expliquer que le résultat de l'exécution du code PHP (le document HTML
+généré) sera affiché sur la page web par le navigateur du client.
 
 De façon plus concise, le code PHP est exécuté sur le serveur web, qui génère du
 HTML à partir du code PHP. Ce HTML est ensuite envoyé au navigateur du client,
@@ -231,7 +244,7 @@ développement qui comprend un serveur web (Apache, Nginx, etc.) et PHP.
 Heureusement pour nous, il existe des solutions clés en main qui nous permettent
 de démarrer rapidement avec PHP, comme par exemple WampServer pour
 Windows[^wamp], MAMP pour macOS[^mamp], XAMPP pour Windows, macOS et
-Linux[^xampp], etc.
+Linux[^xampp] ou encore Docker/Docker Compose[^docker].
 
 Ces solutions regroupent les logiciels nécessaires pour exécuter du code PHP,
 notamment un serveur web, PHP et une base de données et fonctionnent selon le
@@ -242,11 +255,20 @@ même principe d'architecture client-serveur vu précédemment.
 PHP a une syntaxe similaire à celle de Java, JavaScript et d'autres langages de
 programmation.
 
-Comme n'importe quelle langue ou language de programmation, PHP a des règles
-pour écrire du code.
+Comme n'importe quelle langue de la vie de tous les jours (français, allemand ou
+japonais) ou language de programmation, PHP a des règles pour écrire du code.
 
 Il s'agit de les apprendre et les comprendre pour lire et écrire du code PHP de
 manière efficace.
+
+> [!TIP]
+>
+> Apprendre un nouveau langage de programmation peut être difficile au début,
+> mais ne vous découragez pas !
+>
+> Une grande majorité de ce que vous avez appris en Java est transférable à PHP,
+> et vous serez surpris de voir à quel point vous êtes déjà familier avec la
+> syntaxe de PHP.
 
 Voici quelques bases pour commencer.
 
@@ -364,13 +386,14 @@ public class Main {
 </details>
 
 Cela peut être pratique, mais cela peut aussi entraîner des erreurs si vous ne
-faites pas attention à ce que vous affectez à une variable.
+faites pas attention à ce que vous affectez à une variable. Nous verrons plus en
+détail les types de données et le typage dynamique dans un prochain cours.
 
 #### Les chaînes de caractères
 
 Les chaînes de caractères sont des séquences de caractères qui peuvent former
 des mots ou des phrases et sont déclarées entre des guillemets simples (`'`) ou
-doubles (`"`). Voici un exemple :
+doubles (`"`) (nous verrons la différence juste après). Voici un exemple :
 
 ```php
 <?php
@@ -1049,19 +1072,27 @@ comment les utiliser pour créer des applications web plus complexes.
 
 ## Mini-projet
 
-Nous vous invitons maintenant à réaliser le mini-projet de cette session pour
-mettre en pratique les concepts vus en classe.
+Nous vous invitons maintenant à réaliser le mini-projet de la séance afin de
+mettre en pratique les concepts abordés.
 
 Vous trouverez les détails du mini-projet ici :
-[Consignes](../01-mini-projet/README.md).
+[Mini-projet](./01-mini-projet/README.md).
+
+## Exemples de code
+
+Nous vous invitons maintenant à consulter les exemples de code de la séance afin
+de mieux comprendre les concepts abordés.
+
+Vous trouverez les exemples de code ici :
+[Exemples de code](./02-exemples-de-code/README.md).
 
 ## Exercices
 
-Nous vous invitons également à réaliser les exercices de cette session pour
-renforcer votre compréhension des concepts vus en classe.
+Nous vous invitons maintenant à réaliser les exercices de la séance afin de
+mettre en pratique les concepts abordés.
 
-Vous trouverez les détails des exercices ici :
-[Énoncés et solutions](../02-exercices/README.md).
+Vous trouverez les exercices et leur corrigé ici :
+[Exercices](./03-exercices/README.md).
 
 ## À faire pour la semaine suivante
 
@@ -1070,6 +1101,8 @@ il est recommandé pour la séance suivante de :
 
 - Relire le support de cours si nécessaire.
 - Finaliser la partie du mini-projet qui n'a pas été terminée en classe.
+- Finaliser la compréhension des exemples de code vus qui n'ont pas été compris
+  en classe.
 - Finaliser les exercices qui n'ont pas été terminés en classe.
 
 <!-- URLs -->
@@ -1079,7 +1112,13 @@ il est recommandé pour la séance suivante de :
 
 <!-- Footnotes -->
 
-[^mamp]: MAMP, [mamp.info](https://www.mamp.info/), 09 mars 2025
-[^wamp]: WampServer, [wampserver.com](https://www.wampserver.com/), 09 mars 2025
+[^docker]:
+    Docker/Docker Compose [docker.com](https://www.docker.com/), 31 mars 2026.
+
+[^mamp]: MAMP, [mamp.info](https://www.mamp.info/), 09 mars 2025.
+
+[^wamp]:
+    WampServer, [wampserver.com](https://www.wampserver.com/), 09 mars 2025.
+
 [^xampp]:
-    XAMPP, [apachefriends.org](https://www.apachefriends.org/), 09 mars 2025
+    XAMPP, [apachefriends.org](https://www.apachefriends.org/), 09 mars 2025.
