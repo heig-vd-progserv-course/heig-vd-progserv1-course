@@ -1,7 +1,14 @@
 # Introduction à PHP - Mini-projet
 
-Ce mini-projet est conçu pour vous permettre de mettre en pratique les concepts
-théoriques vus dans le contenu _["Introduction à PHP"](../README.md)_.
+L. Delafontaine, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot).
+
+Ce travail est sous licence [CC BY-SA 4.0][licence].
+
+> [!TIP]
+>
+> Toutes les informations relatives à ce contenu sont décrites dans le
+> [contenu principal](../README.md).
 
 ## Table des matières
 
@@ -15,8 +22,9 @@ théoriques vus dans le contenu _["Introduction à PHP"](../README.md)_.
   - [Configurer l'éditeur de code](#configurer-léditeur-de-code)
   - [Valider l'installation et la configuration de l'environnement de développement local](#valider-linstallation-et-la-configuration-de-lenvironnement-de-développement-local)
 - [Initialiser le mini-projet](#initialiser-le-mini-projet)
-  - [Initialiser le dépôt GitHub pour le mini-projet](#initialiser-le-dépôt-github-pour-le-mini-projet)
-  - [Ouvrir le dépôt GitHub localement](#ouvrir-le-dépôt-github-localement)
+  - [Rejoindre le GitHub Classroom](#rejoindre-le-github-classroom)
+  - [Cloner le dépôt GitHub localement](#cloner-le-dépôt-github-localement)
+  - [Ouvrir le dépôt GitHub dans Visual Studio Code](#ouvrir-le-dépôt-github-dans-visual-studio-code)
   - [Installer un interpréteur PHP](#installer-un-interpréteur-php)
   - [Activer les messages d'erreurs de PHP dans le navigateur](#activer-les-messages-derreurs-de-php-dans-le-navigateur)
   - [Création de la structure du projet](#création-de-la-structure-du-projet)
@@ -26,13 +34,16 @@ théoriques vus dans le contenu _["Introduction à PHP"](../README.md)_.
   - [Ajout de styles CSS personnalisés](#ajout-de-styles-css-personnalisés)
   - [Ajout d'un logo pour l'application](#ajout-dun-logo-pour-lapplication)
   - [Création des pages supplémentaires](#création-des-pages-supplémentaires)
-- [Configurer et utiliser l'environnement de production en ligne](#configurer-et-utiliser-lenvironnement-de-production-en-ligne)
+- [Configurer l'environnement de production en ligne](#configurer-lenvironnement-de-production-en-ligne)
   - [Accéder au programme étudiant d'Infomaniak](#accéder-au-programme-étudiant-dinfomaniak)
   - [Créer un hébergement web](#créer-un-hébergement-web)
   - [Désactiver le renouvellement automatique](#désactiver-le-renouvellement-automatique)
-  - [Accéder à l'hébergement web](#accéder-à-lhébergement-web)
+  - [Accéder aux hébergements web](#accéder-aux-hébergements-web)
+  - [Accéder au tableau de bord de l'hébergement web spécifique](#accéder-au-tableau-de-bord-de-lhébergement-web-spécifique)
   - [Renommer l'hébergement web](#renommer-lhébergement-web)
+  - [Ajouter un nouveau site (optionnel)](#ajouter-un-nouveau-site-optionnel)
   - [Configurer le site web](#configurer-le-site-web)
+  - [Accéder au site web](#accéder-au-site-web)
   - [Sécuriser l'application avec HTTPS](#sécuriser-lapplication-avec-https)
   - [Effectuer la demande de remboursement auprès de la HEIG-VD](#effectuer-la-demande-de-remboursement-auprès-de-la-heig-vd)
   - [Renouveler/révoquer le programme étudiant d'Infomaniak](#renouvelerrévoquer-le-programme-étudiant-dinfomaniak)
@@ -42,7 +53,7 @@ théoriques vus dans le contenu _["Introduction à PHP"](../README.md)_.
 - [Initialiser les exercices](#initialiser-les-exercices)
   - [Rejoindre le GitHub Classroom pour les exercices](#rejoindre-le-github-classroom-pour-les-exercices)
   - [Cloner le dépôt GitHub localement](#cloner-le-dépôt-github-localement-1)
-  - [Ouvrir le dossier racine du projet](#ouvrir-le-dossier-racine-du-projet-1)
+  - [Ouvrir le dossier racine du projet](#ouvrir-le-dossier-racine-du-projet)
   - [Ouvrir un terminal intégré](#ouvrir-un-terminal-intégré-1)
 - [Conclusion](#conclusion)
 - [Solution](#solution)
@@ -191,6 +202,8 @@ projet PHP pour le mini-projet.
   de Windows.
 - Git installé et configuré sur votre ordinateur (dans l'environnement WSL pour
   les utilisateur.trices de Windows).
+- L'application Windows Terminal installée pour les utilisateur.trices de
+  Windows configurée pour ouvrir WSL automatiquement.
 - Docker et Docker Compose installés sur votre ordinateur (accessibles dans
   l'environnement WSL pour les utilisateur.trices de Windows).
 - Un éditeur de code de votre choix (Visual Studio Code est recommandé, mais
@@ -202,7 +215,7 @@ Dans votre terminal, assurez-vous d'avoir accès aux différents outils
 nécessaires en exécutant les commandes suivantes :
 
 ```bash
-# Véifier que Git est installé
+# Vérifier que Git est installé
 git --version
 ```
 
@@ -259,12 +272,12 @@ Sinon, utilisez les ressources suivantes pour installer les outils nécessaires 
 
 Un environnement de développement local est un ensemble d'outils et de logiciels
 nécessaires pour écrire, tester et déboguer des applications logicielles sur
-votre propre ordinateur. Il permet aux développeurs de créer et de tester leur
-code dans un environnement contrôlé avant de le déployer sur un serveur de
+votre propre ordinateur. Il permet aux développeur.euses de créer et de tester
+leur code dans un environnement contrôlé avant de le déployer sur un serveur de
 production en ligne.
 
-Pour ce mini-projet, nous aurons besoin d'un interpréteur PHP et d'un éditeur de
-code.
+Pour ce mini-projet, nous aurons besoin d'un éditeur de code et d'un
+interpréteur PHP.
 
 De plus, nous allons utiliser GitHub Classroom pour gérer le code source du
 mini-projet. Cela sera l'occasion de prendre l'habitude d'utiliser Git et GitHub
@@ -289,7 +302,12 @@ Pour installer Visual Studio Code sur Windows, suivez les étapes suivantes :
 1. Rendez-vous sur le site web de Visual Studio Code à l'adresse suivante :
    <https://code.visualstudio.com/>.
 
+   <details>
+   <summary>Afficher la capture d'écran illustrant l'étape</summary>
+
    ![Site web de Visual Studio Code](./images/visual-studio-code-website-windows.png)
+
+   </details>
 
 2. Téléchargez la dernière version de Visual Studio Code pour Windows.
 3. Exécutez le programme d'installation que vous venez de télécharger pour
@@ -298,18 +316,33 @@ Pour installer Visual Studio Code sur Windows, suivez les étapes suivantes :
       Acceptez les termes du contrat de licence et cliquez sur le bouton
       **Next**.
 
+      <details>
+      <summary>Afficher la capture d'écran illustrant l'étape</summary>
+
       ![Programmation d'installation de Visual Studio Code sur Windows - 01](./images/visual-studio-code-windows-01.png)
+
+      </details>
 
    2. Laissez les paramètres par défaut pour installer Visual Studio Code sur
       votre ordinateur et cliquez sur le bouton **Next**.
 
+      <details>
+      <summary>Afficher la capture d'écran illustrant l'étape</summary>
+
       ![Programmation d'installation de Visual Studio Code sur Windows - 02](./images/visual-studio-code-windows-02.png)
+
+      </details>
 
    3. Laissez les paramètres par défaut pour créer un dossier
       `Visual Studio Code` dans le menu de démarrage et cliquez sur le bouton
       **Next**.
 
+      <details>
+      <summary>Afficher la capture d'écran illustrant l'étape</summary>
+
       ![Programmation d'installation de Visual Studio Code sur Windows - 03](./images/visual-studio-code-windows-03.png)
+
+      </details>
 
    4. Choisissez si vous souhaitez avoir un raccourci sur le bureau et
       sélectionnez les options supplémentaires pour ajouter Visual Studio Code
@@ -317,12 +350,21 @@ Pour installer Visual Studio Code sur Windows, suivez les étapes suivantes :
       un clic droit sur n'importe quel dossier et d'ouvrir Visual Studio Code
       directement dans ce dossier. Cliquez ensuite sur le bouton **Next**.
 
-      ![Programmation d'installation de Visual Studio Code sur Windows - 04](./images/visual-studio-code-windows-04.png)
+   <details>
+   <summary>Afficher la capture d'écran illustrant l'étape</summary>
 
+   ![Programmation d'installation de Visual Studio Code sur Windows - 04](./images/visual-studio-code-windows-04.png)
+
+      </details>
    5. Une fois que vous avez vérifié les paramètres d'installation, cliquez sur
       le bouton **Install** pour commencer l'installation.
 
-      ![Programmation d'installation de Visual Studio Code sur Windows - 05](./images/visual-studio-code-windows-05.png)
+      <details>
+      <summary>Afficher la capture d'écran illustrant l'étape</summary>
+
+   ![Programmation d'installation de Visual Studio Code sur Windows - 05](./images/visual-studio-code-windows-05.png)
+
+      </details>
 
 4. Une fois l'installation terminée, lancez Visual Studio Code.
 
@@ -343,7 +385,12 @@ Pour installer Visual Studio Code sur macOS, suivez les étapes suivantes :
 1. Rendez-vous sur le site web de Visual Studio Code à l'adresse suivante :
    <https://code.visualstudio.com/>.
 
+   <details>
+   <summary>Afficher la capture d'écran illustrant l'étape</summary>
+
    ![Site web de Visual Studio Code](./images/visual-studio-code-website-macos.png)
+
+   </details>
 
 2. Téléchargez la dernière version de Visual Studio Code pour macOS.
 3. Ouvrez le fichier `.dmg` que vous venez de télécharger.
@@ -356,7 +403,7 @@ Vous pouvez maintenant passer à la section
 
 #### Installation sur Linux
 
-_Si vous utilisez Linux, veuillez nous consulter pour obtenir de l'aide pour
+_Si vous utilisez Linux, veuillez nous consulter si vous avez besoin d'aide pour
 installer un éditeur de code sur votre ordinateur._
 
 ### Configurer l'éditeur de code
@@ -389,7 +436,12 @@ Pour ce faire, suivez les étapes suivantes :
    utiliser `Ctrl + S` (Windows/Linux) ou `Cmd + S` (macOS) à des fins de
    facilité.
 
-   ![Configuration des raccourcis clavier dans Visual Studio Code](./images/visual-studio-code-configuration-05.png)
+   <details>
+   <summary>Afficher la capture d'écran illustrant l'étape</summary>
+
+   ![Configuration des raccourcis clavier dans Visual Studio Code](./images/visual-studio-code-configuration-01.png)
+
+   </details>
 
 #### Installer les extensions nécessaires pour Visual Studio Code
 
@@ -407,25 +459,13 @@ Pour installer l'extension PHP Intelephense, suivez les étapes suivantes :
 1. Cliquez sur l'icône des extensions dans la barre latérale de Visual Studio
    Code ou appuyez sur `Ctrl + Shift + X` (Windows/Linux) ou `Cmd + Shift + X`
    (macOS).
-
-   ![Icône des extensions dans Visual Studio Code](./images/visual-studio-code-configuration-09.png)
-
 2. Recherchez `PHP Intelephense` dans la barre de recherche.
-
-   ![Recherche de l'extension PHP Intelephense dans Visual Studio Code](./images/visual-studio-code-configuration-10.png)
-
 3. Sélectionnez l'extension `PHP Intelephense` dans les résultats de la
    recherche.
-
-   ![Résultats de la recherche de l'extension PHP Intelephense dans Visual Studio Code](./images/visual-studio-code-configuration-11.png)
-
 4. Cliquez sur le bouton **Install** pour installer l'extension. Un
    avertissement de sécurité vous demande si vous faites confiance aux auteurs
    de l'extension. Cliquez sur le bouton **Trust Publisher & Install** pour
    continuer.
-
-   ![Installation de l'extension PHP Intelephense dans Visual Studio Code](./images/visual-studio-code-configuration-12.png)
-
 5. Une fois l'extension installée, vous devriez voir une confirmation de
    l'installation.
 
@@ -444,7 +484,9 @@ dans Visual Studio Code pour éviter d'avoir des suggestions de code qui
 pourraient interférer avec votre apprentissage et votre compréhension du code
 que vous écrivez.
 
-TODO
+Pour cela, suivez la documentation officielle de GitHub Copilot pour désactiver
+les suggestions de code dans Visual Studio Code :
+<https://docs.github.com/en/copilot/how-tos/configure-personal-settings/configure-in-ide?tool=vscode#enabling-or-disabling-github-copilot-inline-suggestions>.
 
 #### Configurer le terminal intégré de Visual Studio Code
 
@@ -464,22 +506,42 @@ Pour configurer le terminal intégré de Visual Studio Code pour utiliser WSL,
 suivez les étapes suivantes :
 
 1. Ouvrez Visual Studio Code.
-2. Cliquez sur le menu **File > Preferences > Settings**.
-3. Dans la barre de recherche des paramètres, recherchez
-   `terminal.integrated.defaultProfile.windows`.
-4. Cliquez sur le bouton **Edit in settings.json** pour ouvrir le fichier de
-   configuration des paramètres de Visual Studio Code.
-5. Ajoutez la configuration suivante pour définir WSL comme shell par défaut
-   pour le terminal intégré de Visual Studio Code :
+2. Ouvrez le terminal intégré en allant dans le menu **Terminal > New
+   Terminal**.
+3. Le terminal devrait s'ouvrir en bas de la fenêtre de Visual Studio Code.
+4. Ouvrez le menu déroulant du terminal intégré en cliquant sur l'icône de
+   terminal avec une flèche vers le bas dans la barre d'outils du terminal
+   intégré.
 
-   ```json
-   "terminal.integrated.defaultProfile.windows": "WSL"
-   ```
+   <details>
+   <summary>Afficher la capture d'écran illustrant l'étape</summary>
 
-6. Enregistrez le fichier `settings.json` et fermez-le.
-7. Ouvrez un nouveau terminal intégré en allant dans le menu **Terminal > New
-   Terminal**. Le terminal intégré devrait maintenant utiliser WSL comme shell
-   par défaut.
+   ![Menu déroulant du terminal intégré de Visual Studio Code](./images/visual-studio-code-configuration-02.png)
+
+   </details>
+
+5. Sélectionnez `Select Default Profile` dans le menu déroulant.
+
+   <details>
+   <summary>Afficher la capture d'écran illustrant l'étape</summary>
+
+   ![Sélection du profil par défaut pour le terminal intégré de Visual Studio Code](./images/visual-studio-code-configuration-03.png)
+
+   </details>
+
+6. Dans la liste des profils disponibles, sélectionnez `Ubuntu (WSL)` (le nom
+   peut varier en fonction de votre configuration).
+
+   <details>
+   <summary>Afficher la capture d'écran illustrant l'étape</summary>
+
+   ![Sélection du profil WSL pour le terminal intégré de Visual Studio Code](./images/visual-studio-code-configuration-04.png)
+
+   </details>
+
+7. Une fois que vous avez sélectionné `Ubuntu (WSL)` comme profil par défaut, le
+   terminal intégré de Visual Studio Code utilisera désormais l'environnement
+   WSL pour exécuter les commandes Linux.
 
 Si par la suite vous souhaitez ouvrir un terminal intégré avec l'invite de
 commande de Windows (cmd.exe) ou PowerShell, vous pouvez le faire en
@@ -505,11 +567,7 @@ Dans cette section, nous allons initialiser le projet PHP pour le mini-projet en
 créant la structure de base du projet et en configurant les fichiers nécessaires
 pour faire fonctionner l'application web.
 
-### Initialiser le dépôt GitHub pour le mini-projet
-
-TODO
-
-#### Rejoindre le GitHub Classroom
+### Rejoindre le GitHub Classroom
 
 [GitHub Classroom](https://classroom.github.com/) est un outil qui permet de
 gérer des dépôts GitHub dans un contexte éducatif. Il facilite la distribution
@@ -542,13 +600,11 @@ mini-projet sur une page similaire à celle-ci :
 
 ![GitHub Classroom - Mini-projet (1)](TODO)
 
-#### Cloner le dépôt GitHub localement
+### Cloner le dépôt GitHub localement
 
 TODO
 
-### Ouvrir le dépôt GitHub localement
-
-#### Ouvrir le dossier racine du projet
+### Ouvrir le dépôt GitHub dans Visual Studio Code
 
 Afin de travailler sur votre projet PHP, vous devez ouvrir le dossier racine du
 projet dans Visual Studio Code. Pour ce faire, suivez les étapes suivantes :
@@ -1197,11 +1253,10 @@ Ces pages serviront de point de départ pour le mini-projet. Vous pourrez
 commencer à ajouter des fonctionnalités pour gérer les animaux de compagnie dans
 l'application web dans les prochaines séances.
 
-## Configurer et utiliser l'environnement de production en ligne
+## Configurer l'environnement de production en ligne
 
-Dans cette section, nous allons configurer et utiliser l'environnement de
-production en ligne fourni par Infomaniak dans le cadre du programme étudiant.
-Cet environnement de production en ligne vous permettra de déployer votre
+Dans cette section, nous allons configurer l'environnement de production en
+ligne. Cet environnement de production en ligne vous permettra de déployer votre
 application web sur Internet et de la rendre accessible à tout le monde.
 
 > [!NOTE]
@@ -1211,11 +1266,13 @@ application web sur Internet et de la rendre accessible à tout le monde.
 >
 > - Un _"hébergement web"_ est un service qui vous permet de déployer votre
 >   application web sur Internet.
+> - Un _"site"_ est une application web déployée sur un hébergement web, qui
+>   peut être associée à un nom de domaine ou à un sous-domaine.
 > - Un _"nom de domaine"_ est l'adresse web (URL) que les utilisateur.trices
 >   utiliseront pour accéder à votre application web.
 >
-> Un hébergement web permet d'héberger plusieurs _"sites"_, chacun pouvant être
-> associé à un nom de domaine différent, ou à un ou plusieurs sous-domaines.
+> Un _"hébergement web"_ permet donc d'héberger plusieurs _"sites"_, chacun
+> pouvant être associé à un _"nom de domaine"_ (ou sous-domaine) différent.
 >
 > Par exemple, vous pouvez avoir un hébergement web avec deux sites associés :
 > `www.mondomaine1.ch` et `www.mondomaine2.ch`. Chaque site peut avoir son
@@ -1347,11 +1404,27 @@ Afin de commander un hébergement web, vous pouvez vous rendre la page page
 suivante : <https://shop.infomaniak.com/order2/domain?hosting_order=true>.
 
 La première étape consiste à choisir un nom de domaine pour votre hébergement
-web. Vous pouvez acheter un nouveau nom de domaine ou utiliser un nom de domaine
-que vous possédez déjà. Nous vous recommandons d'activer l'option de
-confidentialité (_"Domain Privacy"_) du nom de domaine pour protéger vos
-informations personnelles. L'option pour accélérer l'accès au site web (_"DNS
-Fast Anycast"_) n'est pas nécessaire pour ce cours.
+web.
+
+Le nom de domaine que vous choisirez sera utilisé également dans d'autres cours
+enseignés à la HEIG-VD. Vous êtes libre de choisir le nom de domaine que vous
+souhaitez, mais nous vous recommandons de choisir un nom de domaine qui vous
+représente et qui est facile à retenir. Par exemple, vous pouvez choisir un nom
+de domaine qui contient votre prénom, votre nom de famille ou encore votre
+pseudonyme habituel sur Internet.
+
+Il s'agit peut-être d'une occasion pour vous créer une identité numérique en
+ligne avec un nom de domaine qui vous représente et qui fera office de vitrine
+pour vos projets personnels et professionnels.
+
+Le nom de domaine vous appartient et vous permet d'accéder à votre application
+web en utilisant une adresse web personnalisée (par exemple,
+`www.mondomaine.ch`).
+
+Nous vous recommandons d'activer l'option de confidentialité (_"Domain
+Privacy"_) du nom de domaine pour protéger vos informations personnelles.
+L'option pour accélérer l'accès au site web (_"DNS Fast Anycast"_) n'est pas
+nécessaire pour ce cours.
 
 <details>
 <summary>Afficher la capture d'écran illustrant l'étape</summary>
@@ -1383,8 +1456,8 @@ _"Hébergement Web"_.
 
 </details>
 
-Sélectionnez l'option _"Je n'ai pas encore besoin d'adresse mail"_ pour le
-moment.
+Sélectionnez l'option _"Je n'ai pas encore besoin d'adresse mail"_, comme nous
+n'en aurons pas besoin pour le moment.
 
 <details>
 <summary>Afficher la capture d'écran illustrant l'étape</summary>
@@ -1425,8 +1498,12 @@ Validez votre commande.
 >
 > Le même nom de domaine peut être utilisé pour plusieurs hébergements web (par
 > exemple, pour différents projets) à l'aide de sous-domaines (par exemple,
-> `projet1.mondomaine.ch`, `projet2.mondomaine.ch`, etc.). Cette utilisation
-> spécifique n'est pas couverte dans cette unité d'enseignement.
+> `projet1.mondomaine.ch`, `projet2.mondomaine.ch`, etc.).
+>
+> Cela peut être utile pour organiser vos différents projets sous un même nom de
+> domaine, par exemple `progserv1.mondomaine.ch` pour le projet du cours
+> _"Programmation serveur 1"_, `progserv2.mondomaine.ch` pour le projet du cours
+> _"Programmation serveur 2"_, etc.
 
 Une fois la commande validée et payée, vous pouvez télécharger la facture au
 format PDF. Vous en aurez besoin pour effectuer la demande de remboursement
@@ -1463,11 +1540,11 @@ Sélectionnez tous les éléments de la liste puis cliquez sur le bouton
 
 </details>
 
-### Accéder à l'hébergement web
+### Accéder aux hébergements web
 
-Avant de pouvoir utiliser l'hébergement web, vous devez configurer certains
-paramètres. Pour cela, vous pouvez vous rendre dans **Web & Domaines >
-Hébergement**.
+Infomaniak permet de gérer plusieurs hébergements web. Pour accéder au menu de
+gestion de tous les hébergements web, vous pouvez vous rendre dans **Web &
+Domaines > Hébergement**.
 
 <details>
 <summary>Afficher la capture d'écran illustrant l'étape</summary>
@@ -1485,7 +1562,9 @@ Ici, deux cas de figure peuvent se présenter à vous :
 
 #### Cas 1 - Nouvel hébergement web
 
-Rien de particulier à savoir/faire, suivez la marche à suivre décrite ci-dessous
+Rien de particulier à savoir/faire, suivez la marche à suivre décrite dans la
+section
+[Accéder au tableau de bord de l'hébergement web spécifique](#accéder-au-tableau-de-bord-de-lhébergement-web-spécifique)
 pour configurer votre hébergement web.
 
 #### Cas 2 - Hébergement web existant
@@ -1498,17 +1577,12 @@ Un hébergement web peut héberger plusieurs sites web, chacun pouvant être
 associé à un nom de domaine différent ou à un ou plusieurs sous-domaines, même
 si l'hébergement web porte déjà le nom d'un seul nom de domaine.
 
-Suivez la marche à suivre décrite ci-dessous pour configurer votre hébergement
-web, même s'il porte le nom d'un précédent nom de domaine que vous avez
-commandé.
+Suivez la marche à suivre décrite dans la section
+[Accéder au tableau de bord de l'hébergement web spécifique](#accéder-au-tableau-de-bord-de-lhébergement-web-spécifique)
+pour configurer votre hébergement web, même s'il porte le nom d'un précédent nom
+de domaine que vous avez commandé.
 
-### Renommer l'hébergement web
-
-Pour éviter toute confusion entre un hébergement web et un ou plusieurs noms de
-domaine, nous allons renommer l'hébergement web existant pour lui donner un nom
-plus générique.
-
-Ce nouveau nom ne fera pas référence à un nom de domaine spécifique.
+### Accéder au tableau de bord de l'hébergement web spécifique
 
 En cliquant sur le nom de domaine ou en accédant aux paramètres de l'hébergement
 web grâce au bouton des trois points, vous pouvez accéder au tableau de bord de
@@ -1524,19 +1598,205 @@ l'hébergement web.
 Ce tableau de bord vous permet de configurer plusieurs paramètres importants
 pour votre hébergement web, notamment :
 
-- Le(s) site(s) web associé(s) à l'hébergement web.
+- Les paramètres généraux de l'hébergement web (par exemple, le nom de
+  l'hébergement web, les ressources allouées, etc.).
+- Le ou les sites web associés à l'hébergement web.
 - Les accès FTP/SFTP pour transférer les fichiers de votre application PHP.
-- Les accès à la base de données MariaDB.
+- Les accès à une ou des bases de données utilisées par votre application
+  (MariaDB, PostgreSQL, etc.).
+- Et d'autres paramètres avancés.
 
-### Configurer le site web
+### Renommer l'hébergement web
 
-Accédez ensuite au tableau de bord du site que vous venez de commander en
-cliquant sur celui-ci ou en utilisant le bouton des trois points.
+Pour éviter toute confusion entre un hébergement web et un ou plusieurs noms de
+domaine, nous allons renommer l'hébergement web existant pour lui donner un nom
+plus spécifique.
+
+Pour cela, accédez aux paramètres généraux de l'hébergement web en accédant au
+menu **Gérer > Modifier le nom** sous le nom actuel de l'hébergement web.
 
 <details>
 <summary>Afficher la capture d'écran illustrant l'étape</summary>
 
-![Infomaniak - Accéder au site web](./images/infomaniak-web-03-access-website.png)
+![Infomaniak - Accéder au menu de renommage de l'hébergement web](./images/infomaniak-web-03-access-rename-menu.png)
+
+</details>
+
+Puis renommer l'hébergement web en lui donnant un nom plus spécifique, par
+exemple `Hébergement web gratuit HEIG-VD`.
+
+<details>
+<summary>Afficher la capture d'écran illustrant l'étape</summary>
+
+![Infomaniak - Renommer l'hébergement web](./images/infomaniak-web-04-rename-hosting.png)
+
+</details>
+
+Sauvegardez les modifications.
+
+<details>
+<summary>Afficher la capture d'écran illustrant l'étape</summary>
+
+![Infomaniak - Sauvegarder les modifications](./images/infomaniak-web-05-save-changes.png)
+
+</details>
+
+Dorénavant, vous pourrez facilement différencier votre hébergement web des
+autres hébergements web ou sites que vous pourriez avoir acquis dans le cadre
+d'autres cours ou pour d'autres projets.
+
+Vous pouvez le confirmer dans la section **Mon offre** de l'hébergement web, où
+vous devriez voir le nombre de sites web associés à l'hébergement web ainsi que
+ceux encore disponibles dans le cadre de votre offre d'hébergement web (20 sites
+web disponibles dans le cadre du programme étudiant d'Infomaniak).
+
+Juste en dessous, vous devriez voir le ou les sites web associés à l'hébergement
+web. Si vous venez de commander un hébergement web avec un nom de domaine
+associé, vous devriez voir un site web associé à ce nom de domaine.
+
+<details>
+<summary>Afficher la capture d'écran illustrant l'étape</summary>
+
+![Infomaniak - Sites web associés à l'hébergement web](./images/infomaniak-web-06-associated-websites.png)
+
+</details>
+
+Maintenant que l'hébergement web a son propre nom distinctif, il est temps de
+configurer le site web associé à l'hébergement web.
+
+### Ajouter un nouveau site (optionnel)
+
+> [!NOTE]
+>
+> Ne suivez cette section que si vous souhaitez ajouter un nouveau site web à
+> l'hébergement web. Si vous avez commandé un hébergement web avec un nom de
+> domaine associé, vous devriez déjà avoir un site web associé à ce nom de
+> domaine et vous pouvez passer directement à la section
+> [Configurer le site web](#configurer-le-site-web).
+
+Si vous souhaitez ajouter un nouveau site web à l'hébergement web, vous pouvez
+le faire en cliquant sur le bouton **Ajouter un site** dans la section **Sites
+web** du tableau de bord de l'hébergement web.
+
+Selon le type de site web que vous souhaitez ajouter ou selon les contraintes du
+cours que vous suivez, vous pouvez choisir entre les différentes options
+proposées par Infomaniak.
+
+> [!NOTE]
+>
+> Si vous avez un doute, validez votre choix avec votre enseignant.e.
+
+#### Programmation serveur 1 (ProgServ1)
+
+Pour le cours de _"Programmation serveur 1 (ProgServ1)"_, vous pouvez choisir
+l'option **Créez un projet vierge**.
+
+<details>
+<summary>Afficher la capture d'écran illustrant l'étape</summary>
+
+![Infomaniak - Sélectionner le type de site web](./images/infomaniak-web-07-choose-website-type.png)
+
+</details>
+
+Puis configurez le site web en sélectionnant la technologie **Apache/PHP** et en
+sélectionnant la dernière version de PHP disponible dans les options avancées.
+
+> [!NOTE]
+>
+> Il se peut que la version de PHP utilisée par défaut pour le site web ne soit
+> pas la dernière version disponible, ni même qu'elle corresponde à la capture
+> d'écran ci-dessous.
+>
+> Nous vous recommandons d'utiliser la dernière version de PHP pour bénéficier
+> des dernières fonctionnalités et améliorations de sécurité.
+
+<details>
+<summary>Afficher la capture d'écran illustrant l'étape</summary>
+
+![Infomaniak - Configurer le site web](./images/infomaniak-web-08-configure-website.png)
+
+</details>
+
+La dernière étape de la configuration du site web consiste à associer un nom de
+domaine au site web.
+
+Deux options s'offrent à vous pour cela :
+
+1. Acheter un nouveau nom de domaine pour le site web. N'achetez un nouveau nom
+   de domaine que si vous souhaitez avoir un nom de domaine différent de celui
+   que vous avez déjà commandé pour votre hébergement web. Par exemple, si vous
+   avez déjà commandé le nom de domaine `mondomaine.ch` pour votre hébergement
+   web, vous pouvez acheter un nouveau nom de domaine `mondomaine2.ch` pour le
+   nouveau site web. La HEIG-VD ne remboursera qu'un seul nom de domaine par
+   étudiant.e, donc n'achetez un nouveau nom de domaine que si vous en avez
+   besoin pour votre projet.
+2. Associer le site web à un domaine/sous-domaine du domaine principal que vous
+   avez déjà commandé pour votre hébergement web. Par exemple, si vous avez déjà
+   commandé le nom de domaine `mondomaine.ch` pour votre hébergement web, vous
+   pouvez associer le nouveau site web à un sous-domaine
+   `projet1.mondomaine.ch`. Cette option est gratuite et vous permet d'avoir
+   plusieurs sites web associés à un même nom de domaine en utilisant des
+   sous-domaines différents.
+
+> [!NOTE]
+>
+> Si vous n'êtes pas sûr.e de l'option à choisir, nous vous recommandons
+> d'associer le site web à un sous-domaine du nom de domaine que vous avez déjà
+> commandé pour votre hébergement web.
+>
+> C'est une option gratuite qui vous permet d'avoir plusieurs sites web associés
+> à un même nom de domaine en utilisant des sous-domaines différents.
+>
+> En cas de doute, n'hésitez pas à valider votre choix avec votre enseignant.e.
+
+Illustrons la configuration du site web en associant le site web à un
+sous-domaine du nom de domaine que vous avez déjà commandé pour votre
+hébergement web.
+
+Sélectionnez l'option **Utiliser un nom de domaine ou sous-domaine existant**
+puis saisissez le sous-domaine que vous souhaitez associer au site web.
+
+Par exemple, si vous avez déjà commandé le nom de domaine `mondomaine.ch` pour
+votre hébergement web, vous pouvez saisir `progserv1` pour associer le site web
+au sous-domaine `progserv1.mondomaine.ch`.
+
+Puis, dans les options avancées, assurez-vous que la version de PHP sélectionnée
+est la dernière version disponible.
+
+<details>
+<summary>Afficher la capture d'écran illustrant l'étape</summary>
+
+![Infomaniak - Associer un nom de domaine au site web](./images/infomaniak-web-09-associate-domain.png)
+
+</details>
+
+Puis, terminez la configuration du site web en sauvegardant les modifications.
+La configuration du site web devrait prendre quelques minutes. Une fois la
+configuration terminée, vous pourrez accéder au site web en utilisant l'adresse
+du nom de domaine ou du sous-domaine que vous avez associé au site web.
+
+<details>
+<summary>Afficher les captures d'écran illustrant l'étape</summary>
+
+![Infomaniak - Configuration du site web](./images/infomaniak-web-10-configure-website.png)
+
+![Infomaniak - Site web configuré](./images/infomaniak-web-11-website-configured.png)
+
+</details>
+
+Vous pouvez maintenant passer à la section
+[Accéder au site web](#accéder-au-site-web) pour accéder au site web et vérifier
+que tout fonctionne correctement.
+
+### Configurer le site web
+
+Accédez au tableau de bord du site que vous venez de commander en cliquant sur
+celui-ci ou en utilisant le bouton des trois points.
+
+<details>
+<summary>Afficher la capture d'écran illustrant l'étape</summary>
+
+![Infomaniak - Accéder au site web](./images/infomaniak-web-12-access-website.png)
 
 </details>
 
@@ -1547,43 +1807,69 @@ pour le site en cours de configuration, notamment :
 - La configuration de HTTPS pour sécuriser le dit site web.
 - Et d'autres paramètres avancés.
 
-![Infomaniak - Tableau de bord du site web](./images/infomaniak-web-04-website-dashboard.png)
+<details>
+<summary>Afficher la capture d'écran illustrant l'étape</summary>
+
+![Infomaniak - Tableau de bord du site web](./images/infomaniak-web-13-website-dashboard.png)
+
+</details>
 
 Commencez par accéder aux paramètres avancés du site web en cliquant sur le
-bouton **Gérer** dans la section **Domaine principal** :
+bouton **Gérer** dans la section **Domaine principal**.
 
-![Infomaniak - Accéder aux paramètres avancés](./images/infomaniak-web-05-access-advanced-parameters.png)
+Vous accédez aux paramètres avancés du site web.
 
-Vous accédez aux paramètres avancés du site web :
+<details>
+<summary>Afficher les captures d'écran illustrant l'étape</summary>
 
-![Infomaniak - Paramètres avancés du site web](./images/infomaniak-web-06-advanced-parameters.png)
+![Infomaniak - Accéder aux paramètres avancés](./images/infomaniak-web-14-access-advanced-parameters.png)
+
+![Infomaniak - Paramètres avancés du site web](./images/infomaniak-web-15-advanced-parameters.png)
+
+</details>
 
 Puis, sélectionnez la version de PHP à utiliser pour le site web dans l'onglet
 **PHP | Apache**.
 
-Nous vous recommandons d'utiliser la dernière version disponible de PHP :
-
-![Infomaniak - Choisir la version de PHP](./images/infomaniak-web-07-choose-php-version.png)
-
-Terminez la configuration du site web en sauvegardant les modifications.
-
-Tentez d'accéder au site web en utilisant votre navigateur web en vous rendant à
-l'adresse du nom de domaine que vous avez choisi lors de la commande de
-l'hébergement web. Vous devriez voir une page par défaut d'Infomaniak :
+Nous vous recommandons d'utiliser la dernière version disponible de PHP.
 
 > [!NOTE]
 >
-> Il se peut que l'accès FTP ne soit pas immédiatement disponible après la
-> configuration. Cela est dû à la propagation des DNS, qui peut prendre jusqu'à
-> 24 heures.
+> Il se peut que la version de PHP utilisée par défaut pour le site web ne soit
+> pas la dernière version disponible, ni même qu'elle corresponde à la capture
+> d'écran ci-dessous.
+>
+> Nous vous recommandons d'utiliser la dernière version de PHP pour bénéficier
+> des dernières fonctionnalités et améliorations de sécurité.
+
+<details>
+<summary>Afficher la capture d'écran illustrant l'étape</summary>
+
+![Infomaniak - Choisir la version de PHP](./images/infomaniak-web-16-choose-php-version.png)
+
+</details>
+
+Terminez la configuration du site web en sauvegardant les modifications.
+
+### Accéder au site web
+
+Tentez d'accéder au site web en utilisant votre navigateur web en vous rendant à
+l'adresse du nom de domaine que vous avez choisi lors de la commande de
+l'hébergement web. Vous devriez voir une page par défaut d'Infomaniak.
+
+> [!NOTE]
+>
+> Il se peut que l'accès au site web ne soit pas immédiatement disponible après
+> la configuration. Cela est dû à la propagation des DNS, qui peut prendre
+> jusqu'à 24 heures.
 >
 > De notre expérience, cela prend généralement moins de deux heures.
 >
 > Vous pouvez essayer depuis un autre réseau (par exemple, en utilisant le
-> partage de connexion de votre téléphone) si l'accès FTP ne fonctionne pas
-> depuis le réseau Wi-Fi habituel.
+> partage de connexion de votre téléphone) si l'accès au site web ne fonctionne
+> pas depuis le réseau Wi-Fi habituel.
 
-![Infomaniak - Page par défaut](./images/infomaniak-web-08-default-page.png)
+![Infomaniak - Page par défaut](./images/infomaniak-web-17-default-page.png)
 
 Votre site web est maintenant configuré et prêt à être utilisé !
 
@@ -1759,6 +2045,16 @@ charge.
 > la fin de la première année pour éviter des frais dans le futur !
 
 ### Valider la configuration de l'environnement de production en ligne
+
+- [x] Avoir obtenu un hébergement web gratuit dans le cadre du programme
+      étudiant d'Infomaniak.
+- [x] Avoir renommé l'hébergement web pour lui donner un nom plus spécifique.
+- [x] Avoir configuré un site web associé à l'hébergement web.
+- [x] Avoir sécurisé le site web en activant HTTPS.
+- [x] Avoir accès au site web en utilisant l'adresse du nom de domaine ou du
+      sous-domaine associé au site web.
+- [x] Avoir effectué la demande de remboursement du nom de domaine auprès de la
+      HEIG-VD.
 
 ## Déployer le mini-projet en ligne
 
@@ -2025,6 +2321,8 @@ suivante :
 
 <!-- URLs -->
 
+[licence]:
+	https://github.com/heig-vd-devprodmed-course/heig-vd-devprodmed-course/blob/main/LICENSE.md
 [illustration-logo-svg]:
 	https://unsplash.com/photos/ygsmi5ushr0/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzQ5MDM5ODM3fA&force=true&fm=svg
 
