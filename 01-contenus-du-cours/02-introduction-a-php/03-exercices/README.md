@@ -13,6 +13,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Table des matières
 
 - [Table des matières](#table-des-matières)
+- [Utilisation avec Git/GitHub](#utilisation-avec-gitgithub)
 - [Exercices](#exercices)
   - [Exercice 1](#exercice-1)
   - [Exercice 2](#exercice-2)
@@ -34,6 +35,35 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Exercice 18](#exercice-18)
   - [Exercice 19](#exercice-19)
   - [Exercice 20](#exercice-20)
+  - [Exercice 21](#exercice-21)
+
+## Utilisation avec Git/GitHub
+
+Il est recommandé d'utiliser Git et GitHub pour suivre votre progression dans
+les exercices.
+
+En utilisant le dépôt GitHub que vous avez mis en place depuis le début du
+cours, réalisez les exercices suivants.
+
+Nous ne recommandons pas de structures particulières pour organiser les
+exercices. Vous êtes libre de les organiser comme vous le souhaitez.
+
+Voici quelques suggestions d'organisation pour les exercices dans le dossier
+`exercices` de votre projet :
+
+- Vous pouvez créer un sous-dossier pour chaque séance du cours, par exemple
+  `exercices/seance-1`, `exercices/seance-2`, etc., et y stocker les exercices
+  correspondants à chaque séance.
+- Vous pouvez créer un fichier pour chaque exercice, par exemple
+  `exercices/exercice-1.php`, `exercices/exercice-2.php`, etc., et y stocker le
+  code de chaque exercice.
+- Vous pouvez également mettre à jour le fichier `exercices/index.php` avec des
+  liens vers les différents exercices, pour faciliter l'accès à chacun d'eux
+  depuis le navigateur web.
+
+A chaque exercice, n'oubliez pas de faire un commit avec Git pour enregistrer
+votre progrès, et de pousser vos changements sur GitHub pour les sauvegarder en
+ligne.
 
 ## Exercices
 
@@ -51,6 +81,76 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ### Exercice 1
 
+Soit la structure de fichiers fictive suivante dans votre projet PHP avec le
+serveur de développement PHP en cours d'exécution à la racine du projet :
+
+```text
+./
+└── dossier1/
+    ├── index.php
+    └── dossier2/
+        ├── fichier1.php
+        └── dossier3/
+            └── fichier2.php
+```
+
+- Si une personne essaie d'accéder à l'adresse `http://localhost:8080/dossier1`,
+  que se passe-t-il ?
+- Si une personne essaie d'accéder à l'adresse
+  `http://localhost:8080/dossier1/dossier2/dossier3/fichier2.php`, que se
+  passe-t-il ?
+- Si une personne essaie d'accéder à l'adresse
+  `http://localhost:8080/dossier1/dossier2/dossier3/index.php`, que se
+  passe-t-il ?
+
+<details>
+<summary>Afficher la réponse</summary>
+
+- Si une personne essaie d'accéder à l'adresse `http://localhost:8080/dossier1`,
+  le serveur de développement PHP va essayer de trouver un fichier `index.php`
+  ou `index.html` dans le dossier `dossier1` depuis la racine du projet. Si un
+  fichier `index.php` ou `index.html` existe dans le dossier `dossier1`, le
+  serveur de développement PHP va exécuter ce fichier et renvoyer le résultat de
+  son exécution au navigateur web. Sinon, il génère une page d'erreur 404 (Not
+  Found) et la renvoie au navigateur web.
+
+  Comme c'est le cas dans la structure de fichiers fictive présentée ci-dessus,
+  le serveur de développement PHP va trouver un fichier `index.php` dans le
+  dossier `dossier1`, l'exécuter et renvoyer le résultat de son exécution au
+  navigateur web.
+
+- Si une personne essaie d'accéder à l'adresse
+  `http://localhost:8080/dossier1/dossier2/dossier3/fichier2.php`, le serveur de
+  développement PHP va essayer de trouver un fichier `fichier2.php` dans le
+  dossier `dossier1/dossier2/dossier3` depuis la racine du projet. Si le fichier
+  `fichier2.php` existe dans le dossier `dossier1/dossier2/dossier3`, le serveur
+  de développement PHP va exécuter ce fichier et renvoyer le résultat de son
+  exécution au navigateur web. Sinon, il génère une page d'erreur 404 (Not
+  Found) et la renvoie au navigateur web.
+
+  Comme c'est le cas dans la structure de fichiers fictive présentée ci-dessus,
+  le serveur de développement PHP va trouver un fichier `fichier2.php` dans le
+  dossier `dossier1/dossier2/dossier3`, l'exécuter et renvoyer le résultat de
+  son exécution au navigateur web.
+
+- Si une personne essaie d'accéder à l'adresse
+  `http://localhost:8080/dossier1/dossier2/dossier3/index.php`, le serveur de
+  développement PHP va essayer de trouver un fichier `index.php` dans le dossier
+  `dossier1/dossier2/dossier3` depuis la racine du projet. Si le fichier
+  `index.php` existe dans le dossier `dossier1/dossier2/dossier3`, le serveur de
+  développement PHP va exécuter ce fichier et renvoyer le résultat de son
+  exécution au navigateur web. Sinon, il génère une page d'erreur 404 (Not
+  Found) et la renvoie au navigateur web.
+
+  Comme il n'y a pas de fichier `index.php` dans le dossier
+  `dossier1/dossier2/dossier3` dans la structure de fichiers fictive présentée
+  ci-dessus, le serveur de développement PHP va générer une page d'erreur 404
+  (Not Found) et la renvoyer au navigateur web.
+
+</details>
+
+### Exercice 2
+
 Qu'affiche le code suivant ?
 
 ```php
@@ -67,7 +167,7 @@ Hello, World!
 
 </details>
 
-### Exercice 2
+### Exercice 3
 
 Déclarez une variable `name` contenant votre prénom et affichez-la avec le
 message _"Hello, [votre prénom] !"_.
@@ -88,7 +188,7 @@ Bonjour, Votre prénom !
 
 </details>
 
-### Exercice 3
+### Exercice 4
 
 Utilisez une structure de contrôle conditionnelle pour vérifier si une variable
 `age` est supérieure ou égale à 18. Si c'est le cas, affichez _"You are over
@@ -114,7 +214,7 @@ You are over 18.
 
 </details>
 
-### Exercice 4
+### Exercice 5
 
 Déclarez une constante `PI` avec la valeur `3.14` et affichez-la.
 
@@ -134,7 +234,7 @@ echo PI;
 
 </details>
 
-### Exercice 5
+### Exercice 6
 
 Déclarez une variable `number` avec la valeur `10`. Calculez son double et
 stockez-le dans une autre variable `double`. Affichez le résultat.
@@ -157,7 +257,7 @@ echo $double;
 
 </details>
 
-### Exercice 6
+### Exercice 7
 
 Expliquez la différence entre les guillemets simples (`'`) et les guillemets
 doubles (`"`) en PHP. Donnez un exemple pour illustrer la différence.
@@ -184,7 +284,7 @@ echo "$greetings, $name!";
 
 </details>
 
-### Exercice 7
+### Exercice 8
 
 Déclarez une variable `text` avec la valeur `"PHP"` et affichez le message
 _"J'apprends PHP dans ce nouveau cours ProgServ1."_ en utilisant la
@@ -206,7 +306,7 @@ J'apprends PHP dans ce nouveau cours ProgServ1.
 
 </details>
 
-### Exercice 8
+### Exercice 9
 
 Déclarez une variable `hasABachelorDegree` avec la valeur `true` et une variable
 `hasFinishedHeigVd` avec la valeur `true`. Utilisez une structure de contrôle
@@ -238,7 +338,7 @@ You have finished the HEIG-VD, congratulations!
 
 </details>
 
-### Exercice 9
+### Exercice 10
 
 Comment est-ce que le serveur web et l'interpréteur PHP interagissent pour
 afficher une page web ?
@@ -254,7 +354,7 @@ page web dans son navigateur.
 
 </details>
 
-### Exercice 10
+### Exercice 11
 
 Déclarez une variable `day` avec la valeur `"Monday"` et utilisez une structure
 de contrôle `switch` pour afficher un message _"Weekday"_ pour les jours de la
@@ -294,7 +394,7 @@ Week-day
 
 </details>
 
-### Exercice 11
+### Exercice 12
 
 Déclarez une variable `temperature` avec la valeur `30` et utilisez une
 structure de contrôle conditionnelle pour afficher _"It's hot"_ si la
@@ -323,7 +423,7 @@ It's hot
 
 </details>
 
-### Exercice 12
+### Exercice 13
 
 Déclarez une variable `grade` avec la valeur `5` et utilisez une structure de
 contrôle `switch` pour afficher un message différent pour chaque note (`1`, `2`,
@@ -366,7 +466,7 @@ Good
 
 </details>
 
-### Exercice 13
+### Exercice 14
 
 Expliquez ce qu'est une structure de contrôle conditionnelle et donnez un
 exemple en PHP.
@@ -394,7 +494,7 @@ if ($a < $b) {
 
 </details>
 
-### Exercice 14
+### Exercice 15
 
 Déclarez une constante `USERNAME` avec la valeur `"admin"` et une constante
 `PASSWORD` avec la valeur `"1234"`. Utilisez une structure de contrôle
@@ -425,7 +525,7 @@ You are logged in
 
 </details>
 
-### Exercice 15
+### Exercice 16
 
 Déclarez une variable `number` avec la valeur `9` et utilisez une structure de
 contrôle conditionnelle pour vérifier si le nombre est un multiple de `3`.
@@ -453,7 +553,7 @@ Multiple of 3
 
 </details>
 
-### Exercice 16
+### Exercice 17
 
 Déclarez une variable `number` avec la valeur `15` et utilisez une structure de
 contrôle conditionnelle pour vérifier si le nombre est divisible par `3` et `5`.
@@ -487,7 +587,7 @@ Divisible by 3 and 5
 
 </details>
 
-### Exercice 17
+### Exercice 18
 
 Déclarez une variable `stRochStudent` avec la valeur `true`, une variable
 `comemStudent` avec la valeur `true` et une variable `cheseauxStudent` avec la
@@ -514,7 +614,7 @@ if ($stRochStudent && $comemStudent || $cheseauxStudent) {
 
 </details>
 
-### Exercice 18
+### Exercice 19
 
 Déclarez une constante `USERNAME` avec la valeur `"admin"` et une constante
 `PASSWORD` avec la valeur `"1234"`. Utilisez une structure de contrôle
@@ -545,7 +645,7 @@ You are logged in
 
 </details>
 
-### Exercice 19
+### Exercice 20
 
 Déclarez une variable `number` avec la valeur `9` et utilisez une structure de
 contrôle conditionnelle pour vérifier si le nombre est un multiple de `3`.
@@ -571,7 +671,7 @@ Multiple de 3
 
 </details>
 
-### Exercice 20
+### Exercice 21
 
 Quel est le but et le rôle d'outils tels que WampServer, MAMP, ou encore XAMPP ?
 
