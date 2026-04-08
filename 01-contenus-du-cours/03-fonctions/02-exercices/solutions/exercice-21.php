@@ -4,7 +4,7 @@ $variable2 = 42;
 $variable3 = 3.14;
 $variable4 = true;
 
-function isStringOrInteger($variable) {
+function isStringOrInteger(mixed $variable): string {
     if (is_string($variable)) {
         return "String";
     } elseif (is_int($variable)) {

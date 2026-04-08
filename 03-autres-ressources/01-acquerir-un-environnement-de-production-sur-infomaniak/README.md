@@ -24,6 +24,8 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Renouveler/révoquer le programme étudiant d'Infomaniak](#renouvelerrévoquer-le-programme-étudiant-dinfomaniak)
   - [Valider la configuration de l'environnement de production en ligne](#valider-la-configuration-de-lenvironnement-de-production-en-ligne)
 - [Déployer une application PHP sur l'hébergement web](#déployer-une-application-php-sur-lhébergement-web)
+- [Déployer le mini-projet en ligne](#déployer-le-mini-projet-en-ligne)
+  - [Exercice 4 - Accéder à l'hébergement web via FTP/SFTP](#exercice-4---accéder-à-lhébergement-web-via-ftpsftp)
 
 ## Objectifs
 
@@ -960,4 +962,4 @@ des fichiers par défaut d'Infomaniak au cas où vous en auriez besoin plus tard
 <!-- URLs -->
 
 [licence]:
-	https://github.com/heig-vd-devprodmed-course/heig-vd-devprodmed-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md

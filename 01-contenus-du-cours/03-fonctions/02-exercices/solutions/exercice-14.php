@@ -1,5 +1,5 @@
 <?php
-function absoluteValue($number) {
+function absoluteValue(int|float $number): int|float {
     return abs($number);
 }
 

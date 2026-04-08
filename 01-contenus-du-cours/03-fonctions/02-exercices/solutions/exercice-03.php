@@ -1,5 +1,5 @@
 <?php
-function multiply($a, $b) {
+function multiply(int|float $a, int|float $b): int|float {
     return $a * $b;
 }
 

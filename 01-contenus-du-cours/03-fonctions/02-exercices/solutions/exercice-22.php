@@ -4,7 +4,7 @@ $variable2 = "";
 $variable3 = 42;
 $variable4 = null;
 
-function isSetAndNotEmpty($variable) {
+function isSetAndNotEmpty(mixed $variable): string {
     if (isset($variable) && !empty($variable)) {
         return "Set and not empty";
     } elseif (isset($variable) && empty($variable)) {

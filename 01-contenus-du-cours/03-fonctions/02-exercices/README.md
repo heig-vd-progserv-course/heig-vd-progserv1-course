@@ -94,7 +94,7 @@ argument.
 
 ```php
 <?php
-function greet($name) {
+function greet(string $name): void {
     echo "Hello, $name!<br>";
 }
 
@@ -118,7 +118,7 @@ résultat.
 
 ```php
 <?php
-function square($number) {
+function square(int|float $number): int|float {
     return $number * $number;
 }
 
@@ -144,7 +144,7 @@ affichez le résultat.
 
 ```php
 <?php
-function multiply($a, $b) {
+function multiply(int|float $a, int|float $b): int|float {
     return $a * $b;
 }
 
@@ -170,7 +170,7 @@ doit retourner le message _"Division by zero is not allowed."_.
 
 ```php
 <?php
-function divide($a, $b) {
+function divide(int|float $a, int|float $b): string|int|float {
     if ($b == 0) {
         return "Division by zero is not allowed.";
     } else {
@@ -204,7 +204,7 @@ Par exemple, la valeur absolue de `-15` est `15`.
 
 ```php
 <?php
-function absoluteValue($number) {
+function absoluteValue(int|float $number): int|float {
     if ($number < 0) {
         return -$number;
     } else {
@@ -234,7 +234,7 @@ retourne le plus grand des deux. Appelez cette fonction avec les nombres `12` et
 
 ```php
 <?php
-function maxOfTwo($a, $b) {
+function maxOfTwo(int|float $a, int|float $b): int|float {
     if ($a > $b) {
         return $a;
     } else {
@@ -267,7 +267,7 @@ si le nombre `10` est pair, puis affichez _"Even"_ ou _"Odd"_ en conséquence.
 
 ```php
 <?php
-function isEven($number) {
+function isEven(int $number): bool {
     return $number % 2 == 0;
 }
 
@@ -307,7 +307,7 @@ puis affichez le résultat.
 
 ```php
 <?php
-function grade($points, $maxPoints) {
+function grade(int|float $points, int|float $maxPoints): float {
     return $points / $maxPoints * 5.0 + 1.0;
 }
 
@@ -334,7 +334,7 @@ l'examen, puis affichez _"Passing"_ ou _"Failing"_ en conséquence.
 
 ```php
 <?php
-function isPassing($grade) {
+function isPassing(float $grade): bool {
     return $grade >= 4.0;
 }
 
@@ -369,7 +369,7 @@ sont bissextiles. Affichez _"Bissextile"_ ou _"Non bissextile"_ en conséquence.
 
 ```php
 <?php
-function isLeapYear($year) {
+function isLeapYear(int $year): bool {
     return ($year % 4 == 0 && $year % 100 != 0) || $year % 400 == 0;
 }
 
@@ -488,7 +488,7 @@ en utilisant la fonction `abs` de PHP.
 
 ```php
 <?php
-function absoluteValue($number) {
+function absoluteValue(int|float $number): int|float {
     return abs($number);
 }
 
@@ -517,7 +517,7 @@ Utilisez cette fonction pour calculer la puissance de `2` à la puissance `8`.
 
 ```php
 <?php
-function power($base, $exponent) {
+function power(int|float $base, int|float $exponent): int|float {
     return pow($base, $exponent);
 }
 
@@ -687,7 +687,7 @@ $variable2 = 42;
 $variable3 = 3.14;
 $variable4 = true;
 
-function isStringOrInteger($variable) {
+function isStringOrInteger(mixed $variable): string {
     if (is_string($variable)) {
         return "String";
     } elseif (is_int($variable)) {
@@ -741,7 +741,7 @@ $variable2 = "";
 $variable3 = 42;
 $variable4 = null;
 
-function isSetAndNotEmpty($variable) {
+function isSetAndNotEmpty(mixed $variable): string {
     if (isset($variable) && !empty($variable)) {
         return "Set and not empty";
     } elseif (isset($variable) && empty($variable)) {
@@ -791,7 +791,7 @@ $length = 5;
 $string = "Hello, world!";
 $length = 5;
 
-function truncate($string, $length) {
+function truncate(string $string, int $length): string {
     if (strlen($string) > $length) {
         return substr($string, 0, $length) . "...";
     } else {
@@ -835,7 +835,7 @@ $variable2 = 42;
 $variable3 = 3.14;
 $variable4 = true;
 
-function debug($variable) {
+function debug(mixed $variable): void {
     var_dump($variable);
 }
 
@@ -872,7 +872,7 @@ par `3`.
 
 ```php
 <?php
-function isDivisibleBy($a, $b) {
+function isDivisibleBy(int $a, int $b): bool {
     return $b != 0 && $a % $b == 0;
 }
 
@@ -921,7 +921,7 @@ fonction s'appelle elle-même) en utilisant ces propriétés.
 
 ```php
 <?php
-function factorial($number) {
+function factorial(int $number): int {
     if ($number == 0) {
         return 1;
     }
@@ -957,4 +957,4 @@ echo $result;
 <!-- URLs -->
 
 [licence]:
-	https://github.com/heig-vd-devprodmed-course/heig-vd-devprodmed-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md

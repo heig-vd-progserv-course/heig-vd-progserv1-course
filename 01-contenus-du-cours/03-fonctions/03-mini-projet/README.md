@@ -1,25 +1,22 @@
 # Fonctions - Mini-projet
 
-Ce mini-projet est conçu pour vous permettre de mettre en pratique les concepts
-théoriques vus dans le cours _["Fonctions"](../README.md)_.
+L. Delafontaine, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot).
 
-## Ressources
+Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-- Théorie : [Support de cours](../README.md) ·
-  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/02-fonctions/index.html)
-  ·
-  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/02-fonctions/02-fonctions-presentation.pdf)
-- Mini-projet : [Consignes](../03-mini-projet/README.md) ·
-  [Solution](../03-mini-projet/solution/README.md)
-- Exercices : [Énoncés et solutions](../02-exercices/README.md)
+> [!TIP]
+>
+> Toutes les informations relatives à ce contenu sont décrites dans le
+> [contenu principal](../README.md).
 
 ## Table des matières
 
-- [Ressources](#ressources)
 - [Table des matières](#table-des-matières)
-- [Objectifs de la session](#objectifs-de-la-session)
+- [Objectifs](#objectifs)
 - [Rappel de la structure des animaux de compagnie](#rappel-de-la-structure-des-animaux-de-compagnie)
 - [Création du ficher `functions.php`](#création-du-ficher-functionsphp)
+- [Création des fonctions](#création-des-fonctions)
 - [Importer et utiliser les fonctions dans le fichier `index.php`](#importer-et-utiliser-les-fonctions-dans-le-fichier-indexphp)
 - [Créer les pages de base pour gérer les animaux de compagnie](#créer-les-pages-de-base-pour-gérer-les-animaux-de-compagnie)
   - [Créer une page pour visualiser et modifier un animal de compagnie](#créer-une-page-pour-visualiser-et-modifier-un-animal-de-compagnie)
@@ -30,7 +27,7 @@ théoriques vus dans le cours _["Fonctions"](../README.md)_.
 - [Conclusion](#conclusion)
 - [Aller plus loin](#aller-plus-loin)
 
-## Objectifs de la session
+## Objectifs
 
 À l'issue de cette session, les personnes qui étudient devraient avoir pu :
 
@@ -388,3 +385,8 @@ loin. Vous pouvez la sauter si vous n'avez pas de temps._
 
 - Comment pourriez-vous modifier les fonctions pour qu'elles retournent des
   valeurs plutôt que d'afficher des messages ?
+
+<!-- URLs -->
+
+[licence]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md

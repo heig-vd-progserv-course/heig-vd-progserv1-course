@@ -1,5 +1,5 @@
 <?php
-function power($base, $exponent) {
+function power(int|float $base, int|float $exponent): int|float {
     return pow($base, $exponent);
 }
 

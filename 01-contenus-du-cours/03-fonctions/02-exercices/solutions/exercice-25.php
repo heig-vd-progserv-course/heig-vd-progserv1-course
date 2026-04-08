@@ -1,5 +1,5 @@
 <?php
-function isDivisibleBy($a, $b) {
+function isDivisibleBy(int $a, int $b): bool {
     return $b != 0 && $a % $b == 0;
 }
 

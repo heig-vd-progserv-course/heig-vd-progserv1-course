@@ -1,5 +1,5 @@
 <?php
-function maxOfTwo($a, $b) {
+function maxOfTwo(int|float $a, int|float $b): int|float {
     if ($a > $b) {
         return $a;
     } else {

@@ -70,6 +70,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 - [Retourner une valeur depuis une fonction](#retourner-une-valeur-depuis-une-fonction)
 - [Paramètres optionnels](#paramètres-optionnels)
 - [Passer plusieurs paramètres à une fonction](#passer-plusieurs-paramètres-à-une-fonction)
+- [Typer les paramètres et la valeur de retour d'une fonction](#typer-les-paramètres-et-la-valeur-de-retour-dune-fonction)
 - [Portée des variables](#portée-des-variables)
 - [Variables globales](#variables-globales)
 - [Fonctions prédéfinies en PHP](#fonctions-prédéfinies-en-php)
@@ -77,7 +78,8 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
   - [Fonctions sur les chaînes de caractères](#fonctions-sur-les-chaînes-de-caractères)
   - [Fonctions sur les variables](#fonctions-sur-les-variables)
 - [Réutiliser du code avec des fonctions](#réutiliser-du-code-avec-des-fonctions)
-  - [Différence entre `include` et `require`](#différence-entre-include-et-require)
+  - [Différence entre `include_once` et `require_once`](#différence-entre-include_once-et-require_once)
+  - [Différence entre `require_once` et `require`](#différence-entre-require_once-et-require)
 - [Conclusion](#conclusion)
 - [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
@@ -95,18 +97,8 @@ Dans ce cours, nous allons voir comment déclarer et appeler des fonctions en
 PHP. Nous allons également voir comment passer des paramètres à une fonction et
 comment retourner une valeur depuis une fonction.
 
-De façon plus concise, les personnes qui étudient devraient être capables de :
-
-- Décrire ce qu'est une fonction en programmation.
-- Déclarer une fonction en PHP.
-- Appeler une fonction en PHP.
-- Passer des paramètres à une fonction en PHP.
-- Utiliser une valeur de retour.
-- Expliquer ce qu'est une portée de variable.
-- Utiliser des variables globales.
-- Savoir où trouver la documentation sur les fonctions prédéfinies en PHP.
-- Utiliser des fonctions prédéfinies en PHP.
-- Réutiliser du code avec des fonctions.
+La liste complète des objectifs est disponible dans la section _"Objectifs"_ du
+bloc d'information en haut de ce contenu.
 
 ## Qu'est-ce qu'une fonction ?
 
@@ -546,6 +538,71 @@ public class Main {
 
 </details>
 
+## Typer les paramètres et la valeur de retour d'une fonction
+
+Depuis la version 7 de PHP, il est possible de typer les paramètres et la valeur
+de retour d'une fonction. Cela permet de spécifier le type de données attendu
+pour les paramètres et la valeur de retour, ce qui peut aider à éviter des
+erreurs et à rendre le code plus lisible.
+
+Par exemple, la fonction `add` étudiée précédemment peut être modifiée pour
+prendre deux paramètres de type `float` et retourner un `float` :
+
+```php
+<?php
+function add(float $x, float $y): float {
+    return $x + $y;
+}
+```
+
+De cette manière, si on essaie d'appeler la fonction `add` avec des arguments
+qui ne sont pas des nombres à virgule flottante, ou si on essaie de retourner
+une valeur qui n'est pas un nombre à virgule flottante, PHP générera une erreur.
+
+```php
+<?php
+$result = add(3, "Hello"); // Uncaught TypeError: add(): Argument #2 ($y) must be of type float, string given
+```
+
+En effet, dans ce cas, le deuxième argument passé à la fonction `add` est une
+chaîne de caractères, alors que la fonction attend un nombre à virgule flottante
+(`float`).
+
+Les types de données que l'on peut utiliser pour typer les paramètres et la
+valeur de retour d'une fonction sont les suivants (entre autres) (source :
+<https://www.php.net/manual/fr/language.types.declarations.php>) :
+
+- `int` : pour les nombres entiers.
+- `float` : pour les nombres à virgule flottante.
+- `string` : pour les chaînes de caractères.
+- `bool` : pour les valeurs booléennes (`true` ou `false`).
+- `array` : pour les tableaux.
+- `mixed` : pour indiquer que le paramètre ou la valeur de retour peut être de
+  n'importe quel type.
+
+Il est possible de combiner plusieurs types en utilisant le symbole `|` pour
+indiquer que le paramètre ou la valeur de retour peut être de l'un des types
+spécifiés. Par exemple, la fonction suivante peut prendre un paramètre qui peut
+être soit un `int` soit un `float` et retourne un `float` :
+
+```php
+<?php
+function add(int|float $x, int|float $y): float {
+    return $x + $y;
+}
+```
+
+Cela signifie que les paramètres `$x` et `$y` peuvent être soit des nombres
+entiers (`int`) soit des nombres à virgule flottante (`float`), et que la
+fonction retournera un nombre à virgule flottante (`float`).
+
+Nous recommandons de toujours typer les paramètres et la valeur de retour d'une
+fonction lorsque cela est possible, afin de rendre le code plus robuste et plus
+facile à comprendre.
+
+A l'avenir, nous allons systématiquement typer les paramètres et la valeur de
+retour de nos fonctions.
+
 ## Portée des variables
 
 Les variables déclarées à l'intérieur d'une fonction sont locales à cette
@@ -557,7 +614,7 @@ accessible en dehors de cette fonction :
 
 ```php
 <?php
-function square($x) {
+function square(float $x): float {
     return $x * $x;
 }
 
@@ -569,12 +626,13 @@ echo $x; // Erreur : variable $x non définie
 
 ```java
 public class Main {
-    public static int square(int x) {
+    public static double square(double x) {
         return x * x;
     }
 
     public static void main(String[] args) {
-        System.out.println(x); // Erreur : variable x non définie
+        double x = 42;
+        System.out.println(square(x)); // Affiche 1764
     }
 }
 ```
@@ -825,8 +883,8 @@ définir une fonction `hello` dans un fichier `functions.php` :
 ```php
 <?php
 // Fichier `functions.php`
-function hello($name) {
-    echo "Hello, $name!<br>";
+function hello(string $name): string {
+    return "Hello, $name!<br>";
 }
 ```
 
@@ -835,11 +893,11 @@ Et l'inclure dans un autre fichier pour l'utiliser :
 ```php
 <?php
 // Fichier `index.php`
-require "functions.php"; // On inclut le fichier
+require_once "functions.php"; // On inclut le fichier
 
-// La fonction `hello` est définie dans le fichier importé
-// et peut être utilisée ici
-hello("Alice");
+// La fonction `hello` est définie dans le fichier importé et peut être utilisée
+// ici
+echo hello("Alice");
 ```
 
 Dans cet exemple, la fonction `hello` est définie dans le fichier
@@ -849,17 +907,33 @@ Il existe des fonctions prédéfinies en PHP pour inclure des fichiers, comme
 `include`, `require`, `include_once` et `require_once`. Ces fonctions permettent
 d'inclure un fichier dans un autre fichier pour réutiliser du code.
 
-### Différence entre `include` et `require`
+### Différence entre `include_once` et `require_once`
 
-Les fonctions `include` et `require` permettent d'inclure un fichier dans un
-autre fichier. La principale différence entre ces deux fonctions est que
-`include` génère une erreur si le fichier n'est pas trouvé mais le reste du
-script continue à s'exécuter, tandis que `require` génère une erreur fatale et
-arrête l'exécution du script.
+Les fonctions `include_once` et `require_once` permettent d'inclure un fichier
+dans un autre fichier. La principale différence entre ces deux fonctions est que
+`include_once` génère une erreur si le fichier n'est pas trouvé mais le reste du
+script continue à s'exécuter, tandis que `require_once` génère une erreur fatale
+et arrête l'exécution du script.
 
-Nous vous recommandons de toujours utiliser `require` pour inclure des fichiers
-à votre application pour s'assurer que le script ne continue pas à s'exécuter si
-un fichier est manquant.
+Nous vous recommandons de toujours utiliser `require_once` pour inclure des
+fichiers à votre application pour s'assurer que le script ne continue pas à
+s'exécuter si un fichier est manquant.
+
+### Différence entre `require_once` et `require`
+
+La fonction `require_once` vérifie si le fichier a déjà été inclus auparavant et
+ne l'inclut pas à nouveau si c'est le cas. La fonction `require`, quant à elle,
+inclut le fichier à chaque fois qu'elle est appelée, même si le fichier a déjà
+été inclus auparavant.
+
+Si un même fichier est inclus plusieurs fois avec `require`, cela peut entraîner
+des erreurs, notamment des erreurs de redéclaration de fonctions ou de classes.
+En utilisant `require_once`, on évite ce problème en s'assurant que le fichier
+n'est inclus qu'une seule fois.
+
+Nous vous recommandons de toujours utiliser `require_once` pour inclure des
+fichiers dans votre application afin d'éviter les erreurs de redéclaration et de
+garantir que chaque fichier n'est inclus qu'une seule fois.
 
 ## Conclusion
 

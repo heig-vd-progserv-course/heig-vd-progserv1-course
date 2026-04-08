@@ -1,5 +1,5 @@
 <?php
-function factorial($number) {
+function factorial(int $number): int {
     if ($number == 0) {
         return 1;
     }

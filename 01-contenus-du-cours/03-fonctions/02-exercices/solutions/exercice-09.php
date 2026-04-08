@@ -1,5 +1,5 @@
 <?php
-function isPassing($grade) {
+function isPassing(float $grade): bool {
     return $grade >= 4.0;
 }
 

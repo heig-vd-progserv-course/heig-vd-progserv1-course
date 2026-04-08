@@ -1,5 +1,5 @@
 <?php
-function absoluteValue($number) {
+function absoluteValue(int|float $number): int|float {
     if ($number < 0) {
         return -$number;
     } else {

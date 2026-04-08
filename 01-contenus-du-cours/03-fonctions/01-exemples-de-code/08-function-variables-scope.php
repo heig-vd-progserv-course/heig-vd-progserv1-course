@@ -1,5 +1,5 @@
 <?php
-function square($x) {
+function square(float $x): float {
     return $x * $x;
 }
 

@@ -1,5 +1,5 @@
 <?php
-function square($number) {
+function square(int|float $number): int|float {
     return $number * $number;
 }
 

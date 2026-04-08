@@ -293,6 +293,47 @@ public class Main {
 }
 ```
 
+## Typer les paramètres et la valeur de retour d'une fonction (1)
+
+- Depuis PHP 7, il est possible de typer les paramètres et la valeur de retour
+  d'une fonction.
+- Cela permet de s'assurer que les fonctions sont utilisées correctement et que
+  les valeurs retournées sont du type attendu.
+- Permet de limiter les erreurs et de rendre le code plus facile à comprendre.
+- Le typage est facultatif, mais il est recommandé de l'utiliser autant que
+  possible.
+
+## Typer les paramètres et la valeur de retour d'une fonction (2)
+
+```php
+<?php
+function add(float $x, float $y): float {
+    return $x + $y;
+}
+```
+
+```php
+<?phpgiven
+$result = add(3, "Hello");
+
+// Uncaught TypeError: add():
+// Argument #2 ($y) must be of type float, string
+```
+
+## Typer les paramètres et la valeur de retour d'une fonction (3)
+
+Il est possible de passer plusieurs types de données en utilisant des types
+union :
+
+```php
+<?php
+function add(int|float $x, int|float $y): float {
+    return $x + $y;
+}
+```
+
+Les types de base sont `int`, `float`, `string`, `bool`, `array` et `mixed`.
+
 ## Portée des variables (1)
 
 - La portée d'une variable est l'endroit où elle peut être utilisée
@@ -543,8 +584,8 @@ public class Main {
 ```php
 <?php
 // Fichier `functions.php`
-function hello($name) {
-    echo "Hello, $name!<br>";
+function hello(string $name): string {
+    return "Hello, $name!<br>";
 }
 ```
 
@@ -555,17 +596,30 @@ require "functions.php"; // On inclut le fichier
 
 // La fonction `hello` est définie dans le fichier importé
 // et peut être utilisée ici
-hello("Alice");
+echo hello("Alice");
 ```
 
-### Différence entre `include` et `require`
+### Différence entre `include_once` et `require_once`
 
-- Il est possible d'importer des fichiers avec `include` et `require`
-- `include` : si le fichier n'est pas trouvé, un avertissement est émis
-- `require` : si le fichier n'est pas trouvé, une erreur fatale est émise
-- Nous conseillons de toujours utiliser `require`
+Il est possible d'importer des fichiers avec `include_once` et `require_once` :
 
-![bg right:40%][illustration-difference-entre-include-et-require]
+- `include_once` : si le fichier n'est pas trouvé, un avertissement est émis.
+- `require_once` : si le fichier n'est pas trouvé, une erreur fatale est émise.
+
+Nous conseillons de toujours utiliser `require_once`.
+
+### Différence entre `require_once` et `require`
+
+Il est également possible d'importer des fichiers avec `include` et `require` au
+lieu de `*_once` mais des problèmes peuvent survenir :
+
+- `require_once` : le fichier est inclus une seule fois, même si la directive
+  est utilisée plusieurs fois.
+- `require` : le fichier est inclus à chaque fois que la directive est
+  utilisée - cela peut entraîner des erreurs.
+
+Il est recommandé d'utiliser `require_once` pour éviter les problèmes liés à
+l'inclusion multiple du même fichier.
 
 ## Conclusion
 
@@ -650,9 +704,6 @@ Est-ce que vous avez des questions ?
 
 ## Sources (3)
 
-- [Illustration][illustration-difference-entre-include-et-require] par
-  [Clay Banks](https://unsplash.com/@claybanks) sur
-  [Unsplash](https://unsplash.com/photos/five-human-hands-on-brown-surface-LjqARJaJotc)
 - [Illustration][illustration-a-vous-de-jouer] par
   [Nikita Kachanovsky](https://unsplash.com/@nkachanovskyyy) sur
   [Unsplash](https://unsplash.com/photos/white-sony-ps4-dualshock-controller-over-persons-palm-FJFPuE1MAOM)
@@ -704,7 +755,5 @@ Est-ce que vous avez des questions ?
 	https://images.unsplash.com/photo-1604012164853-9bb541fe0296?fit=crop&h=720
 [illustration-reutiliser-du-code-avec-des-fonctions]:
 	https://images.unsplash.com/photo-1620429405088-b41981579f19?fit=crop&h=720
-[illustration-difference-entre-include-et-require]:
-	https://images.unsplash.com/photo-1556484687-30636164638b?fit=crop&h=720
 [illustration-a-vous-de-jouer]:
 	https://images.unsplash.com/photo-1509198397868-475647b2a1e5?fit=crop&h=720

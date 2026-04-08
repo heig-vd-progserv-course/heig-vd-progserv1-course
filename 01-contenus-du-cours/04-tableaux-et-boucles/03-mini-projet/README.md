@@ -1,17 +1,14 @@
 # Tableaux et boucles - Mini-projet
 
-Ce mini-projet est conçu pour vous permettre de mettre en pratique les concepts
-théoriques vus dans le cours _["Tableaux et boucles"](../README.md)_.
+L. Delafontaine, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot).
 
-## Ressources
+Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-- Théorie : [Support de cours](../README.md) ·
-  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/index.html)
-  ·
-  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/03-tableaux-et-boucles/03-tableaux-et-boucles-presentation.pdf)
-- Mini-projet : [Consignes](../03-mini-projet/README.md) ·
-  [Solution](../03-mini-projet/solution/README.md)
-- Exercices : [Énoncés et solutions](../02-exercices/README.md)
+> [!TIP]
+>
+> Toutes les informations relatives à ce contenu sont décrites dans le
+> [contenu principal](../README.md).
 
 ## Table des matières
 
@@ -35,7 +32,7 @@ théoriques vus dans le cours _["Tableaux et boucles"](../README.md)_.
 - [Conclusion](#conclusion)
 - [Aller plus loin](#aller-plus-loin)
 
-## Objectifs de la session
+## Objectifs
 
 À l'issue de cette session, les personnes qui étudient devraient avoir pu :
 
@@ -1316,3 +1313,8 @@ loin. Vous pouvez la sauter si vous n'avez pas de temps._
   styles CSS supplémentaires ?
 - Êtes-vous capable d'ajouter une fonctionnalité pour trier les animaux de
   compagnie par âge ou par nom ?
+
+<!-- URLs -->
+
+[licence]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md

@@ -4,7 +4,7 @@ $variable2 = 42;
 $variable3 = 3.14;
 $variable4 = true;
 
-function debug($variable) {
+function debug(mixed $variable): void {
     var_dump($variable);
 }
 

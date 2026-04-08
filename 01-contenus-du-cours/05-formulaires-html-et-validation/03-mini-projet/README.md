@@ -1,21 +1,17 @@
 # Formulaires HTML et validation - Mini-projet
 
-Ce mini-projet est conçu pour vous permettre de mettre en pratique les concepts
-théoriques vus dans le cours _["Formulaires HTML et validation"](../README.md)_.
+L. Delafontaine, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot).
 
-## Ressources
+Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-- Théorie : [Support de cours](../README.md) ·
-  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/index.html)
-  ·
-  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/04-formulaires-html-et-validation-presentation.pdf)
-- Mini-projet : [Consignes](../03-mini-projet/README.md) ·
-  [Solution](../03-mini-projet/solution/README.md)
-- Exercices : [Énoncés et solutions](../02-exercices/README.md)
+> [!TIP]
+>
+> Toutes les informations relatives à ce contenu sont décrites dans le
+> [contenu principal](../README.md).
 
 ## Table des matières
 
-- [Ressources](#ressources)
 - [Table des matières](#table-des-matières)
 - [Objectifs de la session](#objectifs-de-la-session)
 - [Mise en place du formulaire](#mise-en-place-du-formulaire)
@@ -44,7 +40,7 @@ théoriques vus dans le cours _["Formulaires HTML et validation"](../README.md)_
 - [Conclusion](#conclusion)
 - [Aller plus loin](#aller-plus-loin)
 
-## Objectifs de la session
+## Objectifs
 
 Dans cette session, vous allez créer le formulaire permettant de créer un nouvel
 animal de compagnie.
@@ -6250,3 +6246,8 @@ loin. Vous pouvez la sauter si vous n'avez pas de temps._
 
 - Êtes-vous capable d'utiliser une boucle pour afficher les champs des espèces ?
 - Et pour les des personnalités ?
+
+<!-- URLs -->
+
+[licence]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
