@@ -13,10 +13,10 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 > - Autres formats :
 >   [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/02-introduction-a-php/presentation.html)
 >   ·
->   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/02-introduction-a-php/02-introduction-a-php-presentation.pdf)
-> - Mini-projet : [Consignes](./01-mini-projet/README.md) ·
->   [Solution](./01-mini-projet/solution/README.md)
-> - Exercices : [Énoncés et solutions](./02-exercices/README.md)
+>   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/02-introduction-a-php/02-introduction-a-php-presentation.pdf).
+> - Mini-projet : [Consignes](./01-mini-projet/README.md).
+> - Exemples de code : [Code source](./02-exemples-de-code/README.md).
+> - Exercices : [Énoncés et solutions](./03-exercices/README.md).
 >
 > **Objectifs**
 >
@@ -63,6 +63,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
+- [Avant de commencer...](#avant-de-commencer)
 - [Qu'est-ce que PHP](#quest-ce-que-php)
 - [Applications web et architecture client-serveur](#applications-web-et-architecture-client-serveur)
 - [Comment fonctionne PHP](#comment-fonctionne-php)
@@ -76,7 +77,9 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
   - [Les structures conditionnelles](#les-structures-conditionnelles)
 - [Conclusion](#conclusion)
 - [Mini-projet](#mini-projet)
+- [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
+- [Questions d'évaluation](#questions-dévaluation)
 - [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
 
 ## Objectifs
@@ -86,18 +89,23 @@ Vous apprendrez les bases de PHP, y compris la syntaxe, les variables, les
 constantes, les opérateurs et les structures de contrôle afin de vous préparer à
 la suite du cours.
 
-De façon plus concise, les personnes qui étudient devraient être capables de :
+La liste complète des objectifs est disponible dans la section _"Objectifs"_ du
+bloc d'information en haut de ce contenu.
 
-- Expliquer le concept d'architecture client-serveur.
-- Lister les outils nécessaires pour écrire et exécuter du code PHP.
-- Expliquer comment PHP fonctionne dans un environnement web.
-- Expliquer la syntaxe de base de PHP.
-- Expliquer les variables en PHP.
-- Expliquer les constantes en PHP.
-- Expliquer la nature dynamique des variables et constantes en PHP.
-- Expliquer les opérateurs en PHP.
-- Expliquer Les structures conditionnelles en PHP.
-- Rédiger du code PHP simple.
+## Avant de commencer...
+
+Explorez le mini-projet en ligne :
+<https://progserv1.heig-vd-progserv-course.ch>.
+
+Essayez de répondre aux questions suivantes à propos du mini-projet :
+
+- Quelles fonctionnalités propose-t-il ?
+- Quels sont les éléments qui le composent ?
+- Comment fonctionne-t-il ?
+- Quelles sont les limitations ?
+
+Vous devriez obtenir les réponses à ces questions au fur et à mesure que vous
+avancerez dans le cours !
 
 ## Qu'est-ce que PHP
 
@@ -107,7 +115,7 @@ réaliser des applications/programmes qui s'exécutent sur votre machine.
 Avec PHP, vous allez apprendre à réaliser des applications web qui s'exécutent
 sur un serveur et sont accessibles depuis un navigateur web.
 
-PHP (Hypertext Preprocessor) est un langage de programmation conçu pour le
+PHP (PHP: Hypertext Preprocessor) est un langage de programmation conçu pour le
 développement web qui a connu sa première version en 1994. De cette manière, PHP
 permet de créer des applications qui peuvent être accessibles via un navigateur
 web et par plusieurs personnes en même temps.
@@ -128,15 +136,22 @@ au client.
 
 La plupart des applications réseau modernes utilisent cette architecture pour
 fournir des services à un grand nombre d'utilisateurs (sites web, applications
-mobiles, jeux vidéos, etc.).
+mobiles, jeux vidéos, etc.) et utilise le protocole HTTP pour la communication
+entre le client et le serveur.
 
 ## Comment fonctionne PHP
+
+PHP est un langage de programmation côté serveur, ce qui signifie que le code
+PHP est exécuté sur le serveur web, et non pas dans le navigateur du client.
+
+Il utilise une architecture client-serveur pour générer du HTML à partir du code
+PHP, qui est ensuite envoyé au navigateur du client pour être affiché.
 
 De façon plus concise, pour écrire et exécuter du code PHP, vous avez besoin de
 :
 
-- Un serveur web (Apache, Nginx, etc.) pour recevoir les requêtes du client et
-  envoyer les réponses.
+- Un serveur web (Apache, nginx, etc.) pour recevoir les requêtes du client
+  (votre navigateur) et envoyer les réponses (des pages HTML générées).
 - PHP installé sur le serveur web.
 - Un navigateur web (Chrome, Firefox, etc.). pour effectuer les requêtes et
   afficher les pages web.
@@ -148,10 +163,11 @@ l'interpréteur PHP exécute le code PHP qui va générer du HTML, l'interpréte
 renvoie au serveur web qui enverra ensuite le résultat au navigateur du client.
 Le client réceptionnera le HTML et pourra directement l'afficher.
 
-PHP est exécuté sur le serveur, et le code PHP est interprété par le serveur web
-pour générer du HTML, qui est ensuite envoyé au navigateur du client.
+PHP est exécuté sur le serveur en partenariat avec le serveur web, pour générer
+du HTML, qui est ensuite envoyé au navigateur du client qui l'affiche
+simplement.
 
-![Architecture client-serveur avec PHP](./images/architecture-client-serveur-avec-php.png)
+![Architecture client-serveur avec PHP](./images/architecture-client-serveur-avec-php.svg)
 
 Le client (votre navigateur) envoie une requête pour demander une page web au
 serveur. Ces pages web, tels que `index.php`, sont des fichiers PHP qui
@@ -176,7 +192,9 @@ echo "Hello, World!";
 ```
 
 Vous remarquez qu'il n'y a pas de balise de fermeture `?>` à la fin du fichier
-car le fichier ne contient que du code PHP.
+car le fichier ne contient que du code PHP. S'il y a du code HTML après le code
+PHP, il faut alors fermer le bloc de code PHP avec `?>` pour que l'interpréteur
+puisse reconnaître la fin du code PHP et n'exécuter que le code PHP.
 
 <details>
 <summary>Afficher l'équivalent en Java</summary>
@@ -191,7 +209,16 @@ public class Main {
 
 </details>
 
-Ici, la fonction `echo` est utilisée pour afficher du texte sur la page web.
+Ici, la fonction `echo` est utilisée pour "afficher du texte sur la page web".
+
+Pour être exact, la fonction `echo` va être interprétée par l'interpréteur PHP.
+Celui-ci va générer un document HTML avec le contenu désiré puis le transmettre
+au serveur web. Le serveur web va ensuite envoyer ce document HTML au navigateur
+du client, qui l'affichera sur la page web.
+
+Ainsi, la formulation "afficher du texte sur la page web" est une simplification
+pour expliquer que le résultat de l'exécution du code PHP (le document HTML
+généré) sera affiché sur la page web par le navigateur du client.
 
 De façon plus concise, le code PHP est exécuté sur le serveur web, qui génère du
 HTML à partir du code PHP. Ce HTML est ensuite envoyé au navigateur du client,
@@ -226,27 +253,71 @@ fin du bloc de code PHP et n'exécuter que le code PHP.
 
 Lorsque nous écrivons du code PHP, nous devons l'exécuter sur un serveur web
 avec PHP installé. Pour ce faire, nous avons besoin d'un environnement de
-développement qui comprend un serveur web (Apache, Nginx, etc.) et PHP.
+développement qui comprend un serveur web (Apache, nginx, etc.) et PHP.
 
 Heureusement pour nous, il existe des solutions clés en main qui nous permettent
-de démarrer rapidement avec PHP, comme par exemple WampServer pour
-Windows[^wamp], MAMP pour macOS[^mamp], XAMPP pour Windows, macOS et
-Linux[^xampp], etc.
+de démarrer rapidement avec PHP, comme par exemple
+[WampServer pour Windows](https://www.wampserver.com/),
+[MAMP pour macOS](https://www.mamp.info/),
+[XAMPP pour Windows, macOS et Linux](https://www.apachefriends.org/download.html)
+ou encore [Docker](https://docker.com/).
 
 Ces solutions regroupent les logiciels nécessaires pour exécuter du code PHP,
-notamment un serveur web, PHP et une base de données et fonctionnent selon le
-même principe d'architecture client-serveur vu précédemment.
+notamment un serveur web, PHP et parfois même une base de données et
+fonctionnent selon le même principe d'architecture client-serveur vu
+précédemment.
+
+Dans le cadre de ce cours, nous allons utiliser Docker pour exécuter du code PHP
+à l'aide d'un conteneur de développement directement dans Visual Studio Code.
+
+Un conteneur de développement (_"Dev container"_ en anglais -
+<https://containers.dev/>) est un environnement de développement isolé qui
+fonctionne à l'intérieur d'un conteneur Docker. Il permet de développer des
+applications dans un environnement cohérent et reproductible, sans avoir à
+installer les dépendances et les outils nécessaires sur votre machine.
+
+De plus, grâce à une bonne intégration avec Visual Studio Code, les extensions
+nécessaires au développement d'applications PHP sont automatiquement installées
+dans le conteneur de développement, ce qui facilite grandement la configuration
+de l'environnement de développement.
+
+## Où trouver des ressources d'aide et de documentation sur PHP
+
+Si vous avez besoin d'aide ou de documentation sur PHP, voici quelques
+ressources utiles :
+
+- [Documentation officielle de PHP](https://www.php.net/docs.php) : la
+  documentation officielle de PHP est une ressource complète et détaillée pour
+  apprendre et comprendre le langage PHP.
+- [W3Schools PHP Tutorial](https://www.w3schools.com/php/) : un tutoriel
+  interactif pour apprendre les bases de PHP avec des exemples de code et des
+  exercices pratiques.
+- [PHP: The Right Way](https://phptherightway.com/) : un guide de bonnes
+  pratiques pour le développement en PHP, couvrant des sujets tels que la
+  sécurité, les performances et les outils de développement.
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/php) : une
+  communauté de développeurs où vous pouvez poser des questions et trouver des
+  réponses sur PHP.
 
 ## Syntaxe de base de PHP
 
 PHP a une syntaxe similaire à celle de Java, JavaScript et d'autres langages de
 programmation.
 
-Comme n'importe quelle langue ou language de programmation, PHP a des règles
-pour écrire du code.
+Comme n'importe quelle langue de la vie de tous les jours (français, allemand ou
+japonais) ou language de programmation, PHP a des règles pour écrire du code.
 
 Il s'agit de les apprendre et les comprendre pour lire et écrire du code PHP de
 manière efficace.
+
+> [!TIP]
+>
+> Apprendre un nouveau langage de programmation peut être difficile au début,
+> mais ne vous découragez pas !
+>
+> Une grande majorité de ce que vous avez appris en Java est transférable à PHP,
+> et vous serez surpris de voir à quel point vous êtes déjà familier avec la
+> syntaxe de PHP.
 
 Voici quelques bases pour commencer.
 
@@ -364,13 +435,14 @@ public class Main {
 </details>
 
 Cela peut être pratique, mais cela peut aussi entraîner des erreurs si vous ne
-faites pas attention à ce que vous affectez à une variable.
+faites pas attention à ce que vous affectez à une variable. Nous verrons plus en
+détail les types de données et le typage dynamique dans un prochain cours.
 
 #### Les chaînes de caractères
 
 Les chaînes de caractères sont des séquences de caractères qui peuvent former
 des mots ou des phrases et sont déclarées entre des guillemets simples (`'`) ou
-doubles (`"`). Voici un exemple :
+doubles (`"`) (nous verrons la différence juste après). Voici un exemple :
 
 ```php
 <?php
@@ -1049,19 +1121,50 @@ comment les utiliser pour créer des applications web plus complexes.
 
 ## Mini-projet
 
-Nous vous invitons maintenant à réaliser le mini-projet de cette session pour
-mettre en pratique les concepts vus en classe.
+Nous vous invitons maintenant à réaliser le mini-projet de la séance afin de
+mettre en pratique les concepts abordés.
 
 Vous trouverez les détails du mini-projet ici :
-[Consignes](../01-mini-projet/README.md).
+[Mini-projet](./01-mini-projet/README.md).
+
+## Exemples de code
+
+Nous vous invitons maintenant à consulter les exemples de code de la séance afin
+de mieux comprendre les concepts abordés.
+
+Vous trouverez les exemples de code ici :
+[Exemples de code](./02-exemples-de-code/README.md).
 
 ## Exercices
 
-Nous vous invitons également à réaliser les exercices de cette session pour
-renforcer votre compréhension des concepts vus en classe.
+Nous vous invitons maintenant à réaliser les exercices de la séance afin de
+mettre en pratique les concepts abordés.
 
-Vous trouverez les détails des exercices ici :
-[Énoncés et solutions](../02-exercices/README.md).
+Vous trouverez les exercices et leur corrigé ici :
+[Exercices](./03-exercices/README.md).
+
+## Questions d'évaluation
+
+> [!NOTE]
+>
+> Les questions d'évaluation sont destinées à vous aider à vérifier votre
+> compréhension des concepts abordés dans le cours. Elles ne sont pas destinées
+> à être utilisées comme une liste de contrôle exhaustive des compétences à
+> maîtriser.
+>
+> Il est recommandé de les utiliser comme un guide pour vous aider à identifier
+> les domaines dans lesquels vous pourriez avoir besoin de renforcer vos
+> connaissances ou de pratiquer davantage.
+
+- Quels sont les outils nécessaires pour écrire et exécuter du code PHP ?
+- Comment fonctionne PHP dans une architecture client-serveur ?
+- Comment écrire du code PHP ?
+- Comment exécuter du code PHP ?
+- Quelles sont les règles de syntaxe de base de PHP ?
+- Comment déclarer des variables et des constantes en PHP ?
+- Quels sont les types de données courants en PHP ?
+- Comment utiliser les opérateurs en PHP ?
+- Comment utiliser les structures conditionnelles en PHP ?
 
 ## À faire pour la semaine suivante
 
@@ -1070,16 +1173,11 @@ il est recommandé pour la séance suivante de :
 
 - Relire le support de cours si nécessaire.
 - Finaliser la partie du mini-projet qui n'a pas été terminée en classe.
+- Finaliser la compréhension des exemples de code vus qui n'ont pas été compris
+  en classe.
 - Finaliser les exercices qui n'ont pas été terminés en classe.
 
 <!-- URLs -->
 
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
-
-<!-- Footnotes -->
-
-[^mamp]: MAMP, [mamp.info](https://www.mamp.info/), 09 mars 2025
-[^wamp]: WampServer, [wampserver.com](https://www.wampserver.com/), 09 mars 2025
-[^xampp]:
-    XAMPP, [apachefriends.org](https://www.apachefriends.org/), 09 mars 2025

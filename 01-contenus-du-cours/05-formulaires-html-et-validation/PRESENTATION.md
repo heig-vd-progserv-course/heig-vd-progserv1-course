@@ -33,7 +33,7 @@ adresse][contenu-complet-sur-github].
 
 <small>Ce travail est sous licence [CC BY-SA 4.0][license].</small>
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 ## Retrouvez le contenu complet de cette présentation sur GitHub
 
@@ -45,7 +45,7 @@ _Pour plus de détails, retrouvez le [contenu complet sur
 GitHub][contenu-complet-sur-github] ou en cliquant sur l'en-tête de ce
 document._
 
-## Objectifs (1/2)
+## Objectifs (1)
 
 - Créer des formulaires HTML pour collecter des données utilisateur.
 - Envoyer des données de formulaires au serveur à l'aide de PHP.
@@ -54,7 +54,7 @@ document._
 
 ![bg right:40%][illustration-objectifs]
 
-## Objectifs (2/2)
+## Objectifs (2)
 
 - Valider les données saisies par l'utilisateur côté serveur et côté client.
 - Afficher des messages d'erreur clairs en cas de validation échouée.
@@ -72,7 +72,7 @@ document._
 
 ![bg right:40%][illustration-formulaires-html]
 
-### Structure d'un formulaire (1/2)
+### Structure d'un formulaire (1)
 
 - Définit à l'aide de la balise `<form>`.
 - Contient des éléments de formulaire tels que des champs de saisie, des
@@ -82,7 +82,7 @@ document._
 
 ![bg right:40%][illustration-formulaires-html]
 
-### Structure d'un formulaire (2/2)
+### Structure d'un formulaire (2)
 
 ```html
 <form action="register.php" method="POST">
@@ -98,7 +98,7 @@ document._
 </form>
 ```
 
-#### Champs `<input>` (1/2)
+#### Champs `<input>` (1)
 
 - Champs de saisie de texte, mot de passe, e-mail, etc.
 - Définis à l'aide de la balise `<input>`.
@@ -110,7 +110,7 @@ document._
 
 ![bg right:40%][illustration-formulaires-html]
 
-#### Champs `<input>` (2/2)
+#### Champs `<input>` (2)
 
 ```html
 <!-- Champ de texte -->
@@ -126,7 +126,7 @@ document._
 <input type="checkbox" name="subscribe" value="yes" />
 ```
 
-#### Champ `<select>` (1/2)
+#### Champ `<select>` (1)
 
 - Liste déroulante permettant de sélectionner une option parmi plusieurs.
 - Défini à l'aide de la balise `<select>`.
@@ -134,7 +134,7 @@ document._
 
 ![bg right:40%][illustration-formulaires-html]
 
-#### Champ `<select>` (2/2)
+#### Champ `<select>` (2)
 
 ```html
 <select name="country">
@@ -144,7 +144,7 @@ document._
 </select>
 ```
 
-#### Champ `<textarea>` (1/2)
+#### Champ `<textarea>` (1)
 
 - Champ de saisie de texte multiligne.
 - Utilisé pour des commentaires, des messages, etc.
@@ -153,7 +153,7 @@ document._
 
 ![bg right:40%][illustration-formulaires-html]
 
-#### Champ `<textarea>` (2/2)
+#### Champ `<textarea>` (2)
 
 ```html
 <textarea name="message" rows="4" cols="50">
@@ -161,7 +161,7 @@ document._
 </textarea>
 ```
 
-#### Champs `<button>` (1/2)
+#### Champs `<button>` (1)
 
 - Boutons pour soumettre ou réinitialiser le formulaire.
 - Défini à l'aide de la balise `<button>`.
@@ -171,7 +171,7 @@ document._
 
 ![bg right:40%][illustration-formulaires-html]
 
-#### Champ `<button>` (2/2)
+#### Champ `<button>` (2)
 
 ```html
 <!-- Ce bouton soumet le formulaire -->
@@ -211,7 +211,7 @@ document._
 
 ![bg right:40%][illustration-url-daction]
 
-### Méthodes `GET` et `POST` (1/4)
+### Méthodes `GET` et `POST` (1)
 
 La méthode (`method`) du formulaire définit comment les données sont envoyées au
 serveur. Il existe deux méthodes principales :
@@ -236,7 +236,7 @@ serveur. Il existe deux méthodes principales :
 </div>
 </div>
 
-### Méthodes `GET` et `POST` (2/4)
+### Méthodes `GET` et `POST` (2)
 
 ```html
 <!-- La méthode peut être `GET` ou `POST` -->
@@ -256,7 +256,7 @@ serveur. Il existe deux méthodes principales :
 </form>
 ```
 
-### Méthodes `GET` et `POST` (3/4)
+### Méthodes `GET` et `POST` (3)
 
 **`GET`**
 
@@ -267,7 +267,7 @@ Les données sont ajoutées à l'URL de la requête, séparées par un `?` et de
 
 Problème de sécurité...
 
-### Méthodes `GET` et `POST` (4/4)
+### Méthodes `GET` et `POST` (4)
 
 **`POST`**
 
@@ -289,7 +289,7 @@ Problème de sécurité résolu !
 
 ![bg right:40%][illustration-envoyer-les-donnees-des-formulaires]
 
-### Traitement des données à l'aide des superglobales PHP (1/3)
+### Traitement des données à l'aide des superglobales PHP (1)
 
 - Les superglobales sont des tableaux associatifs prédéfinis en PHP.
 - Elles contiennent les données envoyées par le formulaire :
@@ -298,7 +298,7 @@ Problème de sécurité résolu !
 - Les données sont accessibles par le nom du champ défini dans le formulaire
   grâce à l'attribut `name` des champs.
 
-### Traitement des données à l'aide des superglobales PHP (2/3)
+### Traitement des données à l'aide des superglobales PHP (2)
 
 ```php
 <!-- Gère l'affichage du formulaire -->
@@ -352,7 +352,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 ```
 
-### Traitement des données à l'aide des superglobales PHP (3/3)
+### Traitement des données à l'aide des superglobales PHP (3)
 
 <!-- _class: lead -->
 
@@ -360,7 +360,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 Démonstration
 
-### Sauvegarde des données saisies (1/3)
+### Sauvegarde des données saisies (1)
 
 - Lors de la soumission du formulaire, les données sont perdues.
 - Il est possible de sauver les valeurs précédemment saisies pour les réutiliser
@@ -369,7 +369,7 @@ Démonstration
 
 ![bg right:40%][illustration-sauvegarde-des-donnees-saisies]
 
-### Sauvegarde des données saisies (2/3)
+### Sauvegarde des données saisies (2)
 
 ```php
 <?php
@@ -438,7 +438,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </html>
 ```
 
-### Sauvegarde des données saisies (3/3)
+### Sauvegarde des données saisies (3)
 
 <!-- _class: lead -->
 
@@ -457,7 +457,7 @@ Démonstration
 ![bg][illustration-cote-serveur]
 ![bg right:40% vertical][illustration-cote-client]
 
-### Côté serveur (1/3)
+### Côté serveur (1)
 
 La validation des formulaires peut inclure des vérifications telles que :
 
@@ -468,7 +468,7 @@ La validation des formulaires peut inclure des vérifications telles que :
 
 ![bg right:40%][illustration-cote-serveur]
 
-### Côté serveur (2/3)
+### Côté serveur (2)
 
 ```php
 <?php
@@ -574,7 +574,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </html>
 ```
 
-### Côté serveur (3/3)
+### Côté serveur (3)
 
 <!-- _class: lead -->
 
@@ -582,7 +582,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 Démonstration
 
-### Côté client (1/3)
+### Côté client (1)
 
 - L'expérience utilisateur peut être améliorée en faisant une validation côté
   client également.
@@ -592,7 +592,7 @@ Démonstration
 
 ![bg right:40%][illustration-cote-client]
 
-### Côté client (2/3)
+### Côté client (2)
 
 ```php
 <?php
@@ -697,7 +697,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </html>
 ```
 
-### Côté client (3/3)
+### Côté client (3)
 
 <!-- _class: lead -->
 
@@ -724,17 +724,16 @@ Est-ce que vous avez des questions ?
 ## À vous de jouer !
 
 - (Re)lire le [support de cours][contenu-complet-sur-github].
-- Réaliser le [mini-projet][mini-projet].
+- Explorer les [exemples de code][exemples-de-code].
 - Faire les [exercices][exercices].
+- Réaliser le [mini-projet][mini-projet].
 - Poser des questions si nécessaire.
 
-\
-**Pour le mini-projet ou les exercices, n'hésitez pas à vous entraidez si vous avez
-des difficultés !**
+**N'hésitez pas à vous entraidez si vous avez des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
-## Sources (1/2)
+## Sources (1)
 
 - [Illustration principale][illustration-principale] par
   [Richard Jacobs](https://unsplash.com/@rj2747) sur
@@ -761,7 +760,7 @@ des difficultés !**
   [Taylor Vick](https://unsplash.com/@tvick) sur
   [Unsplash](https://unsplash.com/photos/cable-network-M5tzZtFCOfs)
 
-## Sources (2/2)
+## Sources (2)
 
 - [Illustration][illustration-a-vous-de-jouer] par
   [Nikita Kachanovsky](https://unsplash.com/@nkachanovskyyy) sur
@@ -773,10 +772,12 @@ des difficultés !**
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [contenu-complet-sur-github]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/05-formulaires-html-et-validation/README.md
-[mini-projet]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/05-formulaires-html-et-validation/01-mini-projet/README.md
+[exemples-de-code]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/05-formulaires-html-et-validation/01-exemples-de-code/README.md
 [exercices]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/05-formulaires-html-et-validation/02-exercices/README.md
+[mini-projet]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/05-formulaires-html-et-validation/03-mini-projet/README.md
 
 <!-- Illustrations -->
 

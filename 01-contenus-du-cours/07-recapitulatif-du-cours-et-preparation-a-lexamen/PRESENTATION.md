@@ -36,7 +36,7 @@ adresse][contenu-complet-sur-github].
 
 <small>Ce travail est sous licence [CC BY-SA 4.0][license].</small>
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 ## Retrouvez le contenu complet de cette présentation sur GitHub
 
@@ -78,7 +78,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -95,7 +95,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/02-fonctions).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -112,7 +112,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/03-tableaux-et-boucles).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -130,7 +130,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/04-formulaires-html-et-validation).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -143,13 +143,13 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 - La validation peut être effectuée côté client (attributs HTML - optionnel) et
   côté serveur (PHP - obligatoire).
 
-### Base de données et PDO
+### Bases de données et PDO
 
 <!-- _class: lead -->
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/05-base-de-donnees-et-pdo).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -166,7 +166,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/06-securite-et-nettoyage-des-saisies-utilisateurs).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -185,7 +185,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/07-programmation-orientee-objet).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -290,7 +290,7 @@ de l'examen :
 
 $$\text{Note finale} = \text{Note pour la partie théorique} * 0.4 + \text{Note pour la partie pratique} * 0.6$$
 
-### Sanctions possibles en cas de tricherie (1/3)
+### Sanctions possibles en cas de tricherie (1)
 
 Source :
 [Règlement d'études Bachelor de la HEIG-VD](https://intra.heig-vd.ch/academique/cadre-de-reference/Documents/Rglt-Etudes-HEIG-VD.pdf).
@@ -303,7 +303,7 @@ Source :
 > correspondants, voire l'invalidation du titre, et peut faire l'objet d'une des
 > sanctions prévues à l'article 14.
 
-### Sanctions possibles en cas de tricherie (2/3)
+### Sanctions possibles en cas de tricherie (2)
 
 > **Art. 14. - Sanctions**
 >
@@ -316,7 +316,7 @@ Source :
 > 3. **l'exclusion de la filière, voire du domaine** si les règlements du
 >    domaine le prévoient.
 
-### Sanctions possibles en cas de tricherie (3/3)
+### Sanctions possibles en cas de tricherie (3)
 
 **Les personnes qui surveilleront l'examen sont informées des règles
 d'évaluation et des sanctions possibles en cas de triche.**
@@ -352,8 +352,8 @@ Est-ce que vous avez des questions ?
 - Poser des questions si nécessaire.
 
 \
-**Pour le mini-projet ou l'examen blanc, n'hésitez pas à vous entraidez si vous avez
-des difficultés !**
+**Pour le mini-projet ou l'examen blanc, n'hésitez pas à vous entraidez si vous
+avez des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
@@ -445,7 +445,7 @@ Apéro time! 🎉
 </div>
 </div>
 
-### Sanctions possibles en cas de tricherie (1/3)
+### Sanctions possibles en cas de tricherie (1)
 
 Source :
 [Règlement d'études Bachelor de la HEIG-VD](https://intra.heig-vd.ch/academique/cadre-de-reference/Documents/Rglt-Etudes-HEIG-VD.pdf).
@@ -458,7 +458,7 @@ Source :
 > correspondants, voire l'invalidation du titre, et peut faire l'objet d'une des
 > sanctions prévues à l'article 14.
 
-### Sanctions possibles en cas de tricherie (2/3)
+### Sanctions possibles en cas de tricherie (2)
 
 > **Art. 14. - Sanctions**
 >
@@ -471,7 +471,7 @@ Source :
 > 3. **l'exclusion de la filière, voire du domaine** si les règlements du
 >    domaine le prévoient.
 
-### Sanctions possibles en cas de tricherie (3/3)
+### Sanctions possibles en cas de tricherie (3)
 
 **Les personnes qui surveilleront l'examen sont informées des règles
 d'évaluation et des sanctions possibles en cas de triche.**
@@ -531,7 +531,7 @@ de vous faire renvoyer**.
 [contenu-complet-sur-github]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/07-recapitulatif-du-cours-et-preparation-a-lexamen/README.md
 [examen-blanc]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/07-recapitulatif-du-cours-et-preparation-a-lexamen/03-examen-blanc/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/07-recapitulatif-du-cours-et-preparation-a-lexamen/02-examen-blanc/README.md
 
 <!-- Illustrations -->
 

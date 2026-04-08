@@ -1,40 +1,59 @@
 # Introduction à PHP - Mini-projet
 
-Ce mini-projet est conçu pour vous permettre de mettre en pratique les concepts
-théoriques vus dans le contenu _["Introduction à PHP"](../README.md)_.
+L. Delafontaine, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot).
+
+Ce travail est sous licence [CC BY-SA 4.0][licence].
+
+> [!TIP]
+>
+> Toutes les informations relatives à ce contenu sont décrites dans le
+> [contenu principal](../README.md).
 
 ## Table des matières
 
 - [Table des matières](#table-des-matières)
-- [Introduction à votre première session de mini-projet](#introduction-à-votre-première-session-de-mini-projet)
+- [Introduction à votre première séance de mini-projet](#introduction-à-votre-première-séance-de-mini-projet)
 - [Présentation du mini-projet](#présentation-du-mini-projet)
-- [Objectifs de la session](#objectifs-de-la-session)
-- [Installation de l'environnement de développement](#installation-de-lenvironnement-de-développement)
-  - [Installation d'un interpréteur PHP](#installation-dun-interpréteur-php)
-  - [Configuration de l'interpréteur PHP](#configuration-de-linterpréteur-php)
-  - [Installation d'un éditeur de code](#installation-dun-éditeur-de-code)
-  - [Configuration de l'éditeur de code](#configuration-de-léditeur-de-code)
-  - [Installation des extensions PHP dans Visual Studio Code](#installation-des-extensions-php-dans-visual-studio-code)
-  - [Activation des messages d'erreurs de PHP dans le navigateur](#activation-des-messages-derreurs-de-php-dans-le-navigateur)
-- [Initialisation du projet PHP](#initialisation-du-projet-php)
-  - [Création de la structure du projet](#création-de-la-structure-du-projet)
-  - [Création des fichiers du projet](#création-des-fichiers-du-projet)
-  - [Test de l'initialisation du projet](#test-de-linitialisation-du-projet)
-- [Solution](#solution)
+- [Objectifs de la séance](#objectifs-de-la-séance)
+- [Installer et configurer l'environnement de développement local](#installer-et-configurer-lenvironnement-de-développement-local)
+  - [Prérequis](#prérequis)
+  - [Installer un éditeur de code](#installer-un-éditeur-de-code)
+  - [Configurer l'éditeur de code](#configurer-léditeur-de-code)
+  - [Valider l'installation et la configuration de l'environnement de développement local](#valider-linstallation-et-la-configuration-de-lenvironnement-de-développement-local)
+- [Ouvrir le projet localement](#ouvrir-le-projet-localement)
+  - [Accéder à votre dépôt GitHub sur GitHub Classroom](#accéder-à-votre-dépôt-github-sur-github-classroom)
+  - [Cloner votre dépôt GitHub localement](#cloner-votre-dépôt-github-localement)
+  - [Ouvrir votre dépôt GitHub dans Visual Studio Code](#ouvrir-votre-dépôt-github-dans-visual-studio-code)
+  - [Ouvrir le projet dans un conteneur de développement](#ouvrir-le-projet-dans-un-conteneur-de-développement)
+  - [Découvrir la structure du projet](#découvrir-la-structure-du-projet)
+- [Démarrer le projet](#démarrer-le-projet)
+  - [Ouvrir un terminal intégré](#ouvrir-un-terminal-intégré)
+  - [Démarrer le serveur de développement PHP](#démarrer-le-serveur-de-développement-php)
+  - [Créer la structure de base du projet](#créer-la-structure-de-base-du-projet)
+  - [Créer et tester les fichiers de base du projet](#créer-et-tester-les-fichiers-de-base-du-projet)
+  - [Arrêter le serveur de développement PHP](#arrêter-le-serveur-de-développement-php)
+- [Ajouter les fichiers au contrôle de version avec Git](#ajouter-les-fichiers-au-contrôle-de-version-avec-git)
+  - [Visualiser les changements avec Git](#visualiser-les-changements-avec-git)
+  - [Ajouter les fichiers au suivi avec Git](#ajouter-les-fichiers-au-suivi-avec-git)
+  - [Commiter les changements avec Git](#commiter-les-changements-avec-git)
+  - [Pousser les changements vers GitHub](#pousser-les-changements-vers-github)
+- [Cloner le dépôt GitHub du cours](#cloner-le-dépôt-github-du-cours)
+- [Cloner le dépôt GitHub de la solution au mini-projet](#cloner-le-dépôt-github-de-la-solution-au-mini-projet)
 - [Conclusion](#conclusion)
-- [Aller plus loin](#aller-plus-loin)
+- [Solution](#solution)
 
-## Introduction à votre première session de mini-projet
+## Introduction à votre première séance de mini-projet
 
-Bienvenue dans la première session du mini-projet qui va vous accompagner durant
+Bienvenue dans la première séance du mini-projet qui va vous accompagner durant
 toute la durée du cours _"Programmation serveur 1 (ProgServ1)"_ !
 
-Cette session de mini-projet est conçue pour vous permettre de mettre en
-pratique les concepts théoriques vus dans le cours
+Cette séance de mini-projet est conçue pour vous permettre de mettre en pratique
+les concepts théoriques vus dans le cours
 _["Introduction à PHP"](../README.md)_. N'hésitez pas à vous y référer si vous
 avez besoin de rafraîchir votre mémoire.
 
-En lisant les contenus préparés pour les sessions de mini-projet, vous trouverez
+En lisant les contenus préparés pour les séances de mini-projet, vous trouverez
 peut-être ce que l'on appelle des _"avertissements"_ ou des _"alertes"_.
 
 Elles se présentent comme suit :
@@ -51,7 +70,7 @@ signification :
 
 > [!NOTE]
 >
-> Met en évidence les informations que vous devriez prendre en compte.
+> Informations mises en évidence que vous devriez prendre en compte.
 
 > [!TIP]
 >
@@ -65,8 +84,8 @@ signification :
 
 > [!WARNING]
 >
-> Contenu critique exigeant votre attention immédiate en raison des risques
-> potentiels.
+> Informations critiques exigeant votre attention immédiate en raison des
+> risques potentiels.
 
 > [!CAUTION]
 >
@@ -79,11 +98,11 @@ plus sur un sujet spécifique.
 Ces ressources externes sont là pour vous aider. Nous vous redirigeons vers
 elles pour éviter de répéter ce qui est déjà bien maintenu et expliqué ailleurs.
 
-Ce que vous voyez et faites dans une session actuelle peut être utilisé dans une
-session future.
+Ce que vous voyez et faites dans une séance actuelle peut être utilisé dans une
+séance future.
 
 C'est pourquoi il est important de suivre les étapes et de comprendre ce que
-vous faites. Vous devez conserver le code que vous écrivez pour les sessions
+vous faites. Vous devez conserver le code que vous écrivez pour les séances
 futures.
 
 Cependant, si _quoi que ce soit_ n'est pas clair, ne fonctionne pas ou nécessite
@@ -107,6 +126,7 @@ consulter, modifier et supprimer des animaux de compagnie.
 
 Chaque animal de compagnie aura les attributs suivants :
 
+- Un identifiant unique (généré automatiquement par la base de données).
 - Nom (un champ texte).
 - Espèce (un champ de sélection contenant, par exemple : chien, chat, lézard,
   serpent, oiseau, lapin, autre).
@@ -121,284 +141,122 @@ Chaque animal de compagnie aura les attributs suivants :
 L'application web comportera les pages suivantes :
 
 - **Page d'accueil** : une page d'accueil avec une brève introduction à
-  l'application et un lien vers la liste des animaux.
-- **Liste des animaux** : une page affichant tous les animaux de la base de
-  données avec leur nom, espèce, âge et photo. Chaque animal doit être cliquable
-  pour afficher plus de détails.
-- **Détail d'un animal** : une page affichant les informations détaillées sur un
-  animal spécifique, y compris tous ses attributs. L'utilisateur doit pouvoir
-  modifier ou supprimer l'animal depuis cette page.
-- **Ajout d'un animal** : une page permettant à l'utilisateur de créer un nouvel
-  animal en remplissant un formulaire avec tous les attributs.
+  l'application et la liste des animaux de compagnie. Chaque animal doit être
+  cliquable pour afficher plus de détails.
+- **Visualisation d'un animal** : une page affichant les informations détaillées
+  sur un animal spécifique, y compris tous ses attributs. L'utilisateur doit
+  pouvoir modifier ou supprimer l'animal depuis cette page.
+- **Création d'un animal** : une page permettant à l'utilisateur de créer un
+  nouvel animal en remplissant un formulaire avec tous les attributs.
 - **Modification d'un animal** : une page permettant à l'utilisateur de mettre à
   jour un animal existant en modifiant ses attributs dans un formulaire.
 - **Suppression d'un animal** : une page permettant à l'utilisateur de supprimer
   un animal de la base de données.
 
-Nous construirons cette application web ensemble durant la durée de l'unité
-d'enseignement en plusieurs étapes. Dans cette session, nous allons mettre en
-place l'environnement de développement et initialiser le projet PHP pour le
-mini-projet.
+Nous construirons cette application web ensemble durant la durée du cours en
+plusieurs étapes. Dans cette séance, nous allons mettre en place l'environnement
+de développement local, l'environnement de production en ligne et initialiser le
+projet PHP pour le mini-projet.
 
-## Objectifs de la session
+## Objectifs de la séance
 
-À l'issue de cette session, les personnes qui étudient devraient avoir pu :
+À l'issue de cette séance, les personnes qui étudient devraient avoir pu :
 
-- Installer et configurer un environnement de développement pour PHP.
+- Installer et configurer un environnement de développement local pour PHP.
 - Initialiser un projet PHP pour le mini-projet.
-
-## Installation de l'environnement de développement
-
-Un environnement de développement est un ensemble d'outils et de logiciels
-nécessaires pour écrire, tester et déboguer des applications logicielles.
-
-Pour ce mini-projet, nous aurons besoin d'un interpréteur PHP et d'un éditeur de
-code.
-
-### Installation d'un interpréteur PHP
-
-> [!NOTE]
->
-> Si vous avez déjà un interpréteur PHP installé sur votre ordinateur, vous
-> pouvez passer directement à la section suivante.
-
-Afin de pouvoir exécuter du code PHP sur votre ordinateur, vous devez installer
-un interpréteur PHP. Il s'agit d'un logiciel qui lit le code PHP et le traduit
-en instructions que votre ordinateur peut comprendre et l'exécuter.
-
-Il existe plusieurs solutions pour installer cet interpréteur PHP sur votre
-ordinateur (par exemple WampServer pour Windows[^wamp], MAMP pour macOS[^mamp],
-LAMP pour Linux[^lamp], XAMPP pour Windows, macOS et Linux[^xampp], etc.).
-Toutes ces solutions embarquent un serveur web, une base de données et un
-interpréteur PHP.
-
-Dans le contexte de ce cours, nous allons installer un interpréteur PHP en
-utilisant MAMP, autant pour Windows que pour macOS, car il s'agit d'une des
-solutions les plus simples et les plus efficaces à mettre en place. Cela nous
-permettra également de s'assurer que tout le monde utilise la même
-configuration. Les étapes suivantes vous guideront à travers le processus
-d'installation de MAMP sur votre ordinateur.
-
-> [!TIP]
->
-> Dans un contexte professionnel, vous pourriez être amené.e à utiliser une
-> autre solution pour installer PHP et ses outils associés (serveur web et base
-> de données). Cela dépendra de l'infrastructure de votre entreprise et de vos
-> besoins spécifiques.
->
-> Une solution populaire pour les environnements de production est d'utiliser
-> Docker[^docker] pour créer des conteneurs légers et portables qui contiennent
-> tout ce dont vous avez besoin pour exécuter une application, y compris un
-> serveur web, une base de données et un interpréteur PHP.
->
-> Pour ce cours, une solution comme MAMP est suffisante pour nos besoins.
-
-#### Installation sur Windows
-
-Pour installer MAMP sur Windows, suivez les étapes suivantes :
-
-> [!WARNING]
->
-> Il se peut que vous rencontriez des erreurs lors de l'installation de MAMP sur
-> Windows. Si vous rencontrez des erreurs, veuillez consulter la section
-> [_Erreurs courantes de MAMP sur Windows_](#erreurs-courantes-de-mamp-sur-windows)
-> pour obtenir de l'aide.
-
-1. Rendez-vous sur le site web de MAMP à l'adresse suivante :
-   <https://www.mamp.info/en/downloads/>.
-
-   ![Site web de MAMP - Windows](./images/mamp-website-windows.png)
-
-2. Téléchargez la dernière version de MAMP pour Windows.
-3. Exécutez le programme d'installation que vous venez de télécharger pour
-   installer MAMP :
-
-   1. Le programme d'installation de MAMP devrait s'ouvrir. Cliquez sur le
-      bouton **Next** pour continuer.
-
-      ![Programmation d'installation de MAMP sur Windows - 01](./images/mamp-windows-01.png)
-
-   2. Décochez la case **MAMP PRO** pour ne pas installer MAMP PRO et cliquez
-      sur le bouton **Next**.
-
-      ![Programmation d'installation de MAMP sur Windows - 02](./images/mamp-windows-02.png)
-
-   3. Acceptez les termes du contrat de licence et cliquez sur le bouton
-      **Next**.
-   4. Laissez les paramètres par défaut pour installer MAMP dans le dossier
-      `C:\MAMP` et cliquez sur le bouton **Next**.
-
-      ![Programmation d'installation de MAMP sur Windows - 04](./images/mamp-windows-04.png)
-
-   5. Laissez les paramètres par défaut pour créer un dossier `MAMP` dans le
-      menu de démarrage et cliquez sur le bouton **Next**.
-
-      ![Programmation d'installation de MAMP sur Windows - 05](./images/mamp-windows-05.png)
-
-   6. Choisissez si vous souhaitez avoir un raccourci sur le bureau et cliquez
-      sur le bouton **Next**.
-
-      ![Programmation d'installation de MAMP sur Windows - 06](./images/mamp-windows-06.png)
-
-   7. Une fois que vous avez vérifié les paramètres d'installation, cliquez sur
-      le bouton **Install** pour commencer l'installation.
-
-      ![Programmation d'installation de MAMP sur Windows - 07](./images/mamp-windows-07.png)
-
-4. Une fois l'installation terminée, lancez MAMP.
-5. Si une fenêtre s'ouvre concernant le pare-feu Windows, cliquez sur le bouton
-   **Autoriser** pour autoriser MAMP à communiquer avec le réseau.
-
-Si vous ne rencontrez pas d'erreurs, vous pouvez passer à la section
-[_Configuration de l'interpréteur PHP_](#configuration-de-linterpréteur-php).
-
-Si vous rencontrez des erreurs, veuillez consulter la section
-[_Erreurs courantes de MAMP sur Windows_](#erreurs-courantes-de-mamp-sur-windows)
-pour obtenir de l'aide.
-
-##### Erreurs courantes de MAMP sur Windows
-
-###### _"You must install NET Desktop Runtime to run this application."_
-
-Si vous rencontrez cette erreur lors de l'exécution de MAMP, vous devez
-installer le moteur d'exécution
-[.NET Desktop 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0). Pour
-ce faire, suivez les étapes suivantes :
-
-1. Rendez-vous sur le site web de Microsoft aux adresses suivantes pour
-   télécharger le moteur d'exécution .NET Desktop :
-   - [.NET Desktop Runtime 6.0.36 (Windows x86)](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.36-windows-x86-installer)
-   - [.NET Desktop Runtime 6.0.36 (Windows x64)](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.36-windows-x64-installer)
-2. Les programmes d'installation devraient commencer à se télécharger.
-3. Exécutez les programmes d'installation que vous venez de télécharger pour
-   installer le moteur d'exécution .NET Desktop.
-4. Une fois les installations terminées, relancez MAMP.
-
-###### _"`MSVCR110.dll`/`MSVCR120.dll`/`MSVCR140.dll`/`VCRUNTIME140.dll` is missing."_
-
-Si vous rencontrez cette erreur lors de l'exécution de MAMP, vous devez
-installer les moteurs d'exécution
-[Microsoft C et C++ (MSVC)](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist).
-Pour ce faire, suivez les étapes suivantes :
-
-1. Rendez-vous sur le site web de Microsoft aux adresses suivantes pour
-   télécharger les moteurs d'exécution Microsoft C et C++ (MSVC) :
-   - [Visual Studio 2015, 2017, 2019, and 2022 (Windows x86)](https://aka.ms/vs/17/release/vc_redist.x86.exe)
-   - [Visual Studio 2015, 2017, 2019, and 2022 (Windows x64)](https://aka.ms/vs/17/release/vc_redist.x64.exe)
-   - [Visual Studio 2012 (Windows x86)](https://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU_4/vcredist_x86.exe)
-   - [Visual Studio 2012 (Windows x64)](https://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU_4/vcredist_x64.exe)
-   - [Visual Studio 2010 (Windows x86)](https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x86.exe)
-   - [Visual Studio 2010 (Windows x64)](https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x64.exe)
-2. Les programmes d'installation devraient commencer à se télécharger.
-   **Attention** : tous les programmes d'installation portent le même nom, il
-   est important de tous les télécharger.
-3. Exécutez les programmes d'installation que vous venez de télécharger pour
-   installer les moteurs d'exécution Microsoft C et C++ (MSVC).
-4. Une fois les installations terminées, relancez MAMP.
-
-###### Autres erreurs
-
-Merci de venir nous consulter pour obtenir de l'aide pour résoudre les autres
-erreurs que vous pourriez rencontrer lors de l'installation de MAMP sur Windows.
-
-#### Installation sur macOS
-
-Pour installer MAMP sur macOS, suivez les étapes suivantes :
-
-> [!WARNING]
->
-> Sélectionnez la bonne version de MAMP pour macOS en fonction de l'architecture
-> de votre processeur (Intel ou Apple Silicon). Les personnes avec des appareils
-> Apple M1, M2, M3 ou M4 doivent télécharger la version ARM de MAMP.
-
-1. Rendez-vous sur le site web de MAMP à l'adresse suivante :
-   <https://www.mamp.info/en/downloads/>.
-
-   ![Site web de MAMP - macOS](./images/mamp-website-macos.png)
-
-2. Téléchargez la dernière version de MAMP pour macOS adaptée à votre
-   architecture de processeur.
-3. Ouvrez le fichier `.dmg` que vous venez de télécharger.
-4. Faites glisser l'icône de MAMP dans le dossier `Applications`.
-5. Ouvrez le dossier `Applications` et double-cliquez sur l'icône de MAMP pour
-   le lancer.
-
-Si vous ne rencontrez pas d'erreurs, vous pouvez passer à la section
-[_Configuration de l'interpréteur PHP_](#configuration-de-linterpréteur-php).
-
-Si vous rencontrez des erreurs, veuillez consulter la section
-[_Erreurs courantes de MAMP sur macOS_](#erreurs-courantes-de-mamp-sur-macos)
-pour obtenir de l'aide.
-
-##### Erreurs courantes de MAMP sur macOS
-
-###### _"MAMP can't be opened because it is from an unidentified developer."_
-
-Si vous rencontrez une erreur de permission lors de l'exécution de MAMP, vous
-devez accorder les permissions nécessaires à MAMP pour qu'il fonctionne
-correctement. Pour ce faire, suivez les étapes suivantes décrites dans la
-documentation officielle d'Apple :
-[Apple - Ouvrir une app Mac provenant d’un développeur inconnu](https://support.apple.com/fr-ch/guide/mac-help/mh40616/mac).
-
-### Configuration de l'interpréteur PHP
-
-Une fois que vous avez installé MAMP, vous devez le configurer pour qu'il
-fonctionne correctement avec PHP.
-
-Pour ce faire, suivez les étapes suivantes :
-
-1. Lancez MAMP si ce n'est pas déjà fait. Vous devriez voir les icônes des
-   serveurs Apache et MySQL en vert dans la barre de menu de MAMP, indiquant que
-   les services sont bien en cours d'exécution.
-
-   ![MAMP démarré et en cours d'exécution](./images/mamp-started-and-running.png)
-
-2. Accédez aux paramètres de MAMP au travers du menu **MAMP > Preferences**.
-3. Dans l'onglet **Start/Stop**, cochez les cases **Start Servers when starting
-   MAMP** et **Stop Servers when quitting MAMP** afin de démarrer et d'arrêter
-   automatiquement les serveurs web et de base de données lorsque vous lancez et
-   fermez MAMP.
-
-   ![Préférences de MAMP - Start/Stop](./images/mamp-preferences-start-stop.png)
-
-4. Dans l'onglet **Ports**, assurez-vous que les ports pour Apache et MySQL sont
-   configurés sur les valeurs par défaut (Apache : `80`, MySQL : `3306`).
-
-   ![Préférences de MAMP - Ports](./images/mamp-preferences-ports.png)
-
-5. Dans l'onglet **PHP**, sélectionnez la version de PHP que vous souhaitez
-   utiliser pour le projet. Nous vous recommandons d'utiliser la dernière
-   version de PHP disponible. **Notez la version de PHP que vous sélectionnez,
-   vous en aurez besoin pour la suite**.
-
-   ![Préférences de MAMP - PHP](./images/mamp-preferences-php.png)
-
-6. Dans l'onglet **Server**, assurez-vous que le dossier racine de votre projet
-   PHP est `C:\MAMP\htdocs` pour Windows ou `/Applications/MAMP/htdocs` pour
-   macOS. Il s'agit de l'endroit où vous allez stocker tous les fichiers de vos
-   différents projets PHP. De plus, assurez-vous que le serveur Apache est
-   sélectionné.
-
-   ![Préférences de MAMP - Server](./images/mamp-preferences-server.png)
-
-7. Dans l'onglet **Cloud**, assurez-vous que les services Cloud de MAMP sont
-   désactivés.
-
-   ![Préférences de MAMP - Cloud](./images/mamp-preferences-cloud.png)
-
-8. Cliquez sur le bouton **OK** pour enregistrer les paramètres de MAMP.
-9. Redémarrez MAMP pour appliquer les changements.
-10. Validez que MAMP a bien démarré en vérifiant que les icônes des serveurs
-    Apache et MySQL sont vertes dans la barre de menu de MAMP.
-11. Ouvrez votre navigateur web et accédez à l'adresse <http://localhost/>. Vous
-    devriez voir la page d'accueil de MAMP.
-
-    ![MAMP installé et configuré](./images/mamp-installed-and-configured.png)
-
-Votre installation est maintenant terminée et vous êtes prêt.e à commencer à
-développer des applications PHP avec MAMP !
-
-### Installation d'un éditeur de code
+- Installer et configurer un environnement de production en ligne pour PHP.
+- Déployer le mini-projet en ligne.
+- Initialiser un dépôt GitHub pour les exercices.
+
+## Installer et configurer l'environnement de développement local
+
+Un environnement de développement local est un ensemble d'outils et de logiciels
+nécessaires pour écrire, tester et déboguer des applications logicielles sur
+votre propre ordinateur. Il permet aux développeur.euses de créer et de tester
+leur code dans un environnement contrôlé avant de le déployer sur un serveur de
+production en ligne.
+
+Dans cette section, nous allons installer et configurer un environnement de
+développement local pour développer des applications web en PHP.
+
+### Prérequis
+
+Avant de commencer, assurez-vous d'avoir les éléments suivants installés et
+configurés sur votre ordinateur :
+
+- Un ordinateur avec un système d'exploitation compatible avec les outils que
+  nous allons utiliser (Windows, macOS ou Linux).
+- Un environnement Windows Subsystem for Linux (WSL) pour les utilisateur.trices
+  de Windows.
+- Git installé et configuré sur votre ordinateur (dans l'environnement WSL pour
+  les utilisateur.trices de Windows).
+- L'application Windows Terminal installée pour les utilisateur.trices de
+  Windows configurée pour ouvrir WSL automatiquement.
+- Docker et Docker Compose installés sur votre ordinateur (accessibles dans
+  l'environnement WSL pour les utilisateur.trices de Windows).
+- Un éditeur de code de votre choix (Visual Studio Code est recommandé, mais
+  vous pouvez utiliser un autre éditeur si vous préférez).
+- Une connexion Internet pour télécharger les outils nécessaires et accéder aux
+  ressources en ligne.
+
+Dans votre terminal, assurez-vous d'avoir accès aux différents outils
+nécessaires en exécutant les commandes suivantes :
+
+```bash
+# Vérifier que Git est installé
+git --version
+```
+
+Le résultat devrait être similaire à ceci, indiquant que l'outil est installé et
+prêt à être utilisé :
+
+```text
+git version 2.52.0
+```
+
+```bash
+# Vérifier que Docker est installé
+docker --version
+```
+
+Le résultat devrait être similaire à ceci, indiquant que l'outil est installé et
+prêt à être utilisé :
+
+```text
+Docker version 29.1.3, build f52814d
+```
+
+```bash
+# Vérifier que Docker Compose est installé
+docker compose version
+```
+
+Le résultat devrait être similaire à ceci, indiquant que l'outil est installé et
+prêt à être utilisé :
+
+```text
+Docker Compose version v2.40.3
+```
+
+Si vous obtenez les mêmes résultats que ceux présentés ci-dessus, vous êtes
+prêt.e à suivre les étapes de cette séance de mini-projet !
+
+Sinon, utilisez les ressources suivantes pour installer les outils nécessaires :
+
+- Le cours
+  [Outils de développement](https://www.notion.so/wengerk/Outils-de-d-veloppement-22fe9dd7f406801b9347f8fb470b6e8e)
+  que vous avez suivi en première année.
+- [Set up a Windows development environment](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/00.01-set-up-a-windows-development-environment/01-course-material/README.md),
+  un contenu de cours pour configurer un environnement de développement sur
+  Windows pour un cours enseigné dans le département TIC de la HEIG-VD.
+- [Git, GitHub and Markdown](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01.03-git-github-and-markdown/01-course-material/README.md),
+  un contenu de cours pour comprendre les bases de Git, GitHub et Markdown pour
+  un cours enseigné dans le département TIC de la HEIG-VD.
+- [Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04.01-docker-and-docker-compose/01-course-material/README.md),
+  un contenu de cours pour comprendre les bases de Docker et Docker Compose pour
+  un cours enseigné dans le département TIC de la HEIG-VD.
+
+### Installer un éditeur de code
 
 Un éditeur de code est un logiciel qui vous permet d'écrire, de modifier et de
 gérer du code source pour des applications logicielles. Il existe de nombreux
@@ -408,7 +266,7 @@ avantages.
 Nous vous recommandons d'utiliser Visual Studio Code, un éditeur de code gratuit
 et open-source développé par Microsoft[^visual-studio-code], mais vous pouvez
 utiliser n'importe quel éditeur de code avec lequel vous êtes à l'aise pour le
-reste de cette unité d'enseignement.
+reste de ce cours.
 
 #### Installation sur Windows
 
@@ -417,28 +275,47 @@ Pour installer Visual Studio Code sur Windows, suivez les étapes suivantes :
 1. Rendez-vous sur le site web de Visual Studio Code à l'adresse suivante :
    <https://code.visualstudio.com/>.
 
+   <details>
+   <summary>Afficher la capture d'écran illustrant l'étape</summary>
+
    ![Site web de Visual Studio Code](./images/visual-studio-code-website-windows.png)
+
+   </details>
 
 2. Téléchargez la dernière version de Visual Studio Code pour Windows.
 3. Exécutez le programme d'installation que vous venez de télécharger pour
    installer Visual Studio Code :
-
    1. Le programme d'installation de Visual Studio Code devrait s'ouvrir.
       Acceptez les termes du contrat de licence et cliquez sur le bouton
       **Next**.
 
+      <details>
+      <summary>Afficher la capture d'écran illustrant l'étape</summary>
+
       ![Programmation d'installation de Visual Studio Code sur Windows - 01](./images/visual-studio-code-windows-01.png)
+
+      </details>
 
    2. Laissez les paramètres par défaut pour installer Visual Studio Code sur
       votre ordinateur et cliquez sur le bouton **Next**.
 
+      <details>
+      <summary>Afficher la capture d'écran illustrant l'étape</summary>
+
       ![Programmation d'installation de Visual Studio Code sur Windows - 02](./images/visual-studio-code-windows-02.png)
+
+      </details>
 
    3. Laissez les paramètres par défaut pour créer un dossier
       `Visual Studio Code` dans le menu de démarrage et cliquez sur le bouton
       **Next**.
 
+      <details>
+      <summary>Afficher la capture d'écran illustrant l'étape</summary>
+
       ![Programmation d'installation de Visual Studio Code sur Windows - 03](./images/visual-studio-code-windows-03.png)
+
+      </details>
 
    4. Choisissez si vous souhaitez avoir un raccourci sur le bureau et
       sélectionnez les options supplémentaires pour ajouter Visual Studio Code
@@ -446,17 +323,26 @@ Pour installer Visual Studio Code sur Windows, suivez les étapes suivantes :
       un clic droit sur n'importe quel dossier et d'ouvrir Visual Studio Code
       directement dans ce dossier. Cliquez ensuite sur le bouton **Next**.
 
-      ![Programmation d'installation de Visual Studio Code sur Windows - 04](./images/visual-studio-code-windows-04.png)
+   <details>
+   <summary>Afficher la capture d'écran illustrant l'étape</summary>
 
+   ![Programmation d'installation de Visual Studio Code sur Windows - 04](./images/visual-studio-code-windows-04.png)
+
+      </details>
    5. Une fois que vous avez vérifié les paramètres d'installation, cliquez sur
       le bouton **Install** pour commencer l'installation.
 
-      ![Programmation d'installation de Visual Studio Code sur Windows - 05](./images/visual-studio-code-windows-05.png)
+      <details>
+      <summary>Afficher la capture d'écran illustrant l'étape</summary>
+
+   ![Programmation d'installation de Visual Studio Code sur Windows - 05](./images/visual-studio-code-windows-05.png)
+
+      </details>
 
 4. Une fois l'installation terminée, lancez Visual Studio Code.
 
 Vous pouvez maintenant passer à la section
-[_Configuration de l'éditeur de code_](#configuration-de-léditeur-de-code).
+[_Configurer l'éditeur de code_](#configurer-léditeur-de-code).
 
 #### Installation sur macOS
 
@@ -472,7 +358,12 @@ Pour installer Visual Studio Code sur macOS, suivez les étapes suivantes :
 1. Rendez-vous sur le site web de Visual Studio Code à l'adresse suivante :
    <https://code.visualstudio.com/>.
 
+   <details>
+   <summary>Afficher la capture d'écran illustrant l'étape</summary>
+
    ![Site web de Visual Studio Code](./images/visual-studio-code-website-macos.png)
+
+   </details>
 
 2. Téléchargez la dernière version de Visual Studio Code pour macOS.
 3. Ouvrez le fichier `.dmg` que vous venez de télécharger.
@@ -481,53 +372,19 @@ Pour installer Visual Studio Code sur macOS, suivez les étapes suivantes :
    Studio Code pour le lancer.
 
 Vous pouvez maintenant passer à la section
-[_Configuration de l'éditeur de code_](#configuration-de-léditeur-de-code).
+[_Configurer l'éditeur de code_](#configurer-léditeur-de-code).
 
 #### Installation sur Linux
 
-_Si vous utilisez Linux, veuillez nous consulter pour obtenir de l'aide pour
+_Si vous utilisez Linux, veuillez nous consulter si vous avez besoin d'aide pour
 installer un éditeur de code sur votre ordinateur._
 
-### Configuration de l'éditeur de code
+### Configurer l'éditeur de code
 
 Une fois que vous avez installé Visual Studio Code, vous devez le configurer
 pour qu'il fonctionne correctement avec PHP.
 
-#### Ouverture du dossier racine du projet
-
-Afin de travailler sur votre projet PHP, vous devez ouvrir le dossier racine du
-projet dans Visual Studio Code. Pour ce faire, suivez les étapes suivantes :
-
-1. Lancez Visual Studio Code.
-
-   ![Visual Studio Code lancé](./images/visual-studio-code-configuration-01.png)
-
-2. Cliquez sur le menu **File > Open Folder...**.
-3. Une fenêtre de dialogue s'ouvrira pour vous permettre de sélectionner le
-   dossier racine de votre projet PHP. Sélectionnez le dossier racine de votre
-   projet PHP (par exemple, `C:\MAMP\htdocs` pour Windows ou
-   `/Applications/MAMP/htdocs` pour macOS) et cliquez sur le bouton **Open**. Il
-   s'agira de votre dossier de travail pour le reste de l'unité d'enseignement.
-
-   ![Sélection du dossier racine du projet dans Visual Studio Code](./images/visual-studio-code-configuration-02.png)
-
-4. Visual Studio Code ouvrira le dossier racine du projet. Un avertissement de
-   sécurité vous demande si vous faites confiance aux auteurs du dossier.
-   Cliquez sur le bouton **Yes, I trust the authors** pour continuer.
-
-   ![Avertissement de sécurité dans Visual Studio Code](./images/visual-studio-code-configuration-03.png)
-
-5. Visual Studio Code affichera tous les fichiers et dossiers qu'il contient
-   dans l'explorateur de fichiers.
-
-   ![Dossier racine du projet ouvert dans Visual Studio Code](./images/visual-studio-code-configuration-04.png)
-
-6. Un message d'avertissement devrait s'afficher en bas à droit. Nous allons y
-   revenir plus tard.
-
-Votre projet est maintenant ouvert dans Visual Studio Code.
-
-#### Configuration des raccourcis clavier pour la sauvegarde de tous les fichiers
+#### Configurer les raccourcis clavier pour Visual Studio Code
 
 Pas défaut, Visual Studio Code ne sauvegarde que le fichier courant lorsque vous
 appuyez sur `Ctrl + S` (Windows/Linux) ou `Cmd + S` (macOS). Pour sauvegarder
@@ -536,6 +393,15 @@ raccourcis clavier pour qu'ils sauvegardent tous les fichiers.
 
 Pour ce faire, suivez les étapes suivantes :
 
+> [!IMPORTANT]
+>
+> Nous vous recommandons **vivement** de configurer les raccourcis clavier pour
+> sauvegarder tous les fichiers ouverts dans Visual Studio Code.
+>
+> Cela vous permettra de ne pas oublier de sauvegarder un fichier avant de
+> tester votre code dans le navigateur, ce qui peut entraîner des erreurs
+> difficiles à comprendre si vous oubliez de le faire.
+
 1. Cliquez sur le menu **File > Preferences > Keyboard Shortcuts**.
 2. Recherchez `File: Save All Files` dans la barre de recherche.
 3. Assignez les touches de raccourci de votre choix pour sauvegarder tous les
@@ -543,226 +409,450 @@ Pour ce faire, suivez les étapes suivantes :
    utiliser `Ctrl + S` (Windows/Linux) ou `Cmd + S` (macOS) à des fins de
    facilité.
 
-   ![Configuration des raccourcis clavier dans Visual Studio Code](./images/visual-studio-code-configuration-05.png)
+   <details>
+   <summary>Afficher la capture d'écran illustrant l'étape</summary>
 
-#### Configuration de l'interpréteur PHP dans Visual Studio Code
+   ![Configuration des raccourcis clavier dans Visual Studio Code](./images/visual-studio-code-configuration-01.png)
 
-Pour que Visual Studio Code puisse vous aidez lors de la rédaction de code PHP,
-vous devez configurer l'interpréteur PHP dans les paramètres de l'éditeur de
-code. Pour ce faire, suivez les étapes suivantes :
+   </details>
 
-1. Identifiez où est installé l'interpréteur PHP sur votre ordinateur. Avec
-   MAMP, il est installé par défaut dans le dossier `C:\MAMP\bin\php` pour
-   Windows ou `/Applications/MAMP/bin/php` pour macOS.
-2. Identifiez la version de PHP à utiliser. Selon votre configuration MAMP, il
-   faut sélectionner la même version que celle configurée dans MAMP. Dans la
-   capture suivante, la version 8.3.1 est utilisée. Vous pouvez vérifier la
-   version de PHP dans MAMP en cliquant sur le bouton **Preferences** dans la
-   fenêtre principale de MAMP. Vous en aurez besoin pour configurer Visual
-   Studio Code par la suite.
+#### Désactiver GitHub Copilot dans Visual Studio Code
 
-   ![Emplacement de l'interpréteur PHP dans MAMP](./images/visual-studio-code-configuration-06.png)
+Si vous avez accès à GitHub Copilot, nous vous recommandons de le désactiver
+dans Visual Studio Code pour éviter d'avoir des suggestions de code qui
+pourraient interférer avec votre apprentissage et votre compréhension du code
+que vous écrivez.
 
-3. Dans Visual Studio Code, cliquez sur le menu **File > Preferences >
-   Settings** et cherchez `php.validate.executablePath`.
+Pour cela, suivez la documentation officielle de GitHub Copilot pour désactiver
+les suggestions de code dans Visual Studio Code :
+<https://docs.github.com/en/copilot/how-tos/configure-personal-settings/configure-in-ide?tool=vscode#enabling-or-disabling-github-copilot-inline-suggestions>.
 
-   ![Configuration de l'interpréteur PHP dans Visual Studio Code 01](./images/visual-studio-code-configuration-07.png)
+### Valider l'installation et la configuration de l'environnement de développement local
 
-4. Cliquez sur le bouton **Edit in settings.json** pour ouvrir le fichier de
-   configuration de Visual Studio Code.
-5. Ajoutez la ligne suivante dans le fichier de configuration :
+- [x] Git est installé et fonctionnent correctement.
+- [x] Docker et Docker Compose sont installés et fonctionnent correctement.
+- [x] Visual Studio Code est installé et fonctionne correctement.
+- [x] L'extension PHP Intelephense pour Visual Studio Code est installée.
+- [x] L'extension SQLite Viewer pour Visual Studio Code est installée.
+- [x] Les suggestions de code de GitHub Copilot sont désactivées dans Visual
+      Studio Code.
 
-   ```json
-   "php.validate.executablePath": "<PATH_TO_PHP_EXECUTABLE>"
+## Ouvrir le projet localement
+
+Dans cette section, nous allons initialiser le projet PHP pour le cours
+_"Programmation serveur 1 (ProgServ1)"_.
+
+De plus, nous allons utiliser GitHub Classroom pour gérer le code source du
+mini-projet et des exercices. Cela sera l'occasion de prendre encore plus
+l'habitude d'utiliser Git et GitHub dans un contexte de développement
+professionnel.
+
+### Accéder à votre dépôt GitHub sur GitHub Classroom
+
+[GitHub Classroom](https://classroom.github.com/) est un outil qui permet de
+gérer des dépôts GitHub dans un contexte éducatif. Il facilite la distribution
+de projets, la collecte de travaux et la gestion des évaluations.
+
+Il sera utilisé pour permettre au corps enseignant de visualiser le travail
+effectué dans le mini-projet et les exercices.
+
+Il est nécessaire de rejoindre le GitHub Classroom pour accéder au dépôt utilisé
+pour le mini-projet et les exercices.
+
+1. Accédez au lien suivant pour rejoindre le GitHub Classroom du cours :
+   <https://classroom.github.com/a/60Zo6fVJ>.
+2. Si vous n'êtes pas encore connecté.e à GitHub, connectez-vous avec votre
+   compte GitHub.
+3. Choisissez votre personne dans la liste pour rejoindre le GitHub Classroom.
+4. Il se peut qu'un message d'erreur s'affiche avant que vous n'acceptiez
+   l'invitation. Ne vous inquiétez pas, c'est normal.
+5. Vous devez maintenant accepter l'invitation qui a été envoyée sur votre
+   adresse mail associée à votre compte GitHub pour rejoindre le GitHub
+   Classroom.. Vous pouvez retrouvez le mail associé à votre compte dans les
+   paramètres de votre compte GitHub (icône de profil en haut à droite ->
+   _"Settings"_ -> _"Emails"_).
+6. Une fois l'invitation acceptée, vous devriez voir un message de confirmation
+   indiquant que vous avez rejoint le GitHub Classroom.
+7. Un dépôt GitHub privé sera créé pour vous, nommé
+   `progserv1-<annee>-<annee>-mini-projet-et-exercices-<github-username>`.
+
+Vous devriez maintenant avoir accès à votre dépôt GitHub privé pour le cours
+_"Programmation serveur 1 (ProgServ1)"_ sur une page similaire à celle-ci :
+
+![Dépôt GitHub Classroom](./images/github-classroom-repository.png)
+
+Nous prendrons quelques instants pour explorer le dépôt GitHub et comprendre sa
+structure dans les prochaines étapes.
+
+### Cloner votre dépôt GitHub localement
+
+Choisissez un emplacement sur votre ordinateur où vous souhaitez cloner le dépôt
+GitHub pour le mini-projet et les exercices. Par exemple, vous pouvez choisir de
+le cloner dans votre dossier `Documents` ou `Projects`.
+
+> [!CAUTION]
+>
+> Ne clonez pas le dépôt GitHub dans un dossier qui est synchronisé avec un
+> service de stockage en ligne (comme OneDrive, iCloud, Google Drive, Dropbox,
+> etc.) !
+>
+> Créez un dossier spécifique pour vos projets de cours, par exemple
+> `C:\Users\<votre-nom>\heig-vd/progserv1` sur Windows,
+> `/Users/<votre-nom>/heig-vd/progserv1` sur macOS ou encore
+> `/home/<votre-nom>/heig-vd/progserv1` sur Linux.
+>
+> Ceci vous permettra d'éviter des problèmes de synchronisation et de conflits
+> de fichiers qui pourraient survenir si vous clonez le dépôt dans un dossier
+> synchronisé avec un service de stockage en ligne.
+>
+> Comme vos projets seront stockés dans un dépôt GitHub privé, vous n'avez pas
+> besoin de les sauvegarder dans un service de stockage en ligne pour les
+> protéger contre la perte de données.
+>
+> De plus, cela vous permettra de mieux organiser vos projets de cours et de les
+> gérer plus facilement.
+
+Une fois que vous avez choisi l'emplacement où vous souhaitez cloner le dépôt
+GitHub, suivez les étapes suivantes pour le cloner localement sur votre
+ordinateur :
+
+1. Ouvrez l'emplacement choisi dans un terminal.
+   - Pour Windows : clique-droit dans le dossier → _"Open in Windows Terminal"_.
+   - Pour macOS : Suivez la section
+     _"[Open new Terminal windows or tabs from the Finder](https://support.apple.com/guide/terminal/open-new-terminal-windows-and-tabs-trmlb20c7888/mac)"_
+     issue du site de support Apple ou ouvrez le terminal et utilisez la
+     commande `cd` pour naviguer jusqu'à l'emplacement choisi.
+   - Pour Linux : clique-droit dans le dossier → _"Open in Terminal"_. ou ouvrez
+     le terminal et utilisez la commande `cd` pour naviguer jusqu'à
+     l'emplacement choisi.
+2. Clonez le dépôt GitHub en utilisant la commande suivante, en remplaçant le
+   dépôt par l'URL de votre dépôt GitHub privé (que vous pouvez trouver sur la
+   page de votre dépôt GitHub en cliquant sur le bouton vert _"Code"_ et en
+   copiant l'URL SSH) :
+
+   ```bash
+   git clone <url-ssh-du-dépôt-github>
    ```
 
-   Remplacez `<PATH_TO_PHP_EXECUTABLE>` par le chemin d'accès à l'exécutable PHP
-   sur votre ordinateur. Par exemple, `C:\\MAMP\\bin\\php\\php8.3.1\\php.exe`
-   pour Windows ou `/Applications/MAMP/bin/php/php8.3.1/bin/php` pour macOS.
+3. Le dépôt GitHub sera cloné localement sur votre ordinateur dans un dossier
+   portant le même nom que votre dépôt GitHub (par exemple,
+   `progserv1-2025-2026-mini-projet-et-exercices-<github-username>`).
 
-   **Attention**, assurez-vous de remplacer `<PATH_TO_PHP_EXECUTABLE>` par le
-   chemin d'accès correct à l'exécutable PHP sur votre ordinateur trouvé à
-   l'étape 2.
+### Ouvrir votre dépôt GitHub dans Visual Studio Code
 
-   ![Configuration de l'interpréteur PHP dans Visual Studio Code 02](./images/visual-studio-code-configuration-08.png)
-
-Cela permettra de configurer Visual Studio Code pour qu'il utilise
-l'interpréteur PHP installé avec MAMP pour valider le code PHP que vous écrivez.
-
-Votre environnement de développement est maintenant configuré pour travailler
-avec PHP dans Visual Studio Code !
-
-### Installation des extensions PHP dans Visual Studio Code
-
-Visual Studio Code dispose d'un écosystème d'extensions qui vous permet
-d'ajouter des fonctionnalités supplémentaires à l'éditeur de code.
-
-Pour travailler avec PHP, nous vous recommandons d'installer l'extension
-[PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client).
-
-Elle permettra d'ajouter des fonctionnalités d'auto-complétion et de validation
-du code PHP dans Visual Studio Code, augmentant ainsi votre productivité.
-
-Pour installer l'extension PHP Intelephense, suivez les étapes suivantes :
-
-1. Cliquez sur l'icône des extensions dans la barre latérale de Visual Studio
-   Code ou appuyez sur `Ctrl + Shift + X` (Windows/Linux) ou `Cmd + Shift + X`
-   (macOS).
-
-   ![Icône des extensions dans Visual Studio Code](./images/visual-studio-code-configuration-09.png)
-
-2. Recherchez `PHP Intelephense` dans la barre de recherche.
-
-   ![Recherche de l'extension PHP Intelephense dans Visual Studio Code](./images/visual-studio-code-configuration-10.png)
-
-3. Sélectionnez l'extension `PHP Intelephense` dans les résultats de la
-   recherche.
-
-   ![Résultats de la recherche de l'extension PHP Intelephense dans Visual Studio Code](./images/visual-studio-code-configuration-11.png)
-
-4. Cliquez sur le bouton **Install** pour installer l'extension. Un
-   avertissement de sécurité vous demande si vous faites confiance aux auteurs
-   de l'extension. Cliquez sur le bouton **Trust Publisher & Install** pour
-   continuer.
-
-   ![Installation de l'extension PHP Intelephense dans Visual Studio Code](./images/visual-studio-code-configuration-12.png)
-
-5. Une fois l'extension installée, vous devriez voir une confirmation de
-   l'installation.
-
-### Activation des messages d'erreurs de PHP dans le navigateur
-
-Il se peut que vous rencontriez des erreurs dans votre code PHP durant le
-développement de l'application web. Pour vous aider à déboguer votre code, il
-est important d'activer les messages d'erreur dans le navigateur. Cela vous
-permettra de voir les erreurs et les avertissements générés par PHP lorsque
-celles-ci se produisent.
-
-Par défaut, PHP n'affiche pas les messages d'erreur dans le navigateur pour
-éviter de divulguer des informations sensibles sur votre application. Cela peut
-rendre le débogage de votre code plus difficile, car vous ne saurez pas
-exactement où se trouvent les erreurs et seule une page blanche s'affichera dans
-le navigateur.
-
-Pour activer les messages d'erreur avec PHP, vous devez modifier le fichier
-`php.ini` qui se trouve dans le dossier de configuration de PHP. Ce fichier est
-utilisé par l'interpréteur PHP pour configurer son comportement et ses
-paramètres. Il est important de le configurer correctement pour que PHP affiche
-les messages d'erreur et de débogage.
+Maintenant que le dépôt GitHub est cloné localement sur votre ordinateur, vous
+devez l'ouvrir dans Visual Studio Code pour pouvoir travailler sur votre projet
+PHP.
 
 Pour ce faire, suivez les étapes suivantes :
 
+1. Naviguez dans le dossier du projet cloné dans votre terminal (à l'aide de la
+   commande `cd`, par exemple :
+   `cd progserv1-2025-2026-mini-projet-et-exercices-<github-username>`).
+2. Visual Studio Code ouvrira le dossier du projet. Un avertissement de sécurité
+   pourrait vous demander si vous faites confiance aux auteurs du dossier.
+   Cliquez sur le bouton **Yes, I trust the authors** pour continuer.
+3. Visual Studio Code affichera tous les fichiers et dossiers du projet dans
+   l'explorateur de fichiers situé à gauche de la fenêtre.
+
+Votre projet est maintenant ouvert dans Visual Studio Code. Vous pouvez fermer
+le terminal précédemment ouvert, car nous allons utiliser le terminal intégré de
+Visual Studio pour exécuter les commandes nécessaires à la suite du cours.
+
+### Ouvrir le projet dans un conteneur de développement
+
+Le projet fourni pour le mini-projet et les exercices est configuré pour être
+exécuté dans un conteneur de développement.
+
+Un conteneur de développement (Dev Container) est un environnement isolé qui
+contient tous les outils nécessaires pour développer une application. Il permet
+aux développeur.euses de travailler dans un environnement cohérent, quel que
+soit le système d'exploitation ou la configuration de leur ordinateur.
+
+De plus, un conteneur de développement permet de s'assurer que tout le monde
+utilise la même configuration et les mêmes extensions pour le projet, ce qui
+facilite la collaboration et le partage de code entre les membres de l'équipe.
+
+Il n'est pas nécessaire de comprendre en détail ce qu'est un conteneur de
+développement pour suivre ce cours, mais nous allons parcourir les éléments de
+base pour vous permettre de l'utiliser correctement.
+
+Lorsque le projet est ouvert dans Visual Studio Code, vous devriez voir une
+notification en bas à droite de la fenêtre vous proposant d'ouvrir le projet
+dans un conteneur de développement. Cliquez sur le bouton **Reopen in
+Container** pour ouvrir le projet dans le conteneur de développement.
+
+<details>
+<summary>Afficher la capture d'écran illustrant l'étape</summary>
+
+![Notification pour ouvrir le projet dans un conteneur de développement](./images/visual-studio-code-dev-container.png)
+
+</details>
+
+Visual Studio Code va maintenant construire le conteneur de développement en
+utilisant les fichiers de configuration fournis dans le projet. Cela peut
+prendre quelques minutes, surtout lors de la première ouverture du projet.
+
+Une fois que le conteneur de développement est construit et que Visual Studio
+Code s'y est connecté, vous êtes maintenant dans un environnement de
+développement isolé avec tous les outils nécessaires pour développer votre
+application PHP.
+
+Le conteneur de développement est configuré à l'aide des fichiers
+`.devcontainer/devcontainer.json` et `.vscode/settings.json`.
+
+Le fichier `.devcontainer/devcontainer.json` contient la configuration du
+conteneur de développement, y compris les extensions Visual Studio Code à
+installer, les paramètres de l'environnement de développement, les commandes à
+exécuter lors de l'ouverture du conteneur, etc. Pour cela, il utilise une image
+Docker de base qui contient PHP et les outils nécessaires pour le développement
+PHP.
+
+Dans le contexte de ce cours, le conteneur de développement est configuré pour
+installer les extensions suivantes dans Visual Studio Code :
+
+- [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
+  : une extension pour le développement PHP qui fournit des fonctionnalités
+  telles que l'autocomplétion, la navigation dans le code, la validation de
+  syntaxe, etc.
+- [SQLite Viewer](https://marketplace.visualstudio.com/items?itemName=alexcuvsenov.sqlite-viewer)
+  : une extension pour Visual Studio Code qui permet de visualiser et
+  d'interagir avec des bases de données SQLite directement depuis l'éditeur de
+  de code.
+
+Le fichier `.vscode/settings.json` contient les paramètres de Visual Studio Code
+spécifiques au projet, tels que les paramètres de formatage du code, les
+paramètres de l'éditeur, les paramètres de l'extension, etc.
+
+Grâce à cette configuration, vous avez un environnement de développement prêt à
+l'emploi avec les extensions nécessaires pour développer votre application PHP
+sans avoir à les installer manuellement.
+
+A l'avenir, lorsque vous voudrez travailler sur votre projet, ouvrez simplement
+le projet dans Visual Studio Code et cliquez sur le bouton **Reopen in
+Container** pour vous connecter au conteneur de développement et commencer à
+travailler sur votre application PHP.
+
 > [!NOTE]
 >
-> La configuration ci-dessous peut varier en fonction de la version de PHP/MAMP
-> que vous utilisez. Il se peut que ces options soient déjà activées par défaut
-> dans votre installation de MAMP. Si c'est le cas, vous n'avez pas besoin de
-> les modifier.
+> Il est important de noter que si plusieurs projets utilisant des conteneurs de
+> développement sont ouverts en même temps dans Visual Studio, cela peut
+> entraîner des conflits de ports ou de ressources. Si vous avez des erreurs
+> lors de l'ouverture de plusieurs projets, assurez-vous que ceux-ci n'utilisent
+> pas les mêmes ports.
 
-1. En utilisant la version de PHP notée préalablement, ouvrez le fichier
-   `php.ini` de l'interpréteur PHP qui est utilisé avec MAMP dans Visual Studio
-   Code.
+> [!TIP]
+>
+> Vous pouvez également ouvrir le projet dans un conteneur de développement
+> directement depuis le menu de Visual Studio Code en allant dans les projets
+> récents (File > Open Recent) et en sélectionnant le projet qui porte le nom de
+> votre dépôt GitHub privé pour le mini-projet et les exercices avec la notation
+> _"[Dev Container]"_ (par exemple,
+> `progserv1-2025-2026-mini-projet-et-exercices-<github-username> [Dev Container]`).
 
-   Par exemple, si vous utilisez la version 8.3.1 de PHP, le fichier `php.ini`
-   se trouve dans le dossier `C:\MAMP\conf\php8.3.1\php.ini` pour Windows ou
-   `/Applications/MAMP/conf/php8.3.1/php.ini` pour macOS.
+### Découvrir la structure du projet
 
-2. Cherchez la chaîne de caractères `display_errors` dans le fichier `php.ini`.
-   Vous pouvez utiliser la fonction de recherche de Visual Studio Code en
-   appuyant sur `Ctrl + F` (Windows/Linux) ou `Cmd + F` (macOS) et en entrant
-   `display_errors` dans la barre de recherche. Vous devriez trouver une ligne
-   qui ressemble à ceci :
+Maintenant que le projet est ouvert dans Visual Studio Code, prenons un moment
+pour explorer la structure du projet et comprendre les différents fichiers et
+dossiers qui le composent.
 
-   ```ini
-   display_errors = off
-   ```
+- `.devcontainer/`: Contient la configuration pour le développement dans un
+  conteneur Docker.
+- `.vscode/`: Contient les paramètres recommandés pour Visual Studio Code.
+- `.gitignore`: Fichier de configuration pour Git, spécifiant les fichiers et
+  dossiers à ignorer.
+- `README.md`: Un fichier de documentation contenant des informations sur le
+  projet.
 
-   ou
+Prenez quelques minutes pour explorer ces fichiers et dossiers dans Visual
+Studio Code et comprendre leur rôle dans le projet avant de passer à la suite du
+cours puis répondez aux questions suivantes :
 
-   ```ini
-   display_errors = on
-   ```
+- Dans quel fichier se trouve la documentation du projet ?
+- Pourquoi est-il si important ?
 
-   Il se peut que vous trouviez plusieurs occurrences de cette ligne dans le
-   fichier `php.ini`. Assurez-vous de modifier la ligne qui n'est pas commentée
-   (sans point-virgule (`;`) au début de la ligne).
+<details>
+<summary>Afficher la réponse</summary>
 
-3. Si besoin, modifiez cette ligne pour qu'elle ressemble à ceci :
+La documentation du projet se trouve dans le fichier `README.md` à la racine du
+projet.
 
-   ```ini
-   display_errors = on
-   ```
+Dans la quasi totalité des projets, le fichier `README.md` contient des
+informations importantes sur le projet, telles que les instructions
+d'installation, les fonctionnalités, les technologies utilisées, etc.
 
-   Cela indique à PHP d'afficher les messages d'erreur.
+Il s'agit d'un fichier de documentation essentiel pour comprendre le projet et
+savoir comment l'utiliser. Lorsque vous travaillez sur un projet, assurez-vous
+de lire attentivement le fichier `README.md` pour comprendre les détails du
+projet et les instructions spécifiques à suivre. C'est aussi le fichier par
+défaut qui s'affiche sur la page d'accueil du dépôt GitHub, ce qui en fait un
+élément clé pour présenter votre projet aux autres.
 
-4. Sauvegardez le fichier `php.ini` et fermez-le.
-5. Redémarrez MAMP pour appliquer les changements.
-6. Ouvrez votre navigateur web et accédez à l'adresse
-   <http://localhost/progserv1/phpinfo.php>. Vous devriez la section
-   `display_errors` pour valider que les messages d'erreur sont affichés (avec
-   une valeur `On`).
-7. Si vous avez des erreurs dans votre code PHP, elles devraient maintenant
-   s'afficher dans le navigateur lorsque vous accédez à vos fichiers PHP plutôt
-   qu'une page blanche.
+</details>
 
-## Initialisation du projet PHP
+## Démarrer le projet
 
-Pour valider que tout fonctionne correctement, nous allons initialiser le projet
-PHP pour le mini-projet.
+Maintenant que nous avons configuré notre environnement de développement local
+et que nous avons ouvert le projet dans Visual Studio Code, nous allons
+initialiser le projet PHP pour le mini-projet.
 
-### Création de la structure du projet
+### Ouvrir un terminal intégré
 
-Pour commencer, nous allons créer la structure de fichiers et de dossiers pour
-le projet PHP. Cette structure nous permettra d'organiser les fichiers PHP tout
-au long du mini-projet. Cette structure va évoluer au fur et à mesure que nous
-ajouterons de nouvelles fonctionnalités à l'application web que nous allons
-construire.
+Afin de ne pas avoir à basculer entre notre éditeur de code et une fenêtre de
+terminal, nous allons utiliser le terminal intégré de Visual Studio Code.
 
-Commencez par créer les dossiers suivants dans le dossier racine du projet :
+1. Ouvrez le terminal intégré en allant dans le menu **Terminal > New
+   Terminal**.
+2. Le terminal devrait s'ouvrir en bas de la fenêtre de Visual Studio Code.
 
-```text
-progserv1/
-├── exercices/
-└── mini-projet/
+Ce terminal devrait être ouvert dans le dossier de votre projet PHP
+automatiquement, directement dans le conteneur de développement.
+
+Nous vous recommandons d'avoir ce terminal intégré ouvert en permanence pendant
+que vous travaillez sur votre projet PHP, car cela vous permettra d'exécuter les
+commandes nécessaires pour développer votre application sans avoir à basculer
+entre différentes fenêtres.
+
+### Démarrer le serveur de développement PHP
+
+Pour démarrer le serveur de développement PHP, exécutez la commande suivante
+dans le terminal intégré de Visual Studio Code :
+
+```bash
+php -S 0.0.0.0:8080
 ```
 
-Le dossier `progserv1` permettra de contenir tous les exercices et le
-mini-projet de l'unité d'enseignement "Programmation serveur 1". De cette
-manière, vous pourrez réutiliser la même structure de dossiers pour de futurs
-unités d'enseignement, notamment "Programmation serveur 2" ou "Développement de
-produits média".
+Cette commande démarre un serveur de développement PHP sur le port 8080,
+accessible depuis n'importe quelle adresse IP (`0.0.0.0`), nécessaire pour que
+le serveur soit accessible depuis votre navigateur web.
 
-Le dossier `exercices` contiendra tous les exercices réalisés durant l'unité
-d'enseignement "Programmation serveur 1". Vous pourrez l'utiliser pour stocker
-les exercices de chaque session et faire des tests et expérimentations.
+Une fois que le serveur de développement PHP est démarré, vous devriez voir un
+message similaire à celui-ci dans le terminal :
+
+```text
+[Tue Apr  7 16:29:24 2026] PHP 8.5.3 Development Server (http://0.0.0.0:8080) started
+```
+
+Cela signifie que le serveur de développement PHP est maintenant en cours
+d'exécution. Vous pouvez laisser ce terminal ouvert pendant que vous travaillez
+sur votre projet PHP.
+
+> [!NOTE]
+>
+> Vous remarquerez peut-être qu'il n'est plus possible d'exécuter d'autres
+> commandes dans ce terminal tant que le serveur de développement PHP est en
+> cours d'exécution. C'est normal, car le serveur de développement PHP tourne en
+> arrière-plan afin de pouvoir répondre aux requêtes HTTP envoyées depuis votre
+> navigateur web.
+
+Essayez d'accéder à votre application PHP en ouvrant votre navigateur web à
+l'adresse suivante : <http://localhost:8080>.
+
+Par le simple fait d'avoir essayé d'accéder à cette adresse, le serveur de
+développement PHP a effectué les tâches suivantes :
+
+1. Une requête HTTP a été envoyée à l'adresse <http://localhost:8080> depuis
+   votre navigateur web.
+2. Le serveur de développement PHP a reçu la requête et a tenté de trouver un
+   fichier correspondant à la requête dans le dossier racine de votre projet PHP
+   :
+   - Par défaut, le serveur de développement PHP recherche un fichier
+     `index.php` ou `index.html` à la racine du projet pour répondre à la
+     requête.
+   - Si aucun fichier correspondant n'est trouvé, le serveur de développement
+     PHP renvoie une erreur 404 (Not Found) au navigateur web.
+3. Si un fichier correspondant est trouvé, le serveur de développement PHP
+   exécute ce fichier et renvoie le résultat de son exécution au navigateur web
+   pour être affiché. Sinon, il génère une page d'erreur 404 (Not Found) et la
+   renvoie au navigateur web.
+4. Le navigateur web reçoit la réponse du serveur de développement PHP et
+   affiche le résultat à l'utilisateur.
+
+Comme il n'existe pas (encore) de fichier `index.php` ou `index.html` à la
+racine du projet dans la structure de fichiers de notre projet, le serveur de
+développement PHP va générer une page d'erreur 404 (Not Found) et la renvoyer au
+navigateur web.
+
+Pour arrêter le serveur de développement PHP, vous pouvez simplement appuyer sur
+<kbd>Ctrl</kbd> + <kbd>C</kbd> dans le terminal intégré de Visual Studio Code.
+Cela arrêtera le serveur de développement PHP et vous pourrez redémarrer le
+serveur plus tard en exécutant à nouveau la commande précédente.
+
+Pour la suite de ce contenu, assurez-vous d'avoir le serveur de développement
+PHP démarré et le terminal intégré ouvert dans Visual Studio Code.
+
+### Créer la structure de base du projet
+
+Nous allons maintenant créer la structure de fichiers et de dossiers qui nous
+permettra d'organiser le mini-projet et les exercices tout au long du cours.
+Cette structure va évoluer au fur et à mesure que nous ajouterons de nouvelles
+fonctionnalités à l'application web que nous allons construire.
+
+Commencez par créer les dossiers `exercices` et `mini-projet` dans le dossier
+racine du projet.
+
+> [!NOTE]
+>
+> Lorsque nous parlons du "dossier racine du projet", nous faisons référence au
+> dossier qui contient tous les fichiers et dossiers de votre projet PHP. C'est
+> le dossier que vous avez cloné depuis GitHub Classroom et qui porte le nom de
+> votre dépôt GitHub privé pour le mini-projet et les exercices (par exemple,
+> `progserv1-2025-2026-mini-projet-et-exercices-<github-username>`).
+>
+> A l'avenir, lorsque nous parlerons du "dossier racine du projet", nous ferons
+> référence à ce dossier qui contient tous les fichiers et dossiers de votre
+> projet PHP.
+
+La structure de votre projet devrait maintenant ressembler à ceci :
+
+```text
+./
+├── .devcontainer/
+│   └── devcontainer.json
+├── exercices/
+├── mini-projet/
+├── .vscode/
+│   ├── extensions.json
+│   └── settings.json
+├── .gitignore
+└── README.md
+```
+
+Le dossier `exercices` contiendra tous les exercices réalisés durant le cours
+_"Programmation serveur 1 (ProgServ1)"_. Vous pourrez l'utiliser pour stocker
+les exercices de chaque séance et faire des tests et expérimentations.
 
 Le dossier `mini-projet` contiendra tous les fichiers et dossiers nécessaires
-pour le mini-projet de l'unité d'enseignement "Programmation serveur 1". C'est
-dans ce dossier que vous allez construire l'application web pour gérer les
-animaux de compagnie.
+pour le mini-projet du cours _"Programmation serveur 1 (ProgServ1)"_. C'est dans
+ce dossier que vous allez construire l'application web pour gérer les animaux de
+compagnie.
 
-### Création des fichiers du projet
+Les autres fichiers et dossiers du projet (comme `.devcontainer`, `.vscode`,
+`.gitignore`, `README.md`, etc.) sont les fichiers fournis de base pour le
+projet.
+
+A l'avenir, par souci de breveté, nous ne mentionnerons plus les fichiers de
+base du projet mais ceux-ci ne doivent pas être modifiés ou supprimés. Ils sont
+nécessaires pour la configuration du conteneur de développement, les paramètres
+de Visual Studio Code, la gestion des fichiers avec Git, et la documentation du
+projet.
+
+### Créer et tester les fichiers de base du projet
 
 Créez maintenant les fichiers suivants dans les différents dossiers du projet :
 
 ```text
-progserv1/
+./
 ├── exercices/
 │   └── index.php
-├── mini-projet/
-│   └── index.php
+├── exception.php
 ├── index.php
 └── phpinfo.php
 ```
 
-Dans le fichier `progserv1/index.php`, ajoutez le code suivant :
+#### Fichier `phpinfo.php`
 
-```php
-<?php
-echo "Bonjour à toutes les personnes du cours de Programmation serveur 1 !";
-```
-
-Dans le fichier `progserv1/phpinfo.php`, ajoutez le code suivant :
+Dans le fichier `phpinfo.php`, ajoutez le code suivant :
 
 ```php
 <?php
@@ -773,82 +863,468 @@ La fonction `phpinfo()` affiche des informations sur la configuration de PHP
 installée sur votre ordinateur. Cela vous permettra de vérifier que PHP est
 correctement installé et configuré.
 
-Dans le fichier `progserv1/exercices/index.php`, ajoutez le code suivant :
+Sauvegardez le fichier et accédez à l'adresse
+<http://localhost:8080/phpinfo.php> dans votre navigateur web pour voir les
+informations de configuration de PHP.
 
-```php
-<?php
-echo "Bienvenue dans les exercices de l'unité d'enseignement Programmation serveur 1 !";
-```
+Plusieurs tableaux d'informations devraient s'afficher, contenant des détails
+sur la version de PHP, les extensions installées, les paramètres du serveur,
+etc.
 
-Dans le fichier `progserv1/mini-projet/index.php`, ajoutez le code suivant :
+Nous n'aurons pas besoin de ce fichier pour le mini-projet, mais il est utile
+pour vérifier que PHP est correctement installé et configuré sur votre
+ordinateur.
 
-```php
-<?php
-echo "Bienvenue dans le mini-projet de l'unité d'enseignement Programmation serveur 1 !";
-```
-
-Sauvez tous les fichiers.
-
-### Test de l'initialisation du projet
-
-Ouvrez votre navigateur web et accédez à l'adresse suivante :
-<http://localhost/progserv1/index.php>. Vous devriez voir le message suivant :
+Visualisez également le comportement du terminal intégré de Visual Studio Code
+lorsque vous accédez à l'adresse <http://localhost:8080/phpinfo.php> dans votre
+navigateur web. Vous devriez voir un résultat similaire à celui-ci dans le
+terminal :
 
 ```text
-Bonjour à toutes les personnes du cours de Programmation serveur 1 !
+[Tue Apr  7 16:34:15 2026] 127.0.0.1:53612 [200]: GET /phpinfo.php
+[Tue Apr  7 16:34:15 2026] 127.0.0.1:53612 Closing
+[Tue Apr  7 16:35:59 2026] 127.0.0.1:46082 Accepted
 ```
 
-Si vous accédez à l'adresse <http://localhost/progserv1/phpinfo.php>, vous
-devriez voir les informations de configuration de PHP avec sa version, les
-extensions installées, les paramètres du serveur, etc.
+Cela signifie que le serveur de développement PHP a reçu une requête pour le
+fichier `phpinfo.php`, a traité la requête et a renvoyé une réponse réussie
+(code de statut HTTP 200) au navigateur web.
 
-Cela signifie que l'initialisation du projet PHP pour le mini-projet a été
-réussie !
+Regarder ce qu'il se passe dans le serveur de développement PHP est une
+compétence essentielle pour comprendre comment votre application PHP fonctionne
+et pour diagnostiquer les problèmes qui pourraient survenir lors du
+développement de votre application. Prêtez-y attention à l'avenir lorsque vous
+testerez votre code dans le navigateur web.
 
-Testez également les adresses suivantes pour vérifier que les fichiers des
-exercices et du mini-projet fonctionnent correctement :
+#### Fichier `exception.php`
 
-- Exercices : <http://localhost/progserv1/exercices/index.php>
-- Mini-projet : <http://localhost/progserv1/mini-projet/index.php>
+Dans le fichier `exception.php`, ajoutez le code suivant :
 
-## Solution
+```php
+<?php
 
-Vous pouvez trouver la solution du mini-projet PHP à l'adresse suivante :
-[`solution`](./solution/README.md).
+throw new Exception("This is an exception message.");
+```
+
+Ce fichier est utilisé pour tester la gestion des exceptions en PHP.
+
+Cela permet de valider que la gestion des exceptions fonctionne correctement
+dans votre environnement de développement et que ceux-ci sont bien affichés dans
+le navigateur web.
+
+Nous étudierons en détail la gestion des exceptions en PHP dans un prochaine
+cours, mais pour le moment, nous allons simplement vérifier que les exceptions
+sont correctement gérées et affichées dans le navigateur web.
+
+Sauvegardez le fichier et accédez à l'adresse
+<http://localhost:8080/exception.php> dans votre navigateur web pour voir le
+message d'exception.
+
+Un message d'erreur avec un résultat similaire au suivant :
+
+```text
+Fatal error: Uncaught Exception: This is an exception message. in /workspaces/progserv1-2025-2026-mini-projet-et-exercices-ludelafo/exception.php:3 Stack trace: #0 {main} thrown in /workspaces/progserv1-2025-2026-mini-projet-et-exercices-ludelafo/exception.php on line 3
+```
+
+Prenez quelques instants pour comprendre ce message d'erreur et ce qu'il
+signifie et répondez aux questions suivantes :
+
+- Dans quel fichier l'erreur a-t-elle été levée ?
+- A quelle ligne du fichier l'erreur a-t-elle été levée ?
+- Quel est le message d'erreur de l'exception levée ?
+
+<details>
+<summary>Afficher la réponse</summary>
+
+- L'erreur a été levée dans le fichier `exception.php` à la ligne 3.
+- Le message d'erreur de l'exception levée est "This is an exception message.".
+
+</details>
+
+Durant le cours, il se peut que vous rencontriez des erreurs similaires à
+celle-ci lorsque vous testez votre code dans le navigateur web. Il est important
+de comprendre les messages d'erreur et de savoir comment les interpréter pour
+pouvoir corriger les erreurs dans votre code. Ces informations sont précieuses
+pour localiser rapidement l'erreur dans votre code et la corriger efficacement.
+
+Visualisez également le comportement du terminal intégré de Visual Studio Code
+lorsque vous accédez à l'adresse <http://localhost:8080/exception.php> dans
+votre navigateur web. Vous devriez voir un résultat similaire à celui-ci dans le
+terminal :
+
+```text
+[Tue Apr  7 16:35:59 2026] 127.0.0.1:46082 [200]: GET /exception.php - Uncaught Exception: This is an exception message. in /workspaces/progserv1-2025-2026-mini-projet-et-exercices-ludelafo/exception.php:3
+Stack trace:
+#0 {main}
+  thrown in /workspaces/progserv1-2025-2026-mini-projet-et-exercices-ludelafo/exception.php on line 3
+[Tue Apr  7 16:35:59 2026] 127.0.0.1:46082 Closing
+[Tue Apr  7 16:44:22 2026] 127.0.0.1:36400 Accepted
+```
+
+Ici, le serveur de développement PHP a reçu une requête pour le fichier
+`exception.php`, a traité la requête et a renvoyé une réponse réussie (code de
+statut HTTP 200) au navigateur web. Néanmoins, le serveur de développement PHP a
+également enregistré les détails de l'exception levée dans le terminal, ce qui
+peut être utile pour diagnostiquer les problèmes liés à la gestion des
+exceptions dans votre application PHP.
+
+#### Fichier `exercices/index.php`
+
+Dans le fichier `exercices/index.php`, ajoutez le code suivant :
+
+```php
+<?php
+echo "Bienvenue dans le dossier <code>exercices</code> du cours <i>Programmation serveur 1 (ProgServ1)</i> !";
+```
+
+Sauvegardez le fichier et accédez à l'adresse
+<http://localhost:8080/exercices/index.php> dans votre navigateur web pour voir
+le message de bienvenue.
+
+Vous remarquerez que le message s'affiche correctement dans le navigateur web,
+ce qui signifie que le fichier `exercices/index.php` est correctement configuré
+et que le serveur de développement PHP fonctionne correctement pour ce fichier.
+
+Grâce à PHP, nous pouvons mélanger du code PHP avec du code HTML pour générer du
+contenu dynamique dans nos pages web. Dans ce cas, nous utilisons la fonction
+`echo` pour afficher un message de bienvenue dans le navigateur web.
+
+C'est dans ce dossier que vous allez pouvoir stocker les exercices de chaque
+séance et faire des tests et expérimentations avec le code PHP que vous écrirez
+durant le cours.
+
+Visualisez également le comportement du terminal intégré de Visual Studio Code
+lorsque vous accédez à l'adresse <http://localhost:8080/exercices/index.php>
+dans votre navigateur web. Vous devriez voir un résultat similaire à celui-ci
+dans le terminal :
+
+```text
+[Tue Apr  7 16:44:22 2026] 127.0.0.1:36400 [200]: GET /exercices/index.php
+[Tue Apr  7 16:44:22 2026] 127.0.0.1:36400 Closing
+[Tue Apr  7 16:45:02 2026] 127.0.0.1:39536 Accepted
+```
+
+La requête pour le fichier `exercices/index.php` a été traitée avec succès par
+le serveur de développement PHP, qui a renvoyé une réponse réussie (code de
+statut HTTP 200) au navigateur web.
+
+#### Fichier `index.php`
+
+Afin de facilement avoir accès aux différentes parties du projet, nous allons
+créer un fichier `index.php` à la racine du projet.
+
+Ce fichier aura pour rôle de servir de page d'accueil pour le projet et de
+fournir des liens vers les différentes parties du projet, comme les exercices et
+le mini-projet.
+
+De plus, nous allons profiter des fonctionnalités de PHP pour générer du contenu
+mélangeant du code PHP et du code HTML pour créer une page d'accueil dynamique.
+
+Pour cela, ajoutez le code suivant dans le fichier `index.php` :
+
+```php
+<?php
+const PAGE_TITLE = "Page d'accueil du cours Programmation serveur 1 (ProgServ1)";
+const WELCOME_MESSAGE = "Bienvenue sur la page d'accueil du cours de Programmation serveur 1 (ProgServ1) !";
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo PAGE_TITLE; ?></title>
+</head>
+
+<body>
+    <h1><?php echo PAGE_TITLE; ?></h1>
+    <p><?php echo WELCOME_MESSAGE; ?></p>
+
+    <ul>
+        <li>Accéder aux <a href="./exercices/index.php">exercices</a>.</li>
+        <li>Accéder à la page de <a href="./phpinfo.php">configuration de PHP</a>.</li>
+        <li>Tester la gestion des exceptions avec le fichier <a href="./exception.php">exception.php</a>.</li>
+    </ul>
+</body>
+
+</html>
+```
+
+Sauvegardez le fichier et accédez à l'adresse <http://localhost:8080/index.php>
+dans votre navigateur web pour voir la page d'accueil du projet avec les liens
+vers les différentes parties du projet.
+
+Grâce à PHP, il est tout à fait possible de mélanger du code PHP avec du code
+HTML pour générer du contenu dynamique dans nos pages web. Dans ce cas, nous
+utilisons la fonction `echo` pour afficher des constantes PHP dans le code HTML
+pour créer une page d'accueil dynamique.
+
+Vous pouvez maintenant naviguer entre les différentes pages du projet en
+cliquant sur les liens présents sur la page d'accueil pour accéder aux
+exercices, au mini-projet, à la page de configuration de PHP, et au test de
+gestion des exceptions.
+
+Visualisez également le comportement du terminal intégré de Visual Studio Code
+lorsque vous accédez à l'adresse <http://localhost:8080/index.php> dans votre
+navigateur web. Que pouvez-vous observer dans le terminal ?
+
+### Arrêter le serveur de développement PHP
+
+Pour le moment, nous nous arrêterons là pour la création de la structure de base
+du projet et des fichiers nécessaires pour le mini-projet et les exercices. Nous
+allons continuer à construire cette structure au fur et à mesure du cours dans
+de futures séances.
+
+Vous pouvez maintenant arrêter le serveur de développement PHP en appuyant sur
+<kbd>Ctrl</kbd> + <kbd>C</kbd> dans le terminal intégré de Visual Studio Code.
+
+Le résultat devrait être similaire à celui-ci dans le terminal :
+
+```text
+[Tue Apr  7 17:31:16 2026] 127.0.0.1:45964 Closing
+```
+
+Le serveur de développement PHP a été arrêté avec succès, ce qui signifie que
+vous reprenez le contrôle de votre terminal intégré dans Visual Studio Code et
+que vous pouvez exécuter d'autres commandes ou redémarrer le serveur de
+développement PHP plus tard en exécutant à nouveau la commande nécessaire.
+
+## Ajouter les fichiers au contrôle de version avec Git
+
+Maintenant que nous avons créé la structure de base du projet et les fichiers
+nécessaires pour le mini-projet et les exercices, nous allons ajouter ces
+fichiers au contrôle de version avec Git pour pouvoir les suivre et les gérer
+dans notre dépôt GitHub.
+
+### Visualiser les changements avec Git
+
+Dans le terminal intégré de Visual Studio Code, exécutez la commande suivante
+pour visualiser les changements dans votre projet avec Git :
+
+```bash
+git status
+```
+
+Le résultat devrait être similaire à celui-ci :
+
+```text
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        exception.php
+        exercices/
+        index.php
+        phpinfo.php
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+Les fichiers sous la section "Untracked files" sont les fichiers que nous avons
+créés pour le mini-projet et les exercices, mais qui ne sont pas encore suivis
+par Git. Cela signifie que Git ne les inclura pas dans les prochains commits
+tant que nous ne les aurons pas ajoutés au suivi.
+
+### Ajouter les fichiers au suivi avec Git
+
+Pour ajouter les fichiers au suivi avec Git, exécutez la commande suivante dans
+le terminal intégré de Visual Studio Code :
+
+```bash
+git add .
+```
+
+Cette commande ajoute tous les fichiers du projet au suivi avec Git, ce qui
+signifie que Git commencera à suivre les changements dans ces fichiers et les
+inclura dans les prochains commits.
+
+Après avoir exécuté la commande `git add .`, vous pouvez exécuter à nouveau la
+commande `git status` pour vérifier que les fichiers ont été ajoutés au suivi
+avec Git. Le résultat devrait être similaire à celui-ci :
+
+```text
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   exception.php
+        new file:   exercices/index.php
+        new file:   index.php
+        new file:   phpinfo.php
+```
+
+Les fichiers sous la section "Changes to be committed" sont les fichiers qui ont
+été ajoutés au suivi avec Git et qui seront inclus dans le prochain commit.
+
+### Commiter les changements avec Git
+
+Maintenant que les fichiers ont été ajoutés au suivi avec Git, nous allons
+commiter ces changements pour les enregistrer dans l'historique de Git.
+
+Pour commiter les changements, exécutez la commande suivante dans le terminal
+intégré de Visual Studio Code :
+
+```bash
+git commit -m "Ajout des fichiers de base pour le cours de Programmation serveur 1 (ProgServ1)"
+```
+
+Cette commande crée un nouveau commit avec les changements que nous avons
+ajoutés au suivi avec Git, et le message de commit _"Ajout des fichiers de base
+pour le cours de Programmation serveur 1 (ProgServ1)"_ décrit les changements
+que nous avons effectués dans ce commit.
+
+Après avoir exécuté la commande `git commit`, vous devriez voir un message
+similaire à celui-ci :
+
+```text
+[main d3c39b8] Ajout des fichiers de base pour le cours de Programmation serveur 1 (ProgServ1)
+ 4 files changed, 34 insertions(+)
+ create mode 100644 exception.php
+ create mode 100644 exercices/index.php
+ create mode 100644 index.php
+ create mode 100644 phpinfo.php
+```
+
+Cela signifie que le commit a été créé avec succès, et les fichiers que nous
+avons ajoutés au suivi avec Git sont maintenant enregistrés dans l'historique de
+Git.
+
+### Pousser les changements vers GitHub
+
+Maintenant que nous avons commité les changements dans notre dépôt Git local,
+nous allons pousser ces changements vers notre dépôt GitHub privé pour le
+mini-projet et les exercices.
+
+Pour pousser les changements vers GitHub, exécutez la commande suivante dans le
+terminal intégré de Visual Studio Code :
+
+```bash
+git push
+```
+
+Cette commande pousse les commits que nous avons créés dans notre dépôt Git
+local vers le dépôt GitHub distant, ce qui permet de synchroniser les
+changements entre notre dépôt local et le dépôt GitHub. Une autre forme de faire
+la même chose est d'exécuter la commande `git push origin main`, qui spécifie
+explicitement que nous voulons pousser les changements vers la branche `main` du
+dépôt GitHub distant, mais ce n'est pas nécessaire ici.
+
+Après avoir exécuté la commande `git push`, vous devriez voir un message
+similaire à celui-ci :
+
+```text
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 1.40 KiB | 1.40 MiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:heig-vd-progserv-course-classroom/progserv1-2025-2026-mini-projet-et-exercices-ludelafo.git
+   145a17e..d3c39b8  main -> main
+```
+
+Cela signifie que les changements ont été poussés avec succès vers le dépôt
+GitHub distant, et que votre dépôt GitHub privé pour le mini-projet et les
+exercices est maintenant à jour avec les changements que vous avez effectués
+localement. Vous pouvez aller sur GitHub pour vérifier que les fichiers que vous
+avez ajoutés et commité sont bien présents dans votre dépôt GitHub privé pour le
+mini-projet et les exercices.
+
+Nous avons maintenant une base solide pour commencer à développer notre
+application web pour le mini-projet, et nous avons également appris à utiliser
+Git pour suivre les changements dans notre projet et à pousser ces changements
+vers GitHub pour les partager avec les autres.
+
+## Cloner le dépôt GitHub du cours
+
+En utilisant tout ce que vous avez acquis dans cette première séance de
+mini-projet, clonez le dépôt GitHub du cours pour accéder aux exemples de code.
+
+Le dépôt GitHub du cours est accessible à l'adresse suivante :
+<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course>.
+
+Assurez-vous de cloner le dépôt GitHub du cours dans un emplacement différent de
+celui où vous avez cloné votre dépôt GitHub privé pour le mini-projet et les
+exercices, afin d'éviter tout conflit entre les deux dépôts.
+
+Ouvrez-le ensuite dans Visual Studio Code pour explorer les exemples de code et
+les ressources fournies dans le dépôt du cours, qui pourront vous être utiles
+pour le développement de votre application PHP pour le mini-projet.
+
+## Cloner le dépôt GitHub de la solution au mini-projet
+
+En utilisant tout ce que vous avez acquis dans cette première séance de
+mini-projet, clonez le dépôt GitHub du cours pour accéder aux exemples de code.
+
+Le dépôt GitHub du cours est accessible à l'adresse suivante :
+<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-mini-project-solution>.
+
+Assurez-vous de cloner le dépôt GitHub du cours dans un emplacement différent de
+celui où vous avez cloné votre dépôt GitHub privé pour le mini-projet et les
+exercices, afin d'éviter tout conflit entre les deux dépôts.
+
+Vous trouverez plus d'informations sur la solution du mini-projet dans la
+section [Solution](#solution) ci-dessous.
 
 ## Conclusion
 
-Dans cette première session de mini-projet, vous avez installé et configuré un
-environnement de développement pour PHP. Grâce à MAMP et Visual Studio Code,
-vous avez mis en place un environnement de développement complet pour écrire,
-tester et déboguer des applications PHP qui vous sera utile pour les sessions et
-les unités d'enseignement à venir.
+Dans cette première séance de mini-projet, vous avez installé et configuré un
+environnement de développement pour PHP. Grâce à Visual Studio Code et au
+conteneur de développement, vous avez mis en place un environnement de
+développement complet pour écrire, tester et déboguer des applications PHP qui
+vous sera utile pour les séances et les cours à venir.
 
-Vous avez également initialisé un projet PHP pour le mini-projet et testé
-l'initialisation du projet. Vous êtes maintenant prêt.e à commencer à construire
-l'application web pour gérer les animaux de compagnie !
+Vous avez également initialisé un projet PHP pour les exercices et testé
+l'initialisation du projet avec les différentes pages HTML qui seront utilisées
+durant le reste du cours.
 
-## Aller plus loin
+De plus, vous avez appris à utiliser Git pour suivre les changements dans votre
+projet et à cloner les dépôts GitHub du cours pour accéder aux exemples de code
+et à la solution du mini-projet.
 
-_Ceci est une section optionnelle pour les personnes qui souhaitent aller plus
-loin. Vous pouvez la sauter si vous n'avez pas de temps._
+Vous avez maintenant le nécessaire pour construire l'application web pour gérer
+les animaux de compagnie dans les prochaines séances du mini-projet !
 
-- Êtes-vous capable de modifier les fichiers PHP pour y incorporer des balises
-  HTML et CSS pour rendre les pages plus attrayantes ?
-- Êtes-vous capable de changer les messages affichés dans les fichiers PHP pour
-  quelque chose de plus personnel ?
+Nous vous invitons maintenant à passer aux exemples de code et aux exercices de
+la séance comme indiqué dans le [contenu principal](../README.md).
 
-[^docker]: Docker, [docker.com](https://www.docker.com/), 09 mars 2025
-[^lamp]:
-    LAMP,
-    [en.wikipedia.org](<https://en.wikipedia.org/wiki/LAMP_(software_bundle)>),
-    09 mars 2025
+## Solution
 
-[^mamp]: MAMP, [mamp.info](https://www.mamp.info/), 09 mars 2025
-[^visual-studio-code]:
-    Visual Studio Code, [code.visualstudio.com](https://code.visualstudio.com/),
-    10 mars 2025
+> [!NOTE]
+>
+> La solution est fournie à titre indicatif uniquement. Il est fortement
+> recommandé de développer votre propre version du mini-projet avant de
+> consulter la solution.
 
-[^wamp]: WampServer, [wampserver.com](https://www.wampserver.com/), 09 mars 2025
-[^xampp]:
-    XAMPP, [apachefriends.org](https://www.apachefriends.org/), 09 mars 2025
+La solution du mini-projet est accessible dans un dépôt GitHub dédié à l'adresse
+suivante :
+<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-mini-project-solution/tree/session-1>.
+
+Afin d'utiliser cette solution de manière efficace pour votre apprentissage,
+nous vous recommandons de suivre les étapes suivantes :
+
+1. Essayez de développer votre propre version du mini-projet en suivant les
+   instructions et les étapes décrites dans ce contenu avant de consulter la
+   solution. Cela vous permettra de mettre en pratique les concepts et les
+   compétences que vous avez appris et de mieux comprendre les différentes
+   étapes du développement d'une application PHP.
+2. Clonez le dépôt GitHub de la solution localement sur votre ordinateur en
+   utilisant la commande `git clone` avec l'URL du dépôt de la solution.
+3. Accédez à la version spécifique de la solution correspondant à la séance en
+   utilisant la commande `git checkout` avec le commit ou le tag correspondant à
+   la séance 1 (par exemple, `git checkout session-1`).
+4. Explorez le code de la solution pour comprendre comment les différentes
+   fonctionnalités ont été implémentées et comment les concepts appris ont été
+   appliqués dans la solution.
+5. Comparez votre propre version du mini-projet avec la solution pour identifier
+   les différences et les similitudes, et pour comprendre les différentes
+   approches possibles pour résoudre les problèmes rencontrés lors du
+   développement de votre application PHP.
+
+<!-- URLs -->
+
+[licence]:
+	https://github.com/heig-vd-devprodmed-course/heig-vd-devprodmed-course/blob/main/LICENSE.md

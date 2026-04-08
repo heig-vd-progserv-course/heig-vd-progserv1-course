@@ -32,7 +32,7 @@ adresse][contenu-complet-sur-github].
 
 <small>Ce travail est sous licence [CC BY-SA 4.0][license].</small>
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 ## Retrouvez le contenu complet de cette présentation sur GitHub
 
@@ -44,7 +44,7 @@ _Pour plus de détails, retrouvez le [contenu complet sur
 GitHub][contenu-complet-sur-github] ou en cliquant sur l'en-tête de ce
 document._
 
-## Objectifs (1/3)
+## Objectifs (1)
 
 - Décrire les tableaux et leurs caractéristiques
 - Décrire la différence entre les tableaux indexés, les tableaux associatifs et
@@ -54,7 +54,7 @@ document._
 
 ![bg right:40%][illustration-objectifs]
 
-## Objectifs (2/3)
+## Objectifs (2)
 
 - Décrire les boucles et leurs caractéristiques
 - Décrire la différence entre les boucles `for`, `while`, `do...while` et
@@ -63,7 +63,7 @@ document._
 
 ![bg right:40%][illustration-objectifs]
 
-## Objectifs (3/3)
+## Objectifs (3)
 
 - Utiliser quelques fonctions utiles pour travailler avec les tableaux et les
   boucles
@@ -81,7 +81,7 @@ document._
 
 ![bg right:40%][illustration-les-tableaux]
 
-### Tableaux indexés (1/7)
+### Tableaux indexés (1)
 
 - Forme la plus simple de tableau.
 - Les valeurs sont indexées par des entiers.
@@ -91,7 +91,7 @@ document._
 
 ![bg right:40%][illustration-tableaux-indexes]
 
-### Tableaux indexés (2/7)
+### Tableaux indexés (2)
 
 ```php
 <?php
@@ -103,7 +103,7 @@ echo $fruits[2] . "<br>"; // Affiche 'orange'
 echo $fruits[3] . "<br>"; // Affiche 'kiwi'
 ```
 
-### Tableaux indexés (3/7)
+### Tableaux indexés (3)
 
 ```java
 public class Main {
@@ -118,7 +118,7 @@ public class Main {
 }
 ```
 
-### Tableaux indexés (4/7)
+### Tableaux indexés (4)
 
 Ce tableau indexé peut être représenté sous la forme d'une table, composée de
 paires de clé-valeur :
@@ -130,7 +130,7 @@ paires de clé-valeur :
 | `2`   | `'orange'` |
 | `3`   | `'kiwi'`   |
 
-### Tableaux indexés (5/7)
+### Tableaux indexés (5)
 
 ```php
 <?php
@@ -149,7 +149,7 @@ echo $mixed[3] . "<br>"; // Affiche 3.14
 // contenant des types différents en Java.
 ```
 
-### Tableaux indexés (6/7)
+### Tableaux indexés (6)
 
 Imaginons maintenant que nous souhaitons représenter une personne à l'aide d'un
 tableau indexé. Nous pourrions créer un tableau `$person` qui contient le nom,
@@ -164,7 +164,7 @@ echo $person[1] . "<br>"; // Affiche l'âge de la personne
 echo $person[2] . "<br>"; // Affiche la ville de la personne
 ```
 
-### Tableaux indexés (7/7)
+### Tableaux indexés (7)
 
 Ce tableau indexé peut être représenté sous la forme d'une table, composée de
 paires de clé-valeur :
@@ -177,7 +177,7 @@ paires de clé-valeur :
 
 Ce n'est pas très intuitif... Solution : les tableaux associatifs.
 
-### Tableaux associatifs (1/4)
+### Tableaux associatifs (1)
 
 - Les valeurs sont indexées par des chaînes de caractères, appelées _clés_.
 - Les clés peuvent être de n'importe quel type et peuvent être complètement
@@ -186,7 +186,7 @@ Ce n'est pas très intuitif... Solution : les tableaux associatifs.
 
 ![bg right:40%][illustration-tableaux-associatifs]
 
-### Tableaux associatifs (2/4)
+### Tableaux associatifs (2)
 
 ```php
 <?php
@@ -203,7 +203,7 @@ echo $person['age'] . "<br>"; // Affiche 30
 echo $person['city'] . "<br>"; // Affiche 'New York'
 ```
 
-### Tableaux associatifs (3/4)
+### Tableaux associatifs (3)
 
 Ce tableau associatif peut être représenté sous la forme d'une table, composée
 de paires de clé-valeur :
@@ -216,7 +216,7 @@ de paires de clé-valeur :
 
 Plus intuitif que le tableau indexé !
 
-### Tableaux associatifs (4/4)
+### Tableaux associatifs (4)
 
 ```java
 // Équivalent en Java
@@ -226,7 +226,7 @@ Plus intuitif que le tableau indexé !
 // obtenir un résultat similaire (non décrit ici).
 ```
 
-### Tableaux multidimensionnels (1/5)
+### Tableaux multidimensionnels (1)
 
 - Les tableaux multidimensionnels sont des tableaux qui contiennent d'autres
   tableaux.
@@ -236,7 +236,7 @@ Plus intuitif que le tableau indexé !
 
 ![bg right:40%][illustration-tableaux-multidimensionnels]
 
-### Tableaux multidimensionnels (2/5)
+### Tableaux multidimensionnels (2)
 
 ```php
 <?php
@@ -253,7 +253,7 @@ echo $matrix[2][2] . "<br>"; // Affiche 9
 
 ```
 
-### Tableaux multidimensionnels (3/5)
+### Tableaux multidimensionnels (3)
 
 ```java
 // Équivalent en Java
@@ -273,7 +273,7 @@ public class Main {
 }
 ```
 
-### Tableaux multidimensionnels (4/5)
+### Tableaux multidimensionnels (4)
 
 ```php
 <?php
@@ -305,7 +305,7 @@ echo $users['jane']['age'] . "<br>"; // Affiche 25
 echo $users['john']['city'] . "<br>"; // Affiche 'New York'
 ```
 
-### Tableaux multidimensionnels (5/5)
+### Tableaux multidimensionnels (5)
 
 ```java
 // Équivalent en Java
@@ -326,7 +326,7 @@ echo $users['john']['city'] . "<br>"; // Affiche 'New York'
 
 ![bg right:40%][illustration-les-boucles]
 
-### Boucle `for` (1/3)
+### Boucle `for` (1)
 
 - Utilisée pour exécuter un bloc de code un nombre fixe de fois.
 - Composée de trois parties :
@@ -337,7 +337,7 @@ echo $users['john']['city'] . "<br>"; // Affiche 'New York'
 
 ![bg right:40%][illustration-les-boucles]
 
-### Boucle `for` (2/3)
+### Boucle `for` (2)
 
 ```php
 <?php
@@ -351,7 +351,7 @@ for ($i = 0; $i < 10; $i++) {
 2. La condition d'arrêt : `$i < 10`
 3. L'incrémentation du compteur : `$i++`
 
-### Boucle `for` (3/3)
+### Boucle `for` (3)
 
 ```java
 // Équivalent en Java
@@ -364,7 +364,7 @@ public class Main {
 }
 ```
 
-### Boucle `while` (1/3)
+### Boucle `while` (1)
 
 - Utilisée pour exécuter un bloc de code tant qu'une condition est vraie.
 - La condition est vérifiée avant chaque itération.
@@ -372,7 +372,7 @@ public class Main {
 
 ![bg right:40%][illustration-les-boucles]
 
-### Boucle `while` (2/3)
+### Boucle `while` (2)
 
 ```php
 <?php
@@ -385,7 +385,7 @@ while ($i < 10) {
 }
 ```
 
-### Boucle `while` (3/3)
+### Boucle `while` (3)
 
 ```java
 public class Main {
@@ -400,7 +400,7 @@ public class Main {
 }
 ```
 
-### Boucle `do...while` (1/3)
+### Boucle `do...while` (1)
 
 - Similaire à la boucle `while`, mais avec une différence importante : la
   condition est vérifiée après chaque itération.
@@ -410,7 +410,7 @@ public class Main {
 
 ![bg right:40%][illustration-les-boucles]
 
-### Boucle `do...while` (2/3)
+### Boucle `do...while` (2)
 
 ```php
 <?php
@@ -423,7 +423,7 @@ do {
 } while ($randomNumber < 8);
 ```
 
-### Boucle `do...while` (3/3)
+### Boucle `do...while` (3)
 
 ```java
 public class Main {
@@ -440,7 +440,7 @@ public class Main {
 }
 ```
 
-### Boucle `foreach` (1/4)
+### Boucle `foreach` (1)
 
 - Utilisée pour parcourir les éléments d'un tableau ou d'une collection.
 - La syntaxe est plus simple que celle des boucles `for` et `while`.
@@ -448,7 +448,7 @@ public class Main {
 
 ![bg right:40%][illustration-les-boucles]
 
-### Boucle `foreach` (2/4)
+### Boucle `foreach` (2)
 
 ```php
 <?php
@@ -460,7 +460,7 @@ foreach ($fruits as $fruit) {
 }
 ```
 
-### Boucle `foreach` (3/4)
+### Boucle `foreach` (3)
 
 ```java
 import java.util.Arrays;
@@ -478,7 +478,7 @@ public class Main {
 }
 ```
 
-### Boucle `foreach` (4/4)
+### Boucle `foreach` (4)
 
 ```php
 <?php
@@ -525,13 +525,13 @@ foreach ($users as $user) {
 
 ![bg right:40%][illustration-les-boucles]
 
-### Fonctions `print()` et `print_r()` (1/2)
+### Fonctions `print()` et `print_r()` (1)
 
 - La fonction `print()` affiche une chaîne de caractères (équivalent à `echo`).
 - La fonction `print_r()` affiche une représentation lisible d'une variable,
   généralement utilisée pour afficher des tableaux ou des objets.
 
-### Fonctions `print()` et `print_r()` (2/2)
+### Fonctions `print()` et `print_r()` (2)
 
 ```php
 <?php
@@ -558,7 +558,7 @@ for ($i = 0; $i < count($fruits); $i++) {
 }
 ```
 
-### Fonction `array_push()` (1/2)
+### Fonction `array_push()` (1)
 
 - La fonction `array_push()` ajoute un ou plusieurs éléments à la fin d'un
   tableau.
@@ -566,7 +566,7 @@ for ($i = 0; $i < count($fruits); $i++) {
 - Elle est utile pour ajouter des éléments à un tableau sans avoir à spécifier
   l'index.
 
-### Fonction `array_push()` (2/2)
+### Fonction `array_push()` (2)
 
 ```php
 <?php
@@ -600,13 +600,12 @@ Est-ce que vous avez des questions ?
 ## À vous de jouer !
 
 - (Re)lire le [support de cours][contenu-complet-sur-github].
-- Réaliser le [mini-projet][mini-projet].
+- Explorer les [exemples de code][exemples-de-code].
 - Faire les [exercices][exercices].
+- Réaliser le [mini-projet][mini-projet].
 - Poser des questions si nécessaire.
 
-\
-**Pour le mini-projet ou les exercices, n'hésitez pas à vous entraidez si vous avez
-des difficultés !**
+**N'hésitez pas à vous entraidez si vous avez des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
@@ -643,10 +642,12 @@ des difficultés !**
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [contenu-complet-sur-github]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-tableaux-et-boucles/README.md
-[mini-projet]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-tableaux-et-boucles/01-mini-projet/README.md
+[exemples-de-code]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-tableaux-et-boucles/01-exemples-de-code/README.md
 [exercices]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-tableaux-et-boucles/02-exercices/README.md
+[mini-projet]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-tableaux-et-boucles/03-mini-projet/README.md
 
 <!-- Illustrations -->
 

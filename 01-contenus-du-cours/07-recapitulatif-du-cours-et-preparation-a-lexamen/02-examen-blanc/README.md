@@ -1,20 +1,12 @@
 # Récapitulatif du cours et préparation à l'examen - Examen blanc
 
-## Ressources
+Cet examen blanc est conçu pour vous préparer à l'examen final du cours
+_"Programmation serveur 1 (ProgServ1)"_.
 
-- Récapitulatif de l'unité d'enseignement :
-  [Support de cours](../01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/README.md)
-  ·
-  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/index.html)
-  ·
-  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication/01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/08-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen-et-finalisation-de-lapplication-presentation.pdf)
-  ·
-  [Résultats des formulaires de feedback et évaluations GAPS](../01-recapitulatif-de-lunite-denseignement-avec-preparation-a-lexamen/resultats-des-formulaires-de-feedback-et-evaluations-gaps/README.md)
-- Mini-projet : [Consignes](../01-mini-projet/README.md) ·
-  [Solution](../01-mini-projet/solution/README.md)
-- Examen blanc : [Énoncé](../03-examen-blanc/README.md)
+Plus de détails dans le contenu
+_["Récapitulatif du cours et préparation à l'examen"](../README.md)_.
 
-## [ProgServ1 2024-2025] Examen blanc
+## [ProgServ1 2025-2026] Examen blanc
 
 L'examen est composé de deux parties :
 
@@ -135,10 +127,12 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 
 #### Grille d'évaluation
 
-- 0 point - Le travail est insuffisant
-- 1 point - Le travail est réalisé mais nécessite des améliorations (manque de
-  fonctionnalités ou de précision)
-- 2 points - Le travail est réalisé et répond complètement aux attentes
+- 0 point - Le travail est manquant, hors sujet ou montre une compréhension très
+  limitée du sujet.
+- 1 point - Le travail montre une compréhension partielle : certains éléments
+  clés sont manquants, peu clairs ou mal mis en œuvre.
+- 2 points - Le travail est complet, précis et montre une compréhension claire
+  et approfondie du sujet.
 
 > [!NOTE]
 >
@@ -146,73 +140,59 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 > utiliser du HTML et du CSS de base (CSS optionnel), mais l'accent doit être
 > mis sur la fonctionnalité et la structure du code.
 
-> [!WARNING]
->
-> Le code ne doit pas contenir de code sortant du contexte de l'application (pas
-> de code ou commentaires inutiles, pas de code lié à d'autres projets (animaux
-> de compagnie par exemple), etc.). Des points peuvent être retirés si le code
-> contient des éléments inutiles ou hors contexte.
-
 **Page d'accueil**
 
-|   # | Description                                                                                            | Points |
-| --: | :----------------------------------------------------------------------------------------------------- | -----: |
-|   1 | Une page d'accueil permet d'afficher la liste des projets                                              |      2 |
-|   2 | La page d'accueil affiche les projets avec les attributs suivants : nom, description, statut, priorité |      2 |
-|   3 | La page d'accueil est protégée contre les attaques XSS                                                 |      2 |
-|   4 | La page d'accueil permet de naviguer vers la page de création d'un nouveau projet                      |      2 |
-|   5 | La page d'accueil permet de naviguer vers la page de visualisation d'un projet                         |      2 |
-|   6 | La page d'accueil permet de naviguer vers la page d'édition d'un projet                                |      2 |
-|   7 | La page d'accueil permet de naviguer vers la page de suppression d'un projet                           |      2 |
+|   # | Description                                                                                                                                                                 | Points |
+| --: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+|   1 | La page d'accueil présente l'application, un bouton pour créer un nouveau projet ainsi que la liste des projets.                                                            |      2 |
+|   2 | La liste des projets affiche les projets avec les attributs suivants : nom, description, statut, priorité et les actions associées (visualisation, édition et suppression). |      2 |
 
-**Page de création d'un projet**
+**Page de création**
 
-|   # | Description                                                                                                                                           | Points |
-| --: | :---------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-|   8 | Une page de création permet de créer un nouveau projet                                                                                                |      2 |
-|   9 | La page de création affiche un formulaire avec les champs suivants : nom, description, statut, priorité, catégories                                   |      2 |
-|  10 | La page de création supporte la validation des champs du formulaire (obligatoire, longueur minimale et maximale), autant côté serveur que côté client |      2 |
-|  11 | La page de création affiche les erreurs de validation de manière claire et précise                                                                    |      2 |
-|  12 | La page de création sauvegarde les données du formulaire en cas d'erreur de validation (pré-remplissage)                                              |      2 |
-|  13 | La page de création sauvegarde le nouveau projet dans la base de données et redirige la personne vers la page d'accueil après la création d'un projet |      2 |
-|  14 | La page de création est protégée contre les injections SQL et les attaques XSS                                                                        |      2 |
+|   # | Description                                                                                                                                                                                                                                                                                                                                              | Points |
+| --: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+|   3 | La page de création permet de créer un nouveau projet à l'aide d'un formulaire avec les attributs du nouveau projet.                                                                                                                                                                                                                                     |      2 |
+|   4 | Le formulaire de création supporte la validation des champs (obligatoire, longueur minimale et maximale), autant côté serveur que côté client. En cas d'erreur, celles-ci sont affichées de manière claire et précise et les données sont pré-remplies. Une fois le projet créé, la personne est redirigée vers la page de visualisation du projet créé. |      2 |
+|   5 | Le projet créé est correctement sauvegardé dans la base de données lors de la création.                                                                                                                                                                                                                                                                  |      2 |
 
-**Page de visualisation d'un projet**
+**Page de visualisation**
 
-|   # | Description                                                                                                                         | Points |
-| --: | :---------------------------------------------------------------------------------------------------------------------------------- | -----: |
-|  15 | Une page de visualisation permet de visualiser les détails d'un projet                                                              |      2 |
-|  16 | La page de visualisation affiche les détails du projet avec les attributs suivants : nom, description, statut, priorité, catégories |      2 |
-|  17 | La page de visualisation est protégée contre les injections SQL et les attaques XSS                                                 |      2 |
-|  18 | La page de visualisation permet de naviguer vers la page d'édition d'un projet                                                      |      2 |
-|  19 | La page de visualisation permet de supprimer un projet                                                                              |      2 |
-|  20 | La page de visualisation redirige l'utilisateur vers la page d'accueil si le projet n'existe pas                                    |      2 |
+|   # | Description                                                                                                                        | Points |
+| --: | :--------------------------------------------------------------------------------------------------------------------------------- | -----: |
+|   6 | La page de visualisation permet d'afficher les détails d'un projet avec les attributs du projet.                                   |      2 |
+|   7 | Lors de l'accès à la page de visualisation du projet, si le projet n'existe pas, la personne est redirigée vers la page d'accueil. |      2 |
 
-**Page d'édition d'un projet**
+**Page d'édition**
 
-|   # | Description                                                                                                                                          | Points |
-| --: | :--------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-|  21 | Une page d'édition permet de modifier un projet                                                                                                      |      2 |
-|  22 | La page d'édition affiche un formulaire pré-rempli avec les données du projet                                                                        |      2 |
-|  23 | La page d'édition supporte la validation des champs du formulaire (obligatoire, longueur minimale et maximale), autant côté serveur que côté serveur |      2 |
-|  24 | La page d'édition affiche les erreurs de validation de manière claire et précise                                                                     |      2 |
-|  25 | La page d'édition sauvegarde les données du formulaire en cas d'erreur de validation (pré-remplissage)                                               |      2 |
-|  26 | La page d'édition met à jour le projet dans la base de données et redirige la personne vers la page de visualisation du projet après la modification |      2 |
-|  27 | La page d'édition est protégée contre les injections SQL et les attaques XSS                                                                         |      2 |
-|  28 | La page d'édition redirige l'utilisateur vers la page d'accueil si le projet n'existe pas                                                            |      2 |
+|   # | Description                                                                                                                                                                                                                                                                                                                                                        | Points |
+| --: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+|   8 | La page d'édition permet de modifier un projet à l'aide d'un formulaire avec les attributs du projet. Le formulaire d'édition est pré-rempli avec les données du projet à modifier.                                                                                                                                                                                |      2 |
+|   9 | Lors de l'accès à la page d'édition du projet, si le projet n'existe pas, la personne est redirigée vers la page d'accueil.                                                                                                                                                                                                                                        |      2 |
+|  10 | Le formulaire d'édition supporte la validation des champs (obligatoire, longueur minimale et maximale), autant côté serveur que côté client. En cas d'erreur, celles-ci sont affichées de manière claire et précise et les données sont pré-remplies. Une fois le projet mis à jour, la personne est redirigée vers la page de visualisation du projet mis à jour. |      2 |
+|  11 | Le projet modifié est correctement mis à jour dans la base de données lors de la modification.                                                                                                                                                                                                                                                                     |      2 |
 
-**Page de suppression d'un projet**
+**Page de suppression**
 
-|   # | Description                                                                                                                           | Points |
-| --: | :------------------------------------------------------------------------------------------------------------------------------------ | -----: |
-|  29 | Une page de suppression permet de supprimer un projet                                                                                 |      2 |
-|  30 | La page de suppression redirige l'utilisateur vers la page d'accueil si le projet n'existe pas                                        |      2 |
-|  31 | La page de suppression supprime le projet de la base de données et redirige l'utilisateur vers la page d'accueil après la suppression |      2 |
-|  32 | La page de suppression est protégée contre les injections SQL                                                                         |      2 |
+|   # | Description                                                                                                                      | Points |
+| --: | :------------------------------------------------------------------------------------------------------------------------------- | -----: |
+|  12 | Il est possible de supprimer un projet à partir de la page d'accueil.                                                            |      2 |
+|  13 | Lors de l'accès à la page de suppression du projet, si le projet n'existe pas, la personne est redirigée vers la page d'accueil. |      2 |
+|  14 | Le projet supprimé est correctement supprimé de la base de données.                                                              |      2 |
+|  15 | Lors de la suppression d'un projet, la personne est redirigée vers la page d'accueil.                                            |      2 |
 
-**Global**
+**Qualité du code**
 
-|   # | Description                                                                                                       | Points |
-| --: | :---------------------------------------------------------------------------------------------------------------- | -----: |
-|  33 | Le code est lisible, agréable à lire et utilise des noms de variables/fonctions/fichiers/dossiers/etc. explicites |      2 |
-|  34 | Le code est structuré avec les principes de la programmation orientée objet (POO)                                 |      2 |
+|   # | Description                                                                                                                                                   | Points |
+| --: | :------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----: |
+|  16 | Les fonctions sont définies dans un fichier unique. Elles sont utilisées dans les différentes pages pour structurer le code et éviter la duplication de code. |      2 |
+|  17 | Le code est lisible, agréable à lire et utilise des noms de variables/fonctions/fichiers/dossiers/etc. explicites.                                            |      2 |
+
+**Contraintes**
+
+- Votre application ne doit pas contenir de code ou de commentaires hors
+  contexte (par exemple, liés à d'autres projets comme le mini-projet sur les
+  animaux de compagnie, du code utilisant des concepts que nous n'avons pas
+  étudiés en cours, du code généré par IA, etc.). Le non-respect de cette règle
+  entraînera la note de 1 pour l'ensemble de l'examen.
+- Le code doit être votre propre travail. Toute tentative de plagiat ou de
+  tricherie entraînera la note de 1 pour l'ensemble de l'examen.

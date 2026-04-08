@@ -1,30 +1,68 @@
 # Formulaires HTML et validation - Exercices
 
-Cette série d'exercices est conçue pour vous permettre de valider les concepts
-théoriques et pratiques vus dans le cours
-_["Formulaires HTML et validation"](../README.md)_.
+L. Delafontaine, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot).
 
-## Ressources
+Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-- Théorie : [Support de cours](../README.md) ·
-  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/index.html)
-  ·
-  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/04-formulaires-html-et-validation/04-formulaires-html-et-validation-presentation.pdf)
-- Mini-projet : [Consignes](../01-mini-projet/README.md) ·
-  [Solution](../01-mini-projet/solution/README.md)
-- Exercices : [Énoncés et solutions](../02-exercices/README.md)
+> [!TIP]
+>
+> Toutes les informations relatives à ce contenu sont décrites dans le
+> [contenu principal](../README.md).
 
 ## Table des matières
 
-- [Ressources](#ressources)
 - [Table des matières](#table-des-matières)
-- [Exercice 1a](#exercice-1a)
-- [Exercice 1b](#exercice-1b)
-- [Exercice 1c](#exercice-1c)
-- [Exercice 1d](#exercice-1d)
-- [Exercice 1e](#exercice-1e)
+- [Utilisation avec Git/GitHub](#utilisation-avec-gitgithub)
+- [Exercices](#exercices)
+  - [Exercice 1a](#exercice-1a)
+  - [Exercice 1b](#exercice-1b)
+  - [Exercice 1c](#exercice-1c)
+  - [Exercice 1d](#exercice-1d)
+  - [Exercice 1e](#exercice-1e)
 
-## Exercice 1a
+## Utilisation avec Git/GitHub
+
+Il est recommandé d'utiliser Git et GitHub pour suivre votre progression dans
+les exercices.
+
+En utilisant le dépôt GitHub que vous avez mis en place depuis le début du
+cours, réalisez les exercices suivants.
+
+Utilisez le workflow Git présenté en cours pour commiter et pousser vos
+modifications sur votre dépôt GitHub.
+
+Nous ne recommandons pas de structures particulières pour organiser les
+exercices. Vous êtes libre de les organiser comme vous le souhaitez.
+
+Voici quelques suggestions d'organisation pour les exercices dans le dossier
+`exercices` de votre projet :
+
+- Vous pouvez créer un sous-dossier pour chaque séance du cours, par exemple
+  `exercices/seance-1`, `exercices/seance-2`, etc., et y stocker les exercices
+  correspondants à chaque séance.
+- Vous pouvez créer un fichier pour chaque exercice, par exemple
+  `exercices/exercice-1.php`, `exercices/exercice-2.php`, etc., et y stocker le
+  code de chaque exercice.
+- Vous pouvez également mettre à jour le fichier `exercices/index.php` avec des
+  liens vers les différents exercices, pour faciliter l'accès à chacun d'eux
+  depuis le navigateur web.
+
+## Exercices
+
+> [!NOTE]
+>
+> Bien que ces exercices puissent paraître simples et que leur solution est
+> disponible dans ce même document, il est fortement recommandé de les réaliser
+> sans consulter les solutions au préalable.
+>
+> Ils ont pour but de vous former et de pratiquer les concepts vus dans le
+> contenu de cours.
+>
+> Il est donc important de les faire par vous-même avant de vérifier vos
+> réponses avec les solutions fournies.
+
+### Exercice 1a
 
 Réalisez un formulaire de contact en HTML avec les champs suivants :
 
@@ -98,7 +136,7 @@ moment.
 
 </details>
 
-## Exercice 1b
+### Exercice 1b
 
 En utilisant le formulaire de contact réalisé dans
 l'[exercice 1a](#exercice-1a), récupérez les données saisies par l'utilisateur
@@ -176,7 +214,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </details>
 
-## Exercice 1c
+### Exercice 1c
 
 En utilisant le formulaire de contact réalisé dans
 l'[exercice 1b](#exercice-1b), conservez et réutilisez les données saisies par
@@ -252,7 +290,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </details>
 
-## Exercice 1d
+### Exercice 1d
 
 En utilisant le formulaire de contact réalisé dans
 l'[exercice 1c](#exercice-1c), validez les données saisies par l'utilisateur
@@ -385,7 +423,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </details>
 
-## Exercice 1e
+### Exercice 1e
 
 En utilisant le formulaire de contact réalisé dans
 l'[exercice 1c](#exercice-1d), validez les données saisies par l'utilisateur
@@ -503,3 +541,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ```
 
 </details>
+
+<!-- URLs -->
+
+[licence]:
+	https://github.com/heig-vd-devprodmed-course/heig-vd-devprodmed-course/blob/main/LICENSE.md

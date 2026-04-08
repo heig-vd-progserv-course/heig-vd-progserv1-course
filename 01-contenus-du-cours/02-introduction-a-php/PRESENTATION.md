@@ -32,7 +32,7 @@ adresse][contenu-complet-sur-github].
 
 <small>Ce travail est sous licence [CC BY-SA 4.0][license].</small>
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 ## Retrouvez le contenu complet de cette présentation sur GitHub
 
@@ -64,12 +64,38 @@ document._
 
 ![bg right:40%][illustration-objectifs]
 
+## Avant de commencer...
+
+<div class="two-thirds-one-third-columns">
+<div>
+
+Explorez le mini-projet en ligne :
+
+- Quelles fonctionnalités propose-t-il ?
+- Quels sont les éléments qui le composent ?
+- Comment fonctionne-t-il ?
+- Quelles sont les limitations ?
+
+Nous en discuterons dans quelques minutes !
+
+</div>
+<div class="center">
+
+![QR Code pour accéder au mini-projet en ligne](https://quickchart.io/qr?format=png&ecLevel=Q&size=300&margin=1&text=https://progserv1.heig-vd-progserv-course.ch)
+
+<https://progserv1.heig-vd-progserv-course.ch>
+
+</div>
+</div>
+
 ## Qu'est-ce que PHP (1)
 
 - Jusqu'ici, vous avez développé des applications Java qui s'exécutent sur une
   seule machine.
 - Avec PHP, plusieurs personnes vont pouvoir accéder à une application depuis
   leur navigateur web.
+- Le mini-projet que vous avez exploré est une application web (simple)
+  développée en PHP.
 
 ![bg right:40%][illustration-quest-ce-php]
 
@@ -90,17 +116,19 @@ document._
   1. Un client (navigateur web) envoie une requête à un serveur.
   2. Le serveur répond aux requêtes des différents clients.
   3. Le client affiche le résultat de la requête.
-- PHP repose sur cette même architecture.
+- PHP repose sur cette même architecture et est exécuté côté serveur pour
+  générer du contenu dynamique qui est ensuite envoyé au client.
 
 ## Comment fonctionne PHP
 
-- PHP fonctionne grâce aux outils suivants :
-  - Un serveur web.
-  - PHP installé sur le serveur web.
-  - Un navigateur web.
-  - Un éditeur de code (pour le développement).
+PHP fonctionne grâce aux outils suivants :
 
-![bg right:40% contain](./images/architecture-client-serveur-avec-php.png)
+- Un serveur web.
+- PHP installé sur le serveur web.
+- Un navigateur web.
+- Un éditeur de code (pour le développement).
+
+![bg right:40% contain](./images/architecture-client-serveur-avec-php.svg)
 
 ## Comment écrire du code PHP (1)
 
@@ -146,15 +174,36 @@ public class Main {
 </html>
 ```
 
-## Comment exécuter du code PHP
+## Comment exécuter du code PHP (1)
 
-- Il faut avoir un serveur web avec PHP installé sur votre machine
+- Il faut avoir un serveur web avec PHP installé sur votre machine.
 - Heureusement, il existe des solutions toutes faites pour cela :
-  - [WampServer](https://www.wampserver.com/).
-  - [MAMP](https://www.mamp.info/).
-  - [XAMPP](https://www.apachefriends.org/index.html).
+  - [WampServer](https://www.wampserver.com/), [MAMP](https://www.mamp.info/) ou
+    [XAMPP](https://www.apachefriends.org/index.html) (relativement old-school).
+  - [Docker](https://docs.docker.com/compose/) (moderne et recommandé).
 
 ![bg right:40%][illustration-comment-executer-du-code-php]
+
+## Comment exécuter du code PHP (2)
+
+- Avec Docker et Visual Studio Code, vous pouvez utiliser un conteneur de
+  développement préconfiguré.
+- Un conteneur de développement est un environnement de développement isolé qui
+  contient tous les outils nécessaires pour développer et exécuter du code PHP.
+- Les extensions nécessaires sont automatiquement installées et configurées dans
+  le conteneur de développement.
+- Ainsi, l'environnement est commun à toutes les personnes qui travaillent sur
+  le projet, limitant les soucis qui pourraient survenir.
+
+## Où trouver des ressources d'aide et de documentation sur PHP
+
+Si vous avez besoin d'aide ou de documentation sur PHP, voici quelques
+ressources utiles :
+
+- [Documentation officielle de PHP](https://www.php.net/docs.php).
+- [W3Schools PHP Tutorial](https://www.w3schools.com/php/).
+- [PHP: The Right Way](https://phptherightway.com/).
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/php).
 
 ## Syntaxe de base de PHP
 
@@ -407,7 +456,7 @@ public static void main(String[] args) {
 - Les tableaux sont déclarés entre des crochets (`[]`) ou avec la fonction
   `array()`.
 - Les valeurs d'un tableau sont indexées à partir de 0.
-- Nous étudierons les tableaux plus en détails dans un prochain cours.
+- Nous les étudierons plus en détails dans une prochaine séance.
 
 ![bg right:40%][illustration-les-tableaux]
 
@@ -766,39 +815,15 @@ PHP.
 
 Est-ce que vous avez des questions ?
 
-## Mini-projet
-
-<!-- _class: lead -->
-
-### Mini-projet
-
-- Application web en PHP pour gérer des animaux de compagnie.
-- Permet de mettre en pratique le contenu théorique du cours.
-- À réaliser tout au long de l'unité d'enseignement de façon guidée.
-- Je suis là pour vous aider si besoin.
-
-![bg right:40% brightness:1.3][illustration-mini-projet]
-
-## Exercices
-
-<!-- _class: lead -->
-
-### Exercices
-
-- Permet d'exercer les concepts vus en cours, autant théoriques que pratiques.
-
-![bg right:40%][illustration-exercices]
-
 ## À vous de jouer !
 
 - (Re)lire le [support de cours][contenu-complet-sur-github].
 - Réaliser le [mini-projet][mini-projet].
+- Explorer les [exemples de code][exemples-de-code].
 - Faire les [exercices][exercices].
 - Poser des questions si nécessaire.
 
-\
-**Pour le mini-projet ou les exercices, n'hésitez pas à vous entraidez si vous avez
-des difficultés !**
+**N'hésitez pas à vous entraidez si vous avez des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
@@ -849,15 +874,6 @@ des difficultés !**
 - [Illustration][illustration-les-structures-de-controle-conditionnelles] par
   [Arham Jain](https://unsplash.com/@arham_jain48) sur
   [Unsplash](https://unsplash.com/photos/a-painting-of-blue-flowers-on-a-white-background-OkiDTYxLo34)
-- [Illustration][illustration-mini-projet] par
-  [Alec Favale](https://unsplash.com/@alecfavale) sur
-  [Unsplash](https://unsplash.com/photos/short-coated-white-and-brown-puppy-Ivzo69e18nk)
-- [Illustration][illustration-exercices] par
-  [Samuel Girven](https://unsplash.com/@samuelgirven) sur
-  [Unsplash](https://unsplash.com/photos/dumbbells-on-floor-VJ2s0c20qCo)
-
-## Sources (3)
-
 - [Illustration][illustration-a-vous-de-jouer] par
   [Nikita Kachanovsky](https://unsplash.com/@nkachanovskyyy) sur
   [Unsplash](https://unsplash.com/photos/white-sony-ps4-dualshock-controller-over-persons-palm-FJFPuE1MAOM)
@@ -870,8 +886,10 @@ des difficultés !**
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/02-introduction-a-php/README.md
 [mini-projet]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-mini-projet/README.md
+[exemples-de-code]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/02-exemples-de-code/README.md
 [exercices]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/02-exercices/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/03-exercices/README.md
 
 <!-- Illustrations -->
 
@@ -903,13 +921,5 @@ des difficultés !**
 	https://images.unsplash.com/photo-1587145820266-a5951ee6f620?fit=crop&h=720
 [illustration-les-structures-de-controle-conditionnelles]:
 	https://images.unsplash.com/photo-1590593162201-f67611a18b87?fit=crop&h=720
-[illustration-mini-projet]:
-	https://images.unsplash.com/photo-1563460716037-460a3ad24ba9?fit=crop&h=720
-[illustration-exercices]:
-	https://images.unsplash.com/photo-1576678927484-cc907957088c?fit=crop&h=720
 [illustration-a-vous-de-jouer]:
 	https://images.unsplash.com/photo-1509198397868-475647b2a1e5?fit=crop&h=720
-
-```
-
-```

@@ -1,0 +1,21 @@
+@startuml architecture-client-serveur-avec-php
+skinparam boxPadding 100
+skinparam maxMessageSize 150
+skinparam noteTextAlignment left
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+autonumber
+
+title "Architecture client-serveur avec PHP"
+
+actor "Client\n(navigateur web)" as browser
+participant "Serveur web\n(Apache/nginx)" as webserver
+participant "Interpréteur PHP\n(PHP 8.5)" as php
+
+browser -> webserver: "J'aimerais la page 'index.php'."
+webserver -> php: "Un client demande la page 'index.php'."
+php -> php: "Génération de la page 'index.php' en cours..."
+php -> webserver: "Voici la page 'index.php' générée."
+webserver -> browser: "Voici la page que tu as demandé."
+browser -> browser: "Affichage de la page."
+@enduml
