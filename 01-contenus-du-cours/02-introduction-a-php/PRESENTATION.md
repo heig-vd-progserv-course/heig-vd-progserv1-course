@@ -195,6 +195,16 @@ public class Main {
 - Ainsi, l'environnement est commun à toutes les personnes qui travaillent sur
   le projet, limitant les soucis qui pourraient survenir.
 
+## Où trouver des ressources d'aide et de documentation sur PHP
+
+Si vous avez besoin d'aide ou de documentation sur PHP, voici quelques
+ressources utiles :
+
+- [Documentation officielle de PHP](https://www.php.net/docs.php).
+- [W3Schools PHP Tutorial](https://www.w3schools.com/php/).
+- [PHP: The Right Way](https://phptherightway.com/).
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/php).
+
 ## Syntaxe de base de PHP
 
 - Similaire à Java et d'autres languages de programmation.

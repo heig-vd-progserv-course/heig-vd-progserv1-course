@@ -519,9 +519,9 @@ ordinateur :
 1. Ouvrez l'emplacement choisi dans un terminal.
    - Pour Windows : clique-droit dans le dossier → _"Open in Windows Terminal"_.
    - Pour macOS : Suivez la section
-     [_"Open new Terminal windows or tabs from the Finder"_](https://support.apple.com/guide/terminal/open-new-terminal-windows-and-tabs-trmlb20c7888/mac)
-     issu du site de support Apple ou ouvrez le terminal et utilisez la commande
-     `cd` pour naviguer jusqu'à l'emplacement choisi.
+     _"[Open new Terminal windows or tabs from the Finder](https://support.apple.com/guide/terminal/open-new-terminal-windows-and-tabs-trmlb20c7888/mac)"_
+     issue du site de support Apple ou ouvrez le terminal et utilisez la
+     commande `cd` pour naviguer jusqu'à l'emplacement choisi.
    - Pour Linux : clique-droit dans le dossier → _"Open in Terminal"_. ou ouvrez
      le terminal et utilisez la commande `cd` pour naviguer jusqu'à
      l'emplacement choisi.

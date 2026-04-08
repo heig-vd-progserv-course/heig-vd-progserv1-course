@@ -53,6 +53,22 @@ cours, réalisez les exercices suivants.
 Utilisez le workflow Git présenté en cours pour commiter et pousser vos
 modifications sur votre dépôt GitHub.
 
+Nous ne recommandons pas de structures particulières pour organiser les
+exercices. Vous êtes libre de les organiser comme vous le souhaitez.
+
+Voici quelques suggestions d'organisation pour les exercices dans le dossier
+`exercices` de votre projet :
+
+- Vous pouvez créer un sous-dossier pour chaque séance du cours, par exemple
+  `exercices/seance-1`, `exercices/seance-2`, etc., et y stocker les exercices
+  correspondants à chaque séance.
+- Vous pouvez créer un fichier pour chaque exercice, par exemple
+  `exercices/exercice-1.php`, `exercices/exercice-2.php`, etc., et y stocker le
+  code de chaque exercice.
+- Vous pouvez également mettre à jour le fichier `exercices/index.php` avec des
+  liens vers les différents exercices, pour faciliter l'accès à chacun d'eux
+  depuis le navigateur web.
+
 ## Exercices
 
 > [!NOTE]

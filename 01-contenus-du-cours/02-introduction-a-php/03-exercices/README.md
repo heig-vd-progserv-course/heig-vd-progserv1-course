@@ -64,10 +64,6 @@ Voici quelques suggestions d'organisation pour les exercices dans le dossier
   liens vers les différents exercices, pour faciliter l'accès à chacun d'eux
   depuis le navigateur web.
 
-A chaque exercice, n'oubliez pas de faire un commit avec Git pour enregistrer
-votre progrès, et de pousser vos changements sur GitHub pour les sauvegarder en
-ligne.
-
 ## Exercices
 
 > [!NOTE]
@@ -84,7 +80,26 @@ ligne.
 
 ### Exercice 1
 
-Soit la structure de fichiers fictive suivante dans votre projet PHP avec le
+Que signifie une architecture client-serveur dans le contexte du développement
+web, et comment le serveur de développement PHP s'inscrit-il dans cette
+architecture ?
+
+<details>
+<summary>Afficher la réponse</summary>
+
+Une architecture client-serveur est un modèle de communication dans lequel les
+clients (généralement des navigateurs web) envoient des requêtes à un serveur,
+qui traite ces requêtes et renvoie des réponses.
+
+Le serveur de développement PHP s'inscrit dans cette architecture en agissant
+comme un serveur web local qui reçoit les requêtes du navigateur, exécute le
+code PHP correspondant et renvoie le résultat au navigateur pour affichage.
+
+</details>
+
+### Exercice 2
+
+Soit la structure de fichiers fictive suivante dans un projet PHP avec le
 serveur de développement PHP en cours d'exécution à la racine du projet :
 
 ```text
@@ -152,7 +167,7 @@ serveur de développement PHP en cours d'exécution à la racine du projet :
 
 </details>
 
-### Exercice 2
+### Exercice 3
 
 Qu'affiche le code suivant ?
 
@@ -170,7 +185,7 @@ Hello, World!
 
 </details>
 
-### Exercice 3
+### Exercice 4
 
 Déclarez une variable `name` contenant votre prénom et affichez-la avec le
 message _"Hello, [votre prénom] !"_.
@@ -191,7 +206,7 @@ Bonjour, Votre prénom !
 
 </details>
 
-### Exercice 4
+### Exercice 5
 
 Utilisez une structure de contrôle conditionnelle pour vérifier si une variable
 `age` est supérieure ou égale à 18. Si c'est le cas, affichez _"You are over
@@ -217,7 +232,7 @@ You are over 18.
 
 </details>
 
-### Exercice 5
+### Exercice 6
 
 Déclarez une constante `PI` avec la valeur `3.14` et affichez-la.
 
@@ -237,7 +252,7 @@ echo PI;
 
 </details>
 
-### Exercice 6
+### Exercice 7
 
 Déclarez une variable `number` avec la valeur `10`. Calculez son double et
 stockez-le dans une autre variable `double`. Affichez le résultat.
@@ -260,7 +275,7 @@ echo $double;
 
 </details>
 
-### Exercice 7
+### Exercice 8
 
 Expliquez la différence entre les guillemets simples (`'`) et les guillemets
 doubles (`"`) en PHP. Donnez un exemple pour illustrer la différence.
@@ -287,7 +302,7 @@ echo "$greetings, $name!";
 
 </details>
 
-### Exercice 8
+### Exercice 9
 
 Déclarez une variable `text` avec la valeur `"PHP"` et affichez le message
 _"J'apprends PHP dans ce nouveau cours ProgServ1."_ en utilisant la
@@ -309,7 +324,7 @@ J'apprends PHP dans ce nouveau cours ProgServ1.
 
 </details>
 
-### Exercice 9
+### Exercice 10
 
 Déclarez une variable `hasABachelorDegree` avec la valeur `true` et une variable
 `hasFinishedHeigVd` avec la valeur `true`. Utilisez une structure de contrôle
@@ -341,7 +356,7 @@ You have finished the HEIG-VD, congratulations!
 
 </details>
 
-### Exercice 10
+### Exercice 11
 
 Comment est-ce que le serveur web et l'interpréteur PHP interagissent pour
 afficher une page web ?
@@ -357,7 +372,7 @@ page web dans son navigateur.
 
 </details>
 
-### Exercice 11
+### Exercice 12
 
 Déclarez une variable `day` avec la valeur `"Monday"` et utilisez une structure
 de contrôle `switch` pour afficher un message _"Weekday"_ pour les jours de la
@@ -397,7 +412,7 @@ Week-day
 
 </details>
 
-### Exercice 12
+### Exercice 13
 
 Déclarez une variable `temperature` avec la valeur `30` et utilisez une
 structure de contrôle conditionnelle pour afficher _"It's hot"_ si la
@@ -426,7 +441,7 @@ It's hot
 
 </details>
 
-### Exercice 13
+### Exercice 14
 
 Déclarez une variable `grade` avec la valeur `5` et utilisez une structure de
 contrôle `switch` pour afficher un message différent pour chaque note (`1`, `2`,
@@ -469,7 +484,7 @@ Good
 
 </details>
 
-### Exercice 14
+### Exercice 15
 
 Expliquez ce qu'est une structure de contrôle conditionnelle et donnez un
 exemple en PHP.
@@ -497,7 +512,7 @@ if ($a < $b) {
 
 </details>
 
-### Exercice 15
+### Exercice 16
 
 Déclarez une constante `USERNAME` avec la valeur `"admin"` et une constante
 `PASSWORD` avec la valeur `"1234"`. Utilisez une structure de contrôle
@@ -528,7 +543,7 @@ You are logged in
 
 </details>
 
-### Exercice 16
+### Exercice 17
 
 Déclarez une variable `number` avec la valeur `9` et utilisez une structure de
 contrôle conditionnelle pour vérifier si le nombre est un multiple de `3`.
@@ -556,7 +571,7 @@ Multiple of 3
 
 </details>
 
-### Exercice 17
+### Exercice 18
 
 Déclarez une variable `number` avec la valeur `15` et utilisez une structure de
 contrôle conditionnelle pour vérifier si le nombre est divisible par `3` et `5`.
@@ -590,7 +605,7 @@ Divisible by 3 and 5
 
 </details>
 
-### Exercice 18
+### Exercice 19
 
 Déclarez une variable `stRochStudent` avec la valeur `true`, une variable
 `comemStudent` avec la valeur `true` et une variable `cheseauxStudent` avec la
@@ -613,37 +628,6 @@ if ($stRochStudent && $comemStudent || $cheseauxStudent) {
 } else {
     echo "You are not an engineering student";
 }
-```
-
-</details>
-
-### Exercice 19
-
-Déclarez une constante `USERNAME` avec la valeur `"admin"` et une constante
-`PASSWORD` avec la valeur `"1234"`. Utilisez une structure de contrôle
-conditionnelle pour vérifier si les identifiants sont corrects. Affichez _"You
-are logged in"_ si les identifiants sont corrects, et _"Login failed"_ sinon.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```php
-<?php
-const USERNAME = "admin";
-const PASSWORD = "1234";
-
-$username = "admin";
-$password = "1234";
-
-if ($username == USERNAME && $password == PASSWORD) {
-    echo "You are logged in";
-} else {
-    echo "Login failed";
-}
-```
-
-```text
-You are logged in
 ```
 
 </details>

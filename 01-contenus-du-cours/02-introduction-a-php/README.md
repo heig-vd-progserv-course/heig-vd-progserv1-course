@@ -281,6 +281,24 @@ nécessaires au développement d'applications PHP sont automatiquement installé
 dans le conteneur de développement, ce qui facilite grandement la configuration
 de l'environnement de développement.
 
+## Où trouver des ressources d'aide et de documentation sur PHP
+
+Si vous avez besoin d'aide ou de documentation sur PHP, voici quelques
+ressources utiles :
+
+- [Documentation officielle de PHP](https://www.php.net/docs.php) : la
+  documentation officielle de PHP est une ressource complète et détaillée pour
+  apprendre et comprendre le langage PHP.
+- [W3Schools PHP Tutorial](https://www.w3schools.com/php/) : un tutoriel
+  interactif pour apprendre les bases de PHP avec des exemples de code et des
+  exercices pratiques.
+- [PHP: The Right Way](https://phptherightway.com/) : un guide de bonnes
+  pratiques pour le développement en PHP, couvrant des sujets tels que la
+  sécurité, les performances et les outils de développement.
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/php) : une
+  communauté de développeurs où vous pouvez poser des questions et trouver des
+  réponses sur PHP.
+
 ## Syntaxe de base de PHP
 
 PHP a une syntaxe similaire à celle de Java, JavaScript et d'autres langages de
