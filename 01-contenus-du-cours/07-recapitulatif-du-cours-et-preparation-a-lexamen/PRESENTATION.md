@@ -290,7 +290,7 @@ de l'examen :
 
 $$\text{Note finale} = \text{Note pour la partie théorique} * 0.4 + \text{Note pour la partie pratique} * 0.6$$
 
-### Sanctions possibles en cas de tricherie (1/3)
+### Sanctions possibles en cas de tricherie (1)
 
 Source :
 [Règlement d'études Bachelor de la HEIG-VD](https://intra.heig-vd.ch/academique/cadre-de-reference/Documents/Rglt-Etudes-HEIG-VD.pdf).
@@ -303,7 +303,7 @@ Source :
 > correspondants, voire l'invalidation du titre, et peut faire l'objet d'une des
 > sanctions prévues à l'article 14.
 
-### Sanctions possibles en cas de tricherie (2/3)
+### Sanctions possibles en cas de tricherie (2)
 
 > **Art. 14. - Sanctions**
 >
@@ -316,7 +316,7 @@ Source :
 > 3. **l'exclusion de la filière, voire du domaine** si les règlements du
 >    domaine le prévoient.
 
-### Sanctions possibles en cas de tricherie (3/3)
+### Sanctions possibles en cas de tricherie (3)
 
 **Les personnes qui surveilleront l'examen sont informées des règles
 d'évaluation et des sanctions possibles en cas de triche.**
@@ -445,7 +445,7 @@ Apéro time! 🎉
 </div>
 </div>
 
-### Sanctions possibles en cas de tricherie (1/3)
+### Sanctions possibles en cas de tricherie (1)
 
 Source :
 [Règlement d'études Bachelor de la HEIG-VD](https://intra.heig-vd.ch/academique/cadre-de-reference/Documents/Rglt-Etudes-HEIG-VD.pdf).
@@ -458,7 +458,7 @@ Source :
 > correspondants, voire l'invalidation du titre, et peut faire l'objet d'une des
 > sanctions prévues à l'article 14.
 
-### Sanctions possibles en cas de tricherie (2/3)
+### Sanctions possibles en cas de tricherie (2)
 
 > **Art. 14. - Sanctions**
 >
@@ -471,7 +471,7 @@ Source :
 > 3. **l'exclusion de la filière, voire du domaine** si les règlements du
 >    domaine le prévoient.
 
-### Sanctions possibles en cas de tricherie (3/3)
+### Sanctions possibles en cas de tricherie (3)
 
 **Les personnes qui surveilleront l'examen sont informées des règles
 d'évaluation et des sanctions possibles en cas de triche.**

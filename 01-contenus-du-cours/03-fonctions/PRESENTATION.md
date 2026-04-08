@@ -44,7 +44,7 @@ _Pour plus de détails, retrouvez le [contenu complet sur
 GitHub][contenu-complet-sur-github] ou en cliquant sur l'en-tête de ce
 document._
 
-## Objectifs (1/2)
+## Objectifs (1)
 
 - Décrire ce qu'est une fonction en programmation
 - Déclarer une fonction en PHP
@@ -55,7 +55,7 @@ document._
 
 ![bg right:40%][illustration-objectifs]
 
-## Objectifs (2/2)
+## Objectifs (2)
 
 - Utiliser des variables globales
 - Savoir où trouver la documentation sur les fonctions prédéfinies en PHP
@@ -64,7 +64,7 @@ document._
 
 ![bg right:40%][illustration-objectifs]
 
-## Qu'est-ce qu'une fonction ? (1/2)
+## Qu'est-ce qu'une fonction ? (1)
 
 - Ensemble d'instructions pour effectuer une tâche spécifique
 - Inspirée des fonctions mathématiques :
@@ -74,7 +74,7 @@ document._
 
 ![bg right:40%][illustration-quest-ce-quune-fonction]
 
-## Qu'est-ce qu'une fonction ? (2/2)
+## Qu'est-ce qu'une fonction ? (2)
 
 - En programmation :
   - Définie par un nom
@@ -85,7 +85,7 @@ document._
 
 ![bg right:40%][illustration-quest-ce-quune-fonction]
 
-## Déclarer une fonction en PHP (1/2)
+## Déclarer une fonction en PHP (1)
 
 - En PHP, une fonction est déclarée avec le mot-clé `function`
 - Suivi du nom de la fonction
@@ -94,7 +94,7 @@ document._
 
 ![bg right:40%][illustration-declarer-une-fonction-en-php]
 
-## Déclarer une fonction en PHP (2/2)
+## Déclarer une fonction en PHP (2)
 
 ```php
 <?php
@@ -112,7 +112,7 @@ public class Main {
 }
 ```
 
-## Appeler une fonction en PHP (1/3)
+## Appeler une fonction en PHP (1)
 
 - Pour appeler une fonction, il suffit d'écrire son nom suivi de parenthèses
   (`()`)
@@ -121,7 +121,7 @@ public class Main {
 
 ![bg right:40%][illustration-appeler-une-fonction-en-php]
 
-## Appeler une fonction en PHP (2/3)
+## Appeler une fonction en PHP (2)
 
 ```php
 <?php
@@ -134,7 +134,7 @@ hello(); // Affiche "Hello, world!"
 hello(); // Affiche "Hello, world!"
 ```
 
-## Appeler une fonction en PHP (3/3)
+## Appeler une fonction en PHP (3)
 
 ```java
 // Équivalent en Java
@@ -151,7 +151,7 @@ public class Main {
 }
 ```
 
-## Passer des paramètres à une fonction (1/3)
+## Passer des paramètres à une fonction (1)
 
 - Une fonction peut accepter des paramètres
 - Les paramètres sont des valeurs que la fonction peut utiliser pour effectuer
@@ -161,7 +161,7 @@ public class Main {
 
 ![bg right:40%][illustration-passer-des-parametres-a-une-fonction]
 
-## Passer des paramètres à une fonction (2/3)
+## Passer des paramètres à une fonction (2)
 
 ```php
 <?php
@@ -173,7 +173,7 @@ hello("Alice"); // Affiche "Hello, Alice!"
 hello("Bob"); // Affiche "Hello, Bob!"
 ```
 
-## Passer des paramètres à une fonction (3/3)
+## Passer des paramètres à une fonction (3)
 
 ```java
 public class Main {
@@ -188,7 +188,7 @@ public class Main {
 }
 ```
 
-## Retourner une valeur depuis une fonction (1/3)
+## Retourner une valeur depuis une fonction (1)
 
 - Une fonction peut retourner une valeur
 - La valeur retournée peut être utilisée dans le code appelant (= le code qui
@@ -197,7 +197,7 @@ public class Main {
 
 ![bg right:40%][illustration-retourner-une-valeur-depuis-une-fonction]
 
-## Retourner une valeur depuis une fonction (2/3)
+## Retourner une valeur depuis une fonction (2)
 
 ```php
 <?php
@@ -210,7 +210,7 @@ $result = square(3);
 echo $result; // Affiche 9
 ```
 
-## Retourner une valeur depuis une fonction (3/3)
+## Retourner une valeur depuis une fonction (3)
 
 ```java
 // Équivalent en Java
@@ -227,7 +227,7 @@ public class Main {
 }
 ```
 
-## Paramètres optionnels (1/2)
+## Paramètres optionnels (1)
 
 - En PHP, il est possible de définir des paramètres optionnels
 - Les paramètres optionnels ont une valeur par défaut
@@ -236,7 +236,7 @@ public class Main {
 
 ![bg right:40%][illustration-parametres-optionnels]
 
-## Paramètres optionnels (2/2)
+## Paramètres optionnels (2)
 
 ```php
 <?php
@@ -255,7 +255,7 @@ hello("Alice"); // Affiche "Hello, Alice!"
 // Ceci est spécifique à PHP.
 ```
 
-## Passer plusieurs paramètres à une fonction (1/3)
+## Passer plusieurs paramètres à une fonction (1)
 
 - Une fonction peut accepter plusieurs paramètres
 - Les paramètres sont séparés par des virgules (`,`)
@@ -263,7 +263,7 @@ hello("Alice"); // Affiche "Hello, Alice!"
 
 ![bg right:40%][illustration-passer-plusieurs-parametres-a-une-fonction]
 
-## Passer plusieurs paramètres à une fonction (2/3)
+## Passer plusieurs paramètres à une fonction (2)
 
 ```php
 <?php
@@ -276,7 +276,7 @@ $result = add(3, 5);
 echo $result; // Affiche 8
 ```
 
-## Passer plusieurs paramètres à une fonction (3/3)
+## Passer plusieurs paramètres à une fonction (3)
 
 ```java
 // Équivalent en Java
@@ -293,7 +293,7 @@ public class Main {
 }
 ```
 
-## Portée des variables (1/3)
+## Portée des variables (1)
 
 - La portée d'une variable est l'endroit où elle peut être utilisée
 - Une variable déclarée à l'intérieur d'une fonction ne peut être utilisée qu'à
@@ -302,7 +302,7 @@ public class Main {
 
 ![bg right:40%][illustration-portee-des-variables]
 
-## Portée des variables (2/3)
+## Portée des variables (2)
 
 ```php
 <?php
@@ -313,7 +313,7 @@ function square($x) {
 echo $x; // Erreur : variable $x non définie
 ```
 
-## Portée des variables (3/3)
+## Portée des variables (3)
 
 ```java
 // Équivalent en Java
@@ -328,7 +328,7 @@ public class Main {
 }
 ```
 
-## Variables globales (1/3)
+## Variables globales (1)
 
 - Une variable globale est une variable déclarée en dehors de toute fonction
 - Une variable globale peut être utilisée à l'intérieur d'une fonction à l'aide
@@ -338,7 +338,7 @@ public class Main {
 
 ![bg right:40%][illustration-variables-globales]
 
-## Variables globales (2/3)
+## Variables globales (2)
 
 ```php
 <?php
@@ -355,7 +355,7 @@ square();
 echo $x; // Affiche 1764
 ```
 
-## Variables globales (3/3)
+## Variables globales (3)
 
 ```java
 // Équivalent en Java
@@ -374,7 +374,7 @@ public class Main {
 }
 ```
 
-## Fonctions prédéfinies en PHP (1/3)
+## Fonctions prédéfinies en PHP (1)
 
 - PHP fournit de nombreuses fonctions prédéfinies
 - Ces fonctions permettent de réaliser des tâches courantes
@@ -384,7 +384,7 @@ public class Main {
 
 ![bg right:40%][illustration-fonctions-predefinies-en-php]
 
-## Fonctions prédéfinies en PHP (2/3)
+## Fonctions prédéfinies en PHP (2)
 
 ```php
 <?php
@@ -393,7 +393,7 @@ $length = strlen("Hello, world!");
 echo $length; // Affiche 13
 ```
 
-## Fonctions prédéfinies en PHP (3/3)
+## Fonctions prédéfinies en PHP (3)
 
 ```java
 // Équivalent en Java
@@ -407,7 +407,7 @@ public class Main {
 }
 ```
 
-### Fonctions mathématiques (1/2)
+### Fonctions mathématiques (1)
 
 - PHP propose de nombreuses fonctions mathématiques
 - Par exemple, `abs`, `sqrt`, `pow`, `min`, `max`, etc.
@@ -416,7 +416,7 @@ public class Main {
 
 ![bg right:40%][illustration-fonctions-mathematiques]
 
-### Fonctions mathématiques (2/2)
+### Fonctions mathématiques (2)
 
 ```php
 <?php
@@ -435,7 +435,7 @@ public class Main {
 }
 ```
 
-### Fonctions sur les chaînes de caractères (1/2)
+### Fonctions sur les chaînes de caractères (1)
 
 - PHP propose de nombreuses fonctions pour manipuler des chaînes de caractères
 - Par exemple, `strlen`, `substr`, `str_replace`, `strtolower`, `strtoupper`,
@@ -445,7 +445,7 @@ public class Main {
 
 ![bg right:40%][illustration-fonctions-sur-les-chaines-de-caracteres]
 
-### Fonctions sur les chaînes de caractères (2/2)
+### Fonctions sur les chaînes de caractères (2)
 
 ```php
 $result = strtoupper("hello, world!");
@@ -464,7 +464,7 @@ public class Main {
 }
 ```
 
-### Fonctions sur les variables (1/3)
+### Fonctions sur les variables (1)
 
 - PHP propose de nombreuses fonctions pour manipuler des variables
 - Par exemple, `isset`, `empty`, `unset`, `is_array`, `is_string`, etc.
@@ -473,7 +473,7 @@ public class Main {
 
 ![bg right:40%][illustration-fonctions-sur-les-variables]
 
-### Fonctions sur les variables (2/3)
+### Fonctions sur les variables (2)
 
 ```php
 <?php
@@ -498,7 +498,7 @@ if (isset($undefined)) {
 }
 ```
 
-### Fonctions sur les variables (3/3)
+### Fonctions sur les variables (3)
 
 ```java
 // Équivalent en Java
@@ -529,7 +529,7 @@ public class Main {
 }
 ```
 
-## Réutiliser du code avec des fonctions (1/2)
+## Réutiliser du code avec des fonctions (1)
 
 - Les fonctions permettent de réutiliser du code
 - Le code est plus facile à lire et à maintenir
@@ -538,7 +538,7 @@ public class Main {
 
 ![bg right:40%][illustration-reutiliser-du-code-avec-des-fonctions]
 
-## Réutiliser du code avec des fonctions (2/2)
+## Réutiliser du code avec des fonctions (2)
 
 ```php
 <?php
@@ -585,16 +585,16 @@ Est-ce que vous avez des questions ?
 ## À vous de jouer !
 
 - (Re)lire le [support de cours][contenu-complet-sur-github].
-- Réaliser le [mini-projet][mini-projet].
 - Explorer les [exemples de code][exemples-de-code].
 - Faire les [exercices][exercices].
+- Réaliser le [mini-projet][mini-projet].
 - Poser des questions si nécessaire.
 
 **N'hésitez pas à vous entraidez si vous avez des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
-## Sources (1/3)
+## Sources (1)
 
 - [Illustration principale][illustration-principale] par
   [Richard Jacobs](https://unsplash.com/@rj2747) sur
@@ -621,7 +621,7 @@ Est-ce que vous avez des questions ?
   [Florian Schmetz](https://unsplash.com/@floschmaezz) sur
   [Unsplash](https://unsplash.com/photos/white-and-black-i-love-you-print-on-brick-wall-LPckxbrqE5w)
 
-## Sources (2/3)
+## Sources (2)
 
 - [Illustration][illustration-passer-plusieurs-parametres-a-une-fonction] par
   [Eric Prouzet](https://unsplash.com/@eprouzet) sur
@@ -648,7 +648,7 @@ Est-ce que vous avez des questions ?
   [Jack Church](https://unsplash.com/@jackchurch) sur
   [Unsplash](https://unsplash.com/photos/a-sign-on-the-side-of-a-building-advertising-giving-back-LZ8NzZrByts)
 
-## Sources (3/3)
+## Sources (3)
 
 - [Illustration][illustration-difference-entre-include-et-require] par
   [Clay Banks](https://unsplash.com/@claybanks) sur

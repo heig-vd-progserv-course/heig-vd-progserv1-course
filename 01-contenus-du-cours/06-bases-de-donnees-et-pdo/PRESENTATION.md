@@ -45,7 +45,7 @@ _Pour plus de détails, retrouvez le [contenu complet sur
 GitHub][contenu-complet-sur-github] ou en cliquant sur l'en-tête de ce
 document._
 
-## Objectifs (1/2)
+## Objectifs (1)
 
 - Expliquer les concepts de base des bases de données et des systèmes de gestion
   de base de données (SGBD)
@@ -54,7 +54,7 @@ document._
 
 ![bg right:40%][illustration-objectifs]
 
-## Objectifs (2/2)
+## Objectifs (2)
 
 - Insérer, mettre à jour, récupérer et supprimer des données dans une base de
   données SQLite avec PDO
@@ -263,9 +263,9 @@ Est-ce que vous avez des questions ?
 ## À vous de jouer !
 
 - (Re)lire le [support de cours][contenu-complet-sur-github].
-- Réaliser le [mini-projet][mini-projet].
 - Explorer les [exemples de code][exemples-de-code].
 - Faire les [exercices][exercices].
+- Réaliser le [mini-projet][mini-projet].
 - Poser des questions si nécessaire.
 
 **N'hésitez pas à vous entraidez si vous avez des difficultés !**
