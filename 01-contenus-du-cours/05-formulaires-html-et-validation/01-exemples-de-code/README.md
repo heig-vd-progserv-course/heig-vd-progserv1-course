@@ -13,7 +13,18 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Table des matières
 
 - [Table des matières](#table-des-matières)
+- [Utilisation avec Git/GitHub](#utilisation-avec-gitgithub)
 - [Exemples de code](#exemples-de-code)
+
+## Utilisation avec Git/GitHub
+
+Assurez-vous d'avoir la dernière version de ce contenu en utilisant Git pour
+cloner le dépôt GitHub associé à ce cours, ou en le mettant à jour si vous
+l'avez déjà cloné à l'aide de la commande `git pull`.
+
+Cela vous permettra d'accéder à tous les exemples de code, exercices et autres
+ressources liés à ce cours, et de suivre votre progression au fur et à mesure
+que vous avancez dans le contenu.
 
 ## Exemples de code
 

@@ -35,7 +35,7 @@ adresse][contenu-complet-sur-github].
 
 <small>Ce travail est sous licence [CC BY-SA 4.0][license].</small>
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 ## Bienvenue au cours Programmation serveur 1 (ProgServ1) !
 
@@ -146,6 +146,29 @@ questions relatives au cours :
 - Espace de discussion pour poser des questions et obtenir de l'aide (**il n'y a
   pas de questions bêtes !**, je suis payé pour ça).
 
+### Exemples de code
+
+- Permet de voir prendre en main et comprendre les exemples de code PHP
+  présentés en cours.
+
+![bg right:40%][illustration-exemples-de-code]
+
+### Exercices
+
+- Permet d'exercer les concepts vus en cours, autant théoriques que pratiques.
+
+![bg right:40%][illustration-exercices]
+
+### Mini-projet
+
+- Application web en PHP pour gérer des animaux de compagnie.
+- Permet de mettre en pratique le contenu théorique du cours.
+- À réaliser tout au long du cours de façon guidée.
+- A déployer en ligne pour être utilisée depuis n'importe où.
+- Je suis là pour vous aider.
+
+![bg right:40% brightness:1.3][illustration-mini-projet]
+
 ## Modalités d'évaluation
 
 Un seul examen final composé de deux parties :
@@ -194,7 +217,8 @@ réaliser, etc.).**
 
 But : tester tout ce que vous avez appris sur tous les aspects.
 
-Tout est décrit dans le document [Évaluation finale](TODO).
+Tout est décrit dans le document
+[Évaluation finale](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/02-evaluation-finale/README.md).
 
 ## Comment se préparer ?
 
@@ -329,6 +353,15 @@ Est-ce que vous avez des questions ?
 - [Illustration][illustration-objectifs] par
   [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- [Illustration][illustration-exemples-de-code] par
+  [American Jael](https://unsplash.com/@americanjael) sur
+  [Unsplash](https://unsplash.com/photos/a-person-writing-on-a-notebook-with-colored-pens-OEvLi8LM7cc)
+- [Illustration][illustration-exercices] par
+  [Samuel Girven](https://unsplash.com/@samuelgirven) sur
+  [Unsplash](https://unsplash.com/photos/dumbbells-on-floor-VJ2s0c20qCo)
+- [Illustration][illustration-mini-projet] par
+  [Alec Favale](https://unsplash.com/@alecfavale) sur
+  [Unsplash](https://unsplash.com/photos/short-coated-white-and-brown-puppy-Ivzo69e18nk)
 - [Illustration][illustration-modalites-devaluation] par
   [Nguyen Dang Hoang Nhu](https://unsplash.com/@nguyendhn) sur
   [Unsplash](https://unsplash.com/photos/person-writing-on-white-paper-qDgTQOYk6B8)
@@ -349,6 +382,12 @@ Est-ce que vous avez des questions ?
 	https://images.unsplash.com/photo-1517486430290-35657bdcef51?fit=crop&h=720
 [illustration-objectifs]:
 	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
+[illustration-exemples-de-code]:
+	https://images.unsplash.com/photo-1712762056200-50d8f803ba10?fit=crop&h=720
+[illustration-exercices]:
+	https://images.unsplash.com/photo-1576678927484-cc907957088c?fit=crop&h=720
+[illustration-mini-projet]:
+	https://images.unsplash.com/photo-1563460716037-460a3ad24ba9?fit=crop&h=720
 [illustration-modalites-devaluation]:
 	https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?fit=crop&h=720
 [illustration-bibliographie-et-ressources]:

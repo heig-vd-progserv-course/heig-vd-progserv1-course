@@ -36,7 +36,7 @@ adresse][contenu-complet-sur-github].
 
 <small>Ce travail est sous licence [CC BY-SA 4.0][license].</small>
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 ## Retrouvez le contenu complet de cette présentation sur GitHub
 
@@ -78,7 +78,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -95,7 +95,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/02-fonctions).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -112,7 +112,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/03-tableaux-et-boucles).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -130,7 +130,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/04-formulaires-html-et-validation).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -149,7 +149,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/05-base-de-donnees-et-pdo).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -166,7 +166,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/06-securite-et-nettoyage-des-saisies-utilisateurs).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -185,7 +185,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/07-programmation-orientee-objet).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 #### Éléments clés à retenir
 

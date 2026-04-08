@@ -45,6 +45,9 @@ les exercices.
 En utilisant le dépôt GitHub que vous avez mis en place depuis le début du
 cours, réalisez les exercices suivants.
 
+Utilisez le workflow Git présenté en cours pour commiter et pousser vos
+modifications sur votre dépôt GitHub.
+
 Nous ne recommandons pas de structures particulières pour organiser les
 exercices. Vous êtes libre de les organiser comme vous le souhaitez.
 

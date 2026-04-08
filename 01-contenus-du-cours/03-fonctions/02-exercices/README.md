@@ -13,6 +13,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Table des matières
 
 - [Table des matières](#table-des-matières)
+- [Utilisation avec Git/GitHub](#utilisation-avec-gitgithub)
 - [Exercices](#exercices)
   - [Exercice 1](#exercice-1)
   - [Exercice 2](#exercice-2)
@@ -40,6 +41,17 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Exercice 24](#exercice-24)
   - [Exercice 25](#exercice-25)
   - [Exercice 26 - Exercice bonus](#exercice-26---exercice-bonus)
+
+## Utilisation avec Git/GitHub
+
+Il est recommandé d'utiliser Git et GitHub pour suivre votre progression dans
+les exercices.
+
+En utilisant le dépôt GitHub que vous avez mis en place depuis le début du
+cours, réalisez les exercices suivants.
+
+Utilisez le workflow Git présenté en cours pour commiter et pousser vos
+modifications sur votre dépôt GitHub.
 
 ## Exercices
 

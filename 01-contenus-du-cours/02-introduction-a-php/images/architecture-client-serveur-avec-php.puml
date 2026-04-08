@@ -10,7 +10,7 @@ title "Architecture client-serveur avec PHP"
 
 actor "Client\n(navigateur web)" as browser
 participant "Serveur web\n(Apache/nginx)" as webserver
-participant "Interpréteur PHP\n(PHP 8.3)" as php
+participant "Interpréteur PHP\n(PHP 8.5)" as php
 
 browser -> webserver: "J'aimerais la page 'index.php'."
 webserver -> php: "Un client demande la page 'index.php'."

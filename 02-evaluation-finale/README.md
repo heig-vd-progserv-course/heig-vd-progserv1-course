@@ -1,5 +1,11 @@
 # ProgServ1 - Évaluation finale
 
+> [!WARNING]
+>
+> Ce document est encore en cours de rédaction et peut être sujet à des
+> modifications. Les informations présentées ici sont à titre indicatif et
+> peuvent ne pas être définitives.
+
 - Date : semaine d'examen pour toutes les classes (voir calendrier académique de
   la HEIG-VD).
 
@@ -39,7 +45,7 @@ L'évaluation se déroulera en deux parties :
 2. Une partie de 90 minutes (1 heure 30 minutes) portant sur la mise en œuvre de
    ces concepts dans un projet concret avec PHP.
 
-Une pause de 15 minutes sera prévue entre les deux parties.
+Une pause est prévue entre les deux parties.
 
 ## Partie 1
 
@@ -81,15 +87,13 @@ autorisées (voir [Ressources autorisées](#ressources-autorisées-1)).
 
 ### Ressources autorisées
 
-- Un environnement de développement local (par exemple, MAMP + Visual Studio
-  Code).
+- Un environnement de développement local (par exemple, Visual Studio Code +
+  conteneur de développement).
 - Un navigateur web.
-- Le
-  [dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course),
-  comprenant :
-  - La théorie.
-  - Le mini-projet et sa solution.
-  - Les exercices et leurs solutions.
+- Le dépôt Git du cours
+  (<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course>).
+- Le dépôt Git des solutions au mini-projet
+  (<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course-mini-project-solution>).
 - Notes personnelles.
 - Code source personnel.
 - Documentation officielle de PHP (<https://www.php.net/>).
@@ -100,24 +104,26 @@ autorisées (voir [Ressources autorisées](#ressources-autorisées-1)).
 ### Rendu
 
 Le dépôt du code se fera sur GitHub Classroom. Pour accéder au dépôt, utilisez
-le lien suivant : LIEN A VENIR puis sélectionnez votre personne dans la liste
-pour rejoindre le GitHub Classroom.
+le lien suivant : _Lien à venir_.
 
-Un dépôt GitHub privé sera créé pour vous, et vous pourrez y pousser votre code
-pendant l'évaluation.
+Sélectionnez ensuite votre personne dans la liste pour rejoindre le GitHub
+Classroom. Il faudra ensuite accepter l'invitation pour accéder au dépôt privé
+qui a été créé pour vous.
+
+Vous pourrez ensuite y pousser votre code pendant l'évaluation.
 
 Vous êtes responsable de son contenu.
 
 Le travail et la consigne doivent être rendus avant la fin de l'examen.
 
-> [!IMPORTANT]
+> [!CAUTION]
 >
 > Assurez-vous d'avoir mis en place votre environnement de développement avant
-> le début de l'évaluation pour éviter tout problème technique.\*\*
+> le début de l'évaluation pour éviter tout problème technique.
 
 > [!TIP]
 >
-> Vous être libre d'effectuer des commits et de créer des issues de tests avant
+> Vous êtes libre d'effectuer des commits et de créer des issues de tests avant
 > le début de l'évaluation si vous le souhaitez pour valider votre installation.
 > Vous ne serez pas pénalisé.e.
 
@@ -145,7 +151,7 @@ Note maximale : (nombre de points obtenus / nombre de points totaux) × 5 + 1.
 |   2 | Chaque issue a une branche dédiée à la (nouvelle) fonctionnalité.                                                                                                                                        |
 |   3 | Chaque branche donne lieu à une pull request avec les modifications propres à la (nouvelle) fonctionnalité.                                                                                              |
 |   4 | Chaque pull request est fusionnée et la branche associée détruite.                                                                                                                                       |
-|   5 | Les pages spécifiques à la (nouvelle) fonctionnalité sont ajoutées/mises à jour, sont fonctionnelles. Elles gèrent les redirections si nécessaire.                                                       |
+|   5 | Les pages spécifiques à la (nouvelle) fonctionnalité sont ajoutées/mises à jour et sont fonctionnelles. Elles gèrent les redirections si nécessaire.                                                     |
 |   6 | Les formulaires spécifiques à la (nouvelle) fonctionnalité sont ajoutés/mis à jour et sont fonctionnels.                                                                                                 |
 |   7 | Les validations spécifiques à la (nouvelle) fonctionnalité sont ajoutées/mises à jour et sont fonctionnelles.                                                                                            |
 |   8 | Les données dans les formulaires pour la (nouvelle) fonctionnalité sont correctement affichées et conservées en cas d'erreur de validation.                                                              |

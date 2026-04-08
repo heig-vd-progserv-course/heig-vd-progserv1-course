@@ -38,8 +38,8 @@ d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 | Séance | Contenu(s)                                                                                                                                                                                        | État[^etat] |
 | -----: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :---------- |
-|     01 | [Introduction et organisation du cours](./01-contenus-du-cours/01-introduction-et-organisation-du-cours/README.md) + [Introduction à PHP](./01-contenus-du-cours/02-introduction-a-php/README.md) | 🟡 En cours |
-|     02 | [Fonctions](./01-contenus-du-cours/03-fonctions/README.md)                                                                                                                                        | 🔴 À faire  |
+|     01 | [Introduction et organisation du cours](./01-contenus-du-cours/01-introduction-et-organisation-du-cours/README.md) + [Introduction à PHP](./01-contenus-du-cours/02-introduction-a-php/README.md) | 🟢 Prêt     |
+|     02 | [Fonctions](./01-contenus-du-cours/03-fonctions/README.md)                                                                                                                                        | 🟡 En cours |
 |     03 | [Tableaux et boucles](./01-contenus-du-cours/04-tableaux-et-boucles/README.md)                                                                                                                    | 🔴 À faire  |
 |     04 | [Formulaires HTML et validation](./01-contenus-du-cours/05-formulaires-html-et-validation/README.md)                                                                                              | 🔴 À faire  |
 |     05 | [Bases de données et PDO](./01-contenus-du-cours/06-bases-de-donnees-et-pdo/README.md)                                                                                                            | 🔴 À faire  |

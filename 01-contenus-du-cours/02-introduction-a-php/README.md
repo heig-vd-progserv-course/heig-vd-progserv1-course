@@ -63,6 +63,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
+- [Avant de commencer...](#avant-de-commencer)
 - [Qu'est-ce que PHP](#quest-ce-que-php)
 - [Applications web et architecture client-serveur](#applications-web-et-architecture-client-serveur)
 - [Comment fonctionne PHP](#comment-fonctionne-php)
@@ -78,6 +79,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 - [Mini-projet](#mini-projet)
 - [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
+- [Questions d'évaluation](#questions-dévaluation)
 - [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
 
 ## Objectifs
@@ -87,18 +89,23 @@ Vous apprendrez les bases de PHP, y compris la syntaxe, les variables, les
 constantes, les opérateurs et les structures de contrôle afin de vous préparer à
 la suite du cours.
 
-De façon plus concise, les personnes qui étudient devraient être capables de :
+La liste complète des objectifs est disponible dans la section _"Objectifs"_ du
+bloc d'information en haut de ce contenu.
 
-- Expliquer le concept d'architecture client-serveur.
-- Lister les outils nécessaires pour écrire et exécuter du code PHP.
-- Expliquer comment PHP fonctionne dans un environnement web.
-- Expliquer la syntaxe de base de PHP.
-- Expliquer les variables en PHP.
-- Expliquer les constantes en PHP.
-- Expliquer la nature dynamique des variables et constantes en PHP.
-- Expliquer les opérateurs en PHP.
-- Expliquer Les structures conditionnelles en PHP.
-- Rédiger du code PHP simple.
+## Avant de commencer...
+
+Explorez le mini-projet en ligne :
+<https://progserv1.heig-vd-progserv-course.ch>.
+
+Essayez de répondre aux questions suivantes à propos du mini-projet :
+
+- Quelles fonctionnalités propose-t-il ?
+- Quels sont les éléments qui le composent ?
+- Comment fonctionne-t-il ?
+- Quelles sont les limitations ?
+
+Vous devriez obtenir les réponses à ces questions au fur et à mesure que vous
+avancerez dans le cours !
 
 ## Qu'est-ce que PHP
 
@@ -129,14 +136,21 @@ au client.
 
 La plupart des applications réseau modernes utilisent cette architecture pour
 fournir des services à un grand nombre d'utilisateurs (sites web, applications
-mobiles, jeux vidéos, etc.).
+mobiles, jeux vidéos, etc.) et utilise le protocole HTTP pour la communication
+entre le client et le serveur.
 
 ## Comment fonctionne PHP
+
+PHP est un langage de programmation côté serveur, ce qui signifie que le code
+PHP est exécuté sur le serveur web, et non pas dans le navigateur du client.
+
+Il utilise une architecture client-serveur pour générer du HTML à partir du code
+PHP, qui est ensuite envoyé au navigateur du client pour être affiché.
 
 De façon plus concise, pour écrire et exécuter du code PHP, vous avez besoin de
 :
 
-- Un serveur web (Apache, Nginx, etc.) pour recevoir les requêtes du client
+- Un serveur web (Apache, nginx, etc.) pour recevoir les requêtes du client
   (votre navigateur) et envoyer les réponses (des pages HTML générées).
 - PHP installé sur le serveur web.
 - Un navigateur web (Chrome, Firefox, etc.). pour effectuer les requêtes et
@@ -239,16 +253,33 @@ fin du bloc de code PHP et n'exécuter que le code PHP.
 
 Lorsque nous écrivons du code PHP, nous devons l'exécuter sur un serveur web
 avec PHP installé. Pour ce faire, nous avons besoin d'un environnement de
-développement qui comprend un serveur web (Apache, Nginx, etc.) et PHP.
+développement qui comprend un serveur web (Apache, nginx, etc.) et PHP.
 
 Heureusement pour nous, il existe des solutions clés en main qui nous permettent
-de démarrer rapidement avec PHP, comme par exemple WampServer pour
-Windows[^wamp], MAMP pour macOS[^mamp], XAMPP pour Windows, macOS et
-Linux[^xampp] ou encore Docker/Docker Compose[^docker].
+de démarrer rapidement avec PHP, comme par exemple
+[WampServer pour Windows](https://www.wampserver.com/),
+[MAMP pour macOS](https://www.mamp.info/),
+[XAMPP pour Windows, macOS et Linux](https://www.apachefriends.org/download.html)
+ou encore [Docker](https://docker.com/).
 
 Ces solutions regroupent les logiciels nécessaires pour exécuter du code PHP,
-notamment un serveur web, PHP et une base de données et fonctionnent selon le
-même principe d'architecture client-serveur vu précédemment.
+notamment un serveur web, PHP et parfois même une base de données et
+fonctionnent selon le même principe d'architecture client-serveur vu
+précédemment.
+
+Dans le cadre de ce cours, nous allons utiliser Docker pour exécuter du code PHP
+à l'aide d'un conteneur de développement directement dans Visual Studio Code.
+
+Un conteneur de développement (_"Dev container"_ en anglais -
+<https://containers.dev/>) est un environnement de développement isolé qui
+fonctionne à l'intérieur d'un conteneur Docker. Il permet de développer des
+applications dans un environnement cohérent et reproductible, sans avoir à
+installer les dépendances et les outils nécessaires sur votre machine.
+
+De plus, grâce à une bonne intégration avec Visual Studio Code, les extensions
+nécessaires au développement d'applications PHP sont automatiquement installées
+dans le conteneur de développement, ce qui facilite grandement la configuration
+de l'environnement de développement.
 
 ## Syntaxe de base de PHP
 
@@ -1094,6 +1125,29 @@ mettre en pratique les concepts abordés.
 Vous trouverez les exercices et leur corrigé ici :
 [Exercices](./03-exercices/README.md).
 
+## Questions d'évaluation
+
+> [!NOTE]
+>
+> Les questions d'évaluation sont destinées à vous aider à vérifier votre
+> compréhension des concepts abordés dans le cours. Elles ne sont pas destinées
+> à être utilisées comme une liste de contrôle exhaustive des compétences à
+> maîtriser.
+>
+> Il est recommandé de les utiliser comme un guide pour vous aider à identifier
+> les domaines dans lesquels vous pourriez avoir besoin de renforcer vos
+> connaissances ou de pratiquer davantage.
+
+- Quels sont les outils nécessaires pour écrire et exécuter du code PHP ?
+- Comment fonctionne PHP dans une architecture client-serveur ?
+- Comment écrire du code PHP ?
+- Comment exécuter du code PHP ?
+- Quelles sont les règles de syntaxe de base de PHP ?
+- Comment déclarer des variables et des constantes en PHP ?
+- Quels sont les types de données courants en PHP ?
+- Comment utiliser les opérateurs en PHP ?
+- Comment utiliser les structures conditionnelles en PHP ?
+
 ## À faire pour la semaine suivante
 
 Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
@@ -1109,16 +1163,3 @@ il est recommandé pour la séance suivante de :
 
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
-
-<!-- Footnotes -->
-
-[^docker]:
-    Docker/Docker Compose [docker.com](https://www.docker.com/), 31 mars 2026.
-
-[^mamp]: MAMP, [mamp.info](https://www.mamp.info/), 09 mars 2025.
-
-[^wamp]:
-    WampServer, [wampserver.com](https://www.wampserver.com/), 09 mars 2025.
-
-[^xampp]:
-    XAMPP, [apachefriends.org](https://www.apachefriends.org/), 09 mars 2025.

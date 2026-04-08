@@ -32,7 +32,7 @@ adresse][contenu-complet-sur-github].
 
 <small>Ce travail est sous licence [CC BY-SA 4.0][license].</small>
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg brightness:2 opacity:0.05][illustration-principale]
 
 ## Retrouvez le contenu complet de cette présentation sur GitHub
 
@@ -582,16 +582,15 @@ hello("Alice");
 
 Est-ce que vous avez des questions ?
 
-## À vous de jouer
+## À vous de jouer !
 
 - (Re)lire le [support de cours][contenu-complet-sur-github].
 - Réaliser le [mini-projet][mini-projet].
+- Explorer les [exemples de code][exemples-de-code].
 - Faire les [exercices][exercices].
 - Poser des questions si nécessaire.
 
-\
-**Pour le mini-projet ou les exercices, n'hésitez pas à vous entraidez si vous
-avez des difficultés !**
+**N'hésitez pas à vous entraidez si vous avez des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
@@ -664,10 +663,12 @@ avez des difficultés !**
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [contenu-complet-sur-github]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-fonctions/README.md
-[mini-projet]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-fonctions/03-mini-projet/README.md
+[exemples-de-code]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-fonctions/01-exemples-de-code/README.md
 [exercices]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-fonctions/02-exercices/README.md
+[mini-projet]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-fonctions/03-mini-projet/README.md
 
 <!-- Illustrations -->
 
