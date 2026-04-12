@@ -5,7 +5,7 @@ size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 description: Fonctions pour le cours ProgServ1 à la HEIG-VD, Suisse
-url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/presentation.html
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/04-fonctions/presentation.html
 header: "[**Fonctions**][contenu-complet-sur-github]"
 footer:
   "[**HEIG-VD**](https://heig-vd.ch) - [ProgServ1 Course
@@ -644,7 +644,8 @@ Est-ce que vous avez des questions ?
 - Réaliser le [mini-projet][mini-projet].
 - Poser des questions si nécessaire.
 
-**N'hésitez pas à vous entraidez si vous avez des difficultés !**
+**N'allez pas trop vite, vous avez le temps !** N'hésitez pas à vous entraidez
+si vous avez des difficultés.
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
@@ -713,13 +714,13 @@ Est-ce que vous avez des questions ?
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [contenu-complet-sur-github]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-fonctions/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-fonctions/README.md
 [exemples-de-code]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-fonctions/01-exemples-de-code/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-fonctions/01-exemples-de-code/README.md
 [exercices]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-fonctions/02-exercices/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-fonctions/02-exercices/README.md
 [mini-projet]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-fonctions/03-mini-projet/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-fonctions/03-mini-projet/README.md
 
 <!-- Illustrations -->
 

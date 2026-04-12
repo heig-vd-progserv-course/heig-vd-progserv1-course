@@ -11,9 +11,9 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 > **Ressources annexes**
 >
 > - Autres formats :
->   [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/presentation.html)
+>   [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/04-fonctions/presentation.html)
 >   ·
->   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/03-fonctions-presentation.pdf).
+>   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/04-fonctions/04-fonctions-presentation.pdf).
 > - Résultats des formulaires de feedback et évaluations GAPS :
 >   [Accéder aux résultats](./01-resultats-des-formulaires-de-feedback-et-evaluations-gaps/README.md)
 > - Examen blanc : [Accéder au contenu](./02-examen-blanc/README.md).
@@ -67,7 +67,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
   - [Fonctions](#fonctions)
   - [Tableaux et boucles](#tableaux-et-boucles)
   - [Formulaires HTML et validation](#formulaires-html-et-validation)
-  - [Bases de données et PDO](#base-de-données-et-pdo)
+  - [Bases de données et PDO](#bases-de-données-et-pdo)
   - [Sécurité et nettoyage des saisies utilisateurs](#sécurité-et-nettoyage-des-saisies-utilisateurs)
   - [Programmation orientée objet](#programmation-orientée-objet)
 - [Résultats des formulaires de feedback et évaluations GAPS](#résultats-des-formulaires-de-feedback-et-évaluations-gaps)
@@ -86,15 +86,8 @@ Le but de cette dernière session de cours est de récapituler les connaissances
 acquises durant l'unité d'enseignement, de préparer les personnes à l'examen
 final et de finaliser l'application développée durant l'unité d'enseignement.
 
-De façon plus concise, les personnes qui étudient devraient être capables de :
-
-- Lister les modalités de l'examen final.
-- Lister les ressources autorisées pour l'examen final.
-- Lister les sanctions possibles en cas de tricherie durant l'examen final.
-- Lister des stratégies pour bien se préparer à l'examen final.
-- Préparer efficacement son environnement de développement pour l'examen final.
-- Réviser les concepts clés abordés durant l'unité d'enseignement.
-- Mettre en pratique les concepts appris à travers un examen blanc.
+La liste complète des objectifs est disponible dans la section _"Objectifs"_ du
+bloc d'information en haut de ce contenu.
 
 ## Retrospective
 

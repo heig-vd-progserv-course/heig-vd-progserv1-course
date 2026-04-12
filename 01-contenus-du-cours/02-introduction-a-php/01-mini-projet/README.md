@@ -29,6 +29,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Découvrir la structure du projet](#découvrir-la-structure-du-projet)
 - [Démarrer le projet](#démarrer-le-projet)
   - [Ouvrir un terminal intégré](#ouvrir-un-terminal-intégré)
+  - [Valider l'installation de PHP](#valider-linstallation-de-php)
   - [Démarrer le serveur de développement PHP](#démarrer-le-serveur-de-développement-php)
   - [Créer la structure de base du projet](#créer-la-structure-de-base-du-projet)
   - [Créer et tester les fichiers de base du projet](#créer-et-tester-les-fichiers-de-base-du-projet)
@@ -132,7 +133,8 @@ Chaque animal de compagnie aura les attributs suivants :
   serpent, oiseau, lapin, autre).
 - Surnom (un champ texte facultatif).
 - Sexe (un champ boutons radio).
-- Âge (un champ numérique).
+- Année de naissance (un champ date au format `YYYY-MM-DD` (par exemple :
+  `2020-12-31` pour le 31 décembre 2020)).
 - Couleur (un champ de saisie de couleur facultatif).
 - Personnalité (un champ cases à cocher facultatif).
 - Taille en cm (un champ numérique facultatif).
@@ -713,6 +715,31 @@ que vous travaillez sur votre projet PHP, car cela vous permettra d'exécuter le
 commandes nécessaires pour développer votre application sans avoir à basculer
 entre différentes fenêtres.
 
+### Valider l'installation de PHP
+
+Pour vérifier que PHP est installé et fonctionne correctement dans le conteneur
+de développement, exécutez la commande suivante dans le terminal intégré de
+Visual Studio Code :
+
+```bash
+php --version
+```
+
+Le résultat devrait être similaire à ceci :
+
+```text
+PHP 8.5.3 (cli) (built: Feb 24 2026 19:07:16) (NTS)
+Copyright (c) The PHP Group
+Built by https://github.com/docker-library/php
+Zend Engine v4.5.3, Copyright (c) Zend Technologies
+    with Xdebug v3.5.0, Copyright (c) 2002-2025, by Derick Rethans
+    with Zend OPcache v8.5.3, Copyright (c), by Zend Technologies
+```
+
+Cela signifie que PHP est installé et fonctionne correctement dans le conteneur
+de développement. Vous pouvez maintenant utiliser PHP pour développer votre
+application web.
+
 ### Démarrer le serveur de développement PHP
 
 Pour démarrer le serveur de développement PHP, exécutez la commande suivante
@@ -900,6 +927,17 @@ testerez votre code dans le navigateur web.
 
 Dans le fichier `exception.php`, ajoutez le code suivant :
 
+> [!WARNING]
+>
+> Ne copiez-collez pas ce qui est demandé ci-dessous sans comprendre ce que vous
+> faites. Prenez le temps de lire et de comprendre chaque ligne demandée avant
+> de passer à la suite.
+>
+> Il est important de comprendre ce que vous écrivez pour pouvoir le maîtriser
+> et l'utiliser efficacement dans vos projets.
+>
+> Il est inutile de vouloir aller vite juste pour finir plus rapidement.
+
 ```php
 <?php
 
@@ -972,6 +1010,17 @@ exceptions dans votre application PHP.
 
 Dans le fichier `exercices/index.php`, ajoutez le code suivant :
 
+> [!WARNING]
+>
+> Ne copiez-collez pas ce qui est demandé ci-dessous sans comprendre ce que vous
+> faites. Prenez le temps de lire et de comprendre chaque ligne demandée avant
+> de passer à la suite.
+>
+> Il est important de comprendre ce que vous écrivez pour pouvoir le maîtriser
+> et l'utiliser efficacement dans vos projets.
+>
+> Il est inutile de vouloir aller vite juste pour finir plus rapidement.
+
 ```php
 <?php
 echo "Bienvenue dans le dossier <code>exercices</code> du cours <i>Programmation serveur 1 (ProgServ1)</i> !";
@@ -1022,9 +1071,29 @@ mélangeant du code PHP et du code HTML pour créer une page d'accueil dynamique
 
 Pour cela, ajoutez le code suivant dans le fichier `index.php` :
 
+> [!NOTE]
+>
+> Tout ce que vous avez appris jusqu'à présent sur HTML et CSS au travers de
+> précédents cours reste valable et peut être utilisé en mélangeant du code PHP.
+>
+> N'hésitez pas à utiliser vos connaissances en HTML et CSS pour structurer et
+> styliser vos pages PHP.
+
+> [!WARNING]
+>
+> Ne copiez-collez pas ce qui est demandé ci-dessous sans comprendre ce que vous
+> faites. Prenez le temps de lire et de comprendre chaque ligne demandée avant
+> de passer à la suite.
+>
+> Il est important de comprendre ce que vous écrivez pour pouvoir le maîtriser
+> et l'utiliser efficacement dans vos projets.
+>
+> Il est inutile de vouloir aller vite juste pour finir plus rapidement.
+
 ```php
 <?php
 const PAGE_TITLE = "Page d'accueil du cours Programmation serveur 1 (ProgServ1)";
+const PAGE_DESCRIPTION = "La page d'accueil du cours de Programmation serveur 1 (ProgServ1) !";
 const WELCOME_MESSAGE = "Bienvenue sur la page d'accueil du cours de Programmation serveur 1 (ProgServ1) !";
 ?>
 
@@ -1032,13 +1101,35 @@ const WELCOME_MESSAGE = "Bienvenue sur la page d'accueil du cours de Programmati
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
     <title><?php echo PAGE_TITLE; ?></title>
+    <meta name="description" content="<?php echo PAGE_DESCRIPTION; ?>">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
     <h1><?php echo PAGE_TITLE; ?></h1>
+
     <p><?php echo WELCOME_MESSAGE; ?></p>
 
     <ul>
@@ -1056,14 +1147,19 @@ dans votre navigateur web pour voir la page d'accueil du projet avec les liens
 vers les différentes parties du projet.
 
 Grâce à PHP, il est tout à fait possible de mélanger du code PHP avec du code
-HTML pour générer du contenu dynamique dans nos pages web. Dans ce cas, nous
-utilisons la fonction `echo` pour afficher des constantes PHP dans le code HTML
-pour créer une page d'accueil dynamique.
+HTML/CSS pour générer du contenu dynamique dans nos pages web.
+
+Dans ce cas, nous utilisons la fonction `echo` pour afficher des constantes PHP
+dans le code HTML pour créer une page d'accueil dynamique.
 
 Vous pouvez maintenant naviguer entre les différentes pages du projet en
 cliquant sur les liens présents sur la page d'accueil pour accéder aux
 exercices, au mini-projet, à la page de configuration de PHP, et au test de
 gestion des exceptions.
+
+Vous remarquerez que la page a été stylisée avec du CSS pour améliorer son
+apparence, et que les liens fonctionnent correctement pour naviguer entre les
+différentes parties du projet.
 
 Visualisez également le comportement du terminal intégré de Visual Studio Code
 lorsque vous accédez à l'adresse <http://localhost:8080/index.php> dans votre
@@ -1102,6 +1198,17 @@ dans notre dépôt GitHub.
 Dans le terminal intégré de Visual Studio Code, exécutez la commande suivante
 pour visualiser les changements dans votre projet avec Git :
 
+> [!WARNING]
+>
+> Ne copiez-collez pas ce qui est demandé ci-dessous sans comprendre ce que vous
+> faites. Prenez le temps de lire et de comprendre chaque ligne demandée avant
+> de passer à la suite.
+>
+> Il est important de comprendre ce que vous écrivez pour pouvoir le maîtriser
+> et l'utiliser efficacement dans vos projets.
+>
+> Il est inutile de vouloir aller vite juste pour finir plus rapidement.
+
 ```bash
 git status
 ```
@@ -1131,6 +1238,17 @@ tant que nous ne les aurons pas ajoutés au suivi.
 
 Pour ajouter les fichiers au suivi avec Git, exécutez la commande suivante dans
 le terminal intégré de Visual Studio Code :
+
+> [!WARNING]
+>
+> Ne copiez-collez pas ce qui est demandé ci-dessous sans comprendre ce que vous
+> faites. Prenez le temps de lire et de comprendre chaque ligne demandée avant
+> de passer à la suite.
+>
+> Il est important de comprendre ce que vous écrivez pour pouvoir le maîtriser
+> et l'utiliser efficacement dans vos projets.
+>
+> Il est inutile de vouloir aller vite juste pour finir plus rapidement.
 
 ```bash
 git add .
@@ -1167,6 +1285,17 @@ commiter ces changements pour les enregistrer dans l'historique de Git.
 Pour commiter les changements, exécutez la commande suivante dans le terminal
 intégré de Visual Studio Code :
 
+> [!WARNING]
+>
+> Ne copiez-collez pas ce qui est demandé ci-dessous sans comprendre ce que vous
+> faites. Prenez le temps de lire et de comprendre chaque ligne demandée avant
+> de passer à la suite.
+>
+> Il est important de comprendre ce que vous écrivez pour pouvoir le maîtriser
+> et l'utiliser efficacement dans vos projets.
+>
+> Il est inutile de vouloir aller vite juste pour finir plus rapidement.
+
 ```bash
 git commit -m "Ajout des fichiers de base pour le cours de Programmation serveur 1 (ProgServ1)"
 ```
@@ -1200,6 +1329,17 @@ mini-projet et les exercices.
 
 Pour pousser les changements vers GitHub, exécutez la commande suivante dans le
 terminal intégré de Visual Studio Code :
+
+> [!WARNING]
+>
+> Ne copiez-collez pas ce qui est demandé ci-dessous sans comprendre ce que vous
+> faites. Prenez le temps de lire et de comprendre chaque ligne demandée avant
+> de passer à la suite.
+>
+> Il est important de comprendre ce que vous écrivez pour pouvoir le maîtriser
+> et l'utiliser efficacement dans vos projets.
+>
+> Il est inutile de vouloir aller vite juste pour finir plus rapidement.
 
 ```bash
 git push
@@ -1260,7 +1400,7 @@ En utilisant tout ce que vous avez acquis dans cette première séance de
 mini-projet, clonez le dépôt GitHub du cours pour accéder aux exemples de code.
 
 Le dépôt GitHub du cours est accessible à l'adresse suivante :
-<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-mini-project-solution>.
+<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course-mini-project-solution>.
 
 Assurez-vous de cloner le dépôt GitHub du cours dans un emplacement différent de
 celui où vous avez cloné votre dépôt GitHub privé pour le mini-projet et les
@@ -1301,7 +1441,7 @@ la séance comme indiqué dans le [contenu principal](../README.md).
 
 La solution du mini-projet est accessible dans un dépôt GitHub dédié à l'adresse
 suivante :
-<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-mini-project-solution/tree/session-1>.
+<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course-mini-project-solution/tree/session-1>.
 
 Afin d'utiliser cette solution de manière efficace pour votre apprentissage,
 nous vous recommandons de suivre les étapes suivantes :
@@ -1313,13 +1453,16 @@ nous vous recommandons de suivre les étapes suivantes :
    étapes du développement d'une application PHP.
 2. Clonez le dépôt GitHub de la solution localement sur votre ordinateur en
    utilisant la commande `git clone` avec l'URL du dépôt de la solution.
-3. Accédez à la version spécifique de la solution correspondant à la séance en
+3. Récupérez la dernière version du dépôt de la solution en utilisant la
+   commande `git pull` pour vous assurer d'avoir la version la plus récente de
+   la solution.
+4. Accédez à la version spécifique de la solution correspondant à la séance en
    utilisant la commande `git checkout` avec le commit ou le tag correspondant à
    la séance 1 (par exemple, `git checkout session-1`).
-4. Explorez le code de la solution pour comprendre comment les différentes
+5. Explorez le code de la solution pour comprendre comment les différentes
    fonctionnalités ont été implémentées et comment les concepts appris ont été
    appliqués dans la solution.
-5. Comparez votre propre version du mini-projet avec la solution pour identifier
+6. Comparez votre propre version du mini-projet avec la solution pour identifier
    les différences et les similitudes, et pour comprendre les différentes
    approches possibles pour résoudre les problèmes rencontrés lors du
    développement de votre application PHP.

@@ -823,7 +823,8 @@ Est-ce que vous avez des questions ?
 - Faire les [exercices][exercices].
 - Poser des questions si nécessaire.
 
-**N'hésitez pas à vous entraidez si vous avez des difficultés !**
+**N'allez pas trop vite, vous avez le temps !** N'hésitez pas à vous entraidez
+si vous avez des difficultés.
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 

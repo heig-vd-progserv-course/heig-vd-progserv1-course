@@ -11,9 +11,9 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 > **Ressources annexes**
 >
 > - Autres formats :
->   [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/presentation.html)
+>   [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/04-fonctions/presentation.html)
 >   ·
->   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/03-fonctions-presentation.pdf).
+>   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/04-fonctions/04-fonctions-presentation.pdf).
 > - Exemples de code : [Code source](./01-exemples-de-code/README.md).
 > - Exercices : [Énoncés et solutions](./02-exercices/README.md).
 > - Mini-projet : [Consignes](./03-mini-projet/README.md).
@@ -84,6 +84,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 - [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
 - [Mini-projet](#mini-projet)
+- [Questions d'évaluation](#questions-dévaluation)
 - [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
 
 ## Objectifs
@@ -972,6 +973,32 @@ mettre en pratique les concepts abordés.
 
 Vous trouverez les détails du mini-projet ici :
 [Mini-projet](./03-mini-projet/README.md).
+
+## Questions d'évaluation
+
+> [!NOTE]
+>
+> Les questions d'évaluation sont destinées à vous aider à vérifier votre
+> compréhension des concepts abordés dans le cours. Elles ne sont pas destinées
+> à être utilisées comme une liste de contrôle exhaustive des compétences à
+> maîtriser.
+>
+> Il est recommandé de les utiliser comme un guide pour vous aider à identifier
+> les domaines dans lesquels vous pourriez avoir besoin de renforcer vos
+> connaissances ou de pratiquer davantage.
+
+- Qu'est-ce qu'une fonction en programmation ?
+- Comment déclarer une fonction en PHP ?
+- Comment appeler une fonction en PHP ?
+- Comment passer des paramètres à une fonction en PHP ?
+- Comment utiliser une valeur de retour dans une fonction en PHP ?
+- Qu'est-ce que la portée d'une variable ?
+- Comment utiliser des variables globales en PHP ?
+- Où trouver la documentation sur les fonctions prédéfinies en PHP ?
+- Comment utiliser des fonctions prédéfinies en PHP ?
+- Comment réutiliser du code avec des fonctions en PHP ?
+- Quelle est la différence entre `include_once` et `require_once` en PHP ?
+- Quelle est la différence entre `require_once` et `require` en PHP ?
 
 ## À faire pour la semaine suivante
 

@@ -1,5 +1,11 @@
 # Récapitulatif du cours et préparation à l'examen - Examen blanc
 
+> [!WARNING]
+>
+> Ce document est encore en cours de rédaction et peut être sujet à des
+> modifications. Les informations présentées ici sont à titre indicatif et
+> peuvent ne pas être définitives.
+
 Cet examen blanc est conçu pour vous préparer à l'examen final du cours
 _"Programmation serveur 1 (ProgServ1)"_.
 

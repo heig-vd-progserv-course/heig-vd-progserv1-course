@@ -940,6 +940,342 @@ echo $result;
 
 </details>
 
+### Exercice 10
+
+Ce bout de code contient différentes erreurs. Saurez-vous les identifier ? Pour
+chaque erreur, expliquez pourquoi elle est incorrecte et proposez une
+correction.
+
+Il y a un total de 5 erreurs.
+
+```php
+<?php
+function printArray($numberOfElementsToDisplay = 1, $array) {
+    for ($i = 0; $i <= $numberOfElementsToDisplay; $i++) {
+        // Affichage de l'élément ligne par ligne
+        echo $array[$i];
+    }
+}
+
+$fruits = ["Pomme", "Poire", "Banane", "Cerise", "Fraise"];
+
+$printArray(3, fruits);
+```
+
+<details>
+<summary>Afficher la réponse</summary>
+
+```php
+<?php
+// Erreur 1 : il faut déclarer les paramètres optionnels après les
+// paramètres obligatoires
+function printArray($array, $numberOfElementsToDisplay = 1) {
+    // Erreur 2 : il faut utiliser < au lieu de <=
+    for ($i = 0; $i < $numberOfElementsToDisplay; $i++) {
+        // Erreur 3 : il manque le `<br>` pour passer à la ligne
+        echo $array[$i] . "<br>";
+    }
+}
+
+$fruits = ["Pomme", "Poire", "Banane", "Cerise", "Fraise"];
+
+// Erreur 4 : pour appeler une fonction, il ne faut pas la préfixer avec `$`
+// Erreur 5 : il faut invertir l'ordre des paramètres
+printArray($fruits, 3);
+```
+
+```text
+Pomme
+Poire
+Banane
+```
+
+</details>
+
+### Exercice 11
+
+En utilisant la documentation officielle de PHP sur les fonctions `range` :
+<https://www.php.net/manual/fr/function.range.php> et `shuffle` :
+<https://www.php.net/manual/fr/function.shuffle.php>, déclarez une fonction
+`shuffleRange` qui prend deux paramètres `$start` et `$end` et retourne un
+tableau contenant les nombres de `$start` à `$end` inclus, mélangés.
+
+Faites des tests avec les valeurs suivantes :
+
+```php
+<?php
+$start = 1;
+$end = 10;
+```
+
+<details>
+<summary>Afficher la réponse</summary>
+
+```php
+<?php
+$start = 1;
+$end = 10;
+
+function shuffleRange($start, $end) {
+    $range = range($start, $end);
+    shuffle($range);
+    return $range;
+}
+
+print_r(shuffleRange($start, $end));
+```
+
+```text
+// Ceci est un exemple de résultat, le vôtre sera différent
+Array ( [0] => 3 [1] => 6 [2] => 7 [3] => 9 [4] => 1 [5] => 10 [6] => 8 [7] => 5 [8] => 2 [9] => 4 )
+```
+
+</details>
+
+### Exercice 12
+
+En utilisant la documentation officielle de PHP sur la fonction `sort` :
+<https://www.php.net/manual/fr/function.sort.php>, utilisez la fonction `sort`
+pour trier le tableau `$fruits` de l'[exercice 1](#exercice-1) par ordre
+alphabétique.
+
+Affichez le contenu du tableau avec la fonction `print_r`.
+
+<details>
+<summary>Afficher la réponse</summary>
+
+```php
+<?php
+$fruits = ["Pomme", "Poire", "Banane", "Cerise", "Fraise"];
+sort($fruits);
+
+print_r($fruits);
+```
+
+```text
+Array ( [0] => Banane [1] => Cerise [2] => Fraise [3] => Poire [4] => Pomme )
+```
+
+</details>
+
+### Exercice 13 - Bonus
+
+En utilisant la documentation officielle de PHP sur la fonction `usort` :
+<https://www.php.net/manual/fr/function.usort.php>, utilisez la fonction `usort`
+pour trier le tableau `$people` de l'[exercice 4](#exercice-4) par ordre
+croissant de l'âge.
+
+**Indice** : vous allez devoir déclarer une fonction de comparaison pour trier
+le tableau selon l'age. Cette fonction prend deux paramètres `$a` et `$b` et
+retourne un entier négatif si `$a` est plus petit que `$b`, un entier positif si
+`$a` est plus grand que `$b` et zéro si les deux sont égaux.
+
+Affichez le contenu du tableau avec la fonction `print_r`.
+
+<details>
+<summary>Afficher la réponse</summary>
+
+```php
+<?php
+$people = [
+    [
+        "name" => "John Doe",
+        "age" => 30,
+        "city" => "New York"
+    ],
+    [
+        "name" => "Jane Doe",
+        "age" => 25,
+        "city" => "Los Angeles"
+    ],
+    [
+        "name" => "Alice Smith",
+        "age" => 35,
+        "city" => "Chicago"
+    ]
+];
+
+function compareAge($a, $b) {
+    if ($a["age"] > $b["age"]) {
+        return 1;
+    } else if ($a["age"] < $b["age"]) {
+        return -1;
+    } else {
+        return 0;
+    }
+}
+
+usort($people, "compareAge");
+
+print_r($people);
+```
+
+</details>
+
+### Exercice 14 - Bonus
+
+En utilisant la documentation officielle de PHP sur les fonctions `usort` :
+<https://www.php.net/manual/fr/function.usort.php> et `strcmp` :
+<https://www.php.net/manual/fr/function.strcmp.php>, utilisez la fonction
+`usort` pour trier le tableau `$people` de l'[exercice 4](#exercice-4) par ordre
+alphabétique du nom.
+
+**Indice** : vous allez devoir déclarer une fonction de comparaison pour trier
+le tableau selon le nom. Cette fonction prend deux paramètres `$a` et `$b` et
+utilise la fonction `strcmp` pour comparer les noms. La fonction `strcmp`
+retourne un entier négatif si `$a` est plus petit que `$b`, un entier positif si
+`$a` est plus grand que `$b` et zéro si les deux sont égaux.
+
+Affichez le contenu du tableau avec la fonction `print_r`.
+
+<details>
+<summary>Afficher la réponse</summary>
+
+```php
+<?php
+$people = [
+    [
+        "name" => "John Doe",
+        "age" => 30,
+        "city" => "New York"
+    ],
+    [
+        "name" => "Jane Doe",
+        "age" => 25,
+        "city" => "Los Angeles"
+    ],
+    [
+        "name" => "Alice Smith",
+        "age" => 35,
+        "city" => "Chicago"
+    ]
+];
+
+function compareName($a, $b) {
+    return strcmp($a["name"], $b["name"]);
+}
+
+usort($people, "compareName");
+
+print_r($people);
+```
+
+```text
+Array ( [0] => Array ( [name] => Alice Smith [age] => 35 [city] => Chicago ) [1] => Array ( [name] => Jane Doe [age] => 25 [city] => Los Angeles ) [2] => Array ( [name] => John Doe [age] => 30 [city] => New York ) )
+```
+
+</details>
+
+### Exercice 15 - Bonus
+
+En utilisant la documentation officielle de PHP sur les fonctions `range` :
+<https://www.php.net/manual/fr/function.range.php> et `array_sum` :
+<https://www.php.net/manual/fr/function.array-sum.php>, déclarez une fonction
+`sumRange` qui prend deux paramètres `$start` et `$end` et retourne la somme des
+nombres de `$start` à `$end` inclus.
+
+Faites des tests avec les valeurs suivantes :
+
+```php
+<?php
+$start = 15;
+$end = 30;
+```
+
+<details>
+<summary>Afficher la réponse</summary>
+
+```php
+<?php
+$start = 15;
+$end = 30;
+
+function sumRange($start, $end) {
+    $range = range($start, $end);
+    return array_sum($range);
+}
+
+echo sumRange($start, $end);
+```
+
+```text
+360
+```
+
+</details>
+
+### Exercice 16 - Bonus
+
+En utilisant la documentation officielle de PHP sur les fonctions `explode` :
+<https://www.php.net/manual/fr/function.explode.php>, `array_reverse` :
+<https://www.php.net/manual/fr/function.array-reverse.php> et `implode` :
+<https://www.php.net/manual/fr/function.implode.php>, déclarez une fonction
+`reverseWords` qui prend un paramètre `$string` et retourne la chaîne de
+caractères `$string` avec les mots dans l'ordre inverse.
+
+Faites des tests avec la chaîne suivante :
+
+```php
+<?php
+$string = "Hello, world!";
+```
+
+<details>
+<summary>Afficher la réponse</summary>
+
+```php
+<?php
+$string = "Hello, world!";
+$words = explode(" ", $string);
+$reversedWords = array_reverse($words);
+$result = implode(" ", $reversedWords);
+
+echo $result;
+```
+
+```text
+world! Hello,
+```
+
+</details>
+
+### Exercice 17 - Bonus
+
+En utilisant la documentation officielle de PHP sur les fonctions `array_map` :
+<https://www.php.net/manual/fr/function.array-map.php> et `strrev` :
+<https://www.php.net/manual/fr/function.strrev.php>, déclarez une fonction
+`reverseWords` qui prend un paramètre `$string` et retourne la chaîne de
+caractères `$string` avec les mots dans l'ordre inverse.
+
+Faites des tests avec la chaîne suivante :
+
+```php
+<?php
+$string = "Hello, world!";
+```
+
+Le résultat sera le suivant : _"olleh, world!"_.
+
+<details>
+<summary>Afficher la réponse</summary>
+
+```php
+<?php
+$string = "Hello, world!";
+$words = explode(" ", $string);
+$reversedWords = array_map('strrev', $words);
+
+$result = implode(" ", $reversedWords);
+
+echo $result;
+```
+
+```text
+,olleH !dlrow
+```
+
+</details>
+
 [^annee-bissextile]:
     Année bissextile
     [fr.wikipedia.org](https://fr.wikipedia.org/wiki/Ann%C3%A9e_bissextile), 23

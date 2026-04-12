@@ -5,7 +5,7 @@ size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 description: Introduction à PHP pour le cours ProgServ1 à la HEIG-VD, Suisse
-url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours//01-contenus-du-cours/04-tableaux-et-boucles/presentation.html
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours//01-contenus-du-cours/03-tableaux-et-boucles/presentation.html
 header: "[**Tableaux et boucles**][contenu-complet-sur-github]"
 footer:
   "[**HEIG-VD**](https://heig-vd.ch) - [ProgServ1 Course
@@ -516,20 +516,36 @@ foreach ($users as $user) {
 // obtenir un résultat similaire (non décrit ici).
 ```
 
-## Fonctions utiles pour les tableaux et les boucles
+## Fonctions utiles pour les tableaux et les boucles (1)
+
+- Nous étudierons les fonctions plus en détail dans les prochains contenus, mais
+  voici la base :
+  - Une fonction est un ensemble d'instructions qui prend des entrées, effectue
+    une tâche spécifique et retourne un résultat.
+  - Inspirées des mathématiques, les fonctions sont utilisées pour effectuer des
+    calculs, manipuler des données, etc.
+  - Par ex. : $f(x) = x^2$, $f(1) = 1$, $f(2) = 4$, $f(3) = 9$, etc.
+
+## Fonctions utiles pour les tableaux et les boucles (2)
 
 - PHP propose plusieurs fonctions utiles pour travailler avec les tableaux et
   les boucles.
 - Ces fonctions permettent de manipuler les tableaux, de les trier, de les
   filtrer, de les transformer, etc.
-
-![bg right:40%][illustration-les-boucles]
+- La liste complète des fonctions possibles sur les tableaux est disponible dans
+  la documentation officielle de PHP
+  (<https://www.php.net/manual/fr/ref.array.php>), mais voici quelques-unes des
+  fonctions les plus courantes.
 
 ### Fonctions `print()` et `print_r()` (1)
 
 - La fonction `print()` affiche une chaîne de caractères (équivalent à `echo`).
-- La fonction `print_r()` affiche une représentation lisible d'une variable,
-  généralement utilisée pour afficher des tableaux ou des objets.
+- La fonction `print_r()` permet d'afficher un tableau et ses éléments de
+  manière lisible.
+
+Pour se souvenir de la différence : le `r` de `print_r()` peut être associé à
+"recursive" (récursif en anglais) : affiche les éléments d'un tableau, puis les
+éléments des tableaux imbriqués à l'intérieur de ce tableau, et ainsi de suite.
 
 ### Fonctions `print()` et `print_r()` (2)
 
@@ -605,7 +621,8 @@ Est-ce que vous avez des questions ?
 - Réaliser le [mini-projet][mini-projet].
 - Poser des questions si nécessaire.
 
-**N'hésitez pas à vous entraidez si vous avez des difficultés !**
+**N'allez pas trop vite, vous avez le temps !** N'hésitez pas à vous entraidez
+si vous avez des difficultés.
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
@@ -641,13 +658,13 @@ Est-ce que vous avez des questions ?
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [contenu-complet-sur-github]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-tableaux-et-boucles/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-tableaux-et-boucles/README.md
 [exemples-de-code]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-tableaux-et-boucles/01-exemples-de-code/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-tableaux-et-boucles/01-exemples-de-code/README.md
 [exercices]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-tableaux-et-boucles/02-exercices/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-tableaux-et-boucles/02-exercices/README.md
 [mini-projet]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-tableaux-et-boucles/03-mini-projet/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-tableaux-et-boucles/03-mini-projet/README.md
 
 <!-- Illustrations -->
 

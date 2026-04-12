@@ -11,9 +11,9 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 > **Ressources annexes**
 >
 > - Autres formats :
->   [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/04-tableaux-et-boucles/presentation.html)
+>   [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-tableaux-et-boucles/presentation.html)
 >   ·
->   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/04-tableaux-et-boucles/04-tableaux-et-boucles-presentation.pdf).
+>   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-tableaux-et-boucles/03-tableaux-et-boucles-presentation.pdf).
 > - Exemples de code : [Code source](./01-exemples-de-code/README.md).
 > - Exercices : [Énoncés et solutions](./02-exercices/README.md).
 > - Mini-projet : [Consignes](./03-mini-projet/README.md).
@@ -104,20 +104,8 @@ Les tableaux et les boucles sont des concepts fondamentaux en programmation et
 sont utilisés dans de nombreux programmes et applications, notamment pour
 stocker et parcourir une collection d'animaux de compagnie.
 
-De façon plus concise, les personnes qui étudient devraient être capables de :
-
-- Décrire les tableaux et leurs caractéristiques.
-- Décrire la différence entre les tableaux indexés, les tableaux associatifs et
-  les tableaux multidimensionnels.
-- Utiliser et manipuler des tableaux (indexés, associatifs et
-  multidimensionnels).
-- Décrire les boucles et leurs caractéristiques.
-- Décrire la différence entre les boucles `for`, `while`, `do...while` et
-  `foreach`.
-- Utiliser les boucles pour parcourir des tableaux et des collections de
-  données.
-- Utiliser quelques fonctions utiles pour travailler avec les tableaux et les
-  boucles.
+La liste complète des objectifs est disponible dans la section _"Objectifs"_ du
+bloc d'information en haut de ce contenu.
 
 ## Les tableaux
 
@@ -127,9 +115,9 @@ collections de données, comme une liste de noms, une liste de nombres, etc.
 
 Il existe plusieurs types de tableaux en PHP :
 
-- Les tableaux indexés
-- Les tableaux associatifs
-- Les tableaux multidimensionnels
+- Les tableaux indexés.
+- Les tableaux associatifs.
+- Les tableaux multidimensionnels.
 
 Chaque type de tableau a ses propres caractéristiques et peut être utilisé pour
 différents types de données.
@@ -427,10 +415,10 @@ PHP propose plusieurs types de boucles pour parcourir des tableaux ou des
 collections de données. Voici les principaux types de boucles que vous
 rencontrerez :
 
-- La boucle `for`
-- La boucle `while`
-- La boucle `do...while`
-- La boucle `foreach`
+- La boucle `for`.
+- La boucle `while`.
+- La boucle `do...while`.
+- La boucle `foreach`.
 
 ### Boucle `for`
 
@@ -465,9 +453,9 @@ Dans cet exemple, nous avons une boucle `for` qui affiche les nombres de 0 à 9.
 
 La boucle `for` est composée de trois parties :
 
-1. L'initialisation du compteur (`$i = 0`)
-2. La condition d'arrêt (`$i < 10`)
-3. L'incrémentation du compteur (`$i++`)
+1. L'initialisation du compteur (`$i = 0`).
+2. La condition d'arrêt (`$i < 10`).
+3. L'incrémentation du compteur (`$i++`).
 
 Si `$i` est inférieur à 10, la boucle continue. Sinon, la boucle s'arrête.
 
@@ -693,18 +681,56 @@ associatif.
 
 ## Fonctions utiles pour les tableaux et les boucles
 
-PHP propose plusieurs fonctions pour travailler avec des tableaux. La
-documentation officielle de PHP contient une liste complète de ces
-fonctions[^php-fonctions-sur-les-tableaux] mais voici quelques-unes des plus
-utiles.
+Nous étudierons les fonctions plus en détails dans lors de la prochaine séance,
+mais voici une description de base pour comprendre leur utilité.
+
+Inspirée des mathématiques, une fonction est un ensemble d'instructions qui
+prend des entrées, effectue une tâche spécifique et retourne un résultat. Une
+fonction permet d'effectuer des calculs, de manipuler des données ou d'exécuter
+des actions spécifiques.
+
+Par exemple, en mathématiques, la fonction $f(x) = x^2$ prend un nombre $x$ en
+entrée et retourne le carré de ce nombre. Ainsi, lorsque nous appelons la
+fonction avec une valeur spécifique, comme $f(3)$, elle retourne $9$.
+
+En programmation, les fonctions ont le même rôle et PHP propose de nombreuses
+fonctions intégrées pour effectuer des tâches courantes, comme travailler avec
+des tableaux et des boucles.
+
+Une liste complète de ces fonctions pour travailler avec les tableaux et les
+boucles est disponible dans la documentation officielle de PHP
+(<https://www.php.net/manual/fr/ref.array.php>) mais voici quelques-unes des
+plus utiles.
 
 ### Fonctions `print()` et `print_r()`
 
 La fonction `print()` affiche une chaîne de caractères à l'écran. Il s'agit
 d'une alternative à la fonction `echo`.
 
-La fonction `print_r()` affiche des informations sur une variable, y compris sa
-structure et son contenu. Elle est très utile pour afficher des tableaux.
+```php
+<?php
+$message = "Hello, world!";
+
+print($message);
+```
+
+```text
+Hello, world!
+```
+
+La fonction `print()` prend en paramètre `$message` et affiche la valeur de
+cette variable à l'écran.
+
+La fonction `print()` est très utile pour afficher des messages ou des
+informations à l'écran, mais elle n'est pas très adaptée pour afficher des
+tableaux ou des structures de données complexes.
+
+La fonction `print_r()` permet, elle, d'afficher des structures profondes, dont
+les tableaux. Un moyen mnémotechnique pour se souvenir de la différence entre
+`print()` et `print_r()` est que le `r` de `print_r()` peut être associé à
+"recursive" (récursif en anglais), ce qui signifie que cette fonction affiche
+les éléments d'un tableau, puis les éléments des tableaux imbriqués à
+l'intérieur de ce tableau, et ainsi de suite.
 
 ```php
 <?php
@@ -717,11 +743,8 @@ print_r($fruits);
 Array ( [0] => apple [1] => banana [2] => orange [3] => kiwi )
 ```
 
-La fonction `print_r()` affiche le tableau `$fruits` avec ses indices et ses
-valeurs.
-
-La fonction `print_r()` est très utile pour déboguer du code et afficher des
-informations sur les tableaux ou toute autre variable.
+La fonction `print_r()` prend en paramètre le tableau `$fruits` et affiche le
+tableau avec ses indices et ses valeurs.
 
 ### Fonction `count()`
 
@@ -772,7 +795,7 @@ fin du tableau.
 
 ## Conclusion
 
-Dans cette session, nous avons vu comment utiliser les tableaux et les boucles
+Dans cette séance, nous avons vu comment utiliser les tableaux et les boucles
 pour stocker et parcourir des collections de données.
 
 Nous avons également vu comment utiliser les fonctions de base pour travailler
@@ -827,9 +850,3 @@ il est recommandé pour la séance suivante de :
 
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
-
-<!-- Footnotes -->
-
-[^php-fonctions-sur-les-tableaux]:
-    Fonctions sur les tableaux,
-    [php.net](https://www.php.net/manual/fr/ref.array.php), 20 mars 2025
