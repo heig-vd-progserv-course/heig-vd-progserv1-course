@@ -1,17 +1,14 @@
 # Bases de données et PDO - Mini-projet
 
-Ce mini-projet est conçu pour vous permettre de mettre en pratique les concepts
-théoriques vus dans le cours _["Bases de données et PDO"](../README.md)_.
+L. Delafontaine, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot).
 
-## Ressources
+Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-- Théorie : [Support de cours](../README.md) ·
-  [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/index.html)
-  ·
-  [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/05-base-de-donnees-et-pdo/05-base-de-donnees-et-pdo-presentation.pdf)
-- Mini-projet : [Consignes](../03-mini-projet/README.md) ·
-  [Solution](../03-mini-projet/solution/README.md)
-- Exercices : [Énoncés et solutions](../02-exercices/README.md)
+> [!TIP]
+>
+> Toutes les informations relatives à ce contenu sont décrites dans le
+> [contenu principal](../README.md).
 
 ## Table des matières
 
@@ -37,7 +34,7 @@ théoriques vus dans le cours _["Bases de données et PDO"](../README.md)_.
 - [Conclusion](#conclusion)
 - [Aller plus loin](#aller-plus-loin)
 
-## Objectifs de la session
+## Objectifs
 
 Jusqu'à présent, vous avez créé une application PHP qui permet de gérer des
 animaux de compagnie qui sont stockés dans un tableau.
@@ -1585,3 +1582,8 @@ loin. Vous pouvez la sauter si vous n'avez pas de temps._
     solution la plus élégante, mais elle fonctionne.
 - Arrivez-vous à rendre la page d'accueil plus jolie en ajoutant des styles CSS
   ?
+
+<!-- URLs -->
+
+[licence]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md

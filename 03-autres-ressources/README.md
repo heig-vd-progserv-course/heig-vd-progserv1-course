@@ -18,15 +18,13 @@ préparation et la gestion du cours.
 ### Message envoyé aux personnes qui étudient avant le premier cours
 
 ```text
-[ProgServ1 2025-2026] Informations générales sur le cours
+Bonjour tout le monde,
 
-Bonjour @ProgServ1,
-
-J'espère que vous allez bien et que le semestre a bien débuté pour tout le monde.
+J'espère que vous allez bien et que vous profitez de vos vacances.
 
 Je serai votre enseignant pour le cours "Programmation serveur 1 (ProgServ1)". Je me réjouis de vous retrouver la semaine prochaine pour la première séance.
 
-Vous trouverez toutes les informations sur le cours dans le dépôt GitHub suivant : https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course.
+Vous trouverez toutes les informations sur le cours dans le dépôt GitHub suivant : https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course. Ce dépôt nous accompagnera tout au long du cours. Il n'y a rien à préparer ou lire en avance mais au moins vous avez déjà accès au point d'entrée du cours.
 
 Certaines séances sont encore en cours de relecture et de mise à jour. Pas que vous soyez étonné.es si vous voyez des changements dans les prochains jours et/ou durant le semestre.
 

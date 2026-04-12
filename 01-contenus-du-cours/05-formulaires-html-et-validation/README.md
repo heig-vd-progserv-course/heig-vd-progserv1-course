@@ -88,15 +88,8 @@ Nous allons également aborder la validation des formulaires, tant côté serveu
 que côté client. La validation est essentielle pour garantir la sécurité et
 l'intégrité des données, ainsi que pour améliorer l'expérience utilisateur.
 
-De façon plus concise, les personnes qui étudient devraient être capables de :
-
-- Créer des formulaires HTML pour collecter des données utilisateur.
-- Envoyer des données de formulaires au serveur à l'aide de PHP.
-- Récupérer les données envoyées par le formulaire à l'aide de PHP.
-- Expliquer la différence entre les méthodes `GET` et `POST`.
-- Valider les données saisies par l'utilisateur côté serveur et côté client.
-- Afficher des messages d'erreur clairs en cas de validation échouée.
-- Pré-remplir les champs de formulaire avec les valeurs précédemment saisies.
+La liste complète des objectifs est disponible dans la section _"Objectifs"_ du
+bloc d'information en haut de ce contenu.
 
 ## Formulaires HTML
 

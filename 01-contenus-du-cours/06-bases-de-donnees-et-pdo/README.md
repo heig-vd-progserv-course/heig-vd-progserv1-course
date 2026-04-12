@@ -91,14 +91,8 @@ intégré dans de nombreuses applications et langages de programmation.
 Nous allons étudier l'extension PDO de PHP, qui fournit une interface abstraite
 pour accéder et interagir avec différentes bases de données
 
-De façon plus concise, les personnes qui étudient devraient être capables de :
-
-- Expliquer les concepts de base des bases de données et des systèmes de gestion
-  de base de données (SGBD).
-- Utiliser l'extension PDO de PHP pour interagir avec une base de données
-- Créer une base de données SQLite et des tables avec PDO.
-- Insérer, mettre à jour, récupérer et supprimer des données dans une base de
-  données SQLite avec PDO.
+La liste complète des objectifs est disponible dans la section _"Objectifs"_ du
+bloc d'information en haut de ce contenu.
 
 ## Base de données
 

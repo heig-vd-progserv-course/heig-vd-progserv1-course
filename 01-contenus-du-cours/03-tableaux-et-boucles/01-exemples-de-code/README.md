@@ -1,4 +1,4 @@
-# Formulaires HTML et validation - Exemples de code
+# Tableaux et boucles - Exemples de code
 
 L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).

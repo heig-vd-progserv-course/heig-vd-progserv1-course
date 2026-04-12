@@ -164,10 +164,27 @@ questions relatives au cours :
 - Application web en PHP pour gérer des animaux de compagnie.
 - Permet de mettre en pratique le contenu théorique du cours.
 - À réaliser tout au long du cours de façon guidée.
-- A déployer en ligne pour être utilisée depuis n'importe où.
+- A déployer en ligne pour être accessible depuis n'importe où.
 - Je suis là pour vous aider.
 
 ![bg right:40% brightness:1.3][illustration-mini-projet]
+
+### _"J'ai fini, je peux partir ?"_
+
+<!-- _class: lead -->
+
+#### _"J'ai fini, je peux partir ?"_
+
+Si vous avez fini plus tôt, vous êtes libre de partir. Par contre, je vous
+encourage à :
+
+- Bien comprendre ce que vous avez fait.
+- Tester/expérimenter différentes choses.
+- Aider les personnes qui sont en difficulté.
+- Poser des questions.
+
+**Pas besoin de finir au plus vite.** Profitez de ce temps pour ancrer la
+matière ! Le temps investi maintenant sera récompensé plus tard.
 
 ## Modalités d'évaluation
 
@@ -204,7 +221,7 @@ Un seul examen final composé de deux parties :
   - et développer une solution.
 - Avec certaines ressources.
 
-➡️ **Basé sur votre exécution.**
+➡️ **Basé sur votre réalisation.**
 
 ![bg right:40%][illustration-modalites-devaluation]
 
@@ -231,7 +248,7 @@ Tout est décrit dans le document
 et de travailler sur le mini-projet.
 
 **Il est attendu à ce que vous travailliez hors du cours (peu mais
-régulièrement) pour acquérir correctement les compétences.**
+régulièrement) pour acquérir correctement la matière.**
 
 ## La programmation et l'anglais
 

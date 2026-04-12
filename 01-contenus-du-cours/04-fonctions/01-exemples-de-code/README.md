@@ -1,4 +1,4 @@
-# Formulaires HTML et validation - Exemples de code
+# Fonctions - Exemples de code
 
 L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).
