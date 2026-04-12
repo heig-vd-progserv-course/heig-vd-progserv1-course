@@ -1458,7 +1458,7 @@ nous vous recommandons de suivre les étapes suivantes :
    la solution.
 4. Accédez à la version spécifique de la solution correspondant à la séance en
    utilisant la commande `git checkout` avec le commit ou le tag correspondant à
-   la séance 1 (par exemple, `git checkout session-1`).
+   la séance (par exemple, `git checkout session-1`).
 5. Explorez le code de la solution pour comprendre comment les différentes
    fonctionnalités ont été implémentées et comment les concepts appris ont été
    appliqués dans la solution.

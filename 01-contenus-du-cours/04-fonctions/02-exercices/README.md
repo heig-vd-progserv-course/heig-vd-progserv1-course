@@ -56,6 +56,17 @@ modifications sur votre dépôt GitHub.
 Nous ne recommandons pas de structures particulières pour organiser les
 exercices. Vous êtes libre de les organiser comme vous le souhaitez.
 
+> [!TIP]
+>
+> Une personne ayant déjà suivi le cours a réalisé un petit script pour
+> automatiser la création de fichiers d'exercices et la mise à jour du fichier.
+>
+> Vous pouvez trouver ce script à l'adresse suivante :
+> <https://github.com/Harpogma/progserv1/blob/main/scripts/auto_files_creation.sh>.
+>
+> Merci à [Harpogma](https://github.com/Harpogma) pour ce script ! N'hésitez pas
+> à l'utiliser et à le modifier selon vos besoins.
+
 Voici quelques suggestions d'organisation pour les exercices dans le dossier
 `exercices` de votre projet :
 
