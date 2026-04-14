@@ -26,10 +26,6 @@
 			]
 		}
 	},
-	// Map the user's SSH directory to the container for SSH signing
-	"mounts": [
-		"type=bind,source=${localEnv:HOME}/.ssh,target=${localEnv:HOME}/.ssh,type=bind,consistency=cached"
-	],
 	// Ports to expose on the container's network host
 	"forwardPorts": [8080, 9090],
 	"portsAttributes": {

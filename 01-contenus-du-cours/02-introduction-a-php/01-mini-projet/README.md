@@ -20,6 +20,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Prérequis](#prérequis)
   - [Installer un éditeur de code](#installer-un-éditeur-de-code)
   - [Configurer l'éditeur de code](#configurer-léditeur-de-code)
+  - [Configurer SSH pour passer les clés SSH à un conteneur de développement](#configurer-ssh-pour-passer-les-clés-ssh-à-un-conteneur-de-développement)
   - [Valider l'installation et la configuration de l'environnement de développement local](#valider-linstallation-et-la-configuration-de-lenvironnement-de-développement-local)
 - [Ouvrir le projet localement](#ouvrir-le-projet-localement)
   - [Accéder à votre dépôt GitHub sur GitHub Classroom](#accéder-à-votre-dépôt-github-sur-github-classroom)
@@ -389,9 +390,10 @@ pour qu'il fonctionne correctement avec PHP.
 #### Configurer les raccourcis clavier pour Visual Studio Code
 
 Pas défaut, Visual Studio Code ne sauvegarde que le fichier courant lorsque vous
-appuyez sur `Ctrl + S` (Windows/Linux) ou `Cmd + S` (macOS). Pour sauvegarder
-tous les fichiers ouverts dans Visual Studio Code, vous devez configurer les
-raccourcis clavier pour qu'ils sauvegardent tous les fichiers.
+appuyez sur <kbd>Ctrl</kbd> + <kbd>S</kbd> (Windows/Linux) ou <kbd>Cmd</kbd> +
+<kbd>S</kbd> (macOS). Pour sauvegarder tous les fichiers ouverts dans Visual
+Studio Code, vous devez configurer les raccourcis clavier pour qu'ils
+sauvegardent tous les fichiers.
 
 Pour ce faire, suivez les étapes suivantes :
 
@@ -408,8 +410,8 @@ Pour ce faire, suivez les étapes suivantes :
 2. Recherchez `File: Save All Files` dans la barre de recherche.
 3. Assignez les touches de raccourci de votre choix pour sauvegarder tous les
    fichiers ouverts dans Visual Studio Code. Nous vous recommandons d'utiliser
-   utiliser `Ctrl + S` (Windows/Linux) ou `Cmd + S` (macOS) à des fins de
-   facilité.
+   utiliser <kbd>Ctrl</kbd> + <kbd>S</kbd> (Windows/Linux) ou <kbd>Cmd</kbd> +
+   <kbd>S</kbd> (macOS) à des fins de facilité.
 
    <details>
    <summary>Afficher la capture d'écran illustrant l'étape</summary>
@@ -429,6 +431,262 @@ Pour cela, suivez la documentation officielle de GitHub Copilot pour désactiver
 les suggestions de code dans Visual Studio Code :
 <https://docs.github.com/en/copilot/how-tos/configure-personal-settings/configure-in-ide?tool=vscode#enabling-or-disabling-github-copilot-inline-suggestions>.
 
+### Configurer SSH pour passer les clés SSH à un conteneur de développement
+
+Afin que l'environnement de développement local puisse interagir avec GitHub
+dans le conteneur de développement, il est nécessaire de configurer l'agent SSH
+sur votre ordinateur hôte pour que les clés SSH soient passées au conteneur de
+développement.
+
+L'agent SSH est un programme qui gère les clés SSH et permet de les utiliser
+pour s'authentifier auprès de services comme GitHub sans avoir à entrer votre
+mot de passe de votre clé SSH(la passphrase) à chaque fois. Il conserve
+également vos clés SSH en mémoire et peut les fournir aux applications qui en
+ont besoin, comme Git ou le conteneur de développement, pour s'authentifier
+auprès de GitHub.
+
+Cela signifie que votre clé SSH doit être chargée dans l'agent SSH de votre
+ordinateur pour que le conteneur puisse ensuite l'utiliser.
+
+La validation de la configuration dépend de votre système d'exploitation :
+
+- [Windows](#windows).
+- [macOS et Linux](#macos-et-linux).
+
+Les sources utilisées pour cette section sont les suivantes :
+
+- <https://code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials>.
+- <https://stackoverflow.com/questions/70206554/share-ssh-keys-with-vs-code-devcontainer-running-with-dockers-wsl2-backend>.
+
+#### Windows
+
+Actuellement, il existe une contrainte avec l'utilisation de l'agent SSH de
+Windows dans un conteneur de développement : afin que l'environnement de
+développement puisse utiliser votre clé SSH, celle-ci doit être présente dans
+l'agent SSH de Windows (et pas seulement dans l'agent SSH de WSL).
+
+Il est donc nécessaire de configurer l'agent SSH sur Windows et de charger votre
+clé SSH dans l'agent SSH de Windows pour que le conteneur de développement
+puisse utiliser votre clé SSH et vous permettre d'interagir avec GitHub depuis
+le conteneur de développement.
+
+Les étapes suivantes vous guideront pour configurer l'agent SSH de Windows et
+charger votre clé SSH dans l'agent SSH de Windows.
+
+##### Valider que l'agent SSH est démarré
+
+Ouvrez un terminal PowerShell en mode administrateur et exécutez la commande
+suivante pour vérifier si l'agent a connaissance des clés SSH disponibles :
+
+> [!WARNING]
+>
+> Assurez-vous d'ouvrir un terminal **PowerShell** en **mode administrateur**
+> pour exécuter les commandes suivantes.
+
+```powershell
+ssh-add.exe -l
+```
+
+Trois scénarios sont possibles :
+
+1. `Error connecting to agent: No such file or directory.` : cela signifie que
+   l'agent SSH n'est pas en cours d'exécution. Vous devez démarrer l'agent SSH
+   en utilisant les commandes suivantes :
+
+   ```powershell
+   Get-Service ssh-agent | Set-Service -StartupType Automatic
+
+   Start-Service ssh-agent
+   ```
+
+   Puis retestez la commande SSH précédente en début de la section
+   [Valider que l'agent SSH est démarré](#valider-que-lagent-ssh-est-démarré).
+   Si une erreur continue à s'afficher, faites appel à l'équipe pédagogique pour
+   résoudre le problème.
+
+2. `The agent has no identities.` : cela signifie que l'agent SSH est en cours
+   d'exécution, mais qu'aucune clé SSH n'est chargée dans l'agent.
+
+   Fermez le terminal PowerShell. Vous pouvez ensuite passer à la section
+   [Ajouter la clé SSH à l'agent SSH de votre ordinateur](#ajouter-la-clé-ssh-à-lagent-ssh-de-votre-ordinateur).
+
+3. Un résultat similaire à celui présenté ci-dessous :
+
+   ```text
+   256 SHA256:naCCKCyb1yC41QaCHwlcy2KiHF6uYsphKSczwGbm/u0 ludovic.delafontaine@gmail.com (ED25519)
+   ```
+
+   Cela signifie que l'agent SSH est en cours d'exécution et que la clé SSH est
+   chargée dans l'agent et que tout devrait être en ordre pour la suite du
+   cours.
+
+   Fermez le terminal PowerShell. Vous pouvez maintenant passer à la section
+   [Valider l'installation et la configuration de l'environnement de développement local](#valider-linstallation-et-la-configuration-de-lenvironnement-de-développement-local).
+
+##### Copier les clés SSH de WSL vers Windows
+
+Les clés SSH que vous avez générés au travers du cours _"Outils de
+développement"_ ont été générés dans l'environnement WSL (ce qui est une très
+bonne chose). Il est (malheureusement) nécessaire de les copier (et ainsi les
+dupliquer à deux endroits...) dans l'environnement Windows pour que l'agent SSH
+de Windows puisse les utiliser.
+
+> [!NOTE]
+>
+> Je (Ludovic) ne suis vraiment pas satisfait de cette contrainte, mais
+> malheureusement, c'est la seule solution que j'aie trouvé pour que le
+> conteneur de développement puisse "facilement" utiliser votre clé SSH et vous
+> permettre d'interagir avec GitHub depuis le conteneur de développement.
+>
+> Je suis désolé pour ce désagrément et j'espère qu'une meilleure solution sera
+> disponible à l'avenir pour éviter cette duplication de clés SSH entre WSL et
+> Windows.
+
+Pour cela, ouvrez un terminal WSL (Ubuntu) et exécutez la commande suivante pour
+copier les clés SSH de WSL vers Windows :
+
+> [!WARNING]
+>
+> Assurez-vous d'ouvrir un terminal **WSL (Ubuntu)** pour exécuter les commandes
+> suivantes.
+
+> [!WARNING]
+>
+> Si votre clé SSH porte un autre nom que `id_ed25519`, remplacez `id_ed25519`
+> par le nom de votre fichier de clé SSH dans les commandes suivantes.
+
+```bash
+export WINDOWS_USERNAME=$(powershell.exe '$env:USERNAME' | tr -d '\r')
+
+mkdir /mnt/c/Users/${WINDOWS_USERNAME}/.ssh/
+
+cp ~/.ssh/id_ed25519* /mnt/c/Users/${WINDOWS_USERNAME}/.ssh/
+```
+
+Votre clé SSH est maintenant copiée dans l'environnement Windows. Si besoin,
+vous pouvez les retrouver dans `C:\Users\<votre-nom>\.ssh\`.
+
+Vous pouvez maintenant passer à la section
+[Ajouter la clé SSH à l'agent SSH de votre ordinateur](#ajouter-la-clé-ssh-à-lagent-ssh-de-votre-ordinateur).
+
+##### Ajouter la clé SSH à l'agent SSH de votre ordinateur
+
+Ouvrez un terminal PowerShell et exécutez la commande suivante pour charger
+votre clé SSH dans l'agent SSH de Windows :
+
+> [!WARNING]
+>
+> Assurez-vous d'ouvrir un terminal **PowerShell** pour exécuter la commande
+> suivante.
+
+```powershell
+ssh-add.exe $env:USERPROFILE\.ssh\id_ed25519
+```
+
+Remplacez `id_ed25519` par le nom de votre fichier de clé SSH si vous avez
+utilisé un autre nom lors de la création de votre clé SSH.
+
+Puis validez que la clé SSH est bien chargée dans l'agent SSH de Windows en
+suivant les étapes à l'aide de la commande suivante :
+
+```powershell
+ssh-add.exe -l
+```
+
+Le résultat devrait être similaire à ceci, indiquant que l'agent SSH est en
+cours d'exécution et que la clé SSH est chargée dans l'agent :
+
+```text
+256 SHA256:naCCKCyb1yC41QaCHwlcy2KiHF6uYsphKSczwGbm/u0 ludovic.delafontaine@gmail.com (ED25519)
+```
+
+Vous pouvez maintenant passer à la section
+[Valider l'installation et la configuration de l'environnement de développement local](#valider-linstallation-et-la-configuration-de-lenvironnement-de-développement-local).
+
+#### macOS et Linux
+
+macOS et Linux utilisent généralement l'agent SSH de manière native, et les clés
+SSH sont généralement chargées automatiquement dans l'agent SSH lors de leur
+création.
+
+Il est néanmoins important de vérifier que l'agent SSH est bien démarré pour la
+suite du cours.
+
+Les étapes suivantes vous guideront pour vérifier que l'agent SSH est démarré et
+que votre clé SSH est chargée dans l'agent SSH.
+
+##### Valider que l'agent SSH est démarré
+
+Ouvrez un terminal et exécutez la commande suivante pour vérifier si l'agent a
+connaissance des clés SSH disponibles :
+
+```bash
+ssh-add -l
+```
+
+Trois scénarios sont possibles :
+
+1. `Could not open a connection to your authentication agent.` : cela signifie
+   que l'agent SSH n'est pas en cours d'exécution. Vous devez démarrer l'agent
+   SSH en utilisant la commande suivante :
+
+   ```bash
+   eval "$(ssh-agent -s)"
+   ```
+
+   Puis retestez la commande SSH précédente en début de la section
+   [Valider que l'agent SSH est démarré](#valider-que-lagent-ssh-est-démarré-1).
+   Si une erreur continue à s'afficher, faites appel à l'équipe pédagogique pour
+   résoudre le problème.
+
+2. `The agent has no identities.` : cela signifie que l'agent SSH est en cours
+   d'exécution, mais qu'aucune clé SSH n'est chargée dans l'agent.
+
+   Vous pouvez ensuite passer à la section
+   [Ajouter la clé SSH à l'agent SSH de votre ordinateur](#ajouter-la-clé-ssh-à-lagent-ssh-de-votre-ordinateur-1).
+
+3. Un résultat similaire à celui présenté ci-dessous :
+
+   ```text
+   256 SHA256:naCCKCyb1yC41QaCHwlcy2KiHF6uYsphKSczwGbm/u0 ludovic.delafontaine@gmail.com (ED25519)
+   ```
+
+   Cela signifie que l'agent SSH est en cours d'exécution et que la clé SSH est
+   chargée dans l'agent et que tout devrait être en ordre pour la suite du
+   cours.
+
+   Vous pouvez maintenant passer à la section
+   [Valider l'installation et la configuration de l'environnement de développement local](#valider-linstallation-et-la-configuration-de-lenvironnement-de-développement-local).
+
+##### Ajouter la clé SSH à l'agent SSH de votre ordinateur
+
+Ensuite, vous devez charger votre clé SSH dans l'agent en utilisant la commande
+suivante :
+
+```bash
+ssh-add ~/.ssh/id_ed25519
+```
+
+Remplacez `id_ed25519` par le nom de votre fichier de clé SSH si vous avez
+utilisé un autre nom lors de la création de votre clé SSH.
+
+Puis validez que la clé SSH est bien chargée dans l'agent SSH de Windows en
+suivant les étapes à l'aide de la commande suivante :
+
+```powershell
+ssh-add -l
+```
+
+Le résultat devrait être similaire à ceci, indiquant que l'agent SSH est en
+cours d'exécution et que la clé SSH est chargée dans l'agent :
+
+```text
+256 SHA256:naCCKCyb1yC41QaCHwlcy2KiHF6uYsphKSczwGbm/u0 ludovic.delafontaine@gmail.com (ED25519)
+```
+
+Vous pouvez maintenant passer à la section
+[Valider l'installation et la configuration de l'environnement de développement local](#valider-linstallation-et-la-configuration-de-lenvironnement-de-développement-local).
+
 ### Valider l'installation et la configuration de l'environnement de développement local
 
 - [x] Git est installé et fonctionnent correctement.
@@ -438,6 +696,7 @@ les suggestions de code dans Visual Studio Code :
 - [x] L'extension SQLite Viewer pour Visual Studio Code est installée.
 - [x] Les suggestions de code de GitHub Copilot sont désactivées dans Visual
       Studio Code.
+- [x] La clé SSH est bien chargée dans l'agent SSH.
 
 ## Ouvrir le projet localement
 
@@ -551,10 +810,17 @@ Pour ce faire, suivez les étapes suivantes :
 1. Naviguez dans le dossier du projet cloné dans votre terminal (à l'aide de la
    commande `cd`, par exemple :
    `cd progserv1-2025-2026-mini-projet-et-exercices-<github-username>`).
-2. Visual Studio Code ouvrira le dossier du projet. Un avertissement de sécurité
+2. Ouvrez le dossier du projet dans Visual Studio Code en utilisant la commande
+   suivante dans votre terminal :
+
+   ```bash
+   code .
+   ```
+
+3. Visual Studio Code ouvrira le dossier du projet. Un avertissement de sécurité
    pourrait vous demander si vous faites confiance aux auteurs du dossier.
    Cliquez sur le bouton **Yes, I trust the authors** pour continuer.
-3. Visual Studio Code affichera tous les fichiers et dossiers du projet dans
+4. Visual Studio Code affichera tous les fichiers et dossiers du projet dans
    l'explorateur de fichiers situé à gauche de la fenêtre.
 
 Votre projet est maintenant ouvert dans Visual Studio Code. Vous pouvez fermer
