@@ -508,7 +508,7 @@ Trois scénarios sont possibles :
    d'exécution, mais qu'aucune clé SSH n'est chargée dans l'agent.
 
    Fermez le terminal PowerShell. Vous pouvez ensuite passer à la section
-   [Ajouter la clé SSH à l'agent SSH de votre ordinateur](#ajouter-la-clé-ssh-à-lagent-ssh-de-votre-ordinateur).
+   [Copier les clés SSH de WSL vers Windows](#copier-les-clés-ssh-de-wsl-vers-windows).
 
 3. Un résultat similaire à celui présenté ci-dessous :
 

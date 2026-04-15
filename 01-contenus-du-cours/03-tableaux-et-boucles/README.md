@@ -82,6 +82,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 - [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
 - [Mini-projet](#mini-projet)
+- [Questions d'évaluation](#questions-dévaluation)
 - [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
 
 ## Objectifs
@@ -834,6 +835,30 @@ mettre en pratique les concepts abordés.
 
 Vous trouverez les détails du mini-projet ici :
 [Mini-projet](./03-mini-projet/README.md).
+
+## Questions d'évaluation
+
+> [!NOTE]
+>
+> Les questions d'évaluation sont destinées à vous aider à vérifier votre
+> compréhension des concepts abordés dans le cours. Elles ne sont pas destinées
+> à être utilisées comme une liste de contrôle exhaustive des compétences à
+> maîtriser.
+>
+> Il est recommandé de les utiliser comme un guide pour vous aider à identifier
+> les domaines dans lesquels vous pourriez avoir besoin de renforcer vos
+> connaissances ou de pratiquer davantage.
+
+- Qu'est-ce qu'un tableau en PHP et à quoi sert-il ?
+- Quelle est la différence entre un tableau indexé, un tableau associatif et un
+  tableau multidimensionnel ?
+- Comment accéder à un élément d'un tableau en utilisant son index ou sa clé ?
+- Comment parcourir un tableau en utilisant une boucle `for`, `while`,
+  `do...while` ou `foreach` ?
+- Quelles sont les fonctions utiles pour travailler avec les tableaux et les
+  boucles, et comment les utiliser ?
+- Comment utiliser les tableaux et les boucles pour stocker et parcourir une
+  collection d'animaux de compagnie ?
 
 ## À faire pour la semaine suivante
 
