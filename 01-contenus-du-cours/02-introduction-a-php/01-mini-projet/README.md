@@ -558,9 +558,9 @@ copier les clés SSH de WSL vers Windows :
 ```bash
 export WINDOWS_USERNAME=$(powershell.exe '$env:USERNAME' | tr -d '\r')
 
-mkdir /mnt/c/Users/${WINDOWS_USERNAME}/.ssh/
+mkdir "/mnt/c/Users/${WINDOWS_USERNAME}/.ssh/"
 
-cp ~/.ssh/id_ed25519* /mnt/c/Users/${WINDOWS_USERNAME}/.ssh/
+cp ~/.ssh/id_ed25519* "/mnt/c/Users/${WINDOWS_USERNAME}/.ssh/"
 ```
 
 Votre clé SSH est maintenant copiée dans l'environnement Windows. Si besoin,
@@ -580,7 +580,7 @@ votre clé SSH dans l'agent SSH de Windows :
 > suivante.
 
 ```powershell
-ssh-add.exe $env:USERPROFILE\.ssh\id_ed25519
+ssh-add.exe "$env:USERPROFILE\.ssh\id_ed25519"
 ```
 
 Remplacez `id_ed25519` par le nom de votre fichier de clé SSH si vous avez
