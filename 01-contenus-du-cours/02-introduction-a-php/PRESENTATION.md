@@ -886,11 +886,11 @@ si vous avez des difficultés.
 [contenu-complet-sur-github]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/02-introduction-a-php/README.md
 [mini-projet]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-mini-projet/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-contenus-du-cours/02-introduction-a-php/01-mini-projet/README.md
 [exemples-de-code]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/02-exemples-de-code/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-contenus-du-cours/02-introduction-a-php/02-exemples-de-code/README.md
 [exercices]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/03-exercices/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/02-introduction-a-php/03-exercices/README.md
 
 <!-- Illustrations -->
 
