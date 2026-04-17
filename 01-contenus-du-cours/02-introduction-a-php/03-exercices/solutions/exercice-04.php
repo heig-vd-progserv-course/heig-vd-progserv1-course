@@ -1,4 +1,4 @@
 <?php
-const PI = 3.14;
+$name = "Your name";
 
-echo PI;
+echo "Hello, $name !";

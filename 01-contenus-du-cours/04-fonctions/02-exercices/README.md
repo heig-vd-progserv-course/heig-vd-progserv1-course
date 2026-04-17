@@ -40,7 +40,15 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Exercice 23](#exercice-23)
   - [Exercice 24](#exercice-24)
   - [Exercice 25](#exercice-25)
-  - [Exercice 26 - Exercice bonus](#exercice-26---exercice-bonus)
+  - [Exercice 26](#exercice-26)
+  - [Exercice 27](#exercice-27)
+  - [Exercice 28](#exercice-28)
+  - [Exercice 29 - Bonus](#exercice-29---bonus)
+  - [Exercice 30 - Bonus](#exercice-30---bonus)
+  - [Exercice 31 - Bonus](#exercice-31---bonus)
+  - [Exercice 32 - Bonus](#exercice-32---bonus)
+  - [Exercice 33 - Bonus](#exercice-33---bonus)
+  - [Exercice 34 - Bonus](#exercice-34---bonus)
 
 ## Utilisation avec Git/GitHub
 
@@ -182,7 +190,7 @@ doit retourner le message _"Division by zero is not allowed."_.
 ```php
 <?php
 function divide(int|float $a, int|float $b): string|int|float {
-    if ($b == 0) {
+    if ($b === 0) {
         return "Division by zero is not allowed.";
     } else {
         return $a / $b;
@@ -279,7 +287,7 @@ si le nombre `10` est pair, puis affichez _"Even"_ ou _"Odd"_ en conséquence.
 ```php
 <?php
 function isEven(int $number): bool {
-    return $number % 2 == 0;
+    return $number % 2 === 0;
 }
 
 $result = isEven(10);
@@ -381,7 +389,7 @@ sont bissextiles. Affichez _"Bissextile"_ ou _"Non bissextile"_ en conséquence.
 ```php
 <?php
 function isLeapYear(int $year): bool {
-    return ($year % 4 == 0 && $year % 100 != 0) || $year % 400 == 0;
+    return ($year % 4 === 0 && $year % 100 != 0) || $year % 400 == 0;
 }
 
 if (isLeapYear(1900)) {
@@ -884,7 +892,7 @@ par `3`.
 ```php
 <?php
 function isDivisibleBy(int $a, int $b): bool {
-    return $b != 0 && $a % $b == 0;
+    return $b != 0 && $a % $b === 0;
 }
 
 if (isDivisibleBy(10, 2)) {
@@ -907,51 +915,7 @@ if (isDivisibleBy(10, 3)) {
 
 </details>
 
-### Exercice 26 - Exercice bonus
-
-> [!NOTE]
->
-> Cet exercice est un exercice bonus. Il est totalement optionnel.
-
-Déclarez une fonction `factorial` qui prend un paramètre `$number` et retourne
-la factorielle de ce nombre. Utilisez cette fonction pour calculer `5!`.
-
-Pour rappel, la factorielle d'un nombre est le produit de tous les entiers
-positifs inférieurs ou égaux à ce nombre[^factorielle] :
-
-- $n! = n \times (n - 1)!$
-- $0! = 1$
-
-Par exemple, $5! = 5 * 4 * 3 * 2 * 1 = 120$.
-
-Il est donc possible de définir la fonction `factorial` de manière récursive (la
-fonction s'appelle elle-même) en utilisant ces propriétés.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```php
-<?php
-function factorial(int $number): int {
-    if ($number == 0) {
-        return 1;
-    }
-
-    return $number * factorial($number - 1);
-}
-
-$result = factorial(5);
-
-echo $result;
-```
-
-```text
-120
-```
-
-</details>
-
-### Exercice 10
+### Exercice 26
 
 Ce bout de code contient différentes erreurs. Saurez-vous les identifier ? Pour
 chaque erreur, expliquez pourquoi elle est incorrecte et proposez une
@@ -1003,7 +967,7 @@ Banane
 
 </details>
 
-### Exercice 11
+### Exercice 27
 
 En utilisant la documentation officielle de PHP sur les fonctions `range` :
 <https://www.php.net/manual/fr/function.range.php> et `shuffle` :
@@ -1043,12 +1007,16 @@ Array ( [0] => 3 [1] => 6 [2] => 7 [3] => 9 [4] => 1 [5] => 10 [6] => 8 [7] => 5
 
 </details>
 
-### Exercice 12
+### Exercice 28
 
 En utilisant la documentation officielle de PHP sur la fonction `sort` :
 <https://www.php.net/manual/fr/function.sort.php>, utilisez la fonction `sort`
-pour trier le tableau `$fruits` de l'[exercice 1](#exercice-1) par ordre
-alphabétique.
+pour trier le tableau `$fruits` suivant par ordre alphabétique :
+
+```php
+<?php
+$fruits = ["Pomme", "Poire", "Banane", "Cerise", "Fraise"];
+```
 
 Affichez le contenu du tableau avec la fonction `print_r`.
 
@@ -1069,12 +1037,79 @@ Array ( [0] => Banane [1] => Cerise [2] => Fraise [3] => Poire [4] => Pomme )
 
 </details>
 
-### Exercice 13 - Bonus
+### Exercice 29 - Bonus
+
+> [!NOTE]
+>
+> Cet exercice est un exercice bonus. Il est totalement optionnel.
+
+Déclarez une fonction `factorial` qui prend un paramètre `$number` et retourne
+la factorielle de ce nombre. Utilisez cette fonction pour calculer `5!`.
+
+Pour rappel, la factorielle d'un nombre est le produit de tous les entiers
+positifs inférieurs ou égaux à ce nombre[^factorielle] :
+
+- $n! = n \times (n - 1)!$
+- $0! = 1$
+
+Par exemple, $5! = 5 * 4 * 3 * 2 * 1 = 120$.
+
+Il est donc possible de définir la fonction `factorial` de manière récursive (la
+fonction s'appelle elle-même) en utilisant ces propriétés.
+
+<details>
+<summary>Afficher la réponse</summary>
+
+```php
+<?php
+function factorial(int $number): int {
+    if ($number === 0) {
+        return 1;
+    }
+
+    return $number * factorial($number - 1);
+}
+
+$result = factorial(5);
+
+echo $result;
+```
+
+```text
+120
+```
+
+</details>
+
+### Exercice 30 - Bonus
+
+> [!NOTE]
+>
+> Cet exercice est un exercice bonus. Il est totalement optionnel.
 
 En utilisant la documentation officielle de PHP sur la fonction `usort` :
 <https://www.php.net/manual/fr/function.usort.php>, utilisez la fonction `usort`
-pour trier le tableau `$people` de l'[exercice 4](#exercice-4) par ordre
-croissant de l'âge.
+pour trier le tableau `$people` suivant par ordre croissant de l'âge :
+
+```php
+$people = [
+    [
+        "name" => "John Doe",
+        "age" => 30,
+        "city" => "New York"
+    ],
+    [
+        "name" => "Jane Doe",
+        "age" => 25,
+        "city" => "Los Angeles"
+    ],
+    [
+        "name" => "Alice Smith",
+        "age" => 35,
+        "city" => "Chicago"
+    ]
+];
+```
 
 **Indice** : vous allez devoir déclarer une fonction de comparaison pour trier
 le tableau selon l'age. Cette fonction prend deux paramètres `$a` et `$b` et
@@ -1123,13 +1158,17 @@ print_r($people);
 
 </details>
 
-### Exercice 14 - Bonus
+### Exercice 31 - Bonus
+
+> [!NOTE]
+>
+> Cet exercice est un exercice bonus. Il est totalement optionnel.
 
 En utilisant la documentation officielle de PHP sur les fonctions `usort` :
 <https://www.php.net/manual/fr/function.usort.php> et `strcmp` :
 <https://www.php.net/manual/fr/function.strcmp.php>, utilisez la fonction
-`usort` pour trier le tableau `$people` de l'[exercice 4](#exercice-4) par ordre
-alphabétique du nom.
+`usort` pour trier le tableau `$people` de l'[exercice 30](#exercice-30---bonus)
+par ordre alphabétique du nom.
 
 **Indice** : vous allez devoir déclarer une fonction de comparaison pour trier
 le tableau selon le nom. Cette fonction prend deux paramètres `$a` et `$b` et
@@ -1177,7 +1216,11 @@ Array ( [0] => Array ( [name] => Alice Smith [age] => 35 [city] => Chicago ) [1]
 
 </details>
 
-### Exercice 15 - Bonus
+### Exercice 32 - Bonus
+
+> [!NOTE]
+>
+> Cet exercice est un exercice bonus. Il est totalement optionnel.
 
 En utilisant la documentation officielle de PHP sur les fonctions `range` :
 <https://www.php.net/manual/fr/function.range.php> et `array_sum` :
@@ -1215,7 +1258,11 @@ echo sumRange($start, $end);
 
 </details>
 
-### Exercice 16 - Bonus
+### Exercice 33 - Bonus
+
+> [!NOTE]
+>
+> Cet exercice est un exercice bonus. Il est totalement optionnel.
 
 En utilisant la documentation officielle de PHP sur les fonctions `explode` :
 <https://www.php.net/manual/fr/function.explode.php>, `array_reverse` :
@@ -1250,7 +1297,11 @@ world! Hello,
 
 </details>
 
-### Exercice 17 - Bonus
+### Exercice 34 - Bonus
+
+> [!NOTE]
+>
+> Cet exercice est un exercice bonus. Il est totalement optionnel.
 
 En utilisant la documentation officielle de PHP sur les fonctions `array_map` :
 <https://www.php.net/manual/fr/function.array-map.php> et `strrev` :
@@ -1275,7 +1326,6 @@ Le résultat sera le suivant : _"olleh, world!"_.
 $string = "Hello, world!";
 $words = explode(" ", $string);
 $reversedWords = array_map('strrev', $words);
-
 $result = implode(" ", $reversedWords);
 
 echo $result;

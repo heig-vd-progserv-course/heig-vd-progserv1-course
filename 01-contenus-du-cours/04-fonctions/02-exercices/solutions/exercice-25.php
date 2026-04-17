@@ -1,6 +1,6 @@
 <?php
 function isDivisibleBy(int $a, int $b): bool {
-    return $b != 0 && $a % $b == 0;
+    return $b != 0 && $a % $b === 0;
 }
 
 if (isDivisibleBy(10, 2)) {

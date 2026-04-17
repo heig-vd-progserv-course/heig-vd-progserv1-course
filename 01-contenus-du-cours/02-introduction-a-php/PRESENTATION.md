@@ -59,7 +59,7 @@ document._
 - Expliquer les constantes en PHP.
 - Expliquer la nature dynamique des variables et constantes en PHP.
 - Expliquer les opérateurs en PHP.
-- Expliquer Les structures conditionnelles en PHP.
+- Expliquer les structures conditionnelles en PHP.
 - Rédiger du code PHP simple.
 
 ![bg right:40%][illustration-objectifs]

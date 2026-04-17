@@ -46,30 +46,30 @@ document._
 
 ## Objectifs (1)
 
-- Décrire ce qu'est une fonction en programmation
-- Déclarer une fonction en PHP
-- Appeler une fonction en PHP
-- Passer des paramètres à une fonction en PHP
-- Utiliser une valeur de retour
-- Expliquer ce qu'est une portée de variable
+- Décrire ce qu'est une fonction en programmation.
+- Déclarer une fonction en PHP.
+- Appeler une fonction en PHP.
+- Passer des paramètres à une fonction en PHP.
+- Utiliser une valeur de retour.
+- Expliquer ce qu'est une portée de variable.
 
 ![bg right:40%][illustration-objectifs]
 
 ## Objectifs (2)
 
-- Utiliser des variables globales
-- Savoir où trouver la documentation sur les fonctions prédéfinies en PHP
-- Utiliser des fonctions prédéfinies en PHP
-- Réutiliser du code avec des fonctions
+- Utiliser des variables globales.
+- Savoir où trouver la documentation sur les fonctions prédéfinies en PHP.
+- Utiliser des fonctions prédéfinies en PHP.
+- Réutiliser du code avec des fonctions.
 
 ![bg right:40%][illustration-objectifs]
 
 ## Qu'est-ce qu'une fonction ? (1)
 
-- Ensemble d'instructions pour effectuer une tâche spécifique
+- Ensemble d'instructions pour effectuer une tâche spécifique.
 - Inspirée des fonctions mathématiques :
-  - $f(x) = x^2$
-  - où $x$ est un paramètre
+  - Exemple : $f(x) = x^2$.
+  - $x$ est un paramètre.
   - $f(2) = 4$, $f(3) = 9$, etc.
 
 ![bg right:40%][illustration-quest-ce-quune-fonction]
@@ -77,20 +77,20 @@ document._
 ## Qu'est-ce qu'une fonction ? (2)
 
 - En programmation :
-  - Définie par un nom
-  - Peut accepter des paramètres
-  - Peut retourner une valeur
-- Permet de structurer le code
-- Peut être réutilisé à plusieurs endroits
+  - Définie par un nom.
+  - Peut accepter des paramètres.
+  - Peut retourner une valeur.
+- Permet de structurer le code.
+- Peut être réutilisé à plusieurs endroits.
 
 ![bg right:40%][illustration-quest-ce-quune-fonction]
 
 ## Déclarer une fonction en PHP (1)
 
-- En PHP, une fonction est déclarée avec le mot-clé `function`
-- Suivi du nom de la fonction
-- Suivi des paramètres entre parenthèses (`()`)
-- Suivi du corps de la fonction entre accolades (`{}`)
+- En PHP, une fonction est déclarée avec le mot-clé `function`.
+- Suivi du nom de la fonction.
+- Suivi des paramètres entre parenthèses (`()`).
+- Suivi du corps de la fonction entre accolades (`{}`).
 
 ![bg right:40%][illustration-declarer-une-fonction-en-php]
 
@@ -115,9 +115,9 @@ public class Main {
 ## Appeler une fonction en PHP (1)
 
 - Pour appeler une fonction, il suffit d'écrire son nom suivi de parenthèses
-  (`()`)
-- Les paramètres peuvent être passés entre les parenthèses
-- Une fonction peut être appelée plusieurs fois dans le code
+  (`()`).
+- Les paramètres peuvent être passés entre les parenthèses.
+- Une fonction peut être appelée plusieurs fois dans le code.
 
 ![bg right:40%][illustration-appeler-une-fonction-en-php]
 
@@ -153,11 +153,11 @@ public class Main {
 
 ## Passer des paramètres à une fonction (1)
 
-- Une fonction peut accepter des paramètres
+- Une fonction peut accepter des paramètres.
 - Les paramètres sont des valeurs que la fonction peut utiliser pour effectuer
-  une tâche
+  une tâche.
 - Les paramètres sont déclarés entre les parenthèses de la fonction, séparés par
-  des virgules (`,`)
+  des virgules (`,`).
 
 ![bg right:40%][illustration-passer-des-parametres-a-une-fonction]
 
@@ -190,10 +190,10 @@ public class Main {
 
 ## Retourner une valeur depuis une fonction (1)
 
-- Une fonction peut retourner une valeur
+- Une fonction peut retourner une valeur.
 - La valeur retournée peut être utilisée dans le code appelant (= le code qui
-  appelle la fonction)
-- La valeur retournée (unique) est définie avec le mot-clé `return`
+  appelle la fonction).
+- La valeur retournée (unique) est définie avec le mot-clé `return`.
 
 ![bg right:40%][illustration-retourner-une-valeur-depuis-une-fonction]
 
@@ -229,10 +229,10 @@ public class Main {
 
 ## Paramètres optionnels (1)
 
-- En PHP, il est possible de définir des paramètres optionnels
-- Les paramètres optionnels ont une valeur par défaut
+- En PHP, il est possible de définir des paramètres optionnels.
+- Les paramètres optionnels ont une valeur par défaut.
 - Les paramètres optionnels doivent être définis après les paramètres
-  obligatoires
+  obligatoires.
 
 ![bg right:40%][illustration-parametres-optionnels]
 
@@ -257,9 +257,9 @@ hello("Alice"); // Affiche "Hello, Alice!"
 
 ## Passer plusieurs paramètres à une fonction (1)
 
-- Une fonction peut accepter plusieurs paramètres
-- Les paramètres sont séparés par des virgules (`,`)
-- Les paramètres sont passés dans le même ordre que leur déclaration
+- Une fonction peut accepter plusieurs paramètres.
+- Les paramètres sont séparés par des virgules (`,`).
+- Les paramètres sont passés dans le même ordre que leur déclaration.
 
 ![bg right:40%][illustration-passer-plusieurs-parametres-a-une-fonction]
 
@@ -313,7 +313,7 @@ function add(float $x, float $y): float {
 ```
 
 ```php
-<?phpgiven
+<?php
 $result = add(3, "Hello");
 
 // Uncaught TypeError: add():
@@ -332,14 +332,65 @@ function add(int|float $x, int|float $y): float {
 }
 ```
 
-Les types de base sont `int`, `float`, `string`, `bool`, `array` et `mixed`.
+Types de base : `int`, `float`, `string`, `bool`, `array`, `mixed`, `null` et
+`void`.
+
+## Typer les paramètres et la valeur de retour d'une fonction (4)
+
+```php
+<?php
+function add(int $x, ?int $y): int {
+    if ($y === null) {
+        return $x;
+    }
+
+    return $x + $y;
+}
+
+add(3, null); // Retourne 3
+add(3, 5); // Retourne 8
+```
+
+## Typer les paramètres et la valeur de retour d'une fonction (5)
+
+La syntaxe `?int` est une abréviation pour `int|null`.
+
+```php
+<?php
+function find(array $numbers, int $id): ?int { // ou : int|null
+    foreach ($numbers as $number) {
+        if ($number === $id) {
+            return $id;
+        }
+    }
+
+    return null;
+}
+```
+
+---
+
+```php
+$numbers = [1, 2, 3];
+
+find($numbers, 2); // Retourne 2
+find($numbers, 4); // Retourne null car 4 n'est pas dans le tableau $numbers
+find([2, 4, 6], 4); // Retourne 4
+find([2, 4, 6], 5); // Retourne null car 5 n'est pas dans le tableau [2, 4, 6]
+```
+
+De cette manière, la fonction `find` peut retourner soit un `int` (l'identifiant
+trouvé), soit `null` (si l'identifiant n'est pas trouvé dans le tableau).
+
+Si une fonction est censée ne rien retourner, il est recommandé de typer la
+valeur de retour avec `void`.
 
 ## Portée des variables (1)
 
-- La portée d'une variable est l'endroit où elle peut être utilisée
+- La portée d'une variable est l'endroit où elle peut être utilisée.
 - Une variable déclarée à l'intérieur d'une fonction ne peut être utilisée qu'à
-  l'intérieur de cette fonction
-- Une erreur survient si une variable est utilisée en dehors de sa portée
+  l'intérieur de cette fonction.
+- Une erreur survient si une variable est utilisée en dehors de sa portée.
 
 ![bg right:40%][illustration-portee-des-variables]
 
@@ -353,6 +404,9 @@ function square($x) {
 
 echo $x; // Erreur : variable $x non définie
 ```
+
+Il n'est pas possible d'accéder à la variable `$x` en dehors de la fonction
+`square`, car elle a une portée locale à cette fonction.
 
 ## Portée des variables (3)
 
@@ -371,11 +425,11 @@ public class Main {
 
 ## Variables globales (1)
 
-- Une variable globale est une variable déclarée en dehors de toute fonction
+- Une variable globale est une variable déclarée en dehors de toute fonction.
 - Une variable globale peut être utilisée à l'intérieur d'une fonction à l'aide
-  du mot-clé `global`
+  du mot-clé `global`.
 - À éviter autant que possible, car cela rend le code difficile à comprendre et
-  à maintenir
+  à maintenir.
 
 ![bg right:40%][illustration-variables-globales]
 
@@ -417,11 +471,11 @@ public class Main {
 
 ## Fonctions prédéfinies en PHP (1)
 
-- PHP fournit de nombreuses fonctions prédéfinies
-- Ces fonctions permettent de réaliser des tâches courantes
+- PHP fournit de nombreuses fonctions prédéfinies.
+- Ces fonctions permettent de réaliser des tâches courantes.
 - La
   [documentation officielle de PHP](https://www.php.net/manual/fr/funcref.php)
-  est une ressource précieuse pour trouver des fonctions prédéfinies
+  est une ressource précieuse pour trouver des fonctions prédéfinies.
 
 ![bg right:40%][illustration-fonctions-predefinies-en-php]
 
@@ -450,10 +504,9 @@ public class Main {
 
 ### Fonctions mathématiques (1)
 
-- PHP propose de nombreuses fonctions mathématiques
+- PHP propose de nombreuses fonctions mathématiques.
 - Par exemple, `abs`, `sqrt`, `pow`, `min`, `max`, etc.
-- [Documentation complète](https://www.php.net/manual/fr/ref.math.php)
-- Exemple : `sqrt`
+- [Documentation complète](https://www.php.net/manual/fr/ref.math.php).
 
 ![bg right:40%][illustration-fonctions-mathematiques]
 
@@ -478,11 +531,10 @@ public class Main {
 
 ### Fonctions sur les chaînes de caractères (1)
 
-- PHP propose de nombreuses fonctions pour manipuler des chaînes de caractères
+- PHP propose de nombreuses fonctions pour manipuler des chaînes de caractères.
 - Par exemple, `strlen`, `substr`, `str_replace`, `strtolower`, `strtoupper`,
   etc.
-- [Documentation complète](https://www.php.net/manual/fr/ref.strings.php)
-- Exemple : `strupper`
+- [Documentation complète](https://www.php.net/manual/fr/ref.strings.php).
 
 ![bg right:40%][illustration-fonctions-sur-les-chaines-de-caracteres]
 
@@ -507,10 +559,9 @@ public class Main {
 
 ### Fonctions sur les variables (1)
 
-- PHP propose de nombreuses fonctions pour manipuler des variables
+- PHP propose de nombreuses fonctions pour manipuler des variables.
 - Par exemple, `isset`, `empty`, `unset`, `is_array`, `is_string`, etc.
-- [Documentation complète](https://www.php.net/manual/fr/ref.var.php)
-- Exemple : `isset`
+- [Documentation complète](https://www.php.net/manual/fr/ref.var.php).
 
 ![bg right:40%][illustration-fonctions-sur-les-variables]
 
@@ -572,10 +623,10 @@ public class Main {
 
 ## Réutiliser du code avec des fonctions (1)
 
-- Les fonctions permettent de réutiliser du code
-- Le code est plus facile à lire et à maintenir
+- Les fonctions permettent de réutiliser du code.
+- Le code est plus facile à lire et à maintenir.
 - Il est possible d'importer des fonctions définies dans d'autres fichiers avec
-  la directive `require`
+  la directive `require_once`.
 
 ![bg right:40%][illustration-reutiliser-du-code-avec-des-fonctions]
 
@@ -623,10 +674,10 @@ l'inclusion multiple du même fichier.
 
 ## Conclusion
 
-- Les fonctions permettent de structurer et réutiliser du code
-- Les fonctions peuvent accepter des paramètres et retourner des valeurs
-- Fonctions personnelles ou des fonctions prédéfinies
-- La portée des variables est importante à comprendre
+- Les fonctions permettent de structurer et réutiliser du code.
+- Les fonctions peuvent accepter des paramètres et retourner des valeurs.
+- Fonctions personnelles ou des fonctions prédéfinies.
+- La portée des variables est importante à comprendre.
 
 ![bg right:40%][illustration-principale]
 

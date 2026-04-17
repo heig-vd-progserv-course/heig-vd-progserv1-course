@@ -539,6 +539,21 @@ public class Main {
 
 </details>
 
+Si nous souhaitons dire qu'un paramètre est optionnel, mais que nous ne voulons
+pas lui donner de valeur par défaut, nous pouvons lui donner la valeur `null`
+par défaut :
+
+```php
+<?php
+function add($x, $y = null) {
+    if ($y === null) {
+        return $x;
+    }
+
+    return $x + $y;
+}
+```
+
 ## Typer les paramètres et la valeur de retour d'une fonction
 
 Depuis la version 7 de PHP, il est possible de typer les paramètres et la valeur
@@ -580,6 +595,9 @@ valeur de retour d'une fonction sont les suivants (entre autres) (source :
 - `array` : pour les tableaux.
 - `mixed` : pour indiquer que le paramètre ou la valeur de retour peut être de
   n'importe quel type.
+- `null` : pour indiquer que le paramètre ou la valeur de retour peut être
+  `null`.
+- `void` : pour indiquer que la fonction ne retourne aucune valeur.
 
 Il est possible de combiner plusieurs types en utilisant le symbole `|` pour
 indiquer que le paramètre ou la valeur de retour peut être de l'un des types
@@ -596,6 +614,54 @@ function add(int|float $x, int|float $y): float {
 Cela signifie que les paramètres `$x` et `$y` peuvent être soit des nombres
 entiers (`int`) soit des nombres à virgule flottante (`float`), et que la
 fonction retournera un nombre à virgule flottante (`float`).
+
+Si nous souhaitons indiquer qu'un paramètre ou une valeur de retour peut être de
+type `float` ou `null`, nous pouvons utiliser le symbole `|` pour combiner les
+types, ou encore utiliser le symbole `?` pour indiquer que le type peut être du
+type donné ou `null` :
+
+```php
+<?php
+function add(int $x, ?int $y): int {
+    if ($y === null) {
+        return $x;
+    }
+
+    return $x + $y;
+}
+
+add(3, null); // Retourne 3
+add(3, 5); // Retourne 8
+```
+
+Ici, le paramètre `$y` peut être soit un `int` soit `null`, et la fonction peut
+retourner soit un `int` soit `null`.
+
+Un autre exemple d'utilisation de types combinés est la fonction suivante, qui
+peut retourner soit un `int` soit `null` :
+
+```php
+<?php
+function find(array $numbers, int $id): ?int { // ou : int|null
+    foreach ($numbers as $number) {
+        if ($number === $id) {
+            return $id;
+        }
+    }
+
+    return null;
+}
+
+$numbers = [1, 2, 3];
+
+find($numbers, 2); // Retourne 2
+find($numbers, 4); // Retourne null car 4 n'est pas dans le tableau $numbers
+find([2, 4, 6], 4); // Retourne 4
+find([2, 4, 6], 5); // Retourne null car 5 n'est pas dans le tableau [2, 4, 6]
+```
+
+Si une fonction est censée ne rien retourner, il est recommandé de typer la
+valeur de retour avec `void`.
 
 Nous recommandons de toujours typer les paramètres et la valeur de retour d'une
 fonction lorsque cela est possible, afin de rendre le code plus robuste et plus
@@ -894,7 +960,7 @@ Et l'inclure dans un autre fichier pour l'utiliser :
 ```php
 <?php
 // Fichier `index.php`
-require_once "functions.php"; // On inclut le fichier
+require_once __DIR__ . "/functions.php"; // On inclut le fichier
 
 // La fonction `hello` est définie dans le fichier importé et peut être utilisée
 // ici
@@ -903,6 +969,11 @@ echo hello("Alice");
 
 Dans cet exemple, la fonction `hello` est définie dans le fichier
 `functions.php` et incluse dans un autre fichier pour être utilisée.
+
+La construction `__DIR__` est une constante magique en PHP qui représente le
+répertoire du fichier actuel. En utilisant `__DIR__`, on s'assure que le chemin
+vers le fichier `functions.php` est correct, même si le script est exécuté à
+partir d'un autre répertoire.
 
 Il existe des fonctions prédéfinies en PHP pour inclure des fichiers, comme
 `include`, `require`, `include_once` et `require_once`. Ces fonctions permettent

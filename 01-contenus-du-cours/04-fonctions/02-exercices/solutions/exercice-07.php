@@ -1,6 +1,6 @@
 <?php
 function isEven(int $number): bool {
-    return $number % 2 == 0;
+    return $number % 2 === 0;
 }
 
 $result = isEven(10);

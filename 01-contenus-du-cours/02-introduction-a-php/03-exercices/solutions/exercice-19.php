@@ -1,8 +1,10 @@
 <?php
-$number = 9;
+$stRochStudent = true;
+$comemStudent = true;
+$cheseauxStudent = true;
 
-if ($number % 3 == 0) {
-    echo "Multiple de 3";
+if ($stRochStudent && $comemStudent || $cheseauxStudent) {
+    echo "You are an engineering student";
 } else {
-    echo "Non multiple de 3";
+    echo "You are not an engineering student";
 }
