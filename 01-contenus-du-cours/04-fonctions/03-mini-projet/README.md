@@ -14,8 +14,19 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
-- [Adapter la structure du mini-projet](#adapter-la-structure-du-mini-projet)
+- [Adapter la structure du mini-projet pour séparer les fichiers publics et les fichiers de code source](#adapter-la-structure-du-mini-projet-pour-séparer-les-fichiers-publics-et-les-fichiers-de-code-source)
+- [Changer le lien pour accéder au mini-projet](#changer-le-lien-pour-accéder-au-mini-projet)
 - [Déplacer les données des animaux de compagnie dans un fichier dédié](#déplacer-les-données-des-animaux-de-compagnie-dans-un-fichier-dédié)
+- [Créer des fonctions pour accéder aux données des animaux de compagnie](#créer-des-fonctions-pour-accéder-aux-données-des-animaux-de-compagnie)
+- [Utiliser la fonction `getPets` dans la page d'accueil](#utiliser-la-fonction-getpets-dans-la-page-daccueil)
+- [Créer une page de visualisation pour un animal de compagnie](#créer-une-page-de-visualisation-pour-un-animal-de-compagnie)
+  - [Ajouter le lien vers la page de visualisation dans la page d'accueil](#ajouter-le-lien-vers-la-page-de-visualisation-dans-la-page-daccueil)
+  - [Créer la page de visualisation](#créer-la-page-de-visualisation)
+  - [Récupérer l'identifiant de l'animal de compagnie depuis l'URL](#récupérer-lidentifiant-de-lanimal-de-compagnie-depuis-lurl)
+  - [Utiliser la fonction `getPetById` dans la page de visualisation](#utiliser-la-fonction-getpetbyid-dans-la-page-de-visualisation)
+  - [Afficher les détails de l'animal de compagnie](#afficher-les-détails-de-lanimal-de-compagnie)
+  - [Gérer le cas où l'animal de compagnie n'est pas trouvé](#gérer-le-cas-où-lanimal-de-compagnie-nest-pas-trouvé)
+  - [Tester la page de visualisation](#tester-la-page-de-visualisation)
 - [Conclusion](#conclusion)
 - [Solution](#solution)
 - [Aller plus loin](#aller-plus-loin)
@@ -35,7 +46,7 @@ compagnie en particulier.
 - Créer une page de visualisation pour un animal de compagnie.
 - Utiliser des fonctions pour accéder aux données des animaux de compagnie.
 
-## Adapter la structure du mini-projet
+## Adapter la structure du mini-projet pour séparer les fichiers publics et les fichiers de code source
 
 Actuellement, le mini-projet devrait avoir la structure suivante :
 
@@ -90,6 +101,30 @@ et organisée.
 En organisant votre code de cette manière, vous facilitez la maintenance et la
 réutilisation de votre code à mesure que votre projet évolue.
 
+Sauvegardez tous les fichiers et effectuez un commit Git pour enregistrer cette
+étape de développement dans l'historique Git de votre projet avec le message de
+commit "Adaptation de la structure du mini-projet" et poussez ce commit sur le
+dépôt distant.
+
+## Changer le lien pour accéder au mini-projet
+
+Depuis que nous avons déplacé le fichier `mini-projet/index.php` dans le dossier
+`mini-projet/public`, le lien pour accéder à votre mini-projet depuis la page
+`index.php` à la racine du projet (le fichier `index.php` située au même niveau
+que les fichiers `exception.php` et `phpinfo.php`) a changé.
+
+Il est donc nécessaire de mettre à jour le lien que vous utilisez pour accéder à
+votre mini-projet dans votre navigateur dans le fichier `index.php` situé à la
+racine de votre projet.
+
+Mettez à jour le lien pour qu'il pointe vers le fichier `index.php` situé dans
+le dossier `public` de votre projet.
+
+Sauvegardez tous les fichiers et effectuez un commit Git pour enregistrer cette
+étape de développement dans l'historique Git de votre projet avec le message de
+commit "Mise à jour du lien pour accéder au mini-projet" et poussez ce commit
+sur le dépôt distant.
+
 ## Déplacer les données des animaux de compagnie dans un fichier dédié
 
 Actuellement, les données de vos animaux de compagnie sont définies directement
@@ -104,6 +139,12 @@ Voici comment vous pouvez procéder :
    compagnie.
 2. Déplacez les tableaux associatifs représentant les animaux de compagnie du
    fichier `public/index.php` vers le fichier `src/data.php`.
+   - **Astuce** : vous pouvez déplacer le tableau associatif `$pets` que vous
+     avez créé précédemment dans le fichier `public/index.php` vers le fichier
+     `src/data.php`. Dans le fichier `public/index.php`, conservez la
+     déclaration de la variable `$pets` mais sans les données (`$pets = [];`).
+     Nous reviendrons plus tard pour remplir cette variable à l'aide des
+     fonctions que nous allons créer dans le fichier `src/functions.php`.
 
 La structure de votre projet devrait maintenant ressembler à ceci :
 
@@ -122,6 +163,11 @@ mini-projet/
 Vous aurez ainsi les données de vos animaux de compagnie organisées dans un
 fichier séparé, ce qui rendra votre code plus propre et plus facile à maintenir.
 
+Sauvegardez tous les fichiers et effectuez un commit Git pour enregistrer cette
+étape de développement dans l'historique Git de votre projet avec le message de
+commit "Déplacement des données dans un fichier dédié" et poussez ce commit sur
+le dépôt distant.
+
 Dans les prochaines étapes, nous verrons comment créer des fonctions dans le
 dossier `src` pour accéder à ces données et les utiliser dans votre application.
 
@@ -139,11 +185,95 @@ Voici comment vous pouvez procéder :
    compagnie depuis `src/data.php` en utilisant la directive `require_once` avec
    la construction `__DIR__` pour garantir que le chemin est correct.
 3. Dans le fichier `src/functions.php`, créez deux fonctions principales :
-   - `getAllPets()`: Cette fonction retourne le tableau contenant tous les
-     animaux de compagnie.
+   - `getPets()`: Cette fonction retourne le tableau contenant tous les animaux
+     de compagnie.
    - `getPetById(int $id)`: Cette fonction prendra un identifiant d'animal de
      compagnie en paramètre et retournera les données de l'animal correspondant
-     à cet identifiant.
+     à cet identifiant. Si aucun animal de compagnie avec cet identifiant n'est
+     trouvé, la fonction retournera `null`.
+   - **Astuce** : vous devez utiliser le mot-clé `global` pour accéder à la
+     variable contenant les données des animaux de compagnie définie dans
+     `src/data.php` depuis vos fonctions.
+
+Grâce à ces fonctions, vous pourrez accéder aux données de vos animaux de
+compagnie de manière plus structurée et réutilisable dans votre application.
+
+Sauvegardez tous les fichiers et effectuez un commit Git pour enregistrer cette
+étape de développement dans l'historique Git de votre projet avec le message de
+commit "Ajout des fonctions pour accéder aux données des animaux de compagnie"
+et poussez ce commit sur le dépôt distant.
+
+## Utiliser la fonction `getPets` dans la page d'accueil
+
+Maintenant que vous avez créé les fonctions pour accéder aux données des animaux
+de compagnie, vous pouvez les utiliser dans votre page d'accueil pour afficher
+les informations de vos animaux de compagnie.
+
+Voici comment vous pouvez procéder :
+
+1. Importez le fichier `src/functions.php` dans votre fichier `public/index.php`
+   en utilisant la directive `require_once` avec la construction `__DIR__` pour
+   garantir que le chemin est correct.
+2. Utilisez la fonction `getAllPets()` pour récupérer tous les animaux de
+   compagnie et les afficher sur la page d'accueil. Pour cela, remplacez la
+   variable `$pets` que vous avez définie précédemment dans `public/index.php`
+   par l'appel à la fonction `getAllPets()` : `$pets = getAllPets();`.
+
+Ainsi, les données de vos animaux de compagnie sont récupérées à l'aide de la
+fonction que vous avez créée, ce qui rend votre code plus propre et plus facile
+à maintenir.
+
+Sauvegardez tous les fichiers et effectuez un commit Git pour enregistrer cette
+étape de développement dans l'historique Git de votre projet avec le message de
+commit "Utilisation des fonctions pour accéder aux données des animaux de
+compagnie dans la page d'accueil" et poussez ce commit sur le dépôt distant.
+
+Nous avons maintenant une page d'accueil fonctionnelle qui affiche les
+informations de tous les animaux de compagnie en utilisant les fonctions que
+nous avons créées pour accéder aux données.
+
+## Créer une page de visualisation pour un animal de compagnie
+
+Maintenant que vous avez une page d'accueil qui affiche tous les animaux de
+compagnie, nous allons créer une page de visualisation pour afficher les détails
+d'un animal de compagnie en particulier.
+
+### Ajouter le lien vers la page de visualisation dans la page d'accueil
+
+Dans votre page d'accueil (`public/index.php`), ajoutez un lien pour chaque
+animal de compagnie qui redirige vers une page de visualisation dédiée à cet
+animal.
+
+Voici comment vous pouvez procéder :
+
+1. Dans le tableau qui affiche les animaux de compagnie sur la page d'accueil,
+   ajoutez une colonne "Actions". Cette colonne contiendra un lien pour chaque
+   animal de compagnie qui redirige vers une page de visualisation dédiée à cet
+   animal.
+2.
+
+Par exemple, vous pouvez ajouter un lien "Voir les détails" pour chaque animal
+de compagnie qui redirige vers une page `public/pet.php?id=ID_DE_L_ANIMAL`, où
+`ID_DE_L_ANIMAL` est l'identifiant unique de l'animal de compagnie.
+
+### Créer la page de visualisation
+
+Créez un fichier `public/pet.php` qui sera la page de visualisation pour un
+animal de compagnie. Dans ce fichier, importez les fonctions depuis
+`src/functions.php` et utilisez la fonction `getPetById(int $id)` pour récupérer
+les données de l'animal de compagnie correspondant à l'identifiant passé en
+paramètre dans l'URL. Affichez ensuite les détails de l'animal de compagnie sur
+cette page.
+
+### Récupérer l'identifiant de l'animal de compagnie depuis l'URL
+
+### Utiliser la fonction `getPetById` dans la page de visualisation
+
+### Afficher les détails de l'animal de compagnie
+
+### Gérer le cas où l'animal de compagnie n'est pas trouvé
+
+### Tester la page de visualisation
 
 ## Conclusion
 
@@ -180,9 +310,9 @@ nous vous recommandons de suivre les étapes suivantes :
    étapes du développement d'une application PHP.
 2. Clonez le dépôt GitHub de la solution localement sur votre ordinateur en
    utilisant la commande `git clone` avec l'URL du dépôt de la solution.
-3. Récupérez la dernière version du dépôt de la solution en utilisant la
-   commande `git pull` pour vous assurer d'avoir la version la plus récente de
-   la solution.
+3. Récupérez la dernière version du dépôt de la solution en utilisant les
+   commandes `git checkout main` et `git pull` pour vous assurer d'avoir la
+   version la plus récente de la solution.
 4. Accédez à la version spécifique de la solution correspondant à la séance en
    utilisant la commande `git checkout` avec le commit ou le tag correspondant à
    la séance (par exemple, `git checkout session-1`).
@@ -203,7 +333,11 @@ nous vous recommandons de suivre les étapes suivantes :
 > Vous pouvez y revenir si vous avez du temps ou si vous souhaitez approfondir
 > vos connaissances après avoir terminé les exercices et le mini-projet.
 
--
+- Seriez-vous capable de trier les animaux de compagnie par ordre alphabétique
+  de leur nom ?
+- Seriez-vous capable de trier les animaux de compagnie par ordre
+  croissant/décroissant de leur âge ?
+- Seriez-vous capable de
 
 <!-- URLs -->
 

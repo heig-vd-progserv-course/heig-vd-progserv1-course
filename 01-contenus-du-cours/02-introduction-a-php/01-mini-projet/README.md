@@ -1719,9 +1719,9 @@ nous vous recommandons de suivre les étapes suivantes :
    étapes du développement d'une application PHP.
 2. Clonez le dépôt GitHub de la solution localement sur votre ordinateur en
    utilisant la commande `git clone` avec l'URL du dépôt de la solution.
-3. Récupérez la dernière version du dépôt de la solution en utilisant la
-   commande `git pull` pour vous assurer d'avoir la version la plus récente de
-   la solution.
+3. Récupérez la dernière version du dépôt de la solution en utilisant les
+   commandes `git checkout main` et `git pull` pour vous assurer d'avoir la
+   version la plus récente de la solution.
 4. Accédez à la version spécifique de la solution correspondant à la séance en
    utilisant la commande `git checkout` avec le commit ou le tag correspondant à
    la séance (par exemple, `git checkout session-1`).
