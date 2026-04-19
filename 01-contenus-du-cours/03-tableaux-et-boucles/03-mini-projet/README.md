@@ -27,6 +27,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Ajouter un menu de navigation dans la page d'accueil](#ajouter-un-menu-de-navigation-dans-la-page-daccueil)
   - [Ajouter un pied de page dans la page d'accueil](#ajouter-un-pied-de-page-dans-la-page-daccueil)
   - [Ajouter un logo à la page d'accueil](#ajouter-un-logo-à-la-page-daccueil)
+  - [Ajouter des styles CSS personnalisés](#ajouter-des-styles-css-personnalisés)
 - [Tester la page d'accueil](#tester-la-page-daccueil)
 - [Conclusion](#conclusion)
 - [Solution](#solution)
@@ -364,7 +365,7 @@ prochaines sections pour remplir les lignes du tableau HTML.
 En suivant les mêmes étapes que précédemment, sauvegardez tous les fichiers et
 effectuez un commit Git pour enregistrer cette étape de développement dans
 l'historique Git de votre projet avec le message de commit "Création de la
-table".
+table" et poussez ce commit sur le dépôt distant.
 
 Vous devriez maintenant voir un tableau HTML avec les en-têtes de colonnes
 affichées dans la page d'accueil de votre application.
@@ -391,7 +392,7 @@ dans une ligne du tableau HTML.
 En suivant les mêmes étapes que précédemment, sauvegardez tous les fichiers et
 effectuez un commit Git pour enregistrer cette étape de développement dans
 l'historique Git de votre projet avec le message de commit "Ajout des lignes au
-tableau".
+tableau" et poussez ce commit sur le dépôt distant.
 
 Vous devriez maintenant voir un tableau HTML avec les informations sur les
 animaux de compagnie affichées dans la page d'accueil de votre application.
@@ -421,7 +422,7 @@ projet :
 En suivant les mêmes étapes que précédemment, sauvegardez tous les fichiers et
 effectuez un commit Git pour enregistrer cette étape de développement dans
 l'historique Git de votre projet avec le message de commit "Ajout du lien vers
-la page d'accueil de l'application".
+la page d'accueil de l'application" et poussez ce commit sur le dépôt distant.
 
 ## Améliorer la page d'accueil
 
@@ -521,7 +522,8 @@ grâce à PicoCSS.
 
 En suivant les mêmes étapes que précédemment, sauvegardez tous les fichiers et
 effectuez un commit Git pour enregistrer cette étape de développement dans
-l'historique Git de votre projet avec le message de commit "Ajout de PicoCSS".
+l'historique Git de votre projet avec le message de commit "Ajout de PicoCSS" et
+poussez ce commit sur le dépôt distant.
 
 Vous devriez maintenant voir une page d'accueil avec des styles de base
 appliqués grâce à PicoCSS, ce qui rend la lecture de la page plus agréable.
@@ -593,7 +595,7 @@ $pets = [
 En suivant les mêmes étapes que précédemment, sauvegardez tous les fichiers et
 effectuez un commit Git pour enregistrer cette étape de développement dans
 l'historique Git de votre projet avec le message de commit "Ajout du menu de
-navigation".
+navigation" et poussez ce commit sur le dépôt distant.
 
 Vous devriez maintenant voir un menu de navigation dans la page d'accueil de
 votre application, ce qui facilitera la navigation entre les différentes
@@ -706,7 +708,7 @@ mini-projet/
 En suivant les mêmes étapes que précédemment, sauvegardez tous les fichiers et
 effectuez un commit Git pour enregistrer cette étape de développement dans
 l'historique Git de votre projet avec le message de commit "Ajout du logo à la
-structure de fichier".
+structure de fichier" et poussez ce commit sur le dépôt distant.
 
 #### Inclure cette image dans la page d'accueil
 
@@ -783,12 +785,30 @@ $pets = [
 
 Sauvegardez tous les fichiers et effectuez un commit Git pour enregistrer cette
 étape de développement dans l'historique Git de votre projet avec le message de
-commit "Ajout du logo à la page d'accueil".
+commit "Ajout du logo à la page d'accueil" et poussez ce commit sur le dépôt
+distant.
 
 Vous devriez maintenant voir le logo affiché dans la page d'accueil de votre
 application de gestion d'animaux de compagnie.
 
-#### Ajouter des styles CSS personnalisés pour améliorer l'affichage du logo
+Pour le moment, la mise en page du logo est assez basique, nous allons ajouter
+des styles CSS personnalisés pour améliorer l'apparence du logo dans la page
+d'accueil dans la section suivante.
+
+### Ajouter des styles CSS personnalisés
+
+Dans l'état actuel, certains aspects de l'application de gestion d'animaux de
+compagnie ne sont pas encore optimisés pour une bonne expérience utilisateur :
+
+- Le logo n'est pas parfaitement adapté à l'affichage dans la page d'accueil.
+- Si le contenu de la page ne prend pas toute la place disponible, le pied de
+  page peut être affiché au milieu de la page au lieu d'être collé en bas de la
+  page.
+
+Dans cette section, nous allons ajouter des styles CSS personnalisés pour
+résoudre ces problèmes.
+
+#### Ajuster l'apparence du logo dans la page d'accueil
 
 Sans doute que cette image de logo n'est pas parfaitement adaptée à l'affichage
 dans la page d'accueil de votre application de gestion d'animaux de compagnie,
@@ -836,14 +856,56 @@ La classe `logo` est déjà utilisée dans la balise `<div>` qui enveloppe l'ima
 du logo dans le fichier `index.php`, ce qui permet d'appliquer ces styles CSS
 personnalisés à l'image du logo.
 
-En suivant les mêmes étapes que précédemment, sauvegardez tous les fichiers et
-effectuez un commit Git pour enregistrer cette étape de développement dans
-l'historique Git de votre projet avec le message de commit "Ajout de styles CSS
-personnalisés pour le logo".
+Sauvegardez tous les fichiers et effectuez un commit Git pour enregistrer cette
+étape de développement dans l'historique Git de votre projet avec le message de
+commit "Ajout des styles CSS personnalisés pour le logo" et poussez ce commit
+sur le dépôt distant.
 
-Vous devriez maintenant voir le logo affiché dans la page d'accueil de votre
-application de gestion d'animaux de compagnie avec les styles CSS personnalisés
-appliqués, ce qui améliore l'apparence de la page d'accueil.
+Le logo devrait maintenant être mieux adapté à l'affichage dans la page
+d'accueil de votre application de gestion d'animaux de compagnie, avec une
+taille ajustée et un style plus attrayant.
+
+#### Coller le pied de page en bas de la page
+
+Dans l'état actuel, si le contenu de la page d'accueil de votre application de
+gestion d'animaux de compagnie ne prend pas toute la place disponible, le pied
+de page peut être affiché au milieu de la page au lieu d'être collé en bas de la
+page.
+
+Pour résoudre ce problème, nous allons ajouter des styles CSS personnalisés pour
+coller le pied de page en bas de la page, même si le contenu de la page n'occupe
+pas toute la place disponible.
+
+Pour cela, ajoutez les styles CSS suivants dans le fichier `css/styles.css` pour
+coller le pied de page en bas de la page :
+
+```css
+/* Styles pour que l'élément principal de la page prenne toute la hauteur disponible */
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex: 1;
+}
+```
+
+Ces styles CSS utilisent Flexbox pour faire en sorte que le contenu principal de
+la page prenne toute la place disponible, ce qui permet de coller le pied de
+page en bas de la page même si le contenu de la page n'occupe pas toute la place
+disponible.
+
+Sauvegardez tous les fichiers et effectuez un commit Git pour enregistrer cette
+étape de développement dans l'historique Git de votre projet avec le message de
+commit "Ajout des styles CSS personnalisés pour le pied de page" et poussez ce
+commit sur le dépôt distant.
+
+Le pied de page devrait maintenant être collé en bas de la page, même si le
+contenu de la page n'occupe pas toute la place disponible, ce qui améliore
+l'apparence de la page d'accueil de votre application de gestion d'animaux de
+compagnie.
 
 ## Tester la page d'accueil
 
@@ -931,9 +993,9 @@ nous vous recommandons de suivre les étapes suivantes :
    étapes du développement d'une application PHP.
 2. Clonez le dépôt GitHub de la solution localement sur votre ordinateur en
    utilisant la commande `git clone` avec l'URL du dépôt de la solution.
-3. Récupérez la dernière version du dépôt de la solution en utilisant la
-   commande `git pull` pour vous assurer d'avoir la version la plus récente de
-   la solution.
+3. Récupérez la dernière version du dépôt de la solution en utilisant les
+   commandes `git checkout main` et `git pull` pour vous assurer d'avoir la
+   version la plus récente de la solution.
 4. Accédez à la version spécifique de la solution correspondant à la séance en
    utilisant la commande `git checkout` avec le commit ou le tag correspondant à
    la séance (par exemple, `git checkout session-1`).

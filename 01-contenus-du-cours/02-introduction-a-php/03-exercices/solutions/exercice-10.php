@@ -1,18 +1,11 @@
 <?php
-$day = "Monday";
+$hasABachelorDegree = true;
+$hasFinishedHeigVd = true;
 
-switch ($day) {
-    case "Monday":
-    case "Tuesday":
-    case "Wednesday":
-    case "Thursday":
-    case "Friday":
-        echo "Weekday";
-        break;
-    case "Saturday":
-    case "Sunday":
-        echo "Weekend";
-        break;
-    default:
-        echo "Unknown day";
+if ($hasABachelorDegree && $hasFinishedHeigVd) {
+    echo "You have finished the HEIG-VD, congratulations!";
+} elseif ($hasABachelorDegree) {
+    echo "You have another Bachelor's degree.";
+} else {
+    echo "You are still a student.";
 }

@@ -1,9 +1,4 @@
 <?php
-$greetings = 'Hello';
-$name = 'World';
+const PI = 3.14;
 
-// La ligne suivante affichera littéralement "$greetings, $name!"
-echo '$greetings, $name!<br>';
-
-// La ligne suivante affichera "Hello, World!"
-echo "$greetings, $name!";
+echo PI;

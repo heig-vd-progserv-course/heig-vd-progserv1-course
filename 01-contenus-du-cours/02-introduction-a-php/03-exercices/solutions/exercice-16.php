@@ -1,12 +1,12 @@
 <?php
-$number = 15;
+const USERNAME = "admin";
+const PASSWORD = "1234";
 
-if ($number % 3 == 0 && $number % 5 == 0) {
-    echo "Divisible by 3 and 5";
-} elseif ($number % 3 == 0) {
-    echo "Divisible by 3";
-} elseif ($number % 5 == 0) {
-    echo "Divisible by 5";
+$username = "admin";
+$password = "1234";
+
+if ($username === USERNAME && $password === PASSWORD) {
+    echo "You are logged in";
 } else {
-    echo "Not divisible by 3 or 5";
+    echo "Login failed";
 }

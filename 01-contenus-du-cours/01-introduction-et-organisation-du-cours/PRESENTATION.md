@@ -303,7 +303,7 @@ Quelques règles concernant l'utilisation de ces outils pour vos rendus :
   copié depuis des sources externes, **et comment il s'intègre dans votre
   travail**.
 
-## _Qu'en est-il de ChatGPT, etc. ?"_ (4)
+## _"Qu'en est-il de ChatGPT, etc. ?"_ (4)
 
 - En cas de doutes de notre part, vous pourriez être questionné.e.
 - **Si vos explications ne sont pas convaincantes, injustifiées dans le contexte

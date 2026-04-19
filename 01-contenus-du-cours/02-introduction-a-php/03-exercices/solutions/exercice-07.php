@@ -1,4 +1,6 @@
 <?php
-$text = "PHP";
+$number = 10;
 
-echo "J'apprends " . $text . " dans ce nouveau cours ProgServ1.";
+$double = $number * 2;
+
+echo $double;

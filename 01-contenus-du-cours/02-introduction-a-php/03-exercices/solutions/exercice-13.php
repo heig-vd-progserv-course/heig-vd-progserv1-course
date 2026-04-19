@@ -1,9 +1,10 @@
 <?php
-$a = 1;
-$b = 2;
+$temperature = 30;
 
-if ($a < $b) {
-    echo "a is less than b";
+if ($temperature > 20) {
+    echo "It's hot";
+} elseif ($temperature >= 15) {
+    echo "It's cool";
 } else {
-    echo "a is greater than or equal to b";
+    echo "It's cold";
 }

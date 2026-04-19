@@ -1,8 +1,9 @@
 <?php
-$number = 9;
+$a = 1;
+$b = 2;
 
-if ($number % 3 == 0) {
-    echo "Multiple of 3";
+if ($a < $b) {
+    echo "a is less than b";
 } else {
-    echo "Not a multiple of 3";
+    echo "a is greater than or equal to b";
 }

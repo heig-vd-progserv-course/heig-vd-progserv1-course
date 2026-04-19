@@ -1,25 +1,18 @@
 <?php
-$grade = 5;
+$day = "Monday";
 
-switch ($grade) {
-    case 6:
-        echo "Excellent";
+switch ($day) {
+    case "Monday":
+    case "Tuesday":
+    case "Wednesday":
+    case "Thursday":
+    case "Friday":
+        echo "Weekday";
         break;
-    case 5:
-        echo "Good";
-        break;
-    case 4:
-        echo "Fair";
-        break;
-    case 3:
-        echo "Needs improvement";
-        break;
-    case 2:
-        echo "Poor";
-        break;
-    case 1:
-        echo "Very poor";
+    case "Saturday":
+    case "Sunday":
+        echo "Weekend";
         break;
     default:
-        echo "Unknown grade";
+        echo "Unknown day";
 }

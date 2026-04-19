@@ -1,11 +1,9 @@
 <?php
-$hasABachelorDegree = true;
-$hasFinishedHeigVd = true;
+$greetings = 'Hello';
+$name = 'World';
 
-if ($hasABachelorDegree && $hasFinishedHeigVd) {
-    echo "You have finished the HEIG-VD, congratulations!";
-} elseif ($hasABachelorDegree) {
-    echo "You have another Bachelor's degree.";
-} else {
-    echo "You are still a student.";
-}
+// La ligne suivante affichera littéralement "$greetings, $name!"
+echo '$greetings, $name!<br>';
+
+// La ligne suivante affichera "Hello, World!"
+echo "$greetings, $name!";

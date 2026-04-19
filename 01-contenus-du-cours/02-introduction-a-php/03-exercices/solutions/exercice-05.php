@@ -1,6 +1,8 @@
 <?php
-$number = 10;
+$age = 20;
 
-$double = $number * 2;
-
-echo $double;
+if ($age >= 18) {
+    echo "You are over 18.";
+} else {
+    echo "You are under 18.";
+}

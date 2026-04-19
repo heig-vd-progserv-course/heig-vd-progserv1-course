@@ -35,7 +35,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Exercice 18](#exercice-18)
   - [Exercice 19](#exercice-19)
   - [Exercice 20](#exercice-20)
-  - [Exercice 21](#exercice-21)
 
 ## Utilisation avec Git/GitHub
 
@@ -375,7 +374,7 @@ afficher une page web ?
 <details>
 <summary>Afficher la réponse</summary>
 
-Lorsqu'un utilisateur demande une page web, le serveur web reço it la requête et
+Lorsqu'un utilisateur demande une page web, le serveur web reçoit la requête et
 transmet le fichier PHP correspondant à l'interpréteur PHP. L'interpréteur PHP
 exécute le code PHP dans le fichier et génère du code HTML. Le serveur web
 renvoie le code HTML généré par l'interpréteur PHP à l'utilisateur, qui voit la
@@ -541,7 +540,7 @@ const PASSWORD = "1234";
 $username = "admin";
 $password = "1234";
 
-if ($username == USERNAME && $password == PASSWORD) {
+if ($username === USERNAME && $password === PASSWORD) {
     echo "You are logged in";
 } else {
     echo "Login failed";
@@ -569,7 +568,7 @@ Affichez _"Multiple of 3"_ ou _"Not a multiple of 3"_ en conséquence.
 <?php
 $number = 9;
 
-if ($number % 3 == 0) {
+if ($number % 3 === 0) {
     echo "Multiple of 3";
 } else {
     echo "Not a multiple of 3";
@@ -599,11 +598,11 @@ divisible by 3 or 5"_ sinon.
 <?php
 $number = 15;
 
-if ($number % 3 == 0 && $number % 5 == 0) {
+if ($number % 3 === 0 && $number % 5 === 0) {
     echo "Divisible by 3 and 5";
-} elseif ($number % 3 == 0) {
+} elseif ($number % 3 === 0) {
     echo "Divisible by 3";
-} elseif ($number % 5 == 0) {
+} elseif ($number % 5 === 0) {
     echo "Divisible by 5";
 } else {
     echo "Not divisible by 3 or 5";
@@ -645,38 +644,13 @@ if ($stRochStudent && $comemStudent || $cheseauxStudent) {
 
 ### Exercice 20
 
-Déclarez une variable `number` avec la valeur `9` et utilisez une structure de
-contrôle conditionnelle pour vérifier si le nombre est un multiple de `3`.
-Affichez _"Multiple of 3"_ ou _"Not a multiple of 3"_ en conséquence.
+Quel est le but et le rôle d'outils tels que WampServer, MAMP, XAMPP ou encore
+Docker ?
 
 <details>
 <summary>Afficher la réponse</summary>
 
-```php
-<?php
-$number = 9;
-
-if ($number % 3 == 0) {
-    echo "Multiple de 3";
-} else {
-    echo "Non multiple de 3";
-}
-```
-
-```text
-Multiple de 3
-```
-
-</details>
-
-### Exercice 21
-
-Quel est le but et le rôle d'outils tels que WampServer, MAMP, ou encore XAMPP ?
-
-<details>
-<summary>Afficher la réponse</summary>
-
-WampServer, MAMP, et XAMPP sont des logiciels qui permettent de créer un
+WampServer, MAMP, XAMPP et Docker sont des logiciels qui permettent de créer un
 environnement de développement local pour les applications web. Ils sont
 utilisés pour installer et configurer un serveur web, une base de données, et un
 langage de script (PHP) sur un ordinateur local.
