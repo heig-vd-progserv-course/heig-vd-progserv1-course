@@ -7,7 +7,7 @@
 
 <body>
     <h1>Formulaire de contact</h1>
-    <form action="exercice-01a.php" method="POST">
+    <form action="./exercice-01a.php" method="POST">
         <label for="firstName">Prénom :</label><br>
         <input type="text" id="firstName" name="firstName">
 
@@ -39,7 +39,6 @@
         <br>
 
         <button type="submit">Envoyer</button>
-        <button type="reset">Réinitialiser</button>
     </form>
 </body>
 

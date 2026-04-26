@@ -1,6 +1,6 @@
 <?php
 // Gère la soumission du formulaire
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!-- Gère l'affichage du formulaire -->
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <title>Authentification</title>
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <h1>Se connecter</h1>
-    <form action="04-login-form-with-client-side-validation.php" method="POST">
+    <form action="./04-login-form-with-client-side-validation.php" method="POST">
         <label for="username">Pseudo :</label><br>
         <input
             type="text"
@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <button type="submit">Envoyer</button>
     </form>
 
-    <?php if ($_SERVER["REQUEST_METHOD"] == "POST") { ?>
+    <?php if ($_SERVER["REQUEST_METHOD"] === "POST") { ?>
         <?php if (empty($errors)) { ?>
             <p style="color: green;">Le formulaire a été soumis avec succès !</p>
         <?php } else { ?>

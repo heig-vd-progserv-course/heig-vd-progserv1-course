@@ -41,8 +41,8 @@ d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 |     01 | [Introduction et organisation du cours](./01-contenus-du-cours/01-introduction-et-organisation-du-cours/README.md) + [Introduction à PHP](./01-contenus-du-cours/02-introduction-a-php/README.md) | 🟢 Prêt     |
 |     02 | [Tableaux et boucles](./01-contenus-du-cours/03-tableaux-et-boucles/README.md)                                                                                                                    | 🟢 Prêt     |
 |     03 | [Fonctions](./01-contenus-du-cours/04-fonctions/README.md)                                                                                                                                        | 🟢 Prêt     |
-|     04 | [Formulaires HTML et validation](./01-contenus-du-cours/05-formulaires-html-et-validation/README.md)                                                                                              | 🟡 En cours |
-|     05 | [Bases de données et PDO](./01-contenus-du-cours/06-bases-de-donnees-et-pdo/README.md)                                                                                                            | 🔴 À faire  |
+|     04 | [Formulaires HTML et validation](./01-contenus-du-cours/05-formulaires-html-et-validation/README.md)                                                                                              | 🟢 Prêt     |
+|     05 | [Bases de données et PDO](./01-contenus-du-cours/06-bases-de-donnees-et-pdo/README.md)                                                                                                            | 🟡 En cours |
 |     06 | [Récapitulatif du cours et préparation à l'examen](./01-contenus-du-cours/07-recapitulatif-du-cours-et-preparation-a-lexamen/README.md)                                                           | 🔴 À faire  |
 
 ## 📜 Licence

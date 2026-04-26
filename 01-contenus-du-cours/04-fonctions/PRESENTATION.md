@@ -469,6 +469,76 @@ public class Main {
 }
 ```
 
+## Passage par valeur et par référence (1)
+
+En programmation, les paramètres d'une fonction peuvent être de deux manières
+différentes :
+
+- Passage par valeur.
+- Passage par référence.
+
+![bg right:40%][illustration-quest-ce-quune-fonction]
+
+## Passage par valeur et par référence (2)
+
+**Passage par valeur**
+
+Une copie de la variable est créée et utilisée dans la fonction.
+
+Les modifications apportées à la variable dans la fonction n'affectent pas la
+variable d'origine.
+
+Il s'agit du comportement par défaut en PHP mais il est aussi possible de passer
+des paramètres par référence.
+
+## Passage par valeur et par référence (3)
+
+**Passage par référence**
+
+Une référence à la variable d'origine est utilisée dans la fonction.
+
+Les modifications apportées à la variable dans la fonction affectent la variable
+d'origine.
+
+En Java, les types primitifs (int, float, etc.) sont passés par valeur, tandis
+que les objets sont passés par référence.
+
+Peu utilisé, mais très pratique dans certains cas, par ex. les boucles.
+
+### Passage par valeur en PHP
+
+Une copie de la variable est créée et utilisée dans la fonction.
+
+```php
+<?php
+function increment($x) {
+    $x++;
+}
+
+$value = 5;
+
+increment($value);
+
+echo $value; // Affiche 5, car $value n'est pas modifié par la fonction increment
+```
+
+### Passage par référence en PHP
+
+Une référence à la variable d'origine est utilisée dans la fonction.
+
+```php
+<?php
+function increment(&$x) {
+    $x++;
+}
+
+$value = 5;
+
+increment($value);
+
+echo $value; // Affiche 6, car $value est modifié par la fonction increment
+```
+
 ## Fonctions prédéfinies en PHP (1)
 
 - PHP fournit de nombreuses fonctions prédéfinies.

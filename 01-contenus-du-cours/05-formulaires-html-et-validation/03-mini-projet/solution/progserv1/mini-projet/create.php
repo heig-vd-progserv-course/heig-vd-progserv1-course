@@ -1,7 +1,7 @@
 <?php
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo "Le contenu de la variable `\$_POST` est : ";
+    echo "Le contenu de la variable \$_POST est : ";
     var_dump($_POST);
 
     // Récupération des données du formulaire
@@ -183,10 +183,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php } ?>
 
     <form action="create.php" method="POST">
-        <label for="name">Nom :</label><br>
-        <input type="text" id="name" name="name" value="<?php if (isset($name)) echo $name; ?>" required minlength="2">
-
-        <br>
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" value="<?= $name ?>" required minlength="2">
 
         <label for="species">Espèce :</label><br>
         <select id="species" name="species" required>

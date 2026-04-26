@@ -1,6 +1,6 @@
 <?php
 // Gère la soumission du formulaire
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!-- Gère l'affichage du formulaire -->
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <title>Authentification</title>
@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <?php
     // On affiche les données si le formulaire a été soumis
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // S'il n'y a pas d'erreurs, on affiche les données
         if (empty($errors)) {
             echo "<p style='color: green;'>Le nom d'utilisateur est : $username</p>";
