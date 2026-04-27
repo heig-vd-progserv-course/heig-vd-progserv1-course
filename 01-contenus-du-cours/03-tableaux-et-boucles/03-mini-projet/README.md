@@ -16,14 +16,14 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Objectifs](#objectifs)
 - [Préparer son environnement de développement](#préparer-son-environnement-de-développement)
 - [Créer la page d'accueil](#créer-la-page-daccueil)
-  - [Créer le fichier `index.php`](#créer-le-fichier-indexphp)
-  - [Définir la structure du fichier `index.php`](#définir-la-structure-du-fichier-indexphp)
+  - [Créer le fichier `mini-projet/index.php`](#créer-le-fichier-mini-projetindexphp)
+  - [Définir la structure du fichier `mini-projet/index.php`](#définir-la-structure-du-fichier-mini-projetindexphp)
   - [Créer la collection d'animaux de compagnie](#créer-la-collection-danimaux-de-compagnie)
   - [Afficher les en-têtes du tableau des animaux de compagnie](#afficher-les-en-têtes-du-tableau-des-animaux-de-compagnie)
   - [Afficher les lignes du tableau des animaux de compagnie](#afficher-les-lignes-du-tableau-des-animaux-de-compagnie)
   - [Visualiser le résultat dans le navigateur](#visualiser-le-résultat-dans-le-navigateur)
 - [Améliorer la page d'accueil](#améliorer-la-page-daccueil)
-  - [Ajouter PicoCSS](#ajouter-picocss)
+  - [Ajouter Pico CSS](#ajouter-pico-css)
   - [Ajouter un menu de navigation dans la page d'accueil](#ajouter-un-menu-de-navigation-dans-la-page-daccueil)
   - [Ajouter un pied de page dans la page d'accueil](#ajouter-un-pied-de-page-dans-la-page-daccueil)
   - [Ajouter un logo à la page d'accueil](#ajouter-un-logo-à-la-page-daccueil)
@@ -93,7 +93,7 @@ développer votre application tout en ayant un suivi clair de vos différentes
 Dans cette section, nous allons créer la première version de la page d'accueil
 de l'application de gestion d'animaux de compagnie.
 
-### Créer le fichier `index.php`
+### Créer le fichier `mini-projet/index.php`
 
 Actuellement, vous devriez avoir la structure de fichiers suivante dans votre
 projet :
@@ -125,11 +125,11 @@ Votre structure de fichiers devrait ressembler à ceci :
 └── phpinfo.php
 ```
 
-### Définir la structure du fichier `index.php`
+### Définir la structure du fichier `mini-projet/index.php`
 
-Dans le fichier `index.php`, nous allons définir la structure de base d'une page
-HTML avec une section `<head>` pour les métadonnées et une section `<body>` pour
-le contenu de la page.
+Dans le fichier `mini-projet/index.php`, nous allons définir la structure de
+base d'une page HTML avec une section `<head>` pour les métadonnées et une
+section `<body>` pour le contenu de la page.
 
 Le nom de l'application que nous allons créer s'appellera "ninetendogs" (en
 référence à un célèbre jeux vidéo produit par une célèbre entreprise japonaise
@@ -160,8 +160,8 @@ de la page.
 </html>
 ```
 
-Sauvegardez ensuite le fichier `index.php` et accédez à la page d'accueil de
-votre application dans votre navigateur à l'adresse suivante :
+Sauvegardez ensuite le fichier `mini-projet/index.php` et accédez à la page
+d'accueil de votre application dans votre navigateur à l'adresse suivante :
 <http://localhost:8080/mini-projet/index.php>. Vous devriez voir la page
 d'accueil de votre application s'afficher.
 
@@ -434,7 +434,7 @@ difficile.
 Dans cette section, nous allons améliorer l'affichage de la page en ajoutant des
 styles CSS pour le rendre plus agréable à lire.
 
-### Ajouter PicoCSS
+### Ajouter Pico CSS
 
 Vous pourriez personnaliser l'apparence de votre page web en utilisant les
 styles la balise `<head>` ou en incluant un fichier CSS externe à l'aide de la
@@ -447,10 +447,10 @@ Comme les styles CSS ne sont pas le cœur de ce cours, nous n'allons pas réalis
 d'interfaces complètes avec du CSS personnalisé.
 
 A la place, nous allons utiliser un framework CSS léger - appelé
-[PicoCSS](https://picocss.com/) - pour ajouter des styles de base à nos pages
+[Pico CSS](https://picocss.com/) - pour ajouter des styles de base à nos pages
 web sans avoir à écrire beaucoup de CSS personnalisé.
 
-Pour utiliser PicoCSS dans votre projet PHP, nous allons mettre à jour le
+Pour utiliser Pico CSS dans votre projet PHP, nous allons mettre à jour le
 fichier `mini-projet/index.php` avec le contenu suivant :
 
 ```php
@@ -496,10 +496,10 @@ $pets = [
 ```
 
 Ici, nous avons ajouté une balise `<link>` dans la section `<head>` pour inclure
-les styles CSS de PicoCSS.
+les styles CSS de Pico CSS.
 
 Nous avons ensuite ajouté la classe `container` à la balise `<body>` pour
-appliquer les styles de conteneur de PicoCSS (source :
+appliquer les styles de conteneur de Pico CSS (source :
 <https://picocss.com/docs/container>).
 
 Ces instructions (issues de la documentation officielle
@@ -513,24 +513,24 @@ horizontale au tableau si son contenu dépasse la largeur de la page
 (responsive). La seconde classe ajoute un style rayé aux lignes du tableau pour
 améliorer la lisibilité.
 
-Grâce à PicoCSS, nous avons pu (grandement) améliorer l'apparence de la page
+Grâce à Pico CSS, nous avons pu (grandement) améliorer l'apparence de la page
 d'accueil de notre application de gestion d'animaux de compagnie sans avoir à
 écrire beaucoup de CSS personnalisé. Pour les futures pages de notre
 application, nous pourrons nous concentrer sur le contenu et la logique métier
 sans nous soucier de l'apparence, car les styles de base seront déjà appliqués
-grâce à PicoCSS.
+grâce à Pico CSS.
 
 En suivant les mêmes étapes que précédemment, sauvegardez tous les fichiers et
 effectuez un commit Git pour enregistrer cette étape de développement dans
-l'historique Git de votre projet avec le message de commit "Ajout de PicoCSS" et
-poussez ce commit sur le dépôt distant.
+l'historique Git de votre projet avec le message de commit "Ajout de Pico CSS"
+et poussez ce commit sur le dépôt distant.
 
 Vous devriez maintenant voir une page d'accueil avec des styles de base
-appliqués grâce à PicoCSS, ce qui rend la lecture de la page plus agréable.
+appliqués grâce à Pico CSS, ce qui rend la lecture de la page plus agréable.
 
 ### Ajouter un menu de navigation dans la page d'accueil
 
-Grâce à PicoCSS, nous pouvons facilement ajouter un menu de navigation à notre
+Grâce à Pico CSS, nous pouvons facilement ajouter un menu de navigation à notre
 page d'accueil pour faciliter la navigation entre les différentes (futures)
 pages de notre application.
 
@@ -946,9 +946,9 @@ Tester ensuite les fonctionnalités suivantes de votre application de gestion
 d'animaux de compagnie :
 
 - Essayez de passer l'application en mode sombre pour vérifier que les styles
-  CSS de PicoCSS s'adaptent correctement au thème sombre.
+  CSS de Pico CSS s'adaptent correctement au thème sombre.
 - Essayez de redimensionner la fenêtre du navigateur pour vérifier que les
-  styles CSS de PicoCSS s'adaptent correctement à différentes tailles d'écran
+  styles CSS de Pico CSS s'adaptent correctement à différentes tailles d'écran
   (responsive design).
 
 ## Conclusion
@@ -965,7 +965,7 @@ tableau associatif `$pets` et affiche les informations sur chaque animal de
 compagnie dans une ligne du tableau HTML.
 
 La mise en page a été améliorée grâce à l'ajout de styles CSS avec le framework
-PicoCSS, ce qui rend la lecture de la page plus agréable.
+Pico CSS, ce qui rend la lecture de la page plus agréable.
 
 La page d'accueil est maintenant plus attrayante et servira de base pour les
 prochaines étapes de développement de l'application de gestion d'animaux de

@@ -73,6 +73,9 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 - [Typer les paramètres et la valeur de retour d'une fonction](#typer-les-paramètres-et-la-valeur-de-retour-dune-fonction)
 - [Portée des variables](#portée-des-variables)
 - [Variables globales](#variables-globales)
+- [Passage par valeur et par référence](#passage-par-référence-et-passage-par-valeur)
+  - [Passage par valeur en PHP](#passage-par-valeur-en-php)
+  - [Passage par référence en PHP](#passage-par-référence-en-php)
 - [Fonctions prédéfinies en PHP](#fonctions-prédéfinies-en-php)
   - [Fonctions mathématiques](#fonctions-mathématiques)
   - [Fonctions sur les chaînes de caractères](#fonctions-sur-les-chaînes-de-caractères)
@@ -763,6 +766,91 @@ Il est généralement déconseillé d'utiliser des variables globales, car elles
 rendent le code moins lisible et plus difficile à maintenir. Il est préférable
 de passer des paramètres à une fonction plutôt que d'utiliser des variables
 globales.
+
+## Passage par valeur et par référence
+
+Lorsque nous passons des arguments à une fonction, nous pouvons les passer par
+valeur ou par référence.
+
+Le passage par valeur signifie que la fonction reçoit une copie de la variable
+passée en argument.
+
+Par conséquent, les modifications apportées à la variable à l'intérieur de la
+fonction n'affectent pas la variable d'origine en dehors de la fonction.
+
+Il s'agit du comportement par défaut en PHP.
+
+Le passage par référence signifie que la fonction reçoit une référence à la
+variable d'origine, ce qui signifie que les modifications apportées à la
+variable à l'intérieur de la fonction affectent la variable d'origine en dehors
+de la fonction.
+
+Par conséquent, le passage par référence permet à une fonction de modifier
+directement les variables passées en argument.
+
+En Java par exemple, les variables primitives (comme les `int`, `float`,
+`boolean`, etc.) sont passées par valeur, tandis que les objets sont passés par
+référence.
+
+Avec PHP, il est possible de choisir entre le passage par valeur et le passage
+par référence en fonction de la manière dont les paramètres sont déclarés dans
+la fonction.
+
+Bien que peu de fonctions utilisent le passage par référence, il peut être utile
+dans certains cas, notamment lorsque vous souhaitez que la fonction modifie
+directement les variables passées en argument.
+
+### Passage par valeur en PHP
+
+En PHP, les paramètres d'une fonction sont passés par valeur par défaut.
+
+Par conséquent, les modifications apportées à la variable à l'intérieur de la
+fonction n'affectent pas la variable d'origine en dehors de la fonction :
+
+```php
+<?php
+function increment($x) {
+    $x++;
+}
+
+$value = 5;
+
+increment($value);
+
+echo $value; // Affiche 5, car $value n'est pas modifié par la fonction increment
+```
+
+Ici, la variable `$value` est passée par valeur à la fonction `increment`, ce
+qui signifie que la fonction reçoit une copie de la variable `$value`. Les
+modifications apportées dans la fonction n'affectent pas la variable `$value` en
+dehors de la fonction, qui reste égale à `5`.
+
+### Passage par référence en PHP
+
+Cependant, il est possible de passer un paramètre par référence en utilisant le
+symbole `&` devant le nom du paramètre dans la déclaration de la fonction.
+Lorsque vous passez une variable par référence, la fonction reçoit une référence
+à la variable d'origine, ce qui signifie que les modifications apportées à la
+variable à l'intérieur de la fonction affectent la variable d'origine en dehors
+de la fonction :
+
+```php
+<?php
+function increment(&$x) {
+    $x++;
+}
+
+$value = 5;
+
+increment($value);
+
+echo $value; // Affiche 6, car $value est modifié par la fonction increment
+```
+
+Ici, la variable `$value` est passée par référence à la fonction `increment`, ce
+qui signifie que la fonction reçoit une référence à la variable `$value`. Les
+modifications apportées dans la fonction affectent la variable `$value` en
+dehors de la fonction, qui devient égale à `6`.
 
 ## Fonctions prédéfinies en PHP
 

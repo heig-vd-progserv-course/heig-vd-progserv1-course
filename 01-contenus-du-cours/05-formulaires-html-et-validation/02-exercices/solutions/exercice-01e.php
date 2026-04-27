@@ -1,6 +1,6 @@
 <?php
 // Gère la soumission du formulaire
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $firstName = $_POST["firstName"];
     $lastName = $_POST["lastName"];
     $email = $_POST["email"];
@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <h1>Formulaire de contact</h1>
 
-    <?php if ($_SERVER["REQUEST_METHOD"] == "POST") { ?>
+    <?php if ($_SERVER["REQUEST_METHOD"] === "POST") { ?>
         <?php if (empty($errors)) { ?>
             <p style="color: green;">Le formulaire a été soumis avec succès !</p>
         <?php } else { ?>
@@ -68,23 +68,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php } ?>
     <?php } ?>
 
-    <form action="exercice-01e.php" method="POST">
-        <label for="firstName">Prénom :</label><br>
+    <form action="./exercice-01e.php" method="POST">
+        <label for="firstName">Prénom</label><br>
         <input type="text" id="firstName" name="firstName" value="<?php echo isset($firstName) ? $firstName : ''; ?>" required>
 
         <br>
 
-        <label for="lastName">Nom :</label><br>
+        <label for="lastName">Nom</label><br>
         <input type="text" id="lastName" name="lastName" value="<?php echo isset($lastName) ? $lastName : ''; ?>" required>
 
         <br>
 
-        <label for="email">Adresse e-mail :</label><br>
+        <label for="email">Adresse e-mail</label><br>
         <input type="email" id="email" name="email" value="<?php echo isset($email) ? $email : ''; ?>">
 
         <br>
 
-        <label for="message">Message :</label><br>
+        <label for="message">Message</label><br>
         <textarea id="message" name="message" required><?php echo isset($message) ? $message : ''; ?></textarea>
 
         <br>
@@ -98,7 +98,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
 
         <button type="submit">Envoyer</button>
-        <button type="reset">Réinitialiser</button>
     </form>
 </body>
 

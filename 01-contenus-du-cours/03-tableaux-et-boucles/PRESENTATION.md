@@ -46,27 +46,28 @@ document._
 
 ## Objectifs (1)
 
-- Décrire les tableaux et leurs caractéristiques
+- Décrire les tableaux et leurs caractéristiques.
 - Décrire la différence entre les tableaux indexés, les tableaux associatifs et
-  les tableaux multidimensionnels
+  les tableaux multidimensionnels.
 - Utiliser et manipuler des tableaux (indexés, associatifs et
-  multidimensionnels)
+  multidimensionnels).
 
 ![bg right:40%][illustration-objectifs]
 
 ## Objectifs (2)
 
-- Décrire les boucles et leurs caractéristiques
+- Décrire les boucles et leurs caractéristiques.
 - Décrire la différence entre les boucles `for`, `while`, `do...while` et
-  `foreach`
-- Utiliser les boucles pour parcourir des tableaux et des collections de données
+  `foreach`.
+- Utiliser les boucles pour parcourir des tableaux et des collections de
+  données.
 
 ![bg right:40%][illustration-objectifs]
 
 ## Objectifs (3)
 
 - Utiliser quelques fonctions utiles pour travailler avec les tableaux et les
-  boucles
+  boucles.
 
 ![bg right:40%][illustration-objectifs]
 

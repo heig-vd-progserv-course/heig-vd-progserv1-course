@@ -36,7 +36,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 Lors de la séance précédente, vous avez appris à créer des tableaux associatifs
 en PHP pour représenter des animaux de compagnie et mis en place la page
-d'accueil de votre projet à l'aide de PicoCSS.
+d'accueil de votre projet à l'aide de Pico CSS.
 
 Aujourd'hui, nous allons améliorer notre projet en créant des pages et des
 fonctions pour visualiser tous les animaux de compagnie ou un animal de
@@ -371,12 +371,17 @@ l'identifiant de l'animal de compagnie depuis l'URL en utilisant la superglobale
 Pour cela, vous pouvez utiliser la syntaxe suivante :
 
 ```php
-$petId = $_GET['id'];
+$petId = $_GET['id'] ?? null;
 ```
 
 La superglobale `$_GET` est un tableau associatif qui contient les paramètres de
 la requête GET, où les clés sont les noms des paramètres et les valeurs sont les
 valeurs correspondantes.
+
+L'opérateur `??` est utilisé pour vérifier si le paramètre `id` existe et n'est
+pas null. Si le paramètre `id` existe, sa valeur sera assignée à la variable
+`$petId`. Si le paramètre `id` n'existe pas ou est null, la variable `$petId`
+sera assignée à `null`.
 
 Ainsi, en utilisant `$_GET['id']`, vous pouvez récupérer la valeur du paramètre
 `id` qui a été passé dans l'URL lorsque l'utilisateur a cliqué sur le bouton
@@ -435,16 +440,22 @@ application.
 ### Gérer le cas où l'animal de compagnie n'est pas trouvé
 
 Il est possible que l'utilisateur.trice accède à la page de visualisation avec
-un identifiant d'animal de compagnie qui n'existe pas dans les données.
+un identifiant d'animal de compagnie qui n'existe pas dans les données ou que le
+paramètre `id` ne soit pas présent dans l'URL.
 
-Dans ce cas, il est important de gérer ce cas de manière appropriée pour éviter
-d'afficher une page vide ou une erreur.
+Dans ce cas, il est important de gérer ces cas de manières appropriées pour
+éviter d'afficher une page vide ou une erreur.
 
-Pour cela, vous pouvez vérifier si la variable `$pet` est `null` après avoir
-appelé la fonction `getPetById($petId)`.
+Pour cela, vous pouvez vérifier si :
 
-Si `$pet` est `null`, cela signifie que l'animal de compagnie avec l'identifiant
-spécifié n'a pas été trouvé dans les données.
+1. La variable `$petId` est `null` après avoir récupéré l'identifiant de
+   l'animal de compagnie depuis l'URL.
+2. La variable `$pet` est `null` après avoir appelé la fonction
+   `getPetById($petId)` pour récupérer les données de l'animal de compagnie.
+
+Si `$petId` ou `$pet` sont `null`, cela signifie que l'identifiant de l'animal
+ou l'animal de compagnie avec l'identifiant spécifié n'a pas été trouvé dans les
+données.
 
 Dans ce cas, vous pouvez afficher un message d'erreur à l'utilisateur.trice pour
 lui indiquer que l'animal de compagnie n'a pas été trouvé ou rediriger
@@ -463,6 +474,13 @@ Pour cela, ajoutez le code suivant dans votre page de visualisation après avoir
 vérifié si `$pet` est `null` :
 
 ```php
+if ($petId === null) {
+    header('Location: ./index.php');
+    exit;
+}
+
+$pet = getPetById($petId);
+
 if ($pet === null) {
     header('Location: ./index.php');
     exit;
@@ -487,8 +505,10 @@ la fonction `getPetById`.
 
 Testez également le cas où vous accédez à la page de visualisation avec un
 identifiant d'animal de compagnie qui n'existe pas dans les données (par
-exemple, en modifiant l'URL pour inclure un identifiant qui n'existe pas).
-Vérifiez que vous êtes redirigé vers la page d'accueil dans ce cas.
+exemple, en modifiant l'URL pour inclure un identifiant qui n'existe pas) et en
+accédant à la page de visualisation sans inclure de paramètre `id` dans l'URL.
+
+Vérifiez que vous êtes redirigé vers la page d'accueil dans ces deux cas.
 
 Normalement, vous devriez maintenant avoir une page de visualisation
 fonctionnelle, bravo !

@@ -411,8 +411,6 @@ numéro de la colonne avec le format `Ligne x, colonne y : valeur`.
 
 ```php
 <?php
-
-<?php
 $ticTacToe = [
     ["X", "O", "X"],
     ["O", "X", "O"],
