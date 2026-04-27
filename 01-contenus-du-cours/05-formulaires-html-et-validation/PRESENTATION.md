@@ -300,7 +300,7 @@ Problèmes de sécurité et de taille résolus !
 
 <!-- TODO : À l'avenir, mettre un GIF ou une vidéo ? -->
 
-Démonstration : <TODO>.
+[Démonstration](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/05-formulaires-html-et-validation/01-exemples-de-code/01-login.php).
 
 ## Valider les formulaires côté serveur (1)
 
@@ -326,7 +326,7 @@ La validation des formulaires peut inclure des vérifications telles que :
 
 <!-- TODO : À l'avenir, mettre un GIF ou une vidéo ? -->
 
-Démonstration: <TODO>.
+[Démonstration](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/05-formulaires-html-et-validation/01-exemples-de-code/02-login-with-server-side-validation.php).
 
 ## Conserver les données saisies (1)
 
@@ -343,7 +343,7 @@ Démonstration: <TODO>.
 
 <!-- TODO : À l'avenir, mettre un GIF ou une vidéo ? -->
 
-Démonstration : <>.
+[Démonstration](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/05-formulaires-html-et-validation/01-exemples-de-code/03-login-with-saved-values.php).
 
 ## Valider les données côté client (1)
 
@@ -360,7 +360,7 @@ Démonstration : <>.
 
 <!-- TODO : À l'avenir, mettre un GIF ou une vidéo ? -->
 
-Démonstration : <TODO>.
+[Démonstration](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/05-formulaires-html-et-validation/01-exemples-de-code/04-login-with-client-side-validation.php).
 
 ## Conclusion
 
