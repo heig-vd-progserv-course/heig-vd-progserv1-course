@@ -8,13 +8,14 @@
 
 <body>
     <h1>Se connecter</h1>
-    <form action="./01-login-form.php" method="POST">
-        <label for="username">Pseudo :</label><br>
+
+    <form action="./01-login.php" method="POST">
+        <label for="username">Pseudo</label><br>
         <input type="text" id="username" name="username" />
 
         <br>
 
-        <label for="password">Mot de passe :</label><br>
+        <label for="password">Mot de passe</label><br>
         <input type="password" id="password" name="password" />
 
         <br>

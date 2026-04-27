@@ -25,22 +25,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
     <h1>Formulaire de contact</h1>
     <form action="./exercice-01b.php" method="POST">
-        <label for="firstName">Prénom :</label><br>
+        <label for="firstName">Prénom</label><br>
         <input type="text" id="firstName" name="firstName">
 
         <br>
 
-        <label for="lastName">Nom :</label><br>
+        <label for="lastName">Nom</label><br>
         <input type="text" id="lastName" name="lastName">
 
         <br>
 
-        <label for="email">Adresse e-mail :</label><br>
+        <label for="email">Adresse e-mail</label><br>
         <input type="email" id="email" name="email">
 
         <br>
 
-        <label for="message">Message :</label><br>
+        <label for="message">Message</label><br>
         <textarea id="message" name="message"></textarea>
 
         <br>
