@@ -71,7 +71,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 - [Réceptionner les données des formulaires](#réceptionner-les-données-des-formulaires)
 - [Valider les formulaires côté serveur](#valider-les-formulaires-côté-serveur)
 - [Conserver les données saisies](#conserver-les-données-saisies)
-  - [Valider les données côté client](#valider-les-données-côté-client)
+- [Valider les données côté client](#valider-les-données-côté-client)
 - [Conclusion](#conclusion)
 - [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
