@@ -1674,6 +1674,8 @@ index 76623c0..11246fb 100644
          <center>
 ```
 
+</details>
+
 #### Réceptionner les données côté serveur
 
 Essayez de rajouter la réception des données côté serveur pour le champ
@@ -2041,13 +2043,15 @@ index d11ac19..16c0ac3 100644
 +        if (strlen($nickname) < 2) {
 +            array_push($errors, "Le surnom doit contenir au minimum 2 caractères.");
 +        } else if (strlen($nickname) > 50) {
-+            array_push($errors, "Le surnom doit contenir au maximum 30 caractères.");
++            array_push($errors, "Le surnom doit contenir au maximum 50 caractères.");
 +        }
 +    }
 +
      return $errors;
  }
 ```
+
+</details>
 
 #### Afficher les erreurs de validation
 
@@ -2124,6 +2128,8 @@ index 9d07699..d517e9e 100644
      </main>
      <footer>
 ```
+
+</details>
 
 #### Tester le formulaire
 
@@ -2821,6 +2827,8 @@ index 3314687..7461d77 100644
      return $errors;
  }
 ```
+
+</details>
 
 #### Afficher les erreurs de validation
 
