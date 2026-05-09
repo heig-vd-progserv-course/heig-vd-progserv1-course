@@ -165,7 +165,7 @@ Note maximale : (nombre de points obtenus / nombre de points totaux) × 5 + 1.
 - L'utilisation de code généré par des outils d'intelligence artificielle ou
   copié depuis des sources externes n'est pas autorisé. En cas de doutes, nous
   pouvons vous questionner selon les règles évoquées dans le contenu
-  [Introduction et modalités du cours](../01-contenus-du-cours/01-introduction-et-organisation-du-cours/README.md#quen-est-il-de-chatgpt-etc-).
+  [Introduction et modalités du cours](../01-contenus-du-cours/01.01-introduction-et-organisation-du-cours/README.md#quen-est-il-de-chatgpt-etc-).
 
 ## Sanctions possibles en cas de tricherie
 
@@ -209,4 +209,4 @@ de l'évaluation (partie 1 + partie 2).**
 
 Un examen blanc est disponible pour vous entraîner à cette évaluation,
 disponible ici :
-[Accéder au contenu](../01-contenus-du-cours/07-recapitulatif-du-cours-et-preparation-a-lexamen/02-examen-blanc/README.md).
+[Accéder au contenu](../01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-lexamen/02-examen-blanc/README.md).
