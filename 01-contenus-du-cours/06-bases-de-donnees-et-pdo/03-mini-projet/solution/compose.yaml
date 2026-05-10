@@ -1,8 +1,0 @@
-services:
-  server:
-    image: php:8.5-apache
-    restart: unless-stopped
-    ports:
-      - 8181:80
-    volumes:
-      - ./progserv1:/var/www/html
