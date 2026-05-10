@@ -1,7 +1,6 @@
-
 <?php
 // Chemin vers le fichier de base de données SQLite
-const DATABASE_FILE = './grades.db';
+const DATABASE_FILE = __DIR__ . '/grades.db';
 
 // Création d'une instance de PDO pour se connecter à la base de données
 $pdo = new PDO("sqlite:" . DATABASE_FILE);
@@ -15,4 +14,6 @@ $sql = "CREATE TABLE IF NOT EXISTS courses (
 );";
 
 // On exécute la requête SQL pour créer la table
-$pdo->exec($sql);
+$stmt = $pdo->prepare($sql);
+
+$stmt->execute();

@@ -83,7 +83,6 @@ Réalisez un formulaire de contact en HTML avec les champs suivants :
 - Message (champ textarea)
 - Consentement pour le traitement des données personnelles (champ case à cocher)
 - Bouton d'envoi (submit)
-- Bouton de réinitialisation (reset)
 
 Le formulaire doit être structuré de manière à ce que chaque champ soit
 accompagné d'une étiquette (label). Le formulaire doit être envoyé à une page de
@@ -138,7 +137,6 @@ moment.
         <br>
 
         <button type="submit">Envoyer</button>
-        <button type="reset">Réinitialiser</button>
     </form>
 </body>
 
@@ -216,7 +214,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
 
         <button type="submit">Envoyer</button>
-        <button type="reset">Réinitialiser</button>
     </form>
 </body>
 
@@ -292,7 +289,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
 
         <button type="submit">Envoyer</button>
-        <button type="reset">Réinitialiser</button>
     </form>
 </body>
 
@@ -425,7 +421,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
 
         <button type="submit">Envoyer</button>
-        <button type="reset">Réinitialiser</button>
     </form>
 </body>
 
@@ -544,7 +539,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
 
         <button type="submit">Envoyer</button>
-        <button type="reset">Réinitialiser</button>
     </form>
 </body>
 

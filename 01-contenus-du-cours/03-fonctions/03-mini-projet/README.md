@@ -215,10 +215,10 @@ Voici comment vous pouvez procéder :
 1. Importez le fichier `src/functions.php` dans votre fichier `public/index.php`
    en utilisant la directive `require_once` avec la construction `__DIR__` pour
    garantir que le chemin est correct.
-2. Utilisez la fonction `getAllPets()` pour récupérer tous les animaux de
-   compagnie et les afficher sur la page d'accueil. Pour cela, remplacez la
-   variable `$pets` que vous avez définie précédemment dans `public/index.php`
-   par l'appel à la fonction `getAllPets()` : `$pets = getAllPets();`.
+2. Utilisez la fonction `getPets()` pour récupérer tous les animaux de compagnie
+   et les afficher sur la page d'accueil. Pour cela, remplacez la variable
+   `$pets` que vous avez définie précédemment dans `public/index.php` par
+   l'appel à la fonction `getPets()` : `$pets = getPets();`.
 
 Ainsi, les données de vos animaux de compagnie sont récupérées à l'aide de la
 fonction que vous avez créée, ce qui rend votre code plus propre et plus facile

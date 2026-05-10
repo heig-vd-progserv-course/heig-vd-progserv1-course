@@ -3969,7 +3969,7 @@ application web.
 
 La solution du mini-projet est accessible dans un dépôt GitHub dédié à l'adresse
 suivante :
-<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course-mini-project-solution/tree/session-3>.
+<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course-mini-project-solution/tree/session-4>.
 
 Afin d'utiliser cette solution de manière efficace pour votre apprentissage,
 nous vous recommandons de suivre les étapes suivantes :

@@ -260,7 +260,7 @@ serveur. Il existe deux méthodes principales :
 Les données sont ajoutées à l'URL de la requête, séparées par un `?` et des `&`
 :
 
-`http://localhost/login.php?username=xXBestOf1400Xx&password=m0n-sup3r-m0t-de-p4asse`
+`http://localhost:8080/login.php?username=xXBestOf1400Xx&password=m0n-sup3r-m0t-de-p4asse`
 
 Problème de sécurité...
 
@@ -270,7 +270,7 @@ Problème de sécurité...
 
 Les données sont envoyées dans le corps de la requête :
 
-`http://localhost/login.php`
+`http://localhost:8080/login.php`
 
 Les données ne sont plus visibles dans l'URL.
 

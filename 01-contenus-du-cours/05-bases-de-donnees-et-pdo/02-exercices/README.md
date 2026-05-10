@@ -103,7 +103,9 @@ $sql = "CREATE TABLE IF NOT EXISTS courses (
 );";
 
 // On exécute la requête SQL pour créer la table
-$pdo->exec($sql);
+$stmt = $pdo->prepare($sql);
+
+$stmt->execute();
 ```
 
 </details>
@@ -111,23 +113,17 @@ $pdo->exec($sql);
 ### Exercice 1b
 
 En utilisant la base de données créée dans l'[exercice 1a](#exercice-1a),
-insérer les données suivantes dans la table `courses` en utilisant d'une
-fonction `addGrade`. Stocker chaque identifiant de cours dans une variable.
+insérer des données dans la table `courses` en utilisant d'une fonction
+`addGrade`. Stocker chaque identifiant de cours dans une variable.
+
+Par exemple, ajoutez le cours "Programmation serveur 1 (ProgServ1)" avec la note
+`5.5` et l'acronyme "ProgServ1".
+
+Ajoutez les autres cours que vous suivez dans la base de données.
 
 **Note** : Comme l'acronyme est optionnel, il peut avoir la valeur `null`. La
 fonction `addGrade` doit donc prendre trois paramètres : `name`, `grade`, et
 `acronym`, qui a la valeur `null` par défaut.
-
-| `id` | `name`                                         | `acronym`  | `grade` |
-| ---- | ---------------------------------------------- | ---------- | ------- |
-| 1    | Analyse de marché                              | AnalysMar  | 4.5     |
-| 2    | Communication visuelle et sémiologie graphique | ComVisuel  | 4.8     |
-| 3    | Ecriture pour le digital                       | EcrireWeb  | 4.2     |
-| 4    | Bases de la programmation 2                    | BaseProg2  | 4.9     |
-| 5    | Evolution et métiers des médias                | EvolMétMéd | 4.7     |
-| 6    | Droit des médias 1                             | Droit1     | 4.0     |
-| 7    | Introduction à la durabilité                   | IntroDura  | 4.4     |
-| 8    | Programmation serveur 1                        | ProgServ1  | 5.5     |
 
 > [!NOTE]
 >
@@ -157,8 +153,11 @@ function addGrade($name, $grade, $acronym = null) {
         '$grade'
     )";
 
+    // On prépare la requête SQL pour éviter les injections SQL
+    $stmt = $pdo->prepare($sql);
+
     // On exécute la requête SQL pour ajouter un cours
-    $pdo->exec($sql);
+    $stmt->execute();
 
     // On récupère l'identifiant du cours ajouté
     $courseId = $pdo->lastInsertId();
@@ -167,13 +166,6 @@ function addGrade($name, $grade, $acronym = null) {
     return $courseId;
 }
 
-$analysMarId = addGrade('Analyse de marché', 4.5, 'AnalysMar');
-$comVisuelId = addGrade('Communication visuelle et sémiologie graphique', 4.8, 'ComVisuel');
-$ecrireWebId = addGrade('Ecriture pour le digital', 4.2, 'EcrireWeb');
-$baseProg2Id = addGrade('Bases de la programmation 2', 4.9, 'BaseProg2');
-$evolMétMédId = addGrade('Evolution et métiers des médias', 4.7, 'EvolMétMéd');
-$droit1Id = addGrade('Droit des médias 1', 4.0, 'Droit1');
-$introDuraId = addGrade('Introduction à la durabilité', 4.4, 'IntroDura');
 $progServ1Id = addGrade('Programmation serveur 1', 5.5, 'ProgServ1');
 ```
 
@@ -212,11 +204,14 @@ function getGrade($id) {
     // On définit la requête SQL pour récupérer un cours par son identifiant
     $sql = "SELECT * FROM courses WHERE id = $id";
 
-    // On récupère le cours correspondant à l'identifiant
-    $course = $pdo->query($sql);
+    // On prépare la requête SQL pour éviter les injections SQL
+    $stmt = $pdo->prepare($sql);
+
+    // On exécute la requête
+    $stmt->execute();
 
     // On transforme le résultat en un tableau associatif
-    $course = $course->fetch();
+    $course = $stmt->fetch();
 
     // On retourne le cours
     return $course;
@@ -292,11 +287,14 @@ function getGrades() {
     // On définit la requête SQL pour récupérer tous les cours
     $sql = "SELECT * FROM courses";
 
-    // On récupère tous les cours
-    $courses = $pdo->query($sql);
+    // On prépare la requête SQL pour éviter les injections SQL
+    $stmt = $pdo->prepare($sql);
+
+    // On exécute la requête SQL pour récupérer tous les cours
+    $stmt->execute();
 
     // On transforme le résultat en un tableau associatif
-    $courses = $courses->fetchAll();
+    $courses = $stmt->fetchAll();
 
     // On retourne les cours
     return $courses;
@@ -360,37 +358,35 @@ function removeGrade($id) {
     // On définit la requête SQL pour supprimer un cours par son identifiant
     $sql = "DELETE FROM courses WHERE id = '$id'";
 
+    // On prépare la requête SQL pour éviter les injections SQL
+    $stmt = $pdo->prepare($sql);
+
     // On exécute la requête SQL pour supprimer le cours
-    return $pdo->exec($sql);
+    return $stmt->execute();
 }
 
-// On supprime le cours avec l'identifiant `$baseProg2Id`
-$numberOfAffectedRows = removeGrade($baseProg2Id);
+// On supprime le cours avec l'identifiant `$progServ1Id`
+$success = removeGrade($progServ1Id);
 
-if ($numberOfAffectedRows == 1) {
-    echo "<p>Le cours avec l'identifiant $baseProg2Id a été supprimé avec succès.</p>";
+if ($success) {
+    echo "<p>Le cours avec l'identifiant $progServ1Id a été supprimé avec succès.</p>";
 } else {
     echo "<p>Erreur lors de la suppression du cours avec l'identifiant $baseProg2Id.</p>";
 }
 
 // On essaie de supprimer un cours avec un identifiant qui n'existe pas
-$numberOfAffectedRows = removeGrade(9999);
+$success = removeGrade(9999);
 
-if ($numberOfAffectedRows == 1) {
+if ($success) {
     echo "<p>Le cours avec l'identifiant 9999 a été supprimé avec succès.</p>";
 } else {
     echo "<p>Aucun cours trouvé avec cet identifiant (9999).</p>";
 }
 ```
 
-Comme la méthode `exec` retourne le nombre de lignes affectées par la requête
-SQL, nous pouvons savoir si la suppression a réussi ou non.
-
-Si l'identifiant n'existe pas, la fonction retourne 0, car aucun enregistrement
-n'a été supprimé (la méthode `exec` retourne le nombre de lignes affectées).
-
-Si l'identifiant existe, la fonction retourne le nombre de lignes supprimées (en
-l’occurrence, 1 enregistrement).
+Comme la méthode `execute` retourne un booléen indiquant si la requête a été
+exécutée avec succès ou non, nous pouvons savoir si la suppression a réussi ou
+non.
 
 Cela nous permet de savoir si la suppression a réussi ou non.
 
