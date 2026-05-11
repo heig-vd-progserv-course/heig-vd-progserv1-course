@@ -603,11 +603,113 @@ cours d'exécution et que la clé SSH est chargée dans l'agent :
 Vous pouvez maintenant passer à la section
 [Valider l'installation et la configuration de l'environnement de développement local](#valider-linstallation-et-la-configuration-de-lenvironnement-de-développement-local).
 
-#### macOS et Linux
+#### macOS
 
-macOS et Linux utilisent généralement l'agent SSH de manière native, et les clés
-SSH sont généralement chargées automatiquement dans l'agent SSH lors de leur
-création.
+macOS utilise généralement l'agent SSH de manière native, et les clés SSH sont
+généralement chargées automatiquement dans l'agent SSH lors de leur création.
+
+Il est néanmoins important de vérifier que l'agent SSH est bien démarré pour la
+suite du cours.
+
+Les étapes suivantes vous guideront pour vérifier que l'agent SSH est démarré et
+que votre clé SSH est chargée dans l'agent SSH.
+
+##### Valider que l'agent SSH est démarré
+
+Ouvrez un terminal et exécutez la commande suivante pour vérifier si l'agent a
+connaissance des clés SSH disponibles :
+
+```bash
+ssh-add -l
+```
+
+Trois scénarios sont possibles :
+
+1. `Could not open a connection to your authentication agent.` : cela signifie
+   que l'agent SSH n'est pas en cours d'exécution. Vous devez démarrer l'agent
+   SSH en utilisant la commande suivante :
+
+   ```bash
+   eval "$(ssh-agent -s)"
+   ```
+
+   Puis retestez la commande SSH précédente en début de la section
+   [Valider que l'agent SSH est démarré](#valider-que-lagent-ssh-est-démarré-1).
+   Si une erreur continue à s'afficher, faites appel à l'équipe pédagogique pour
+   résoudre le problème.
+
+2. `The agent has no identities.` : cela signifie que l'agent SSH est en cours
+   d'exécution, mais qu'aucune clé SSH n'est chargée dans l'agent.
+
+   Vous pouvez ensuite passer à la section
+   [Ajouter la clé SSH à l'agent SSH de votre ordinateur](#ajouter-la-clé-ssh-à-lagent-ssh-de-votre-ordinateur-1).
+
+3. Un résultat similaire à celui présenté ci-dessous :
+
+   ```text
+   256 SHA256:naCCKCyb1yC41QaCHwlcy2KiHF6uYsphKSczwGbm/u0 ludovic.delafontaine@gmail.com (ED25519)
+   ```
+
+   Cela signifie que l'agent SSH est en cours d'exécution et que la clé SSH est
+   chargée dans l'agent et que tout devrait être en ordre pour la suite du
+   cours.
+
+   Vous pouvez maintenant passer à la section
+   [Valider l'installation et la configuration de l'environnement de développement local](#valider-linstallation-et-la-configuration-de-lenvironnement-de-développement-local).
+
+##### Ajouter la clé SSH à l'agent SSH de votre ordinateur
+
+Commencez par éditer le fichier de configuration de l'agent SSH de macOS en
+utilisant la commande suivante :
+
+```bash
+nano ~/.ssh/config
+```
+
+Ajoutez ensuite les lignes suivantes à la fin du fichier de configuration pour
+configurer l'agent SSH de macOS pour qu'il puisse utiliser votre clé SSH :
+
+```text
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+```
+
+Si nécessaire, remplacez `id_ed25519` par le nom de votre fichier de clé SSH si
+vous avez utilisé un autre nom lors de la création de votre clé SSH.
+
+Ensuite, vous devez charger votre clé SSH dans l'agent en utilisant la commande
+suivante :
+
+```bash
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+```
+
+Si nécessaire, remplacez `id_ed25519` par le nom de votre fichier de clé SSH si
+vous avez utilisé un autre nom lors de la création de votre clé SSH.
+
+Puis validez que la clé SSH est bien chargée dans l'agent SSH de macOS en
+suivant les étapes à l'aide de la commande suivante :
+
+```bash
+ssh-add -l
+```
+
+Le résultat devrait être similaire à ceci, indiquant que l'agent SSH est en
+cours d'exécution et que la clé SSH est chargée dans l'agent :
+
+```text
+256 SHA256:naCCKCyb1yC41QaCHwlcy2KiHF6uYsphKSczwGbm/u0 ludovic.delafontaine@gmail.com (ED25519)
+```
+
+Vous pouvez maintenant passer à la section
+[Valider l'installation et la configuration de l'environnement de développement local](#valider-linstallation-et-la-configuration-de-lenvironnement-de-développement-local).
+
+#### Linux
+
+Linux utilise généralement l'agent SSH de manière native, et les clés SSH sont
+généralement chargées automatiquement dans l'agent SSH lors de leur création.
 
 Il est néanmoins important de vérifier que l'agent SSH est bien démarré pour la
 suite du cours.
@@ -670,10 +772,10 @@ ssh-add ~/.ssh/id_ed25519
 Remplacez `id_ed25519` par le nom de votre fichier de clé SSH si vous avez
 utilisé un autre nom lors de la création de votre clé SSH.
 
-Puis validez que la clé SSH est bien chargée dans l'agent SSH de Windows en
+Puis validez que la clé SSH est bien chargée dans l'agent SSH de Linux en
 suivant les étapes à l'aide de la commande suivante :
 
-```powershell
+```bash
 ssh-add -l
 ```
 

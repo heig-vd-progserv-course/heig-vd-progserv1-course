@@ -1283,6 +1283,10 @@ index 298efc0..2b737ac 100644
                      <?php } ?>
 ```
 
+Dans ce code, nous avons utilisé la fonction `htmlspecialchars()` pour échapper
+les données de l'animal de compagnie avant de les afficher dans la page
+d'accueil.
+
 Pensez à commiter et pousser les modifications que vous avez faites jusqu'à
 présent avant de continuer. Dès le premier push, créez une pull request pour que
 votre travail puisse être visible par les autres personnes du dépôt de code.
@@ -1362,6 +1366,10 @@ index ee9fb13..1570558 100644
          <center>
 ```
 
+Dans ce code, nous avons utilisé la fonction `htmlspecialchars()` pour échapper
+les données de l'animal de compagnie avant de les afficher dans la page de
+visualisation d'un animal de compagnie.
+
 Pensez à commiter et pousser les modifications que vous avez faites jusqu'à
 présent avant de continuer. Dès le premier push, créez une pull request pour que
 votre travail puisse être visible par les autres personnes du dépôt de code.
@@ -1375,9 +1383,38 @@ compagnie :
 
 ```diff
 diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 40dafef..9a441e1 100644
+index 3540939..8d8e4be 100644
 --- a/mini-projet/public/create.php
 +++ b/mini-projet/public/create.php
+@@ -1,19 +1,19 @@
+ <?php
+ require_once __DIR__ . '/../src/functions.php';
+
+ // Définition des valeurs par défaut de l'animal de compagnie
+-$name = $_POST["name"] ?? null;
+-$species = $_POST["species"] ?? null;
+-$nickname = $_POST["nickname"] ?? null;
+-$sex = $_POST["sex"] ?? null;
+-$birthday = $_POST["birthday"] ?? null;
+-$color = $_POST["color"] ?? null;
++$name = $_POST["name"] ?? '';
++$species = $_POST["species"] ?? '';
++$nickname = $_POST["nickname"] ?? '';
++$sex = $_POST["sex"] ?? '';
++$birthday = $_POST["birthday"] ?? '';
++$color = $_POST["color"] ?? '';
+ $personalities = $_POST["personalities"] ?? [];
+-$size = $_POST["size"] ?? null;
+-$weight = $_POST["weight"] ?? null;
+-$notes = $_POST["notes"] ?? null;
++$size = $_POST["size"] ?? '';
++$weight = $_POST["weight"] ?? '';
++$notes = $_POST["notes"] ?? '';
+
+ // Gestion de la soumission du formulaire
+ if ($_SERVER["REQUEST_METHOD"] === "POST") {
+     // Validation de l'animal de compagnie
+     $errors = validatePet(
 @@ -105,11 +105,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
              <label for="name">Nom</label>
              <input
@@ -1462,6 +1499,18 @@ index 40dafef..9a441e1 100644
      </main>
      <footer>
 ```
+
+Dans la première partie du code, nous avons mis à jour les valeurs par défaut
+des variables pour qu'elles soient des chaînes de caractères vides au lieu de
+`null`. Cela permet d'éviter des erreurs d'affichage dans le formulaire lorsque
+les données sont affichées pour la première fois (lorsque le formulaire n'a pas
+encore été soumis). Sans quoi, la fonction `htmlspecialchars()` ne pourrait pas
+être utilisée pour échapper les données, car elle ne peut pas traiter des
+valeurs `null`.
+
+Dans la seconde partie du code, nous avons utilisé la fonction
+`htmlspecialchars()` pour échapper les données de l'animal de compagnie avant de
+les afficher dans le formulaire d'ajout d'un animal de compagnie.
 
 Pensez à commiter et pousser les modifications que vous avez faites jusqu'à
 présent avant de continuer. Dès le premier push, créez une pull request pour que
