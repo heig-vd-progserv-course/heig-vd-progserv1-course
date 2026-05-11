@@ -475,9 +475,9 @@ si vous avez des difficultés.
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/05-bases-de-donnees-et-pdo/02-exercices/README.md
 [mini-projet]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/05-bases-de-donnees-et-pdo/03-mini-projet/README.md
-[feedback]: https://framaforms.org/progserv1-2024-2025-feedback-1745321495
+[feedback]: https://framaforms.org/progserv1-2025-2026-feedback-1778517625
 [feedback-qr-code]:
-	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/progserv1-2024-2025-feedback-1745321495
+	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/progserv1-2025-2026-feedback-1778517625
 
 <!-- Illustrations -->
 
