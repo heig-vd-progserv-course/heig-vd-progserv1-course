@@ -451,7 +451,8 @@ ordinateur pour que le conteneur puisse ensuite l'utiliser.
 La validation de la configuration dépend de votre système d'exploitation :
 
 - [Windows](#windows).
-- [macOS et Linux](#macos-et-linux).
+- [macOS](#macos).
+- [Linux](#linux).
 
 Les sources utilisées pour cette section sont les suivantes :
 

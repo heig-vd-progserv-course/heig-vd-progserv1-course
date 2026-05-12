@@ -60,75 +60,81 @@ Vous l'avez fait, bravo ! 🎉
 
 Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
-### Objectifs de l'unité d'enseignement
+### Objectifs du cours
 
-> En résumé, vous devriez être capable de :
+> À la fin de ce cours, vous devriez être capable de :
 >
-> - Comprendre les bases de PHP et son rôle dans le monde web.
-> - Écrire un code PHP propre et organisé.
-> - Gérer les formulaires HTML et les données qu'ils contiennent de manière
->   sûre.
-> - Persister des données dans une base de données SQLite.
-> - Implémenter des concepts de programmation orientée objet.
-> - ~~Gérer les cookies et les sessions utilisateurs.~~
+> - Expliquer les bases d'un langage de programmation serveur comme PHP et son
+>   rôle dans le monde web.
+> - Organiser un code propre à l'aide de fonctions.
+> - Manipuler des tableaux et utiliser des boucles pour traiter des collections
+>   de données.
+> - Gérer les formulaires et les données qu'ils contiennent.
+> - Persister des données dans une base de données.
 
 ### Introduction à PHP
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php).
+[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/01.02-introduction-a-php/README.md).
 
 ![bg brightness:2 opacity:0.05][illustration-principale]
 
 #### Éléments clés à retenir
 
 - PHP est un langage de programmation côté serveur, principalement utilisé pour
-  créer des applications web dynamiques.
+  créer des applications web dynamiques, qui repose sur une architecture
+  client-serveur.
 - Il est intégré dans le HTML et peut interagir avec des bases de données.
 - PHP est un langage interprété, ce qui signifie qu'il est exécuté sur le
   serveur avant d'envoyer le contenu au navigateur.
 - La syntaxe de PHP est similaire à d'autres langages de programmation.
 
-### Fonctions
-
-<!-- _class: lead -->
-
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/02-fonctions).
-
-![bg brightness:2 opacity:0.05][illustration-principale]
-
-#### Éléments clés à retenir
-
-- Les fonctions en PHP permettent de regrouper du code réutilisable.
-- Elles peuvent accepter des paramètres et retourner des valeurs.
-- Les fonctions peuvent être définies par l'utilisateur ou intégrées dans le
-  langage.
-- L'utilisation de fonctions permet d'améliorer la lisibilité et la
-  maintenabilité du code.
-
 ### Tableaux et boucles
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/02-tableaux-et-boucles).
+[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/02-tableaux-et-boucles/README.md).
 
 ![bg brightness:2 opacity:0.05][illustration-principale]
 
 #### Éléments clés à retenir
 
-- Les tableaux en PHP sont des structures de données qui permettent de stocker
+- Les tableaux sont des structures de données qui permettent de stocker
   plusieurs valeurs sous une seule variable.
 - Ils peuvent être indexés numériquement ou associativement.
 - Les boucles permettent de parcourir les tableaux et d'exécuter du code
   plusieurs fois.
 - Les boucles `for`, `foreach`, `while` et `do...while` sont couramment
   utilisées en PHP.
+- Des fonctions permettent d'utiliser/de manipuler les tableaux de manière
+  efficace (ex. `count()`, `array_push()`, etc.).
+
+### Fonctions
+
+<!-- _class: lead -->
+
+[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-fonctions/README.md).
+
+![bg brightness:2 opacity:0.05][illustration-principale]
+
+#### Éléments clés à retenir
+
+- Les fonctions permettent de regrouper du code réutilisable.
+- Elles peuvent accepter des paramètres et retourner des valeurs.
+- Les fonctions peuvent être définies par l'utilisateur.trice ou intégrées dans
+  le langage.
+- L'utilisation de fonctions permet d'améliorer la lisibilité et la
+  maintenabilité du code.
+- En PHP, il est possible de typer les paramètres et les valeurs de retour des
+  fonctions.
+- Il est également possible de définir des paramètres optionnels.
 
 ### Formulaires HTML et validation
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/04-formulaires-html-et-validation).
+[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/04-formulaires-html-et-validation/README.md).
 
 ![bg brightness:2 opacity:0.05][illustration-principale]
 
@@ -147,11 +153,11 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/05-base-de-donnees-et-pdo).
+[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/05-bases-de-donnees-et-pdo/README.md).
 
 ![bg brightness:2 opacity:0.05][illustration-principale]
 
-#### Éléments clés à retenir
+#### Éléments clés à retenir (1)
 
 - Les bases de données permettent de stocker et de gérer des données de manière
   structurée.
@@ -159,19 +165,13 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
   différentes bases de données de manière sécurisée et efficace.
 - PDO offre une interface orientée objet pour exécuter des requêtes SQL et
   récupérer des résultats.
+- SQLite est une base de données légère qui peut être utilisée avec PDO pour des
+  applications simples.
 
-### Sécurité et nettoyage des saisies utilisateurs
-
-<!-- _class: lead -->
-
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/06-securite-et-nettoyage-des-saisies-utilisateurs).
-
-![bg brightness:2 opacity:0.05][illustration-principale]
-
-#### Éléments clés à retenir
+#### Éléments clés à retenir (2)
 
 - La sécurité est cruciale dans le développement web pour protéger les données
-  et les utilisateurs.
+  et les utilisateur.trices.
 - Les attaques courantes incluent l'injection SQL et les attaques XSS
   (Cross-Site Scripting).
 - Les requêtes préparées avec PDO permettent de prévenir les attaques par
@@ -179,33 +179,16 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 - Les fonctions de nettoyage comme `htmlspecialchars()` aident à sécuriser les
   données affichées dans le navigateur en échappant les caractères spéciaux.
 
-### Programmation orientée objet
-
-<!-- _class: lead -->
-
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/07-programmation-orientee-objet).
-
-![bg brightness:2 opacity:0.05][illustration-principale]
-
-#### Éléments clés à retenir
-
-- La programmation orientée objet (POO) est un paradigme de programmation qui
-  organise le code en objets.
-- Les objets sont des instances de classes, qui définissent des propriétés et
-  des méthodes.
-- La POO permet de structurer le code de manière modulaire et réutilisable.
-- PHP supporte les concepts de POO.
-
 ## Résultats des formulaires de feedback et évaluations GAPS
 
 <!-- _class: lead -->
 
-Discussions et retours sur l'unité d'enseignement.
+Discussions et retours sur le cours.
 
 <small>
 
-Vous pourrez les retrouver sur le [dépôt Git de l'unité
-d'enseignement][contenu-complet-sur-github].
+Vous pourrez les retrouver sur le [dépôt Git du
+cours][contenu-complet-sur-github].
 
 </small>
 
@@ -215,80 +198,26 @@ d'enseignement][contenu-complet-sur-github].
 
 Tout ce que vous devez savoir pour réussir l'examen final.
 
-### Examen final
+## Modalités d'évaluation
 
-- L'unité d'enseignement se termine par un examen final.
-- L'examen aura lieu le **24.06.2025**, de **9h00 à 12h00** dans les locaux
-  communiqués par e-mail.
-- **Venez à 8h30 pour vous installer et vous préparer.**
-- L'examen est composé de deux parties (théorique + pratique)
+- Le cours se termine par un examen final.
+- Les dates et les salles seront communiquées d'ici peu..
+- **Venez en avance pour vous installer et vous préparer.**
+- L'examen est composé de deux parties, décrit dans le document
+  [Évaluation finale](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/02-evaluation-finale/README.md).
 
 ![bg right:40%][illustration-modalites-devaluation]
-
-#### Partie théorique
-
-<div class="two-columns">
-<div>
-
-- ~45 minutes.
-- 40% de la note.
-- Questions ouvertes et QCM avec argumentation possible.
-- Portée sur les connaissances théoriques et les exercices.
-
-</div>
-<div>
-
-- Sur la plateforme d'évaluation en ligne de la HEIG-VD (via réseau _"HEIG-VD"_
-  ou VPN)
-- Vous gérez votre temps.
-- Une fois la partie terminée, nous vous fournissons la consigne de la partie
-  pratique.
-
-</div>
-</div>
-
-<center>
-
-**Aucune ressource autorisée**.
-
-</center>
-
-#### Partie pratique
-
-<div class="two-columns">
-<div>
-
-- ~2 heures 15 minutes.
-- 60% de la note.
-- Mini-projet à réaliser sur l'ordinateur.
-- Portée sur le mini-projet et les exercices.
-
-</div>
-<div>
-
-- Sur l'ordinateur avec votre IDE habituel.
-- Rendu à faire **avant la fin de l'examen** par mail.
-- **Aucun retard pour le rendu accepté** (= note de 1).
-
-</div>
-</div>
-
-<center>
-
-**Ressources autorisées** :
-[**dépôt Git du cours**](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course),
-**notes et code personnels**,
-[**php.net**](https://www.php.net/manual/index.php) et
-[**developer.mozilla.org**](https://developer.mozilla.org).
-
-</center>
 
 ### Calcul de la note finale
 
 La note finale de l'examen est calculée en combinant les notes des deux parties
 de l'examen :
 
-$$\text{Note finale} = \text{Note pour la partie théorique} * 0.4 + \text{Note pour la partie pratique} * 0.6$$
+$$
+\text{Note finale}
+  = \text{Note pour la partie théorique} * 0.6
+  + \text{Note pour la partie pratique} * 0.4
+$$
 
 ### Sanctions possibles en cas de tricherie (1)
 
@@ -332,7 +261,7 @@ de vous faire renvoyer**.
 ### Comment se préparer ?
 
 - Avoir un environnement de développement fonctionnel (cf. cours
-  [Introduction à PHP](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-modalites-de-lunite-denseignement-et-introduction-a-php),
+  [Introduction à PHP](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/01.02-introduction-a-php/README.md),
   plus particulièrement le mini-projet).
 - **Désactiver toutes aides externes (Copilot, ChatGPT, etc.)**.
 - Relire les supports de cours avec leurs objectifs respectifs (utilisez ces
@@ -348,102 +277,54 @@ Est-ce que vous avez des questions ?
 
 ## À vous de jouer !
 
-- Réaliser l'[examen blanc][examen-blanc].
+- Prendre connaissance du document
+  [Évaluation finale](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/02-evaluation-finale/README.md).
+- Réaliser l'[examen blanc][examen-blanc] à votre disposition.
+- Finaliser le mini-projet du cours.
 - Poser des questions si nécessaire.
 
-\
-**Pour le mini-projet ou l'examen blanc, n'hésitez pas à vous entraidez si vous
-avez des difficultés !**
+**N'allez pas trop vite, vous avez le temps !** N'hésitez pas à vous entraidez
+si vous avez des difficultés.
 
 ![bg right:40%][illustration-a-vous-de-jouer]
-
-## Conclusion
-
-<!-- _class: lead -->
-
-### Vous avez réussi ! Félicitations !
-
-Vous pouvez être fier.es de vous ! Tout le monde fait du bon travail ! J'ai eu
-énormément de plaisir à suivre vos progrès au cours de ce semestre.
-
-Ce cours est maintenant terminé, mais j'espère que vous l'avez apprécié et que
-vous avez beaucoup appris.
-
-Ce cours fait partie d'un programme plus large, et j'espère que vous serez en
-mesure d'appliquer ce que vous avez appris dans les prochains cours.
-
-### Et maintenant ?
-
-Vous avez acquis des connaissances importantes au cours de cette formation.
-Utilisez ces connaissances à bon escient. Un grand pouvoir s'accompagne d'une
-grande responsabilité. Vous pouvez maintenant :
-
-- Approfondir le monde du développement web
-- Développer des applications web plus complexes (je vous souhaite que ProgServ2
-  permette cela)
-
-Apprenez toujours plus, et n'hésitez à partager vos connaissances avec les
-autres.
-
-### Remarques finales
-
-Mes remarques finales personnelles sont les suivantes :
-
-<div class="two-columns">
-<div>
-
-- **Posez-vous toujours les bonnes questions** : _pourquoi ? est-ce que je fais
-  la bonne chose pour la bonne cause ?_
-- **Faites toujours ce qui est bon pour vous** : la santé, les relations, les
-  ami.es sont plus important.es que le travail !
-
-</div>
-<div>
-
-- **Ayez toujours confiance en vous et en vos tripes** : faites ce que vous
-  pensez être juste !
-- **Aidez les autres, soyez gentil** : la coopération vaut mieux que la
-  compétition !
-- **Restez critique** : votre opinion compte et peut faire la différence.
-
-</div>
-
-## Merci, bonne continuation et à la prochaine !
-
-<!-- _class: lead -->
-
-Apéro time! 🎉
 
 ## Examen final
 
 <!-- _class: lead -->
+
+<small>_Ces slides sont utilisées le jour de l'examen final pour rappeler les
+modalités d'évaluation et les consignes à suivre._</small>
 
 ### Déroulement
 
 <div class="two-columns">
 <div>
 
-**Partie théorique**
+**Partie 1**
 
-- ~45 minutes.
-- Lien pour la plateforme en ligne envoyé par mail.
-- Une fois la partie théorique terminée, vous recevez la partie pratique.
+- 90 minutes.
+- Papier et crayon.
+- Si vous avez fini, vous pouvez quitter la salle.
 - **Aucune ressource autorisée**.
 
 </div>
 <div>
 
-**Partie pratique**
+**Partie 2**
 
-- ~2 heures 15 minutes.
-- Rendu à faire avant la fin de l'examen par mail (sinon 1).
-- **Ressources autorisées** :
-  - [dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course),
-    notes et code personnels, [php.net](https://www.php.net/manual/index.php) et
-    [developer.mozilla.org](https://developer.mozilla.org).
+- 90 minutes.
+- Sur ordinateur.
+- Rendu sur GitHub.
+- **Ressources partielles autorisées**.
 
 </div>
 </div>
+
+<center>
+
+Une pause de 15 minutes est prévue entre les deux parties.
+
+</center>
 
 ### Sanctions possibles en cas de tricherie (1)
 
@@ -471,36 +352,23 @@ Source :
 > 3. **l'exclusion de la filière, voire du domaine** si les règlements du
 >    domaine le prévoient.
 
-### Sanctions possibles en cas de tricherie (3)
-
-**Les personnes qui surveilleront l'examen sont informées des règles
-d'évaluation et des sanctions possibles en cas de triche.**
-
-Elles sont en charge de surveiller le bon déroulement de l'examen et de signaler
-les éventuels cas de triche. **Aucune tolérance ne sera accordée en cas de
-triche avérée ou de doute sur la bonne conduite de l'examen**.
-
-Vous avez travaillé dur pour arriver jusqu'ici et nous avons confiance en vos
-capacités à réussir cet examen. **Ne prenez pas le risque de nous décevoir et/ou
-de vous faire renvoyer**.
-
 ---
 
 <div class="two-columns">
 <div>
 
-**Partie théorique**
+**Partie 1**
 
-- ~45 minutes.
-- Vous recevez la partie pratique une fois cette partie terminée.
+- 90 minutes.
+- Si vous avez fini, vous pouvez quitter la salle.
 
 </div>
 <div>
 
-**Partie pratique**
+**Partie 2**
 
-- ~2 heures 15 minutes.
-- Rendu à faire avant la fin de l'examen par mail.
+- 90 minutes.
+- Rendu sur GitHub avant la fin de l'examen.
 
 </div>
 </div>

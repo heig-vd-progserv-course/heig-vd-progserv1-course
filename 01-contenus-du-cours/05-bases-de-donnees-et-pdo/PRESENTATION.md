@@ -74,9 +74,8 @@ document._
 
 ### Système de gestion de base de données (SGBD)
 
-- Logiciel permettant de créer, gérer et interroger des bases de données.
-- Fournit une manière pour interagir avec les données (création, insertion, mise
-  à jour, suppression).
+- Logiciel permettant de gérer et interroger des bases de données.
+- Fournit une manière pour interagir avec les données.
 - Chacun avec ces caractéristiques mais avec les mêmes concepts de base.
 
 ![bg right:40%][illustration-systeme-de-gestion-de-base-de-donnees]
@@ -115,7 +114,7 @@ sécurisée.
 
 - Consistent à insérer du code SQL malveillant dans une requête SQL existante
   pour manipuler la base de données de manière non prévue.
-- Par exemple, un attaquant pourrait insérer du code SQL pour supprimer des
+- Par exemple, un.e attaquant.e pourrait insérer du code SQL pour supprimer des
   données, voler des données sensibles ou même prendre le contrôle de la base de
   données.
 - L'attaque consiste à manipuler la base de données.
@@ -123,8 +122,8 @@ sécurisée.
 ### Les attaques par cross-site scripting (XSS)
 
 - Consistent à stocker du code JavaScript malveillant dans une base de données
-  pour qu'il soit exécuté lorsqu'un utilisateur.trice accède à une page web qui
-  affiche ces données.
+  pour qu'il soit exécuté lorsqu'un.e utilisateur.trice accède à une page web
+  qui affiche ces données.
 - Par exemple, un attaquant pourrait insérer du code JavaScript pour voler des
   informations sensibles, rediriger les utilisateur.trices vers des sites
   malveillants ou même prendre le contrôle de la session de l'utilisateur.trice.

@@ -553,7 +553,7 @@ Donnez lui le même nom que l'issue correspondante.
 #### Tester la création d'un animal de compagnie
 
 Ouvrez votre navigateur et accédez à l'adresse
-<http://localhost:8081/mini-projet/public/create.php>. Vous devriez voir le
+<http://localhost:8080/mini-projet/public/create.php>. Vous devriez voir le
 formulaire d'ajout d'un animal de compagnie.
 
 Remplissez le formulaire avec les données d'un animal de compagnie et
@@ -711,7 +711,7 @@ Donnez lui le même nom que l'issue correspondante.
 #### Mettre à jour l'interface utilisateur
 
 Accédez à la page de visualisation d'un animal de compagnie avec le lien
-<http://localhost:8081/mini-projet/public/view.php?id=1>.
+<http://localhost:8080/mini-projet/public/view.php?id=1>.
 
 Une page de visualisation de l'animal de compagnie devrait s'afficher avec les
 données de l'animal de compagnie que vous avez ajouté précédemment. Si l'animal
@@ -1210,7 +1210,7 @@ important de se protéger contre les attaques XSS (Cross-Site Scripting).
 
 Pour illustrer ce point, essayez d'ajouter un animal de compagnie avec le nom
 suivant : `<script>alert('Oh no');</script>` dans la page d'ajout d'un animal de
-compagnie (<http://localhost:8081/mini-projet/public/create.php>).
+compagnie (<http://localhost:8080/mini-projet/public/create.php>).
 
 Lorsque vous soumettez le formulaire, vous devriez être redirigé.e vers la page
 de visualisation de l'animal de compagnie que vous venez d'ajouter.

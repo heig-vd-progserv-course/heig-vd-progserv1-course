@@ -148,13 +148,18 @@ function addGrade($name, $grade, $acronym = null) {
         acronym,
         grade
     ) VALUES (
-        '$name',
-        '$acronym',
-        '$grade'
+        :name,
+        :acronym,
+        :grade
     )";
 
     // On prépare la requête SQL pour éviter les injections SQL
     $stmt = $pdo->prepare($sql);
+
+    // On lie les paramètres de la requête SQL aux variables correspondantes
+    $stmt->bindParam(':name', $name);
+    $stmt->bindParam(':acronym', $acronym);
+    $stmt->bindParam(':grade', $grade);
 
     // On exécute la requête SQL pour ajouter un cours
     $stmt->execute();
@@ -202,10 +207,13 @@ function getGrade($id) {
     global $pdo;
 
     // On définit la requête SQL pour récupérer un cours par son identifiant
-    $sql = "SELECT * FROM courses WHERE id = $id";
+    $sql = "SELECT * FROM courses WHERE id = :id";
 
     // On prépare la requête SQL pour éviter les injections SQL
     $stmt = $pdo->prepare($sql);
+
+    // On lie le paramètre de la requête SQL à la variable correspondante
+    $stmt->bindParam(':id', $id);
 
     // On exécute la requête
     $stmt->execute();
@@ -356,10 +364,13 @@ function removeGrade($id) {
     global $pdo;
 
     // On définit la requête SQL pour supprimer un cours par son identifiant
-    $sql = "DELETE FROM courses WHERE id = '$id'";
+    $sql = "DELETE FROM courses WHERE id = :id";
 
     // On prépare la requête SQL pour éviter les injections SQL
     $stmt = $pdo->prepare($sql);
+
+    // On lie le paramètre de la requête SQL à la variable correspondante
+    $stmt->bindParam(':id', $id);
 
     // On exécute la requête SQL pour supprimer le cours
     return $stmt->execute();

@@ -29,13 +29,18 @@ function addGrade($name, $grade, $acronym = null) {
         acronym,
         grade
     ) VALUES (
-        '$name',
-        '$acronym',
-        '$grade'
+        :name,
+        :acronym,
+        :grade
     )";
 
     // On prépare la requête SQL pour éviter les injections SQL
     $stmt = $pdo->prepare($sql);
+
+    // On lie les paramètres de la requête SQL aux variables correspondantes
+    $stmt->bindParam(':name', $name);
+    $stmt->bindParam(':acronym', $acronym);
+    $stmt->bindParam(':grade', $grade);
 
     // On exécute la requête SQL pour ajouter un cours
     $stmt->execute();

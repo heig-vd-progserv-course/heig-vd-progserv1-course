@@ -673,6 +673,40 @@ mettre en pratique les concepts abordés.
 Vous trouverez les détails du mini-projet ici :
 [Mini-projet](./03-mini-projet/README.md).
 
+## Questions d'évaluation
+
+> [!NOTE]
+>
+> Les questions d'évaluation sont destinées à vous aider à vérifier votre
+> compréhension des concepts abordés dans le cours. Elles ne sont pas destinées
+> à être utilisées comme une liste de contrôle exhaustive des compétences à
+> maîtriser.
+>
+> Il est recommandé de les utiliser comme un guide pour vous aider à identifier
+> les domaines dans lesquels vous pourriez avoir besoin de renforcer vos
+> connaissances ou de pratiquer davantage.
+
+- Qu'est-ce qu'une base de données et à quoi sert-elle ?
+- Qu'est-ce qu'un système de gestion de base de données (SGBD) et quels sont les
+  SGBD les plus courants ?
+- Qu'est-ce que SQLite et pourquoi est-il utilisé dans ce cours ?
+- Qu'est-ce que PDO et quels sont ses avantages pour interagir avec une base de
+  données en PHP ?
+- Comment se connecter à une base de données SQLite avec PDO ?
+- Comment créer une table dans une base de données SQLite avec PDO ?
+- Comment insérer des données dans une table avec PDO ?
+- Comment récupérer des données d'une table avec PDO ?
+- Comment mettre à jour des données dans une table avec PDO ?
+- Comment supprimer des données d'une table avec PDO ?
+- Pourquoi est-il important de valider et de nettoyer les données fournies par
+  les utilisateur.trices avant de les utiliser dans une application web qui
+  interagit avec une base de données ?
+- Quelles sont les bonnes pratiques pour prévenir les attaques par injection SQL
+  et les attaques par cross-site scripting (XSS) lors de l'utilisation de bases
+  de données dans une application web ?
+- Comment afficher des données de manière sécurisée pour prévenir les attaques
+  par cross-site scripting (XSS) ?
+
 ## À faire pour la semaine suivante
 
 Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,

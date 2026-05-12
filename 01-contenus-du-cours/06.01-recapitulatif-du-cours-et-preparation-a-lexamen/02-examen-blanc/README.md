@@ -12,88 +12,193 @@ _"Programmation serveur 1 (ProgServ1)"_.
 Plus de détails dans le contenu
 _["Récapitulatif du cours et préparation à l'examen"](../README.md)_.
 
-## [ProgServ1 2025-2026] Examen blanc
+- [Examen blanc](#examen-blanc)
+  - [Partie théorique](#partie-théorique)
+  - [Partie pratique](#partie-pratique)
+
+## Examen blanc
 
 L'examen est composé de deux parties :
 
-1. Partie théorique (~45 minutes, 40% de la note).
-2. Partie pratique (~2 heures 15 minutes, 60% de la note).
-
-> [!CAUTION]
->
-> Toute tentative de tricherie ou d'utilisation de ressources non autorisées
-> entraînera la note de 1 pour l'ensemble de l'examen.
+1. Partie théorique (90 minutes, 60% de la note).
+2. Partie pratique (90 minutes, 40% de la note).
 
 ### Partie théorique
 
-> [!CAUTION]
->
-> Quitter la plateforme (changement de fenêtre, fermeture du navigateur, etc.)
-> durant la partie théorique de l'examen entraînera la note de 1 pour l'ensemble
-> de l'examen.
+#### Question 1 (4 points)
 
-#### Ressources autorisées
+Expliquez le concept d'architecture client-serveur et illustrez-le avec un
+exemple concret d'application web avec PHP.
 
-- Aucune
+#### Question 2 (2 points)
 
-#### Lien vers la plateforme d'évaluation
+Listez les outils nécessaires pour exécuter du code PHP. Pour chacun de ces
+outils, donnez leur rôle/but.
 
-> [!NOTE]
->
-> Vous devez être connecté.e au réseau Wi-Fi _"HEIG-VD"_ ou utiliser le VPN pour
-> accéder à la plateforme d'évaluation en ligne de la HEIG-VD.
+#### Question 3 (2 points)
 
-Lien :
-<https://eval.iict-heig-vd.in/users/evaluations/cmbphhzz400ntrdfmr8ve8ijd>.
+Qu'affiche le code suivant ?
 
-#### Rendu
+```php
+<?php
+$variable1 = "Bonjour";
+$variable2 = "$variable1 tout le monde !";
+$variable3 = $variable1 . " " .  $variable2;
+$variable4 = "\$variable3 contient \"$variable3\"";
 
-Soumettre les réponses via la plateforme d'évaluation en ligne de la HEIG-VD et
-faire valider le rendu par la personne qui surveille l'examen. Vous aurez
-ensuite accès à la partie pratique de l'examen.
+echo $variable1;
+echo "<br>";
+echo $variable2;
+echo "<br>";
+echo $variable3;
+echo "<br>";
+echo $variable4;
+```
+
+#### Question 4 (2 points)
+
+Lorsque nous parlons de nature dynamique des variables et constantes en PHP, à
+quoi faisons-nous référence ?
+
+#### Question 5 (2 points)
+
+Est-il possible de typer une variable ou une fonction en PHP ? Justifiez votre
+réponse avec un exemple.
+
+#### Question 6 (4 points)
+
+Quels sont les différents types de tableaux existants avec PHP ? Pour chaque
+type, donnez un exemple concret.
+
+#### Question 7 (2 points)
+
+Soit le tableau `$fruitsEtLegumes` suivant, parcourez et affichez chaque élément
+du sous-tableau `fruits` à l'aide d'une boucle `for`.
+
+```php
+<?php
+$fruitsEtLegumes = [
+    'fruits' => ['Pomme', 'Poire', 'Banane'],
+    'legumes' => ['Carotte', 'Tomate', 'Salade']
+];
+```
+
+#### Question 8 (2 points)
+
+Soit le tableau `$outils` suivant, parcourez et affichez chaque élément du
+tableau à l'aide d'une boucle `foreach`.
+
+```php
+<?php
+$outils = ['marteau', 'tournevis', 'clé à molette'];
+```
+
+#### Question 9 (2 points)
+
+Rédigez une fonction qui s'appelle `isLongerThan4` qui calcule la longueur d'une
+chaîne de caractères passée en paramètre et qui retourne un booléen `true` si la
+longueur de la chaîne de caractères est plus grande que 4 ou `false` sinon.
+
+Appelez-la ensuite avec la valeur _"Non"_.
+
+**Note** : votre fonction doit être typée correctement.
+
+#### Question 10 (2 points)
+
+Rédigez une fonction qui s'appelle `calculateArea` qui calcule l'aire d'un
+rectangle à partir de sa largeur et de sa hauteur passées en paramètres. La
+fonction doit retourner l'aire calculée.
+
+Pour rappel, la formule pour calculer l'aire d'un rectangle est :
+$aire = largeur * hauteur$.
+
+**Note** : votre fonction doit être typée correctement.
+
+#### Question 11 (2 points)
+
+Quel est le but de l'attribut `action` d'un formulaire HTML ?
+
+#### Question 12 (4 points)
+
+Quel est le but de l'attribut `method` d'un formulaire HTML ? Quelles sont les
+différentes méthodes possibles et quelles sont leurs différences ?
+
+#### Question 13 (4 points)
+
+Comment pouvons-nous récupérer les données des formulaires HTML avec PHP ?
+Donnez un exemple de code pour illustrer votre réponse.
+
+#### Question 14 (4 points)
+
+Qu'est-ce que la validation côté serveur ? Pourquoi devons-nous la faire ?
+
+#### Question 15 (4 points)
+
+Qu'est-ce que la validation côté client ? Est-elle suffisante pour garantir la
+sécurité de notre application ? Justifiez votre réponse.
+
+#### Question 16 (4 points)
+
+Décrivez ce qu'est l'extension PDO de PHP ainsi que son but.
+
+#### Question 17 (2 points)
+
+Quelles implications peuvent se produire si le nettoyage des saisies
+utilisateurs n'est pas pris en compte dans une application web faite avec PHP ?
+
+**Note** : il est possible qu'il y ait zéro, une, plusieurs ou toutes les
+réponses qui soient possibles. Tout doit être correct pour obtenir les points.
+
+- [x] Des personnes mal intentionnées peuvent injecter du code malveillant
+- [x] Des données peuvent être perdues
+- [x] Des données peuvent être volées
+- [x] Des données peuvent être modifiées
+
+#### Question 18 (2 points)
+
+Dans un contexte de sécurité d'une application faite avec PHP, quelles
+affirmations sont associées à des attaques par injection SQL dans la liste
+suivante ?
+
+**Note** : il est possible qu'il y ait zéro, une, plusieurs ou toutes les
+réponses qui soient possibles. Tout doit être correct pour obtenir les points.
+
+- [ ] Injecter/modifier dans une requête existante une autre requête pour
+      manipuler la base de donnée.
+- [ ] On peut s'en prémunir à l'aide de l'échappement des caractères spéciaux à
+      l'aide de la fonction `htmlspecialchars`.
+- [ ] On peut s'en prémunir à l'aide des requêtes préparées offertes par PDO.
+- [ ] Injecter du code JavaScript dans une page HTML qui sera alors exécuté.
+
+#### Question 19 (2 points)
+
+Dans un contexte de sécurité d'une application faite avec PHP, quelles
+affirmations sont associées à des attaques XSS dans la liste suivante ?
+
+**Note** : il est possible qu'il y ait zéro, une, plusieurs ou toutes les
+réponses qui soient possibles. Tout doit être correct pour obtenir les points.
+
+- [ ] On peut s'en prémunir à l'aide des requêtes préparées offertes par PDO.
+- [ ] On peut s'en prémunir à l'aide de l'échappement des caractères spéciaux à
+      l'aide de la fonction `htmlspecialchars`.
+- [ ] Injecter du code JavaScript dans une page HTML qui sera alors exécuté.
+- [ ] Injecter/modifier dans une requête existante une autre requête pour
+      manipuler la base de donnée.
+
+#### Question 20 (2 points)
+
+Vous devez développer une application web de gestion de projets avec PHP.
+Comment vous y prendriez-vous ?
+
+Soyez précis et expliquez les étapes nécessaires pour les différentes
+fonctionnalités de l'application et comment vous les implémenteriez.
 
 ### Partie pratique
 
-> [!CAUTION]
->
-> Le rendu doit être effectué **avant** la fin de la partie pratique de
-> l'examen. En cas de non-remise ou de retard, la note de 1 sera attribuée pour
-> la partie pratique de l'examen.
+**Contexte** : vous venez de rejoindre une nouvelle équipe de développement web.
 
-#### Ressources autorisées
-
-- Un environnement de développement local (par exemple, MAMP + Visual Studio
-  Code).
-- Un navigateur web.
-- Le
-  [dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course),
-  comprenant :
-  - La théorie.
-  - Le mini-projet et sa solution.
-  - Les exercices et leurs solutions.
-- Notes personnelles.
-- Code source personnel.
-- Documentation officielle de PHP (<https://www.php.net/>).
-- Ressources MDN (<https://developer.mozilla.org>).
-
-#### Rendu
-
-Le rendu de la partie pratique se fait via mail à l'adresse
-[ludovic.delafontaine@heig-vd.ch](mailto:ludovic.delafontaine@heig-vd.ch) dans
-une archive ZIP ayant pour format `prenom_nom.zip`.
-
-Par exemple, pour une personne nommée _Ludovic Delafontaine_, le rendu de
-l'archive sera `ludovic_delafontaine.zip`.
-
-Vous êtes responsable de son contenu.
-
-Le travail et la consigne doivent être rendus avant la fin de l'examen.
-
-#### Consignes
-
-Vous venez de rejoindre une nouvelle équipe de développement web. Votre
-responsable vous a demandé de créer une application web de gestion de projets.
-Vous devez implémenter les fonctionnalités suivantes :
+Votre responsable vous a demandé de créer une application web de gestion de
+projets. Vous devez implémenter les fonctionnalités suivantes :
 
 - Afficher la liste des projets.
 - Afficher les détails d'un projet.
@@ -129,22 +234,9 @@ CREATE TABLE IF NOT EXISTS projects (
 ```
 
 Réalisez cette application avec PHP en utilisant toutes les bonnes pratiques de
-développement web que vous avez acquises durant l'unité d'enseignement.
+développement web que vous avez acquises durant le cours.
 
 #### Grille d'évaluation
-
-- 0 point - Le travail est manquant, hors sujet ou montre une compréhension très
-  limitée du sujet.
-- 1 point - Le travail montre une compréhension partielle : certains éléments
-  clés sont manquants, peu clairs ou mal mis en œuvre.
-- 2 points - Le travail est complet, précis et montre une compréhension claire
-  et approfondie du sujet.
-
-> [!NOTE]
->
-> Il n'y a aucun critère sur l'aspect visuel de l'application. Vous pouvez
-> utiliser du HTML et du CSS de base (CSS optionnel), mais l'accent doit être
-> mis sur la fonctionnalité et la structure du code.
 
 **Page d'accueil**
 
@@ -186,13 +278,6 @@ développement web que vous avez acquises durant l'unité d'enseignement.
 |  14 | Le projet supprimé est correctement supprimé de la base de données.                                                              |      2 |
 |  15 | Lors de la suppression d'un projet, la personne est redirigée vers la page d'accueil.                                            |      2 |
 
-**Qualité du code**
-
-|   # | Description                                                                                                                                                   | Points |
-| --: | :------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----: |
-|  16 | Les fonctions sont définies dans un fichier unique. Elles sont utilisées dans les différentes pages pour structurer le code et éviter la duplication de code. |      2 |
-|  17 | Le code est lisible, agréable à lire et utilise des noms de variables/fonctions/fichiers/dossiers/etc. explicites.                                            |      2 |
-
 **Contraintes**
 
 - Votre application ne doit pas contenir de code ou de commentaires hors
@@ -202,3 +287,12 @@ développement web que vous avez acquises durant l'unité d'enseignement.
   entraînera la note de 1 pour l'ensemble de l'examen.
 - Le code doit être votre propre travail. Toute tentative de plagiat ou de
   tricherie entraînera la note de 1 pour l'ensemble de l'examen.
+- Le code est lisible, agréable à lire et utilise des noms de
+  variables/fonctions/fichiers/dossiers/etc. explicites.
+- **L'utilisation de code généré par des outils d'intelligence artificielle ou
+  copié depuis des sources externes n'est pas autorisé.** En cas de doutes, nous
+  pouvons vous questionner selon les règles évoquées dans le contenu
+  [Introduction et modalités du cours](../01-contenus-du-cours/01.01-introduction-et-organisation-du-cours/README.md#quen-est-il-de-chatgpt-etc-).
+- Vous devez appliquer les bonnes pratiques de développement avec PHP, notamment
+  en ce qui concerne la structure du code, la lisibilité, l'utilisation du
+  workflow Git/GitHub, etc.

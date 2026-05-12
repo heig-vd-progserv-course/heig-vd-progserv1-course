@@ -76,6 +76,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 - [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
 - [Mini-projet](#mini-projet)
+- [Questions d'évaluation](#questions-dévaluation)
 - [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
 
 ## Objectifs
@@ -857,6 +858,37 @@ mettre en pratique les concepts abordés.
 
 Vous trouverez les détails du mini-projet ici :
 [Mini-projet](./03-mini-projet/README.md).
+
+## Questions d'évaluation
+
+> [!NOTE]
+>
+> Les questions d'évaluation sont destinées à vous aider à vérifier votre
+> compréhension des concepts abordés dans le cours. Elles ne sont pas destinées
+> à être utilisées comme une liste de contrôle exhaustive des compétences à
+> maîtriser.
+>
+> Il est recommandé de les utiliser comme un guide pour vous aider à identifier
+> les domaines dans lesquels vous pourriez avoir besoin de renforcer vos
+> connaissances ou de pratiquer davantage.
+
+- Qu'est-ce qu'un formulaire HTML et à quoi sert-il ?
+- Comment envoyer des données d'un formulaire au serveur à l'aide de PHP ?
+- Quelle est la différence entre les méthodes `GET` et `POST` pour envoyer des
+  données de formulaire ?
+- Comment récupérer les données envoyées par un formulaire à l'aide de PHP ?
+- Pourquoi est-il important de valider les données saisies par
+  l'utilisateur.trice côté serveur ?
+- Comment afficher des messages d'erreur clairs en cas de validation échouée ?
+- Comment pré-remplir les champs de formulaire avec les valeurs précédemment
+  saisies ?
+- Quels sont les avantages de la validation côté client et pourquoi ne doit-elle
+  pas être utilisée comme seule méthode de validation ?
+- Comment contourner la validation côté client et pourquoi est-il important de
+  valider les données côté serveur même si la validation côté client est en
+  place ?
+- Comment les formulaires HTML peuvent-ils être utilisés pour créer des
+  interfaces utilisateur dynamiques et interactives ?
 
 ## À faire pour la semaine suivante
 
