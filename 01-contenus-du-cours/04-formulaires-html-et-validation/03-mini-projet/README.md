@@ -213,7 +213,7 @@ section **Development** de ce panneau, cliquez sur le lien **Create a branch**.
 <details>
 <summary>Afficher la capture d'écran illustrant l'étape</summary>
 
-![Créer la branche dédiée à l'issue (1)](./assets/github-workflow-01.png)
+![Créer la branche dédiée à l'issue (1)](./images/github-workflow-01.png)
 
 </details>
 
@@ -226,7 +226,7 @@ le modifier si vous le souhaitez.
 <details>
 <summary>Afficher la capture d'écran illustrant l'étape</summary>
 
-![Créer la branche dédiée à l'issue (2)](./assets/github-workflow-02.png)
+![Créer la branche dédiée à l'issue (2)](./images/github-workflow-02.png)
 
 </details>
 

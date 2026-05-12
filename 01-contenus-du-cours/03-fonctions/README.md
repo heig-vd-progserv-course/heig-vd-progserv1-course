@@ -73,7 +73,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 - [Typer les paramètres et la valeur de retour d'une fonction](#typer-les-paramètres-et-la-valeur-de-retour-dune-fonction)
 - [Portée des variables](#portée-des-variables)
 - [Variables globales](#variables-globales)
-- [Passage par valeur et par référence](#passage-par-référence-et-passage-par-valeur)
+- [Passage par valeur et par référence](#passage-par-valeur-et-par-référence)
   - [Passage par valeur en PHP](#passage-par-valeur-en-php)
   - [Passage par référence en PHP](#passage-par-référence-en-php)
 - [Fonctions prédéfinies en PHP](#fonctions-prédéfinies-en-php)
