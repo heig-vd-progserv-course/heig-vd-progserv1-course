@@ -179,6 +179,29 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 - Les fonctions de nettoyage comme `htmlspecialchars()` aident à sécuriser les
   données affichées dans le navigateur en échappant les caractères spéciaux.
 
+### Déployer un site ou une application web sur Internet
+
+<!-- _class: lead -->
+
+[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/06.02-deployer-un-site-ou-une-application-web-sur-internet/README.md).
+
+![bg brightness:2 opacity:0.05][illustration-principale]
+
+#### Ce qu'il savoir
+
+- Infomaniak offre une solution d'hébergement web qui permet de déployer des
+  sites et des applications web sur Internet.
+- Les étapes pour déployer une application web incluent :
+  1. Avoir un hébergement web sur Infomaniak (offre étudiante disponible)
+     configurer pour héberger une application PHP.
+  2. Transférer les fichiers de l'application sur le serveur.
+  3. Votre application est maintenant déployée et accessible !
+
+Le
+[document associé](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/06.02-deployer-un-site-ou-une-application-web-sur-internet/README.md)
+décrit toute la marche à suivre pour déployer votre mini-projet et le rendre
+accessible au reste du monde !
+
 ## Résultats des formulaires de feedback et évaluations GAPS
 
 <!-- _class: lead -->
@@ -200,10 +223,12 @@ Tout ce que vous devez savoir pour réussir l'examen final.
 
 ## Modalités d'évaluation
 
-- Le cours se termine par un examen final.
-- Les dates et les salles seront communiquées d'ici peu..
+- Le cours se termine par un examen final :
+  - Date : **22.06.2026**.
+  - Heure : **13h00-16h15**.
+  - Locaux : _information à venir_.
 - **Venez en avance pour vous installer et vous préparer.**
-- L'examen est composé de deux parties, décrit dans le document
+- L'examen est décrit dans le document
   [Évaluation finale](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/02-evaluation-finale/README.md).
 
 ![bg right:40%][illustration-modalites-devaluation]
@@ -277,10 +302,11 @@ Est-ce que vous avez des questions ?
 
 ## À vous de jouer !
 
+- [Déployer](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/06.02-deployer-un-site-ou-une-application-web-sur-internet/README.md)
+  le mini-projet du cours.
 - Prendre connaissance du document
   [Évaluation finale](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/02-evaluation-finale/README.md).
 - Réaliser l'[examen blanc][examen-blanc] à votre disposition.
-- Finaliser le mini-projet du cours.
 - Poser des questions si nécessaire.
 
 **N'allez pas trop vite, vous avez le temps !** N'hésitez pas à vous entraidez
