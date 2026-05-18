@@ -1,10 +1,4 @@
-# ProgServ1 - Évaluation finale
-
-> [!WARNING]
->
-> Ce document est encore en cours de rédaction et peut être sujet à des
-> modifications. Les informations présentées ici sont à titre indicatif et
-> peuvent ne pas être définitives.
+# Évaluation finale
 
 - Date : semaine d'examen pour toutes les classes (voir calendrier académique de
   la HEIG-VD).
@@ -20,8 +14,7 @@
 - [Partie 2](#partie-2)
   - [Ressources autorisées](#ressources-autorisées-1)
   - [Rendu](#rendu-1)
-  - [Grille d'évaluation](#grille-dévaluation)
-  - [Contraintes](#contraintes)
+  - [Échelle d'évaluation](#échelle-dévaluation)
 - [Sanctions possibles en cas de tricherie](#sanctions-possibles-en-cas-de-tricherie)
 - [S'entraîner](#sentraîner)
 
@@ -104,7 +97,7 @@ autorisées (voir [Ressources autorisées](#ressources-autorisées-1)).
 ### Rendu
 
 Le dépôt du code se fera sur GitHub Classroom. Pour accéder au dépôt, utilisez
-le lien suivant : _Lien à venir_.
+le lien suivant : <https://classroom.github.com/a/QFq3ohn1>.
 
 Sélectionnez ensuite votre personne dans la liste pour rejoindre le GitHub
 Classroom. Il faudra ensuite accepter l'invitation pour accéder au dépôt privé
@@ -112,22 +105,29 @@ qui a été créé pour vous.
 
 Vous pourrez ensuite y pousser votre code pendant l'évaluation.
 
-Vous êtes responsable de son contenu.
+Vous êtes responsable du contenu de votre travail.
 
-Le travail et la consigne doivent être rendus avant la fin de l'examen.
+Le travail et la consigne doivent être rendus avant la fin de l'examen. Tout
+travail rendu après la fin de l'examen ne sera pas pris en compte.
+
+Pour ce travail, il n'est pas nécessaire d'utiliser le workflow Git/GitHub. Vous
+pouvez directement pousser votre code sur la branche principale du dépôt GitHub
+Classroom.
 
 > [!CAUTION]
 >
 > Assurez-vous d'avoir mis en place votre environnement de développement avant
-> le début de l'évaluation pour éviter tout problème technique.
+> le début de l'évaluation pour éviter tout problème technique. Nous ne prenons
+> pas en compte les problèmes techniques liés à une mauvaise préparation de
+> votre environnement de développement.
 
 > [!TIP]
 >
-> Vous êtes libre d'effectuer des commits et de créer des issues de tests avant
-> le début de l'évaluation si vous le souhaitez pour valider votre installation.
-> Vous ne serez pas pénalisé.e.
+> Vous êtes libre d'effectuer des commits de tests avant le début de
+> l'évaluation si vous le souhaitez pour valider votre installation. Vous ne
+> serez pas pénalisé.e.
 
-### Grille d'évaluation
+### Échelle d'évaluation
 
 - 0 point – Les critères ne sont pas respectés : la production est absente, hors
   sujet ou témoigne d'une compréhension très limitée du sujet.
@@ -145,27 +145,27 @@ Note maximale : (nombre de points obtenus / nombre de points totaux) × 5 + 1.
 > utiliser du HTML et du CSS de base (CSS optionnel), mais l'accent doit être
 > mis sur la fonctionnalité et la structure du code.
 
-|   # | Description                                                                                                                                                                                              |
-| --: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   1 | Chaque (nouvelle) fonctionnalité à implémenter est décrite dans une issue dédiée.                                                                                                                        |
-|   2 | Chaque issue a une branche dédiée à la (nouvelle) fonctionnalité.                                                                                                                                        |
-|   3 | Chaque branche donne lieu à une pull request avec les modifications propres à la (nouvelle) fonctionnalité.                                                                                              |
-|   4 | Chaque pull request est fusionnée et la branche associée détruite.                                                                                                                                       |
-|   5 | Les pages spécifiques à la (nouvelle) fonctionnalité sont ajoutées/mises à jour et sont fonctionnelles. Elles gèrent les redirections si nécessaire.                                                     |
-|   6 | Les formulaires spécifiques à la (nouvelle) fonctionnalité sont ajoutés/mis à jour et sont fonctionnels.                                                                                                 |
-|   7 | Les validations spécifiques à la (nouvelle) fonctionnalité sont ajoutées/mises à jour et sont fonctionnelles.                                                                                            |
-|   8 | Les données dans les formulaires pour la (nouvelle) fonctionnalité sont correctement affichées et conservées en cas d'erreur de validation.                                                              |
-|   9 | Les fonctions spécifiques à la (nouvelle) fonctionnalité sont définies dans un fichier unique. Elles sont utilisées dans les différentes pages pour structurer le code et éviter la duplication de code. |
-|  10 | Les entités en base de données spécifiques à la (nouvelle) fonctionnalité modifient correctement la base de données (création, récupération, modification, suppression).                                 |
+#### Contraintes
 
-### Contraintes
+> [!CAUTION]
+>
+> Le non-respect des règles suivantes entraînera la note de 1 pour l'ensemble de
+> l'examen (partie 1 + partie 2).
 
+- Votre application ne doit pas contenir de code ou de commentaires hors
+  contexte (par exemple, liés à d'autres projets comme le mini-projet sur les
+  animaux de compagnie, du code utilisant des concepts que nous n'avons pas
+  étudiés en cours, du code généré par IA, etc.).
+- Le code doit être votre propre travail. Toute tentative de plagiat ou de
+  tricherie entraînera la note de 1 pour l'ensemble de l'examen.
 - Le code est lisible, agréable à lire et utilise des noms de
   variables/fonctions/fichiers/dossiers/etc. explicites.
-- L'utilisation de code généré par des outils d'intelligence artificielle ou
-  copié depuis des sources externes n'est pas autorisé. En cas de doutes, nous
+- **L'utilisation de code généré par des outils d'intelligence artificielle ou
+  copié depuis des sources externes n'est pas autorisé.** En cas de doutes, nous
   pouvons vous questionner selon les règles évoquées dans le contenu
   [Introduction et modalités du cours](../01-contenus-du-cours/01.01-introduction-et-organisation-du-cours/README.md#quen-est-il-de-chatgpt-etc-).
+- Vous devez appliquer les bonnes pratiques de développement avec PHP, notamment
+  en ce qui concerne la structure du code, la lisibilité, etc.
 
 ## Sanctions possibles en cas de tricherie
 
