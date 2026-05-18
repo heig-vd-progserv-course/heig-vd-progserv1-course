@@ -1,11 +1,5 @@
 # Évaluation finale
 
-> [!WARNING]
->
-> Ce document est encore en cours de rédaction et peut être sujet à des
-> modifications. Les informations présentées ici sont à titre indicatif et
-> peuvent ne pas être définitives.
-
 - Date : semaine d'examen pour toutes les classes (voir calendrier académique de
   la HEIG-VD).
 
