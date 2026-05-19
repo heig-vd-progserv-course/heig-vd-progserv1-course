@@ -97,7 +97,7 @@ autorisées (voir [Ressources autorisées](#ressources-autorisées-1)).
 ### Rendu
 
 Le dépôt du code se fera sur GitHub Classroom. Pour accéder au dépôt, utilisez
-le lien suivant : <https://classroom.github.com/a/QFq3ohn1>.
+le lien suivant : <https://classroom.github.com/a/k-kL7NQ5>.
 
 Sélectionnez ensuite votre personne dans la liste pour rejoindre le GitHub
 Classroom. Il faudra ensuite accepter l'invitation pour accéder au dépôt privé
