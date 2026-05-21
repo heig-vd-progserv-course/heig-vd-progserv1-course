@@ -20,7 +20,7 @@ $stmt->execute();
 
 // Fonction pour ajouter une note dans la table `courses`
 // Comme l'acronyme est facultatif, on lui donne une valeur par défaut `null`.
-function addGrade($name, $grade, $acronym = null) {
+function addGrade(string $name, float $grade, ?string $acronym): int {
     global $pdo;
 
     // On définit la requête SQL pour ajouter un cours
@@ -38,9 +38,9 @@ function addGrade($name, $grade, $acronym = null) {
     $stmt = $pdo->prepare($sql);
 
     // On lie les paramètres de la requête SQL aux variables correspondantes
-    $stmt->bindParam(':name', $name);
-    $stmt->bindParam(':acronym', $acronym);
-    $stmt->bindParam(':grade', $grade);
+    $stmt->bindValue(':name', $name);
+    $stmt->bindValue(':acronym', $acronym);
+    $stmt->bindValue(':grade', $grade);
 
     // On exécute la requête SQL pour ajouter un cours
     $stmt->execute();
@@ -55,7 +55,7 @@ function addGrade($name, $grade, $acronym = null) {
 $progServ1Id = addGrade('Programmation serveur 1', 5.5, 'ProgServ1');
 
 // Fonction pour récupérer un cours par son identifiant
-function getGrade($id) {
+function getGrade(int $id): ?array {
     global $pdo;
 
     // On définit la requête SQL pour récupérer un cours par son identifiant
@@ -65,7 +65,7 @@ function getGrade($id) {
     $stmt = $pdo->prepare($sql);
 
     // On lie le paramètre de la requête SQL à la variable correspondante
-    $stmt->bindParam(':id', $id);
+    $stmt->bindValue(':id', $id);
 
     // On exécute la requête
     $stmt->execute();
@@ -82,10 +82,10 @@ $progServ1 = getGrade($progServ1Id);
 if ($progServ1) {
     // On affiche le cours récupéré
     echo "<h1>Informations sur le cours</h1>";
-    echo "<p><strong>Identifiant</strong> : " . $progServ1['id'] . "</p>";
-    echo "<p><strong>Nom</strong> : " . $progServ1['name'] . "</p>";
-    echo "<p><strong>Acronyme</strong> : " . $progServ1['acronym'] . "</p>";
-    echo "<p><strong>Note</strong> : " . $progServ1['grade'] . "</p>";
+    echo "<p><strong>Identifiant</strong> : " . htmlentities($progServ1['id']) . "</p>";
+    echo "<p><strong>Nom</strong> : " . htmlentities($progServ1['name']) . "</p>";
+    echo "<p><strong>Acronyme</strong> : " . htmlentities($progServ1['acronym']) . "</p>";
+    echo "<p><strong>Note</strong> : " . htmlentities($progServ1['grade']) . "</p>";
 }
 
 // On essaie de récupérer un cours avec un identifiant qui n'existe pas
@@ -95,12 +95,14 @@ if (!$courseNotFound) {
     echo "<p>Aucun cours trouvé avec cet identifiant.</p>";
 } else {
     echo "<h1>Informations sur le cours</h1>";
-    echo "<p><strong>Identifiant</strong> : " . $courseNotFound['id'] . "</p>";
-    echo "<p><strong>Nom</strong> : " . $courseNotFound['name'] . "</p>";
-    echo "<p><strong>Acronyme</strong> : " . $courseNotFound['acronym'] . "</p>";
-    echo "<p><strong>Note</strong> : " . $courseNotFound['grade'] . "</p>";
+    echo "<p><strong>Identifiant</strong> : " . htmlentities($courseNotFound['id']) . "</p>";
+    echo "<p><strong>Nom</strong> : " . htmlentities($courseNotFound['name']) . "</p>";
+    echo "<p><strong>Acronyme</strong> : " . htmlentities($courseNotFound['acronym']) . "</p>";
+    echo "<p><strong>Note</strong> : " . htmlentities($courseNotFound['grade']) . "</p>";
 }
-function getGrades() {
+
+// Fonction pour récupérer tous les cours
+function getGrades(): array {
     global $pdo;
 
     // On définit la requête SQL pour récupérer tous les cours
@@ -135,17 +137,17 @@ $grades = getGrades();
 
     <?php foreach ($grades as $grade): ?>
         <tr>
-            <td><?php echo $grade['id']; ?></td>
-            <td><?php echo $grade['name']; ?></td>
-            <td><?php echo $grade['acronym']; ?></td>
-            <td><?php echo $grade['grade']; ?></td>
+            <td><?php echo htmlspecialchars($grade['id']); ?></td>
+            <td><?php echo htmlspecialchars($grade['name']); ?></td>
+            <td><?php echo htmlspecialchars($grade['acronym']); ?></td>
+            <td><?php echo htmlspecialchars($grade['grade']); ?></td>
         </tr>
     <?php endforeach; ?>
 </table>
 
 <?php
 // Fonction pour supprimer un cours par son identifiant
-function removeGrade($id) {
+function removeGrade(int $id) {
     global $pdo;
 
     // On définit la requête SQL pour supprimer un cours par son identifiant
@@ -155,7 +157,7 @@ function removeGrade($id) {
     $stmt = $pdo->prepare($sql);
 
     // On lie le paramètre de la requête SQL à la variable correspondante
-    $stmt->bindParam(':id', $id);
+    $stmt->bindValue(':id', $id);
 
     // On exécute la requête SQL pour supprimer le cours
     return $stmt->execute();
@@ -165,9 +167,9 @@ function removeGrade($id) {
 $success = removeGrade($progServ1Id);
 
 if ($success) {
-    echo "<p>Le cours avec l'identifiant $progServ1Id a été supprimé avec succès.</p>";
+    echo "<p>Le cours avec l'identifiant " . htmlspecialchars($progServ1Id) . " a été supprimé avec succès.</p>";
 } else {
-    echo "<p>Erreur lors de la suppression du cours avec l'identifiant $progServ1Id.</p>";
+    echo "<p>Erreur lors de la suppression du cours avec l'identifiant " . htmlspecialchars($progServ1Id) . ".</p>";
 }
 
 // On essaie de supprimer un cours avec un identifiant qui n'existe pas

@@ -20,7 +20,7 @@ $stmt->execute();
 
 // Fonction pour ajouter une note dans la table `courses`
 // Comme l'acronyme est facultatif, on lui donne une valeur par défaut `null`.
-function addGrade($name, $grade, $acronym = null) {
+function addGrade(string $name, float $grade, ?string $acronym): int {
     global $pdo;
 
     // On définit la requête SQL pour ajouter un cours
@@ -38,9 +38,9 @@ function addGrade($name, $grade, $acronym = null) {
     $stmt = $pdo->prepare($sql);
 
     // On lie les paramètres de la requête SQL aux variables correspondantes
-    $stmt->bindParam(':name', $name);
-    $stmt->bindParam(':acronym', $acronym);
-    $stmt->bindParam(':grade', $grade);
+    $stmt->bindValue(':name', $name);
+    $stmt->bindValue(':acronym', $acronym);
+    $stmt->bindValue(':grade', $grade);
 
     // On exécute la requête SQL pour ajouter un cours
     $stmt->execute();
@@ -55,7 +55,7 @@ function addGrade($name, $grade, $acronym = null) {
 $progServ1Id = addGrade('Programmation serveur 1', 5.5, 'ProgServ1');
 
 // Fonction pour récupérer un cours par son identifiant
-function getGrade($id) {
+function getGrade(int $id): ?array {
     global $pdo;
 
     // On définit la requête SQL pour récupérer un cours par son identifiant
@@ -65,7 +65,7 @@ function getGrade($id) {
     $stmt = $pdo->prepare($sql);
 
     // On lie le paramètre de la requête SQL à la variable correspondante
-    $stmt->bindParam(':id', $id);
+    $stmt->bindValue(':id', $id);
 
     // On exécute la requête
     $stmt->execute();
@@ -82,10 +82,10 @@ $progServ1 = getGrade($progServ1Id);
 if ($progServ1) {
     // On affiche le cours récupéré
     echo "<h1>Informations sur le cours</h1>";
-    echo "<p><strong>Identifiant</strong> : " . $progServ1['id'] . "</p>";
-    echo "<p><strong>Nom</strong> : " . $progServ1['name'] . "</p>";
-    echo "<p><strong>Acronyme</strong> : " . $progServ1['acronym'] . "</p>";
-    echo "<p><strong>Note</strong> : " . $progServ1['grade'] . "</p>";
+    echo "<p><strong>Identifiant</strong> : " . htmlentities($progServ1['id']) . "</p>";
+    echo "<p><strong>Nom</strong> : " . htmlentities($progServ1['name']) . "</p>";
+    echo "<p><strong>Acronyme</strong> : " . htmlentities($progServ1['acronym']) . "</p>";
+    echo "<p><strong>Note</strong> : " . htmlentities($progServ1['grade']) . "</p>";
 }
 
 // On essaie de récupérer un cours avec un identifiant qui n'existe pas
@@ -95,8 +95,8 @@ if (!$courseNotFound) {
     echo "<p>Aucun cours trouvé avec cet identifiant.</p>";
 } else {
     echo "<h1>Informations sur le cours</h1>";
-    echo "<p><strong>Identifiant</strong> : " . $courseNotFound['id'] . "</p>";
-    echo "<p><strong>Nom</strong> : " . $courseNotFound['name'] . "</p>";
-    echo "<p><strong>Acronyme</strong> : " . $courseNotFound['acronym'] . "</p>";
-    echo "<p><strong>Note</strong> : " . $courseNotFound['grade'] . "</p>";
+    echo "<p><strong>Identifiant</strong> : " . htmlentities($courseNotFound['id']) . "</p>";
+    echo "<p><strong>Nom</strong> : " . htmlentities($courseNotFound['name']) . "</p>";
+    echo "<p><strong>Acronyme</strong> : " . htmlentities($courseNotFound['acronym']) . "</p>";
+    echo "<p><strong>Note</strong> : " . htmlentities($courseNotFound['grade']) . "</p>";
 }

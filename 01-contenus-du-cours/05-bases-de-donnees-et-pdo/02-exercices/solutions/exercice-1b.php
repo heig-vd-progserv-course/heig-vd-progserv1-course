@@ -20,7 +20,7 @@ $stmt->execute();
 
 // Fonction pour ajouter une note dans la table `courses`
 // Comme l'acronyme est facultatif, on lui donne une valeur par défaut `null`.
-function addGrade($name, $grade, $acronym = null) {
+function addGrade(string $name, float $grade, ?string $acronym): int {
     global $pdo;
 
     // On définit la requête SQL pour ajouter un cours
@@ -38,9 +38,9 @@ function addGrade($name, $grade, $acronym = null) {
     $stmt = $pdo->prepare($sql);
 
     // On lie les paramètres de la requête SQL aux variables correspondantes
-    $stmt->bindParam(':name', $name);
-    $stmt->bindParam(':acronym', $acronym);
-    $stmt->bindParam(':grade', $grade);
+    $stmt->bindValue(':name', $name);
+    $stmt->bindValue(':acronym', $acronym);
+    $stmt->bindValue(':grade', $grade);
 
     // On exécute la requête SQL pour ajouter un cours
     $stmt->execute();
