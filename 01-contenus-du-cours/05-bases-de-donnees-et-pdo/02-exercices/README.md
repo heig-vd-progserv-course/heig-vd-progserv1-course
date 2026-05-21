@@ -135,11 +135,11 @@ fonction `addGrade` doit donc prendre trois paramètres : `name`, `grade`, et
 <summary>Afficher la réponse</summary>
 
 ```php
-<?php
+// Le code précédent est supposé être présent ici...
 
 // Fonction pour ajouter une note dans la table `courses`
 // Comme l'acronyme est facultatif, on lui donne une valeur par défaut `null`.
-function addGrade($name, $grade, $acronym = null) {
+function addGrade(string $name, float $grade, ?string $acronym): int {
     global $pdo;
 
     // On définit la requête SQL pour ajouter un cours
@@ -157,9 +157,9 @@ function addGrade($name, $grade, $acronym = null) {
     $stmt = $pdo->prepare($sql);
 
     // On lie les paramètres de la requête SQL aux variables correspondantes
-    $stmt->bindParam(':name', $name);
-    $stmt->bindParam(':acronym', $acronym);
-    $stmt->bindParam(':grade', $grade);
+    $stmt->bindValue(':name', $name);
+    $stmt->bindValue(':acronym', $acronym);
+    $stmt->bindValue(':grade', $grade);
 
     // On exécute la requête SQL pour ajouter un cours
     $stmt->execute();
@@ -202,8 +202,10 @@ conclure ?
 <summary>Afficher la réponse</summary>
 
 ```php
+// Le code précédent est supposé être présent ici...
+
 // Fonction pour récupérer un cours par son identifiant
-function getGrade($id) {
+function getGrade(int $id): ?array {
     global $pdo;
 
     // On définit la requête SQL pour récupérer un cours par son identifiant
@@ -213,7 +215,7 @@ function getGrade($id) {
     $stmt = $pdo->prepare($sql);
 
     // On lie le paramètre de la requête SQL à la variable correspondante
-    $stmt->bindParam(':id', $id);
+    $stmt->bindValue(':id', $id);
 
     // On exécute la requête
     $stmt->execute();
@@ -228,30 +230,30 @@ function getGrade($id) {
 $progServ1 = getGrade($progServ1Id);
 
 if ($progServ1) {
-  // On affiche le cours récupéré
-  echo "<h1>Informations sur le cours</h1>";
-  echo "<p><strong>Identifiant</strong> : " . $progServ1['id'] . "</p>";
-  echo "<p><strong>Nom</strong> : " . $progServ1['name'] . "</p>";
-  echo "<p><strong>Acronyme</strong> : " . $progServ1['acronym'] . "</p>";
-  echo "<p><strong>Note</strong> : " . $progServ1['grade'] . "</p>";
+    // On affiche le cours récupéré
+    echo "<h1>Informations sur le cours</h1>";
+    echo "<p><strong>Identifiant</strong> : " . htmlentities($progServ1['id']) . "</p>";
+    echo "<p><strong>Nom</strong> : " . htmlentities($progServ1['name']) . "</p>";
+    echo "<p><strong>Acronyme</strong> : " . htmlentities($progServ1['acronym']) . "</p>";
+    echo "<p><strong>Note</strong> : " . htmlentities($progServ1['grade']) . "</p>";
 }
 
 // On essaie de récupérer un cours avec un identifiant qui n'existe pas
 $courseNotFound = getGrade(9999);
 
 if (!$courseNotFound) {
-  echo "<p>Aucun cours trouvé avec cet identifiant.</p>";
+    echo "<p>Aucun cours trouvé avec cet identifiant.</p>";
 } else {
-  echo "<h1>Informations sur le cours</h1>";
-  echo "<p><strong>Identifiant</strong> : " . $courseNotFound['id'] . "</p>";
-  echo "<p><strong>Nom</strong> : " . $courseNotFound['name'] . "</p>";
-  echo "<p><strong>Acronyme</strong> : " . $courseNotFound['acronym'] . "</p>";
-  echo "<p><strong>Note</strong> : " . $courseNotFound['grade'] . "</p>";
+    echo "<h1>Informations sur le cours</h1>";
+    echo "<p><strong>Identifiant</strong> : " . htmlentities($courseNotFound['id']) . "</p>";
+    echo "<p><strong>Nom</strong> : " . htmlentities($courseNotFound['name']) . "</p>";
+    echo "<p><strong>Acronyme</strong> : " . htmlentities($courseNotFound['acronym']) . "</p>";
+    echo "<p><strong>Note</strong> : " . htmlentities($courseNotFound['grade']) . "</p>";
 }
 ```
 
 Lorsque nous récupérons un cours avec un identifiant qui n'existe pas, la
-fonction `getGrade` retourne `false`.
+fonction `getGrade` retourne `null`.
 
 Cela signifie que la requête SQL n'a pas trouvé de résultat correspondant à
 l'identifiant donné.
@@ -274,10 +276,10 @@ stocker-les dans un tableau associatif nommé `$courses`.
 Utiliser la variable `$courses` pour afficher tous les cours dans un tableau
 HTML avec les colonnes suivantes :
 
-- Identifiant
-- Nom
-- Acronyme
-- Note
+- Identifiant.
+- Nom.
+- Acronyme.
+- Note.
 
 > [!NOTE]
 >
@@ -289,7 +291,10 @@ HTML avec les colonnes suivantes :
 <summary>Afficher la réponse</summary>
 
 ```php
-function getGrades() {
+// Le code précédent est supposé être présent ici...
+
+// Fonction pour récupérer tous les cours
+function getGrades(): array {
     global $pdo;
 
     // On définit la requête SQL pour récupérer tous les cours
@@ -324,14 +329,18 @@ $grades = getGrades();
 
     <?php foreach ($grades as $grade): ?>
         <tr>
-            <td><?php echo $grade['id']; ?></td>
-            <td><?php echo $grade['name']; ?></td>
-            <td><?php echo $grade['acronym']; ?></td>
-            <td><?php echo $grade['grade']; ?></td>
+            <td><?php echo htmlspecialchars($grade['id']); ?></td>
+            <td><?php echo htmlspecialchars($grade['name']); ?></td>
+            <td><?php echo htmlspecialchars($grade['acronym']); ?></td>
+            <td><?php echo htmlspecialchars($grade['grade']); ?></td>
         </tr>
     <?php endforeach; ?>
 </table>
 ```
+
+Comme nous affichons des données provenant de la base de données, il est
+important d'utiliser la fonction `htmlspecialchars` pour éviter les attaques de
+type XSS (Cross-Site Scripting).
 
 </details>
 
@@ -359,8 +368,11 @@ conclure ?
 
 ```php
 <?php
+// Le code précédent est supposé être présent ici...
+
+<?php
 // Fonction pour supprimer un cours par son identifiant
-function removeGrade($id) {
+function removeGrade(int $id) {
     global $pdo;
 
     // On définit la requête SQL pour supprimer un cours par son identifiant
@@ -370,7 +382,7 @@ function removeGrade($id) {
     $stmt = $pdo->prepare($sql);
 
     // On lie le paramètre de la requête SQL à la variable correspondante
-    $stmt->bindParam(':id', $id);
+    $stmt->bindValue(':id', $id);
 
     // On exécute la requête SQL pour supprimer le cours
     return $stmt->execute();
@@ -380,9 +392,9 @@ function removeGrade($id) {
 $success = removeGrade($progServ1Id);
 
 if ($success) {
-    echo "<p>Le cours avec l'identifiant $progServ1Id a été supprimé avec succès.</p>";
+    echo "<p>Le cours avec l'identifiant " . htmlspecialchars($progServ1Id) . " a été supprimé avec succès.</p>";
 } else {
-    echo "<p>Erreur lors de la suppression du cours avec l'identifiant $baseProg2Id.</p>";
+    echo "<p>Erreur lors de la suppression du cours avec l'identifiant " . htmlspecialchars($progServ1Id) . ".</p>";
 }
 
 // On essaie de supprimer un cours avec un identifiant qui n'existe pas
@@ -398,8 +410,6 @@ if ($success) {
 Comme la méthode `execute` retourne un booléen indiquant si la requête a été
 exécutée avec succès ou non, nous pouvons savoir si la suppression a réussi ou
 non.
-
-Cela nous permet de savoir si la suppression a réussi ou non.
 
 </details>
 
