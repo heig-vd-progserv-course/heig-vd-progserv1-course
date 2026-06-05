@@ -660,7 +660,7 @@ l'hébergement web. Vous devriez voir une page par défaut d'Infomaniak.
 </details>
 
 Votre site web est maintenant accessible sur Internet. Vous pouvez passer à la
-section[Configurer le site web](#configurer-le-site-web) pour configurer les
+section [Configurer le site web](#configurer-le-site-web) pour configurer les
 paramètres du site web.
 
 ## Configurer le site web
@@ -1015,6 +1015,10 @@ afin de mettre à jour votre site web.
 > masquer les fichiers cachés. Il est peut-être nécessaire de rafraîchir la vue
 > après avoir modifié cette option.
 
+Vous pouvez passer à la section
+[Déployer un site ou une application web sur Internet sur l'hébergement web](#déployer-un-site-ou-une-application-web-sur-internet-sur-lhébergement-web)
+pour déployer votre site web.
+
 ### Accéder à l'hébergement web via SSH
 
 En suivant les mêmes étapes que la section
@@ -1040,6 +1044,10 @@ Si votre projet GitHub est privé, vous pouvez créer un
 pour autoriser le clone du dépôt sur l'hébergement via HTTPS (pas SSH) en
 utilisant votre nom d'utilisateur et le PAT créé préalablement pour cloner le
 dépôt privé.
+
+Vous pouvez passer à la section
+[Déployer un site ou une application web sur Internet sur l'hébergement web](#déployer-un-site-ou-une-application-web-sur-internet-sur-lhébergement-web)
+pour déployer votre site web.
 
 ## Déployer un site ou une application web sur Internet sur l'hébergement web
 
