@@ -60,7 +60,7 @@ d'autres cours pourraient également être inclus dans la liste à l'avenir :
 
 - _"Programmation serveur 1 (ProgServ1)"_.
 - _"Programmation serveur 2 (ProgServ2)"_.
-- _"Programmation serveur 3 (ProgServ3)" / "Développement de produit média
+- _"Programmation serveur 3 (ProgServ3)"_ / _"Développement de produit média
   (DévProdMéd)"_.
 
 ## Acquérir et configurer un hébergement web
@@ -180,9 +180,6 @@ Vous pouvez vérifier le statut de votre demande dans votre compte Infomaniak.
 >
 > Si vous ne recevez pas d'e-mail de confirmation dans les 7 jours, annoncez-le
 > à votre enseignant.e.
->
-> Pendant que votre statut d'étudiant.e est en attente d'approbation, passez à
-> la section [Initialiser les exercices](#initialiser-les-exercices).
 
 <details>
 <summary>Afficher les captures d'écran illustrant l'étape</summary>
@@ -519,9 +516,9 @@ _À venir prochainement peut-être ?_
 ### Ajouter une application web PHP
 
 Pour les cours de _"Programmation serveur 1 (ProgServ1)"_, _"Programmation
-serveur 2 (ProgServ2)"_ ou _"Programmation serveur 3
-(ProgServ3)"/_"Développement de produit média (DévProdMéd)"\_, vous pouvez
-choisir l'option **Créez un projet vierge**.
+serveur 2 (ProgServ2)"_ ou _"Programmation serveur 3 (ProgServ3)"_ /
+_"Développement de produit média (DévProdMéd)"_, vous pouvez choisir l'option
+**Créez un projet vierge**.
 
 <details>
 <summary>Afficher la capture d'écran illustrant l'étape</summary>
@@ -707,9 +704,9 @@ web, les paramètres avancés disponibles peuvent être différents.
 ### Configurer une application web PHP
 
 Pour les cours de _"Programmation serveur 1 (ProgServ1)"_, _"Programmation
-serveur 2 (ProgServ2)"_ ou _"Programmation serveur 3
-(ProgServ3)"/_"Développement de produit média (DévProdMéd)", vous avez plusieurs
-options pour configurer le site web.
+serveur 2 (ProgServ2)"_ ou _"Programmation serveur 3 (ProgServ3)"_ /
+_"Développement de produit média (DévProdMéd)"_, vous avez plusieurs options
+pour configurer le site web.
 
 #### Changer la version de PHP
 
@@ -1039,9 +1036,10 @@ lequel vous pouvez installer Node.js et/ou cloner des dépôts Git directement s
 l'hébergement Infomaniak.
 
 Si votre projet GitHub est privé, vous pouvez créer un
-[Personal Access Token (PAT) sur votre profil GitHub](TODO) pour autoriser le
-clone du dépôt sur l'hébergement via HTTPS (pas SSH) en utilisant votre nom
-d'utilisateur et le PAT créé préalablement pour cloner le dépôt privé.
+[Personal Access Token (PAT) sur votre profil GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+pour autoriser le clone du dépôt sur l'hébergement via HTTPS (pas SSH) en
+utilisant votre nom d'utilisateur et le PAT créé préalablement pour cloner le
+dépôt privé.
 
 ## Déployer un site ou une application web sur Internet sur l'hébergement web
 
