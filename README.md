@@ -4,7 +4,7 @@
 
 Bienvenue sur le dépôt principal du cours _"Programmation serveur 1
 (ProgServ1)"_ enseigné à la
-[Haute Ecole d'Ingénierie et de Gestion du Canton de Vaud (HEIG-VD)](https://heig-vd.ch),
+[Haute école d'ingénierie et de gestion du canton de Vaud (HEIG-VD)](https://heig-vd.ch),
 Suisse !
 
 ## 🎯 Objectifs généraux
