@@ -758,7 +758,9 @@ Terminez la configuration du site web en sauvegardant les modifications.
 
 #### Ajouter une base de données dédiée
 
-Il est possible d'ajouter une base de données dédiée pour le site web PHP.
+Il est possible d'ajouter une base de données dédiée pour le site web PHP si
+votre projet en a besoin. Si ce n'est pas le cas, vous pouvez sauter cette
+section.
 
 Pour cela, vous pouvez créer une base de données dans le tableau de bord de
 l'hébergement web.
@@ -844,6 +846,9 @@ données que vous avez notées précédemment.
 > phpMyAdmin.
 
 #### Acquérir un service de messagerie
+
+Il est également possible d'acquérir un service de messagerie si votre projet en
+a besoin. Si ce n'est pas le cas, vous pouvez sauter cette section.
 
 Connectez-vous à votre compte Infomaniak à l'aide de votre adresse e-mail
 HEIG-VD et du mot de passe associé.
