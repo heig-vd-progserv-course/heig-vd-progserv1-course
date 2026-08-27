@@ -843,6 +843,111 @@ données que vous avez notées précédemment.
 > Il n'est pas possible d'accéder à la base de données d'Infomaniak en dehors de
 > phpMyAdmin.
 
+#### Acquérir un service de messagerie
+
+Connectez-vous à votre compte Infomaniak à l'aide de votre adresse e-mail
+HEIG-VD et du mot de passe associé.
+
+Accédez au service mail d'Infomaniak en accédant au menu **"Outils
+collaboratifs"** > **"Service Mail"**.
+
+<details>
+<summary>Cliquer ici pour voir des captures d'écran illustrant les étapes</summary>
+
+![Infomaniak - Outils collaboratifs](./images/infomaniak-mail-outils-collaboratifs.png)
+
+![Infomaniak - Service Mail](./images/infomaniak-mail-service-mail.png)
+
+</details>
+
+Cliquez sur le lien **"Commander un Service Mail"**.
+
+<details>
+<summary>Cliquer ici pour voir une capture d'écran illustrant l'étape</summary>
+
+![Infomaniak - Commander un Service Mail](./images/infomaniak-mail-commander-service-mail.png)
+
+</details>
+
+Vous serez redirigé vers le shop d'Infomaniak. Saisissez le nom de domaine que
+vous aviez précédemment commandé, puis cliquez sur le bouton **"Rechercher"**.
+Infomaniak identifiera automatiquement que le nom de domaine est déjà associé à
+votre compte et que vous pourrez commander un service de messagerie pour ce
+domaine.
+
+<details>
+<summary>Cliquer ici pour voir une capture d'écran illustrant l'étape</summary>
+
+![Infomaniak - Recherche de nom de domaine](./images/infomaniak-mail-recherche-nom-de-domaine.png)
+
+</details>
+
+Sélectionnez le plan de messagerie gratuit, incluant une adresse e-mail, puis
+cliquez sur le bouton **"Suivant"**. Validez ensuite votre commande en suivant
+les instructions à l'écran.
+
+<details>
+<summary>Cliquer ici pour voir une capture d'écran illustrant l'étape</summary>
+
+![Infomaniak - Sélection du plan de messagerie](./images/infomaniak-mail-selection-plan-messagerie.png)
+
+![Infomaniak - Validation de la commande](./images/infomaniak-mail-validation-commande.png)
+
+</details>
+
+Une fois la commande validée, vous pourrez créer une adresse e-mail
+personnalisée associée à votre nom de domaine en retournant dans le service mail
+d'Infomaniak.
+
+<details>
+<summary>Cliquer ici pour voir une capture d'écran illustrant l'étape</summary>
+
+![Infomaniak - Outils collaboratifs](./images/infomaniak-mail-outils-collaboratifs.png)
+
+![Infomaniak - Service Mail](./images/infomaniak-mail-service-mail.png)
+
+![Infomaniak - Tableau de bord du service mail](./images/infomaniak-mail-tableau-de-bord-du-service-mail.png)
+
+</details>
+
+Ajoutez une nouvelle adresse e-mail en cliquant sur le service mail associé à
+votre nom de domaine, puis en cliquant sur le bouton **"Créer une adresse
+e-mail"**.
+
+<details>
+<summary>Cliquer ici pour voir une capture d'écran illustrant l'étape</summary>
+
+![Infomaniak - Tableau de bord du service mail lié au nom de domaine](./images/infomaniak-mail-tableau-de-bord-du-service-mail-lie-au-nom-de-domaine.png)
+
+</details>
+
+Choisissez l'adresse e-mail que vous souhaitez créer (par exemple
+`contact@ votredomaine.ch`, `info@votredomaine.ch`, `support@votredomaine.ch`,
+`admin@votredomaine.ch`, etc.), puis définissez un mot de passe sécurisé. Notez
+le mot de passe quelque part, vous en aurez besoin par la suite.
+
+<details>
+<summary>Cliquer ici pour voir une capture d'écran illustrant l'étape</summary>
+
+![Infomaniak - Configuration de l'adresse e-mail (1/5)](./images/infomaniak-mail-configuration-adresse-email-1.png)
+
+![Infomaniak - Configuration de l'adresse e-mail (2/5)](./images/infomaniak-mail-configuration-adresse-email-2.png)
+
+![Infomaniak - Configuration de l'adresse e-mail (3/5)](./images/infomaniak-mail-configuration-adresse-email-3.png)
+
+![Infomaniak - Configuration de l'adresse e-mail (4/5)](./images/infomaniak-mail-configuration-adresse-email-4.png)
+
+![Infomaniak - Configuration de l'adresse e-mail (5/5)](./images/infomaniak-mail-configuration-adresse-email-5.png)
+
+</details>
+
+Vous avez acquis une adresse e-mail personnalisée associée à votre nom de
+domaine.
+
+Vous pourrez utiliser cette adresse e-mail afin d'envoyer des e-mails aux
+utilisateur.trices de votre site web (par exemple, pour l'envoi d'e-mails de
+confirmation, d'inscription, de réinitialisation de mot de passe, etc.).
+
 ## Accéder à l'hébergement web
 
 Dans cette section, nous allons voir comment accéder à l'hébergement web que
@@ -1128,9 +1233,9 @@ Pour déployer une application PHP réalisée avec Laravel, nous vous conseillon
 d'accéder à l'hébergement avec SSH et configurer l'hébergement de la manière
 suivante :
 
-1. Installer Node.js sur l'hébergement Informaniak selon le site officiel :
+1. Installer Node.js sur l'hébergement Infomaniak selon le site officiel :
    <https://nodejs.org/en/download/>.
-2. Cloner/transférer l'application Laravel sur l'hébergement Informaniak (avec
+2. Cloner/transférer l'application Laravel sur l'hébergement Infomaniak (avec
    Git ou via FTP/SFTP) sur l'hébergement Infomaniak.
 
    > [!NOTE]
