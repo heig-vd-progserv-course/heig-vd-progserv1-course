@@ -13,7 +13,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Table des matières
 
 - [Table des matières](#table-des-matières)
-- [Objectifs de la séance](#objectifs-de-la-séance)
+- [Objectifs](#objectifs)
 - [Introduction à votre première séance de mini-projet](#introduction-à-votre-première-séance-de-mini-projet)
 - [Installer et configurer l'environnement de développement local](#installer-et-configurer-lenvironnement-de-développement-local)
   - [Prérequis](#prérequis)
@@ -46,24 +46,22 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Conclusion](#conclusion)
 - [Solution](#solution)
 
-## Objectifs de la séance
-
-À l'issue de cette séance, les personnes qui étudient devraient avoir pu :
-
-- Installer et configurer un environnement de développement local pour PHP.
-- Initialiser un projet PHP pour le mini-projet.
-- Installer et configurer un environnement de production en ligne pour PHP.
-- Déployer le mini-projet en ligne.
-- Initialiser un dépôt GitHub pour les exercices.
-
-## Introduction à votre première séance de mini-projet
+## Objectifs
 
 Bienvenue dans la première séance du mini-projet qui va vous accompagner durant
 toute la durée du cours "Programmation serveur 1 (ProgServ1)" !
 
-Cette séance de mini-projet est conçue pour vous permettre de mettre en pratique
-les concepts théoriques vus dans le cours [Introduction à PHP](../README.md).
-N'hésitez pas à vous y référer si vous avez besoin de rafraîchir votre mémoire.
+Cette séance de mini-projet est conçue pour vous permettre de mettre en place un
+environnement de développement local pour PHP, de créer un projet PHP pour le
+mini-projet, et de déployer ce projet en ligne.
+
+À l'issue de cette séance, les personnes qui étudient devraient avoir pu :
+
+- Installer et configurer un environnement de développement local pour PHP.
+- Initialiser un projet PHP pour le mini-projet avec Git et GitHub.
+- Créer les pages de base du projet PHP pour le mini-projet.
+
+## Introduction à votre première séance de mini-projet
 
 En lisant les contenus préparés pour les séances de mini-projet, vous trouverez
 peut-être ce que l'on appelle des "avertissements" ou des "alertes".
@@ -840,7 +838,7 @@ const APP_AUTHOR = "Ludovic";
                 <span class="badge badge-secondary">2027-01-24</span>
             </p>
 
-            Description de la tâche 1.
+            <p>Description de la tâche 1.</p>
 
             <footer>
                 <a class="btn btn-primary btn-sm" href="./view.php">
@@ -891,15 +889,12 @@ const APP_AUTHOR = "Ludovic";
                 <span class="badge badge-primary">Basse</span>
             </p>
 
-            Description de la tâche 4.
-
             <footer>
                 <a class="btn btn-primary btn-sm" href="./view.php">
                     Visualiser la tâche
                 </a>
             </footer>
         </article>
-
     </main>
     <footer>
         <center>
@@ -980,16 +975,7 @@ const APP_AUTHOR = "Ludovic";
                 <span class="badge badge-secondary">2027-01-24</span>
             </p>
 
-            Description de la tâche 1.
-
-            <footer>
-                <a class="btn btn-primary btn-sm" href="./edit.php">
-                    Modifier la tâche
-                </a>
-                <a class="btn btn-error btn-sm" href="./delete.php">
-                    Supprimer la tâche
-                </a>
-            </footer>
+            <p>Description de la tâche 1.</p>
         </article>
     </main>
     <footer>

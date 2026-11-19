@@ -30,7 +30,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Sauvegarder et effectuer un commit Git](#sauvegarder-et-effectuer-un-commit-git)
 - [Conclusion](#conclusion)
 - [Solution](#solution)
-- [Aller plus loin](#aller-plus-loin)
 
 ## Objectifs
 
@@ -572,23 +571,6 @@ nous vous recommandons de suivre les étapes suivantes :
    les différences et les similitudes, et pour comprendre les différentes
    approches possibles pour résoudre les problèmes rencontrés lors du
    développement de votre application PHP.
-
-## Aller plus loin
-
-> [!TIP]
->
-> Cette section est optionnelle.
->
-> Vous pouvez y revenir si vous avez du temps ou si vous souhaitez approfondir
-> vos connaissances après avoir terminé les exercices et le mini-projet.
-
-- Seriez-vous capable de trier les animaux de compagnie par ordre alphabétique
-  de leur nom directement dans la fonction ?
-- Seriez-vous capable de trier les animaux de compagnie par ordre
-  croissant/décroissant de leur âge directement dans la fonction ?
-- Seriez-vous capable de créer une page d'erreur dédiée pour le cas où un animal
-  de compagnie n'est pas trouvé dans la page de visualisation, au lieu de
-  rediriger vers la page d'accueil ?
 
 <!-- URLs -->
 

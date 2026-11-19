@@ -57,7 +57,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Ajouter le champ notes](#ajouter-le-champ-notes)
 - [Conclusion](#conclusion)
 - [Solution](#solution)
-- [Aller plus loin](#aller-plus-loin)
 
 ## Objectifs
 
@@ -3991,18 +3990,6 @@ nous vous recommandons de suivre les étapes suivantes :
 
 Nous vous invitons maintenant à passer aux exemples de code et aux exercices de
 la séance comme indiqué dans le [contenu principal](../README.md).
-
-## Aller plus loin
-
-_Ceci est une section optionnelle pour les personnes qui souhaitent aller plus
-loin. Vous pouvez la sauter si vous n'avez pas de temps._
-
-- Êtes-vous capable d'utiliser une boucle pour afficher les champs des espèces,
-  pour les personnalités et pour les sexes des animaux de compagnie ?
-- Êtes-vous capable d'utiliser des énumérations pour les espèces, les
-  personnalités et les sexes des animaux de compagnie ? Pour cela, vous pouvez
-  utiliser la documentation officielle de PHP sur les énumérations :
-  <https://www.php.net/manual/fr/language.enumerations.backed.php>.
 
 <!-- URLs -->
 
