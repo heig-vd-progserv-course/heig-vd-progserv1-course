@@ -58,7 +58,7 @@ d'autres cours pourraient également être inclus dans la liste à l'avenir :
 > Si des éléments ne sont pas clairs, n'hésitez pas à ouvrir une Issue/PR pour
 > me (Ludovic) le notifier.
 
-- _"Programmation serveur 1 (ProgServ1)"_.
+- "Programmation serveur 1 (ProgServ1)".
 - _"Programmation serveur 2 (ProgServ2)"_.
 - _"Programmation serveur 3 (ProgServ3)"_ / _"Développement de produit média
   (DévProdMéd)"_.
@@ -515,10 +515,10 @@ _À venir prochainement peut-être ?_
 
 ### Ajouter une application web PHP
 
-Pour les cours de _"Programmation serveur 1 (ProgServ1)"_, _"Programmation
-serveur 2 (ProgServ2)"_ ou _"Programmation serveur 3 (ProgServ3)"_ /
-_"Développement de produit média (DévProdMéd)"_, vous pouvez choisir l'option
-**Créez un projet vierge**.
+Pour les cours de "Programmation serveur 1 (ProgServ1)", _"Programmation serveur
+2 (ProgServ2)"_ ou _"Programmation serveur 3 (ProgServ3)"_ / _"Développement de
+produit média (DévProdMéd)"_, vous pouvez choisir l'option **Créez un projet
+vierge**.
 
 <details>
 <summary>Afficher la capture d'écran illustrant l'étape</summary>
@@ -703,10 +703,10 @@ web, les paramètres avancés disponibles peuvent être différents.
 
 ### Configurer une application web PHP
 
-Pour les cours de _"Programmation serveur 1 (ProgServ1)"_, _"Programmation
-serveur 2 (ProgServ2)"_ ou _"Programmation serveur 3 (ProgServ3)"_ /
-_"Développement de produit média (DévProdMéd)"_, vous avez plusieurs options
-pour configurer le site web.
+Pour les cours de "Programmation serveur 1 (ProgServ1)", _"Programmation serveur
+2 (ProgServ2)"_ ou _"Programmation serveur 3 (ProgServ3)"_ / _"Développement de
+produit média (DévProdMéd)"_, vous avez plusieurs options pour configurer le
+site web.
 
 #### Changer la version de PHP
 
@@ -1224,7 +1224,7 @@ le dossier dédié à votre site.
 > `git clone <url du dépot GitHub> <le nom du dossier sous lequel vous souhaitez cloner votre site>`.
 >
 > Par exemple, la commande ci-dessous clonera le dépôt de la solution du
-> mini-projet du cours _"Programmation serveur 1 (ProgServ1)"_ dans le dossier
+> mini-projet du cours "Programmation serveur 1 (ProgServ1)" dans le dossier
 > `progserv1.heig-vd-progserv-course.ch`, le dossier initialement prévu par
 > Infomaniak :
 >
@@ -1258,9 +1258,9 @@ suivante :
    > `git clone <url du dépot GitHub> <le nom du dossier sous lequel vous souhaitez cloner votre site>`.
    >
    > Par exemple, la commande ci-dessous clonera le dépôt de la solution du
-   > mini-projet du cours _"Programmation serveur 1 (ProgServ1)"_ dans le
-   > dossier `progserv1.heig-vd-progserv-course.ch`, le dossier initialement
-   > prévu par Infomaniak :
+   > mini-projet du cours "Programmation serveur 1 (ProgServ1)" dans le dossier
+   > `progserv1.heig-vd-progserv-course.ch`, le dossier initialement prévu par
+   > Infomaniak :
    >
    > ```bash
    > git clone git@github.com:heig-vd-progserv-course/heig-vd-progserv1-course-mini-project-solution.git progserv1.heig-vd-progserv-course.ch

@@ -8,11 +8,10 @@ description:
   Introduction et organisation du cours pour le cours ProgServ1 à la HEIG-VD,
   Suisse
 url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/01.01-introduction-et-organisation-du-cours/presentation.html
-header:
-  "[**Introduction et organisation du cours**][contenu-complet-sur-github]"
+header: "[**Introduction et organisation du cours**][contenu-complet]"
 footer:
   "[**HEIG-VD**](https://heig-vd.ch) - [ProgServ1 Course
-  2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
+  2026-2027](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
   - [CC BY-SA 4.0][license]"
 headingDivider: 6
 math: mathjax
@@ -25,10 +24,9 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course>
+[<img src="https://raw.githubusercontent.com/primer/octicons/refs/heads/main/icons/mark-github-24.svg" style="vertical-align: middle; width: 32px;" alt="GitHub logo"> `github.com/heig-vd-progserv-course/heig-vd-progserv1-course`](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
 
-Visualiser le contenu complet sur GitHub [à cette
-adresse][contenu-complet-sur-github].
+[Visualiser le contenu complet sur GitHub][contenu-complet].
 
 <small>L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -65,17 +63,18 @@ Delafontaine**
 - 2011-2015 : CFC en informatique @ ETML.
 - 2015-2019 : BSc en informatique @ HEIG-VD.
 - 2020-2024 : Collaborateur Ra&D @ HEIG-VD.
-- 2023-2026 : Artios + Enseignement @ HEIG-VD.
+- 2023-date : Artios + Enseignement @ HEIG-VD.
 
 **Enseignement**
 
-- [DAI](https://github.com/heig-vd-dai-course/heig-vd-dai-course) &
-  [MVP](https://github.com/heig-vd-mvp-course/heig-vd-mvp-course) @ TIC.
-- [ProgServ1](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course),
-  [ProgServ2](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course)
-  &
-  [DévProdMéd](https://github.com/heig-vd-devprodmed-course/heig-vd-devprodmed-course)
-  @ COMEM.
+- [DAI](https://github.com/heig-vd-dai-course/heig-vd-dai-course), PDL &
+  [MVP](https://github.com/heig-vd-mvp-course/heig-vd-mvp-course) @ ISC (TIC).
+- [UPInfo](https://github.com/heig-vd-upinfo-course/heig-vd-upinfo-course),
+  [ProgServ1](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course),
+  [ProgServ2](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course),
+  [ProgServ3](https://github.com/heig-vd-progserv-course/heig-vd-progserv3-course),
+  [DévAppliS](https://github.com/heig-vd-devapplis-course/heig-vd-devapplis-course)
+  @ IM (TIC).
 
 </small>
 
@@ -101,10 +100,10 @@ questions relatives au cours :
 - En personne, durant les sessions de cours ou en dehors.
 - Par e-mail
   ([ludovic.delafontaine@heig-vd.ch](mailto:ludovic.delafontaine@heig-vd.ch)).
-- Microsoft Teams :
-  - Dans le canal Teams du cours (de préférence - n'hésitez pas à vous entraider
-    si je ne suis pas disponible).
-  - Message privé sur Teams (à éviter si possible).
+- Message privé sur Microsoft Teams (à éviter si possible - je suis rarement sur
+  cette plateforme).
+
+**Pour une réponse rapide, préférez l'e-mail.**
 
 ## Objectifs
 
@@ -120,9 +119,9 @@ questions relatives au cours :
 
 > - Expliquer les bases d'un langage de programmation serveur comme PHP et son
 >   rôle dans le monde web.
-> - Organiser un code propre à l'aide de fonctions.
 > - Manipuler des tableaux et utiliser des boucles pour traiter des collections
 >   de données.
+> - Organiser un code propre à l'aide de fonctions.
 > - Gérer les formulaires et les données qu'ils contiennent.
 > - Persister des données dans une base de données.
 
@@ -140,40 +139,57 @@ questions relatives au cours :
 - En présentiel dans cette même salle.
 - Mélange de théorie/pratique pour un apprentissage efficace :
   - Moment de théorie court pour expliquer les concepts.
+  - Mini-projet à réaliser tout au long du cours.
   - Exemples de code à explorer et tester.
   - Exercices à faire en classe ou à la maison.
-  - Mini-projet à réaliser tout au long du cours.
 - Espace de discussion pour poser des questions et obtenir de l'aide (**il n'y a
   pas de questions bêtes !**, je suis payé pour ça).
+
+## La ressource principale : le dépôt GitHub
+
+Un dépôt GitHub a été créé pour héberger tous les contenus du cours.
+
+Vous y trouverez tous les contenus du cours, les étapes du mini-projet, les
+exemples de code et les exercices.
+
+C'est ici :
+[heig-vd-progserv-course/heig-vd-progserv1-course](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course).
+
+![bg right:40% w:70%](https://raw.githubusercontent.com/primer/octicons/refs/heads/main/icons/mark-github-24.svg)
+
+### Mini-projet
+
+- Application web en PHP pour gérer ses devoirs ou des tâches à faire.
+- Permet de mettre en pratique le contenu théorique du cours.
+- À réaliser tout au long du cours de façon guidée.
+- A déployer en ligne pour être accessible depuis n'importe où.
+- Je suis là pour vous aider.
+
+![bg right:40%][illustration-mini-projet]
 
 ### Exemples de code
 
 - Permet de voir prendre en main et comprendre les exemples de code PHP
   présentés en cours.
+- A exécuter sur votre machine pour tester et expérimenter différentes choses.
+- Ne pas hésiter à modifier le code pour voir ce qui se passe.
 
 ![bg right:40%][illustration-exemples-de-code]
 
 ### Exercices
 
 - Permet d'exercer les concepts vus en cours, autant théoriques que pratiques.
+- Une série d'exercices est proposée pour chaque contenu du cours.
+- A commencer en classe et à terminer à la maison si nécessaire.
+- À faire régulièrement pour consolider les connaissances.
 
 ![bg right:40%][illustration-exercices]
 
-### Mini-projet
-
-- Application web en PHP pour gérer des animaux de compagnie.
-- Permet de mettre en pratique le contenu théorique du cours.
-- À réaliser tout au long du cours de façon guidée.
-- A déployer en ligne pour être accessible depuis n'importe où.
-- Je suis là pour vous aider.
-
-![bg right:40% brightness:1.3][illustration-mini-projet]
-
-### _"J'ai fini, je peux partir ?"_
+## _"J'ai fini, je peux partir ?"_
 
 <!-- _class: lead -->
 
-#### _"J'ai fini, je peux partir ?"_
+### _"J'ai fini, je peux partir ?"_
 
 Si vous avez fini plus tôt, vous êtes libre de partir. Par contre, je vous
 encourage à :
@@ -239,9 +255,9 @@ Tout est décrit dans le document
 
 ## Comment se préparer ?
 
-- Relire les supports de cours.
-- Pratiquer les exercices.
+- Relire les supports de cours et tester les exemples de code.
 - Travailler sur le mini-projet.
+- Pratiquer les exercices.
 - Discuter avec les autres étudiant.es et poser des questions.
 
 **Il n'y a pas de secret** : la meilleure façon de se préparer est de pratiquer
@@ -377,8 +393,8 @@ Est-ce que vous avez des questions ?
   [Samuel Girven](https://unsplash.com/@samuelgirven) sur
   [Unsplash](https://unsplash.com/photos/dumbbells-on-floor-VJ2s0c20qCo)
 - [Illustration][illustration-mini-projet] par
-  [Alec Favale](https://unsplash.com/@alecfavale) sur
-  [Unsplash](https://unsplash.com/photos/short-coated-white-and-brown-puppy-Ivzo69e18nk)
+  [Jakub Żerdzicki](https://unsplash.com/@jakubzerdzicki) sur
+  [Unsplash](https://unsplash.com/photos/hand-writing-a-checklist-in-a-notebook-TB7aNN4blTQ)
 - [Illustration][illustration-modalites-devaluation] par
   [Nguyen Dang Hoang Nhu](https://unsplash.com/@nguyendhn) sur
   [Unsplash](https://unsplash.com/photos/person-writing-on-white-paper-qDgTQOYk6B8)
@@ -390,7 +406,7 @@ Est-ce que vous avez des questions ?
 
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
-[contenu-complet-sur-github]:
+[contenu-complet]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/01.01-introduction-et-organisation-du-cours/README.md
 
 <!-- Illustrations -->
@@ -404,7 +420,7 @@ Est-ce que vous avez des questions ?
 [illustration-exercices]:
 	https://images.unsplash.com/photo-1576678927484-cc907957088c?fit=crop&h=720
 [illustration-mini-projet]:
-	https://images.unsplash.com/photo-1563460716037-460a3ad24ba9?fit=crop&h=720
+	https://images.unsplash.com/photo-1768055104910-8c8d213835fb?fit=crop&h=720
 [illustration-modalites-devaluation]:
 	https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?fit=crop&h=720
 [illustration-bibliographie-et-ressources]:

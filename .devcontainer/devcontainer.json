@@ -1,17 +1,27 @@
 {
 	"name": "HEIG-VD ProgServ1 Course Development Container",
-	"dockerComposeFile": "compose.yaml",
-	"service": "devcontainer",
-	"runServices": ["plantuml"],
+	"image": "mcr.microsoft.com/devcontainers/base:trixie",
+	// Set environment variables for the container
+	"containerEnv": {
+		"CLAUDE_CONFIG_DIR": "/home/vscode/.claude"
+	},
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
 	"workspaceFolder": "/workspace",
 	"features": {
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+		"ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {},
+		"ghcr.io/devcontainers/features/docker-in-docker:4.1.3": {
 			"moby": false
+		},
+		"ghcr.io/devcontainers/features/node:2": {
+			"version": "26"
 		}
 	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"Anthropic.claude-code",
+				"bmewburn.vscode-intelephense-client",
+				"cweijan.vscode-database-client2",
 				"DavidAnson.vscode-markdownlint",
 				"esbenp.prettier-vscode",
 				"GitHub.copilot",
@@ -26,6 +36,10 @@
 			]
 		}
 	},
+	// Mount a volume to persist the Claude configuration across container rebuilds
+	"mounts": [
+		"source=claude-code-config,target=/home/vscode/.claude,type=volume"
+	],
 	// Ports to expose on the container's network host
 	"forwardPorts": [8080, 9090],
 	"portsAttributes": {
@@ -36,8 +50,6 @@
 			"label": "PlantUML Server"
 		}
 	},
-	// Execute the post-create.sh script once the container is created
-	"postCreateCommand": ".devcontainer/post-create.sh",
-	// Execute the post-start.sh script once the container is started
-	"postStartCommand": ".devcontainer/post-start.sh"
+	// Execute the following command once the container is created
+	"postCreateCommand": ".devcontainer/post-create.sh"
 }

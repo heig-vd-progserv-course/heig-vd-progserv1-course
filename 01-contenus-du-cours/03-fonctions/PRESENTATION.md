@@ -6,10 +6,10 @@ paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 description: Fonctions pour le cours ProgServ1 à la HEIG-VD, Suisse
 url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/presentation.html
-header: "[**Fonctions**][contenu-complet-sur-github]"
+header: "[**Fonctions**][contenu-complet]"
 footer:
   "[**HEIG-VD**](https://heig-vd.ch) - [ProgServ1 Course
-  2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
+  2026-2027](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
   - [CC BY-SA 4.0][license]"
 headingDivider: 6
 math: mathjax
@@ -22,10 +22,9 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course>
+[<img src="https://raw.githubusercontent.com/primer/octicons/refs/heads/main/icons/mark-github-24.svg" style="vertical-align: middle; width: 32px;" alt="GitHub logo"> `github.com/heig-vd-progserv-course/heig-vd-progserv1-course`](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
 
-Visualiser le contenu complet sur GitHub [à cette
-adresse][contenu-complet-sur-github].
+[Visualiser le contenu complet sur GitHub][contenu-complet].
 
 <small>L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -40,9 +39,8 @@ adresse][contenu-complet-sur-github].
 
 _Cette présentation est un résumé du contenu complet disponible sur GitHub._
 
-_Pour plus de détails, retrouvez le [contenu complet sur
-GitHub][contenu-complet-sur-github] ou en cliquant sur l'en-tête de ce
-document._
+_Pour plus de détails, retrouvez le contenu complet [ici][contenu-complet] ou en
+cliquant sur l'en-tête de ce document._
 
 ## Objectifs (1)
 
@@ -757,16 +755,13 @@ l'inclusion multiple du même fichier.
 
 Est-ce que vous avez des questions ?
 
-## À vous de jouer !
-
-- (Re)lire le [support de cours][contenu-complet-sur-github].
-- Explorer les [exemples de code][exemples-de-code].
-- Faire les [exercices][exercices].
 - Réaliser le [mini-projet][mini-projet].
+- (Re)lire le [support de cours][contenu-complet].
+- Faire les [exercices][exercices].
+- Explorer les [exemples de code][exemples-de-code].
+- Répondre aux questions de la seconde partie du document [Activités en
+  classe][impressions].
 - Poser des questions si nécessaire.
-
-**N'allez pas trop vite, vous avez le temps !** N'hésitez pas à vous entraidez
-si vous avez des difficultés.
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
@@ -834,14 +829,14 @@ si vous avez des difficultés.
 
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
-[contenu-complet-sur-github]:
+[contenu-complet]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-fonctions/README.md
 [exemples-de-code]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-fonctions/01-exemples-de-code/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-fonctions/02-exemples-de-code/README.md
 [exercices]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-fonctions/02-exercices/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-fonctions/03-exercices/README.md
 [mini-projet]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-fonctions/03-mini-projet/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-fonctions/01-mini-projet/README.md
 
 <!-- Illustrations -->
 

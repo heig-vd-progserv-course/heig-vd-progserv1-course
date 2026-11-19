@@ -12,10 +12,24 @@ actor "Client\n(navigateur web)" as browser
 participant "Serveur web\n(Apache/nginx)" as webserver
 participant "Interpréteur PHP\n(PHP 8.5)" as php
 
-browser -> webserver: "J'aimerais la page 'index.php'."
-webserver -> php: "Un client demande la page 'index.php'."
-php -> php: "Génération de la page 'index.php' en cours..."
-php -> webserver: "Voici la page 'index.php' générée."
+browser -> webserver: "J'aimerais la page ""index.php"" du site ""example.com""."
+
+note over webserver, browser
+""GET /index.php HTTP/1.1""
+""Host: example.com""
+end note
+
+webserver -> php: "Un client demande la page ""index.php""."
+php -> php: "Génération de la page ""index.php"" en cours..."
+php -> webserver: "Voici la page ""index.php"" générée."
 webserver -> browser: "Voici la page que tu as demandé."
+
+note over webserver, browser
+""HTTP/1.1 200 OK""
+""Content-Type: text/html""
+
+""~<!DOCTYPE html>""
+""...""
+end note
 browser -> browser: "Affichage de la page."
 @enduml

@@ -255,7 +255,7 @@ Compressing objects: 100% (3/3), done.
 Writing objects: 100% (4/4), 816 bytes | 816.00 KiB/s, done.
 Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-To github.com:heig-vd-progserv-course-classroom/progserv1-2025-2026-mini-projet-et-exercices-ludelafo.git
+To github.com:heig-vd-progserv-course-classroom/progserv1-2026-2027-mini-projet-et-exercices-ludelafo.git
    001dff7..aaea34b  main -> main
 ```
 
@@ -971,6 +971,9 @@ La page d'accueil est maintenant plus attrayante et servira de base pour les
 prochaines étapes de développement de l'application de gestion d'animaux de
 compagnie.
 
+Nous vous invitons maintenant à passer aux exemples de code et aux exercices de
+la séance comme indiqué dans le [contenu principal](../README.md).
+
 ## Solution
 
 > [!NOTE]
@@ -981,7 +984,7 @@ compagnie.
 
 La solution du mini-projet est accessible dans un dépôt GitHub dédié à l'adresse
 suivante :
-<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course-mini-project-solution/tree/session-2>.
+<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course-mini-project-solution>.
 
 Afin d'utiliser cette solution de manière efficace pour votre apprentissage,
 nous vous recommandons de suivre les étapes suivantes :
@@ -993,16 +996,10 @@ nous vous recommandons de suivre les étapes suivantes :
    étapes du développement d'une application PHP.
 2. Clonez le dépôt GitHub de la solution localement sur votre ordinateur en
    utilisant la commande `git clone` avec l'URL du dépôt de la solution.
-3. Récupérez la dernière version du dépôt de la solution en utilisant les
-   commandes `git checkout main` et `git pull` pour vous assurer d'avoir la
-   version la plus récente de la solution.
-4. Accédez à la version spécifique de la solution correspondant à la séance en
-   utilisant la commande `git checkout` avec le commit ou le tag correspondant à
-   la séance (par exemple, `git checkout session-1`).
-5. Explorez le code de la solution pour comprendre comment les différentes
+3. Explorez le code de la solution pour comprendre comment les différentes
    fonctionnalités ont été implémentées et comment les concepts appris ont été
    appliqués dans la solution.
-6. Comparez votre propre version du mini-projet avec la solution pour identifier
+4. Comparez votre propre version du mini-projet avec la solution pour identifier
    les différences et les similitudes, et pour comprendre les différentes
    approches possibles pour résoudre les problèmes rencontrés lors du
    développement de votre application PHP.

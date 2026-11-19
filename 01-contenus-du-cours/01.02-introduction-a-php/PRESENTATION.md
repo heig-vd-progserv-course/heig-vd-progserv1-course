@@ -6,10 +6,10 @@ paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 description: Introduction à PHP pour le cours ProgServ1 à la HEIG-VD, Suisse
 url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/01.02-introduction-a-php/presentation.html
-header: "[**Introduction à PHP**][contenu-complet-sur-github]"
+header: "[**Introduction à PHP**][contenu-complet]"
 footer:
   "[**HEIG-VD**](https://heig-vd.ch) - [ProgServ1 Course
-  2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
+  2026-2027](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
   - [CC BY-SA 4.0][license]"
 headingDivider: 6
 math: mathjax
@@ -22,10 +22,9 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course>
+[<img src="https://raw.githubusercontent.com/primer/octicons/refs/heads/main/icons/mark-github-24.svg" style="vertical-align: middle; width: 32px;" alt="GitHub logo"> `github.com/heig-vd-progserv-course/heig-vd-progserv1-course`](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
 
-Visualiser le contenu complet sur GitHub [à cette
-adresse][contenu-complet-sur-github].
+[Visualiser le contenu complet sur GitHub][contenu-complet].
 
 <small>L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -34,15 +33,22 @@ adresse][contenu-complet-sur-github].
 
 ![bg brightness:2 opacity:0.05][illustration-principale]
 
+## Exploration du mini-projet
+
+Avant de commencer, explorez le mini-project à l'aide du document [Activités en
+classe][impressions] et du site web déployé pour le mini-projet :
+<https://progserv1.heig-vd-progserv-course.ch>.
+
+![bg right:40%][illustration-mini-projet]
+
 ## Retrouvez le contenu complet de cette présentation sur GitHub
 
 <!-- _class: lead -->
 
 _Cette présentation est un résumé du contenu complet disponible sur GitHub._
 
-_Pour plus de détails, retrouvez le [contenu complet sur
-GitHub][contenu-complet-sur-github] ou en cliquant sur l'en-tête de ce
-document._
+_Pour plus de détails, retrouvez le contenu complet [ici][contenu-complet] ou en
+cliquant sur l'en-tête de ce document._
 
 ## Objectifs (1)
 
@@ -63,30 +69,6 @@ document._
 - Rédiger du code PHP simple.
 
 ![bg right:40%][illustration-objectifs]
-
-## Avant de commencer...
-
-<div class="two-thirds-one-third-columns">
-<div>
-
-Explorez le mini-projet en ligne :
-
-- Quelles fonctionnalités propose-t-il ?
-- Quels sont les éléments qui le composent ?
-- Comment fonctionne-t-il ?
-- Quelles sont les limitations ?
-
-Nous en discuterons dans quelques minutes !
-
-</div>
-<div class="center">
-
-![QR Code pour accéder au mini-projet en ligne](https://quickchart.io/qr?format=png&ecLevel=Q&size=300&margin=1&text=https://progserv1.heig-vd-progserv-course.ch)
-
-<https://progserv1.heig-vd-progserv-course.ch>
-
-</div>
-</div>
 
 ## Qu'est-ce que PHP (1)
 
@@ -119,7 +101,7 @@ Nous en discuterons dans quelques minutes !
 - PHP repose sur cette même architecture et est exécuté côté serveur pour
   générer du contenu dynamique qui est ensuite envoyé au client.
 
-## Comment fonctionne PHP
+## Comment fonctionne PHP (1)
 
 PHP fonctionne grâce aux outils suivants :
 
@@ -128,7 +110,14 @@ PHP fonctionne grâce aux outils suivants :
 - Un navigateur web.
 - Un éditeur de code (pour le développement).
 
-![bg right:40% contain](./images/architecture-client-serveur-avec-php.svg)
+![bg right:40% w:50% vertical](https://www.apache.org/logos/originals/httpd.svg)
+![bg right:40% w:50% vertical](https://www.php.net/images/logos/new-php-logo.svg)
+![bg right:40% w:30% vertical](https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg)
+![bg right:40% w:30% vertical](https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg)
+
+---
+
+![bg h:85%](./images/architecture-client-serveur-avec-php.svg)
 
 ## Comment écrire du code PHP (1)
 
@@ -172,6 +161,32 @@ public class Main {
     <h1><?php echo "Hello, World!"; ?></h1>
 </body>
 </html>
+```
+
+---
+
+```php
+// Résultat de l'exécution
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PHP Test</title>
+</head>
+
+<body>
+    <h1>Hello, World!</h1>
+</body>
+
+</html>
+```
+
+---
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+Hello, World!
 ```
 
 ## Comment exécuter du code PHP (1)
@@ -241,6 +256,8 @@ sur plusieurs lignes
 
 ### Les variables (2)
 
+<small>
+
 ```php
 <?php
 // Déclaration d'une variable - une variable commence par le signe `$`
@@ -249,11 +266,33 @@ $variable = "Hello, World!";
 // Affichage de la variable
 echo $variable;
 
+// Affiche une nouvelle ligne dans le navigateur
+echo "<br>";
+
 // Modification de la variable
 $variable = "Goodbye, World!";
 
 // Affichage de la variable modifiée
 echo $variable;
+```
+
+</small>
+
+---
+
+La fonction `echo` est utilisée pour générer du contenu qui sera retourné au
+navigateur web. Dans ce cas, elle affiche la valeur de la variable `$variable`.
+
+```php
+// Résultat de l'exécution
+Hello, World!<br>Goodbye, World!
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+Hello, World!
+Goodbye, World!
 ```
 
 ### Les variables (3)
@@ -338,6 +377,13 @@ $string = "Hello, World!";
 echo $string;
 ```
 
+```php
+// Résultat de l'exécution
+Hello, World!
+```
+
+#### Les chaînes de caractères (3)
+
 ```java
 // Équivalent en Java
 public static void main(String[] args) {
@@ -347,7 +393,7 @@ public static void main(String[] args) {
 }
 ```
 
-#### Les chaînes de caractères (3)
+#### Les chaînes de caractères (4)
 
 ```php
 <?php
@@ -357,6 +403,13 @@ $second = "World!";
 echo $first . $second;
 ```
 
+```php
+// Résultat de l'exécution
+Hello, World!
+```
+
+#### Les chaînes de caractères (5)
+
 ```java
 // Équivalent en Java
 public static void main(String[] args) {
@@ -365,6 +418,83 @@ public static void main(String[] args) {
 
     System.out.print(first + second);
 }
+```
+
+#### Les chaînes de caractères (6)
+
+```php
+<?php
+$greetings = "Hello";
+$name = "World";
+
+echo "$greetings, $name!";
+```
+
+```php
+// Résultat de l'exécution
+Hello, World!
+```
+
+#### Les chaînes de caractères (7)
+
+```php
+<?php
+$string = 'Hello, World!';
+
+echo $string;
+```
+
+```php
+// Résultat de l'exécution
+Hello, World!
+```
+
+#### Les chaînes de caractères (8)
+
+```php
+<?php
+$greetings = 'Hello';
+$name = 'World';
+
+// La ligne suivante affichera littéralement "$greetings, $name!"
+echo '$greetings, $name!';
+
+// Retour à la ligne HTML
+echo "<br>";
+
+// La ligne suivante affichera "Hello, World!"
+echo "$greetings, $name!";
+```
+
+---
+
+```php
+// Résultat de l'exécution
+$greetings, $name!<br>Hello, World!
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+$greetings, $name!
+Hello, World!
+```
+
+#### Les chaînes de caractères (9)
+
+Il est possible d'échapper des caractères spéciaux dans les chaînes de
+caractères en utilisant le caractère d'échappement `\`.
+
+```php
+<?php
+$string = "Hello, \"World\"!";
+
+echo "\$string contains $string";
+```
+
+```php
+// Résultat de l'exécution
+$string contains "Hello, World!"
 ```
 
 #### Les nombres (1)
@@ -389,6 +519,20 @@ $float = 3.14;
 // Affichage des nombres
 echo "\$integer contains $integer<br>";
 echo "\$float contains $float";
+```
+
+---
+
+```php
+// Résultat de l'exécution
+myInteger contains 42<br>myFloat contains 3.14
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+myInteger contains 42
+myFloat contains 3.14
 ```
 
 #### Les nombres (3)
@@ -432,6 +576,23 @@ $doILikeHomework = false;
 echo "\$doILikeDogs contains $doILikeDogs<br>";
 echo "\$doILikeHomework contains $doILikeHomework";
 ```
+
+---
+
+```php
+// Résultat de l'exécution
+doILikeDogs contains 1<br>doILikeHomework contains
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+doILikeDogs contains 1
+doILikeHomework contains
+```
+
+Remarquez que la valeur `true` est affichée comme `1` et la valeur `false` est
+affichée comme une chaîne vide.
 
 #### Les booléens (3)
 
@@ -478,6 +639,20 @@ $array = array("apple", "banana", "cherry");
 echo "$array[2]";
 ```
 
+---
+
+```php
+// Résultat de l'exécution
+apple<br>cherry
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+apple
+cherry
+```
+
 #### Les tableaux (3)
 
 ```java
@@ -505,6 +680,8 @@ public static void main(String[] args) {
 
 ### Les constantes (2)
 
+<small>
+
 ```php
 <?php
 // Définition d'une constante
@@ -513,12 +690,35 @@ const CONSTANT = "Hello, World!";
 // Affichage de la constante
 echo CONSTANT;
 
+// Affichage d'une nouvelle ligne dans le navigateur
+echo "<br>";
+
 // Tentative de modification de la constante (erreur)
 CONSTANT = "Goodbye, World!";
 
 // Définition d'une constante (alternative)
 define("CONSTANT", "Hello, World!");
 ```
+
+</small>
+
+---
+
+```php
+// Résultat de l'exécution
+Hello, World!<br>
+Parse error: syntax error, unexpected token "=" in file.php on line 9
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+Hello, World!
+Parse error: syntax error, unexpected token "=" in file.php on line 9
+```
+
+La tentative de modification de la constante a généré une erreur, car les
+constantes ne peuvent pas être modifiées après leur définition.
 
 ### Les constantes (3)
 
@@ -539,12 +739,12 @@ public static void main(String[] args) {
 ### Les opérateurs (1)
 
 - Permet d'effectuer des opérations sur des variables et des valeurs.
-- Opérateurs arithmétiques : `+`, `-`, `*`, `/`, `%` (modulo)
+- Opérateurs d'affectation : `=` (affectation), `??` (affectation par
+  coalescence nulle).
+- Opérateurs arithmétiques : `+`, `-`, `*`, `/`, `%` (modulo).
 - Opérateurs de comparaison : `===` (égal), `!==` (différent), `>` (supérieur),
-  `<` (inférieur)
-- Opérateurs logiques : `&&` (et), `||` (ou), `!` (non/inversion)
-
-![bg right:40%][illustration-les-operateurs]
+  `<` (inférieur).
+- Opérateurs logiques : `&&` (et), `||` (ou), `!` (non/inversion).
 
 ### Les opérateurs (2)
 
@@ -559,6 +759,22 @@ echo "Sum: $sum<br>";
 echo "Difference: $difference<br>";
 echo "Product: $product<br>";
 echo "Quotient: $quotient";
+```
+
+---
+
+```php
+// Résultat de l'exécution
+Sum: 2<br>Difference: 1<br>Product: 4<br>Quotient: 2
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+Sum: 2
+Difference: 1
+Product: 4
+Quotient: 2
 ```
 
 ### Les opérateurs (3)
@@ -595,6 +811,20 @@ $modulo = 6 % 2;
 echo "Modulo: $modulo";
 ```
 
+---
+
+```php
+// Résultat de l'exécution
+Modulo: 1<br>Modulo: 0
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+Modulo: 1
+Modulo: 0
+```
+
 ### Les opérateurs (5)
 
 ```java
@@ -614,7 +844,44 @@ public static void main(String[] args) {
 }
 ```
 
-### Les structures conditionnelles (1)
+### Les opérateurs (6)
+
+```php
+<?php
+// `$variable` n'est pas (encore) définie, donc elle sera affectée à "Default value"
+$variable = $variable ?? "Default value";
+
+echo "Variable: $variable<br>";
+
+$variable = "New value";
+
+// `$variable` est déjà définie, donc elle ne sera pas affectée à "Default value"
+$variable = $variable ?? "Default value";
+
+echo "Variable: $variable";
+```
+
+---
+
+```php
+// Résultat de l'exécution
+Variable: Default value<br>Variable: New value
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+Variable: Default value
+Variable: New value
+```
+
+### Les opérateurs (7)
+
+Il n'existe pas d'équivalent direct à l'opérateur `??` en Java, mais nous
+pouvons obtenir un comportement similaire en utilisant une structure
+conditionnelle `if` ou un `if` ternaire (voir ci-dessous).
+
+### Les structures conditionnelles
 
 - Appelées parfois _"structures de contrôle conditionnelles"_.
 - Permettent de contrôler le flux d'exécution d'un programme.
@@ -623,7 +890,7 @@ public static void main(String[] args) {
 
 ![bg right:40%][illustration-les-structures-de-controle-conditionnelles]
 
-### Les structures conditionnelles (2)
+#### Les structures `if`, `else` et `elseif` (1)
 
 ```php
 <?php
@@ -639,7 +906,14 @@ if ($a < $b) {
 }
 ```
 
-### Les structures conditionnelles (3)
+---
+
+```php
+// Résultat de l'exécution
+a is less than b
+```
+
+#### Les structures `if`, `else` et `elseif` (2)
 
 ```java
 // Équivalent en Java
@@ -657,7 +931,7 @@ public static void main(String[] args) {
 }
 ```
 
-### Les structures conditionnelles (4)
+#### Les structures `if`, `else` et `elseif` (3)
 
 ```php
 <?php
@@ -672,7 +946,14 @@ if ($age >= 18 && $country === "Switzerland") {
 }
 ```
 
-### Les structures conditionnelles (5)
+---
+
+```php
+// Résultat de l'exécution
+You are allowed to vote in Switzerland.
+```
+
+#### Les structures `if`, `else` et `elseif` (4)
 
 ```java
 // Équivalent en Java
@@ -689,74 +970,16 @@ public static void main(String[] args) {
 }
 ```
 
-### Les structures conditionnelles (6)
+#### Les opérateurs `==` et `===` (1)
 
-```php
-<?php
-// Déclaration d'une variable
-$color = "red";
-
-// Vérification de la variable `$color`
-switch ($color) {
-    // Si la variable `$color` est égale à "red"
-    case "red":
-        echo "The color is red.";
-        break;
-```
-
----
-
-```php
-    // Si la variable `$color` est égale à "blue"
-    case "blue":
-        echo "The color is blue.";
-        break;
-    // Par défaut
-    default:
-        echo "The color is neither red nor blue.";
-}
-```
-
-### Les structures conditionnelles (7)
-
-```java
-// Équivalent en Java
-public static void main(String[] args) {
-    // Déclaration d'une variable
-    String color = "red";
-
-    // Vérification de la variable `$color`
-    switch (color) {
-        // Si la variable `$color` est égale à "red"
-        case "red":
-            System.out.println("The color is red.");
-            break;
-```
-
----
-
-```java
-        // Si la variable `$color` est égale à "blue"
-        case "blue":
-            System.out.println("The color is blue.");
-            break;
-        // Par défaut
-        default:
-            System.out.println("The color is neither red nor blue.");
-    }
-}
-```
-
-### Les structures conditionnelles (8)
-
-- Deux formes d'opérateurs conditionnels :
+- Deux formes d'opérateurs de comparaison en PHP :
   - `==` : vérifie l'égalité des valeurs (type non pris en compte).
   - `===` : vérifie l'égalité des valeurs et des types.
 - Préférer l'utilisation de `===` pour éviter des erreurs inattendues.
 
 ![bg right:40%][illustration-les-structures-de-controle-conditionnelles]
 
-### Les structures conditionnelles (9)
+#### Les opérateurs `==` et `===` (2)
 
 ```php
 <?php
@@ -792,13 +1015,140 @@ if ($a === $c) {
 }
 ```
 
-**Utilisez toujours `===`/`!==` sauf si vous avez une bonne raison de faire
-autrement !**
+---
+
+```php
+// Résultat de l'exécution
+a is equal to b (same value)<br>a is equal to c (same value)<br>a is identical to b (same value and type)<br>a is not identical to c (different type)
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+a is equal to b (same value)
+a is equal to c (same value)
+a is identical to b (same value and type)
+a is not identical to c (different type)
+```
+
+Utilisez toujours `===`/`!==` sauf si vous avez une bonne raison de faire
+autrement pour garantir un bon fonctionnement de votre code et éviter des
+erreurs difficiles à détecter.
+
+#### Les opérateurs `==` et `===` (3)
+
+Il n'existe pas d'équivalent direct en Java pour les opérateurs `==` et `===` de
+PHP mais vous retrouverez un comportement similaire en JavaScript dans un futur
+cours.
+
+#### Les `if` ternaires (1)
+
+L'opérateur ternaire ("shorthand if" en anglais) est une forme abrégée de la
+structure conditionnelle `if` :
+
+```php
+<?php
+// Déclaration d'une variable
+$age = 18;
+
+// Vérification si `$age` est supérieur ou égal à 18
+// Si c'est le cas, la variable `$message` contiendra "You are an adult."
+// Sinon, la variable `$message` contiendra "You are a minor."
+$message = ($age >= 18) ? "You are an adult." : "You are a minor.";
+
+echo $message;
+```
 
 ---
 
-Il n'existe pas d'équivalent direct en Java pour les opérateurs `==` et `===` de
-PHP.
+```php
+// Résultat de l'exécution
+You are an adult.
+```
+
+#### Les `if` ternaires (2)
+
+Le code ci-dessus est équivalent à :
+
+```php
+<?php
+// Déclaration d'une variable
+$age = 18;
+
+// Vérification si `$age` est supérieur ou égal à 18
+if ($age >= 18) {
+    $message = "You are an adult.";
+} else {
+    $message = "You are a minor.";
+}
+
+echo $message;
+```
+
+A utiliser avec parcimonie, car cela peut rendre le code moins lisible.
+
+#### Les structures conditionnelles `switch` (1)
+
+```php
+<?php
+// Déclaration d'une variable
+$color = "red";
+
+// Vérification de la variable `$color`
+switch ($color) {
+    // Si la variable `$color` est égale à "red"
+    case "red":
+        echo "The color is red.";
+        break;
+```
+
+---
+
+```php
+    // Si la variable `$color` est égale à "blue"
+    case "blue":
+        echo "The color is blue.";
+        break;
+    // Par défaut
+    default:
+        echo "The color is neither red nor blue.";
+}
+```
+
+```php
+// Résultat de l'exécution
+The color is red.
+```
+
+#### Les structures conditionnelles `switch` (2)
+
+```java
+// Équivalent en Java
+public static void main(String[] args) {
+    // Déclaration d'une variable
+    String color = "red";
+
+    // Vérification de la variable `$color`
+    switch (color) {
+        // Si la variable `$color` est égale à "red"
+        case "red":
+            System.out.println("The color is red.");
+            break;
+```
+
+---
+
+```java
+        // Si la variable `$color` est égale à "blue"
+        case "blue":
+            System.out.println("The color is blue.");
+            break;
+        // Par défaut
+        default:
+            System.out.println("The color is neither red nor blue.");
+    }
+}
+```
 
 ## Conclusion
 
@@ -817,14 +1167,13 @@ Est-ce que vous avez des questions ?
 
 ## À vous de jouer !
 
-- (Re)lire le [support de cours][contenu-complet-sur-github].
 - Réaliser le [mini-projet][mini-projet].
-- Explorer les [exemples de code][exemples-de-code].
+- (Re)lire le [support de cours][contenu-complet].
 - Faire les [exercices][exercices].
+- Explorer les [exemples de code][exemples-de-code].
+- Répondre aux questions de la seconde partie du document [Activités en
+  classe][impressions].
 - Poser des questions si nécessaire.
-
-**N'allez pas trop vite, vous avez le temps !** N'hésitez pas à vous entraidez
-si vous avez des difficultés.
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
@@ -833,6 +1182,9 @@ si vous avez des difficultés.
 - [Illustration principale][illustration-principale] par
   [Richard Jacobs](https://unsplash.com/@rj2747) sur
   [Unsplash](https://unsplash.com/photos/grayscale-photo-of-elephants-drinking-water-8oenpCXktqQ)
+- [Illustration][illustration-mini-projet] par
+  [Jakub Żerdzicki](https://unsplash.com/@jakubzerdzicki) sur
+  [Unsplash](https://unsplash.com/photos/hand-writing-a-checklist-in-a-notebook-TB7aNN4blTQ)
 - [Illustration][illustration-objectifs] par
   [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
@@ -851,12 +1203,12 @@ si vous avez des difficultés.
 - [Illustration][illustration-type-de-donnees-et-typage-dynamique] par
   [Jan Huber](https://unsplash.com/@jan_huber) sur
   [Unsplash](https://unsplash.com/photos/yellow-and-red-light-streaks-NjV34SrbM_g)
-- [Illustration][illustration-les-chaines-de-caracteres] par
-  [Kier in Sight Archives](https://unsplash.com/@kierinsightarchives) sur
-  [Unsplash](https://unsplash.com/photos/white-and-black-abstract-illustration-qXA4b_dZSbQ)
 
 ## Sources (2)
 
+- [Illustration][illustration-les-chaines-de-caracteres] par
+  [Kier in Sight Archives](https://unsplash.com/@kierinsightarchives) sur
+  [Unsplash](https://unsplash.com/photos/white-and-black-abstract-illustration-qXA4b_dZSbQ)
 - [Illustration][illustration-les-nombres] par
   [Nick Hillier](https://unsplash.com/@nhillier) sur
   [Unsplash](https://unsplash.com/photos/assorted-numbers-photography-yD5rv8_WzxA)
@@ -869,9 +1221,6 @@ si vous avez des difficultés.
 - [Illustration][illustration-les-constantes] par
   [Kenny Eliason](https://unsplash.com/@neonbrand) sur
   [Unsplash](https://unsplash.com/photos/red-bricks-wall-XEsx2NVpqWY)
-- [Illustration][illustration-les-operateurs] par
-  [charlesdeluvio](https://unsplash.com/@charlesdeluvio) sur
-  [Unsplash](https://unsplash.com/photos/white-calculator-on-white-table-GlavtG-umzE)
 - [Illustration][illustration-les-structures-de-controle-conditionnelles] par
   [Arham Jain](https://unsplash.com/@arham_jain48) sur
   [Unsplash](https://unsplash.com/photos/a-painting-of-blue-flowers-on-a-white-background-OkiDTYxLo34)
@@ -883,8 +1232,10 @@ si vous avez des difficultés.
 
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
-[contenu-complet-sur-github]:
+[contenu-complet]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/01.02-introduction-a-php/README.md
+[impressions]:
+	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/01.02-introduction-a-php/01.02-introduction-a-php-impressions.pdf
 [mini-projet]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-contenus-du-cours/01.02-introduction-a-php/01-mini-projet/README.md
 [exemples-de-code]:
@@ -896,6 +1247,8 @@ si vous avez des difficultés.
 
 [illustration-principale]:
 	https://images.unsplash.com/photo-1517486430290-35657bdcef51?fit=crop&h=720
+[illustration-mini-projet]:
+	https://images.unsplash.com/photo-1768055104910-8c8d213835fb?fit=crop&h=720
 [illustration-objectifs]:
 	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
 [illustration-quest-ce-php]:
@@ -918,8 +1271,6 @@ si vous avez des difficultés.
 	https://images.unsplash.com/photo-1561117089-3fb7c944887f?fit=crop&h=720
 [illustration-les-constantes]:
 	https://images.unsplash.com/photo-1495578942200-c5f5d2137def?fit=crop&h=720
-[illustration-les-operateurs]:
-	https://images.unsplash.com/photo-1587145820266-a5951ee6f620?fit=crop&h=720
 [illustration-les-structures-de-controle-conditionnelles]:
 	https://images.unsplash.com/photo-1590593162201-f67611a18b87?fit=crop&h=720
 [illustration-a-vous-de-jouer]:

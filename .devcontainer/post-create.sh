@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
 
-
 ## Configure Bash aliases
 tee -a ~/.bash_aliases > /dev/null <<"EOF"
 alias tree='tree --dirsfirst -A -F'
@@ -21,15 +20,5 @@ sudo apt install --yes ghostscript
 # Install network utilities (dig, nslookup, ping, ncat)
 sudo apt install --yes dnsutils iputils-ping ncat
 
-# Install packages to interact with SQLite databases
-sudo apt install --yes sqlite3
-
-## Configure Apache server
-# Remove the default document root
-sudo rm -rf /var/www/html
-
-# Create symbolic link to the document root
-sudo ln -s /workspace /var/www/html
-
-# Allow directory listing
-sudo sed -i 's/Options -Indexes/Options +Indexes/' /etc/apache2/conf-available/docker-php.conf
+# Install PHP and related packages
+sudo apt install --yes php-common php-cli sqlite3 php-sqlite3

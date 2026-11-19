@@ -25,15 +25,13 @@ shopt -s globstar nullglob
 
 echo "Removing all previous generated presentations..."
 rm -f **/*-presentation.pdf
-rm -f **/*-quiz.pdf
 rm -f **/presentation.html
-rm -f **/quiz.html
 
 # Convert presentations
 MARP_ARGS=(
     --config-file .marp/config.yaml
     --parallel $(nproc)
-    **/PRESENTATION.md **/QUIZ.md
+    **/PRESENTATION.md
 )
 
 echo "Converting presentations to HTML..."
@@ -44,7 +42,7 @@ echo "Converting presentations to PDF..."
 
 # Rename files
 echo "Renaming HTML files'..."
-for file in **/{PRESENTATION,QUIZ}.html; do
+for file in **/PRESENTATION.html; do
     path="$(dirname "$file")"
     filename="$(basename "$file")"
 
@@ -52,7 +50,7 @@ for file in **/{PRESENTATION,QUIZ}.html; do
 done
 
 echo "Renaming PDF files'..."
-for file in **/{PRESENTATION,QUIZ}.pdf; do
+for file in **/PRESENTATION.pdf; do
     path="$(dirname "$file")"
     directory="$(basename "$path")"
     filename="$(basename "$file")"

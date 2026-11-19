@@ -14,9 +14,11 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 >   [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/presentation.html)
 >   ·
 >   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/03-fonctions-presentation.pdf).
-> - Exemples de code : [Code source](./01-exemples-de-code/README.md).
-> - Exercices : [Énoncés et solutions](./02-exercices/README.md).
-> - Mini-projet : [Consignes](./03-mini-projet/README.md).
+> - Activités en classe :
+>   [Impressions](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/03-fonctions-impressions.pdf).
+> - Exemples de code : [Code source](./02-exemples-de-code/README.md).
+> - Exercices : [Énoncés et solutions](./03-exercices/README.md).
+> - Mini-projet : [Consignes](./01-mini-projet/README.md).
 >
 > **Objectifs**
 >
@@ -1115,7 +1117,7 @@ Nous vous invitons maintenant à consulter les exemples de code de la séance af
 de mieux comprendre les concepts abordés.
 
 Vous trouverez les exemples de code ici :
-[Exemples de code](./01-exemples-de-code/README.md).
+[Exemples de code](./02-exemples-de-code/README.md).
 
 ## Exercices
 
@@ -1123,7 +1125,7 @@ Nous vous invitons maintenant à réaliser les exercices de la séance afin de
 mettre en pratique les concepts abordés.
 
 Vous trouverez les exercices et leur corrigé ici :
-[Exercices](./02-exercices/README.md).
+[Exercices](./03-exercices/README.md).
 
 ## Mini-projet
 
@@ -1131,7 +1133,7 @@ Nous vous invitons maintenant à réaliser le mini-projet de la séance afin de
 mettre en pratique les concepts abordés.
 
 Vous trouverez les détails du mini-projet ici :
-[Mini-projet](./03-mini-projet/README.md).
+[Mini-projet](./01-mini-projet/README.md).
 
 ## Questions d'évaluation
 
