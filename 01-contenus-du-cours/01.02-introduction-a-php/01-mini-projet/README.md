@@ -168,7 +168,7 @@ configurés sur votre ordinateur :
 - Un IDE tel que
   [Visual Studio Code](https://heig-vd-upinfo-course.github.io/heig-vd-upinfo-course/05-configurer-son-systeme-dexploitation-et-ses-applications/17-visual-studio-code/).
 - [Secure Shell (SSH)](https://heig-vd-upinfo-course.github.io/heig-vd-upinfo-course/05-configurer-son-systeme-dexploitation-et-ses-applications/18-secure-shell-ssh/)
-  installé et configuré.
+  installé et configuré pour s'authentifier auprès de GitHub.
 - [Git et GitHub](https://heig-vd-upinfo-course.github.io/heig-vd-upinfo-course/05-configurer-son-systeme-dexploitation-et-ses-applications/19-git-et-github/)
   pour la gestion de version et le dépôt de code.
 - [Docker](https://heig-vd-upinfo-course.github.io/heig-vd-upinfo-course/05-configurer-son-systeme-dexploitation-et-ses-applications/20-docker/)
@@ -179,6 +179,8 @@ configurés sur votre ordinateur :
 - [x] Visual Studio Code est installé et fonctionne correctement.
 - [x] SSH est installé et fonctionne correctement.
 - [x] Git est installé et fonctionnent correctement.
+- [x] Le compte GitHub est correctement configuré avec votre adresse e-mail
+      HEIG-VD.
 - [x] Docker et Docker Compose sont installés et fonctionnent correctement.
 
 ## Créer votre dépôt GitHub pour le mini-projet et les exercices
@@ -442,13 +444,19 @@ Pour cela, vous pouvez décommenter les lignes correspondantes dans le fichier
 `.vscode/settings.json` de Visual Studio Code :
 
 ```json
+...
+
 	// (Un)comment to disable inline suggestions, which can be distracting for learning purposes
 	// "editor.inlineSuggest.enabled": false,
+
+...
 
 	// (Un)comment to disable GitHub Copilot, which can be distracting for learning purposes
 	// "github.copilot.enable": {
 	// 	"*": false
 	// },
+
+...
 ```
 
 Vous avez maintenant un environnement de développement local prêt à l'emploi
@@ -815,7 +823,6 @@ const APP_AUTHOR = "Ludovic";
             </ul>
             <ul>
                 <li><a href="./index.php">Accueil</a></li>
-                <li><a href="./create.php">Nouvelle tâche</a></li>
             </ul>
         </nav>
     </header>
@@ -954,7 +961,6 @@ const APP_AUTHOR = "Ludovic";
             </ul>
             <ul>
                 <li><a href="./index.php">Accueil</a></li>
-                <li><a href="./create.php">Nouvelle tâche</a></li>
             </ul>
         </nav>
         <nav aria-label="breadcrumb">
@@ -1031,7 +1037,7 @@ propre logo à l'aide d'un outil de création graphique.
 
 Nous vous proposons d'utiliser le logo suivant pour votre application de gestion
 de tâches :
-<https://unsplash.com/illustrations/a-cartoon-orange-cat-with-a-long-tail-Mgi4xVhDZAQ>.
+<https://unsplash.com/illustrations/three-highlighters-with-orange-blue-and-yellow-ink-Ov8B9ol4h7k>.
 
 Ce logo peut être utilisé librement dans votre projet. La personne qui a créé ce
 logo est
@@ -1052,11 +1058,6 @@ manière à ce que la structure de votre projet ressemble à ceci :
 ├── demo.php
 └── exception.php
 ```
-
-En suivant les mêmes étapes que précédemment, sauvegardez tous les fichiers et
-effectuez un commit Git pour enregistrer cette étape de développement dans
-l'historique Git de votre projet avec le message de commit "Ajout du logo à la
-structure de fichier" et poussez ce commit sur le dépôt distant.
 
 #### Inclure cette image dans la page d'accueil
 
@@ -1093,7 +1094,25 @@ Voici comment inclure le logo dans la page d'accueil (dans le fichier
 > l'adresse suivante : <https://git-scm.com/docs/git-diff>.
 
 ```diff
-TODO
+diff --git a/mini-projet/public/index.php b/mini-projet/public/index.php
+index a1f5b4c..bd64f6f 100644
+--- a/mini-projet/public/index.php
++++ b/mini-projet/public/index.php
+@@ -29,6 +29,12 @@ const APP_AUTHOR = "Ludovic";
+         </nav>
+     </header>
+     <main>
++        <center>
++            <div class="logo">
++                <img src="./images/logo.svg" alt="logo">
++            </div>
++        </center>
++
+         <h1><?= APP_NAME; ?> <?= APP_AUTHOR; ?></h1>
+
+         <p>Cette application web permet de gérer une liste d
+e tâches pour <?= APP_AUTHOR; ?>. Vous pouvez créer, visualis
+er, modifier et supprimer des tâches.</p>
 ```
 
 Sauvegardez le fichier et accédez à l'adresse
@@ -1149,15 +1168,8 @@ application :
 └── exception.php
 ```
 
-Ensuite, ajoutez un lien vers ce fichier CSS personnalisé dans la section
-`<head>` de votre fichier `index.php` :
-
-```diff
-TODO
-```
-
-Enfin, ajoutez les styles CSS suivants dans le fichier `css/styles.css` pour
-ajuster l'apparence du logo dans la page d'accueil :
+Ajoutez les styles CSS suivants dans le fichier `css/styles.css` pour ajuster
+l'apparence du logo dans la page d'accueil :
 
 ```css
 /* Classe personnalisée pour le logo */
@@ -1173,6 +1185,29 @@ ajuster l'apparence du logo dans la page d'accueil :
 La classe `logo` est déjà utilisée dans la balise `<div>` qui enveloppe l'image
 du logo dans le fichier `index.php`, ce qui permet d'appliquer ces styles CSS
 personnalisés à l'image du logo.
+
+Ensuite, ajoutez un lien vers ce fichier CSS personnalisé dans la section
+`<head>` de votre fichier `index.php` :
+
+```diff
+diff --git a/mini-projet/public/index.php b/mini-projet/public/index.php
+index bd64f6f..9987494 100644
+--- a/mini-projet/public/index.php
++++ b/mini-projet/public/index.php
+@@ -11,6 +11,7 @@ const APP_AUTHOR = "Ludovic";
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="color-scheme" content="light dark">
+     <link rel="stylesheet" href="https://unpkg.com/@digicreon/mucss/dist/mu.css">
++    <link rel="stylesheet" href="./css/styles.css">
+
+     <title>Page d'accueil | <?= APP_NAME; ?> <?= APP_AUTHOR;
+ ?></title>
+     <meta name="description" content="La liste de tâches de
+<?= APP_AUTHOR; ?>.">
+```
+
+Répétez cette étape pour le fichier `mini-projet/public/view.php` pour avoir un
+style CSS cohérent dans toutes les pages de votre application.
 
 Sauvegardez tous les fichiers rafraîchissez la page d'accueil dans votre
 navigateur.
@@ -1411,16 +1446,17 @@ similaire à celui-ci :
 
 ```text
 [main d3c39b8] Ajout des fichiers de base pour le cours de Programmation serveur 1 (ProgServ1)
- 4 files changed, 34 insertions(+)
- create mode 100644 exception.php
- create mode 100644 exercices/index.php
- create mode 100644 index.php
- create mode 100644 phpinfo.php
+ Date: Thu Nov 19 10:22:21 2026 +0000
+ 4 files changed, 491 insertions(+)
+ create mode 100644 mini-projet/public/css/styles.css
+ create mode 100644 mini-projet/public/images/logo.svg
+ create mode 100644 mini-projet/public/index.php
+ create mode 100644 mini-projet/public/view.php
 ```
 
 Cela signifie que le commit a été créé avec succès, et les fichiers que nous
 avons ajoutés au suivi avec Git sont maintenant enregistrés dans l'historique de
-Git.
+Git dans notre dépôt Git local.
 
 ### Pousser les changements vers GitHub
 
