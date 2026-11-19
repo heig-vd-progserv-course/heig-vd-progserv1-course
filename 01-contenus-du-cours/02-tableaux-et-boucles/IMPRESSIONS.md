@@ -114,7 +114,7 @@ Comment avez-vous identifié les éléments répétitifs dans le code HTML du
 mini-projet ? (ex. : tâches, boutons, liens, etc.)
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{4cm}
 ```
 
 ### Question 2
@@ -123,7 +123,7 @@ Comment avez-vous structuré l'information pour représenter les tâches dans le
 mini-projet ? (ex. : tableau, liste, etc.)
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{4cm}
 ```
 
 ### Question 3
@@ -133,7 +133,11 @@ Quelle est la différence entre un tableau indexé et un tableau associatif en P
 les tâches et pourquoi ?
 
 ```{=latex}
-\answerbox{0.5cm}
+\answerbox{4cm}
+```
+
+```{=latex}
+\newpage
 ```
 
 ### Question 4
@@ -142,30 +146,17 @@ Dans un tableau associatif, comment accédez-vous à une valeur spécifique en
 utilisant sa clé ? Donnez un exemple concret en rapport avec le mini-projet.
 
 ```{=latex}
-\answerbox{3cm}
-```
-
-```{=latex}
-\newpage
+\answerbox{4cm}
 ```
 
 ### Question 5
 
-Comment exprimer des attributs ou des propriétés factulatifs d'une tâche dans un
+Comment exprimer des attributs ou des propriétés facultatifs d'une tâche dans un
 tableau associatif en PHP ? Donnez un exemple concret en rapport avec le
 mini-projet.
 
 ```{=latex}
-\answerbox{3cm}
-```
-
-### Question 6
-
-Donnez l'explication complète de ce qu'il se passe lorsque vous accédez à une
-page PHP dans votre navigateur web.
-
-```{=latex}
-\answerbox{3cm}
+\answerbox{4cm}
 ```
 
 ### Liste de contrôle
@@ -189,5 +180,5 @@ Difficultés rencontrées et les solutions trouvées, apprentissages personnels,
 ressenti personnel, questions restantes, commentaires sur la séance, etc.
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{4cm}
 ```
