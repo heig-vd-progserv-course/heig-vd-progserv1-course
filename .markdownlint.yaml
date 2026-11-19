@@ -1,0 +1,6 @@
+no-duplicate-heading:
+  siblings_only: true
+no-emphasis-as-heading: false
+no-hard-tabs: false
+no-inline-html: false
+no-trailing-punctuation: false

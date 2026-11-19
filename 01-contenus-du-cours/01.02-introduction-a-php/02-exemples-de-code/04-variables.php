@@ -5,6 +5,9 @@ $variable = "Hello, World!";
 // Affichage de la variable
 echo $variable;
 
+// Affiche une nouvelle ligne dans le navigateur
+echo "<br>";
+
 // Modification de la variable
 $variable = "Goodbye, World!";
 

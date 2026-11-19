@@ -13,50 +13,60 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Table des matières
 
 - [Table des matières](#table-des-matières)
-- [Introduction à votre première séance de mini-projet](#introduction-à-votre-première-séance-de-mini-projet)
-- [Présentation du mini-projet](#présentation-du-mini-projet)
 - [Objectifs de la séance](#objectifs-de-la-séance)
+- [Introduction à votre première séance de mini-projet](#introduction-à-votre-première-séance-de-mini-projet)
 - [Installer et configurer l'environnement de développement local](#installer-et-configurer-lenvironnement-de-développement-local)
   - [Prérequis](#prérequis)
-  - [Installer un éditeur de code](#installer-un-éditeur-de-code)
-  - [Configurer l'éditeur de code](#configurer-léditeur-de-code)
-  - [Configurer SSH pour passer les clés SSH à un conteneur de développement](#configurer-ssh-pour-passer-les-clés-ssh-à-un-conteneur-de-développement)
   - [Valider l'installation et la configuration de l'environnement de développement local](#valider-linstallation-et-la-configuration-de-lenvironnement-de-développement-local)
+- [Créer votre dépôt GitHub pour le mini-projet et les exercices](#créer-votre-dépôt-github-pour-le-mini-projet-et-les-exercices)
+  - [Accepter l'invitation à rejoindre l'organisation Classroom dédié au cours](#accepter-linvitation-à-rejoindre-lorganisation-classroom-dédié-au-cours)
+  - [Accéder à Classroom 50](#accéder-à-classroom-50)
+  - [Créer le dépôt GitHub pour le mini-projet et les exercices](#créer-le-dépôt-github-pour-le-mini-projet-et-les-exercices)
+- [Cloner votre dépôt GitHub localement](#cloner-votre-dépôt-github-localement)
 - [Ouvrir le projet localement](#ouvrir-le-projet-localement)
-  - [Accéder à votre dépôt GitHub sur GitHub Classroom](#accéder-à-votre-dépôt-github-sur-github-classroom)
-  - [Cloner votre dépôt GitHub localement](#cloner-votre-dépôt-github-localement)
   - [Ouvrir votre dépôt GitHub dans Visual Studio Code](#ouvrir-votre-dépôt-github-dans-visual-studio-code)
   - [Ouvrir le projet dans un conteneur de développement](#ouvrir-le-projet-dans-un-conteneur-de-développement)
   - [Découvrir la structure du projet](#découvrir-la-structure-du-projet)
+  - [Désactiver GitHub Copilot dans Visual Studio Code](#désactiver-github-copilot-dans-visual-studio-code)
 - [Démarrer le projet](#démarrer-le-projet)
   - [Ouvrir un terminal intégré](#ouvrir-un-terminal-intégré)
   - [Valider l'installation de PHP](#valider-linstallation-de-php)
-  - [Démarrer le serveur de développement PHP](#démarrer-le-serveur-de-développement-php)
+  - [Démarrer le serveur serveur web Apache](#démarrer-le-serveur-serveur-web-apache)
   - [Créer la structure de base du projet](#créer-la-structure-de-base-du-projet)
   - [Créer et tester les fichiers de base du projet](#créer-et-tester-les-fichiers-de-base-du-projet)
-  - [Arrêter le serveur de développement PHP](#arrêter-le-serveur-de-développement-php)
+  - [Ajouter un logo à la page d'accueil](#ajouter-un-logo-à-la-page-daccueil)
+  - [Ajouter des styles CSS personnalisés](#ajouter-des-styles-css-personnalisés)
+  - [Tester la page d'accueil](#tester-la-page-daccueil)
+  - [Arrêter le serveur web Apache](#arrêter-le-serveur-web-apache)
 - [Ajouter les fichiers au contrôle de version avec Git](#ajouter-les-fichiers-au-contrôle-de-version-avec-git)
   - [Visualiser les changements avec Git](#visualiser-les-changements-avec-git)
   - [Ajouter les fichiers au suivi avec Git](#ajouter-les-fichiers-au-suivi-avec-git)
   - [Commiter les changements avec Git](#commiter-les-changements-avec-git)
   - [Pousser les changements vers GitHub](#pousser-les-changements-vers-github)
-- [Cloner le dépôt GitHub du cours](#cloner-le-dépôt-github-du-cours)
-- [Cloner le dépôt GitHub de la solution au mini-projet](#cloner-le-dépôt-github-de-la-solution-au-mini-projet)
 - [Conclusion](#conclusion)
 - [Solution](#solution)
+
+## Objectifs de la séance
+
+À l'issue de cette séance, les personnes qui étudient devraient avoir pu :
+
+- Installer et configurer un environnement de développement local pour PHP.
+- Initialiser un projet PHP pour le mini-projet.
+- Installer et configurer un environnement de production en ligne pour PHP.
+- Déployer le mini-projet en ligne.
+- Initialiser un dépôt GitHub pour les exercices.
 
 ## Introduction à votre première séance de mini-projet
 
 Bienvenue dans la première séance du mini-projet qui va vous accompagner durant
-toute la durée du cours _"Programmation serveur 1 (ProgServ1)"_ !
+toute la durée du cours "Programmation serveur 1 (ProgServ1)" !
 
 Cette séance de mini-projet est conçue pour vous permettre de mettre en pratique
-les concepts théoriques vus dans le cours
-_["Introduction à PHP"](../README.md)_. N'hésitez pas à vous y référer si vous
-avez besoin de rafraîchir votre mémoire.
+les concepts théoriques vus dans le cours [Introduction à PHP](../README.md).
+N'hésitez pas à vous y référer si vous avez besoin de rafraîchir votre mémoire.
 
 En lisant les contenus préparés pour les séances de mini-projet, vous trouverez
-peut-être ce que l'on appelle des _"avertissements"_ ou des _"alertes"_.
+peut-être ce que l'on appelle des "avertissements" ou des "alertes".
 
 Elles se présentent comme suit :
 
@@ -67,7 +77,7 @@ Elles se présentent comme suit :
 Elles sont là pour mettre en évidence des informations importantes dont vous
 devez tenir compte.
 
-Voici les différents types de remontrances que vous pourriez trouver et leur
+Voici les différents types d'alertes que vous pourriez trouver et leur
 signification :
 
 > [!NOTE]
@@ -121,56 +131,6 @@ C'est parti !
 > Le [support de cours](../README.md) est disponible pour vous aider à
 > comprendre les concepts théoriques abordés dans ce mini-projet si besoin !
 
-## Présentation du mini-projet
-
-Le mini-projet est une application web qui permettra aux utilisateurs d'ajouter,
-consulter, modifier et supprimer des animaux de compagnie.
-
-Chaque animal de compagnie aura les attributs suivants :
-
-- Un identifiant unique (généré automatiquement par la base de données).
-- Nom (un champ texte).
-- Espèce (un champ de sélection contenant, par exemple : chien, chat, lézard,
-  serpent, oiseau, lapin, autre).
-- Surnom (un champ texte facultatif).
-- Sexe (un champ boutons radio).
-- Année de naissance (un champ date au format `YYYY-MM-DD` (par exemple :
-  `2020-12-31` pour le 31 décembre 2020)).
-- Couleur (un champ de saisie de couleur facultatif).
-- Personnalité (un champ cases à cocher facultatif).
-- Taille en cm (un champ numérique facultatif).
-- Notes (un champ de texte libre facultatif).
-
-L'application web comportera les pages suivantes :
-
-- **Page d'accueil** : une page d'accueil avec une brève introduction à
-  l'application et la liste des animaux de compagnie. Chaque animal doit être
-  cliquable pour afficher plus de détails.
-- **Visualisation d'un animal** : une page affichant les informations détaillées
-  sur un animal spécifique, y compris tous ses attributs. L'utilisateur doit
-  pouvoir modifier ou supprimer l'animal depuis cette page.
-- **Création d'un animal** : une page permettant à l'utilisateur de créer un
-  nouvel animal en remplissant un formulaire avec tous les attributs.
-- **Modification d'un animal** : une page permettant à l'utilisateur de mettre à
-  jour un animal existant en modifiant ses attributs dans un formulaire.
-- **Suppression d'un animal** : une page permettant à l'utilisateur de supprimer
-  un animal de la base de données.
-
-Nous construirons cette application web ensemble durant la durée du cours en
-plusieurs étapes. Dans cette séance, nous allons mettre en place l'environnement
-de développement local, l'environnement de production en ligne et initialiser le
-projet PHP pour le mini-projet.
-
-## Objectifs de la séance
-
-À l'issue de cette séance, les personnes qui étudient devraient avoir pu :
-
-- Installer et configurer un environnement de développement local pour PHP.
-- Initialiser un projet PHP pour le mini-projet.
-- Installer et configurer un environnement de production en ligne pour PHP.
-- Déployer le mini-projet en ligne.
-- Initialiser un dépôt GitHub pour les exercices.
-
 ## Installer et configurer l'environnement de développement local
 
 Un environnement de développement local est un ensemble d'outils et de logiciels
@@ -187,668 +147,99 @@ développement local pour développer des applications web en PHP.
 Avant de commencer, assurez-vous d'avoir les éléments suivants installés et
 configurés sur votre ordinateur :
 
-- Un ordinateur avec un système d'exploitation compatible avec les outils que
-  nous allons utiliser (Windows, macOS ou Linux).
-- Un environnement Windows Subsystem for Linux (WSL) pour les utilisateur.trices
-  de Windows.
-- Git installé et configuré sur votre ordinateur (dans l'environnement WSL pour
-  les utilisateur.trices de Windows).
-- L'application Windows Terminal installée pour les utilisateur.trices de
-  Windows configurée pour ouvrir WSL automatiquement.
-- Docker et Docker Compose installés sur votre ordinateur (accessibles dans
-  l'environnement WSL pour les utilisateur.trices de Windows).
-- Un éditeur de code de votre choix (Visual Studio Code est recommandé, mais
-  vous pouvez utiliser un autre éditeur si vous préférez).
-- Une connexion Internet pour télécharger les outils nécessaires et accéder aux
-  ressources en ligne.
-
-Dans votre terminal, assurez-vous d'avoir accès aux différents outils
-nécessaires en exécutant les commandes suivantes :
-
-```bash
-# Vérifier que Git est installé
-git --version
-```
-
-Le résultat devrait être similaire à ceci, indiquant que l'outil est installé et
-prêt à être utilisé :
-
-```text
-git version 2.52.0
-```
-
-```bash
-# Vérifier que Docker est installé
-docker --version
-```
-
-Le résultat devrait être similaire à ceci, indiquant que l'outil est installé et
-prêt à être utilisé :
-
-```text
-Docker version 29.1.3, build f52814d
-```
-
-```bash
-# Vérifier que Docker Compose est installé
-docker compose version
-```
-
-Le résultat devrait être similaire à ceci, indiquant que l'outil est installé et
-prêt à être utilisé :
-
-```text
-Docker Compose version v2.40.3
-```
-
-Si vous obtenez les mêmes résultats que ceux présentés ci-dessus, vous êtes
-prêt.e à suivre les étapes de cette séance de mini-projet !
-
-Sinon, utilisez les ressources suivantes pour installer les outils nécessaires :
-
-- Le cours
-  [Outils de développement](https://www.notion.so/wengerk/Outils-de-d-veloppement-22fe9dd7f406801b9347f8fb470b6e8e)
-  que vous avez suivi en première année.
-- [Set up a Windows development environment](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/00.01-set-up-a-windows-development-environment/01-course-material/README.md),
-  un contenu de cours pour configurer un environnement de développement sur
-  Windows pour un cours enseigné dans le département TIC de la HEIG-VD.
-- [Git, GitHub and Markdown](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01.03-git-github-and-markdown/01-course-material/README.md),
-  un contenu de cours pour comprendre les bases de Git, GitHub et Markdown pour
-  un cours enseigné dans le département TIC de la HEIG-VD.
-- [Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04.01-docker-and-docker-compose/01-course-material/README.md),
-  un contenu de cours pour comprendre les bases de Docker et Docker Compose pour
-  un cours enseigné dans le département TIC de la HEIG-VD.
-
-### Installer un éditeur de code
-
-Un éditeur de code est un logiciel qui vous permet d'écrire, de modifier et de
-gérer du code source pour des applications logicielles. Il existe de nombreux
-éditeurs de code disponibles, chacun avec ses propres fonctionnalités et
-avantages.
-
-Nous vous recommandons d'utiliser Visual Studio Code, un éditeur de code gratuit
-et open-source développé par Microsoft[^visual-studio-code], mais vous pouvez
-utiliser n'importe quel éditeur de code avec lequel vous êtes à l'aise pour le
-reste de ce cours.
-
-#### Installation sur Windows
-
-Pour installer Visual Studio Code sur Windows, suivez les étapes suivantes :
-
-1. Rendez-vous sur le site web de Visual Studio Code à l'adresse suivante :
-   <https://code.visualstudio.com/>.
-
-   <details>
-   <summary>Afficher la capture d'écran illustrant l'étape</summary>
-
-   ![Site web de Visual Studio Code](./images/visual-studio-code-website-windows.png)
-
-   </details>
-
-2. Téléchargez la dernière version de Visual Studio Code pour Windows.
-3. Exécutez le programme d'installation que vous venez de télécharger pour
-   installer Visual Studio Code :
-   1. Le programme d'installation de Visual Studio Code devrait s'ouvrir.
-      Acceptez les termes du contrat de licence et cliquez sur le bouton
-      **Next**.
-
-      <details>
-      <summary>Afficher la capture d'écran illustrant l'étape</summary>
-
-      ![Programmation d'installation de Visual Studio Code sur Windows - 01](./images/visual-studio-code-windows-01.png)
-
-      </details>
-
-   2. Laissez les paramètres par défaut pour installer Visual Studio Code sur
-      votre ordinateur et cliquez sur le bouton **Next**.
-
-      <details>
-      <summary>Afficher la capture d'écran illustrant l'étape</summary>
-
-      ![Programmation d'installation de Visual Studio Code sur Windows - 02](./images/visual-studio-code-windows-02.png)
-
-      </details>
-
-   3. Laissez les paramètres par défaut pour créer un dossier
-      `Visual Studio Code` dans le menu de démarrage et cliquez sur le bouton
-      **Next**.
-
-      <details>
-      <summary>Afficher la capture d'écran illustrant l'étape</summary>
-
-      ![Programmation d'installation de Visual Studio Code sur Windows - 03](./images/visual-studio-code-windows-03.png)
-
-      </details>
-
-   4. Choisissez si vous souhaitez avoir un raccourci sur le bureau et
-      sélectionnez les options supplémentaires pour ajouter Visual Studio Code
-      au menu contextuel de l'Explorateur Windows. Cela vous permettra de faire
-      un clic droit sur n'importe quel dossier et d'ouvrir Visual Studio Code
-      directement dans ce dossier. Cliquez ensuite sur le bouton **Next**.
-
-   <details>
-   <summary>Afficher la capture d'écran illustrant l'étape</summary>
-
-   ![Programmation d'installation de Visual Studio Code sur Windows - 04](./images/visual-studio-code-windows-04.png)
-
-      </details>
-   5. Une fois que vous avez vérifié les paramètres d'installation, cliquez sur
-      le bouton **Install** pour commencer l'installation.
-
-      <details>
-      <summary>Afficher la capture d'écran illustrant l'étape</summary>
-
-   ![Programmation d'installation de Visual Studio Code sur Windows - 05](./images/visual-studio-code-windows-05.png)
-
-      </details>
-
-4. Une fois l'installation terminée, lancez Visual Studio Code.
-
-Vous pouvez maintenant passer à la section
-[_Configurer l'éditeur de code_](#configurer-léditeur-de-code).
-
-#### Installation sur macOS
-
-Pour installer Visual Studio Code sur macOS, suivez les étapes suivantes :
-
-> [!WARNING]
->
-> Sélectionnez la bonne version de Visual Studio Code pour macOS en fonction de
-> l'architecture de votre processeur (Intel ou Apple Silicon). Les personnes
-> avec des appareils Apple M1, M2, M3 ou M4 doivent télécharger la version ARM
-> de Visual Studio Code.
-
-1. Rendez-vous sur le site web de Visual Studio Code à l'adresse suivante :
-   <https://code.visualstudio.com/>.
-
-   <details>
-   <summary>Afficher la capture d'écran illustrant l'étape</summary>
-
-   ![Site web de Visual Studio Code](./images/visual-studio-code-website-macos.png)
-
-   </details>
-
-2. Téléchargez la dernière version de Visual Studio Code pour macOS.
-3. Ouvrez le fichier `.dmg` que vous venez de télécharger.
-4. Faites glisser l'icône de Visual Studio Code dans le dossier `Applications`.
-5. Ouvrez le dossier `Applications` et double-cliquez sur l'icône de Visual
-   Studio Code pour le lancer.
-
-Vous pouvez maintenant passer à la section
-[_Configurer l'éditeur de code_](#configurer-léditeur-de-code).
-
-#### Installation sur Linux
-
-_Si vous utilisez Linux, veuillez nous consulter si vous avez besoin d'aide pour
-installer un éditeur de code sur votre ordinateur._
-
-### Configurer l'éditeur de code
-
-Une fois que vous avez installé Visual Studio Code, vous devez le configurer
-pour qu'il fonctionne correctement avec PHP.
-
-#### Configurer les raccourcis clavier pour Visual Studio Code
-
-Pas défaut, Visual Studio Code ne sauvegarde que le fichier courant lorsque vous
-appuyez sur <kbd>Ctrl</kbd> + <kbd>S</kbd> (Windows/Linux) ou <kbd>Cmd</kbd> +
-<kbd>S</kbd> (macOS). Pour sauvegarder tous les fichiers ouverts dans Visual
-Studio Code, vous devez configurer les raccourcis clavier pour qu'ils
-sauvegardent tous les fichiers.
-
-Pour ce faire, suivez les étapes suivantes :
-
-> [!IMPORTANT]
->
-> Nous vous recommandons **vivement** de configurer les raccourcis clavier pour
-> sauvegarder tous les fichiers ouverts dans Visual Studio Code.
->
-> Cela vous permettra de ne pas oublier de sauvegarder un fichier avant de
-> tester votre code dans le navigateur, ce qui peut entraîner des erreurs
-> difficiles à comprendre si vous oubliez de le faire.
-
-1. Cliquez sur le menu **File > Preferences > Keyboard Shortcuts**.
-2. Recherchez `File: Save All Files` dans la barre de recherche.
-3. Assignez les touches de raccourci de votre choix pour sauvegarder tous les
-   fichiers ouverts dans Visual Studio Code. Nous vous recommandons d'utiliser
-   utiliser <kbd>Ctrl</kbd> + <kbd>S</kbd> (Windows/Linux) ou <kbd>Cmd</kbd> +
-   <kbd>S</kbd> (macOS) à des fins de facilité.
-
-   <details>
-   <summary>Afficher la capture d'écran illustrant l'étape</summary>
-
-   ![Configuration des raccourcis clavier dans Visual Studio Code](./images/visual-studio-code-configuration-01.png)
-
-   </details>
-
-#### Désactiver GitHub Copilot dans Visual Studio Code
-
-Si vous avez accès à GitHub Copilot, nous vous recommandons de le désactiver
-dans Visual Studio Code pour éviter d'avoir des suggestions de code qui
-pourraient interférer avec votre apprentissage et votre compréhension du code
-que vous écrivez.
-
-Pour cela, suivez la documentation officielle de GitHub Copilot pour désactiver
-les suggestions de code dans Visual Studio Code :
-<https://docs.github.com/en/copilot/how-tos/configure-personal-settings/configure-in-ide?tool=vscode#enabling-or-disabling-github-copilot-inline-suggestions>.
-
-### Configurer SSH pour passer les clés SSH à un conteneur de développement
-
-Afin que l'environnement de développement local puisse interagir avec GitHub
-dans le conteneur de développement, il est nécessaire de configurer l'agent SSH
-sur votre ordinateur hôte pour que les clés SSH soient passées au conteneur de
-développement.
-
-L'agent SSH est un programme qui gère les clés SSH et permet de les utiliser
-pour s'authentifier auprès de services comme GitHub sans avoir à entrer votre
-mot de passe de votre clé SSH(la passphrase) à chaque fois. Il conserve
-également vos clés SSH en mémoire et peut les fournir aux applications qui en
-ont besoin, comme Git ou le conteneur de développement, pour s'authentifier
-auprès de GitHub.
-
-Cela signifie que votre clé SSH doit être chargée dans l'agent SSH de votre
-ordinateur pour que le conteneur puisse ensuite l'utiliser.
-
-La validation de la configuration dépend de votre système d'exploitation :
-
-- [Windows](#windows).
-- [macOS](#macos).
-- [Linux](#linux).
-
-Les sources utilisées pour cette section sont les suivantes :
-
-- <https://code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials>.
-- <https://stackoverflow.com/questions/70206554/share-ssh-keys-with-vs-code-devcontainer-running-with-dockers-wsl2-backend>.
-
-#### Windows
-
-Actuellement, il existe une contrainte avec l'utilisation de l'agent SSH de
-Windows dans un conteneur de développement : afin que l'environnement de
-développement puisse utiliser votre clé SSH, celle-ci doit être présente dans
-l'agent SSH de Windows (et pas seulement dans l'agent SSH de WSL).
-
-Il est donc nécessaire de configurer l'agent SSH sur Windows et de charger votre
-clé SSH dans l'agent SSH de Windows pour que le conteneur de développement
-puisse utiliser votre clé SSH et vous permettre d'interagir avec GitHub depuis
-le conteneur de développement.
-
-Les étapes suivantes vous guideront pour configurer l'agent SSH de Windows et
-charger votre clé SSH dans l'agent SSH de Windows.
-
-##### Valider que l'agent SSH est démarré
-
-Ouvrez un terminal PowerShell en mode administrateur et exécutez la commande
-suivante pour vérifier si l'agent a connaissance des clés SSH disponibles :
-
-> [!WARNING]
->
-> Assurez-vous d'ouvrir un terminal **PowerShell** en **mode administrateur**
-> pour exécuter les commandes suivantes.
-
-```powershell
-ssh-add.exe -l
-```
-
-Trois scénarios sont possibles :
-
-1. `Error connecting to agent: No such file or directory.` : cela signifie que
-   l'agent SSH n'est pas en cours d'exécution. Vous devez démarrer l'agent SSH
-   en utilisant les commandes suivantes :
-
-   ```powershell
-   Get-Service ssh-agent | Set-Service -StartupType Automatic
-
-   Start-Service ssh-agent
-   ```
-
-   Puis retestez la commande SSH précédente en début de la section
-   [Valider que l'agent SSH est démarré](#valider-que-lagent-ssh-est-démarré).
-   Si une erreur continue à s'afficher, faites appel à l'équipe pédagogique pour
-   résoudre le problème.
-
-2. `The agent has no identities.` : cela signifie que l'agent SSH est en cours
-   d'exécution, mais qu'aucune clé SSH n'est chargée dans l'agent.
-
-   Fermez le terminal PowerShell. Vous pouvez ensuite passer à la section
-   [Copier les clés SSH de WSL vers Windows](#copier-les-clés-ssh-de-wsl-vers-windows).
-
-3. Un résultat similaire à celui présenté ci-dessous :
-
-   ```text
-   256 SHA256:naCCKCyb1yC41QaCHwlcy2KiHF6uYsphKSczwGbm/u0 ludovic.delafontaine@gmail.com (ED25519)
-   ```
-
-   Cela signifie que l'agent SSH est en cours d'exécution et que la clé SSH est
-   chargée dans l'agent et que tout devrait être en ordre pour la suite du
-   cours.
-
-   Fermez le terminal PowerShell. Vous pouvez maintenant passer à la section
-   [Valider l'installation et la configuration de l'environnement de développement local](#valider-linstallation-et-la-configuration-de-lenvironnement-de-développement-local).
-
-##### Copier les clés SSH de WSL vers Windows
-
-Les clés SSH que vous avez générés au travers du cours _"Outils de
-développement"_ ont été générés dans l'environnement WSL (ce qui est une très
-bonne chose). Il est (malheureusement) nécessaire de les copier (et ainsi les
-dupliquer à deux endroits...) dans l'environnement Windows pour que l'agent SSH
-de Windows puisse les utiliser.
-
 > [!NOTE]
 >
-> Je (Ludovic) ne suis vraiment pas satisfait de cette contrainte, mais
-> malheureusement, c'est la seule solution que j'aie trouvé pour que le
-> conteneur de développement puisse "facilement" utiliser votre clé SSH et vous
-> permettre d'interagir avec GitHub depuis le conteneur de développement.
+> Pour les personnes qui auraient déjà suivi l'unité préparatoire d'informatique
+> (UPInfo) avant la rentrée, vous devriez déjà avoir votre environnement de
+> développement local installé et configuré correctement.
 >
-> Je suis désolé pour ce désagrément et j'espère qu'une meilleure solution sera
-> disponible à l'avenir pour éviter cette duplication de clés SSH entre WSL et
-> Windows.
-
-Pour cela, ouvrez un terminal WSL (Ubuntu) et exécutez la commande suivante pour
-copier les clés SSH de WSL vers Windows :
-
-> [!WARNING]
->
-> Assurez-vous d'ouvrir un terminal **WSL (Ubuntu)** pour exécuter les commandes
-> suivantes.
-
-> [!WARNING]
->
-> Si votre clé SSH porte un autre nom que `id_ed25519`, remplacez `id_ed25519`
-> par le nom de votre fichier de clé SSH dans les commandes suivantes.
-
-```bash
-export WINDOWS_USERNAME=$(powershell.exe '$env:USERNAME' | tr -d '\r')
-
-mkdir "/mnt/c/Users/${WINDOWS_USERNAME}/.ssh/"
-
-cp ~/.ssh/id_ed25519* "/mnt/c/Users/${WINDOWS_USERNAME}/.ssh/"
-```
-
-Votre clé SSH est maintenant copiée dans l'environnement Windows. Si besoin,
-vous pouvez les retrouver dans `C:\Users\<votre-nom>\.ssh\`.
-
-Vous pouvez maintenant passer à la section
-[Ajouter la clé SSH à l'agent SSH de votre ordinateur](#ajouter-la-clé-ssh-à-lagent-ssh-de-votre-ordinateur).
-
-##### Ajouter la clé SSH à l'agent SSH de votre ordinateur
-
-Ouvrez un terminal PowerShell et exécutez la commande suivante pour charger
-votre clé SSH dans l'agent SSH de Windows :
-
-> [!WARNING]
->
-> Assurez-vous d'ouvrir un terminal **PowerShell** pour exécuter la commande
-> suivante.
-
-```powershell
-ssh-add.exe "$env:USERPROFILE\.ssh\id_ed25519"
-```
-
-Remplacez `id_ed25519` par le nom de votre fichier de clé SSH si vous avez
-utilisé un autre nom lors de la création de votre clé SSH.
-
-Puis validez que la clé SSH est bien chargée dans l'agent SSH de Windows en
-suivant les étapes à l'aide de la commande suivante :
-
-```powershell
-ssh-add.exe -l
-```
-
-Le résultat devrait être similaire à ceci, indiquant que l'agent SSH est en
-cours d'exécution et que la clé SSH est chargée dans l'agent :
-
-```text
-256 SHA256:naCCKCyb1yC41QaCHwlcy2KiHF6uYsphKSczwGbm/u0 ludovic.delafontaine@gmail.com (ED25519)
-```
-
-Vous pouvez maintenant passer à la section
-[Valider l'installation et la configuration de l'environnement de développement local](#valider-linstallation-et-la-configuration-de-lenvironnement-de-développement-local).
-
-#### macOS
-
-macOS utilise généralement l'agent SSH de manière native, et les clés SSH sont
-généralement chargées automatiquement dans l'agent SSH lors de leur création.
-
-Il est néanmoins important de vérifier que l'agent SSH est bien démarré pour la
-suite du cours.
-
-Les étapes suivantes vous guideront pour vérifier que l'agent SSH est démarré et
-que votre clé SSH est chargée dans l'agent SSH.
-
-##### Valider que l'agent SSH est démarré
-
-Ouvrez un terminal et exécutez la commande suivante pour vérifier si l'agent a
-connaissance des clés SSH disponibles :
-
-```bash
-ssh-add -l
-```
-
-Trois scénarios sont possibles :
-
-1. `Could not open a connection to your authentication agent.` : cela signifie
-   que l'agent SSH n'est pas en cours d'exécution. Vous devez démarrer l'agent
-   SSH en utilisant la commande suivante :
-
-   ```bash
-   eval "$(ssh-agent -s)"
-   ```
-
-   Puis retestez la commande SSH précédente en début de la section
-   [Valider que l'agent SSH est démarré](#valider-que-lagent-ssh-est-démarré-1).
-   Si une erreur continue à s'afficher, faites appel à l'équipe pédagogique pour
-   résoudre le problème.
-
-2. `The agent has no identities.` : cela signifie que l'agent SSH est en cours
-   d'exécution, mais qu'aucune clé SSH n'est chargée dans l'agent.
-
-   Vous pouvez ensuite passer à la section
-   [Ajouter la clé SSH à l'agent SSH de votre ordinateur](#ajouter-la-clé-ssh-à-lagent-ssh-de-votre-ordinateur-1).
-
-3. Un résultat similaire à celui présenté ci-dessous :
-
-   ```text
-   256 SHA256:naCCKCyb1yC41QaCHwlcy2KiHF6uYsphKSczwGbm/u0 ludovic.delafontaine@gmail.com (ED25519)
-   ```
-
-   Cela signifie que l'agent SSH est en cours d'exécution et que la clé SSH est
-   chargée dans l'agent et que tout devrait être en ordre pour la suite du
-   cours.
-
-   Vous pouvez maintenant passer à la section
-   [Valider l'installation et la configuration de l'environnement de développement local](#valider-linstallation-et-la-configuration-de-lenvironnement-de-développement-local).
-
-##### Ajouter la clé SSH à l'agent SSH de votre ordinateur
-
-Commencez par éditer le fichier de configuration de l'agent SSH de macOS en
-utilisant la commande suivante :
-
-```bash
-nano ~/.ssh/config
-```
-
-Ajoutez ensuite les lignes suivantes à la fin du fichier de configuration pour
-configurer l'agent SSH de macOS pour qu'il puisse utiliser votre clé SSH :
-
-```text
-Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_ed25519
-```
-
-Si nécessaire, remplacez `id_ed25519` par le nom de votre fichier de clé SSH si
-vous avez utilisé un autre nom lors de la création de votre clé SSH.
-
-Ensuite, vous devez charger votre clé SSH dans l'agent en utilisant la commande
-suivante :
-
-```bash
-ssh-add --apple-use-keychain ~/.ssh/id_ed25519
-```
-
-Si nécessaire, remplacez `id_ed25519` par le nom de votre fichier de clé SSH si
-vous avez utilisé un autre nom lors de la création de votre clé SSH.
-
-Puis validez que la clé SSH est bien chargée dans l'agent SSH de macOS en
-suivant les étapes à l'aide de la commande suivante :
-
-```bash
-ssh-add -l
-```
-
-Le résultat devrait être similaire à ceci, indiquant que l'agent SSH est en
-cours d'exécution et que la clé SSH est chargée dans l'agent :
-
-```text
-256 SHA256:naCCKCyb1yC41QaCHwlcy2KiHF6uYsphKSczwGbm/u0 ludovic.delafontaine@gmail.com (ED25519)
-```
-
-Vous pouvez maintenant passer à la section
-[Valider l'installation et la configuration de l'environnement de développement local](#valider-linstallation-et-la-configuration-de-lenvironnement-de-développement-local).
-
-#### Linux
-
-Linux utilise généralement l'agent SSH de manière native, et les clés SSH sont
-généralement chargées automatiquement dans l'agent SSH lors de leur création.
-
-Il est néanmoins important de vérifier que l'agent SSH est bien démarré pour la
-suite du cours.
-
-Les étapes suivantes vous guideront pour vérifier que l'agent SSH est démarré et
-que votre clé SSH est chargée dans l'agent SSH.
-
-##### Valider que l'agent SSH est démarré
-
-Ouvrez un terminal et exécutez la commande suivante pour vérifier si l'agent a
-connaissance des clés SSH disponibles :
-
-```bash
-ssh-add -l
-```
-
-Trois scénarios sont possibles :
-
-1. `Could not open a connection to your authentication agent.` : cela signifie
-   que l'agent SSH n'est pas en cours d'exécution. Vous devez démarrer l'agent
-   SSH en utilisant la commande suivante :
-
-   ```bash
-   eval "$(ssh-agent -s)"
-   ```
-
-   Puis retestez la commande SSH précédente en début de la section
-   [Valider que l'agent SSH est démarré](#valider-que-lagent-ssh-est-démarré-1).
-   Si une erreur continue à s'afficher, faites appel à l'équipe pédagogique pour
-   résoudre le problème.
-
-2. `The agent has no identities.` : cela signifie que l'agent SSH est en cours
-   d'exécution, mais qu'aucune clé SSH n'est chargée dans l'agent.
-
-   Vous pouvez ensuite passer à la section
-   [Ajouter la clé SSH à l'agent SSH de votre ordinateur](#ajouter-la-clé-ssh-à-lagent-ssh-de-votre-ordinateur-1).
-
-3. Un résultat similaire à celui présenté ci-dessous :
-
-   ```text
-   256 SHA256:naCCKCyb1yC41QaCHwlcy2KiHF6uYsphKSczwGbm/u0 ludovic.delafontaine@gmail.com (ED25519)
-   ```
-
-   Cela signifie que l'agent SSH est en cours d'exécution et que la clé SSH est
-   chargée dans l'agent et que tout devrait être en ordre pour la suite du
-   cours.
-
-   Vous pouvez maintenant passer à la section
-   [Valider l'installation et la configuration de l'environnement de développement local](#valider-linstallation-et-la-configuration-de-lenvironnement-de-développement-local).
-
-##### Ajouter la clé SSH à l'agent SSH de votre ordinateur
-
-Ensuite, vous devez charger votre clé SSH dans l'agent en utilisant la commande
-suivante :
-
-```bash
-ssh-add ~/.ssh/id_ed25519
-```
-
-Remplacez `id_ed25519` par le nom de votre fichier de clé SSH si vous avez
-utilisé un autre nom lors de la création de votre clé SSH.
-
-Puis validez que la clé SSH est bien chargée dans l'agent SSH de Linux en
-suivant les étapes à l'aide de la commande suivante :
-
-```bash
-ssh-add -l
-```
-
-Le résultat devrait être similaire à ceci, indiquant que l'agent SSH est en
-cours d'exécution et que la clé SSH est chargée dans l'agent :
-
-```text
-256 SHA256:naCCKCyb1yC41QaCHwlcy2KiHF6uYsphKSczwGbm/u0 ludovic.delafontaine@gmail.com (ED25519)
-```
-
-Vous pouvez maintenant passer à la section
-[Valider l'installation et la configuration de l'environnement de développement local](#valider-linstallation-et-la-configuration-de-lenvironnement-de-développement-local).
+> **Note pour la rentrée 2026-2027** : une nouvelle section
+> [Ajouter votre adresse e-mail HEIG-VD à votre compte GitHub](https://heig-vd-upinfo-course.github.io/heig-vd-upinfo-course/05-configurer-son-systeme-dexploitation-et-ses-applications/19-git-et-github/#ajouter-votre-adresse-e-mail-heig-vd-%C3%A0-votre-compte-github)
+> dans le contenu
+> [Git et GitHub](https://heig-vd-upinfo-course.github.io/heig-vd-upinfo-course/05-configurer-son-systeme-dexploitation-et-ses-applications/19-git-et-github/)
+> a été ajoutée depuis la rentrée 2026-2027 de septembre. Merci de suivre les
+> instructions de cette section pour vous assurer que votre compte GitHub est
+> correctement configuré avec votre adresse e-mail HEIG-VD.
+
+- Un ordinateur avec un système d'exploitation compatible avec les outils que
+  nous allons utiliser (Windows, macOS ou Linux).
+- Une connexion Internet pour télécharger les outils nécessaires et accéder aux
+  ressources en ligne.
+- Un IDE tel que
+  [Visual Studio Code](https://heig-vd-upinfo-course.github.io/heig-vd-upinfo-course/05-configurer-son-systeme-dexploitation-et-ses-applications/17-visual-studio-code/).
+- [Secure Shell (SSH)](https://heig-vd-upinfo-course.github.io/heig-vd-upinfo-course/05-configurer-son-systeme-dexploitation-et-ses-applications/18-secure-shell-ssh/)
+  installé et configuré.
+- [Git et GitHub](https://heig-vd-upinfo-course.github.io/heig-vd-upinfo-course/05-configurer-son-systeme-dexploitation-et-ses-applications/19-git-et-github/)
+  pour la gestion de version et le dépôt de code.
+- [Docker](https://heig-vd-upinfo-course.github.io/heig-vd-upinfo-course/05-configurer-son-systeme-dexploitation-et-ses-applications/20-docker/)
+  pour démarrer l'environnement de développement local dans un conteneur.
 
 ### Valider l'installation et la configuration de l'environnement de développement local
 
+- [x] Visual Studio Code est installé et fonctionne correctement.
+- [x] SSH est installé et fonctionne correctement.
 - [x] Git est installé et fonctionnent correctement.
 - [x] Docker et Docker Compose sont installés et fonctionnent correctement.
-- [x] Visual Studio Code est installé et fonctionne correctement.
-- [x] L'extension PHP Intelephense pour Visual Studio Code est installée.
-- [x] L'extension SQLite Viewer pour Visual Studio Code est installée.
-- [x] Les suggestions de code de GitHub Copilot sont désactivées dans Visual
-      Studio Code.
-- [x] La clé SSH est bien chargée dans l'agent SSH.
 
-## Ouvrir le projet localement
+## Créer votre dépôt GitHub pour le mini-projet et les exercices
 
-Dans cette section, nous allons initialiser le projet PHP pour le cours
-_"Programmation serveur 1 (ProgServ1)"_.
+Dans cette section, nous allons créer un dépôt GitHub pour votre mini-projet et
+vos exercices. Ce dépôt sera utilisé pour stocker et gérer le code source de
+votre projet, ainsi que pour suivre les modifications apportées au fil du temps.
 
-De plus, nous allons utiliser GitHub Classroom pour gérer le code source du
-mini-projet et des exercices. Cela sera l'occasion de prendre encore plus
-l'habitude d'utiliser Git et GitHub dans un contexte de développement
-professionnel.
+Pour cela, nous allons utiliser un outil appelé
+[Classroom 50](https://classroom50.org/) (un outil de gestion de projets
+Git/GitHub pour le monde de l'enseignement), qui permet de créer des dépôts
+GitHub privés pour les étudiant·s et permettre aux enseignant·es de facilement
+pouvoir suivre l'avancement des projets et vous aider en cas de besoin.
 
-### Accéder à votre dépôt GitHub sur GitHub Classroom
+### Accepter l'invitation à rejoindre l'organisation Classroom dédié au cours
 
-[GitHub Classroom](https://classroom.github.com/) est un outil qui permet de
-gérer des dépôts GitHub dans un contexte éducatif. Il facilite la distribution
-de projets, la collecte de travaux et la gestion des évaluations.
+Vous devriez avoir reçu une invitation sur votre adresse e-mail HEIG-VD pour
+rejoindre l'organisation GitHub
+[HEIG-VD ProgServ Classroom](https://github.com/heig-vd-progserv-classroom).
 
-Il sera utilisé pour permettre au corps enseignant de visualiser le travail
-effectué dans le mini-projet et les exercices.
+Cette organisation, différente de celle officielle du cours
+[HEIG-VD ProgServ Course](https://github.com/heig-vd-progserv-course), contient
+tous les dépôts GitHub privés pour le mini-projet et les exercices.
 
-Il est nécessaire de rejoindre le GitHub Classroom pour accéder au dépôt utilisé
+Les deux organisations sont nécessaires pour le cours, car l'organisation
+officielle contient le contenu du cours et les dépôts GitHub publics pour les
+exercices, tandis que l'organisation Classroom contient les dépôts GitHub privés
 pour le mini-projet et les exercices.
 
-1. Accédez au lien suivant pour rejoindre le GitHub Classroom du cours :
-   <https://classroom.github.com/a/60Zo6fVJ>.
-2. Si vous n'êtes pas encore connecté.e à GitHub, connectez-vous avec votre
-   compte GitHub.
-3. Choisissez votre personne dans la liste pour rejoindre le GitHub Classroom.
-4. Il se peut qu'un message d'erreur s'affiche avant que vous n'acceptiez
-   l'invitation. Ne vous inquiétez pas, c'est normal.
-5. Vous devez maintenant accepter l'invitation qui a été envoyée sur votre
-   adresse mail associée à votre compte GitHub pour rejoindre le GitHub
-   Classroom.. Vous pouvez retrouvez le mail associé à votre compte dans les
-   paramètres de votre compte GitHub (icône de profil en haut à droite ->
-   _"Settings"_ -> _"Emails"_).
-6. Une fois l'invitation acceptée, vous devriez voir un message de confirmation
-   indiquant que vous avez rejoint le GitHub Classroom.
-7. Un dépôt GitHub privé sera créé pour vous, nommé
-   `progserv1-<annee>-<annee>-mini-projet-et-exercices-<github-username>`.
+Acceptez l'invitation pour rejoindre l'organisation Classroom dédiée au cours.
+
+### Accéder à Classroom 50
+
+Une fois l'invitation acceptée, vous pouvez accéder à Classroom 50 en suivant le
+lien suivant : <https://classroom50.org/>.
+
+Connectez-vous avec votre compte GitHub et vous devriez voir le cours
+"Programmation serveur 1 (ProgServ1)" dans la liste des cours disponibles.
+
+### Créer le dépôt GitHub pour le mini-projet et les exercices
+
+Dans Classroom 50, cliquez sur le cours "Programmation serveur 1 (ProgServ1)"
+pour accéder à la liste des devoirs disponibles.
+
+Suivez les instructions pour rejoindre le devoir GitHub pour le mini-projet et
+les exercices. Cela créera un dépôt GitHub privé pour vous, nommé
+`progserv1-<annee>-<annee>-mini-projet-et-exercices-<github-username>`.
 
 Vous devriez maintenant avoir accès à votre dépôt GitHub privé pour le cours
-_"Programmation serveur 1 (ProgServ1)"_ sur une page similaire à celle-ci :
+"Programmation serveur 1 (ProgServ1)" sur une page similaire à celle-ci :
 
 ![Dépôt GitHub Classroom](./images/github-classroom-repository.png)
 
 Nous prendrons quelques instants pour explorer le dépôt GitHub et comprendre sa
 structure dans les prochaines étapes.
 
-### Cloner votre dépôt GitHub localement
+## Cloner votre dépôt GitHub localement
+
+Maintenant que vous avez créé votre dépôt GitHub privé pour le mini-projet et
+les exercices, nous allons le cloner localement sur votre ordinateur pour
+pouvoir travailler dessus.
 
 Choisissez un emplacement sur votre ordinateur où vous souhaitez cloner le dépôt
 GitHub pour le mini-projet et les exercices. Par exemple, vous pouvez choisir de
@@ -898,9 +289,14 @@ ordinateur :
    git clone <url-ssh-du-dépôt-github>
    ```
 
+   Remplacez `<url-ssh-du-dépôt-github>` par l'URL SSH de votre dépôt GitHub
+   privé.
+
 3. Le dépôt GitHub sera cloné localement sur votre ordinateur dans un dossier
    portant le même nom que votre dépôt GitHub (par exemple,
-   `progserv1-2025-2026-mini-projet-et-exercices-<github-username>`).
+   `progserv1-2026-2027-mini-projet-et-exercices-<github-username>`).
+
+## Ouvrir le projet localement
 
 ### Ouvrir votre dépôt GitHub dans Visual Studio Code
 
@@ -908,18 +304,10 @@ Maintenant que le dépôt GitHub est cloné localement sur votre ordinateur, vou
 devez l'ouvrir dans Visual Studio Code pour pouvoir travailler sur votre projet
 PHP.
 
-Pour ce faire, suivez les étapes suivantes :
-
-1. Naviguez dans le dossier du projet cloné dans votre terminal (à l'aide de la
-   commande `cd`, par exemple :
-   `cd progserv1-2025-2026-mini-projet-et-exercices-<github-username>`).
-2. Ouvrez le dossier du projet dans Visual Studio Code en utilisant la commande
-   suivante dans votre terminal :
-
-   ```bash
-   code .
-   ```
-
+1. Ouvrez Visual Studio Code.
+2. Cliquez sur le menu **File > Open Folder...** et sélectionnez le dossier du
+   projet cloné localement sur votre ordinateur (par exemple,
+   `progserv1-2026-2027-mini-projet-et-exercices-<github-username>`).
 3. Visual Studio Code ouvrira le dossier du projet. Un avertissement de sécurité
    pourrait vous demander si vous faites confiance aux auteurs du dossier.
    Cliquez sur le bouton **Yes, I trust the authors** pour continuer.
@@ -932,13 +320,20 @@ Visual Studio pour exécuter les commandes nécessaires à la suite du cours.
 
 ### Ouvrir le projet dans un conteneur de développement
 
+> [!NOTE]
+>
+> Toutes les instructions ci-dessous sont également disponibles dans le fichier
+> README.md du projet cloné localement sur votre ordinateur. Vous pouvez le
+> consulter à tout moment pour vous aider à suivre les étapes de la séance.
+
 Le projet fourni pour le mini-projet et les exercices est configuré pour être
 exécuté dans un conteneur de développement.
 
 Un conteneur de développement (Dev Container) est un environnement isolé qui
 contient tous les outils nécessaires pour développer une application. Il permet
-aux développeur.euses de travailler dans un environnement cohérent, quel que
-soit le système d'exploitation ou la configuration de leur ordinateur.
+aux personnes qui développent (vous) de travailler dans un environnement
+cohérent, quel que soit le système d'exploitation ou la configuration de leur
+ordinateur.
 
 De plus, un conteneur de développement permet de s'assurer que tout le monde
 utilise la même configuration et les mêmes extensions pour le projet, ce qui
@@ -961,8 +356,9 @@ Container** pour ouvrir le projet dans le conteneur de développement.
 </details>
 
 Visual Studio Code va maintenant construire le conteneur de développement en
-utilisant les fichiers de configuration fournis dans le projet. Cela peut
-prendre quelques minutes, surtout lors de la première ouverture du projet.
+utilisant les fichiers de configuration fournis dans le projet décrits dans le
+dossier `.devcontainer`. Cela peut prendre quelques minutes, surtout lors de la
+première ouverture du projet.
 
 Une fois que le conteneur de développement est construit et que Visual Studio
 Code s'y est connecté, vous êtes maintenant dans un environnement de
@@ -986,10 +382,16 @@ installer les extensions suivantes dans Visual Studio Code :
   : une extension pour le développement PHP qui fournit des fonctionnalités
   telles que l'autocomplétion, la navigation dans le code, la validation de
   syntaxe, etc.
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+  : une extension pour le formatage du code qui permet de maintenir un style de
+  code cohérent dans votre projet.
 - [SQLite Viewer](https://marketplace.visualstudio.com/items?itemName=alexcuvsenov.sqlite-viewer)
-  : une extension pour Visual Studio Code qui permet de visualiser et
-  d'interagir avec des bases de données SQLite directement depuis l'éditeur de
-  de code.
+  : une extension pour Visual Studio Code qui permet de visualiser les données
+  des bases de données SQLite directement depuis l'éditeur de de code.
+- [Database Client](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-database-client2)
+  : une extension pour Visual Studio Code qui permet de se connecter à
+  différentes bases de données et d'exécuter des requêtes SQL directement depuis
+  l'éditeur de code.
 
 Le fichier `.vscode/settings.json` contient les paramètres de Visual Studio Code
 spécifiques au projet, tels que les paramètres de formatage du code, les
@@ -1004,14 +406,6 @@ le projet dans Visual Studio Code et cliquez sur le bouton **Reopen in
 Container** pour vous connecter au conteneur de développement et commencer à
 travailler sur votre application PHP.
 
-> [!NOTE]
->
-> Il est important de noter que si plusieurs projets utilisant des conteneurs de
-> développement sont ouverts en même temps dans Visual Studio, cela peut
-> entraîner des conflits de ports ou de ressources. Si vous avez des erreurs
-> lors de l'ouverture de plusieurs projets, assurez-vous que ceux-ci n'utilisent
-> pas les mêmes ports.
-
 > [!TIP]
 >
 > Vous pouvez également ouvrir le projet dans un conteneur de développement
@@ -1019,7 +413,7 @@ travailler sur votre application PHP.
 > récents (File > Open Recent) et en sélectionnant le projet qui porte le nom de
 > votre dépôt GitHub privé pour le mini-projet et les exercices avec la notation
 > _"[Dev Container]"_ (par exemple,
-> `progserv1-2025-2026-mini-projet-et-exercices-<github-username> [Dev Container]`).
+> `progserv1-2026-2027-mini-projet-et-exercices-<github-username> [Dev Container]`).
 
 ### Découvrir la structure du projet
 
@@ -1031,35 +425,34 @@ dossiers qui le composent.
   conteneur Docker.
 - `.vscode/`: Contient les paramètres recommandés pour Visual Studio Code.
 - `.gitignore`: Fichier de configuration pour Git, spécifiant les fichiers et
-  dossiers à ignorer.
+  dossiers à ignorer. Cette configuration par défaut est adaptée pour un projet
+  PHP avec une base de données SQLite. Il n'est pas nécessaire de modifier ce
+  fichier.
 - `README.md`: Un fichier de documentation contenant des informations sur le
   projet.
 
-Prenez quelques minutes pour explorer ces fichiers et dossiers dans Visual
-Studio Code et comprendre leur rôle dans le projet avant de passer à la suite du
-cours puis répondez aux questions suivantes :
+### Désactiver GitHub Copilot dans Visual Studio Code
 
-- Dans quel fichier se trouve la documentation du projet ?
-- Pourquoi est-il si important ?
+Si vous avez accès à GitHub Copilot, nous vous recommandons de le désactiver
+dans Visual Studio Code pour éviter d'avoir des suggestions de code qui
+pourraient interférer avec votre apprentissage et votre compréhension du code
+que vous écrivez.
 
-<details>
-<summary>Afficher la réponse</summary>
+Pour cela, vous pouvez décommenter les lignes correspondantes dans le fichier
+`.vscode/settings.json` de Visual Studio Code :
 
-La documentation du projet se trouve dans le fichier `README.md` à la racine du
-projet.
+```json
+	// (Un)comment to disable inline suggestions, which can be distracting for learning purposes
+	// "editor.inlineSuggest.enabled": false,
 
-Dans la quasi totalité des projets, le fichier `README.md` contient des
-informations importantes sur le projet, telles que les instructions
-d'installation, les fonctionnalités, les technologies utilisées, etc.
+	// (Un)comment to disable GitHub Copilot, which can be distracting for learning purposes
+	// "github.copilot.enable": {
+	// 	"*": false
+	// },
+```
 
-Il s'agit d'un fichier de documentation essentiel pour comprendre le projet et
-savoir comment l'utiliser. Lorsque vous travaillez sur un projet, assurez-vous
-de lire attentivement le fichier `README.md` pour comprendre les détails du
-projet et les instructions spécifiques à suivre. C'est aussi le fichier par
-défaut qui s'affiche sur la page d'accueil du dépôt GitHub, ce qui en fait un
-élément clé pour présenter votre projet aux autres.
-
-</details>
+Vous avez maintenant un environnement de développement local prêt à l'emploi
+pour développer votre application PHP pour le mini-projet et les exercices.
 
 ## Démarrer le projet
 
@@ -1109,73 +502,79 @@ Cela signifie que PHP est installé et fonctionne correctement dans le conteneur
 de développement. Vous pouvez maintenant utiliser PHP pour développer votre
 application web.
 
-### Démarrer le serveur de développement PHP
+### Démarrer le serveur serveur web Apache
 
-Pour démarrer le serveur de développement PHP, exécutez la commande suivante
-dans le terminal intégré de Visual Studio Code :
+Pour démarrer le serveur serveur web Apache, exécutez la commande suivante dans
+le terminal intégré de Visual Studio Code :
 
 ```bash
-php -S 0.0.0.0:8080
+docker compose up
 ```
 
-Cette commande démarre un serveur de développement PHP sur le port 8080,
-accessible depuis n'importe quelle adresse IP (`0.0.0.0`), nécessaire pour que
-le serveur soit accessible depuis votre navigateur web.
+Cette commande démarre un serveur serveur web Apache sur le port 8080 accessible
+depuis votre navigateur web.
 
-Une fois que le serveur de développement PHP est démarré, vous devriez voir un
+Une fois que le serveur serveur web Apache est démarré, vous devriez voir un
 message similaire à celui-ci dans le terminal :
 
 ```text
-[Tue Apr  7 16:29:24 2026] PHP 8.5.3 Development Server (http://0.0.0.0:8080) started
+apache  | [Wed Nov 18 21:10:32.484866 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.69 (Debian) PHP/8.5.12 configured -- resuming normal operations
 ```
 
-Cela signifie que le serveur de développement PHP est maintenant en cours
+Cela signifie que le serveur serveur web Apache est maintenant en cours
 d'exécution. Vous pouvez laisser ce terminal ouvert pendant que vous travaillez
 sur votre projet PHP.
 
 > [!NOTE]
 >
 > Vous remarquerez peut-être qu'il n'est plus possible d'exécuter d'autres
-> commandes dans ce terminal tant que le serveur de développement PHP est en
-> cours d'exécution. C'est normal, car le serveur de développement PHP tourne en
+> commandes dans ce terminal tant que le serveur serveur web Apache est en cours
+> d'exécution. C'est normal, car le serveur serveur web Apache tourne en
 > arrière-plan afin de pouvoir répondre aux requêtes HTTP envoyées depuis votre
 > navigateur web.
 
 Essayez d'accéder à votre application PHP en ouvrant votre navigateur web à
 l'adresse suivante : <http://localhost:8080>.
 
-Par le simple fait d'avoir essayé d'accéder à cette adresse, le serveur de
-développement PHP a effectué les tâches suivantes :
+Par le simple fait d'avoir essayé d'accéder à cette adresse, le serveur web
+Apache a effectué les tâches suivantes :
 
 1. Une requête HTTP a été envoyée à l'adresse <http://localhost:8080> depuis
    votre navigateur web.
-2. Le serveur de développement PHP a reçu la requête et a tenté de trouver un
-   fichier correspondant à la requête dans le dossier racine de votre projet PHP
-   :
-   - Par défaut, le serveur de développement PHP recherche un fichier
-     `index.php` ou `index.html` à la racine du projet pour répondre à la
-     requête.
-   - Si aucun fichier correspondant n'est trouvé, le serveur de développement
-     PHP renvoie une erreur 404 (Not Found) au navigateur web.
-3. Si un fichier correspondant est trouvé, le serveur de développement PHP
-   exécute ce fichier et renvoie le résultat de son exécution au navigateur web
-   pour être affiché. Sinon, il génère une page d'erreur 404 (Not Found) et la
-   renvoie au navigateur web.
-4. Le navigateur web reçoit la réponse du serveur de développement PHP et
-   affiche le résultat à l'utilisateur.
+2. Le serveur Apache a reçu la requête et a tenté de trouver un fichier
+   correspondant à la requête dans le dossier racine de votre projet PHP :
+   - Par défaut, Apache recherche un fichier `index.php` ou `index.html` à la
+     racine du projet pour répondre à la requête.
+   - Si aucun fichier correspondant n'est trouvé, Apache affiche les fichiers
+     disponibles dans le dossier.
+3. Si un fichier correspondant est trouvé, le serveur Apache exécute ce fichier
+   et renvoie le résultat de son exécution au navigateur web pour être affiché.
+4. Le navigateur web reçoit la réponse du serveur Apache et affiche le résultat
+   à l'utilisateur·trice.
+
+> [!NOTE]
+>
+> Lorsque nous parlons du "dossier racine du projet", nous faisons référence au
+> dossier qui contient tous les fichiers et dossiers de votre projet PHP. C'est
+> le dossier que vous avez cloné depuis GitHub Classroom et qui porte le nom de
+> votre dépôt GitHub privé pour le mini-projet et les exercices (par exemple,
+> `progserv1-2026-2027-mini-projet-et-exercices-<github-username>`).
+>
+> A l'avenir, lorsque nous parlerons du "dossier racine du projet", nous ferons
+> référence à ce dossier qui contient tous les fichiers et dossiers de votre
+> projet PHP.
 
 Comme il n'existe pas (encore) de fichier `index.php` ou `index.html` à la
-racine du projet dans la structure de fichiers de notre projet, le serveur de
-développement PHP va générer une page d'erreur 404 (Not Found) et la renvoyer au
-navigateur web.
+racine du projet dans la structure de fichiers de notre projet, le serveur web
+Apache vous affiche la liste des fichiers disponibles.
 
-Pour arrêter le serveur de développement PHP, vous pouvez simplement appuyer sur
+Pour arrêter le serveur web Apache, vous pouvez simplement appuyer sur
 <kbd>Ctrl</kbd> + <kbd>C</kbd> dans le terminal intégré de Visual Studio Code.
-Cela arrêtera le serveur de développement PHP et vous pourrez redémarrer le
-serveur plus tard en exécutant à nouveau la commande précédente.
+Cela arrêtera le serveur web Apache et vous pourrez redémarrer le serveur plus
+tard en exécutant à nouveau la commande précédente.
 
-Pour la suite de ce contenu, assurez-vous d'avoir le serveur de développement
-PHP démarré et le terminal intégré ouvert dans Visual Studio Code.
+Pour la suite de ce contenu, assurez-vous d'avoir le serveur web Apache démarré
+et le terminal intégré ouvert dans Visual Studio Code.
 
 ### Créer la structure de base du projet
 
@@ -1187,41 +586,28 @@ fonctionnalités à l'application web que nous allons construire.
 Commencez par créer les dossiers `exercices` et `mini-projet` dans le dossier
 racine du projet.
 
-> [!NOTE]
->
-> Lorsque nous parlons du "dossier racine du projet", nous faisons référence au
-> dossier qui contient tous les fichiers et dossiers de votre projet PHP. C'est
-> le dossier que vous avez cloné depuis GitHub Classroom et qui porte le nom de
-> votre dépôt GitHub privé pour le mini-projet et les exercices (par exemple,
-> `progserv1-2025-2026-mini-projet-et-exercices-<github-username>`).
->
-> A l'avenir, lorsque nous parlerons du "dossier racine du projet", nous ferons
-> référence à ce dossier qui contient tous les fichiers et dossiers de votre
-> projet PHP.
-
 La structure de votre projet devrait maintenant ressembler à ceci :
 
 ```text
 ./
 ├── .devcontainer/
-│   └── devcontainer.json
+│   └── ...
 ├── exercices/
 ├── mini-projet/
 ├── .vscode/
-│   ├── extensions.json
-│   └── settings.json
+│   └── ...
 ├── .gitignore
 └── README.md
 ```
 
 Le dossier `exercices` contiendra tous les exercices réalisés durant le cours
-_"Programmation serveur 1 (ProgServ1)"_. Vous pourrez l'utiliser pour stocker
-les exercices de chaque séance et faire des tests et expérimentations.
+"Programmation serveur 1 (ProgServ1)". Vous pourrez l'utiliser pour stocker les
+exercices de chaque séance et faire des tests et expérimentations.
 
 Le dossier `mini-projet` contiendra tous les fichiers et dossiers nécessaires
-pour le mini-projet du cours _"Programmation serveur 1 (ProgServ1)"_. C'est dans
-ce dossier que vous allez construire l'application web pour gérer les animaux de
-compagnie.
+pour le mini-projet du cours "Programmation serveur 1 (ProgServ1)". C'est dans
+ce dossier que vous allez construire l'application web pour gérer une liste de
+tâches à réaliser.
 
 Les autres fichiers et dossiers du projet (comme `.devcontainer`, `.vscode`,
 `.gitignore`, `README.md`, etc.) sont les fichiers fournis de base pour le
@@ -1240,72 +626,17 @@ Créez maintenant les fichiers suivants dans les différents dossiers du projet 
 ```text
 ./
 ├── exercices/
-│   └── index.php
-├── exception.php
-├── index.php
-└── phpinfo.php
+├── mini-projet/
+│   └── public/
+│       ├── index.php
+│       └── view.php
+├── demo.php
+└── exception.php
 ```
-
-#### Fichier `phpinfo.php`
-
-Dans le fichier `phpinfo.php`, ajoutez le code suivant :
-
-```php
-<?php
-phpinfo();
-```
-
-La fonction `phpinfo()` affiche des informations sur la configuration de PHP
-installée sur votre ordinateur. Cela vous permettra de vérifier que PHP est
-correctement installé et configuré.
-
-Sauvegardez le fichier et accédez à l'adresse
-<http://localhost:8080/phpinfo.php> dans votre navigateur web pour voir les
-informations de configuration de PHP.
-
-Plusieurs tableaux d'informations devraient s'afficher, contenant des détails
-sur la version de PHP, les extensions installées, les paramètres du serveur,
-etc.
-
-Nous n'aurons pas besoin de ce fichier pour le mini-projet, mais il est utile
-pour vérifier que PHP est correctement installé et configuré sur votre
-ordinateur.
-
-Visualisez également le comportement du terminal intégré de Visual Studio Code
-lorsque vous accédez à l'adresse <http://localhost:8080/phpinfo.php> dans votre
-navigateur web. Vous devriez voir un résultat similaire à celui-ci dans le
-terminal :
-
-```text
-[Tue Apr  7 16:34:15 2026] 127.0.0.1:53612 [200]: GET /phpinfo.php
-[Tue Apr  7 16:34:15 2026] 127.0.0.1:53612 Closing
-[Tue Apr  7 16:35:59 2026] 127.0.0.1:46082 Accepted
-```
-
-Cela signifie que le serveur de développement PHP a reçu une requête pour le
-fichier `phpinfo.php`, a traité la requête et a renvoyé une réponse réussie
-(code de statut HTTP 200) au navigateur web.
-
-Regarder ce qu'il se passe dans le serveur de développement PHP est une
-compétence essentielle pour comprendre comment votre application PHP fonctionne
-et pour diagnostiquer les problèmes qui pourraient survenir lors du
-développement de votre application. Prêtez-y attention à l'avenir lorsque vous
-testerez votre code dans le navigateur web.
 
 #### Fichier `exception.php`
 
 Dans le fichier `exception.php`, ajoutez le code suivant :
-
-> [!WARNING]
->
-> Ne copiez-collez pas ce qui est demandé ci-dessous sans comprendre ce que vous
-> faites. Prenez le temps de lire et de comprendre chaque ligne demandée avant
-> de passer à la suite.
->
-> Il est important de comprendre ce que vous écrivez pour pouvoir le maîtriser
-> et l'utiliser efficacement dans vos projets.
->
-> Il est inutile de vouloir aller vite juste pour finir plus rapidement.
 
 ```php
 <?php
@@ -1313,38 +644,56 @@ Dans le fichier `exception.php`, ajoutez le code suivant :
 throw new Exception("This is an exception message.");
 ```
 
-Ce fichier est utilisé pour tester la gestion des exceptions en PHP.
+Ce fichier est utilisé pour tester la gestion des erreurs en PHP.
 
-Cela permet de valider que la gestion des exceptions fonctionne correctement
-dans votre environnement de développement et que ceux-ci sont bien affichés dans
-le navigateur web.
-
-Nous étudierons en détail la gestion des exceptions en PHP dans un prochaine
-cours, mais pour le moment, nous allons simplement vérifier que les exceptions
-sont correctement gérées et affichées dans le navigateur web.
+Cela permet de valider que la gestion des erreurs fonctionne correctement dans
+votre environnement de développement et que ceux-ci sont bien affichés dans le
+navigateur web.
 
 Sauvegardez le fichier et accédez à l'adresse
 <http://localhost:8080/exception.php> dans votre navigateur web pour voir le
 message d'exception.
 
-Un message d'erreur avec un résultat similaire au suivant :
+Commencez par observer le terminal intégré de Visual Studio Code. Vous devriez
+voir un message similaire à celui-ci dans le terminal :
 
 ```text
-Fatal error: Uncaught Exception: This is an exception message. in /workspaces/progserv1-2025-2026-mini-projet-et-exercices-ludelafo/exception.php:3 Stack trace: #0 {main} thrown in /workspaces/progserv1-2025-2026-mini-projet-et-exercices-ludelafo/exception.php on line 3
+apache  | 172.19.0.1 - - [18/Nov/2026:21:31:10 +0000] "GET /exception.php HTTP/1.1" 200 434 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:159.0) Gecko/20100101 Firefox/159.0"
+```
+
+Vous remarquez que le terminal intégré de Visual Studio Code affiche les détails
+de la requête HTTP envoyée par le navigateur web pour accéder au fichier
+`exception.php`. Nous pouvons voir ici que le serveur web Apache a reçu une
+requête HTTP GET pour le fichier `exception.php` de la part d'un navigateur web
+Mozilla (Firefox) et a renvoyé une réponse réussie (code de statut HTTP 200) au
+navigateur web.
+
+Regarder ce qu'il se passe dans le serveur web Apache est une compétence
+essentielle pour comprendre comment votre application PHP fonctionne et pour
+diagnostiquer les problèmes qui pourraient survenir lors du développement de
+votre application. Prêtez-y attention à l'avenir lorsque vous testerez votre
+code dans le navigateur web.
+
+Regardez maintenant le navigateur web. Vous devriez voir un message d'erreur
+similaire à celui-ci dans le navigateur web :
+
+```text
+Fatal error: Uncaught Exception: This is an exception message. in /workspace/exception.php:3 Stack trace: #0 {main} thrown in /workspace/exception.php on line 3
 ```
 
 Prenez quelques instants pour comprendre ce message d'erreur et ce qu'il
 signifie et répondez aux questions suivantes :
 
-- Dans quel fichier l'erreur a-t-elle été levée ?
-- A quelle ligne du fichier l'erreur a-t-elle été levée ?
-- Quel est le message d'erreur de l'exception levée ?
+- Dans quel fichier l'erreur est-elle survenue ?
+- A quelle ligne du fichier l'erreur est-elle survenue ?
+- Quel est le message d'erreur ?
 
 <details>
 <summary>Afficher la réponse</summary>
 
-- L'erreur a été levée dans le fichier `exception.php` à la ligne 3.
-- Le message d'erreur de l'exception levée est "This is an exception message.".
+- L'erreur est survenue dans le fichier `/workspace/exception.php`.
+- L'erreur a été levée à la ligne 3.
+- Le message d'erreur est "This is an exception message.".
 
 </details>
 
@@ -1354,116 +703,13 @@ de comprendre les messages d'erreur et de savoir comment les interpréter pour
 pouvoir corriger les erreurs dans votre code. Ces informations sont précieuses
 pour localiser rapidement l'erreur dans votre code et la corriger efficacement.
 
-Visualisez également le comportement du terminal intégré de Visual Studio Code
-lorsque vous accédez à l'adresse <http://localhost:8080/exception.php> dans
-votre navigateur web. Vous devriez voir un résultat similaire à celui-ci dans le
-terminal :
+#### Fichier `demo.php`
 
-```text
-[Tue Apr  7 16:35:59 2026] 127.0.0.1:46082 [200]: GET /exception.php - Uncaught Exception: This is an exception message. in /workspaces/progserv1-2025-2026-mini-projet-et-exercices-ludelafo/exception.php:3
-Stack trace:
-#0 {main}
-  thrown in /workspaces/progserv1-2025-2026-mini-projet-et-exercices-ludelafo/exception.php on line 3
-[Tue Apr  7 16:35:59 2026] 127.0.0.1:46082 Closing
-[Tue Apr  7 16:44:22 2026] 127.0.0.1:36400 Accepted
-```
-
-Ici, le serveur de développement PHP a reçu une requête pour le fichier
-`exception.php`, a traité la requête et a renvoyé une réponse réussie (code de
-statut HTTP 200) au navigateur web. Néanmoins, le serveur de développement PHP a
-également enregistré les détails de l'exception levée dans le terminal, ce qui
-peut être utile pour diagnostiquer les problèmes liés à la gestion des
-exceptions dans votre application PHP.
-
-#### Fichier `exercices/index.php`
-
-Dans le fichier `exercices/index.php`, ajoutez le code suivant :
-
-> [!WARNING]
->
-> Ne copiez-collez pas ce qui est demandé ci-dessous sans comprendre ce que vous
-> faites. Prenez le temps de lire et de comprendre chaque ligne demandée avant
-> de passer à la suite.
->
-> Il est important de comprendre ce que vous écrivez pour pouvoir le maîtriser
-> et l'utiliser efficacement dans vos projets.
->
-> Il est inutile de vouloir aller vite juste pour finir plus rapidement.
+Dans le fichier `demo.php`, ajoutez le code suivant :
 
 ```php
 <?php
-echo "Bienvenue dans le dossier <code>exercices</code> du cours <i>Programmation serveur 1 (ProgServ1)</i> !";
-```
-
-Sauvegardez le fichier et accédez à l'adresse
-<http://localhost:8080/exercices/index.php> dans votre navigateur web pour voir
-le message de bienvenue.
-
-Vous remarquerez que le message s'affiche correctement dans le navigateur web,
-ce qui signifie que le fichier `exercices/index.php` est correctement configuré
-et que le serveur de développement PHP fonctionne correctement pour ce fichier.
-
-Grâce à PHP, nous pouvons mélanger du code PHP avec du code HTML pour générer du
-contenu dynamique dans nos pages web. Dans ce cas, nous utilisons la fonction
-`echo` pour afficher un message de bienvenue dans le navigateur web.
-
-C'est dans ce dossier que vous allez pouvoir stocker les exercices de chaque
-séance et faire des tests et expérimentations avec le code PHP que vous écrirez
-durant le cours.
-
-Visualisez également le comportement du terminal intégré de Visual Studio Code
-lorsque vous accédez à l'adresse <http://localhost:8080/exercices/index.php>
-dans votre navigateur web. Vous devriez voir un résultat similaire à celui-ci
-dans le terminal :
-
-```text
-[Tue Apr  7 16:44:22 2026] 127.0.0.1:36400 [200]: GET /exercices/index.php
-[Tue Apr  7 16:44:22 2026] 127.0.0.1:36400 Closing
-[Tue Apr  7 16:45:02 2026] 127.0.0.1:39536 Accepted
-```
-
-La requête pour le fichier `exercices/index.php` a été traitée avec succès par
-le serveur de développement PHP, qui a renvoyé une réponse réussie (code de
-statut HTTP 200) au navigateur web.
-
-#### Fichier `index.php`
-
-Afin de facilement avoir accès aux différentes parties du projet, nous allons
-créer un fichier `index.php` à la racine du projet.
-
-Ce fichier aura pour rôle de servir de page d'accueil pour le projet et de
-fournir des liens vers les différentes parties du projet, comme les exercices et
-le mini-projet.
-
-De plus, nous allons profiter des fonctionnalités de PHP pour générer du contenu
-mélangeant du code PHP et du code HTML pour créer une page d'accueil dynamique.
-
-Pour cela, ajoutez le code suivant dans le fichier `index.php` :
-
-> [!NOTE]
->
-> Tout ce que vous avez appris jusqu'à présent sur HTML et CSS au travers de
-> précédents cours reste valable et peut être utilisé en mélangeant du code PHP.
->
-> N'hésitez pas à utiliser vos connaissances en HTML et CSS pour structurer et
-> styliser vos pages PHP.
-
-> [!WARNING]
->
-> Ne copiez-collez pas ce qui est demandé ci-dessous sans comprendre ce que vous
-> faites. Prenez le temps de lire et de comprendre chaque ligne demandée avant
-> de passer à la suite.
->
-> Il est important de comprendre ce que vous écrivez pour pouvoir le maîtriser
-> et l'utiliser efficacement dans vos projets.
->
-> Il est inutile de vouloir aller vite juste pour finir plus rapidement.
-
-```php
-<?php
-const PAGE_TITLE = "Page d'accueil du cours Programmation serveur 1 (ProgServ1)";
-const PAGE_DESCRIPTION = "La page d'accueil du cours de Programmation serveur 1 (ProgServ1) !";
-const WELCOME_MESSAGE = "Bienvenue sur la page d'accueil du cours de Programmation serveur 1 (ProgServ1) !";
+const APP_NAME = "Page de démonstration";
 ?>
 
 <!DOCTYPE html>
@@ -1472,88 +718,575 @@ const WELCOME_MESSAGE = "Bienvenue sur la page d'accueil du cours de Programmati
 <head>
     <meta charset="utf-8">
 
-    <title><?php echo PAGE_TITLE; ?></title>
-    <meta name="description" content="<?php echo PAGE_DESCRIPTION; ?>">
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title><?= APP_NAME; ?></title>
+    <meta name="description" content="Une page de démonstration.">
 </head>
 
 <body>
-    <h1><?php echo PAGE_TITLE; ?></h1>
+    <h1><?= APP_NAME; ?></h1>
 
-    <p><?php echo WELCOME_MESSAGE; ?></p>
-
-    <ul>
-        <li>Accéder aux <a href="./exercices/index.php">exercices</a>.</li>
-        <li>Accéder à la page de <a href="./phpinfo.php">configuration de PHP</a>.</li>
-        <li>Tester la gestion des exceptions avec le fichier <a href="./exception.php">exception.php</a>.</li>
-    </ul>
+    <p>Bienvenue sur la page de démonstration. Cette page est utilisée pour illustrer le fonctionnement de PHP.</p>
 </body>
 
 </html>
 ```
 
-Sauvegardez le fichier et accédez à l'adresse <http://localhost:8080/index.php>
-dans votre navigateur web pour voir la page d'accueil du projet avec les liens
-vers les différentes parties du projet.
+Sauvegardez le fichier et accédez à l'adresse <http://localhost:8080/demo.php>
+dans votre navigateur web pour voir la page de démonstration.
 
-Grâce à PHP, il est tout à fait possible de mélanger du code PHP avec du code
-HTML/CSS pour générer du contenu dynamique dans nos pages web.
+Vous devriez voir une page web avec le titre "Page de démonstration" et un
+message de bienvenue. Cela signifie que votre environnement de développement
+local est correctement configuré et que vous pouvez exécuter des fichiers PHP
+dans votre navigateur web.
 
-Dans ce cas, nous utilisons la fonction `echo` pour afficher des constantes PHP
-dans le code HTML pour créer une page d'accueil dynamique.
+Vous remarquez que le code PHP (contenant une constante) est exécuté sur le
+serveur web Apache et que le résultat est renvoyé au navigateur web pour être
+affiché : l'interpréteur PHP transforme le code PHP en HTML, qui est ensuite
+envoyé au navigateur web qui a simplement pour rôle d'afficher le contenu HTML.
 
-Vous pouvez maintenant naviguer entre les différentes pages du projet en
-cliquant sur les liens présents sur la page d'accueil pour accéder aux
-exercices, au mini-projet, à la page de configuration de PHP, et au test de
-gestion des exceptions.
+Inspectez le code source de la page web dans votre navigateur web (clic droit
+sur la page → _"View Page Source"_ ou _"Inspect Element"_ selon le navigateur
+web que vous utilisez) et vous verrez que le code PHP n'est pas présent dans le
+code source de la page web, uniquement le code HTML généré.
 
-Vous remarquerez que la page a été stylisée avec du CSS pour améliorer son
-apparence, et que les liens fonctionnent correctement pour naviguer entre les
-différentes parties du projet.
+Cela illustre le fonctionnement de base d'une application web PHP.
 
-Visualisez également le comportement du terminal intégré de Visual Studio Code
-lorsque vous accédez à l'adresse <http://localhost:8080/index.php> dans votre
-navigateur web. Que pouvez-vous observer dans le terminal ?
+Vous remarquez peut-être l'utilisation de la notation `<?= ... ?>` dans le code
+PHP. Cette notation est une forme abrégée de `<?php echo ... ?>` et est utilisée
+pour afficher rapidement des valeurs dans le code HTML. Par exemple,
+`<?= APP_NAME; ?>` est équivalent à `<?php echo APP_NAME; ?>` et affichera la
+valeur de la constante `APP_NAME` dans le code HTML généré.
 
-### Arrêter le serveur de développement PHP
+Nous utiliserons cette notation abrégée dans le code PHP pour simplifier
+l'affichage des valeurs dans le code HTML.
+
+Vous pouvez imaginer que PHP permet d'insérer de façon chirurgical du code
+dynamique dans le code HTML, ce qui permet de créer des pages web interactives
+et personnalisées en fonction des besoins de l'utilisateur·trice.
+
+#### Présentation de µCSS
+
+La page de démonstration est un peu triste et sans style.
+
+Nous pourrions ajouter du CSS pour améliorer l'apparence de la page, mais pour
+gagner du temps, nous allons utiliser un framework CSS léger et simple à
+utiliser appelé [µCSS](https://mucss.org/).
+
+µCSS (prononcé "mu-css") est un framework CSS minimaliste qui fournit des
+classes CSS prêtes à l'emploi pour styliser rapidement les éléments HTML. Il est
+conçu pour être léger, rapide et facile à utiliser, ce qui le rend idéal pour
+les projets web simples comme notre mini-projet.
+
+Ainsi, nous n'aurons que très peu de CSS à écrire nous-mêmes, car nous allons
+utiliser les classes CSS fournies par µCSS pour styliser notre application web.
+
+Nous n'allons pas modifier la page de démonstration pour l'instant, mais les
+prochaines pages que nous allons créer pour le mini-projet utiliseront µCSS pour
+améliorer leur apparence.
+
+#### Fichier `mini-projet/public/index.php`
+
+Dans le fichier `mini-projet/public/index.php`, ajoutez le code suivant :
+
+```php
+<?php
+const APP_NAME = "Liste de tâches de";
+const APP_AUTHOR = "Ludovic";
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://unpkg.com/@digicreon/mucss/dist/mu.css">
+
+    <title>Page d'accueil | <?= APP_NAME; ?> <?= APP_AUTHOR; ?></title>
+    <meta name="description" content="La liste de tâches de <?= APP_AUTHOR; ?>.">
+</head>
+
+<body class="container">
+    <header>
+        <nav>
+            <ul>
+                <li><strong><?= APP_NAME; ?> <?= APP_AUTHOR; ?></strong></li>
+            </ul>
+            <ul>
+                <li><a href="./index.php">Accueil</a></li>
+                <li><a href="./create.php">Nouvelle tâche</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1><?= APP_NAME; ?> <?= APP_AUTHOR; ?></h1>
+
+        <p>Cette application web permet de gérer une liste de tâches pour <?= APP_AUTHOR; ?>. Vous pouvez créer, visualiser, modifier et supprimer des tâches.</p>
+
+        <article>
+            <h2>Exemple de tâche 1</h2>
+
+            <p>
+                <span class="badge badge-contrast">Personnel</span>
+                <span class="badge badge-primary">Haute</span>
+                <span class="badge badge-secondary">2027-01-24</span>
+            </p>
+
+            Description de la tâche 1.
+
+            <footer>
+                <a class="btn btn-primary btn-sm" href="./view.php">
+                    Visualiser la tâche
+                </a>
+            </footer>
+        </article>
+
+        <article>
+            <h2>Exemple de tâche 2</h2>
+
+            <p>
+                <span class="badge badge-contrast">Autre</span>
+                <span class="badge badge-primary">Moyenne</span>
+                <span class="badge badge-secondary">2027-04-01</span>
+            </p>
+
+            <footer>
+                <a class="btn btn-primary btn-sm" href="./view.php">
+                    Visualiser la tâche
+                </a>
+            </footer>
+        </article>
+
+        <article>
+            <h2>Exemple de tâche 3</h2>
+
+            <p>
+                <span class="badge badge-contrast">Personnel</span>
+                <span class="badge badge-primary">Haute</span>
+                <span class="badge badge-secondary">2027-10-10</span>
+            </p>
+
+            <p>Description de la tâche 3.</p>
+
+            <footer>
+                <a class="btn btn-primary btn-sm" href="./view.php">
+                    Visualiser la tâche
+                </a>
+            </footer>
+        </article>
+
+        <article>
+            <h2>Exemple de tâche 4</h2>
+
+            <p>
+                <span class="badge badge-contrast">Travail</span>
+                <span class="badge badge-primary">Basse</span>
+            </p>
+
+            Description de la tâche 4.
+
+            <footer>
+                <a class="btn btn-primary btn-sm" href="./view.php">
+                    Visualiser la tâche
+                </a>
+            </footer>
+        </article>
+
+    </main>
+    <footer>
+        <center>
+            <small>
+                Un projet réalisé dans le cadre du cours <a href="https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course">ProgServ1</a> enseigné à la <a href="https://heig-vd.ch">HEIG-VD</a>.
+            </small>
+        </center>
+    </footer>
+</body>
+
+</html>
+```
+
+Sauvegardez le fichier et accédez à l'adresse
+<http://localhost:8080/mini-projet/public/index.php> dans votre navigateur web
+pour voir la page d'accueil de l'application web.
+
+Pour le moment, la page d'accueil affiche une liste de tâches avec des
+informations de base écrites en dur. Il n'y a, pour le moment, que très peu de
+code PHP mais nous pouvons déjà noter l'utilisation de constantes pour stocker
+le nom de l'application et le nom de l'auteur·trice.
+
+Ces constantes sont utilisées pour générer dynamiquement le titre de la page et
+le contenu de la page d'accueil. Cela permet de centraliser les informations
+importantes et de les réutiliser facilement dans différentes parties de
+l'application web.
+
+Nous allons continuer à construire cette page et ajouter des fonctionnalités
+supplémentaires lors des prochaines séances du cours.
+
+#### Fichier `mini-projet/public/view.php`
+
+Dans le fichier `mini-projet/public/view.php`, ajoutez le code suivant :
+
+```php
+<?php
+const APP_NAME = "Liste de tâches de";
+const APP_AUTHOR = "Ludovic";
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://unpkg.com/@digicreon/mucss/dist/mu.css">
+
+    <title>Visualiser la tâche | <?= APP_NAME; ?> <?= APP_AUTHOR; ?></title>
+    <meta name="description" content="Visualiser une tâche pour <?= APP_AUTHOR; ?>.">
+</head>
+
+<body class="container">
+    <header>
+        <nav>
+            <ul>
+                <li><strong><?= APP_NAME; ?> <?= APP_AUTHOR; ?></strong></li>
+            </ul>
+            <ul>
+                <li><a href="./index.php">Accueil</a></li>
+                <li><a href="./create.php">Nouvelle tâche</a></li>
+            </ul>
+        </nav>
+        <nav aria-label="breadcrumb">
+            <ul>
+                <li><a href="./index.php">Accueil</a></li>
+                <li>Exemple de tâche 1</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>Exemple de tâche 1</h1>
+
+            <p>
+                <span class="badge badge-contrast">Personnel</span>
+                <span class="badge badge-primary">Haute</span>
+                <span class="badge badge-secondary">2027-01-24</span>
+            </p>
+
+            Description de la tâche 1.
+
+            <footer>
+                <a class="btn btn-primary btn-sm" href="./edit.php">
+                    Modifier la tâche
+                </a>
+                <a class="btn btn-error btn-sm" href="./delete.php">
+                    Supprimer la tâche
+                </a>
+            </footer>
+        </article>
+    </main>
+    <footer>
+        <center>
+            <small>
+                Un projet réalisé dans le cadre du cours <a href="https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course">ProgServ1</a> enseigné à la <a href="https://heig-vd.ch">HEIG-VD</a>.
+            </small>
+        </center>
+    </footer>
+</body>
+
+</html>
+```
+
+Sauvegardez le fichier et accédez à l'adresse
+<http://localhost:8080/mini-projet/public/view.php> dans votre navigateur web
+pour voir la page de visualisation d'une tâche.
+
+A nouveau, pour le moment, la page de visualisation d'une tâche affiche des
+informations de base écrites en dur. Il n'y a, pour le moment, que très peu de
+code PHP mais nous pouvons déjà noter l'utilisation de constantes pour stocker
+le nom de l'application et le nom de l'auteur·trice, ainsi que l'utilisation de
+la notation abrégée `<?= ... ?>` pour afficher dynamiquement ces informations
+dans le code HTML.
+
+Nous avons maintenant les fichiers de base de notre application web pour le
+mini-projet.
+
+### Ajouter un logo à la page d'accueil
+
+Pour rendre la page d'accueil de notre application de gestion de tâches plus
+attractive, nous pouvons ajouter un logo à la page d'accueil.
+
+Pour cela, cette étape doit être réalisée en trois parties :
+
+1. Trouver et ajouter une image de logo dans la structure de votre application.
+2. Inclure cette image dans la page d'accueil.
+3. Ajouter des styles CSS personnalisés pour améliorer l'affichage du logo.
+
+#### Trouver et ajouter une image de logo dans la structure de votre application
+
+Vous pouvez trouver une image de logo pour votre application de gestion de
+tâches en effectuant une recherche d'images sur Internet, ou en créant votre
+propre logo à l'aide d'un outil de création graphique.
+
+Nous vous proposons d'utiliser le logo suivant pour votre application de gestion
+de tâches :
+<https://unsplash.com/illustrations/a-cartoon-orange-cat-with-a-long-tail-Mgi4xVhDZAQ>.
+
+Ce logo peut être utilisé librement dans votre projet. La personne qui a créé ce
+logo est
+[Public domain vectors](https://unsplash.com/@publicdomainvectors/illustrations)
+sur [Unsplash](https://unsplash.com/).
+
+Téléchargez ce logo au format SVG et ajoutez-le dans un dossier `images/` de
+manière à ce que la structure de votre projet ressemble à ceci :
+
+```text
+├── exercices/
+├── mini-projet/
+│   └── public/
+│       ├── images/
+│       │   └── logo.svg
+│       ├── index.php
+│       └── view.php
+├── demo.php
+└── exception.php
+```
+
+En suivant les mêmes étapes que précédemment, sauvegardez tous les fichiers et
+effectuez un commit Git pour enregistrer cette étape de développement dans
+l'historique Git de votre projet avec le message de commit "Ajout du logo à la
+structure de fichier" et poussez ce commit sur le dépôt distant.
+
+#### Inclure cette image dans la page d'accueil
+
+Pour inclure cette image dans la page d'accueil, vous pouvez utiliser la balise
+`<img>` dans la section `<main>` de votre fichier `index.php` pour afficher le
+logo.
+
+Voici comment inclure le logo dans la page d'accueil (dans le fichier
+`mini-projet/src/index.php`) :
+
+> [!TIP]
+>
+> Cet affichage est ce qu'on appelle un "diff" (différence) entre la version
+> précédente du fichier et la nouvelle version du fichier après les
+> modifications.
+>
+> Le diff met en évidence les lignes qui ont été ajoutées, modifiées ou
+> supprimées dans le fichier.
+>
+> Les premières lignes sont un entête indiquant les fichiers concernés par le
+> diff, ainsi que les numéros de version des fichiers avant et après les
+> modifications. Vous pouvez les ignorer pour le moment.
+>
+> Ensuite vient le corps du diff. Les lignes précédées d'un signe `+` sont les
+> lignes ajoutées, les lignes précédées d'un signe `-` sont les lignes
+> supprimées, et les lignes sans signe sont les lignes qui n'ont pas été
+> modifiées. Cela permet de visualiser rapidement les changements apportés au
+> fichier.
+>
+> Il s'agit d'une des multiples fonctionnalités de Git pour suivre les
+> modifications dans les fichiers à l'aide de la commande `git diff`.
+>
+> La documentation officielle de Git sur la commande `git diff` est disponible à
+> l'adresse suivante : <https://git-scm.com/docs/git-diff>.
+
+```diff
+TODO
+```
+
+Sauvegardez le fichier et accédez à l'adresse
+<http://localhost:8080/mini-projet/public/index.php> dans votre navigateur web
+pour voir la page d'accueil de votre application de gestion de tâches avec le
+logo affiché.
+
+Vous devriez maintenant voir le logo affiché dans la page d'accueil de votre
+application de gestion de tâches.
+
+Pour le moment, la mise en page du logo est assez basique, nous allons ajouter
+des styles CSS personnalisés pour améliorer l'apparence du logo dans la page
+d'accueil dans la section suivante.
+
+### Ajouter des styles CSS personnalisés
+
+Dans l'état actuel, certains aspects de l'application de gestion de tâches ne
+sont pas encore optimisés pour une bonne expérience utilisateur :
+
+- Le logo n'est pas parfaitement adapté à l'affichage dans la page d'accueil.
+- Si le contenu de la page ne prend pas toute la place disponible, le pied de
+  page peut être affiché au milieu de la page au lieu d'être collé en bas de la
+  page.
+
+Dans cette section, nous allons ajouter des styles CSS personnalisés pour
+résoudre ces problèmes.
+
+#### Ajuster l'apparence du logo dans la page d'accueil
+
+Sans doute que cette image de logo n'est pas parfaitement adaptée à l'affichage
+dans la page d'accueil de votre application de gestion de tâches, et que vous
+souhaitez ajuster sa taille ou son positionnement pour améliorer l'apparence de
+la page d'accueil.
+
+Pour cela, nous allons ajouter un style CSS personnalisé dans la section
+`<head>` de votre fichier `index.php` pour ajuster l'apparence du logo.
+
+Commençons par créer un dossier `css/` à la racine de votre mini-projet, et y
+créer un fichier `styles.css` pour stocker les styles CSS personnalisés de votre
+application :
+
+```text
+├── exercices/
+├── mini-projet/
+│   └── public/
+│       ├── css/
+│       │   └── styles.css
+│       ├── images/
+│       │   └── logo.svg
+│       ├── index.php
+│       └── view.php
+├── demo.php
+└── exception.php
+```
+
+Ensuite, ajoutez un lien vers ce fichier CSS personnalisé dans la section
+`<head>` de votre fichier `index.php` :
+
+```diff
+TODO
+```
+
+Enfin, ajoutez les styles CSS suivants dans le fichier `css/styles.css` pour
+ajuster l'apparence du logo dans la page d'accueil :
+
+```css
+/* Classe personnalisée pour le logo */
+.logo {
+	margin-bottom: 10px;
+	width: 200px;
+	padding: 20px;
+	border-radius: 100%;
+	background-color: #0172ad;
+}
+```
+
+La classe `logo` est déjà utilisée dans la balise `<div>` qui enveloppe l'image
+du logo dans le fichier `index.php`, ce qui permet d'appliquer ces styles CSS
+personnalisés à l'image du logo.
+
+Sauvegardez tous les fichiers rafraîchissez la page d'accueil dans votre
+navigateur.
+
+Le logo devrait maintenant être mieux adapté à l'affichage dans la page
+d'accueil de votre application de gestion de tâches, avec une taille ajustée et
+un style plus attrayant.
+
+#### Coller le pied de page en bas de la page
+
+Dans l'état actuel, si le contenu de la page d'accueil de votre application de
+gestion de tâches ne prend pas toute la place disponible, le pied de page peut
+être affiché au milieu de la page au lieu d'être collé en bas de la page.
+
+Pour résoudre ce problème, nous allons ajouter des styles CSS personnalisés pour
+coller le pied de page en bas de la page, même si le contenu de la page n'occupe
+pas toute la place disponible.
+
+Pour cela, ajoutez les styles CSS suivants dans le fichier
+`mini-projet/public/css/styles.css` pour coller le pied de page en bas de la
+page :
+
+```css
+/* Styles pour que l'élément principal de la page prenne toute la hauteur disponible */
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex: 1;
+}
+```
+
+Ces styles CSS utilisent Flexbox pour faire en sorte que le contenu principal de
+la page prenne toute la place disponible, ce qui permet de coller le pied de
+page en bas de la page même si le contenu de la page n'occupe pas toute la place
+disponible.
+
+Sauvegardez tous les fichiers et rafraîchissez la page d'accueil dans votre
+navigateur.
+
+Le pied de page devrait maintenant être collé en bas de la page, même si le
+contenu de la page n'occupe pas toute la place disponible, ce qui améliore
+l'apparence de la page d'accueil de votre application.
+
+### Tester la page d'accueil
+
+Afin de tester la page d'accueil de votre application de gestion de tâches,
+accédez à la page d'accueil de votre application à l'adresse suivante :
+<http://localhost:8080/mini-projet/index.php>.
+
+Vous devriez voir une page d'accueil avec un menu de navigation, un logo, et la
+liste de tâches pré-définies.
+
+Pour tester quelques fonctionnalités de base de votre application, ouvrez les
+outils de développement de votre navigateur (généralement accessibles avec la
+touche F12 ou en faisant un clic droit sur la page et en sélectionnant
+"Inspecter").
+
+Si besoin, les instructions suivantes peuvent vous aider à ouvrir les outils de
+développement dans différents navigateurs :
+
+- **Google Chrome** (et autres navigateurs basés sur Chromium, comme Microsoft
+  Edge) :
+  - Ouvrez le menu (trois points verticaux en haut à droite).
+  - Allez dans "Plus d'outils" > "Outils de développement" ou appuyez sur
+    <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows/Linux) ou
+    <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> (Mac).
+- **Mozilla Firefox** :
+  - Ouvrez le menu (trois lignes horizontales en haut à droite).
+  - Allez dans "Développement web" > "Outils de développement" ou appuyez sur
+    <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows/Linux) ou
+    <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> (Mac).
+- **Safari** :
+  - Allez dans "Safari" > "Préférences" > "Avancé".
+  - Cochez la case "Afficher le menu Développement dans la barre de menus".
+  - Allez dans "Développement" > "Afficher l'inspecteur Web" ou appuyez sur
+    <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>I</kbd>.
+
+Tester ensuite les fonctionnalités suivantes de votre application de gestion de
+tâches :
+
+- Essayez de passer l'application en mode sombre pour vérifier que les styles
+  CSS de Pico CSS s'adaptent correctement au thème sombre.
+- Essayez de redimensionner la fenêtre du navigateur pour vérifier que les
+  styles CSS de Pico CSS s'adaptent correctement à différentes tailles d'écran
+  (responsive design).
+
+### Arrêter le serveur web Apache
 
 Pour le moment, nous nous arrêterons là pour la création de la structure de base
 du projet et des fichiers nécessaires pour le mini-projet et les exercices. Nous
 allons continuer à construire cette structure au fur et à mesure du cours dans
 de futures séances.
 
-Vous pouvez maintenant arrêter le serveur de développement PHP en appuyant sur
-<kbd>Ctrl</kbd> + <kbd>C</kbd> dans le terminal intégré de Visual Studio Code.
+Vous pouvez maintenant arrêter Apache en appuyant sur <kbd>Ctrl</kbd> +
+<kbd>C</kbd> dans le terminal intégré de Visual Studio Code.
 
 Le résultat devrait être similaire à celui-ci dans le terminal :
 
 ```text
-[Tue Apr  7 17:31:16 2026] 127.0.0.1:45964 Closing
+Gracefully Stopping... press Ctrl+C again to force
+Container apache Stopping
+apache  | [Wed Nov 18 22:07:18.699553 2026] [mpm_prefork:notice] [pid 1:tid1] AH00170: caught SIGWINCH, shutting down gracefully
+Container apache Stopped
+apache exited with code 0
 ```
 
-Le serveur de développement PHP a été arrêté avec succès, ce qui signifie que
-vous reprenez le contrôle de votre terminal intégré dans Visual Studio Code et
-que vous pouvez exécuter d'autres commandes ou redémarrer le serveur de
-développement PHP plus tard en exécutant à nouveau la commande nécessaire.
+Le serveur web Apache a été arrêté avec succès, ce qui signifie que vous
+reprenez le contrôle de votre terminal intégré dans Visual Studio Code et que
+vous pouvez exécuter d'autres commandes ou redémarrer le serveur webApache plus
+tard en exécutant à nouveau la commande nécessaire.
 
 ## Ajouter les fichiers au contrôle de version avec Git
 
@@ -1590,18 +1323,17 @@ Your branch is up to date with 'origin/main'.
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
+        demo.php
         exception.php
-        exercices/
-        index.php
-        phpinfo.php
+        mini-projet/
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
 Les fichiers sous la section "Untracked files" sont les fichiers que nous avons
-créés pour le mini-projet et les exercices, mais qui ne sont pas encore suivis
-par Git. Cela signifie que Git ne les inclura pas dans les prochains commits
-tant que nous ne les aurons pas ajoutés au suivi.
+créés, mais qui ne sont pas encore suivis par Git. Cela signifie que Git ne les
+inclura pas dans les prochains commits tant que nous ne les aurons pas ajoutés
+au suivi.
 
 ### Ajouter les fichiers au suivi avec Git
 
@@ -1637,10 +1369,10 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        new file:   exception.php
-        new file:   exercices/index.php
-        new file:   index.php
-        new file:   phpinfo.php
+        new file:   mini-projet/public/css/styles.css
+        new file:   mini-projet/public/images/logo.svg
+        new file:   mini-projet/public/index.php
+        new file:   mini-projet/public/view.php
 ```
 
 Les fichiers sous la section "Changes to be committed" sont les fichiers qui ont
@@ -1731,7 +1463,7 @@ Delta compression using up to 16 threads
 Compressing objects: 100% (5/5), done.
 Writing objects: 100% (7/7), 1.40 KiB | 1.40 MiB/s, done.
 Total 7 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
-To github.com:heig-vd-progserv-course-classroom/progserv1-2025-2026-mini-projet-et-exercices-ludelafo.git
+To github.com:heig-vd-progserv-course-classroom/progserv1-2026-2027-mini-projet-et-exercices-ludelafo.git
    145a17e..d3c39b8  main -> main
 ```
 
@@ -1747,37 +1479,6 @@ application web pour le mini-projet, et nous avons également appris à utiliser
 Git pour suivre les changements dans notre projet et à pousser ces changements
 vers GitHub pour les partager avec les autres.
 
-## Cloner le dépôt GitHub du cours
-
-En utilisant tout ce que vous avez acquis dans cette première séance de
-mini-projet, clonez le dépôt GitHub du cours pour accéder aux exemples de code.
-
-Le dépôt GitHub du cours est accessible à l'adresse suivante :
-<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course>.
-
-Assurez-vous de cloner le dépôt GitHub du cours dans un emplacement différent de
-celui où vous avez cloné votre dépôt GitHub privé pour le mini-projet et les
-exercices, afin d'éviter tout conflit entre les deux dépôts.
-
-Ouvrez-le ensuite dans Visual Studio Code pour explorer les exemples de code et
-les ressources fournies dans le dépôt du cours, qui pourront vous être utiles
-pour le développement de votre application PHP pour le mini-projet.
-
-## Cloner le dépôt GitHub de la solution au mini-projet
-
-En utilisant tout ce que vous avez acquis dans cette première séance de
-mini-projet, clonez le dépôt GitHub du cours pour accéder aux exemples de code.
-
-Le dépôt GitHub du cours est accessible à l'adresse suivante :
-<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course-mini-project-solution>.
-
-Assurez-vous de cloner le dépôt GitHub du cours dans un emplacement différent de
-celui où vous avez cloné votre dépôt GitHub privé pour le mini-projet et les
-exercices, afin d'éviter tout conflit entre les deux dépôts.
-
-Vous trouverez plus d'informations sur la solution du mini-projet dans la
-section [Solution](#solution) ci-dessous.
-
 ## Conclusion
 
 Dans cette première séance de mini-projet, vous avez installé et configuré un
@@ -1786,16 +1487,8 @@ conteneur de développement, vous avez mis en place un environnement de
 développement complet pour écrire, tester et déboguer des applications PHP qui
 vous sera utile pour les séances et les cours à venir.
 
-Vous avez également initialisé un projet PHP pour les exercices et testé
-l'initialisation du projet avec les différentes pages HTML qui seront utilisées
-durant le reste du cours.
-
-De plus, vous avez appris à utiliser Git pour suivre les changements dans votre
-projet et à cloner les dépôts GitHub du cours pour accéder aux exemples de code
-et à la solution du mini-projet.
-
 Vous avez maintenant le nécessaire pour construire l'application web pour gérer
-les animaux de compagnie dans les prochaines séances du mini-projet !
+des tâches dans les prochaines séances du mini-projet !
 
 Nous vous invitons maintenant à passer aux exemples de code et aux exercices de
 la séance comme indiqué dans le [contenu principal](../README.md).
@@ -1810,7 +1503,7 @@ la séance comme indiqué dans le [contenu principal](../README.md).
 
 La solution du mini-projet est accessible dans un dépôt GitHub dédié à l'adresse
 suivante :
-<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course-mini-project-solution/tree/session-1>.
+<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course-mini-project-solution>.
 
 Afin d'utiliser cette solution de manière efficace pour votre apprentissage,
 nous vous recommandons de suivre les étapes suivantes :
@@ -1822,16 +1515,10 @@ nous vous recommandons de suivre les étapes suivantes :
    étapes du développement d'une application PHP.
 2. Clonez le dépôt GitHub de la solution localement sur votre ordinateur en
    utilisant la commande `git clone` avec l'URL du dépôt de la solution.
-3. Récupérez la dernière version du dépôt de la solution en utilisant les
-   commandes `git checkout main` et `git pull` pour vous assurer d'avoir la
-   version la plus récente de la solution.
-4. Accédez à la version spécifique de la solution correspondant à la séance en
-   utilisant la commande `git checkout` avec le commit ou le tag correspondant à
-   la séance (par exemple, `git checkout session-1`).
-5. Explorez le code de la solution pour comprendre comment les différentes
+3. Explorez le code de la solution pour comprendre comment les différentes
    fonctionnalités ont été implémentées et comment les concepts appris ont été
    appliqués dans la solution.
-6. Comparez votre propre version du mini-projet avec la solution pour identifier
+4. Comparez votre propre version du mini-projet avec la solution pour identifier
    les différences et les similitudes, et pour comprendre les différentes
    approches possibles pour résoudre les problèmes rencontrés lors du
    développement de votre application PHP.

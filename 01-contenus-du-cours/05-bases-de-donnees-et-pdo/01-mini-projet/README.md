@@ -2396,6 +2396,9 @@ document
 [Déployer un site ou une application web sur Internet](../../06.02-deployer-un-site-ou-une-application-web-sur-internet/README.md)
 pour la rendre accessible à d'autres personnes sur Internet.
 
+Nous vous invitons maintenant à passer aux exemples de code et aux exercices de
+la séance comme indiqué dans le [contenu principal](../README.md).
+
 ## Solution
 
 > [!NOTE]
@@ -2406,7 +2409,7 @@ pour la rendre accessible à d'autres personnes sur Internet.
 
 La solution du mini-projet est accessible dans un dépôt GitHub dédié à l'adresse
 suivante :
-<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course-mini-project-solution/tree/session-5>.
+<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course-mini-project-solution>.
 
 Afin d'utiliser cette solution de manière efficace pour votre apprentissage,
 nous vous recommandons de suivre les étapes suivantes :
@@ -2418,16 +2421,10 @@ nous vous recommandons de suivre les étapes suivantes :
    étapes du développement d'une application PHP.
 2. Clonez le dépôt GitHub de la solution localement sur votre ordinateur en
    utilisant la commande `git clone` avec l'URL du dépôt de la solution.
-3. Récupérez la dernière version du dépôt de la solution en utilisant les
-   commandes `git checkout main` et `git pull` pour vous assurer d'avoir la
-   version la plus récente de la solution.
-4. Accédez à la version spécifique de la solution correspondant à la séance en
-   utilisant la commande `git checkout` avec le commit ou le tag correspondant à
-   la séance (par exemple, `git checkout session-1`).
-5. Explorez le code de la solution pour comprendre comment les différentes
+3. Explorez le code de la solution pour comprendre comment les différentes
    fonctionnalités ont été implémentées et comment les concepts appris ont été
    appliqués dans la solution.
-6. Comparez votre propre version du mini-projet avec la solution pour identifier
+4. Comparez votre propre version du mini-projet avec la solution pour identifier
    les différences et les similitudes, et pour comprendre les différentes
    approches possibles pour résoudre les problèmes rencontrés lors du
    développement de votre application PHP.

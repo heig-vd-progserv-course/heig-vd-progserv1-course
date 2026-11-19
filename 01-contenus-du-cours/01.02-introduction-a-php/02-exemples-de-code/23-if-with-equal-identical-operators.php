@@ -9,15 +9,24 @@ if ($a == $b) {
     echo "a is equal to b (same value)";
 }
 
+// Affichage d'une nouvelle ligne dans le navigateur
+echo "<br>";
+
 // Vérification si `$a` est égal à `$c`)
 if ($a == $c) {
     echo "a is equal to c (same value)";
 }
 
+// Affichage d'une nouvelle ligne dans le navigateur
+echo "<br>";
+
 // Vérification si `$a` est égal (identique) à `$b`
 if ($a === $b) {
     echo "a is identical to b (same value and type)";
 }
+
+// Affichage d'une nouvelle ligne dans le navigateur
+echo "<br>";
 
 // Vérification si `$a` est égal (identique) à `$c`
 if ($a === $c) {

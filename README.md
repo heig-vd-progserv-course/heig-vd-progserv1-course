@@ -13,9 +13,9 @@ Suisse !
 
 - Expliquer les bases d'un langage de programmation serveur comme PHP et son
   rôle dans le monde web.
-- Organiser un code propre à l'aide de fonctions.
 - Manipuler des tableaux et utiliser des boucles pour traiter des collections de
   données.
+- Organiser un code propre à l'aide de fonctions.
 - Gérer les formulaires et les données qu'ils contiennent.
 - Persister des données dans une base de données.
 
@@ -30,7 +30,7 @@ Vous ne savez pas par où commencer ? Jetez un œil aux
 [Introduction et organisation du cours](./01-contenus-du-cours/01.01-introduction-et-organisation-du-cours/README.md)
 pour en savoir plus.
 
-## 📅 Programme
+## 📅 Programme 2026-2027
 
 Les détails de chaque séance composant le cours sont disponibles ci-dessous.
 Chaque séance est détaillée avec les contenus, les objectifs, les méthodes
@@ -39,10 +39,10 @@ d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 | Séance | Contenu(s)                                                                                                                                                                                                                                                                                       | État[^etat] |
 | -----: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- |
 |     01 | [Introduction et organisation du cours](./01-contenus-du-cours/01.01-introduction-et-organisation-du-cours/README.md) + [Introduction à PHP](./01-contenus-du-cours/01.02-introduction-a-php/README.md)                                                                                          | 🟢 Prêt     |
-|     02 | [Tableaux et boucles](./01-contenus-du-cours/02-tableaux-et-boucles/README.md)                                                                                                                                                                                                                   | 🟢 Prêt     |
-|     03 | [Fonctions](./01-contenus-du-cours/03-fonctions/README.md)                                                                                                                                                                                                                                       | 🟢 Prêt     |
-|     04 | [Formulaires HTML et validation](./01-contenus-du-cours/04-formulaires-html-et-validation/README.md)                                                                                                                                                                                             | 🟢 Prêt     |
-|     05 | [Bases de données et PDO](./01-contenus-du-cours/05-bases-de-donnees-et-pdo/README.md)                                                                                                                                                                                                           | 🟢 Prêt     |
+|     02 | [Tableaux et boucles](./01-contenus-du-cours/02-tableaux-et-boucles/README.md)                                                                                                                                                                                                                   | 🟡 En cours |
+|     03 | [Fonctions](./01-contenus-du-cours/03-fonctions/README.md)                                                                                                                                                                                                                                       | 🟡 En cours |
+|     04 | [Formulaires HTML et validation](./01-contenus-du-cours/04-formulaires-html-et-validation/README.md)                                                                                                                                                                                             | 🟡 En cours |
+|     05 | [Bases de données et PDO](./01-contenus-du-cours/05-bases-de-donnees-et-pdo/README.md)                                                                                                                                                                                                           | 🟡 En cours |
 |     06 | [Récapitulatif du cours et préparation à l'examen](./01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-lexamen/README.md) + [Déployer un site ou une application web sur Internet](./01-contenus-du-cours/06.02-deployer-un-site-ou-une-application-web-sur-internet/README.md) | 🟢 Prêt     |
 
 ## 📜 Licence

@@ -14,6 +14,8 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 >   [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/01.02-introduction-a-php/presentation.html)
 >   ·
 >   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/01.02-introduction-a-php/01.02-introduction-a-php-presentation.pdf).
+> - Activités en classe :
+>   [Impressions](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/01.02-introduction-a-php/01.02-introduction-a-php-impressions.pdf).
 > - Mini-projet : [Consignes](./01-mini-projet/README.md).
 > - Exemples de code : [Code source](./02-exemples-de-code/README.md).
 > - Exercices : [Énoncés et solutions](./03-exercices/README.md).
@@ -62,13 +64,14 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 ## Table des matières
 
 - [Table des matières](#table-des-matières)
+- [Exploration du mini-projet](#exploration-du-mini-projet)
 - [Objectifs](#objectifs)
-- [Avant de commencer...](#avant-de-commencer)
 - [Qu'est-ce que PHP](#quest-ce-que-php)
 - [Applications web et architecture client-serveur](#applications-web-et-architecture-client-serveur)
 - [Comment fonctionne PHP](#comment-fonctionne-php)
 - [Comment écrire du code PHP](#comment-écrire-du-code-php)
 - [Comment exécuter du code PHP](#comment-exécuter-du-code-php)
+- [Où trouver des ressources d'aide et de documentation sur PHP](#où-trouver-des-ressources-daide-et-de-documentation-sur-php)
 - [Syntaxe de base de PHP](#syntaxe-de-base-de-php)
   - [Les commentaires](#les-commentaires)
   - [Les variables](#les-variables)
@@ -82,6 +85,13 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 - [Questions d'évaluation](#questions-dévaluation)
 - [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
 
+## Exploration du mini-projet
+
+Avant de commencer, explorez le mini-project à l'aide du document
+[Activités en classe](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/01.02-introduction-a-php/01.02-introduction-a-php-impressions.pdf)
+et du site web déployé pour le mini-projet :
+<https://progserv1.heig-vd-progserv-course.ch>.
+
 ## Objectifs
 
 Ce premier contenu théorique a pour but de vous donner une introduction à PHP.
@@ -91,21 +101,6 @@ la suite du cours.
 
 La liste complète des objectifs est disponible dans la section _"Objectifs"_ du
 bloc d'information en haut de ce contenu.
-
-## Avant de commencer...
-
-Explorez le mini-projet en ligne :
-<https://progserv1.heig-vd-progserv-course.ch>.
-
-Essayez de répondre aux questions suivantes à propos du mini-projet :
-
-- Quelles fonctionnalités propose-t-il ?
-- Quels sont les éléments qui le composent ?
-- Comment fonctionne-t-il ?
-- Quelles sont les limitations ?
-
-Vous devriez obtenir les réponses à ces questions au fur et à mesure que vous
-avancerez dans le cours !
 
 ## Qu'est-ce que PHP
 
@@ -144,8 +139,8 @@ entre le client et le serveur.
 PHP est un langage de programmation côté serveur, ce qui signifie que le code
 PHP est exécuté sur le serveur web, et non pas dans le navigateur du client.
 
-Il utilise une architecture client-serveur pour générer du HTML à partir du code
-PHP, qui est ensuite envoyé au navigateur du client pour être affiché.
+Il utilise une architecture client-serveur pour générer du code HTML à partir du
+code PHP, qui est ensuite envoyé au navigateur du client pour être affiché.
 
 De façon plus concise, pour écrire et exécuter du code PHP, vous avez besoin de
 :
@@ -159,23 +154,24 @@ De façon plus concise, pour écrire et exécuter du code PHP, vous avez besoin 
 
 Le serveur web reçoit les requêtes du client, les envoie à l'interpréteur PHP
 (le moteur PHP qui est capable de lire et d'exécuter du code PHP),
-l'interpréteur PHP exécute le code PHP qui va générer du HTML, l'interpréteur le
-renvoie au serveur web qui enverra ensuite le résultat au navigateur du client.
-Le client réceptionnera le HTML et pourra directement l'afficher.
+l'interpréteur PHP exécute le code PHP qui va générer du code HTML,
+l'interpréteur le renvoie au serveur web qui enverra ensuite le résultat au
+navigateur du client. Le client réceptionnera le code HTML et pourra directement
+l'afficher.
 
 PHP est exécuté sur le serveur en partenariat avec le serveur web, pour générer
-du HTML, qui est ensuite envoyé au navigateur du client qui l'affiche
+du code HTML, qui est ensuite envoyé au navigateur du client qui l'affiche
 simplement.
 
 ![Architecture client-serveur avec PHP](./images/architecture-client-serveur-avec-php.svg)
 
 Le client (votre navigateur) envoie une requête pour demander une page web au
 serveur. Ces pages web, tels que `index.php`, sont des fichiers PHP qui
-contiennent du code PHP et du HTML.
+contiennent du code PHP et du code HTML.
 
 Le serveur web reçoit la requête, exécute le code PHP dans le fichier
-`index.php` pour générer du HTML, et renvoie ce HTML au navigateur du client,
-qui l'affiche sur la page web.
+`index.php` pour générer du code HTML, et renvoie ce code HTML au navigateur du
+client, qui l'affiche sur la page web.
 
 ## Comment écrire du code PHP
 
@@ -190,6 +186,22 @@ Voici un exemple de code PHP simple :
 <?php
 echo "Hello, World!";
 ```
+
+<details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+Hello, World!
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+Hello, World!
+```
+
+</details>
 
 Vous remarquez qu'il n'y a pas de balise de fermeture `?>` à la fin du fichier
 car le fichier ne contient que du code PHP. S'il y a du code HTML après le code
@@ -242,6 +254,33 @@ un exemple :
 </html>
 ```
 
+<details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PHP Test</title>
+</head>
+
+<body>
+    <h1>Hello, World!</h1>
+</body>
+
+</html>
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+Hello, World!
+```
+
+</details>
+
 Dans cet exemple, le texte _"Hello, World!"_ est affiché dans un titre de niveau
 1 (`<h1>`) sur la page web.
 
@@ -260,7 +299,8 @@ de démarrer rapidement avec PHP, comme par exemple
 [WampServer pour Windows](https://www.wampserver.com/),
 [MAMP pour macOS](https://www.mamp.info/),
 [XAMPP pour Windows, macOS et Linux](https://www.apachefriends.org/download.html)
-ou encore [Docker](https://docker.com/).
+ou encore [Docker](https://docker.com/) et
+[Docker Compose](https://docs.docker.com/compose/).
 
 Ces solutions regroupent les logiciels nécessaires pour exécuter du code PHP,
 notamment un serveur web, PHP et parfois même une base de données et
@@ -268,9 +308,11 @@ fonctionnent selon le même principe d'architecture client-serveur vu
 précédemment.
 
 Dans le cadre de ce cours, nous allons utiliser Docker pour exécuter du code PHP
-à l'aide d'un conteneur de développement directement dans Visual Studio Code.
+à l'aide d'un conteneur de développement directement dans Visual Studio Code. Il
+s'agit d'une des solutions les plus modernes et efficaces pour développer des
+applications web avec PHP.
 
-Un conteneur de développement (_"Dev container"_ en anglais -
+Un conteneur de développement ("Dev container" en anglais -
 <https://containers.dev/>) est un environnement de développement isolé qui
 fonctionne à l'intérieur d'un conteneur Docker. Il permet de développer des
 applications dans un environnement cohérent et reproductible, sans avoir à
@@ -315,9 +357,9 @@ manière efficace.
 > Apprendre un nouveau langage de programmation peut être difficile au début,
 > mais ne vous découragez pas !
 >
-> Une grande majorité de ce que vous avez appris en Java est transférable à PHP,
-> et vous serez surpris de voir à quel point vous êtes déjà familier avec la
-> syntaxe de PHP.
+> Une grande majorité de ce que vous avez appris en Java, HTML et CSS est
+> transférable à PHP, et vous serez surpris de voir à quel point vous êtes déjà
+> familier avec la syntaxe de PHP.
 
 Voici quelques bases pour commencer.
 
@@ -354,12 +396,34 @@ $variable = "Hello, World!";
 // Affichage de la variable
 echo $variable;
 
+// Affiche une nouvelle ligne dans le navigateur
+echo "<br>";
+
 // Modification de la variable
 $variable = "Goodbye, World!";
 
 // Affichage de la variable modifiée
 echo $variable;
 ```
+
+</details>
+
+<details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+Hello, World!<br>Goodbye, World!
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+Hello, World!
+Goodbye, World!
+```
+
+</details>
 
 <details>
 <summary>Afficher l'équivalent en Java</summary>
@@ -381,8 +445,6 @@ public class Main {
     }
 }
 ```
-
-</details>
 
 #### Type de données et typage dynamique
 
@@ -452,6 +514,16 @@ echo $string;
 ```
 
 <details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+Hello, World!
+```
+
+</details>
+
+<details>
 <summary>Afficher l'équivalent en Java</summary>
 
 ```java
@@ -476,6 +548,16 @@ $second = "World!";
 
 echo $first . $second;
 ```
+
+<details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+Hello, World!
+```
+
+</details>
 
 <details>
 <summary>Afficher l'équivalent en Java</summary>
@@ -504,6 +586,16 @@ $name = "World";
 echo "$greetings, $name!";
 ```
 
+<details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+Hello, World!
+```
+
+</details>
+
 Il est aussi possible d'utiliser des guillemets simples (`'`) pour déclarer des
 chaînes de caractères :
 
@@ -513,6 +605,16 @@ $string = 'Hello, World!';
 
 echo $string;
 ```
+
+<details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+Hello, World!
+```
+
+</details>
 
 La différence entre les guillemets simples (`'`) et les guillemets doubles (`"`)
 est que les guillemets simples ne permettent pas d'interpréter les variables.
@@ -532,6 +634,23 @@ echo "<br>";
 echo "$greetings, $name!";
 ```
 
+<details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+$greetings, $name!<br>Hello, World!
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+$greetings, $name!
+Hello, World!
+```
+
+</details>
+
 Il est possible d'échapper des caractères spéciaux avec le caractère
 d'échappement (`\`) :
 
@@ -541,6 +660,16 @@ $string = "Hello, \"World\"!";
 
 echo "\$string contains $string";
 ```
+
+<details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+$string contains "Hello, World!"
+```
+
+</details>
 
 #### Les nombres
 
@@ -559,6 +688,23 @@ $float = 3.14;
 echo "\$integer contains $integer<br>";
 echo "\$float contains $float";
 ```
+
+<details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+myInteger contains 42<br>myFloat contains 3.14
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+myInteger contains 42
+myFloat contains 3.14
+```
+
+</details>
 
 <details>
 <summary>Afficher l'équivalent en Java</summary>
@@ -603,6 +749,26 @@ $doILikeHomework = false;
 echo "\$doILikeDogs contains $doILikeDogs<br>";
 echo "\$doILikeHomework contains $doILikeHomework";
 ```
+
+<details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+doILikeDogs contains 1<br>doILikeHomework contains
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+doILikeDogs contains 1
+doILikeHomework contains
+```
+
+Remarquez que la valeur `true` est affichée comme `1` et la valeur `false` est
+affichée comme une chaîne vide.
+
+</details>
 
 <details>
 <summary>Afficher l'équivalent en Java</summary>
@@ -651,6 +817,23 @@ echo "$array[2]";
 ```
 
 <details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+apple<br>cherry
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+apple
+cherry
+```
+
+</details>
+
+<details>
 <summary>Afficher l'équivalent en Java</summary>
 
 ```java
@@ -687,12 +870,36 @@ const CONSTANT = "Hello, World!";
 // Affichage de la constante
 echo CONSTANT;
 
+// Affichage d'une nouvelle ligne dans le navigateur
+echo "<br>";
+
 // Tentative de modification de la constante (erreur)
 CONSTANT = "Goodbye, World!";
 
 // Définition d'une constante (alternative)
 define("CONSTANT", "Hello, World!");
 ```
+
+<details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+Hello, World!<br>
+Parse error: syntax error, unexpected token "=" in 01-contenus-du-cours/01.02-introduction-a-php/02-exemples-de-code/15-constants.php on line 9
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+Hello, World!
+Parse error: syntax error, unexpected token "=" in 01-contenus-du-cours/01.02-introduction-a-php/02-exemples-de-code/15-constants.php on line 9
+```
+
+La tentative de modification de la constante a généré une erreur, car les
+constantes ne peuvent pas être modifiées après leur définition.
+
+</details>
 
 <details>
 <summary>Afficher l'équivalent en Java</summary>
@@ -714,23 +921,18 @@ public class Main {
 
 </details>
 
-Si vous essayez d'exécuter cet exemple, une erreur sera générée. Elle
-ressemblera à ceci :
-
-```text
-Parse error: syntax error, unexpected token "=" in 01-modalites-de-lunite-denseignement-et-introduction-a-php/exemples/15-constants.php on line 9
-```
-
 ### Les opérateurs
 
 Les opérateurs sont utilisés pour effectuer des opérations sur des variables et
 des valeurs. Voici quelques exemples :
 
+- Opérateurs d'affectation : `=` (affectation), `??` (affectation par
+  coalescence nulle).
 - Opérateurs arithmétiques : `+` (addition), `-` (soustraction), `*`
-  (multiplication), `/` (division), `%` (modulo)
+  (multiplication), `/` (division), `%` (modulo).
 - Opérateurs de comparaison : `===` (égal), `!==` (différent), `>` (supérieur),
-  `<` (inférieur)
-- Opérateurs logiques : `&&` (et), `||` (ou), `!` (non/inversion)
+  `<` (inférieur).
+- Opérateurs logiques : `&&` (et), `||` (ou), `!` (non/inversion).
 
 Voici quelques exemples :
 
@@ -746,6 +948,25 @@ echo "Difference: $difference<br>";
 echo "Product: $product<br>";
 echo "Quotient: $quotient<br>";
 ```
+
+<details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+Sum: 2<br>Difference: 1<br>Product: 4<br>Quotient: 2
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+Sum: 2
+Difference: 1
+Product: 4
+Quotient: 2
+```
+
+</details>
 
 <details>
 <summary>Afficher l'équivalent en Java</summary>
@@ -790,6 +1011,23 @@ echo "Modulo: $modulo";
 ```
 
 <details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+Modulo: 1<br>Modulo: 0
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+Modulo: 1
+Modulo: 0
+```
+
+</details>
+
+<details>
 <summary>Afficher l'équivalent en Java</summary>
 
 ```java
@@ -812,6 +1050,52 @@ public class Main {
 
 </details>
 
+Il existe un opérateur spécial en PHP appelé "l'opérateur d'affectation par
+coalescence nulle" (`??`), qui permet d'affecter une valeur à une variable
+uniquement si cette variable n'est pas déjà définie ou si elle est nulle. Il
+s'agit d'un nom bien compliqué mais son utilisation est simple :
+
+```php
+<?php
+// `$variable` n'est pas (encore) définie, donc elle sera affectée à "Default value"
+$variable = $variable ?? "Default value";
+
+echo "Variable: $variable<br>";
+
+$variable = "New value";
+
+// `$variable` est déjà définie, donc elle ne sera pas affectée à "Default value"
+$variable = $variable ?? "Default value";
+
+echo "Variable: $variable";
+```
+
+<details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+Variable: Default value<br>Variable: New value
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+Variable: Default value
+Variable: New value
+```
+
+</details>
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+Il n'existe pas d'équivalent direct à l'opérateur `??` en Java, mais nous
+pouvons obtenir un comportement similaire en utilisant une structure
+conditionnelle `if` ou un `if` ternaire (voir ci-dessous).
+
+</details>
+
 ### Les structures conditionnelles
 
 Les structures conditionnelles (parfois appelées _"structures de contrôle
@@ -821,6 +1105,8 @@ des conditions booléennes (vrai ou faux).
 
 Ces structures opèrent sur des blocs de code qui sont exécutés selon les
 conditions qui leur sont associées.
+
+#### Les structures `if`, `else` et `elseif`
 
 Voici un exemple d'une structure de contrôle conditionnelle `if` :
 
@@ -835,6 +1121,25 @@ if ($a < $b) {
     echo "a is less than b";
 }
 ```
+
+<details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+a is less than b
+```
+
+</details>
+
+Dans une première partie, nous déclarons deux variables numériques `$a` et `$b`.
+Puis, nous utilisons une structure de contrôle conditionnelle `if` pour vérifier
+si `$a` est inférieur à `$b`.
+
+Si c'est le cas, nous affichons un message.
+
+A l'inverse, si `$a` n'est pas inférieur à `$b`, le contenu du bloc `if` n'est
+pas exécuté.
 
 <details>
 <summary>Afficher l'équivalent en Java</summary>
@@ -856,15 +1161,6 @@ public class Main {
 
 </details>
 
-Dans une première partie, nous déclarons deux variables numériques `$a` et `$b`.
-Ensuite, nous utilisons une structure de contrôle conditionnelle `if` pour
-vérifier si `$a` est inférieur à `$b`.
-
-Si c'est le cas, nous affichons un message.
-
-A l'inverse, si `$a` n'est pas inférieur à `$b`, le contenu du bloc `if` n'est
-pas exécuté.
-
 Pour gérer le cas où la condition n'est pas remplie, nous pouvons utiliser une
 structure de contrôle conditionnelle `else` :
 
@@ -882,6 +1178,19 @@ if ($a < $b) {
     echo "a is greater than b";
 }
 ```
+
+<details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+a is less than b
+```
+
+</details>
+
+Dans cet exemple, si `$a` n'est pas supérieur à `$b`, le message _"a is less
+than b"_ est affiché.
 
 <details>
 <summary>Afficher l'équivalent en Java</summary>
@@ -906,9 +1215,6 @@ public class Main {
 
 </details>
 
-Dans cet exemple, si `$a` n'est pas supérieur à `$b`, le message _"a is less
-than b"_ est affiché.
-
 Finalement, il nous manque le cas où `$a` est égal à `$b`. Pour gérer ce cas,
 nous pouvons utiliser une structure de contrôle conditionnelle `elseif` :
 
@@ -929,6 +1235,18 @@ if ($a < $b) {
     echo "a is greater than b";
 }
 ```
+
+<details>
+<summary>Afficher le résultat de l'exécution du code Java</summary>
+
+```java
+a is equal to b
+```
+
+</details>
+
+Dans cet exemple, si `$a` est égal à `$b`, le message _"a is equal to b"_ est
+affiché.
 
 <details>
 <summary>Afficher l'équivalent en Java</summary>
@@ -956,9 +1274,6 @@ public class Main {
 
 </details>
 
-Dans cet exemple, si `$a` est égal à `$b`, le message _"a is equal to b"_ est
-affiché.
-
 Lorsque l'on a plusieurs conditions à vérifier au sein d'un même bloc, il est
 possible d'utiliser les opérateurs logiques `&&` (et) et `||` (ou) pour les
 combiner.
@@ -975,6 +1290,16 @@ if ($age >= 18 && $country === "Switzerland") {
     echo "You are allowed to vote in Switzerland.";
 }
 ```
+
+<details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+You are allowed to vote in Switzerland.
+```
+
+</details>
 
 <details>
 <summary>Afficher l'équivalent en Java</summary>
@@ -996,6 +1321,158 @@ public class Main {
 ```
 
 </details>
+
+#### Les opérateurs `==` et `===`
+
+Il existe deux formes d'opérateurs de comparaison en PHP :
+
+- L'opérateur `==` qui vérifie l'égalité entre deux valeurs en comparant
+  uniquement leur contenu.
+- L'opérateur `===` qui vérifie l'égalité entre deux valeurs en comparant à la
+  fois leur contenu et leur type.
+
+```php
+<?php
+// Déclaration de deux variables numériques
+$a = 0;
+$b = 0;
+$c = "0";
+
+// Vérification si `$a` est égal à `$b`)
+if ($a == $b) {
+    echo "a is equal to b (same value)";
+}
+
+// Affichage d'une nouvelle ligne dans le navigateur
+echo "<br>";
+
+// Vérification si `$a` est égal à `$c`)
+if ($a == $c) {
+    echo "a is equal to c (same value)";
+}
+
+// Affichage d'une nouvelle ligne dans le navigateur
+echo "<br>";
+
+// Vérification si `$a` est égal (identique) à `$b`
+if ($a === $b) {
+    echo "a is identical to b (same value and type)";
+}
+
+// Affichage d'une nouvelle ligne dans le navigateur
+echo "<br>";
+
+// Vérification si `$a` est égal (identique) à `$c`
+if ($a === $c) {
+    echo "a is identical to c (same value and type)";
+} else {
+    echo "a is not identical to c (different type)";
+}
+```
+
+<details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+a is equal to b (same value)<br>a is equal to c (same value)<br>a is identical to b (same value and type)<br>a is not identical to c (different type)
+```
+
+Votre navigateur va recevoir ce code HTML et l'afficher comme suit :
+
+```text
+a is equal to b (same value)
+a is equal to c (same value)
+a is identical to b (same value and type)
+a is not identical to c (different type)
+```
+
+</details>
+
+Utilisez toujours `===`/`!==` sauf si vous avez une bonne raison de faire
+autrement pour garantir un bon fonctionnement de votre code et éviter des
+erreurs difficiles à détecter.
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+Il n'existe pas d'équivalent direct en Java pour les opérateurs `==` et `===` de
+PHP mais vous retrouverez un comportement similaire en JavaScript dans un futur
+cours.
+
+</details>
+
+#### Les `if` ternaires
+
+L'opérateur ternaire ("shorthand if" en anglais) est une forme abrégée de la
+structure conditionnelle `if` :
+
+```php
+<?php
+// Déclaration d'une variable
+$age = 18;
+
+// Vérification si `$age` est supérieur ou égal à 18
+// Si c'est le cas, la variable `$message` contiendra "You are an adult."
+// Sinon, la variable `$message` contiendra "You are a minor."
+$message = ($age >= 18) ? "You are an adult." : "You are a minor.";
+
+echo $message;
+```
+
+<details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+You are an adult.
+```
+
+</details>
+
+Le code ci-dessus est équivalent à :
+
+```php
+<?php
+// Déclaration d'une variable
+$age = 18;
+
+// Vérification si `$age` est supérieur ou égal à 18
+if ($age >= 18) {
+    $message = "You are an adult.";
+} else {
+    $message = "You are a minor.";
+}
+
+echo $message;
+```
+
+Les `if` ternaires peuvent être pratiques dans les situations simples, mais
+doivent être utilisés avec parcimonie pour éviter de rendre le code difficile à
+lire.
+
+<details>
+<summary>Afficher l'équivalent en Java</summary>
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        // Déclaration d'une variable
+        int age = 18;
+
+        // Vérification si `age` est supérieur ou égal à 18
+        // Si c'est le cas, la variable `message` contiendra "You are an adult."
+        // Sinon, la variable `message` contiendra "You are a minor."
+        String message = (age >= 18) ? "You are an adult." : "You are a minor.";
+
+        System.out.print(message);
+    }
+}
+```
+
+</details>
+
+#### Les structures conditionnelles `switch`
 
 Les structures conditionnelles `switch` permettent de vérifier une variable pour
 plusieurs valeurs possibles. Il s'agit en quelque sorte d'une alternative à une
@@ -1023,6 +1500,27 @@ switch ($color) {
 ```
 
 <details>
+<summary>Afficher le résultat de l'exécution du code PHP</summary>
+
+```php
+// Résultat de l'exécution
+The color is red.
+```
+
+</details>
+
+Le branchement `switch` vérifie la valeur de la variable `$color` et exécute le
+bloc de code correspondant à la valeur de la variable.
+
+La valeur par défaut `default` est exécutée si aucune des valeurs ne correspond.
+
+Le mot-clé `break` est utilisé pour arrêter l'exécution du bloc de code et
+sortir du `switch`, sans quoi le code suivant serait exécuté.
+
+Un switch est simplement une série de `if`, `elseif` et `else` qui vérifie la
+valeur d'une variable.
+
+<details>
 <summary>Afficher l'équivalent en Java</summary>
 
 ```java
@@ -1048,59 +1546,6 @@ public class Main {
     }
 }
 ```
-
-</details>
-
-Le branchement `switch` vérifie la valeur de la variable `$color` et exécute le
-bloc de code correspondant à la valeur de la variable.
-
-La valeur par défaut `default` est exécutée si aucune des valeurs ne correspond.
-
-Le mot-clé `break` est utilisé pour arrêter l'exécution du bloc de code et
-sortir du `switch`, sans quoi le code suivant serait exécuté.
-
-Il existe deux formes d'opérateurs conditionnels :
-
-- L'opérateur `==` qui vérifie l'égalité entre deux valeurs en comparant
-  uniquement leur contenu.
-- L'opérateur `===` qui vérifie l'égalité entre deux valeurs en comparant à la
-  fois leur contenu et leur type.
-
-```php
-<?php
-// Déclaration de deux variables numériques
-$a = 0;
-$b = 0;
-$c = "0";
-
-// Vérification si `$a` est égal à `$b`)
-if ($a == $b) {
-    echo "a is equal to b (same value)";
-}
-
-// Vérification si `$a` est égal à `$c`)
-if ($a == $c) {
-    echo "a is equal to c (same value)";
-}
-
-// Vérification si `$a` est égal (identique) à `$b`
-if ($a === $b) {
-    echo "a is identical to b (same value and type)";
-}
-
-// Vérification si `$a` est égal (identique) à `$c`
-if ($a === $c) {
-    echo "a is identical to c (same value and type)";
-} else {
-    echo "a is not identical to c (different type)";
-}
-```
-
-<details>
-<summary>Afficher l'équivalent en Java</summary>
-
-Il n'existe pas d'équivalent direct en Java pour les opérateurs `==` et `===` de
-PHP.
 
 </details>
 

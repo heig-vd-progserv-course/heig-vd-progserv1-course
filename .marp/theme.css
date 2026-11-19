@@ -219,6 +219,10 @@ section:has(h1) {
 	padding: 50px;
 }
 
+section:has(h1) a:link {
+	text-decoration: none;
+}
+
 section a,
 section mark {
 	color: var(--color-primary);

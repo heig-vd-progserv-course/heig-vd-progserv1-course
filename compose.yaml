@@ -1,0 +1,28 @@
+configs:
+  apache-vhost:
+    content: |
+      <VirtualHost *:80>
+          DocumentRoot /workspace
+          ErrorLog $${APACHE_LOG_DIR}/error.log
+          CustomLog $${APACHE_LOG_DIR}/access.log combined
+
+          <Directory /workspace>
+              Require all granted
+              Options +Indexes
+              AllowOverride FileInfo
+          </Directory>
+      </VirtualHost>
+
+services:
+  apache:
+    container_name: apache
+    image: php:8.5-apache
+    # Run Apache with the same UID/GID as the files owner so PHP can write the SQLite database
+    user: "1000:1000"
+    configs:
+      - source: apache-vhost
+        target: /etc/apache2/sites-available/000-default.conf
+    ports:
+      - 8080:80
+    volumes:
+      - .:/workspace

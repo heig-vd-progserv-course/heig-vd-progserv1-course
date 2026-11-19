@@ -9,11 +9,10 @@ description:
   HEIG-VD, Suisse
 url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-lexamen/presentation.html
 header:
-  "[**Récapitulatif du cours et préparation à
-  l'examen**][contenu-complet-sur-github]"
+  "[**Récapitulatif du cours et préparation à l'examen**][contenu-complet]"
 footer:
   "[**HEIG-VD**](https://heig-vd.ch) - [ProgServ1 Course
-  2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
+  2026-2027](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
   - [CC BY-SA 4.0][license]"
 headingDivider: 6
 math: mathjax
@@ -26,10 +25,9 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course>
+[<img src="https://raw.githubusercontent.com/primer/octicons/refs/heads/main/icons/mark-github-24.svg" style="vertical-align: middle; width: 32px;" alt="GitHub logo"> `github.com/heig-vd-progserv-course/heig-vd-progserv1-course`](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
 
-Visualiser le contenu complet sur GitHub [à cette
-adresse][contenu-complet-sur-github].
+[Visualiser le contenu complet sur GitHub][contenu-complet].
 
 <small>L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -44,9 +42,8 @@ adresse][contenu-complet-sur-github].
 
 _Cette présentation est un résumé du contenu complet disponible sur GitHub._
 
-_Pour plus de détails, retrouvez le [contenu complet sur
-GitHub][contenu-complet-sur-github] ou en cliquant sur l'en-tête de ce
-document._
+_Pour plus de détails, retrouvez le contenu complet [ici][contenu-complet] ou en
+cliquant sur l'en-tête de ce document._
 
 ## Récapitulatif du cours et préparation à l'examen
 
@@ -66,9 +63,9 @@ Jetons un coup d'œil sur ce que **vous** avez fait au cours de ce semestre.
 >
 > - Expliquer les bases d'un langage de programmation serveur comme PHP et son
 >   rôle dans le monde web.
-> - Organiser un code propre à l'aide de fonctions.
 > - Manipuler des tableaux et utiliser des boucles pour traiter des collections
 >   de données.
+> - Organiser un code propre à l'aide de fonctions.
 > - Gérer les formulaires et les données qu'ils contiennent.
 > - Persister des données dans une base de données.
 
@@ -210,8 +207,7 @@ Discussions et retours sur le cours.
 
 <small>
 
-Vous pourrez les retrouver sur le [dépôt Git du
-cours][contenu-complet-sur-github].
+Vous pourrez les retrouver sur le [dépôt Git du cours][contenu-complet].
 
 </small>
 
@@ -422,7 +418,7 @@ Source :
 
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
-[contenu-complet-sur-github]:
+[contenu-complet]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-lexamen/README.md
 [examen-blanc]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-lexamen/02-examen-blanc/README.md

@@ -50,17 +50,6 @@ modifications sur votre dépôt GitHub.
 Nous ne recommandons pas de structures particulières pour organiser les
 exercices. Vous êtes libre de les organiser comme vous le souhaitez.
 
-> [!TIP]
->
-> Une personne ayant déjà suivi le cours a réalisé un petit script pour
-> automatiser la création de fichiers d'exercices et la mise à jour du fichier.
->
-> Vous pouvez trouver ce script à l'adresse suivante :
-> <https://github.com/Harpogma/progserv1/blob/main/scripts/auto_files_creation.sh>.
->
-> Merci à [Harpogma](https://github.com/Harpogma) pour ce script ! N'hésitez pas
-> à l'utiliser et à le modifier selon vos besoins.
-
 Voici quelques suggestions d'organisation pour les exercices dans le dossier
 `exercices` de votre projet :
 
@@ -68,11 +57,8 @@ Voici quelques suggestions d'organisation pour les exercices dans le dossier
   `exercices/seance-1`, `exercices/seance-2`, etc., et y stocker les exercices
   correspondants à chaque séance.
 - Vous pouvez créer un fichier pour chaque exercice, par exemple
-  `exercices/exercice-1.php`, `exercices/exercice-2.php`, etc., et y stocker le
-  code de chaque exercice.
-- Vous pouvez également mettre à jour le fichier `exercices/index.php` avec des
-  liens vers les différents exercices, pour faciliter l'accès à chacun d'eux
-  depuis le navigateur web.
+  `exercices/seance-N/exercice-1.php`, `exercices/seance-N/exercice-2.php`,
+  etc., et y stocker le code de chaque exercice.
 
 ## Exercices
 
@@ -618,11 +604,11 @@ Divisible by 3 and 5
 ### Exercice 19
 
 Déclarez une variable `stRochStudent` avec la valeur `true`, une variable
-`comemStudent` avec la valeur `true` et une variable `cheseauxStudent` avec la
+`imStudent` avec la valeur `true` et une variable `cheseauxStudent` avec la
 valeur `true`. Utilisez une structure de contrôle conditionnelle pour vérifier
-si `stRochStudent` et `comemStudent` sont vraies ou si `cheseauxStudent` est
-vraie. Si c'est le cas, affichez _"You are an engineering student"_ ou _"You are
-not an engineering student"_ sinon.
+si `stRochStudent` et `imStudent` sont vraies ou si `cheseauxStudent` est vraie.
+Si c'est le cas, affichez _"You are an engineering student"_ ou _"You are a
+management student"_ sinon.
 
 <details>
 <summary>Afficher la réponse</summary>
@@ -630,13 +616,13 @@ not an engineering student"_ sinon.
 ```php
 <?php
 $stRochStudent = true;
-$comemStudent = true;
+$imStudent = true;
 $cheseauxStudent = true;
 
-if ($stRochStudent && $comemStudent || $cheseauxStudent) {
+if ($stRochStudent && $imStudent || $cheseauxStudent) {
     echo "You are an engineering student";
 } else {
-    echo "You are not an engineering student";
+    echo "You are a management student";
 }
 ```
 
