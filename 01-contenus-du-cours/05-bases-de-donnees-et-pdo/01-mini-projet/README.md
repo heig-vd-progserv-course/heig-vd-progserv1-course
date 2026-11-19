@@ -34,7 +34,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Valider que tout est fonctionnel](#valider-que-tout-est-fonctionnel)
 - [Conclusion](#conclusion)
 - [Solution](#solution)
-- [Aller plus loin](#aller-plus-loin)
 
 ## Objectifs
 
@@ -2428,32 +2427,6 @@ nous vous recommandons de suivre les étapes suivantes :
    les différences et les similitudes, et pour comprendre les différentes
    approches possibles pour résoudre les problèmes rencontrés lors du
    développement de votre application PHP.
-
-## Aller plus loin
-
-> [!TIP]
->
-> Cette section est optionnelle.
->
-> Vous pouvez y revenir si vous avez du temps ou si vous souhaitez approfondir
-> vos connaissances après avoir terminé les exercices et le mini-projet.
-
-- Seriez-vous capable d'ajouter une fonctionnalité de tri des animaux de
-  compagnie par nom, par espèce ou par date de naissance dans la page d'accueil
-  ?
-- Seriez-vous capable de créer une page d'erreur dédiée pour le cas où un animal
-  de compagnie n'est pas trouvé dans la page de visualisation, au lieu de
-  rediriger vers la page d'accueil ?
-- Seriez-vous capable d'ajouter une fonctionnalité de recherche d'animaux de
-  compagnie par nom ou par espèce ?
-- Seriez-vous capable d'utiliser les constantes pour définir les différentes
-  espèces d'animaux de compagnie/personnalités et sexes de l'animal de compagnie
-  au lieu d'utiliser des chaînes de caractères en dur dans le code ?
-- Seriez-vous capable de déployer votre application sur un service d'hébergement
-  web pour la rendre accessible à d'autres personnes sur Internet ? Utilisez le
-  document
-  [Déployer un site ou une application web sur Internet](../../06.02-deployer-un-site-ou-une-application-web-sur-internet/README.md)
-  pour vous guider dans le processus de déploiement de votre application PHP.
 
 <!-- URLs -->
 

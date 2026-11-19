@@ -65,7 +65,7 @@ jobs:
         with:
           name: printable-document-files
           path: |
-            src/content/docs/**/*.pdf
+            **/*-impressions.pdf
           if-no-files-found: error
           retention-days: 1
 

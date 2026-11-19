@@ -33,10 +33,7 @@ header-includes: |
 ## Utilisation
 
 ```bash
-docker run \
-  --rm --volume "$(pwd):/data" \
-  --user "$(id -u):$(id -g)" \
-  pandoc/latex:3-alpine -o 01-contenus-du-cours/01.02-introduction-a-php/IMPRESSIONS.pdf 01-contenus-du-cours/01.02-introduction-a-php/IMPRESSIONS.md
+./generate-printable-documents.sh
 ```
 -->
 
@@ -45,9 +42,9 @@ docker run \
 ## Partie 1 - Exploration du mini-projet
 
 Par groupe de deux (2) à trois (3) personnes, explorez le mini-projet que vous
-allez réaliser tout au long du cours à l'adresse
-<https://progserv1.heig-vd-progserv-course.ch> (voir le résultat de la séance
-5).
+avez réalisé lors de la dernière séance. Si besoin, vous pouvez retrouver le
+résultat attendu à l'adresse <https://progserv1.heig-vd-progserv-course.ch>
+(voir le résultat de la séance 1).
 
 ### Déroulement
 
@@ -59,75 +56,40 @@ allez réaliser tout au long du cours à l'adresse
 
 ### Question 1
 
-Quelles sont les fonctionnalités principales que propose le mini-projet ?
+Vous avez peut-être remarqué que le contenu des pages `index.php` et `view.php`
+est statique (c'est-à-dire que le contenu est écrit en dur directement dans le
+code HTML).
+
+Selon vous, comment faudrait-il transformer le code pour que le contenu des
+pages soit dynamique, c'est-à-dire que le contenu soit généré automatiquement à
+partir d'une source de données unique ?
 
 ```{=latex}
-\answerbox{3cm}
-```
-
-### Question 2
-
-Combien de pages composent le mini-projet ?
-
-```{=latex}
-\answerbox{0.5cm}
-```
-
-### Question 3
-
-Pour chaque page, quelles sont les informations affichées et les actions
-possibles ?
-
-```{=latex}
-\answerbox{3cm}
-```
-
-### Question 4
-
-Quelles sont les technologies utilisées pour implémenter le mini-projet ?
-
-```{=latex}
-\answerbox{3cm}
+\answerbox{15cm}
 ```
 
 ```{=latex}
 \newpage
 ```
 
-### Question 5
+### Question 2
 
-Comment pensez-vous que le mini-projet est structuré ? (ex. : nombre de
-fichiers, organisation des fichiers, etc.)
+En reprenant le contexte de la question 1, vous avez peut-être remarqué que le
+code HTML pour afficher les tâches est répétitif. Selon vous, comment
+faudrait-il transformer le code pour éviter cette répétition et rendre le code
+plus maintenable ?
 
 ```{=latex}
-\answerbox{3.5cm}
+\answerbox{9.5cm}
 ```
 
-### Question 6
+### Question 3
 
-Comment pensez-vous que les données sont échangées et stockées dans cette
-application ?
-
-```{=latex}
-\answerbox{3.5cm}
-```
-
-### Question 7
-
-Avez-vous découvert des limites ou des problèmes dans le mini-projet ? Si oui,
-lesquels ?
+Dans la page `view.php`, comment déplaceriez-vous les informations de la tâche
+pour utiliser PHP et ne pas avoir à les écrire en dur dans le code HTML ?
 
 ```{=latex}
-\answerbox{3.5cm}
-```
-
-### Question 8
-
-De quoi est composé une tâche dans le mini-projet ? (ex. : quelles sont les
-informations qui la composent ?)
-
-```{=latex}
-\answerbox{3.5cm}
+\answerbox{9.5cm}
 ```
 
 ```{=latex}
@@ -148,61 +110,53 @@ la séance en répondant aux questions ci-dessous.
 
 ### Question 1
 
-Dans quel fichier se trouve la documentation du projet ? Pourquoi est-il si
-important ?
+Comment avez-vous identifié les éléments répétitifs dans le code HTML du
+mini-projet ? (ex. : tâches, boutons, liens, etc.)
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{4cm}
 ```
 
 ### Question 2
 
-Comment devez-vous ouvrir le projet dans Visual Studio Code pour que
-l'environnement de développement local fonctionne correctement ? Quelle est la
-commande à exécuter pour lancer le serveur web local ?
+Comment avez-vous structuré l'information pour représenter les tâches dans le
+mini-projet ? (ex. : tableau, liste, etc.)
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{4cm}
 ```
 
 ### Question 3
 
-A quelle adresse (URL) pouvez-vous accéder pour visualiser votre projet dans
-votre navigateur web ?
+Quelle est la différence entre un tableau indexé et un tableau associatif en PHP
+? Dans le mini-projet, quel type de tableau avez-vous utilisé pour représenter
+les tâches et pourquoi ?
 
 ```{=latex}
-\answerbox{0.5cm}
-```
-
-### Question 4
-
-Qu'est-ce qu'un serveur web tel que Apache et à quoi sert-il dans le mini-projet
-? De quoi est-il composé et comment fonctionne-t-il ?
-
-```{=latex}
-\answerbox{3cm}
+\answerbox{4cm}
 ```
 
 ```{=latex}
 \newpage
 ```
 
-### Question 5
+### Question 4
 
-Quelle est la différence entre PHP et HTML ? Comment ces deux langages sont-ils
-utilisés dans le mini-projet ?
+Dans un tableau associatif, comment accédez-vous à une valeur spécifique en
+utilisant sa clé ? Donnez un exemple concret en rapport avec le mini-projet.
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{4cm}
 ```
 
-### Question 6
+### Question 5
 
-Donnez l'explication complète de ce qu'il se passe lorsque vous accédez à une
-page PHP dans votre navigateur web.
+Comment exprimer des attributs ou des propriétés facultatifs d'une tâche dans un
+tableau associatif en PHP ? Donnez un exemple concret en rapport avec le
+mini-projet.
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{4cm}
 ```
 
 ### Liste de contrôle
@@ -226,5 +180,5 @@ Difficultés rencontrées et les solutions trouvées, apprentissages personnels,
 ressenti personnel, questions restantes, commentaires sur la séance, etc.
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{4cm}
 ```

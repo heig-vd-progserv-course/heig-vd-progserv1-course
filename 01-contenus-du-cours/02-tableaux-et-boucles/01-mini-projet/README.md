@@ -14,43 +14,36 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
-- [Préparer son environnement de développement](#préparer-son-environnement-de-développement)
-- [Créer la page d'accueil](#créer-la-page-daccueil)
-  - [Créer le fichier `mini-projet/index.php`](#créer-le-fichier-mini-projetindexphp)
-  - [Définir la structure du fichier `mini-projet/index.php`](#définir-la-structure-du-fichier-mini-projetindexphp)
-  - [Créer la collection d'animaux de compagnie](#créer-la-collection-danimaux-de-compagnie)
-  - [Afficher les en-têtes du tableau des animaux de compagnie](#afficher-les-en-têtes-du-tableau-des-animaux-de-compagnie)
-  - [Afficher les lignes du tableau des animaux de compagnie](#afficher-les-lignes-du-tableau-des-animaux-de-compagnie)
-  - [Visualiser le résultat dans le navigateur](#visualiser-le-résultat-dans-le-navigateur)
-- [Améliorer la page d'accueil](#améliorer-la-page-daccueil)
-  - [Ajouter Pico CSS](#ajouter-pico-css)
-  - [Ajouter un menu de navigation dans la page d'accueil](#ajouter-un-menu-de-navigation-dans-la-page-daccueil)
-  - [Ajouter un pied de page dans la page d'accueil](#ajouter-un-pied-de-page-dans-la-page-daccueil)
-  - [Ajouter un logo à la page d'accueil](#ajouter-un-logo-à-la-page-daccueil)
-  - [Ajouter des styles CSS personnalisés](#ajouter-des-styles-css-personnalisés)
-- [Tester la page d'accueil](#tester-la-page-daccueil)
+- [Ouvrir son environnement de développement](#ouvrir-son-environnement-de-développement)
+- [Utiliser des tableaux et des boucles sur la page d'accueil](#utiliser-des-tableaux-et-des-boucles-sur-la-page-daccueil)
+  - [Identifier les informations communes à toutes les tâches](#identifier-les-informations-communes-à-toutes-les-tâches)
+  - [Définir une structure de données pour les tâches](#définir-une-structure-de-données-pour-les-tâches)
+  - [Créer plusieurs tableaux associatifs représentant les tâches](#créer-plusieurs-tableaux-associatifs-représentant-les-tâches)
+  - [Utiliser les tableaux associatifs dans le code HTML](#utiliser-les-tableaux-associatifs-dans-le-code-html)
+  - [Mettre en place un tableau de tâches](#mettre-en-place-un-tableau-de-tâches)
+  - [Utiliser une boucle pour parcourir le tableau de tâches](#utiliser-une-boucle-pour-parcourir-le-tableau-de-tâches)
+  - [Ajouter une nouvelle tâche](#ajouter-une-nouvelle-tâche)
+  - [Gérer le cas d'un tableau de tâches vide](#gérer-le-cas-dun-tableau-de-tâches-vide)
+  - [Harmoniser le tableau de tâches](#harmoniser-le-tableau-de-tâches)
+- [Utiliser un tableau sur la page de visualisation d'une tâche](#utiliser-un-tableau-sur-la-page-de-visualisation-dune-tâche)
 - [Conclusion](#conclusion)
 - [Solution](#solution)
-- [Aller plus loin](#aller-plus-loin)
 
 ## Objectifs
 
 Lors de la séance précédente, vous avez mis en place un environnement de
-développement pour PHP.
+développement pour PHP et vous avez créé les pages de base pour gérer une
+collection de tâches.
 
-Dans cette séance, nous allons commencer à développer une application web pour
-gérer une collection d'animaux de compagnie.
+Vous avez peut-être remarqué que les informations sur les tâches sont écrites en
+dur dans le code HTML des pages `index.php` et `view.php`.
 
-À terme, cette application vous permettra de créer, lire, mettre à jour et
-supprimer des animaux de compagnie, et d'afficher la liste de tous les animaux
-de compagnie dans un tableau HTML.
+Dans cette séance, nous allons utiliser les tableaux et les boucles mises à
+disposition pour rendre nos pages dynamiques.
 
-Aujourd'hui, nous allons nous concentrer sur la création d'un tableau associatif
-pour stocker les animaux de compagnie, et sur l'affichage de ce tableau dans un
-tableau HTML dans la page d'accueil de l'application.
-
-Nous allons profiter d'utiliser Git pour suivre les différentes étapes de
-développement de l'application.
+Une page dynamique est une page dont le contenu est généré automatiquement à
+partir d'une source de données unique, plutôt que d'être écrit en dur dans le
+code HTML.
 
 À l'issue de cette séance, les personnes qui étudient devraient avoir pu :
 
@@ -61,23 +54,24 @@ développement de l'application.
 - Utiliser des boucles pour parcourir un tableau associatif et afficher les
   informations sur chaque animal de compagnie.
 
-## Préparer son environnement de développement
+## Ouvrir son environnement de développement
 
 Avant de commencer le mini-projet, assurez-vous d'avoir votre projet ouvert dans
 votre éditeur de code, et d'avoir votre terminal ouvert à la racine de votre
 projet.
 
-Lancez ensuite le serveur de développement pour pouvoir accéder à votre
-application dans votre navigateur.
+> [!NOTE]
+>
+> Si besoin, consultez le fichier `README.md` de votre projet pour retrouver les
+> instructions pour ouvrir votre projet dans votre éditeur de code et pour
+> ouvrir un terminal à la racine de votre projet.
 
-Si vous ne vous souvenez plus de comment faire, vous pouvez vous référer au
-fichier `README.md` de votre projet afin de retrouver les instructions pour
-lancer le serveur de développement.
+Lancez ensuite le serveur web Apache pour pouvoir accéder à votre application
+dans votre navigateur.
 
-Une fois que le serveur de développement est lancé, vous devriez pouvoir accéder
-à votre application dans votre navigateur à l'adresse suivante :
-<http://localhost:8080>. La page d'accueil de votre application devrait
-s'afficher.
+Une fois que le serveur web Apache est lancé, vous devriez pouvoir accéder à
+votre application dans votre navigateur à l'adresse suivante :
+<http://localhost:8080>.
 
 Ouvrez un second terminal (en plus du premier ou à côté du premier) et
 assurez-vous d'être à la racine de votre projet. Ce second terminal nous servira
@@ -88,888 +82,716 @@ Cette configuration de votre environnement de développement vous permettra de
 développer votre application tout en ayant un suivi clair de vos différentes
 étapes de développement grâce à Git.
 
-## Créer la page d'accueil
+## Utiliser des tableaux et des boucles sur la page d'accueil
 
-Dans cette section, nous allons créer la première version de la page d'accueil
-de l'application de gestion d'animaux de compagnie.
+### Identifier les informations communes à toutes les tâches
 
-### Créer le fichier `mini-projet/index.php`
-
-Actuellement, vous devriez avoir la structure de fichiers suivante dans votre
-projet :
-
-```text
-./
-├── exercices/
-│   └── index.php
-├── exception.php
-├── index.php
-└── phpinfo.php
-```
-
-Afin d'initialiser le mini-projet, nous allons créer un nouveau dossier
-`mini-projet/` à la racine de notre projet, et y créer un fichier `index.php`
-qui servira de page d'accueil pour notre application de gestion d'animaux de
-compagnie.
-
-Votre structure de fichiers devrait ressembler à ceci :
-
-```text
-./
-├── exercices/
-│   └── index.php
-├── mini-projet/
-│   └── index.php
-├── exception.php
-├── index.php
-└── phpinfo.php
-```
-
-### Définir la structure du fichier `mini-projet/index.php`
-
-Dans le fichier `mini-projet/index.php`, nous allons définir la structure de
-base d'une page HTML avec une section `<head>` pour les métadonnées et une
-section `<body>` pour le contenu de la page.
-
-Le nom de l'application que nous allons créer s'appellera "ninetendogs" (en
-référence à un célèbre jeux vidéo produit par une célèbre entreprise japonaise
-en 2005), qui réveillera peut-être quelques souvenirs pour les plus nostalgiques
-d'entre nous.
-
-Nous allons donc utiliser ce nom pour le titre de la page et dans la description
-de la page.
+Si l'on se réfère à la page `index.php`, on peut identifier qu'il y a plusieurs
+blocs de code HTML qui se répètent pour chaque tâche, et que ces blocs de code
+contiennent sensiblement les mêmes informations pour chaque tâche :
 
 ```php
-<!DOCTYPE html>
-<html lang="fr">
+<article>
+    <h2>Exemple de tâche 1</h2>
 
-<head>
-    <meta charset="utf-8">
-    <title>Page d'accueil | ninetendogs</title>
-    <meta name="description" content="ninetendogs - Gestionnaire d'animaux de compagnie">
-</head>
+    <p>
+        <span class="badge badge-contrast">Personnel</span>
+        <span class="badge badge-primary">Haute</span>
+        <span class="badge badge-secondary">2027-01-24</span>
+    </p>
 
-<body>
-    <h1>ninetendogs</h1>
+    <p>Description de la tâche 1.</p>
 
-    <p>Bienvenue sur ninetendogs, le gestionnaire d'animaux de compagnie !</p>
-
-    <p>Cette application te permet de gérer facilement tes animaux de compagnie.</p>
-</body>
-
-</html>
-```
-
-Sauvegardez ensuite le fichier `mini-projet/index.php` et accédez à la page
-d'accueil de votre application dans votre navigateur à l'adresse suivante :
-<http://localhost:8080/mini-projet/index.php>. Vous devriez voir la page
-d'accueil de votre application s'afficher.
-
-Une simple page HTML est maintenant créée pour votre application de gestion
-d'animaux de compagnie.
-
-Afin de sauvegarder cette première étape, effectuons un commit Git pour
-enregistrer cette première itération de la page d'accueil :
-
-Visualisez les fichiers modifiés à l'aide de la commande `git status` :
-
-```bash
-git status
-```
-
-Le résultat devrait être similaire à ceci :
-
-```text
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        mini-projet/
-
-nothing added to commit but untracked files present (use "git add" to track)
-```
-
-En effet, le dossier `mini-projet/` et le fichier `index.php` à l'intérieur de
-ce dossier sont considérés comme des fichiers non suivis par Git, car ils n'ont
-pas encore été ajoutés à l'index Git.
-
-Ajoutez ces fichiers modifiés à l'index Git :
-
-```bash
-git add mini-projet/
-```
-
-Vérifiez que les fichiers modifiés sont bien ajoutés à l'index Git :
-
-```bash
-git status
-```
-
-Le résultat devrait être similaire à ceci :
-
-```text
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        new file:   mini-projet/index.php
-```
-
-Le fichier `index.php` dans le dossier `mini-projet/` est maintenant prêt à être
-commité.
-
-Effectuez un commit Git pour enregistrer cette première itération de la page
-d'accueil :
-
-```bash
-git commit -m "Création de la page d'accueil"
-```
-
-Le résultat devrait être similaire à ceci :
-
-```text
-[main aaea34b] Page d'accueil créée
- 1 file changed, 18 insertions(+)
- create mode 100644 mini-projet/index.php
-```
-
-Le fichier `index.php` dans le dossier `mini-projet/` est maintenant commité
-dans l'historique Git de votre projet.
-
-Poussez ensuite ce commit sur le dépôt distant pour sauvegarder cette première
-itération de la page d'accueil sur le dépôt distant :
-
-```bash
-git push
-```
-
-Le résultat devrait être similaire à ceci :
-
-```text
-Enumerating objects: 5, done.
-Counting objects: 100% (5/5), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (4/4), 816 bytes | 816.00 KiB/s, done.
-Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-To github.com:heig-vd-progserv-course-classroom/progserv1-2026-2027-mini-projet-et-exercices-ludelafo.git
-   001dff7..aaea34b  main -> main
-```
-
-Actualisez ensuite la page de votre dépôt distant sur GitHub pour vérifier que
-le commit a bien été poussé et que le fichier `index.php` dans le dossier
-`mini-projet/` est bien présent dans l'historique Git de votre projet.
-
-Bravo ! Vous avez créé la première version de la page d'accueil de votre
-application de gestion d'animaux de compagnie, et vous avez utilisé Git pour
-suivre cette première étape de développement.
-
-Nous allons pouvoir commencer à ajouter du contenu dynamique à cette page dans
-les prochaines sections.
-
-### Créer la collection d'animaux de compagnie
-
-Dans cette première version de la page d'accueil, nous allons créer une
-collection d'animaux de compagnie à l'aide d'un tableau associatif avec les
-propriétés suivantes :
-
-- Identifiant unique.
-- Nom.
-- Espèce.
-- Sexe.
-- Année de naissance.
-
-Pour cela, nous allons créer un tableau associatif en début du fichier
-`mini-projet/index.php` pour stocker les informations sur les animaux de
-compagnie. Ce tableau associatif contiendra des informations sur cinq animaux de
-compagnie différents :
-
-- Rex, un chien mâle né le 18 janvier 2015 (ID 1).
-- Caramel, un chat femelle né le 28 avril 2020 (ID 2).
-- Tweety, un oiseau femelle né le 15 juillet 2023 (ID 3).
-- Nemo, un poisson mâle né le 12 mai 2025 (ID 4).
-- Godzilla, un lézard mâle né le 30 novembre 2018 (ID 5).
-
-Aidez-vous du code de départ suivant pour créer ce tableau associatif dans le
-fichier `mini-projet/index.php` :
-
-```php
-<?php
-$pets = [
-    // Les animaux de compagnie sont à définir ici
-];
-
-?>
-
-<!DOCTYPE html>
-<html lang="fr">
-
-<!-- Le reste du code HTML de la page d'accueil -->
-```
-
-Vous devriez maintenant avoir un tableau associatif `$pets` défini dans le
-fichier `mini-projet/index.php` pour stocker les informations sur les animaux de
-compagnie.
-
-En suivant les mêmes étapes que précédemment, sauvegardez tous les fichiers et
-effectuez un commit Git pour enregistrer cette étape de développement dans
-l'historique Git de votre projet avec le message de commit "Création de la
-collection d'animaux de compagnie".
-
-Vous devriez maintenant avoir un tableau associatif `$pets` défini dans le
-fichier `mini-projet/index.php` pour stocker les informations sur les animaux de
-compagnie.
-
-### Afficher les en-têtes du tableau des animaux de compagnie
-
-Maintenant que nous avons créé un tableau associatif pour stocker les
-informations sur les animaux de compagnie, nous allons pouvoir afficher les
-informations sur ces animaux de compagnie dans la page d'accueil.
-
-Pour cela, nous allons utiliser un tableau HTML pour afficher les informations
-sur les animaux de compagnie.
-
-En vous aidant de la documentation disponible sur MDN pour créer un tableau HTML
-: <https://developer.mozilla.org/fr/docs/Web/HTML/Element/table>, créez un
-tableau HTML dans la section `<body>` de votre fichier `index.php` pour afficher
-les informations sur les animaux de compagnie.
-
-Nous allons créer un tableau HTML avec les colonnes suivantes :
-
-- Nom.
-- Espèce.
-- Sexe.
-- Année de naissance.
-
-Commencez par créer la structure de base du tableau HTML avec les en-têtes de
-colonnes en utilisant le code de départ suivant :
-
-```php
-    <!-- Le reste du code HTML de la page d'accueil -->
-
-    <p>Cette application te permet de gérer facilement tes animaux de compagnie.</p>
-
-    <h2>Liste des animaux de compagnie</h2>
-
-    <table>
-        <!-- Les en-têtes de colonnes et corps du tableau sont à définir ici -->
-    </table>
-```
-
-Nous utiliserons ensuite les données des animaux de compagnie dans les
-prochaines sections pour remplir les lignes du tableau HTML.
-
-En suivant les mêmes étapes que précédemment, sauvegardez tous les fichiers et
-effectuez un commit Git pour enregistrer cette étape de développement dans
-l'historique Git de votre projet avec le message de commit "Création de la
-table" et poussez ce commit sur le dépôt distant.
-
-Vous devriez maintenant voir un tableau HTML avec les en-têtes de colonnes
-affichées dans la page d'accueil de votre application.
-
-### Afficher les lignes du tableau des animaux de compagnie
-
-Maintenant que nous avons créé la structure de base du tableau HTML avec les
-en-têtes de colonnes, nous allons pouvoir remplir les lignes du tableau HTML
-avec les informations sur les animaux de compagnie.
-
-Pour cela, nous allons utiliser une boucle pour parcourir le tableau associatif
-`$pets` et afficher les informations sur chaque animal de compagnie dans une
-ligne du tableau HTML.
-
-En vous aidant de la documentation disponible sur MDN pour créer un tableau HTML
-: <https://developer.mozilla.org/fr/docs/Web/HTML/Element/table>, utilisez une
-boucle pour parcourir le tableau associatif `$pets` et afficher les informations
-sur chaque animal de compagnie dans une ligne du tableau HTML.
-
-Nous recommandons d'utiliser une boucle `foreach` pour parcourir le tableau
-associatif `$pets` et afficher les informations sur chaque animal de compagnie
-dans une ligne du tableau HTML.
-
-En suivant les mêmes étapes que précédemment, sauvegardez tous les fichiers et
-effectuez un commit Git pour enregistrer cette étape de développement dans
-l'historique Git de votre projet avec le message de commit "Ajout des lignes au
-tableau" et poussez ce commit sur le dépôt distant.
-
-Vous devriez maintenant voir un tableau HTML avec les informations sur les
-animaux de compagnie affichées dans la page d'accueil de votre application.
-
-### Visualiser le résultat dans le navigateur
-
-Afin de visualiser le résultat dans le navigateur, accédez à la page d'accueil
-de votre application à l'adresse suivante :
-<http://localhost:8080/mini-projet/index.php>.
-
-Vous devriez voir un tableau HTML avec les informations sur les animaux de
-compagnie affichées dans la page d'accueil de votre application.
-
-Afin de faciliter l'accès à la page d'accueil de votre application, vous pouvez
-ajouter un lien vers cette page dans le fichier `index.php` à la racine de votre
-projet :
-
-```php
-    <ul>
-        <li>Accéder aux <a href="./exercices/index.php">exercices</a>.</li>
-       <!-- Le lien vers la page d'accueil de l'application de gestion d'animaux de compagnie est ajouté ici -->
-        <li>Accéder à la page de <a href="./phpinfo.php">configuration de PHP</a>.</li>
-        <li>Tester la gestion des exceptions avec le fichier <a href="./exception.php">exception.php</a>.</li>
-    </ul>
-```
-
-En suivant les mêmes étapes que précédemment, sauvegardez tous les fichiers et
-effectuez un commit Git pour enregistrer cette étape de développement dans
-l'historique Git de votre projet avec le message de commit "Ajout du lien vers
-la page d'accueil de l'application" et poussez ce commit sur le dépôt distant.
-
-## Améliorer la page d'accueil
-
-Dans l'état actuel, la page d'accueil de votre application de gestion d'animaux
-de compagnie affiche un tableau HTML avec les informations sur les animaux de
-compagnie, mais cette page n'a pas de styles CSS appliqués et rend sa lecture
-difficile.
-
-Dans cette section, nous allons améliorer l'affichage de la page en ajoutant des
-styles CSS pour le rendre plus agréable à lire.
-
-### Ajouter Pico CSS
-
-Vous pourriez personnaliser l'apparence de votre page web en utilisant les
-styles la balise `<head>` ou en incluant un fichier CSS externe à l'aide de la
-balise `<link>`.
-
-Cependant, cela peut être fastidieux et prendre du temps, surtout si vous n'êtes
-pas familier.e avec le CSS.
-
-Comme les styles CSS ne sont pas le cœur de ce cours, nous n'allons pas réaliser
-d'interfaces complètes avec du CSS personnalisé.
-
-A la place, nous allons utiliser un framework CSS léger - appelé
-[Pico CSS](https://picocss.com/) - pour ajouter des styles de base à nos pages
-web sans avoir à écrire beaucoup de CSS personnalisé.
-
-Pour utiliser Pico CSS dans votre projet PHP, nous allons mettre à jour le
-fichier `mini-projet/index.php` avec le contenu suivant :
-
-```php
-<?php
-$pets = [
-    // Les animaux de compagnie sont à définir ici
-];
-
-?>
-
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-
-    <title>Page d'accueil | ninetendogs</title>
-    <meta name="description" content="ninetendogs - Gestionnaire d'animaux de compagnie">
-</head>
-
-<body class="container">
-    <main>
-        <h1>ninetendogs</h1>
-
-        <p>Bienvenue sur ninetendogs, le gestionnaire d'animaux de compagnie !</p>
-
-        <p>Cette application te permet de gérer facilement tes animaux de compagnie.</p>
-
-        <h2>Liste des animaux de compagnie</h2>
-
-        <div class="overflow-auto">
-            <table class="striped">
-                <!-- Les en-têtes de colonnes et corps du tableau sont à définir ici -->
-            </table>
-        </div>
-    </main>
-</body>
-
-</html>
-```
-
-Ici, nous avons ajouté une balise `<link>` dans la section `<head>` pour inclure
-les styles CSS de Pico CSS.
-
-Nous avons ensuite ajouté la classe `container` à la balise `<body>` pour
-appliquer les styles de conteneur de Pico CSS (source :
-<https://picocss.com/docs/container>).
-
-Ces instructions (issues de la documentation officielle
-<https://picocss.com/docs>) permettent d'ajouter rapidement des styles de base à
-votre page d'accueil sans avoir à écrire beaucoup de CSS personnalisé.
-
-De plus, nous avons ajouté les classes `overflow-auto` et `striped` pour
-appliquer des styles spécifiques au tableau HTML que nous avons créé
-précédemment. La première classe permet d'ajouter une barre de défilement
-horizontale au tableau si son contenu dépasse la largeur de la page
-(responsive). La seconde classe ajoute un style rayé aux lignes du tableau pour
-améliorer la lisibilité.
-
-Grâce à Pico CSS, nous avons pu (grandement) améliorer l'apparence de la page
-d'accueil de notre application de gestion d'animaux de compagnie sans avoir à
-écrire beaucoup de CSS personnalisé. Pour les futures pages de notre
-application, nous pourrons nous concentrer sur le contenu et la logique métier
-sans nous soucier de l'apparence, car les styles de base seront déjà appliqués
-grâce à Pico CSS.
-
-En suivant les mêmes étapes que précédemment, sauvegardez tous les fichiers et
-effectuez un commit Git pour enregistrer cette étape de développement dans
-l'historique Git de votre projet avec le message de commit "Ajout de Pico CSS"
-et poussez ce commit sur le dépôt distant.
-
-Vous devriez maintenant voir une page d'accueil avec des styles de base
-appliqués grâce à Pico CSS, ce qui rend la lecture de la page plus agréable.
-
-### Ajouter un menu de navigation dans la page d'accueil
-
-Grâce à Pico CSS, nous pouvons facilement ajouter un menu de navigation à notre
-page d'accueil pour faciliter la navigation entre les différentes (futures)
-pages de notre application.
-
-Pour cela, nous allons ajouter une balise `<nav>` dans la section `<main>` de
-notre fichier `index.php` pour créer un menu de navigation.
-
-Voici un exemple de code pour ajouter un menu de navigation dans la page
-d'accueil :
-
-```php
-<?php
-$pets = [
-    // Les animaux de compagnie sont à définir ici
-];
-
-?>
-
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-
-    <title>Page d'accueil | ninetendogs</title>
-    <meta name="description" content="ninetendogs - Gestionnaire d'animaux de compagnie">
-</head>
-
-<body class="container">
-    <header>
-        <nav>
-            <ul>
-                <li><strong>ninetendogs</strong></li>
-            </ul>
-            <ul>
-                <li><a href="./index.php">Accueil</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>ninetendogs</h1>
-
-        <p>Bienvenue sur ninetendogs, le gestionnaire d'animaux de compagnie !</p>
-
-        <p>Cette application te permet de gérer facilement tes animaux de compagnie.</p>
-
-        <h2>Liste des animaux de compagnie</h2>
-
-        <div class="overflow-auto">
-            <table class="striped">
-                <!-- Les en-têtes de colonnes et corps du tableau sont à définir ici -->
-            </table>
-        </div>
-    </main>
-</body>
-
-</html>
-```
-
-En suivant les mêmes étapes que précédemment, sauvegardez tous les fichiers et
-effectuez un commit Git pour enregistrer cette étape de développement dans
-l'historique Git de votre projet avec le message de commit "Ajout du menu de
-navigation" et poussez ce commit sur le dépôt distant.
-
-Vous devriez maintenant voir un menu de navigation dans la page d'accueil de
-votre application, ce qui facilitera la navigation entre les différentes
-(futures) pages de votre application.
-
-### Ajouter un pied de page dans la page d'accueil
-
-Pour ajouter un pied de page à la page d'accueil de votre application de gestion
-d'animaux de compagnie, vous pouvez utiliser la balise `<footer>` dans la
-section `<body>` de votre fichier `index.php` pour créer un pied de page.
-
-Voici un exemple de code pour ajouter un pied de page dans la page d'accueil :
-
-```php
-<?php
-$pets = [
-    // Les animaux de compagnie sont à définir ici
-];
-
-?>
-
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-
-    <title>Page d'accueil | ninetendogs</title>
-    <meta name="description" content="ninetendogs - Gestionnaire d'animaux de compagnie">
-</head>
-
-<body class="container">
-    <header>
-        <nav>
-            <ul>
-                <li><strong>ninetendogs</strong></li>
-            </ul>
-            <ul>
-                <li><a href="./index.php">Accueil</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>ninetendogs</h1>
-
-        <p>Bienvenue sur ninetendogs, le gestionnaire d'animaux de compagnie !</p>
-
-        <p>Cette application te permet de gérer facilement tes animaux de compagnie.</p>
-
-        <h2>Liste des animaux de compagnie</h2>
-
-        <div class="overflow-auto">
-            <table class="striped">
-                <!-- Les en-têtes de colonnes et corps du tableau sont à définir ici -->
-            </table>
-        </div>
-    </main>
     <footer>
-        <center>
-            <small>
-                Un projet réalisé dans le cadre du cours <a href="https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course">ProgServ1</a> enseigné à la <a href="https://heig-vd.ch">HEIG-VD</a>.
-            </small>
-        </center>
+        <a class="btn btn-primary btn-sm" href="./view.php">
+            Visualiser la tâche
+        </a>
     </footer>
-</body>
+</article>
 
-</html>
+<article>
+    <h2>Exemple de tâche 2</h2>
+
+    <p>
+        <span class="badge badge-contrast">Autre</span>
+        <span class="badge badge-primary">Moyenne</span>
+        <span class="badge badge-secondary">2027-04-01</span>
+    </p>
+
+    <footer>
+        <a class="btn btn-primary btn-sm" href="./view.php">
+            Visualiser la tâche
+        </a>
+    </footer>
+</article>
+
+<article>
+    <h2>Exemple de tâche 3</h2>
+
+    <p>
+        <span class="badge badge-contrast">Personnel</span>
+        <span class="badge badge-primary">Haute</span>
+        <span class="badge badge-secondary">2027-10-10</span>
+    </p>
+
+    <p>Description de la tâche 3.</p>
+
+    <footer>
+        <a class="btn btn-primary btn-sm" href="./view.php">
+            Visualiser la tâche
+        </a>
+    </footer>
+</article>
+
+<article>
+    <h2>Exemple de tâche 4</h2>
+
+    <p>
+        <span class="badge badge-contrast">Travail</span>
+        <span class="badge badge-primary">Basse</span>
+    </p>
+
+    <footer>
+        <a class="btn btn-primary btn-sm" href="./view.php">
+            Visualiser la tâche
+        </a>
+    </footer>
+</article>
 ```
 
-### Ajouter un logo à la page d'accueil
+Nous pouvons identifier les informations suivantes qui se répètent pour chaque
+tâche :
 
-Pour rendre la page d'accueil de votre application de gestion d'animaux de
-compagnie plus attrayante, vous pouvez ajouter un logo à la page d'accueil.
+- Le titre de la tâche.
+- La description de la tâche.
+- Les badges de la tâche qui représentent la catégorie, la priorité et la date
+  butoire pour réaliser la tâche.
+- Le lien pour visualiser la tâche.
 
-Pour cela, cette étape doit être réalisée en trois parties :
+Par contre, nous pouvons également identifier que certaines informations ne sont
+pas présentes pour toutes les tâches, comme par exemple la description ou encore
+la date butoire pour réaliser la tâche.
 
-1. Trouver et ajouter une image de logo dans la structure de votre application.
-2. Inclure cette image dans la page d'accueil.
-3. Ajouter des styles CSS personnalisés pour améliorer l'affichage du logo.
+Plutôt que de répéter ces informations pour chaque tâche, nous allons utiliser
+un tableau associatif pour stocker ces informations dans une seule source de
+données, et nous allons utiliser une boucle pour parcourir ce tableau associatif
+et afficher les informations sur chaque tâche dans le code HTML.
 
-#### Trouver et ajouter une image de logo dans la structure de votre application
+### Définir une structure de données pour les tâches
 
-Vous pouvez trouver une image de logo pour votre application de gestion
-d'animaux de compagnie en effectuant une recherche d'images sur Internet, ou en
-créant votre propre logo à l'aide d'un outil de création graphique.
+Afin de pouvoir stocker les informations sur les tâches dans une seule source de
+données, nous allons définir un tableau `$tasks` dans le fichier `index.php`
+pour stocker les informations sur les tâches.
 
-Nous vous proposons d'utiliser le logo suivant pour votre application de gestion
-d'animaux de compagnie :
-<https://unsplash.com/illustrations/a-cartoon-orange-cat-with-a-long-tail-Mgi4xVhDZAQ>.
+PHP propose plusieurs types de tableaux et nous allons exploiter plusieurs types
+de tableaux pour stocker les informations sur les tâches.
 
-Ce logo peut être utilisé librement dans votre projet. La personne qui a créé ce
-logo est
-[Public domain vectors](https://unsplash.com/@publicdomainvectors/illustrations)
-sur [Unsplash](https://unsplash.com/).
+Pour commencer, identifions les informations que nous voulons stocker pour
+chaque tâche :
 
-Téléchargez ce logo au format SVG et ajoutez-le dans un dossier `images/` à la
-racine de votre mini-projet (dans le dossier `mini-projet/`), de manière à ce
-que la structure de votre projet ressemble à ceci :
+- Un identifiant unique pour chaque tâche.
+- Un titre pour chaque tâche.
+- Un type de tâche (ex. : personnel, travail, autre).
+- Une priorité pour chaque tâche (ex. : haute, moyenne, basse).
+- Une description pour chaque tâche (optionnelle).
+- Une date butoire pour réaliser la tâche (optionnelle).
 
-```text
-mini-projet/
-├── images
-│   └── logo.svg
-└── index.php
+Pour conserver ces informations, nous allons utiliser un tableau associatif pour
+représenter une seule tâche.
+
+Ainsi, nous pourrons stocker les informations de la première tâche dans un
+tableau associatif `$task1` comme suit :
+
+```php
+// Fichier `mini-projet/public/index.php`
+const APP_NAME = "Liste de tâches de";
+const APP_AUTHOR = "Ludovic";
+
+$task1 = [
+    'id' => 1,
+    'title' => 'Exemple de tâche 1',
+    'type' => 'Personnel',
+    'priority' => 'Haute',
+    'description' => 'Description de la tâche 1.',
+    'deadline' => '2027-01-24',
+];
 ```
 
-En suivant les mêmes étapes que précédemment, sauvegardez tous les fichiers et
-effectuez un commit Git pour enregistrer cette étape de développement dans
-l'historique Git de votre projet avec le message de commit "Ajout du logo à la
-structure de fichier" et poussez ce commit sur le dépôt distant.
+Les clés du tableau associatif représentent les informations que nous voulons
+stocker pour chaque tâche, et les valeurs associées à ces clés représentent les
+informations spécifiques à la tâche.
 
-#### Inclure cette image dans la page d'accueil
-
-Pour inclure cette image dans la page d'accueil, vous pouvez utiliser la balise
-`<img>` dans la section `<main>` de votre fichier `index.php` pour afficher le
-logo.
-
-Voici un exemple de code pour inclure le logo dans la page d'accueil :
+Le choix des noms des clés du tableau associatif est complètement arbitraire.
+Par exemple, nous aurions pu utiliser les noms de clés suivants pour représenter
+les mêmes informations :
 
 ```php
 <?php
-$pets = [
-    // Les animaux de compagnie sont à définir ici
+$task1 = [
+    'identifiant' => 1,
+    'titre' => 'Exemple de tâche 1',
+    'categorie' => 'Personnel',
+    'priorite' => 'Haute',
+    'description' => 'Description de la tâche 1.',
+    'date_butoire' => '2027-01-24',
 ];
-
-?>
-
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-
-    <title>Page d'accueil | ninetendogs</title>
-    <meta name="description" content="ninetendogs - Gestionnaire d'animaux de compagnie">
-</head>
-
-<body class="container">
-    <header>
-        <nav>
-            <ul>
-                <li><strong>ninetendogs</strong></li>
-            </ul>
-            <ul>
-                <li><a href="./index.php">Accueil</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <center>
-            <div class="logo">
-                <img src="./images/logo.svg" alt="ninetendogs logo">
-            </div>
-
-            <h1>ninetendogs</h1>
-        </center>
-
-        <p>Bienvenue sur ninetendogs, le gestionnaire d'animaux de compagnie !</p>
-
-        <p>Cette application te permet de gérer facilement tes animaux de compagnie.</p>
-
-        <h2>Liste des animaux de compagnie</h2>
-
-        <div class="overflow-auto">
-            <table class="striped">
-                <!-- Les en-têtes de colonnes et corps du tableau sont à définir ici -->
-            </table>
-        </div>
-    </main>
-    <footer>
-        <center>
-            <small>
-                Un projet réalisé dans le cadre du cours <a href="https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course">ProgServ1</a> enseigné à la <a href="https://heig-vd.ch">HEIG-VD</a>.
-            </small>
-        </center>
-    </footer>
-</body>
-
-</html>
 ```
 
-Sauvegardez tous les fichiers et effectuez un commit Git pour enregistrer cette
-étape de développement dans l'historique Git de votre projet avec le message de
-commit "Ajout du logo à la page d'accueil" et poussez ce commit sur le dépôt
-distant.
+Il est important de choisir des noms de clés qui sont clairs et explicites pour
+représenter les informations que nous voulons stocker pour chaque tâche, afin de
+faciliter la lecture et la compréhension du code.
 
-Vous devriez maintenant voir le logo affiché dans la page d'accueil de votre
-application de gestion d'animaux de compagnie.
+### Créer plusieurs tableaux associatifs représentant les tâches
 
-Pour le moment, la mise en page du logo est assez basique, nous allons ajouter
-des styles CSS personnalisés pour améliorer l'apparence du logo dans la page
-d'accueil dans la section suivante.
-
-### Ajouter des styles CSS personnalisés
-
-Dans l'état actuel, certains aspects de l'application de gestion d'animaux de
-compagnie ne sont pas encore optimisés pour une bonne expérience utilisateur :
-
-- Le logo n'est pas parfaitement adapté à l'affichage dans la page d'accueil.
-- Si le contenu de la page ne prend pas toute la place disponible, le pied de
-  page peut être affiché au milieu de la page au lieu d'être collé en bas de la
-  page.
-
-Dans cette section, nous allons ajouter des styles CSS personnalisés pour
-résoudre ces problèmes.
-
-#### Ajuster l'apparence du logo dans la page d'accueil
-
-Sans doute que cette image de logo n'est pas parfaitement adaptée à l'affichage
-dans la page d'accueil de votre application de gestion d'animaux de compagnie,
-et que vous souhaitez ajuster sa taille ou son positionnement pour améliorer
-l'apparence de la page d'accueil.
-
-Pour cela, nous allons ajouter un style CSS personnalisé dans la section
-`<head>` de votre fichier `index.php` pour ajuster l'apparence du logo.
-
-Commençons par créer un dossier `css/` à la racine de votre mini-projet, et y
-créer un fichier `styles.css` pour stocker les styles CSS personnalisés de votre
-application :
-
-```text
-mini-projet/
-├── css
-│   └── styles.css
-├── images
-│   └── logo.svg
-└── index.php
-```
-
-Ensuite, ajoutez un lien vers ce fichier CSS personnalisé dans la section
-`<head>` de votre fichier `index.php` :
+Répétons cette opération pour les autres tâches, en changeant les valeurs des
+clés pour chaque tâche :
 
 ```php
-    <link rel="stylesheet" href="./css/styles.css">
+$task2 = [
+    'id' => 2,
+    'title' => 'Exemple de tâche 2',
+    'type' => 'Autre',
+    'priority' => 'Moyenne',
+    'description' => null,
+    'deadline' => '2027-04-01',
+];
+
+$task3 = [
+    'id' => 3,
+    'title' => 'Exemple de tâche 3',
+    'type' => 'Personnel',
+    'priority' => 'Haute',
+    'description' => 'Description de la tâche 3.',
+    'deadline' => '2027-10-10',
+];
+
+$task4 = [
+    'id' => 4,
+    'title' => 'Exemple de tâche 4',
+    'type' => 'Travail',
+    'priority' => 'Basse',
+];
 ```
 
-Enfin, ajoutez les styles CSS suivants dans le fichier `css/styles.css` pour
-ajuster l'apparence du logo dans la page d'accueil :
+Notez également que certaines informations sont optionnelles, comme la
+description ou la date butoire pour réaliser la tâche. Dans ce cas, nous pouvons
+utiliser la valeur `null` pour représenter l'absence de valeur pour ces
+informations ou simplement ne pas inclure ces clés dans le tableau associatif.
 
-```css
-/* Classe personnalisée pour le logo */
-.logo {
-	margin-bottom: 10px;
-	width: 200px;
-	padding: 20px;
-	border-radius: 100%;
-	background-color: #0172ad;
-}
+### Utiliser les tableaux associatifs dans le code HTML
+
+Maintenant que nous avons ces quatre tableaux associatifs représentant les
+quatre tâches, nous pouvons les remplacer dans le code HTML de la page
+`index.php` pour utiliser ces valeurs :
+
+> [!TIP]
+>
+> Pour rappel, cet affichage est appelé un "diff" et il permet de visualiser les
+> différences entre deux versions d'un fichier.
+>
+> Les lignes précédées d'un signe `-` représentent les lignes supprimées, et les
+> lignes précédées d'un signe `+` représentent les lignes ajoutées.
+
+```diff
+diff --git a/mini-projet/public/index.php b/mini-projet/public/index.php
+index 79dcfba..5b16cbc 100644
+--- a/mini-projet/public/index.php
++++ b/mini-projet/public/index.php
+@@ -75,15 +75,15 @@ $task4 = [
+         <p>Cette application web permet de gérer une liste de tâches pour <?= APP_AUTHOR; ?>. Vous pouvez créer, visualiser, modifier et supprimer des tâches.</p>
+
+         <article>
+-            <h2>Exemple de tâche 1</h2>
++            <h2><?= $task1['title']; ?></h2>
+
+             <p>
+-                <span class="badge badge-contrast">Personnel</span>
+-                <span class="badge badge-primary">Haute</span>
+-                <span class="badge badge-secondary">2027-01-24</span>
++                <span class="badge badge-contrast"><?= $task1['type']; ?></span>
++                <span class="badge badge-primary"><?= $task1['priority']; ?></span>
++                <span class="badge badge-secondary"><?= $task1['deadline']; ?></span>
+             </p>
+
+-            <p>Description de la tâche 1.</p>
++            <p><?= $task1['description']; ?></p>
+
+             <footer>
+                 <a class="btn btn-primary btn-sm" href="./view.php">
+@@ -93,12 +93,12 @@ $task4 = [
+         </article>
+
+         <article>
+-            <h2>Exemple de tâche 2</h2>
++            <h2><?= $task2['title']; ?></h2>
+
+             <p>
+-                <span class="badge badge-contrast">Autre</span>
+-                <span class="badge badge-primary">Moyenne</span>
+-                <span class="badge badge-secondary">2027-04-01</span>
++                <span class="badge badge-contrast"><?= $task2['type']; ?></span>
++                <span class="badge badge-primary"><?= $task2['priority']; ?></span>
++                <span class="badge badge-secondary"><?= $task2['deadline']; ?></span>
+             </p>
+
+             <footer>
+@@ -109,15 +109,15 @@ $task4 = [
+         </article>
+
+         <article>
+-            <h2>Exemple de tâche 3</h2>
++            <h2><?= $task3['title']; ?></h2>
+
+             <p>
+-                <span class="badge badge-contrast">Personnel</span>
+-                <span class="badge badge-primary">Haute</span>
+-                <span class="badge badge-secondary">2027-10-10</span>
++                <span class="badge badge-contrast"><?= $task3['type']; ?></span>
++                <span class="badge badge-primary"><?= $task3['priority']; ?></span>
++                <span class="badge badge-secondary"><?= $task3['deadline']; ?></span>
+             </p>
+
+-            <p>Description de la tâche 3.</p>
++            <p><?= $task3['description']; ?></p>
+
+             <footer>
+                 <a class="btn btn-primary btn-sm" href="./view.php">
+@@ -127,15 +127,13 @@ $task4 = [
+         </article>
+
+         <article>
+-            <h2>Exemple de tâche 4</h2>
++            <h2><?= $task4['title']; ?></h2>
+
+             <p>
+-                <span class="badge badge-contrast">Travail</span>
+-                <span class="badge badge-primary">Basse</span>
++                <span class="badge badge-contrast"><?= $task4['type']; ?></span>
++                <span class="badge badge-primary"><?= $task4['priority']; ?></span>
+             </p>
 ```
 
-La classe `logo` est déjà utilisée dans la balise `<div>` qui enveloppe l'image
-du logo dans le fichier `index.php`, ce qui permet d'appliquer ces styles CSS
-personnalisés à l'image du logo.
+Sauvegardez ensuite le fichier `index.php` et accédez à la page d'accueil de
+votre application dans votre navigateur à l'adresse suivante :
+<http://localhost:8080/mini-projet/index.php>. Vous devriez voir les
+informations sur les tâches s'afficher dynamiquement à partir des tableaux
+associatifs que nous avons définis.
 
-Sauvegardez tous les fichiers et effectuez un commit Git pour enregistrer cette
-étape de développement dans l'historique Git de votre projet avec le message de
-commit "Ajout des styles CSS personnalisés pour le logo" et poussez ce commit
-sur le dépôt distant.
+Si vous changez les valeurs dans les tableaux associatifs `$task1`, `$task2`,
+`$task3`, et `$task4`, vous verrez que les informations affichées sur la page
+d'accueil se mettront à jour automatiquement sans avoir à modifier le code HTML.
 
-Le logo devrait maintenant être mieux adapté à l'affichage dans la page
-d'accueil de votre application de gestion d'animaux de compagnie, avec une
-taille ajustée et un style plus attrayant.
+### Mettre en place un tableau de tâches
 
-#### Coller le pied de page en bas de la page
+Avoir les tâches dans des tableaux associatifs est une bonne première étape,
+mais nous pouvons aller plus loin en regroupant toutes les tâches dans un seul
+tableau. Cela nous permettra de parcourir toutes les tâches avec une seule
+boucle, plutôt que d'avoir à répéter le code pour chaque tâche.
 
-Dans l'état actuel, si le contenu de la page d'accueil de votre application de
-gestion d'animaux de compagnie ne prend pas toute la place disponible, le pied
-de page peut être affiché au milieu de la page au lieu d'être collé en bas de la
-page.
+Pour cela, nous allons créer un tableau `$tasks` qui contiendra tous les
+tableaux associatifs représentant les tâches. Voici comment nous pouvons le
+faire :
 
-Pour résoudre ce problème, nous allons ajouter des styles CSS personnalisés pour
-coller le pied de page en bas de la page, même si le contenu de la page n'occupe
-pas toute la place disponible.
-
-Pour cela, ajoutez les styles CSS suivants dans le fichier `css/styles.css` pour
-coller le pied de page en bas de la page :
-
-```css
-/* Styles pour que l'élément principal de la page prenne toute la hauteur disponible */
-body {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-}
-
-main {
-	flex: 1;
-}
+```php
+$tasks = [
+    $task1,
+    $task2,
+    $task3,
+    $task4,
+];
 ```
 
-Ces styles CSS utilisent Flexbox pour faire en sorte que le contenu principal de
-la page prenne toute la place disponible, ce qui permet de coller le pied de
-page en bas de la page même si le contenu de la page n'occupe pas toute la place
-disponible.
+Ici, nous avons donc un tableau indexé `$tasks` qui contient quatre éléments,
+chacun étant un tableau associatif représentant une tâche.
 
-Sauvegardez tous les fichiers et effectuez un commit Git pour enregistrer cette
-étape de développement dans l'historique Git de votre projet avec le message de
-commit "Ajout des styles CSS personnalisés pour le pied de page" et poussez ce
-commit sur le dépôt distant.
+Il s'agit d'un tableau multidimensionnel (car il contient des tableaux à
+l'intérieur d'un autre tableau) indexé contenant des tableaux associatifs. Cela
+nous permettra de parcourir toutes les tâches avec une seule boucle.
 
-Le pied de page devrait maintenant être collé en bas de la page, même si le
-contenu de la page n'occupe pas toute la place disponible, ce qui améliore
-l'apparence de la page d'accueil de votre application de gestion d'animaux de
-compagnie.
+### Utiliser une boucle pour parcourir le tableau de tâches
 
-## Tester la page d'accueil
+Maintenant que nous avons notre tableau `$tasks`, nous pouvons utiliser une
+boucle `foreach` pour parcourir toutes les tâches et afficher leurs informations
+dans le code HTML.
 
-Afin de tester la page d'accueil de votre application de gestion d'animaux de
-compagnie, accédez à la page d'accueil de votre application à l'adresse suivante
-: <http://localhost:8080/mini-projet/index.php>.
+```diff
+diff --git a/mini-projet/public/index.php b/mini-projet/public/index.php
+index 1c91aa2..cadcb5f 100644
+--- a/mini-projet/public/index.php
++++ b/mini-projet/public/index.php
+@@ -81,72 +81,29 @@ $tasks = [
 
-Vous devriez voir une page d'accueil avec un menu de navigation, un logo, et un
-tableau HTML avec les informations sur les animaux de compagnie affichées dans
-la page d'accueil de votre application de gestion d'animaux de compagnie.
+         <p>Cette application web permet de gérer une liste de tâches pour <?= APP_AUTHOR; ?>. Vous pouvez créer, visualiser, modifier et supprimer des tâches.</p>
 
-Pour tester quelques fonctionnalités de base de votre application, ouvrez les
-outils de développement de votre navigateur (généralement accessibles avec la
-touche F12 ou en faisant un clic droit sur la page et en sélectionnant
-"Inspecter").
+-        <article>
+-            <h2><?= $task1['title']; ?></h2>
+-
+-            <p>
+-                <span class="badge badge-contrast"><?= $task1['type']; ?></span>
+-                <span class="badge badge-primary"><?= $task1['priority']; ?></span>
+-                <span class="badge badge-secondary"><?= $task1['deadline']; ?></span>
+-            </p>
+-
+-            <p><?= $task1['description']; ?></p>
+-
+-            <footer>
+-                <a class="btn btn-primary btn-sm" href="./view.php">
+-                    Visualiser la tâche
+-                </a>
+-            </footer>
+-        </article>
+-
+-        <article>
+-            <h2><?= $task2['title']; ?></h2>
+-
+-            <p>
+-                <span class="badge badge-contrast"><?= $task2['type']; ?></span>
+-                <span class="badge badge-primary"><?= $task2['priority']; ?></span>
+-                <span class="badge badge-secondary"><?= $task2['deadline']; ?></span>
+-            </p>
+-
+-            <footer>
+-                <a class="btn btn-primary btn-sm" href="./view.php">
+-                    Visualiser la tâche
+-                </a>
+-            </footer>
+-        </article>
+-
+-        <article>
+-            <h2><?= $task3['title']; ?></h2>
+-
+-            <p>
+-                <span class="badge badge-contrast"><?= $task3['type']; ?></span>
+-                <span class="badge badge-primary"><?= $task3['priority']; ?></span>
+-                <span class="badge badge-secondary"><?= $task3['deadline']; ?></span>
+-            </p>
+-
+-            <p><?= $task3['description']; ?></p>
+-
+-            <footer>
+-                <a class="btn btn-primary btn-sm" href="./view.php">
+-                    Visualiser la tâche
+-                </a>
+-            </footer>
+-        </article>
+-
+-        <article>
+-            <h2><?= $task4['title']; ?></h2>
+-
+-            <p>
+-                <span class="badge badge-contrast"><?= $task4['type']; ?></span>
+-                <span class="badge badge-primary"><?= $task4['priority']; ?></span>
+-            </p>
+-
+-            <footer>
+-                <a class="btn btn-primary btn-sm" href="./view.php">
+-                    Visualiser la tâche
+-                </a>
+-            </footer>
+-        </article>
++        <?php foreach ($tasks as $task) { ?>
++            <article>
++                <h2><?= $task['title'] ?></h2>
++
++                <p>
++                    <span class="badge badge-contrast"><?= $task['type'] ?></span>
++                    <span class="badge badge-primary"><?= $task['priority'] ?></span>
++                    <?php if (!empty($task['deadline'])) { ?>
++                        <span class="badge badge-secondary"><?= $task['deadline'] ?></s
+pan>
++                    <?php } ?>
++                </p>
++
++                <?php if (!empty($task['description'])) { ?>
++                    <p><?= $task['description'] ?></p>
++                <?php } ?>
++
++                <footer>
++                    <a class="btn btn-primary btn-sm" href="./view.php">
++                        Visualiser la tâche
++                    </a>
++                </footer>
++            </article>
++        <?php } ?>
+     </main>
+     <footer>
+         <center>
+```
 
-Si besoin, les instructions suivantes peuvent vous aider à ouvrir les outils de
-développement dans différents navigateurs :
+Que pouvons-nous observer dans ce code ?
 
-- **Google Chrome** (et autres navigateurs basés sur Chromium, comme Microsoft
-  Edge) :
-  - Ouvrez le menu (trois points verticaux en haut à droite).
-  - Allez dans "Plus d'outils" > "Outils de développement" ou appuyez sur
-    <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows/Linux) ou
-    <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> (Mac).
-- **Mozilla Firefox** :
-  - Ouvrez le menu (trois lignes horizontales en haut à droite).
-  - Allez dans "Développement web" > "Outils de développement" ou appuyez sur
-    <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows/Linux) ou
-    <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> (Mac).
-- **Safari** :
-  - Allez dans "Safari" > "Préférences" > "Avancé".
-  - Cochez la case "Afficher le menu Développement dans la barre de menus".
-  - Allez dans "Développement" > "Afficher l'inspecteur Web" ou appuyez sur
-    <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>I</kbd>.
+Toutes les tâches sont maintenant affichées dynamiquement à partir du tableau
+`$tasks` et de la boucle `foreach` que nous avons définis.
 
-Tester ensuite les fonctionnalités suivantes de votre application de gestion
-d'animaux de compagnie :
+Grâce à la boucle `foreach`, nous n'avons plus besoin de répéter le code HTML
+pour chaque tâche. La boucle parcourt chaque élément du tableau `$tasks`, et
+pour chaque tâche, elle affiche les informations correspondantes.
 
-- Essayez de passer l'application en mode sombre pour vérifier que les styles
-  CSS de Pico CSS s'adaptent correctement au thème sombre.
-- Essayez de redimensionner la fenêtre du navigateur pour vérifier que les
-  styles CSS de Pico CSS s'adaptent correctement à différentes tailles d'écran
-  (responsive design).
+Si les informations ne sont pas présentes pour une tâche (comme la description
+ou la date butoire), nous utilisons une condition `if` avec la fonction
+`!empty()` pour vérifier si ces informations existent avant de les afficher.
+Cela permet d'éviter d'afficher des éléments vides dans le code HTML.
+
+Nous reviendrons sur les fonctions lors du prochain cours, mais pour l'instant,
+il est important de comprendre que la fonction `empty()` permet de vérifier si
+une variable est vide ou non. Si la variable n'est pas vide (à l'aide de
+l'inversation `!`), le code à l'intérieur du bloc `if` sera exécuté.
+
+Sauvegardez ensuite le fichier `index.php` et accédez à la page d'accueil de
+votre application dans votre navigateur à l'adresse suivante :
+<http://localhost:8080/mini-projet/index.php>. Vous devriez voir les
+informations sur les tâches s'afficher dynamiquement à partir du tableau
+`$tasks` et de la boucle `foreach` que nous avons définis.
+
+Modifiez les valeurs dans le tableau `$tasks` et vous verrez que les
+informations affichées sur la page d'accueil se mettront à jour automatiquement
+sans avoir à modifier le code HTML.
+
+### Ajouter une nouvelle tâche
+
+Maintenant que nous avons mis en place un tableau `$tasks` pour stocker les
+informations sur les tâches, nous pouvons facilement ajouter une nouvelle tâche
+à notre application.
+
+Pour ajouter une nouvelle tâche, il suffit de créer un nouveau tableau
+associatif représentant la tâche et de l'ajouter au tableau `$tasks`. Par
+exemple, pour ajouter une cinquième tâche, nous pouvons faire ceci :
+
+```php
+$task5 = [
+    'id' => 5,
+    'title' => 'Exemple de tâche 5',
+    'type' => 'Travail',
+    'priority' => 'Moyenne',
+    'description' => 'Description de la tâche 5.',
+    'deadline' => '2027-12-31',
+];
+```
+
+Puis mettre à jour le tableau `$tasks` pour inclure cette nouvelle tâche :
+
+```php
+$tasks = [
+    $task1,
+    $task2,
+    $task3,
+    $task4,
+    $task5,
+];
+```
+
+Sauvegardez ensuite le fichier `index.php` et accédez à la page d'accueil de
+votre application dans votre navigateur à l'adresse suivante :
+<http://localhost:8080/mini-projet/index.php>. Vous devriez voir la nouvelle
+tâche s'afficher dynamiquement avec les autres tâches.
+
+### Gérer le cas d'un tableau de tâches vide
+
+Imaginons maintenant que nous n'avons pas de tâches à afficher sur la page
+d'accueil.
+
+Pour ilustrer ce cas, nous allons temporairement vider le tableau `$tasks` en le
+remplaçant par un tableau vide :
+
+```php
+$tasks = [];
+```
+
+Sauvegardez ensuite le fichier `index.php` et accédez à la page d'accueil de
+votre application dans votre navigateur à l'adresse suivante :
+<http://localhost:8080/mini-projet/index.php>. Vous devriez voir que la page
+d'accueil ne contient plus aucune tâche à afficher.
+
+Cela peut être problématique pour l'utilisateur·trice, car la personne ne sait
+pas s'il n'y a vraiment aucune tâche à afficher ou si c'est un problème
+technique qui empêche l'affichage des tâches.
+
+Pour cela, nous pouvons utiliser une condition `if` avec la fonction `empty()`
+pour vérifier si le tableau `$tasks` est vide ou non avant d'afficher les
+tâches. Si le tableau est vide, nous pouvons afficher un message informant
+l'utilisateur·trice qu'il n'y a aucune tâche à afficher. Si le tableau n'est pas
+vide, nous pouvons afficher les tâches comme nous l'avons fait précédemment.
+
+Remplacez l'entièreté de la boucle `foreach` qui affiche les tâches par le code
+suivant :
+
+```php
+<?php if (empty($tasks)) { ?>
+    <p><em>Aucune tâche n'a été trouvée.</em></p>
+<?php } else { ?>
+    <?php foreach ($tasks as $task) { ?>
+        <article>
+            <h2><?= $task['title'] ?></h2>
+
+            <p>
+                <span class="badge badge-contrast"><?= $task['type'] ?></span>
+                <span class="badge badge-primary"><?= $task['priority'] ?></span>
+                <?php if (!empty($task['deadline'])) { ?>
+                    <span class="badge badge-secondary"><?= $task['deadline'] ?></span>
+                <?php } ?>
+            </p>
+
+            <?php if (!empty($task['description'])) { ?>
+                <p><?= $task['description'] ?></p>
+            <?php } ?>
+
+            <footer>
+                <a class="btn btn-primary btn-sm" href="./view.php">
+                    Visualiser la tâche
+                </a>
+            </footer>
+        </article>
+    <?php } ?>
+<?php } ?>
+```
+
+Sauvegardez ensuite le fichier `index.php` et accédez à la page d'accueil de
+votre application dans votre navigateur à l'adresse suivante :
+<http://localhost:8080/mini-projet/index.php>. Vous devriez voir le message
+"Aucune tâche n'a été trouvée." s'afficher à la place des tâches.
+
+Si vous remettez le tableau `$tasks` avec des tâches à l'intérieur, vous verrez
+que les tâches s'afficheront à nouveau sur la page d'accueil.
+
+### Harmoniser le tableau de tâches
+
+Actuellement, nous avons défini les tâches dans des tableaux associatifs
+séparés, puis nous avons regroupé ces tableaux associatifs dans un tableau
+indexé `$tasks`. Cela fonctionne, mais ce n'est pas très pratique si nous
+voulons ajouter ou modifier des tâches, car nous devons créer un tableau
+associatif pour chaque tâche, puis les ajouter au tableau `$tasks`.
+
+Il est plus pratique de définir directement les tâches dans le tableau `$tasks`,
+en utilisant des tableaux associatifs pour chaque tâche. Cela nous permet de
+définir toutes les tâches dans un seul endroit, et de les modifier ou d'en
+ajouter facilement.
+
+Pour cela, nous allons remplacer la définition des tâches dans des tableaux
+associatifs séparés par une définition directe des tâches dans le tableau
+`$tasks`. Voici comment nous pouvons le faire :
+
+```php
+$tasks = [
+    [
+        'id' => 1,
+        'title' => 'Exemple de tâche 1',
+        'type' => 'Personnel',
+        'priority' => 'Haute',
+        'description' => 'Description de la tâche 1.',
+        'deadline' => '2027-01-24',
+    ],
+    [
+        'id' => 2,
+        'title' => 'Exemple de tâche 2',
+        'type' => 'Autre',
+        'priority' => 'Moyenne',
+        'description' => null,
+        'deadline' => '2027-04-01',
+    ],
+    [
+        'id' => 3,
+        'title' => 'Exemple de tâche 3',
+        'type' => 'Personnel',
+        'priority' => 'Haute',
+        'description' => 'Description de la tâche 3.',
+        'deadline' => '2027-10-10',
+    ],
+    [
+        'id' => 4,
+        'title' => 'Exemple de tâche 4',
+        'type' => 'Travail',
+        'priority' => 'Basse',
+    ],
+];
+```
+
+Ainsi, nous avons toujours un même tableau multidimensionnel indexé `$tasks`
+composé de plusieurs tableaux associatifs, mais nous avons défini directement
+les tâches dans ce tableau, ce qui est plus pratique pour ajouter ou modifier
+des tâches.
+
+Si nous souhaitons ajouter une nouvelle tâche, il nous suffit d'ajouter un
+nouveau tableau associatif à la fin du tableau `$tasks`.
+
+## Utiliser un tableau sur la page de visualisation d'une tâche
+
+En réutilisant ce que nous avons appris jusqu'ici, nous pouvons également
+utiliser un tableau associatif pour stocker les informations sur une tâche
+spécifique dans la page `view.php`, et utiliser ces informations pour afficher
+les détails de la tâche.
+
+Utilisez ce que nous avons appris jusqu'ici pour définir un tableau associatif
+représentant une tâche dans le fichier `view.php`, et utilisez les informations
+de ce tableau pour afficher les détails de la tâche dans le code HTML.
+
+<details>
+<summary>Exemple de solution pour la page `view.php`</summary>
+
+```diff
+diff --git a/mini-projet/public/view.php b/mini-projet/public/view.php
+index 9c7d604..94961da 100644
+--- a/mini-projet/public/view.php
++++ b/mini-projet/public/view.php
+@@ -1,6 +1,15 @@
+ <?php
+ const APP_NAME = "Liste de tâches de";
+ const APP_AUTHOR = "Ludovic";
++
++$task = [
++    'id' => 1,
++    'title' => 'Exemple de tâche 1',
++    'type' => 'personal',
++    'priority' => 'high',
++    'deadline' => '2023-10-15',
++    'description' => 'Description de la tâche 1.',
++];
+ ?>
+
+ <!DOCTYPE html>
+@@ -30,21 +39,21 @@ const APP_AUTHOR = "Ludovic";
+         <nav aria-label="breadcrumb">
+             <ul>
+                 <li><a href="./index.php">Accueil</a></li>
+-                <li>Exemple de tâche 1</li>
++                <li><?= $task['title'] ?></li>
+             </ul>
+         </nav>
+     </header>
+     <main>
+         <article>
+-            <h1>Exemple de tâche 1</h1>
++            <h1><?= $task['title'] ?></h1>
+
+             <p>
+-                <span class="badge badge-contrast">Personnel</span>
+-                <span class="badge badge-primary">Haute</span>
+-                <span class="badge badge-secondary">2027-01-24</span>
++                <span class="badge badge-contrast"><?= $task['type'] ?></span>
++                <span class="badge badge-primary"><?= $task['priority'] ?></span>
++                <span class="badge badge-secondary"><?= $task['deadline'] ?></span>
+             </p>
+
+-            <p>Description de la tâche 1.</p>
++            <p><?= $task['description'] ?></p>
+         </article>
+     </main>
+     <footer>
+```
+
+</details>
 
 ## Conclusion
 
-Dans cette seconde séance de mini-projet, vous avez appris à manipuler des
-tableaux associatifs en PHP.
+Dans cette seconde séance de mini-projet, vous avez appris à manipuler les
+tableaux mis à disposition avec PHP, incluant les tableaux indexés, les tableaux
+associatifs et les tableaux multi-dimensionnels.
 
-Vous avez également modifié le code de l'application pour visualiser les animaux
-de compagnie dans un tableau HTML avec les informations de base des animaux de
-compagnie.
+A l'aide des boucles, nous pouvons parcourir ces tableaux et afficher les
+informations dans le code HTML.
 
 Ces informations sont affichées grâce à une boucle `foreach` qui parcourt le
-tableau associatif `$pets` et affiche les informations sur chaque animal de
-compagnie dans une ligne du tableau HTML.
-
-La mise en page a été améliorée grâce à l'ajout de styles CSS avec le framework
-Pico CSS, ce qui rend la lecture de la page plus agréable.
-
-La page d'accueil est maintenant plus attrayante et servira de base pour les
-prochaines étapes de développement de l'application de gestion d'animaux de
-compagnie.
+tableau `$tasks` et affiche les informations sur chaque tâche dans un article
+dédié.
 
 Nous vous invitons maintenant à passer aux exemples de code et aux exercices de
 la séance comme indiqué dans le [contenu principal](../README.md).
@@ -1003,20 +825,6 @@ nous vous recommandons de suivre les étapes suivantes :
    les différences et les similitudes, et pour comprendre les différentes
    approches possibles pour résoudre les problèmes rencontrés lors du
    développement de votre application PHP.
-
-## Aller plus loin
-
-> [!TIP]
->
-> Cette section est optionnelle.
->
-> Vous pouvez y revenir si vous avez du temps ou si vous souhaitez approfondir
-> vos connaissances après avoir terminé les exercices et le mini-projet.
-
-- Êtes-vous capable d'améliorer l'affichage de l'application en ajoutant des
-  styles CSS supplémentaires ?
-- Êtes-vous capable d'ajouter une fonctionnalité pour trier les animaux de
-  compagnie par âge ou par nom ?
 
 <!-- URLs -->
 

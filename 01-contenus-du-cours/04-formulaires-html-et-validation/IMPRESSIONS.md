@@ -33,10 +33,7 @@ header-includes: |
 ## Utilisation
 
 ```bash
-docker run \
-  --rm --volume "$(pwd):/data" \
-  --user "$(id -u):$(id -g)" \
-  pandoc/latex:3-alpine -o 01-contenus-du-cours/01.02-introduction-a-php/IMPRESSIONS.pdf 01-contenus-du-cours/01.02-introduction-a-php/IMPRESSIONS.md
+./generate-printable-documents.sh
 ```
 -->
 

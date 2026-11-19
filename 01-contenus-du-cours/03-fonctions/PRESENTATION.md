@@ -33,6 +33,14 @@ _paginate: false
 
 ![bg brightness:2 opacity:0.05][illustration-principale]
 
+## Exploration du mini-projet
+
+Avant de commencer, explorez le mini-project à l'aide du document [Activités en
+classe][impressions] et du site web déployé pour le mini-projet :
+<https://progserv1.heig-vd-progserv-course.ch>.
+
+![bg right:40%][illustration-mini-projet]
+
 ## Retrouvez le contenu complet de cette présentation sur GitHub
 
 <!-- _class: lead -->
@@ -831,6 +839,8 @@ Est-ce que vous avez des questions ?
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [contenu-complet]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-fonctions/README.md
+[impressions]:
+	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/03-fonctions-impressions.pdf
 [exemples-de-code]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/03-fonctions/02-exemples-de-code/README.md
 [exercices]:
