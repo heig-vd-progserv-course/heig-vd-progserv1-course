@@ -105,7 +105,7 @@ d'afficher chaque élément du tableau et de les afficher.
 
 Les tableaux et les boucles sont des concepts fondamentaux en programmation et
 sont utilisés dans de nombreux programmes et applications, notamment pour
-stocker et parcourir une collection d'animaux de compagnie.
+stocker et parcourir une collection de données.
 
 La liste complète des objectifs est disponible dans la section _"Objectifs"_ du
 bloc d'information en haut de ce contenu.
@@ -369,7 +369,7 @@ indices : le premier pour accéder au tableau interne et le deuxième pour accé
 
 Les tableaux multidimensionnels sont très utiles pour stocker des données
 complexes, comme des matrices, des tableaux de bord, des arbres ou encore des
-listes d'animaux (😉).
+listes de tâches (😉).
 
 Un autre exemple de tableau multidimensionnel est un tableau associatif de
 tableaux associatifs :
@@ -860,7 +860,7 @@ Vous trouverez les détails du mini-projet ici :
 - Quelles sont les fonctions utiles pour travailler avec les tableaux et les
   boucles, et comment les utiliser ?
 - Comment utiliser les tableaux et les boucles pour stocker et parcourir une
-  collection d'animaux de compagnie ?
+  collection de tâches ?
 
 ## À faire pour la semaine suivante
 

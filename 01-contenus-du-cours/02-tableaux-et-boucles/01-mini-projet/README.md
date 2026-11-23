@@ -45,14 +45,18 @@ Une page dynamique est une page dont le contenu est généré automatiquement à
 partir d'une source de données unique, plutôt que d'être écrit en dur dans le
 code HTML.
 
+De plus, nous allons profiter de cette séance pour mettre en place un suivi de
+version avec Git, afin de pouvoir sauvegarder notre travail au fil du temps.
+
 À l'issue de cette séance, les personnes qui étudient devraient avoir pu :
 
-- Créer une page d'accueil pour l'application de gestion d'animaux de compagnie.
-- Utiliser des styles CSS pour améliorer l'apparence de la page d'accueil.
-- Définir des animaux de compagnie à l'aide d'un tableau associatif.
-- Utiliser des tables HTML pour afficher des données des animaux de compagnie.
-- Utiliser des boucles pour parcourir un tableau associatif et afficher les
-  informations sur chaque animal de compagnie.
+- Définir des tâches à l'aide d'un tableau associatif.
+- Utiliser des tables HTML pour afficher des données des tâches.
+- Utiliser des boucles pour parcourir un tableau multidimensionnel et afficher
+  les informations sur chaque tâche.
+- Gérer le cas d'un tableau de tâches vide.
+- Appliquer un suivi de version avec Git pour sauvegarder le travail au fil du
+  temps.
 
 ## Ouvrir son environnement de développement
 
@@ -83,6 +87,10 @@ développer votre application tout en ayant un suivi clair de vos différentes
 étapes de développement grâce à Git.
 
 ## Utiliser des tableaux et des boucles sur la page d'accueil
+
+Dans cette section, nous allons utiliser des tableaux et des boucles pour rendre
+la page d'accueil de notre application dynamique, permettant d'afficher les
+informations sur les tâches à partir d'une source de données unique.
 
 ### Identifier les informations communes à toutes les tâches
 
@@ -241,6 +249,27 @@ Il est important de choisir des noms de clés qui sont clairs et explicites pour
 représenter les informations que nous voulons stocker pour chaque tâche, afin de
 faciliter la lecture et la compréhension du code.
 
+Afin de sauvegarder le travail effectué jusqu'à présent, nous allons créer un
+commit Git pour enregistrer l'état actuel de notre projet. Dans le terminal, à
+la racine de votre projet, exécutez les commandes suivantes :
+
+```bash
+# Ajouter les modifications à Git
+git add .
+
+# Créer un commit avec un message décrivant les modifications
+git commit -m "Définir un tableau associatif pour représenter une tâche"
+
+# Pousser les modifications vers le dépôt distant
+git push
+```
+
+Vos modifications locales sont maintenant sauvegardées dans votre dépôt Git et
+vous pouvez continuer à travailler sur votre projet en toute sécurité. De plus,
+les modifications locales ont été poussées vers le dépôt distant, ce qui permet
+de les partager avec d'autres personnes travaillant sur le même projet ou
+d'avoir une sauvegarde en ligne de votre travail.
+
 ### Créer plusieurs tableaux associatifs représentant les tâches
 
 Répétons cette opération pour les autres tâches, en changeant les valeurs des
@@ -277,6 +306,27 @@ Notez également que certaines informations sont optionnelles, comme la
 description ou la date butoire pour réaliser la tâche. Dans ce cas, nous pouvons
 utiliser la valeur `null` pour représenter l'absence de valeur pour ces
 informations ou simplement ne pas inclure ces clés dans le tableau associatif.
+
+Afin de sauvegarder le travail effectué jusqu'à présent, nous allons créer un
+commit Git pour enregistrer l'état actuel de notre projet. Dans le terminal, à
+la racine de votre projet, exécutez les commandes suivantes :
+
+```bash
+# Ajouter les modifications à Git
+git add .
+
+# Créer un commit avec un message décrivant les modifications
+git commit -m "Créer plusieurs tableaux associatifs représentant les tâches"
+
+# Pousser les modifications vers le dépôt distant
+git push
+```
+
+Vos modifications locales sont maintenant sauvegardées dans votre dépôt Git et
+vous pouvez continuer à travailler sur votre projet en toute sécurité. De plus,
+les modifications locales ont été poussées vers le dépôt distant, ce qui permet
+de les partager avec d'autres personnes travaillant sur le même projet ou
+d'avoir une sauvegarde en ligne de votre travail.
 
 ### Utiliser les tableaux associatifs dans le code HTML
 
@@ -381,6 +431,27 @@ Si vous changez les valeurs dans les tableaux associatifs `$task1`, `$task2`,
 `$task3`, et `$task4`, vous verrez que les informations affichées sur la page
 d'accueil se mettront à jour automatiquement sans avoir à modifier le code HTML.
 
+Afin de sauvegarder le travail effectué jusqu'à présent, nous allons créer un
+commit Git pour enregistrer l'état actuel de notre projet. Dans le terminal, à
+la racine de votre projet, exécutez les commandes suivantes :
+
+```bash
+# Ajouter les modifications à Git
+git add .
+
+# Créer un commit avec un message décrivant les modifications
+git commit -m "Utiliser les tableaux associatifs dans le code HTML"
+
+# Pousser les modifications vers le dépôt distant
+git push
+```
+
+Vos modifications locales sont maintenant sauvegardées dans votre dépôt Git et
+vous pouvez continuer à travailler sur votre projet en toute sécurité. De plus,
+les modifications locales ont été poussées vers le dépôt distant, ce qui permet
+de les partager avec d'autres personnes travaillant sur le même projet ou
+d'avoir une sauvegarde en ligne de votre travail.
+
 ### Mettre en place un tableau de tâches
 
 Avoir les tâches dans des tableaux associatifs est une bonne première étape,
@@ -407,6 +478,27 @@ chacun étant un tableau associatif représentant une tâche.
 Il s'agit d'un tableau multidimensionnel (car il contient des tableaux à
 l'intérieur d'un autre tableau) indexé contenant des tableaux associatifs. Cela
 nous permettra de parcourir toutes les tâches avec une seule boucle.
+
+Afin de sauvegarder le travail effectué jusqu'à présent, nous allons créer un
+commit Git pour enregistrer l'état actuel de notre projet. Dans le terminal, à
+la racine de votre projet, exécutez les commandes suivantes :
+
+```bash
+# Ajouter les modifications à Git
+git add .
+
+# Créer un commit avec un message décrivant les modifications
+git commit -m "Définir un tableau associatif pour représenter la liste de tâches"
+
+# Pousser les modifications vers le dépôt distant
+git push
+```
+
+Vos modifications locales sont maintenant sauvegardées dans votre dépôt Git et
+vous pouvez continuer à travailler sur votre projet en toute sécurité. De plus,
+les modifications locales ont été poussées vers le dépôt distant, ce qui permet
+de les partager avec d'autres personnes travaillant sur le même projet ou
+d'avoir une sauvegarde en ligne de votre travail.
 
 ### Utiliser une boucle pour parcourir le tableau de tâches
 
@@ -547,6 +639,27 @@ Modifiez les valeurs dans le tableau `$tasks` et vous verrez que les
 informations affichées sur la page d'accueil se mettront à jour automatiquement
 sans avoir à modifier le code HTML.
 
+Afin de sauvegarder le travail effectué jusqu'à présent, nous allons créer un
+commit Git pour enregistrer l'état actuel de notre projet. Dans le terminal, à
+la racine de votre projet, exécutez les commandes suivantes :
+
+```bash
+# Ajouter les modifications à Git
+git add .
+
+# Créer un commit avec un message décrivant les modifications
+git commit -m "Utiliser une boucle pour parcourir le tableau de tâches"
+
+# Pousser les modifications vers le dépôt distant
+git push
+```
+
+Vos modifications locales sont maintenant sauvegardées dans votre dépôt Git et
+vous pouvez continuer à travailler sur votre projet en toute sécurité. De plus,
+les modifications locales ont été poussées vers le dépôt distant, ce qui permet
+de les partager avec d'autres personnes travaillant sur le même projet ou
+d'avoir une sauvegarde en ligne de votre travail.
+
 ### Ajouter une nouvelle tâche
 
 Maintenant que nous avons mis en place un tableau `$tasks` pour stocker les
@@ -584,6 +697,27 @@ Sauvegardez ensuite le fichier `index.php` et accédez à la page d'accueil de
 votre application dans votre navigateur à l'adresse suivante :
 <http://localhost:8080/mini-projet/index.php>. Vous devriez voir la nouvelle
 tâche s'afficher dynamiquement avec les autres tâches.
+
+Afin de sauvegarder le travail effectué jusqu'à présent, nous allons créer un
+commit Git pour enregistrer l'état actuel de notre projet. Dans le terminal, à
+la racine de votre projet, exécutez les commandes suivantes :
+
+```bash
+# Ajouter les modifications à Git
+git add .
+
+# Créer un commit avec un message décrivant les modifications
+git commit -m "Ajouter une nouvelle tâche au tableau de tâches"
+
+# Pousser les modifications vers le dépôt distant
+git push
+```
+
+Vos modifications locales sont maintenant sauvegardées dans votre dépôt Git et
+vous pouvez continuer à travailler sur votre projet en toute sécurité. De plus,
+les modifications locales ont été poussées vers le dépôt distant, ce qui permet
+de les partager avec d'autres personnes travaillant sur le même projet ou
+d'avoir une sauvegarde en ligne de votre travail.
 
 ### Gérer le cas d'un tableau de tâches vide
 
@@ -653,6 +787,27 @@ votre application dans votre navigateur à l'adresse suivante :
 Si vous remettez le tableau `$tasks` avec des tâches à l'intérieur, vous verrez
 que les tâches s'afficheront à nouveau sur la page d'accueil.
 
+Afin de sauvegarder le travail effectué jusqu'à présent, nous allons créer un
+commit Git pour enregistrer l'état actuel de notre projet. Dans le terminal, à
+la racine de votre projet, exécutez les commandes suivantes :
+
+```bash
+# Ajouter les modifications à Git
+git add .
+
+# Créer un commit avec un message décrivant les modifications
+git commit -m "Gérer le cas d'un tableau de tâches vide"
+
+# Pousser les modifications vers le dépôt distant
+git push
+```
+
+Vos modifications locales sont maintenant sauvegardées dans votre dépôt Git et
+vous pouvez continuer à travailler sur votre projet en toute sécurité. De plus,
+les modifications locales ont été poussées vers le dépôt distant, ce qui permet
+de les partager avec d'autres personnes travaillant sur le même projet ou
+d'avoir une sauvegarde en ligne de votre travail.
+
 ### Harmoniser le tableau de tâches
 
 Actuellement, nous avons défini les tâches dans des tableaux associatifs
@@ -713,7 +868,32 @@ des tâches.
 Si nous souhaitons ajouter une nouvelle tâche, il nous suffit d'ajouter un
 nouveau tableau associatif à la fin du tableau `$tasks`.
 
+Afin de sauvegarder le travail effectué jusqu'à présent, nous allons créer un
+commit Git pour enregistrer l'état actuel de notre projet. Dans le terminal, à
+la racine de votre projet, exécutez les commandes suivantes :
+
+```bash
+# Ajouter les modifications à Git
+git add .
+
+# Créer un commit avec un message décrivant les modifications
+git commit -m "Harmoniser le tableau de tâches en définissant directement les tâches dans le tableau 'tasks'"
+
+# Pousser les modifications vers le dépôt distant
+git push
+```
+
+Vos modifications locales sont maintenant sauvegardées dans votre dépôt Git et
+vous pouvez continuer à travailler sur votre projet en toute sécurité. De plus,
+les modifications locales ont été poussées vers le dépôt distant, ce qui permet
+de les partager avec d'autres personnes travaillant sur le même projet ou
+d'avoir une sauvegarde en ligne de votre travail.
+
 ## Utiliser un tableau sur la page de visualisation d'une tâche
+
+Dans cette section, nous allons utiliser un tableau associatif pour stocker les
+informations sur une tâche spécifique dans la page `view.php`, et utiliser ces
+informations pour afficher les détails de la tâche.
 
 En réutilisant ce que nous avons appris jusqu'ici, nous pouvons également
 utiliser un tableau associatif pour stocker les informations sur une tâche
@@ -721,8 +901,12 @@ spécifique dans la page `view.php`, et utiliser ces informations pour afficher
 les détails de la tâche.
 
 Utilisez ce que nous avons appris jusqu'ici pour définir un tableau associatif
-représentant une tâche dans le fichier `view.php`, et utilisez les informations
-de ce tableau pour afficher les détails de la tâche dans le code HTML.
+représentant **une seule et unique tâche** dans le fichier `view.php`, et
+utilisez les informations de ce tableau pour afficher les détails de la tâche
+dans le code HTML.
+
+Sauvegardez votre travail avec Git et poussez vos modifications vers le dépôt
+distant.
 
 <details>
 <summary>Exemple de solution pour la page `view.php`</summary>
@@ -740,10 +924,10 @@ index 9c7d604..94961da 100644
 +$task = [
 +    'id' => 1,
 +    'title' => 'Exemple de tâche 1',
-+    'type' => 'personal',
-+    'priority' => 'high',
-+    'deadline' => '2023-10-15',
++    'type' => 'Personnel',
++    'priority' => 'Haute',
 +    'description' => 'Description de la tâche 1.',
++    'deadline' => '2027-01-24',
 +];
  ?>
 
@@ -776,6 +960,17 @@ index 9c7d604..94961da 100644
          </article>
      </main>
      <footer>
+```
+
+```bash
+# Ajouter les modifications à Git
+git add .
+
+# Créer un commit avec un message décrivant les modifications
+git commit -m "Utiliser un tableau associatif pour stocker les informations sur une tâche spécifique dans la page 'view.php'"
+
+# Pousser les modifications vers le dépôt distant
+git push
 ```
 
 </details>

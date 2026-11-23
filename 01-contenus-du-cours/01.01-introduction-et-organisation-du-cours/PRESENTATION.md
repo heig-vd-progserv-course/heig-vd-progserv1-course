@@ -411,10 +411,8 @@ Est-ce que vous avez des questions ?
 
 <!-- Illustrations -->
 
-[illustration-principale]:
-	https://images.unsplash.com/photo-1517486430290-35657bdcef51?fit=crop&h=720
-[illustration-objectifs]:
-	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
+[illustration-mini-projet]:
+	https://images.unsplash.com/photo-1768055104910-8c8d213835fb?fit=crop&h=720
 [illustration-exemples-de-code]:
 	https://images.unsplash.com/photo-1712762056200-50d8f803ba10?fit=crop&h=720
 [illustration-exercices]:

@@ -41,10 +41,9 @@ header-includes: |
 
 ## Partie 1 - Exploration du mini-projet
 
-Par groupe de deux (2) à trois (3) personnes, explorez le mini-projet que vous
-allez réaliser tout au long du cours à l'adresse
-<https://progserv1.heig-vd-progserv-course.ch> (voir le résultat de la séance
-5).
+Par groupe de deux (2) à trois (3) personnes, explorez le mini-projet du cours à
+l'adresse <https://progserv1.heig-vd-progserv-course.ch> (voir le résultat de la
+séance 3).
 
 ### Déroulement
 
@@ -56,75 +55,25 @@ allez réaliser tout au long du cours à l'adresse
 
 ### Question 1
 
-Quelles sont les fonctionnalités principales que propose le mini-projet ?
+Voyez-vous des différences dans le mini-projet par rapport à la séance
+précédente ?
+
+**Note** : regardez bien toutes les pages et les fonctionnalités du mini-projet.
+
+Que pouvez-vous dire sur les changements qui ont été apportés au mini-projet par
+rapport à la séance précédente ? Pourquoi et comment ces changements ont-ils été
+apportés ?
 
 ```{=latex}
-\answerbox{3cm}
-```
-
-### Question 2
-
-Combien de pages composent le mini-projet ?
-
-```{=latex}
-\answerbox{0.5cm}
-```
-
-### Question 3
-
-Pour chaque page, quelles sont les informations affichées et les actions
-possibles ?
-
-```{=latex}
-\answerbox{3cm}
-```
-
-### Question 4
-
-Quelles sont les technologies utilisées pour implémenter le mini-projet ?
-
-```{=latex}
-\answerbox{3cm}
+\answerbox{15cm}
 ```
 
 ```{=latex}
 \newpage
 ```
 
-### Question 5
-
-Comment pensez-vous que le mini-projet est structuré ? (ex. : nombre de
-fichiers, organisation des fichiers, etc.)
-
 ```{=latex}
-\answerbox{3.5cm}
-```
-
-### Question 6
-
-Comment pensez-vous que les données sont échangées et stockées dans cette
-application ?
-
-```{=latex}
-\answerbox{3.5cm}
-```
-
-### Question 7
-
-Avez-vous découvert des limites ou des problèmes dans le mini-projet ? Si oui,
-lesquels ?
-
-```{=latex}
-\answerbox{3.5cm}
-```
-
-### Question 8
-
-De quoi est composé une tâche dans le mini-projet ? (ex. : quelles sont les
-informations qui la composent ?)
-
-```{=latex}
-\answerbox{3.5cm}
+\answerbox{25cm}
 ```
 
 ```{=latex}
@@ -145,61 +94,43 @@ la séance en répondant aux questions ci-dessous.
 
 ### Question 1
 
-Dans quel fichier se trouve la documentation du projet ? Pourquoi est-il si
-important ?
+Quel est le processus de développement que vous avez découvert lors de cette
+séance ? Comment est-ce que ce processus vous a aidé à mieux comprendre le
+mini-projet et à le développer ?
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{7.5cm}
 ```
 
 ### Question 2
 
-Comment devez-vous ouvrir le projet dans Visual Studio Code pour que
-l'environnement de développement local fonctionne correctement ? Quelle est la
-commande à exécuter pour lancer le serveur web local ?
+Où et comment est décrit une fonction dans le mini-projet ? Quelles sont les
+différentes parties d'une fonction et à quoi servent-elles ?
 
 ```{=latex}
-\answerbox{3cm}
-```
-
-### Question 3
-
-A quelle adresse (URL) pouvez-vous accéder pour visualiser votre projet dans
-votre navigateur web ?
-
-```{=latex}
-\answerbox{0.5cm}
-```
-
-### Question 4
-
-Qu'est-ce qu'un serveur web tel que Apache et à quoi sert-il dans le mini-projet
-? De quoi est-il composé et comment fonctionne-t-il ?
-
-```{=latex}
-\answerbox{3cm}
+\answerbox{7.5cm}
 ```
 
 ```{=latex}
 \newpage
 ```
 
-### Question 5
+### Question 3
 
-Quelle est la différence entre PHP et HTML ? Comment ces deux langages sont-ils
-utilisés dans le mini-projet ?
+Quelles sont les fonctions que vous avez créées dans le mini-projet et à quoi
+servent-elles ?
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{5cm}
 ```
 
-### Question 6
+### Question 4
 
-Donnez l'explication complète de ce qu'il se passe lorsque vous accédez à une
-page PHP dans votre navigateur web.
+Avez-vous identifié des limites aux fonctions que vous avez créées ? Si oui,
+quelles sont-elles et comment pourriez-vous les améliorer/corriger ?
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{5cm}
 ```
 
 ### Liste de contrôle

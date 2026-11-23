@@ -437,6 +437,8 @@ Les résultats seront discutés au prochain cours. **Merci beaucoup !**
 
 [![bg right:40% w:85%][feedback-qr-code]][feedback]
 
+## À vous de jouer !
+
 - Réaliser le [mini-projet][mini-projet].
 - (Re)lire le [support de cours][contenu-complet].
 - Faire les [exercices][exercices].
