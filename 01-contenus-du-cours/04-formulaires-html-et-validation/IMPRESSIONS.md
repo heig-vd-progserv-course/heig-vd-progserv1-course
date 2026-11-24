@@ -41,10 +41,9 @@ header-includes: |
 
 ## Partie 1 - Exploration du mini-projet
 
-Par groupe de deux (2) à trois (3) personnes, explorez le mini-projet que vous
-allez réaliser tout au long du cours à l'adresse
-<https://progserv1.heig-vd-progserv-course.ch> (voir le résultat de la séance
-5).
+Par groupe de deux (2) à trois (3) personnes, explorez le mini-projet du cours à
+l'adresse <https://progserv1.heig-vd-progserv-course.ch> (voir le résultat de la
+séance 5).
 
 ### Déroulement
 

@@ -525,7 +525,7 @@ foreach ($users as $user) {
 
 ## Fonctions utiles pour les tableaux et les boucles (1)
 
-- Nous étudierons les fonctions plus en détail dans les prochains contenus, mais
+- Nous étudierons les fonctions plus en détail lors de la prochaine séance, mais
   voici la base :
   - Une fonction est un ensemble d'instructions qui prend des entrées, effectue
     une tâche spécifique et retourne un résultat.
@@ -620,6 +620,8 @@ Array ( [0] => apple [1] => banana [2] => orange [3] => kiwi [4] => pear )
 
 Est-ce que vous avez des questions ?
 
+## À vous de jouer !
+
 - Réaliser le [mini-projet][mini-projet].
 - (Re)lire le [support de cours][contenu-complet].
 - Faire les [exercices][exercices].
@@ -630,11 +632,14 @@ Est-ce que vous avez des questions ?
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
-## Sources
+## Sources (1)
 
 - [Illustration principale][illustration-principale] par
   [Richard Jacobs](https://unsplash.com/@rj2747) sur
   [Unsplash](https://unsplash.com/photos/grayscale-photo-of-elephants-drinking-water-8oenpCXktqQ)
+- [Illustration][illustration-mini-projet] par
+  [Jakub Żerdzicki](https://unsplash.com/@jakubzerdzicki) sur
+  [Unsplash](https://unsplash.com/photos/hand-writing-a-checklist-in-a-notebook-TB7aNN4blTQ)
 - [Illustration][illustration-objectifs] par
   [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
@@ -653,6 +658,9 @@ Est-ce que vous avez des questions ?
 - [Illustration][illustration-les-boucles] par
   [Justin](https://unsplash.com/@heyimsolacee) sur
   [Unsplash](https://unsplash.com/photos/silhouette-of-ferris-wheel-during-sunset-6LO03psPJnE)
+
+## Sources (2)
+
 - [Illustration][illustration-a-vous-de-jouer] par
   [Nikita Kachanovsky](https://unsplash.com/@nkachanovskyyy) sur
   [Unsplash](https://unsplash.com/photos/white-sony-ps4-dualshock-controller-over-persons-palm-FJFPuE1MAOM)
@@ -676,6 +684,8 @@ Est-ce que vous avez des questions ?
 
 [illustration-principale]:
 	https://images.unsplash.com/photo-1517486430290-35657bdcef51?fit=crop&h=720
+[illustration-mini-projet]:
+	https://images.unsplash.com/photo-1768055104910-8c8d213835fb?fit=crop&h=720
 [illustration-objectifs]:
 	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
 [illustration-les-tableaux]:

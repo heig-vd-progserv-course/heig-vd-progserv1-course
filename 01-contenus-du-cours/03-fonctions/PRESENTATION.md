@@ -429,122 +429,6 @@ public class Main {
 }
 ```
 
-## Variables globales (1)
-
-- Une variable globale est une variable déclarée en dehors de toute fonction.
-- Une variable globale peut être utilisée à l'intérieur d'une fonction à l'aide
-  du mot-clé `global`.
-- À éviter autant que possible, car cela rend le code difficile à comprendre et
-  à maintenir.
-
-![bg right:40%][illustration-variables-globales]
-
-## Variables globales (2)
-
-```php
-<?php
-$x = 42;
-
-function square() {
-    global $x;
-
-    $x = $x * $x;
-}
-
-square();
-
-echo $x; // Affiche 1764
-```
-
-## Variables globales (3)
-
-```java
-// Équivalent en Java
-public class Main {
-    public static int x = 42;
-
-    public static int square() {
-        x = x * x;
-    }
-
-    public static void main(String[] args) {
-        square();
-
-        System.out.println(x); // Affiche 1764
-    }
-}
-```
-
-## Passage par valeur et par référence (1)
-
-En programmation, les paramètres d'une fonction peuvent être de deux manières
-différentes :
-
-- Passage par valeur.
-- Passage par référence.
-
-![bg right:40%][illustration-quest-ce-quune-fonction]
-
-## Passage par valeur et par référence (2)
-
-**Passage par valeur**
-
-Une copie de la variable est créée et utilisée dans la fonction.
-
-Les modifications apportées à la variable dans la fonction n'affectent pas la
-variable d'origine.
-
-Il s'agit du comportement par défaut en PHP mais il est aussi possible de passer
-des paramètres par référence.
-
-## Passage par valeur et par référence (3)
-
-**Passage par référence**
-
-Une référence à la variable d'origine est utilisée dans la fonction.
-
-Les modifications apportées à la variable dans la fonction affectent la variable
-d'origine.
-
-En Java, les types primitifs (int, float, etc.) sont passés par valeur, tandis
-que les objets sont passés par référence.
-
-Peu utilisé, mais très pratique dans certains cas, par ex. les boucles.
-
-### Passage par valeur en PHP
-
-Une copie de la variable est créée et utilisée dans la fonction.
-
-```php
-<?php
-function increment($x) {
-    $x++;
-}
-
-$value = 5;
-
-increment($value);
-
-echo $value; // Affiche 5, car $value n'est pas modifié par la fonction increment
-```
-
-### Passage par référence en PHP
-
-Une référence à la variable d'origine est utilisée dans la fonction.
-
-```php
-<?php
-function increment(&$x) {
-    $x++;
-}
-
-$value = 5;
-
-increment($value);
-
-echo $value; // Affiche 6, car $value est modifié par la fonction increment
-```
-
 ## Fonctions prédéfinies en PHP (1)
 
 - PHP fournit de nombreuses fonctions prédéfinies.
@@ -761,7 +645,7 @@ l'inclusion multiple du même fichier.
 
 <!-- _class: lead -->
 
-Est-ce que vous avez des questions ?
+## À vous de jouer !
 
 - Réaliser le [mini-projet][mini-projet].
 - (Re)lire le [support de cours][contenu-complet].
@@ -778,6 +662,9 @@ Est-ce que vous avez des questions ?
 - [Illustration principale][illustration-principale] par
   [Richard Jacobs](https://unsplash.com/@rj2747) sur
   [Unsplash](https://unsplash.com/photos/grayscale-photo-of-elephants-drinking-water-8oenpCXktqQ)
+- [Illustration][illustration-mini-projet] par
+  [Jakub Żerdzicki](https://unsplash.com/@jakubzerdzicki) sur
+  [Unsplash](https://unsplash.com/photos/hand-writing-a-checklist-in-a-notebook-TB7aNN4blTQ)
 - [Illustration][illustration-objectifs] par
   [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
@@ -852,6 +739,8 @@ Est-ce que vous avez des questions ?
 
 [illustration-principale]:
 	https://images.unsplash.com/photo-1517486430290-35657bdcef51?fit=crop&h=720
+[illustration-mini-projet]:
+	https://images.unsplash.com/photo-1768055104910-8c8d213835fb?fit=crop&h=720
 [illustration-objectifs]:
 	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
 [illustration-quest-ce-quune-fonction]:

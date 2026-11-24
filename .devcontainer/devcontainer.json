@@ -1,6 +1,7 @@
 {
 	"name": "HEIG-VD ProgServ1 Course Development Container",
-	"image": "mcr.microsoft.com/devcontainers/base:trixie",
+	// https://github.com/devcontainers/images/tree/main/src/php
+	"image": "mcr.microsoft.com/devcontainers/php:8.5-trixie",
 	// Set environment variables for the container
 	"containerEnv": {
 		"CLAUDE_CONFIG_DIR": "/home/vscode/.claude"
@@ -27,7 +28,6 @@
 				"GitHub.copilot",
 				"jebbs.plantuml",
 				"marp-team.marp-vscode",
-				"qwtel.sqlite-viewer",
 				"redhat.vscode-yaml",
 				"streetsidesoftware.code-spell-checker",
 				"streetsidesoftware.code-spell-checker-french",

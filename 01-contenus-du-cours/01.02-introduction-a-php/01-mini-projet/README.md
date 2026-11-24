@@ -929,6 +929,12 @@ supplémentaires lors des prochaines séances du cours.
 
 Dans le fichier `mini-projet/public/view.php`, ajoutez le code suivant :
 
+> [!NOTE]
+>
+> Changez le nom de l'auteur·trice par le vôtre. Le mini-projet que nous
+> réalisons dans ce cours vous appartient et vous pourrez l'utiliser comme bon
+> vous semble dans le futur.
+
 ```php
 <?php
 const APP_NAME = "Liste de tâches de";

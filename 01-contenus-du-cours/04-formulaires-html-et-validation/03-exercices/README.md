@@ -67,7 +67,6 @@ Réalisez un formulaire de contact en HTML avec les champs suivants :
 - Prénom (champ texte)
 - Adresse e-mail (champ email)
 - Message (champ textarea)
-- Consentement pour le traitement des données personnelles (champ case à cocher)
 - Bouton d'envoi (submit)
 
 Le formulaire doit être structuré de manière à ce que chaque champ soit
@@ -113,13 +112,6 @@ moment.
         <textarea id="message" name="message"></textarea>
 
         <br>
-
-        <label for="consent">
-            <input type="checkbox" id="consent" name="consent">
-            J'accepte le traitement de mes données personnelles
-        </label>
-
-        <br>
         <br>
 
         <button type="submit">Envoyer</button>
@@ -151,13 +143,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lastName = $_POST["lastName"];
     $email = $_POST["email"];
     $message = $_POST["message"];
-    $consent = isset($_POST["consent"]) ? true : false;
 
     echo "Prénom : " . $firstName . "<br>";
     echo "Nom : " . $lastName . "<br>";
     echo "Adresse e-mail : " . $email . "<br>";
     echo "Message : " . $message . "<br>";
-    echo "Consentement : " . ($consent ? "Oui" : "Non") . "<br>";
 }
 ?>
 
@@ -190,13 +180,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <textarea id="message" name="message"></textarea>
 
         <br>
-
-        <label for="consent">
-            <input type="checkbox" id="consent" name="consent">
-            J'accepte le traitement de mes données personnelles
-        </label>
-
-        <br>
         <br>
 
         <button type="submit">Envoyer</button>
@@ -226,13 +209,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lastName = $_POST["lastName"];
     $email = $_POST["email"];
     $message = $_POST["message"];
-    $consent = isset($_POST["consent"]) ? true : false;
 
     echo "Prénom : " . $firstName . "<br>";
     echo "Nom : " . $lastName . "<br>";
     echo "Adresse e-mail : " . $email . "<br>";
     echo "Message : " . $message . "<br>";
-    echo "Consentement : " . ($consent ? "Oui" : "Non") . "<br>";
 }
 ?>
 
@@ -265,13 +246,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <textarea id="message" name="message"><?php echo isset($message) ? $message : ''; ?></textarea>
 
         <br>
-
-        <label for="consent">
-            <input type="checkbox" id="consent" name="consent" <?php echo isset($consent) && $consent ? 'checked' : ''; ?>>
-            J'accepte le traitement de mes données personnelles
-        </label>
-
-        <br>
         <br>
 
         <button type="submit">Envoyer</button>
@@ -298,7 +272,6 @@ validation suivantes :
   pouvez changer le type du champ `email` en `text` dans le formulaire et
   essayer de soumettre une adresse e-mail invalide.
 - Le message est obligatoire et doit être compris entre 2 et 500 caractères.
-- Le consentement pour le traitement des données personnelles est obligatoire.
 
 Si les données sont valides, affichez un message de confirmation ou les messages
 d'erreur correspondants sinon.
@@ -314,7 +287,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lastName = $_POST["lastName"];
     $email = $_POST["email"];
     $message = $_POST["message"];
-    $consent = isset($_POST["consent"]) ? true : false;
 
     // Par défaut, il n'y a pas d'erreurs
     $errors = [];
@@ -346,10 +318,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (strlen($message) < 2 || strlen($message) > 500) {
         array_push($errors, "Le message doit contenir entre 2 et 500 caractères.");
-    }
-
-    if (!$consent) {
-        array_push($errors, "Vous devez accepter le traitement de vos données personnelles.");
     }
 }
 ?>
@@ -397,13 +365,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <textarea id="message" name="message"><?php echo isset($message) ? $message : ''; ?></textarea>
 
         <br>
-
-        <label for="consent">
-            <input type="checkbox" id="consent" name="consent" <?php echo isset($consent) && $consent ? 'checked' : ''; ?>>
-            J'accepte le traitement de mes données personnelles
-        </label>
-
-        <br>
         <br>
 
         <button type="submit">Envoyer</button>
@@ -432,7 +393,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lastName = $_POST["lastName"];
     $email = $_POST["email"];
     $message = $_POST["message"];
-    $consent = isset($_POST["consent"]) ? true : false;
 
     // Par défaut, il n'y a pas d'erreurs
     $errors = [];
@@ -464,10 +424,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (strlen($message) < 2 || strlen($message) > 500) {
         array_push($errors, "Le message doit contenir entre 2 et 500 caractères.");
-    }
-
-    if (!$consent) {
-        array_push($errors, "Vous devez accepter le traitement de vos données personnelles.");
     }
 }
 ?>
@@ -513,13 +469,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <label for="message">Message</label><br>
         <textarea id="message" name="message" required><?php echo isset($message) ? $message : ''; ?></textarea>
-
-        <br>
-
-        <label for="consent">
-            <input type="checkbox" id="consent" name="consent" <?php echo isset($consent) && $consent ? 'checked' : ''; ?> required>
-            J'accepte le traitement de mes données personnelles
-        </label>
 
         <br>
         <br>
