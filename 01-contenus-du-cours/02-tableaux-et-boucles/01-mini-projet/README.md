@@ -103,8 +103,7 @@ contiennent sensiblement les mêmes informations pour chaque tâche :
     <h2>Exemple de tâche 1</h2>
 
     <p>
-        <span class="badge badge-contrast">Personnel</span>
-        <span class="badge badge-primary">Haute</span>
+        <span class="badge badge-contrast">Haute</span>
         <span class="badge badge-secondary">2027-01-24</span>
     </p>
 
@@ -121,8 +120,7 @@ contiennent sensiblement les mêmes informations pour chaque tâche :
     <h2>Exemple de tâche 2</h2>
 
     <p>
-        <span class="badge badge-contrast">Autre</span>
-        <span class="badge badge-primary">Moyenne</span>
+        <span class="badge badge-contrast">Moyenne</span>
         <span class="badge badge-secondary">2027-04-01</span>
     </p>
 
@@ -137,8 +135,7 @@ contiennent sensiblement les mêmes informations pour chaque tâche :
     <h2>Exemple de tâche 3</h2>
 
     <p>
-        <span class="badge badge-contrast">Personnel</span>
-        <span class="badge badge-primary">Haute</span>
+        <span class="badge badge-contrast">Haute</span>
         <span class="badge badge-secondary">2027-10-10</span>
     </p>
 
@@ -155,8 +152,7 @@ contiennent sensiblement les mêmes informations pour chaque tâche :
     <h2>Exemple de tâche 4</h2>
 
     <p>
-        <span class="badge badge-contrast">Travail</span>
-        <span class="badge badge-primary">Basse</span>
+        <span class="badge badge-contrast">Basse</span>
     </p>
 
     <footer>
@@ -199,7 +195,6 @@ chaque tâche :
 
 - Un identifiant unique pour chaque tâche.
 - Un titre pour chaque tâche.
-- Un type de tâche (ex. : personnel, travail, autre).
 - Une priorité pour chaque tâche (ex. : haute, moyenne, basse).
 - Une description pour chaque tâche (optionnelle).
 - Une date butoire pour réaliser la tâche (optionnelle).
@@ -218,7 +213,6 @@ const APP_AUTHOR = "Ludovic";
 $task1 = [
     'id' => 1,
     'title' => 'Exemple de tâche 1',
-    'type' => 'Personnel',
     'priority' => 'Haute',
     'description' => 'Description de la tâche 1.',
     'deadline' => '2027-01-24',
@@ -238,7 +232,6 @@ les mêmes informations :
 $task1 = [
     'identifiant' => 1,
     'titre' => 'Exemple de tâche 1',
-    'categorie' => 'Personnel',
     'priorite' => 'Haute',
     'description' => 'Description de la tâche 1.',
     'date_butoire' => '2027-01-24',
@@ -279,7 +272,6 @@ clés pour chaque tâche :
 $task2 = [
     'id' => 2,
     'title' => 'Exemple de tâche 2',
-    'type' => 'Autre',
     'priority' => 'Moyenne',
     'description' => null,
     'deadline' => '2027-04-01',
@@ -288,7 +280,6 @@ $task2 = [
 $task3 = [
     'id' => 3,
     'title' => 'Exemple de tâche 3',
-    'type' => 'Personnel',
     'priority' => 'Haute',
     'description' => 'Description de la tâche 3.',
     'deadline' => '2027-10-10',
@@ -297,7 +288,6 @@ $task3 = [
 $task4 = [
     'id' => 4,
     'title' => 'Exemple de tâche 4',
-    'type' => 'Travail',
     'priority' => 'Basse',
 ];
 ```
@@ -355,11 +345,9 @@ index 79dcfba..5b16cbc 100644
 +            <h2><?= $task1['title']; ?></h2>
 
              <p>
--                <span class="badge badge-contrast">Personnel</span>
--                <span class="badge badge-primary">Haute</span>
+-                <span class="badge badge-contrast">Haute</span>
 -                <span class="badge badge-secondary">2027-01-24</span>
-+                <span class="badge badge-contrast"><?= $task1['type']; ?></span>
-+                <span class="badge badge-primary"><?= $task1['priority']; ?></span>
++                <span class="badge badge-contrast"><?= $task1['priority']; ?></span>
 +                <span class="badge badge-secondary"><?= $task1['deadline']; ?></span>
              </p>
 
@@ -376,11 +364,8 @@ index 79dcfba..5b16cbc 100644
 +            <h2><?= $task2['title']; ?></h2>
 
              <p>
--                <span class="badge badge-contrast">Autre</span>
--                <span class="badge badge-primary">Moyenne</span>
 -                <span class="badge badge-secondary">2027-04-01</span>
-+                <span class="badge badge-contrast"><?= $task2['type']; ?></span>
-+                <span class="badge badge-primary"><?= $task2['priority']; ?></span>
++                <span class="badge badge-contrast"><?= $task2['priority']; ?></span>
 +                <span class="badge badge-secondary"><?= $task2['deadline']; ?></span>
              </p>
 
@@ -393,11 +378,9 @@ index 79dcfba..5b16cbc 100644
 +            <h2><?= $task3['title']; ?></h2>
 
              <p>
--                <span class="badge badge-contrast">Personnel</span>
--                <span class="badge badge-primary">Haute</span>
+-                <span class="badge badge-contrast">Haute</span>
 -                <span class="badge badge-secondary">2027-10-10</span>
-+                <span class="badge badge-contrast"><?= $task3['type']; ?></span>
-+                <span class="badge badge-primary"><?= $task3['priority']; ?></span>
++                <span class="badge badge-contrast"><?= $task3['priority']; ?></span>
 +                <span class="badge badge-secondary"><?= $task3['deadline']; ?></span>
              </p>
 
@@ -414,10 +397,8 @@ index 79dcfba..5b16cbc 100644
 +            <h2><?= $task4['title']; ?></h2>
 
              <p>
--                <span class="badge badge-contrast">Travail</span>
--                <span class="badge badge-primary">Basse</span>
-+                <span class="badge badge-contrast"><?= $task4['type']; ?></span>
-+                <span class="badge badge-primary"><?= $task4['priority']; ?></span>
+-                <span class="badge badge-contrast">Basse</span>
++                <span class="badge badge-contrast"><?= $task4['priority']; ?></span>
              </p>
 ```
 
@@ -519,8 +500,7 @@ index 1c91aa2..cadcb5f 100644
 -            <h2><?= $task1['title']; ?></h2>
 -
 -            <p>
--                <span class="badge badge-contrast"><?= $task1['type']; ?></span>
--                <span class="badge badge-primary"><?= $task1['priority']; ?></span>
+-                <span class="badge badge-contrast"><?= $task1['priority']; ?></span>
 -                <span class="badge badge-secondary"><?= $task1['deadline']; ?></span>
 -            </p>
 -
@@ -537,8 +517,7 @@ index 1c91aa2..cadcb5f 100644
 -            <h2><?= $task2['title']; ?></h2>
 -
 -            <p>
--                <span class="badge badge-contrast"><?= $task2['type']; ?></span>
--                <span class="badge badge-primary"><?= $task2['priority']; ?></span>
+-                <span class="badge badge-contrast"><?= $task2['priority']; ?></span>
 -                <span class="badge badge-secondary"><?= $task2['deadline']; ?></span>
 -            </p>
 -
@@ -553,8 +532,7 @@ index 1c91aa2..cadcb5f 100644
 -            <h2><?= $task3['title']; ?></h2>
 -
 -            <p>
--                <span class="badge badge-contrast"><?= $task3['type']; ?></span>
--                <span class="badge badge-primary"><?= $task3['priority']; ?></span>
+-                <span class="badge badge-contrast"><?= $task3['priority']; ?></span>
 -                <span class="badge badge-secondary"><?= $task3['deadline']; ?></span>
 -            </p>
 -
@@ -571,8 +549,7 @@ index 1c91aa2..cadcb5f 100644
 -            <h2><?= $task4['title']; ?></h2>
 -
 -            <p>
--                <span class="badge badge-contrast"><?= $task4['type']; ?></span>
--                <span class="badge badge-primary"><?= $task4['priority']; ?></span>
+-                <span class="badge badge-contrast"><?= $task4['priority']; ?></span>
 -            </p>
 -
 -            <footer>
@@ -586,8 +563,7 @@ index 1c91aa2..cadcb5f 100644
 +                <h2><?= $task['title'] ?></h2>
 +
 +                <p>
-+                    <span class="badge badge-contrast"><?= $task['type'] ?></span>
-+                    <span class="badge badge-primary"><?= $task['priority'] ?></span>
++                    <span class="badge badge-contrast"><?= $task['priority'] ?></span>
 +                    <?php if (!empty($task['deadline'])) { ?>
 +                        <span class="badge badge-secondary"><?= $task['deadline'] ?></s
 pan>
@@ -674,7 +650,6 @@ exemple, pour ajouter une cinquième tâche, nous pouvons faire ceci :
 $task5 = [
     'id' => 5,
     'title' => 'Exemple de tâche 5',
-    'type' => 'Travail',
     'priority' => 'Moyenne',
     'description' => 'Description de la tâche 5.',
     'deadline' => '2027-12-31',
@@ -758,8 +733,7 @@ suivant :
             <h2><?= $task['title'] ?></h2>
 
             <p>
-                <span class="badge badge-contrast"><?= $task['type'] ?></span>
-                <span class="badge badge-primary"><?= $task['priority'] ?></span>
+                <span class="badge badge-contrast"><?= $task['priority'] ?></span>
                 <?php if (!empty($task['deadline'])) { ?>
                     <span class="badge badge-secondary"><?= $task['deadline'] ?></span>
                 <?php } ?>
@@ -830,7 +804,6 @@ $tasks = [
     [
         'id' => 1,
         'title' => 'Exemple de tâche 1',
-        'type' => 'Personnel',
         'priority' => 'Haute',
         'description' => 'Description de la tâche 1.',
         'deadline' => '2027-01-24',
@@ -838,7 +811,6 @@ $tasks = [
     [
         'id' => 2,
         'title' => 'Exemple de tâche 2',
-        'type' => 'Autre',
         'priority' => 'Moyenne',
         'description' => null,
         'deadline' => '2027-04-01',
@@ -846,7 +818,6 @@ $tasks = [
     [
         'id' => 3,
         'title' => 'Exemple de tâche 3',
-        'type' => 'Personnel',
         'priority' => 'Haute',
         'description' => 'Description de la tâche 3.',
         'deadline' => '2027-10-10',
@@ -854,7 +825,6 @@ $tasks = [
     [
         'id' => 4,
         'title' => 'Exemple de tâche 4',
-        'type' => 'Travail',
         'priority' => 'Basse',
     ],
 ];
@@ -924,7 +894,6 @@ index 9c7d604..94961da 100644
 +$task = [
 +    'id' => 1,
 +    'title' => 'Exemple de tâche 1',
-+    'type' => 'Personnel',
 +    'priority' => 'Haute',
 +    'description' => 'Description de la tâche 1.',
 +    'deadline' => '2027-01-24',
@@ -947,11 +916,9 @@ index 9c7d604..94961da 100644
 +            <h1><?= $task['title'] ?></h1>
 
              <p>
--                <span class="badge badge-contrast">Personnel</span>
--                <span class="badge badge-primary">Haute</span>
+-                <span class="badge badge-contrast">Haute</span>
 -                <span class="badge badge-secondary">2027-01-24</span>
-+                <span class="badge badge-contrast"><?= $task['type'] ?></span>
-+                <span class="badge badge-primary"><?= $task['priority'] ?></span>
++                <span class="badge badge-contrast"><?= $task['priority'] ?></span>
 +                <span class="badge badge-secondary"><?= $task['deadline'] ?></span>
              </p>
 

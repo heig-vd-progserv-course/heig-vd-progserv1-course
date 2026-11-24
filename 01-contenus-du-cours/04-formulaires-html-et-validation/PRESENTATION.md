@@ -372,7 +372,7 @@ La validation des formulaires peut inclure des vérifications telles que :
 
 - Les formulaires permettent la saisie des données de l'utilisateur.trice.
 - Ils envoient les données au serveur qui est en charge de les traiter.
-- La validation peut se faire du côté serveur ou du côté client (🚨).
+- La validation peut se faire du côté serveur et du côté client (🚨).
 - Les messages d'erreur et la conservation des saisies améliorent l'expérience
   utilisateur.trice.
 
@@ -383,6 +383,8 @@ La validation des formulaires peut inclure des vérifications telles que :
 <!-- _class: lead -->
 
 Est-ce que vous avez des questions ?
+
+## À vous de jouer !
 
 - Réaliser le [mini-projet][mini-projet].
 - (Re)lire le [support de cours][contenu-complet].
@@ -399,6 +401,9 @@ Est-ce que vous avez des questions ?
 - [Illustration principale][illustration-principale] par
   [Richard Jacobs](https://unsplash.com/@rj2747) sur
   [Unsplash](https://unsplash.com/photos/grayscale-photo-of-elephants-drinking-water-8oenpCXktqQ)
+- [Illustration][illustration-mini-projet] par
+  [Jakub Żerdzicki](https://unsplash.com/@jakubzerdzicki) sur
+  [Unsplash](https://unsplash.com/photos/hand-writing-a-checklist-in-a-notebook-TB7aNN4blTQ)
 - [Illustration][illustration-objectifs] par
   [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
@@ -417,12 +422,12 @@ Est-ce que vous avez des questions ?
 - [Illustration][illustration-cote-client] par
   [Blake Wisz](https://unsplash.com/@blakewisz) sur
   [Unsplash](https://unsplash.com/photos/turned-on-monitor-tE6th1h6Bfk)
-- [Illustration][illustration-cote-serveur] par
-  [Taylor Vick](https://unsplash.com/@tvick) sur
-  [Unsplash](https://unsplash.com/photos/cable-network-M5tzZtFCOfs)
 
 ## Sources (2)
 
+- [Illustration][illustration-cote-serveur] par
+  [Taylor Vick](https://unsplash.com/@tvick) sur
+  [Unsplash](https://unsplash.com/photos/cable-network-M5tzZtFCOfs)
 - [Illustration][illustration-a-vous-de-jouer] par
   [Nikita Kachanovsky](https://unsplash.com/@nkachanovskyyy) sur
   [Unsplash](https://unsplash.com/photos/white-sony-ps4-dualshock-controller-over-persons-palm-FJFPuE1MAOM)
@@ -446,6 +451,8 @@ Est-ce que vous avez des questions ?
 
 [illustration-principale]:
 	https://images.unsplash.com/photo-1517486430290-35657bdcef51?fit=crop&h=720
+[illustration-mini-projet]:
+	https://images.unsplash.com/photo-1768055104910-8c8d213835fb?fit=crop&h=720
 [illustration-objectifs]:
 	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
 [illustration-formulaires-html]:

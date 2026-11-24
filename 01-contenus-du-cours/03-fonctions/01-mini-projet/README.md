@@ -793,7 +793,6 @@ function getTasks(): array {
         [
             'id' => 1,
             'title' => 'Exemple de tâche 1',
-            'type' => 'Personnel',
             'priority' => 'Haute',
             'description' => 'Description de la tâche 1.',
             'deadline' => '2027-01-24',
@@ -801,7 +800,6 @@ function getTasks(): array {
         [
             'id' => 2,
             'title' => 'Exemple de tâche 2',
-            'type' => 'Autre',
             'priority' => 'Moyenne',
             'description' => null,
             'deadline' => '2027-04-01',
@@ -809,7 +807,6 @@ function getTasks(): array {
         [
             'id' => 3,
             'title' => 'Exemple de tâche 3',
-            'type' => 'Personnel',
             'priority' => 'Haute',
             'description' => 'Description de la tâche 3.',
             'deadline' => '2027-10-10',
@@ -817,7 +814,6 @@ function getTasks(): array {
         [
             'id' => 4,
             'title' => 'Exemple de tâche 4',
-            'type' => 'Travail',
             'priority' => 'Basse',
         ],
     ];
@@ -837,7 +833,6 @@ les tâches :
   :
   - `id`.
   - `title`.
-  - `type`.
   - `priority`.
   - `description`.
   - `deadline`.
@@ -869,7 +864,6 @@ index 5626f2c..47a0985 100644
 -    [
 -        'id' => 1,
 -        'title' => 'Exemple de tâche 1',
--        'type' => 'Personnel',
 -        'priority' => 'Haute',
 -        'description' => 'Description de la tâche 1.',
 -        'deadline' => '2027-01-24',
@@ -877,7 +871,6 @@ index 5626f2c..47a0985 100644
 -    [
 -        'id' => 2,
 -        'title' => 'Exemple de tâche 2',
--        'type' => 'Autre',
 -        'priority' => 'Moyenne',
 -        'description' => null,
 -        'deadline' => '2027-04-01',
@@ -885,7 +878,6 @@ index 5626f2c..47a0985 100644
 -    [
 -        'id' => 3,
 -        'title' => 'Exemple de tâche 3',
--        'type' => 'Personnel',
 -        'priority' => 'Haute',
 -        'description' => 'Description de la tâche 3.',
 -        'deadline' => '2027-10-10',
@@ -893,7 +885,6 @@ index 5626f2c..47a0985 100644
 -    [
 -        'id' => 4,
 -        'title' => 'Exemple de tâche 4',
--        'type' => 'Travail',
 -        'priority' => 'Basse',
 -    ],
 -];
@@ -1030,7 +1021,6 @@ index 4ccc1e8..68b8e35 100644
 -$task =     [
 -    'id' => 1,
 -    'title' => 'Exemple de tâche 1',
--    'type' => 'Personnel',
 -    'priority' => 'Haute',
 -    'description' => 'Description de la tâche 1.',
 -    'deadline' => '2027-01-24',
@@ -1170,7 +1160,7 @@ nous allons pouvoir tester quelques fonctionnalités à l'aide de cette page.
 
 Essayez d'appliquer le workflow Git et GitHub décrit précédemment par vous-même
 afin de valider vos compétences et de vous familiariser avec le processus de
-développement.
+développement en commençant par créer une issue et sa branche dédiée.
 
 > [!WARNING]
 >
@@ -1310,7 +1300,6 @@ Ajoutez la fonction suivante dans le fichier `src/functions.php` :
 ```php
 function validateTask(
     ?string $title,
-    ?string $type,
     ?string $priority,
     ?string $description,
     ?string $deadline,
@@ -1323,14 +1312,8 @@ function validateTask(
         array_push($errors, "Le nom est obligatoire.");
     } else if (strlen($title) < 2) {
         array_push($errors, "Le nom doit contenir au minimum 2 caractères.");
-    } else if (strlen($title) > 50) {
-        array_push($errors, "Le nom doit contenir au maximum 50 caractères.");
-    }
-
-    if (empty($type)) {
-        array_push($errors, "Le type est obligatoire.");
-    } else if (!in_array($type, ["personal", "work", "other"])) {
-        array_push($errors, "Le type n'est pas valide.");
+    } else if (strlen($title) > 200) {
+        array_push($errors, "Le nom doit contenir au maximum 200 caractères.");
     }
 
     if (empty($priority)) {
@@ -1342,8 +1325,8 @@ function validateTask(
     if (!empty($description)) {
         if (strlen($description) < 10) {
             array_push($errors, "La description doit contenir au minimum 10 caractères.");
-        } else if (strlen($description) > 500) {
-            array_push($errors, "La description doit contenir au maximum 500 caractères.");
+        } else if (strlen($description) > 1000) {
+            array_push($errors, "La description doit contenir au maximum 1000 caractères.");
         }
     }
 
@@ -1366,11 +1349,11 @@ et de retourner un tableau d'erreurs si nécessaire :
 
 - La fonction est déclarée avec le mot-clé `function`, suivi du nom de la
   fonction `validateTask()`.
-- Elle prend en paramètre les propriétés d'une tâche : `title`, `type`,
-  `priority`, `description`, et `deadline`. Tous ces paramètres sont de type
-  `?string`, ce qui signifie qu'ils peuvent être des chaînes de caractères ou
-  `null`. Cela peut être utile pour gérer les cas où certaines propriétés d'une
-  tâche ne sont pas fournies.
+- Elle prend en paramètre les propriétés d'une tâche : `title`,, `priority`,
+  `description`, et `deadline`. Tous ces paramètres sont de type `?string`, ce
+  qui signifie qu'ils peuvent être des chaînes de caractères ou `null`. Cela
+  peut être utile pour gérer les cas où certaines propriétés d'une tâche ne sont
+  pas fournies.
 - Au travers de différentes conditions, la fonction vérifie si les propriétés de
   la tâche sont valides selon les critères définis. Si une propriété n'est pas
   valide, un message d'erreur correspondant est ajouté au tableau `$errors`.
@@ -1381,18 +1364,14 @@ et de retourner un tableau d'erreurs si nécessaire :
 Ici, les validations suivantes sont effectuées :
 
 - Le nom de la tâche est obligatoire, doit contenir au minimum 2 caractères et
-  au maximum 50 caractères.
-- Le type de la tâche est obligatoire et doit être l'une des valeurs suivantes :
-  - `personal`.
-  - `work`.
-  - `other`.
+  au maximum 200 caractères.
 - La priorité de la tâche est obligatoire et doit être l'une des valeurs
   suivantes :
   - `low`.
   - `medium`.
   - `high`.
 - La description de la tâche est facultative, mais si elle est fournie, elle
-  doit contenir au minimum 10 caractères et au maximum 500 caractères.
+  doit contenir au minimum 10 caractères et au maximum 1000 caractères.
 - La date limite de la tâche est facultative, mais si elle est fournie, elle
   doit être une date valide et ne peut pas être dans le passé. Pour cela, nous
   utilisons la fonction
@@ -1419,14 +1398,12 @@ index fc9c808..dfb989e 100644
 +require_once __DIR__ . '/../src/functions.php';
 +
 +$title = '';
-+$type = '';
 +$priority = '';
 +$description = '';
 +$deadline = '';
 +
 +$errors = validateTask(
 +    $title,
-+    $type,
 +    $priority,
 +    $description,
 +    $deadline,
@@ -1496,7 +1473,6 @@ définir les variables suivantes dans le fichier `create.php` :
 
 ```php
 $title = 'Nouvelle tâche';
-$type = 'personal';
 $priority = 'medium';
 $description = 'Description de la nouvelle tâche.';
 $deadline = '2027-12-31';
@@ -1513,7 +1489,6 @@ validation, nous pouvons définir les variables suivantes dans le fichier
 
 ```php
 $title = '';
-$type = 'autre';
 $priority = 'facile';
 $description = null;
 $deadline = '2000-01-01';

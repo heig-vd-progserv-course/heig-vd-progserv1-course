@@ -29,13 +29,6 @@
         <textarea id="message" name="message"></textarea>
 
         <br>
-
-        <label for="consent">
-            <input type="checkbox" id="consent" name="consent">
-            J'accepte le traitement de mes données personnelles
-        </label>
-
-        <br>
         <br>
 
         <button type="submit">Envoyer</button>

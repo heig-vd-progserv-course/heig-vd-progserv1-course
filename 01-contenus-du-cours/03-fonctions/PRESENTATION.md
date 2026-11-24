@@ -645,6 +645,8 @@ l'inclusion multiple du même fichier.
 
 <!-- _class: lead -->
 
+Est-ce que vous avez des questions ?
+
 ## À vous de jouer !
 
 - Réaliser le [mini-projet][mini-projet].
