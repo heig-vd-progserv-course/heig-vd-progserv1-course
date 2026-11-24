@@ -833,8 +833,7 @@ const APP_AUTHOR = "Ludovic";
             <h2>Exemple de tâche 1</h2>
 
             <p>
-                <span class="badge badge-contrast">Personnel</span>
-                <span class="badge badge-primary">Haute</span>
+                <span class="badge badge-contrast">Haute</span>
                 <span class="badge badge-secondary">2027-01-24</span>
             </p>
 
@@ -851,8 +850,7 @@ const APP_AUTHOR = "Ludovic";
             <h2>Exemple de tâche 2</h2>
 
             <p>
-                <span class="badge badge-contrast">Autre</span>
-                <span class="badge badge-primary">Moyenne</span>
+                <span class="badge badge-contrast">Moyenne</span>
                 <span class="badge badge-secondary">2027-04-01</span>
             </p>
 
@@ -867,8 +865,7 @@ const APP_AUTHOR = "Ludovic";
             <h2>Exemple de tâche 3</h2>
 
             <p>
-                <span class="badge badge-contrast">Personnel</span>
-                <span class="badge badge-primary">Haute</span>
+                <span class="badge badge-contrast">Haute</span>
                 <span class="badge badge-secondary">2027-10-10</span>
             </p>
 
@@ -885,8 +882,7 @@ const APP_AUTHOR = "Ludovic";
             <h2>Exemple de tâche 4</h2>
 
             <p>
-                <span class="badge badge-contrast">Travail</span>
-                <span class="badge badge-primary">Basse</span>
+                <span class="badge badge-contrast">Basse</span>
             </p>
 
             <footer>
@@ -976,8 +972,7 @@ const APP_AUTHOR = "Ludovic";
             <h1>Exemple de tâche 1</h1>
 
             <p>
-                <span class="badge badge-contrast">Personnel</span>
-                <span class="badge badge-primary">Haute</span>
+                <span class="badge badge-contrast">Haute</span>
                 <span class="badge badge-secondary">2027-01-24</span>
             </p>
 

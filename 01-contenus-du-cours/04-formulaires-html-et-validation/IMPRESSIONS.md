@@ -43,7 +43,7 @@ header-includes: |
 
 Par groupe de deux (2) à trois (3) personnes, explorez le mini-projet du cours à
 l'adresse <https://progserv1.heig-vd-progserv-course.ch> (voir le résultat de la
-séance 5).
+séance 4).
 
 ### Déroulement
 
@@ -55,45 +55,52 @@ séance 5).
 
 ### Question 1
 
-Quelles sont les fonctionnalités principales que propose le mini-projet ?
+Depuis la page d'accueil, voyez-vous un changement dans la manière d'accéder aux
+détails d'une tâche par rapport à la séance précédente ? Si oui, comment cela
+fonctionne-t-il ?
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{3.5cm}
 ```
 
 ### Question 2
 
-Combien de pages composent le mini-projet ?
+Arrivez-vous à accéder aux détails d'une tâche en modifiant l'URL dans la barre
+d'adresse de votre navigateur ? Si oui, comment cela fonctionne-t-il ?
 
 ```{=latex}
-\answerbox{0.5cm}
+\answerbox{3.5cm}
 ```
 
 ### Question 3
 
-Pour chaque page, quelles sont les informations affichées et les actions
-possibles ?
+Identifiez-vous des nouveautés dans les pages à disposition dans le mini-projet
+par rapport à la séance précédente ? Si oui, lesquelles et comment cela
+fonctionne-t-il ?
 
 ```{=latex}
-\answerbox{3cm}
-```
-
-### Question 4
-
-Quelles sont les technologies utilisées pour implémenter le mini-projet ?
-
-```{=latex}
-\answerbox{3cm}
+\answerbox{3.5cm}
 ```
 
 ```{=latex}
 \newpage
 ```
 
+### Question 4
+
+Par rapport à la structure de données de la semaine dernière représentant une
+tâche, comment est-ce que celle-ci se retranscrit dans le mini-projet ? Quelles
+sont les différences et les similitudes ?
+
+```{=latex}
+\answerbox{3.5cm}
+```
+
 ### Question 5
 
-Comment pensez-vous que le mini-projet est structuré ? (ex. : nombre de
-fichiers, organisation des fichiers, etc.)
+Est-ce que le système vous empêche de créer une tâche avec des informations
+invalides ? Comment cela fonctionne-t-il ? Quelles sont les informations
+invalides que vous avez pu tester ?
 
 ```{=latex}
 \answerbox{3.5cm}
@@ -101,8 +108,8 @@ fichiers, organisation des fichiers, etc.)
 
 ### Question 6
 
-Comment pensez-vous que les données sont échangées et stockées dans cette
-application ?
+Est-ce que vous voyez un moyen de contourner le système de validation et de
+créer une tâche avec des informations invalides ? Si oui, comment ?
 
 ```{=latex}
 \answerbox{3.5cm}
@@ -110,17 +117,8 @@ application ?
 
 ### Question 7
 
-Avez-vous découvert des limites ou des problèmes dans le mini-projet ? Si oui,
-lesquels ?
-
-```{=latex}
-\answerbox{3.5cm}
-```
-
-### Question 8
-
-De quoi est composé une tâche dans le mini-projet ? (ex. : quelles sont les
-informations qui la composent ?)
+Comment pensez-vous que les données sont échangées et stockées dans cette
+application ?
 
 ```{=latex}
 \answerbox{3.5cm}
@@ -144,61 +142,57 @@ la séance en répondant aux questions ci-dessous.
 
 ### Question 1
 
-Dans quel fichier se trouve la documentation du projet ? Pourquoi est-il si
-important ?
+Comment la méthode `GET` diffère-t-elle de la méthode `POST` dans le contexte
+d'un formulaire HTML ? Pourquoi n'est-il pas recommandé de utiliser la méthode
+`GET` pour envoyer des données sensibles dans un formulaire HTML ? (ex. : mot de
+passe, informations personnelles, etc.)
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{3.5cm}
 ```
 
 ### Question 2
 
-Comment devez-vous ouvrir le projet dans Visual Studio Code pour que
-l'environnement de développement local fonctionne correctement ? Quelle est la
-commande à exécuter pour lancer le serveur web local ?
+Quels sont les différents types de champs de formulaire HTML que vous avez
+utilisés dans le mini-projet ? Pour chaque type de champ, expliquez comment il
+fonctionne et quelles sont ses caractéristiques principales.
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{3.5cm}
 ```
 
 ### Question 3
 
-A quelle adresse (URL) pouvez-vous accéder pour visualiser votre projet dans
-votre navigateur web ?
+Comment les données saisies dans un formulaire HTML sont-elles récupérées et
+traitées côté serveur dans le mini-projet ? Donnez un exemple concret de la
+manière dont les données d'un champ de formulaire sont récupérées et utilisées
+dans le code PHP.
 
 ```{=latex}
-\answerbox{0.5cm}
-```
-
-### Question 4
-
-Qu'est-ce qu'un serveur web tel que Apache et à quoi sert-il dans le mini-projet
-? De quoi est-il composé et comment fonctionne-t-il ?
-
-```{=latex}
-\answerbox{3cm}
+\answerbox{3.5cm}
 ```
 
 ```{=latex}
 \newpage
 ```
 
-### Question 5
+### Question 4
 
-Quelle est la différence entre PHP et HTML ? Comment ces deux langages sont-ils
-utilisés dans le mini-projet ?
+Qu'est-ce que la validation côté client et la validation côté serveur dans le
+contexte d'un formulaire HTML ? Est-ce qu'elles sont obligatoires ? Pourquoi
+est-il important de les utiliser dans le mini-projet ?
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{4.5cm}
 ```
 
-### Question 6
+### Question 5
 
-Donnez l'explication complète de ce qu'il se passe lorsque vous accédez à une
-page PHP dans votre navigateur web.
+Comment est-ce que la superglobale `$_GET` est utilisée dans le mini-projet ?
+Voyez-vous un cas où elle ne serait pas appropriée ? Si oui, pourquoi ?
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{4.5cm}
 ```
 
 ### Liste de contrôle

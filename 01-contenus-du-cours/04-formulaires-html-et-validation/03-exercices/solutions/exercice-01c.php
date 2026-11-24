@@ -44,13 +44,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <textarea id="message" name="message"><?php echo isset($message) ? $message : ''; ?></textarea>
 
         <br>
-
-        <label for="consent">
-            <input type="checkbox" id="consent" name="consent" <?php echo isset($consent) && $consent ? 'checked' : ''; ?>>
-            J'accepte le traitement de mes données personnelles
-        </label>
-
-        <br>
         <br>
 
         <button type="submit">Envoyer</button>

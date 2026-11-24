@@ -14,377 +14,315 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
-- [Utiliser un workflow de développement avec Git et GitHub](#utiliser-un-workflow-de-développement-avec-git-et-github)
-- [Créer la page de création d'un nouvel animal de compagnie](#créer-la-page-de-création-dun-nouvel-animal-de-compagnie)
-  - [Créer une issue GitHub](#créer-une-issue-github)
-  - [Créer une branche dédiée à cette issue](#créer-une-branche-dédiée-à-cette-issue)
-  - [Récupérer la branche localement et basculer dessus](#récupérer-la-branche-localement-et-basculer-dessus)
-  - [Effectuer les modifications nécessaires](#effectuer-les-modifications-nécessaires)
-  - [Commit et push des modifications](#commit-et-push-des-modifications)
-  - [Créer une pull request](#créer-une-pull-request)
-  - [Valider la pull request](#valider-la-pull-request)
-  - [Recommencer la boucle de développement](#recommencer-la-boucle-de-développement)
-- [Mettre à jour la barre de navigation](#mettre-à-jour-la-barre-de-navigation)
-  - [Créer l'issue GitHub et basculer sur une branche dédiée localement](#créer-lissue-github-et-basculer-sur-une-branche-dédiée-localement)
-  - [Effectuer les modifications nécessaires](#effectuer-les-modifications-nécessaires-1)
-  - [Commit, push et créer une pull request](#commit-push-et-créer-une-pull-request)
-  - [Valider la pull request, fusionner les modifications et supprimer la branche associée](#valider-la-pull-request-fusionner-les-modifications-et-supprimer-la-branche-associée)
-  - [Récupérer les modifications fusionnées localement](#récupérer-les-modifications-fusionnées-localement-1)
-- [Mettre en place le formulaire de base](#mettre-en-place-le-formulaire-de-base)
-  - [Créer l'issue GitHub et basculer sur une branche dédiée localement](#créer-lissue-github-et-basculer-sur-une-branche-dédiée-localement-1)
+- [Continuer à utiliser le workflow Git et GitHub](#continuer-à-utiliser-le-workflow-git-et-github)
+- [Mettre en place le formulaire de création d'une nouvelle tâche](#mettre-en-place-le-formulaire-de-création-dune-nouvelle-tâche)
+  - [Créer la fonction de création d'une nouvelle tâche](#créer-la-fonction-de-création-dune-nouvelle-tâche)
   - [Créer la base du formulaire](#créer-la-base-du-formulaire)
-  - [Ajouter le champ nom](#ajouter-le-champ-nom)
-  - [Réceptionner les données côté serveur](#réceptionner-les-données-côté-serveur)
-  - [Utiliser les données du formulaire](#utiliser-les-données-du-formulaire)
-  - [Valider les données du formulaire côté serveur](#valider-les-données-du-formulaire-côté-serveur)
-  - [Retourner une erreur de validation si le champ nom est vide](#retourner-une-erreur-de-validation-si-le-champ-nom-est-vide)
-  - [Retourner une erreur de validation si le champ nom est trop court ou trop long](#retourner-une-erreur-de-validation-si-le-champ-nom-est-trop-court-ou-trop-long)
-  - [Conserver les données saisies en cas d'erreur de validation](#conserver-les-données-saisies-en-cas-derreur-de-validation)
-  - [Valider les données du formulaire côté client](#valider-les-données-du-formulaire-côté-client)
+  - [Tester le formulaire de base](#tester-le-formulaire-de-base)
+  - [Rafraîchir la page après la soumission du formulaire](#rafraîchir-la-page-après-la-soumission-du-formulaire)
+  - [Ajouter le champ titre](#ajouter-le-champ-titre)
+  - [Tester le formulaire avec le champ titre](#tester-le-formulaire-avec-le-champ-titre)
+  - [Tester le formulaire avec la méthode GET](#tester-le-formulaire-avec-la-méthode-get)
+  - [Récupérer les données du formulaire côté serveur](#récupérer-les-données-du-formulaire-côté-serveur)
+  - [Valider le titre de la tâche côté serveur](#valider-le-titre-de-la-tâche-côté-serveur)
+  - [Conserver le titre en cas d'erreur de validation](#conserver-le-titre-en-cas-derreur-de-validation)
+  - [Valider le titre du formulaire côté client](#valider-le-titre-du-formulaire-côté-client)
   - [Contourner la validation côté client](#contourner-la-validation-côté-client)
-  - [Déplacer la validation côté serveur dans une fonction dédiée](#déplacer-la-validation-côté-serveur-dans-une-fonction-dédiée)
-  - [Valider la pull request, fusionner les modifications et supprimer la branche associée](#valider-la-pull-request-fusionner-les-modifications-et-supprimer-la-branche-associée-1)
-  - [Récupérer les modifications fusionnées localement](#récupérer-les-modifications-fusionnées-localement-2)
-- [Mettre en place les autres champs du formulaire](#mettre-en-place-les-autres-champs-du-formulaire)
-  - [Ajouter le champ espèce](#ajouter-le-champ-espèce)
-  - [Ajouter le champ surnom](#ajouter-le-champ-surnom)
-  - [Ajouter le champ sexe](#ajouter-le-champ-sexe)
-  - [Ajouter le champ date de naissance](#ajouter-le-champ-date-de-naissance)
-  - [Ajouter le champ couleur](#ajouter-le-champ-couleur)
-  - [Ajouter le champ personnalité](#ajouter-le-champ-personnalité)
-  - [Ajouter le champ taille](#ajouter-le-champ-taille)
-  - [Ajouter le champ poids](#ajouter-le-champ-poids)
-  - [Ajouter le champ notes](#ajouter-le-champ-notes)
+  - [Mettre en place les autres champs du formulaire](#mettre-en-place-les-autres-champs-du-formulaire)
+  - [Tester le formulaire complet](#tester-le-formulaire-complet)
+- [Rendre dynamique la page d'accueil et de visualisation des tâches](#rendre-dynamique-la-page-daccueil-et-de-visualisation-des-tâches)
+  - [Mettre à jour la page de visualisation](#mettre-à-jour-la-page-de-visualisation)
+  - [Tester la page de visualisation](#tester-la-page-de-visualisation)
+  - [Mettre à jour la page d'accueil](#mettre-à-jour-la-page-daccueil)
+  - [Tester la page d'accueil](#tester-la-page-daccueil)
+- [Mettre en place le formulaire de suppression d'une tâche](#mettre-en-place-le-formulaire-de-suppression-dune-tâche)
+  - [Créer la base du formulaire](#créer-la-base-du-formulaire-1)
+  - [Ajouter le lien de suppression à la page de visualisation](#ajouter-le-lien-de-suppression-à-la-page-de-visualisation)
+  - [Visualiser le formulaire](#visualiser-le-formulaire)
+  - [Tester le formulaire](#tester-le-formulaire)
+  - [Corriger le formulaire](#corriger-le-formulaire)
+  - [Créer la fonction pour supprimer une tâche](#créer-la-fonction-pour-supprimer-une-tâche)
+  - [Utiliser la fonction pour supprimer une tâche](#utiliser-la-fonction-pour-supprimer-une-tâche)
 - [Conclusion](#conclusion)
 - [Solution](#solution)
 
 ## Objectifs
 
-Dans cette séance, vous allez créer le formulaire permettant de créer un nouvel
-animal de compagnie.
+Dans cette séance, vous allez créer le formulaire permettant de créer une
+nouvelle tâche.
 
 Pour rappel, le formulaire sera composé de plusieurs champs :
 
-- Nom (un champ texte).
-- Espèce (un champ de sélection contenant, par exemple : chien, chat, lézard,
-  serpent, oiseau, lapin, autre).
-- Surnom (un champ texte facultatif).
-- Sexe (un champ boutons radio).
-- Année de naissance (un champ date au format `YYYY-MM-DD` (par exemple :
-  `2020-12-31` pour le 31 décembre 2020)).
-- Couleur (un champ de saisie de couleur facultatif).
-- Personnalité (un champ cases à cocher facultatif).
-- Taille en cm (un champ numérique facultatif).
-- Poids en kg (un champ numérique facultatif).
-- Notes (un champ de texte multi-lines libre facultatif).
+- Le titre de la tâche, obligatoire, doit contenir au minimum 2 caractères et au
+  maximum 200 caractères.
+- La priorité de la tâche est obligatoire et doit être l'une des valeurs
+  suivantes :
+  - `low`.
+  - `medium`.
+  - `high`.
+- La description de la tâche est facultative, mais si elle est fournie, elle
+  doit contenir au minimum 10 caractères et au maximum 1000 caractères.
+- La date limite de la tâche est facultative, mais si elle est fournie, elle
+  doit être une date valide et ne peut pas être dans le passé.
 
 Il s'agira de vos premiers pas dans des concepts propres à la programmation web,
 tels que les formulaires HTML et la validation des données côté serveur et côté
-client avec des concepts propres à ce milieu.
-
-Ne vous inquiétez pas si vous ne comprenez pas tout du premier coup, c'est
-normal. L'important est de suivre les étapes et de comprendre les concepts au
-fur et à mesure.
-
-Afin de vous aider à séquencer votre travail, nous allons diviser ce projet en
-plusieurs étapes à l'aide d'un workflow (flux de travail) de développement avec
-Git et GitHub. Vous pouvez suivre ce workflow pour vous guider dans la
-réalisation de ce projet.
+client.
 
 À l'issue de cette séance, les personnes qui étudient devraient avoir pu :
 
-- Créer un formulaire HTML permettant de créer un nouvel animal de compagnie.
+- Créer un formulaire HTML permettant de créer, modifier et supprimer une
+  nouvelle tâche.
 - Valider les données du formulaire côté serveur.
 - Afficher les erreurs de validation.
 - Conserver les données saisies en cas d'erreur de validation.
 - Valider les données du formulaire côté client.
 
-## Créer la page de création d'un nouvel animal de compagnie
+## Continuer à utiliser le workflow Git et GitHub
 
-Dans cette section, nous allons créer la base de la page de création d'un nouvel
-animal de compagnie.
+Dorénavant, vous allez continuer à utiliser le workflow Git et GitHub que vous
+avez appris lors de la séance précédente pour gérer vos modifications et vos
+contributions au mini-projet.
 
-Cette page contiendra un formulaire permettant de saisir les informations d'un
-nouvel animal de compagnie, ainsi que la logique de validation des données
-saisies.
+Profitez de cette occasion pour vous familiariser avec les bonnes pratiques de
+gestion de version et de collaboration sur des projets de développement ; il
+s'agit d'atouts précieux pour votre future carrière.
 
-## Mettre à jour la barre de navigation
+## Mettre en place le formulaire de création d'une nouvelle tâche
 
-Dans cette section, nous allons ajouter un lien dans la barre de navigation pour
-permettre d'accéder à la page de création d'un nouvel animal de compagnie depuis
-n'importe quelle page du site.
+Dans cette section, nous allons créer le formulaire permettant de créer une
+nouvelle tâche.
 
-### Créer l'issue GitHub et basculer sur une branche dédiée localement
-
-En suivant le workflow Git et GitHub décrit précédemment, créez une issue pour
-cette tâche, créez une branche dédiée à cette issue, et basculez dessus
-localement dans votre environnement de développement.
-
-Vous pouvez nommer l'issue _"Ajouter le lien pour accéder à la page de
-création"_.
-
-### Effectuer les modifications nécessaires
-
-Dans la page `mini-projet/public/index.php`, ajoutez un lien vers la page
-`create.php` dans la barre de navigation :
-
-> [!TIP]
+> [!WARNING]
 >
-> Cet affichage est ce qu'on appelle un "diff" (différence) entre la version
-> précédente du fichier et la nouvelle version du fichier après les
-> modifications.
->
-> Le diff met en évidence les lignes qui ont été ajoutées, modifiées ou
-> supprimées dans le fichier.
->
-> Les premières lignes sont un entête indiquant les fichiers concernés par le
-> diff, ainsi que les numéros de version des fichiers avant et après les
-> modifications. Vous pouvez les ignorer pour le moment.
->
-> Ensuite vient le corps du diff. Les lignes précédées d'un signe `+` sont les
-> lignes ajoutées, les lignes précédées d'un signe `-` sont les lignes
-> supprimées, et les lignes sans signe sont les lignes qui n'ont pas été
-> modifiées. Cela permet de visualiser rapidement les changements apportés au
-> fichier.
->
-> Il s'agit d'une des multiples fonctionnalités de Git pour suivre les
-> modifications dans les fichiers à l'aide de la commande `git diff`.
->
-> La documentation officielle de Git sur la commande `git diff` est disponible à
-> l'adresse suivante : <https://git-scm.com/docs/git-diff>.
+> N'oubliez pas de créer une issue et sa branche dédiée pour cette nouvelle
+> fonctionnalité !
 
-```diff
-diff --git a/mini-projet/public/index.php b/mini-projet/public/index.php
-index ab5024d..fd35d81 100644
---- a/mini-projet/public/index.php
-+++ b/mini-projet/public/index.php
-@@ -1,85 +1,86 @@
- <?php
- require_once __DIR__ . '/../src/functions.php';
+### Créer la fonction de création d'une nouvelle tâche
 
- $pets = getPets();
- ?>
+Maintenant que nous avons une meilleure compréhension des fonctions PHP, nous
+allons créer une fonction permettant de créer une nouvelle tâche.
 
- <!DOCTYPE html>
- <html lang="fr">
+Cette fonction `addTask()` (à ajouter dans le fichier `src/functions.php`)
+prendra en paramètre les propriétés d'une tâche et, pour le moment, affichera
+simplement les valeurs reçues pour vérifier que la fonction fonctionne
+correctement :
 
- <head>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta name="color-scheme" content="light dark">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-     <link rel="stylesheet" href="./css/styles.css">
+```php
+function addTask(
+    string $title,
+    string $priority,
+    ?string $description,
+    ?string $deadline,
+): void {
+    echo "Ajout d'une tâche avec les données suivantes :<br>";
 
-     <title>Page d'accueil | ninetendogs</title>
-     <meta name="description" content="ninetendogs - Gestionnaire d'animaux de compagnie">
- </head>
-
- <body class="container">
-     <header>
-         <nav>
-             <ul>
-                 <li><strong>ninetendogs</strong></li>
-             </ul>
-             <ul>
-                 <li><a href="./index.php">Accueil</a></li>
-+                <li><a href="./create.php">Nouvel animal</a></li>
-             </ul>
-         </nav>
-     </header>
-     <main>
-         <center>
-             <div class="logo">
-                 <img src="./images/logo.svg" alt="ninetendogs logo">
-             </div>
-
-             <h1>ninetendogs</h1>
-         </center>
-
-         <p>Bienvenue sur ninetendogs, le gestionnaire d'animaux de compagnie !</p>
-
-         <p>Cette application te permet de gérer facilement tes animaux de compagnie.</p>
-
-         <h2>Liste des animaux de compagnie</h2>
-
-         <div class="overflow-auto">
-             <table class="striped">
-                 <thead>
-                     <tr>
-                         <th>Nom</th>
-                         <th>Espèce</th>
-                         <th>Sexe</th>
-                         <th>Date de naissance</th>
-                         <th>Actions</th>
-                     </tr>
-                 </thead>
-                 <tbody>
-                     <?php foreach ($pets as $pet) { ?>
-                         <tr>
-                             <td><?= $pet['name'] ?></td>
-                             <td><?= $pet['species'] ?></td>
-                             <td><?= $pet['sex'] ?></td>
-                             <td><?= $pet['birthday'] ?></td>
-                             <td>
-                                 <a href="./view.php?id=<?= $pet['id'] ?>">
-                                     <button>Voir</button>
-                                 </a>
-                             </td>
-                         </tr>
-                     <?php } ?>
-                 </tbody>
-             </table>
-         </div>
-     </main>
-     <footer>
-         <center>
-             <small>
-                 Un projet réalisé dans le cadre du cours <a href="https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course">ProgServ1</a> enseigné à la <a href="https://heig-vd.ch">HEIG-VD</a>.
-             </small>
-         </center>
-     </footer>
- </body>
-
- </html>
+    echo "Titre : $title<br>";
+    echo "Priorité : $priority<br>";
+    echo "Description : " . ($description ?? 'Aucune') . "<br>";
+    echo "Date limite : " . ($deadline ?? 'Aucune') . "<br>";
+}
 ```
 
-Ici, nous avons ajouté un nouvel élément de liste (`<li>`) dans la barre de
-navigation avec un lien (`<a>`) vers la page `create.php`. Le texte du lien est
-"Nouvel animal".
+Ici, la fonction `addTask()` prend en paramètre les propriétés d'une tâche : le
+titre, la priorité, la description et la date limite. La description et la date
+limite sont optionnelles, ce qui est indiqué par le type `?string`, signifiant
+qu'elles peuvent être soit des chaînes de caractères, soit `null`.
 
-Faisons de même dans la page `mini-projet/public/view.php` pour ajouter un lien
-vers la page d'accueil dans la barre de navigation :
+La fonction retourne `void`, ce qui signifie qu'elle ne renvoie aucune valeur :
+pour le moment, elle se contente d'afficher les valeurs reçues pour vérifier que
+la fonction fonctionne correctement.
 
-```diff
-diff --git a/mini-projet/public/view.php b/mini-projet/public/view.php
-index 28fffd8..d4fcb03 100644
---- a/mini-projet/public/view.php
-+++ b/mini-projet/public/view.php
-@@ -1,69 +1,70 @@
- <?php
- require_once __DIR__ . '/../src/functions.php';
+Pour rappel, l'opérateur de coalescence nulle (`??`) est utilisé pour vérifier
+si la variable `$description` ou `$deadline` est `null`. Si c'est le cas, nous
+affichons la valeur par défaut "Aucune" pour indiquer qu'aucune valeur n'a été
+fournie pour ces propriétés.
 
- $petId = $_GET['id'] ?? null;
+Le code ci-dessus est équivalent au code suivant :
 
- if ($petId === null) {
-     header('Location: ./index.php');
-     exit;
- }
-
- $pet = getPetById($petId);
-
- if ($pet === null) {
-     header('Location: ./index.php');
-     exit;
- }
- ?>
-
- <!DOCTYPE html>
- <html lang="fr">
-
- <head>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta name="color-scheme" content="light dark">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-     <link rel="stylesheet" href="./css/styles.css">
-
-     <title>Page de visualisation | ninetendogs</title>
-     <meta name="description" content="ninetendogs - Gestionnaire d'animaux de compagnie - Visualisation d'un animal de compagnie">
- </head>
-
- <body class="container">
-     <header>
-         <nav>
-             <ul>
-                 <li><strong>ninetendogs</strong></li>
-             </ul>
-             <ul>
-                 <li><a href="./index.php">Accueil</a></li>
-+                <li><a href="./create.php">Nouvel animal</a></li>
-             </ul>
-         </nav>
-
-         <nav aria-label="breadcrumb">
-             <ul>
-                 <li><a href="./index.php">Accueil</a></li>
-                 <li><?= $pet['name'] ?></li>
-             </ul>
-         </nav>
-     </header>
-     <main>
-         <h1><?= $pet['name'] ?></h1>
-
-         <ul>
-             <li><strong>Espèce</strong> : <?= $pet['species'] ?></li>
-             <li><strong>Sexe</strong> : <?= $pet['sex'] ?></li>
-             <li><strong>Date de naissance</strong> : <?= $pet['birthday'] ?></li>
-         </ul>
-     </main>
-     <footer>
-         <center>
-             <small>
-                 Un projet réalisé dans le cadre du cours <a href="https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course">ProgServ1</a> enseigné à la <a href="https://heig-vd.ch">HEIG-VD</a>.
-             </small>
-         </center>
-     </footer>
- </body>
-
- </html>
+```php
+if (!isset($description)) {
+    $description = 'Aucune';
+}
 ```
 
-### Commit, push et créer une pull request
-
-En suivant le workflow Git et GitHub décrit précédemment, enregistrez les
-changements effectués et commitez les. Poussez les sur GitHub et créez une pull
-request dans la branche principale `main`.
-
-### Valider la pull request, fusionner les modifications et supprimer la branche associée
-
-UEn suivant le workflow Git et GitHub décrit précédemment, validez la pull
-request en vérifiant les modifications apportées, en laissant des commentaires
-si nécessaire, et en approuvant la pull request si tout est correct.
-
-Une fois la pull request validée, vous pouvez la fusionner dans la branche
-principale `main` et supprimer la branche source de la pull request.
-
-### Récupérer les modifications fusionnées localement
-
-En suivant le workflow Git et GitHub décrit précédemment, n'oubliez pas de
-récupérer les modifications fusionnées dans votre dépôt Git local en basculant
-sur la branche `main` et en exécutant la commande `git pull`.
-
-## Mettre en place le formulaire de base
-
-Dans cette section, nous allons créer le formulaire permettant de créer un
-nouvel animal de compagnie.
-
-Cette page
-
-### Créer l'issue GitHub et basculer sur une branche dédiée localement
-
-En suivant le workflow Git et GitHub décrit précédemment, créez une issue pour
-cette tâche, créez une branche dédiée à cette issue, et basculez dessus
-localement dans votre environnement de développement.
-
-Vous pouvez nommer l'issue _"Ajouter le formulaire de base pour créer un nouvel
-animal"_.
+Nous allons maintenant utiliser cette fonction pour créer une nouvelle tâche à
+l'aide d'un formulaire HTML que nous allons mettre en place dans les prochaines
+étapes.
 
 ### Créer la base du formulaire
 
-Dans la section `<main>` de votre page `create.php`, ajoutez le code suivant
-pour créer un formulaire de base :
+Modifiez le fichier `public/create.php` avec le contenu suivant pour créer la
+base du formulaire :
+
+```diff
+diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
+index cf410c2..c691a6e 100644
+--- a/mini-projet/public/create.php
++++ b/mini-projet/public/create.php
+@@ -7,14 +7,13 @@ $priority = '';
+ $description = '';
+ $deadline = '';
++$errors = [];
+
+-$errors = validateTask(
+-    $title,
+-    $priority,
+-    $description,
+-    $deadline,
+-);
++// Gestion de la soumission du formulaire
++if ($_SERVER["REQUEST_METHOD"] === "POST") {
++    echo "Le formulaire a été soumis avec les données suivantes :<br>";
++    print_r($_POST);
++}
+ ?>
+
+ <!DOCTYPE html>
+@@ -52,18 +51,22 @@ $errors = validateTask(
+     <main>
+         <h1>Créer une nouvelle tâche</h1>
+
+-        <?php if (!empty($errors)) { ?>
+-            <p style="color: red;">Le formulaire contient des erreurs :</p>
+-            <ul>
+-                <?php foreach ($errors as $error) { ?>
+-                    <li><?= $error ?></li>
+-                <?php } ?>
+-            </ul>
+-        <?php } else { ?>
+-            <p style="color: green;">La tâche a été créée avec succès.</p>
++        <?php if ($_SERVER["REQUEST_METHOD"] === "POST") { ?>
++            <?php if (!empty($errors)) { ?>
++                <p style="color: red;">Le formulaire contient des erreurs :</p>
++                <ul>
++                    <?php foreach ($errors as $error) { ?>
++                        <li><?= $error ?></li>
++                    <?php } ?>
++                </ul>
++            <?php } else { ?>
++                <p style="color: green;">La tâche a été créée avec succès.</p>
++            <?php } ?>
+         <?php } ?>
+
+-        <p><em>Contenu à venir...</em></p>
++        <form action="./create.php" method="POST">
++            <button class="btn btn-primary" type="submit">Créer la nouvelle tâche</button>
++        </form>
+     </main>
+     <footer>
+         <center>
+```
+
+Ici, nous avons opéré plusieurs changements dans le fichier `public/create.php`
+:
+
+- Nous avons supprimé l'appel à la fonction `validateTask()` qui validait les
+  valeurs par défaut que nous avions définies. Nous la réutiliserons plus tard
+  pour valider les données du formulaire.
+- Nous avons ajouté un bloc conditionnel `if` qui vérifie si la méthode de la
+  requête HTTP est `POST`. Si c'est le cas, cela signifie que le formulaire a
+  été soumis, et nous affichons le contenu de la superglobale `$_POST` pour
+  vérifier que les données du formulaire sont bien reçues côté serveur.
+- Nous avons ajouté un formulaire HTML avec un bouton de soumission. Le
+  formulaire utilise la méthode `POST` pour envoyer les données à la même page
+  `create.php`.
+- Nous avons également ajouté un bloc conditionnel pour afficher les erreurs de
+  validation que lorsque le formulaire a été soumis. Si des erreurs sont
+  présentes, elles seront affichées dans une liste.
+
+Nous réutiliserons la fonction `validateTask()` pour valider les données du
+formulaire dans les prochaines étapes.
+
+### Tester le formulaire de base
+
+Dans l'état actuel, le formulaire ne contient qu'un bouton de soumission. Vous
+pouvez tester le formulaire en cliquant sur le bouton de soumission. Vous
+devriez voir le contenu de la variable `$_POST` affiché sur la page grâce à la
+fonction `print_r()`, ce qui indique que les données du formulaire sont bien
+reçues côté serveur avec un résultat similaire à celui-ci :
+
+```text
+Le formulaire a été soumis avec les données suivantes :
+Array ( )
+```
+
+Cela signifie que le formulaire a été soumis avec succès, mais qu'aucune donnée
+n'a été envoyée, car le formulaire ne contient actuellement aucun champ de
+saisie.
+
+### Rafraîchir la page après la soumission du formulaire
+
+Lorsque vous soumettez un formulaire, le navigateur envoie une requête HTTP
+(`POST` ou `GET` selon la méthode du formulaire utilisée) au serveur pour
+traiter les données du formulaire.
+
+Si vous essayez de rafraîchir la page après avoir soumis le formulaire, le
+navigateur va vous proposer de renvoyer la même requête HTTP au serveur pour
+traiter à nouveau les données du formulaire à l'aide d'un message
+d'avertissement.
+
+Afin d'éviter ce comportement, cliquez sur la barre d'adresse de votre
+navigateur et appuyez sur la touche `Entrée` pour recharger la page sans
+renvoyer les données du formulaire.
+
+Dans les prochaines étapes, lorsque nous vous invitons à rafraîchir la page
+après avoir soumis le formulaire, nous vous demandons de cliquer sur la barre
+d'adresse de votre navigateur et d'appuyer sur la touche `Entrée` pour recharger
+la page sans renvoyer les données du formulaire afin de toujours repartir d'une
+page vierge.
+
+### Ajouter le champ titre
+
+Ajoutez le champ "Titre" au formulaire :
 
 ```php
 <form action="./create.php" method="POST">
+    <label>Titre
+        <input
+            type="text"
+            name="title" />
+    </label>
 
-    <!-- Les champs du formulaire seront ajoutés ici dans les prochaines étapes -->
-
-    <button type="submit">Créer le nouvel animal</button>
+    <button class="btn btn-primary" type="submit">Créer la nouvelle tâche</button>
 </form>
 ```
 
-Ce formulaire est composé d'un élément `<form>` avec les attributs `action` et
-`method` :
+Le champ "Titre" est représenté par un élément `<input>` avec l'attribut `type`
+défini avec la valeur `text`.
+
+Associé à ce champ de saisie, un élément `<label>` est utilisé pour fournir une
+étiquette descriptive pour le champ de saisie.
+
+L'attribut `name` de l'élément `<input>` est défini avec la valeur `title`, ce
+qui permet d'identifier le champ lors de l'envoi des données au serveur avec la
+valeur saisie par l'utilisateur·trice.
+
+### Tester le formulaire avec le champ titre
+
+Une fois le champ "Titre" ajouté, enregistrez les changements effectués,
+rafraîchissez la page (voir note de la section
+[Rafraîchir la page après la soumission du formulaire](#rafraîchir-la-page-après-la-soumission-du-formulaire))
+et effectuez un test de soumission du formulaire en saisissant une valeur dans
+le champ "Titre" et en cliquant sur le bouton de soumission.
+
+Vous devriez voir le contenu de la variable `$_POST` affiché sur la page, ce qui
+indique que les données du formulaire sont bien reçues côté serveur avec un
+résultat similaire à celui-ci :
+
+```text
+Le formulaire a été soumis avec les données suivantes :
+Array ( [title] => Titre de ma tâche )
+```
+
+Ceci signifie que le formulaire a été soumis avec succès et que la valeur saisie
+dans le champ "Titre" a été envoyée au serveur avec la clé `title` dans la
+superglobale `$_POST`.
+
+### Tester le formulaire avec la méthode GET
+
+Le formulaire actuel est composé d'un élément `<form>` avec les éléments
+suivants :
 
 - L'attribut `action` indique l'URL vers laquelle les données du formulaire
   seront envoyées lors de la soumission du formulaire.
@@ -395,7 +333,7 @@ Ce formulaire est composé d'un élément `<form>` avec les attributs `action` e
 
   Dans d'autres cas, il serait possible d'envoyer les données à une autre page
   (par exemple : `submit.php`) ou même à une API externe. Ici, nous allons gérer
-  la soumission du formulaire dans la même page pour simplifier les choses.
+  la soumission du formulaire dans la même page.
 
 - L'attribut `method` indique la méthode HTTP utilisée pour envoyer les données
   du formulaire.
@@ -403,438 +341,355 @@ Ce formulaire est composé d'un élément `<form>` avec les attributs `action` e
   Ici, nous utilisons la méthode `POST`, qui est généralement utilisée pour
   envoyer des données sensibles.
 
-  Bien que les formulaires puisssent également être envoyés avec la méthode
-  `GET`, il est recommandé d'utiliser `POST` dans tous les cas.
+- Finalement, un bouton de soumission est ajouté à l'intérieur du formulaire
+  avec l'élément `<button>` et l'attribut `type` défini avec la valeur `submit`.
 
-Finalement, un bouton de soumission est ajouté à l'intérieur du formulaire avec
-l'élément `<button>` et l'attribut `type` défini avec la valeur `submit`.
+Que se passe-t-il si nous changeons la méthode HTTP utilisée pour envoyer les
+données du formulaire de `POST` à `GET` ?
 
-En suivant le workflow Git et GitHub décrit précédemment, enregistrez les
-changements effectués et commitez les avec le message _"Ajouter le formulaire de
-base"_.
+Pour tester cela, modifiez l'attribut `method` de l'élément `<form>` pour
+utiliser la méthode `GET`. Sauvegardez les changements effectués et effectuez un
+test de soumission du formulaire en saisissant une valeur dans le champ "Titre"
+et en cliquant sur le bouton de soumission.
 
-Poussez les sur GitHub et créez une pull request dans la branche principale
-`main` **mais ne la fusionnez pas tout de suite**. Nous allons ajouter les
-champs du formulaire dans les prochaines étapes, et il est préférable de faire
-valider les modifications étape par étape pour faciliter la relecture et la
-validation des changements.
+Vous devriez voir le contenu de la superglobale `$_POST` affiché sur la page,
+mais cette fois-ci, le contenu sera vide, car les données du formulaire ont été
+envoyées avec la méthode `GET` et sont donc accessibles via la superglobale
+`$_GET`.
 
-### Ajouter le champ nom
-
-Ajoutez le champ "Nom" au formulaire :
-
-```php
-<form action="./create.php" method="POST">
-
-    <label for="name">Nom</label>
-    <input
-        type="text"
-        id="name"
-        name="name"
-        required />
-
-    <button type="submit">Créer le nouvel animal</button>
-</form>
-```
-
-Le champ "Nom" est représenté par un élément `<input>` avec l'attribut `type`
-défini avec la valeur `text`.
-
-Associé à ce champ de saisie, un élément `<label>` est utilisé pour fournir une
-étiquette descriptive pour le champ de saisie. L'attribut `for` de l'élément
-`<label>` est défini avec la valeur `name`, ce qui permet de l'associer à un
-champ correspondant qui a un attribut `id` avec la même valeur.
-
-Ainsi, nous lions donc le champ de saisie du nom à l'élément `<label>` en
-utilisant l'attribut `for` de l'élément `<label>` et l'attribut `id` de
-l'élément `<input>`. Cela aide à l'accessibilité du formulaire, car les lecteurs
-d'écran peuvent associer l'étiquette au champ de saisie correspondant.
-
-L'attribut `name` de l'élément `<input>` est défini avec la valeur `name`, ce
-qui permet d'identifier le champ lors de l'envoi des données au serveur avec la
-valeur saisie par l'utilisateur.trice.
-
-Une fois le champ "Nom" ajouté, enregistrez les changements effectués et
-commitez les avec le message _"Ajouter le champ nom"_. Poussez les sur GitHub.
-Cela mettra automatiquement à jour la pull request créée précédemment pour
-inclure ces nouvelles modifications.
-
-### Réceptionner les données côté serveur
-
-Maintenant que nous avons ajouté le champ "Nom" au formulaire, nous allons
-ajouter le code nécessaire pour recevoir les données du formulaire côté serveur.
-
-Afin de recevoir les données du formulaire côté serveur, vous devez ajouter le
-code suivant au début de votre fichier `create.php`, juste avant la déclaration
-de la structure de base de la page HTML :
-
-```php
-// Gestion de la soumission du formulaire
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Information de debug : affichage du contenu de la variable $_POST
-    // À supprimer une fois que le formulaire fonctionne correctement
-    echo "Le contenu de la variable \$_POST est : ";
-
-    print_r($_POST);
-}
-?>
-```
-
-Le code `$_SERVER["REQUEST_METHOD"]` permet de vérifier la méthode de la requête
-HTTP utilisée pour accéder à la page. Si la méthode est `POST`, cela signifie
-que le formulaire a été soumis. Dans ce cas, le code affiche le contenu de la
-variable `$_POST`, qui contient les données envoyées par le formulaire.
-
-Enregistrez les changements effectués et effectuez un test de soumission du
-formulaire en saisissant une valeur dans le champ "Nom" et en cliquant sur le
-bouton de soumission.
-
-Vous devriez voir le contenu de la variable `$_POST` affiché sur la page, ce qui
-indique que les données du formulaire sont bien reçues côté serveur avec un
-résultat similaire à celui-ci :
+Vous remarquerez également que l'URL de la page a été modifiée pour inclure les
+données du formulaire dans la chaîne de requête (query string) de l'URL, avec un
+format similaire à celui-ci :
 
 ```text
-Le contenu de la variable $_POST est : Array ( [name] => test d'un nom d'animal )
+http://localhost:8000/mini-projet/public/create.php?title=Titre+de+ma+t%C3%A2che
 ```
 
-Pour le moment, ce code ne fait que vérifier que les données du formulaire sont
-bien reçues côté serveur en affichant le contenu de la variable `$_POST`. Nous
-allons ajouter la validation des données et l'affichage des erreurs de
-validation dans les sections suivantes.
+Ici, nous retrouvons la valeur saisie dans le champ "Titre" dans la chaîne de
+requête de l'URL, avec la clé `title` et la valeur correspondante.
 
-Enregistrez les changements effectués et commitez les avec le message
-_"Récupérer les données du formulaire"_. Poussez les sur GitHub. Cela mettra
-automatiquement à jour la pull request créée précédemment pour inclure ces
-nouvelles modifications.
+Ainsi, si quelqu'un venait à vouloir partager l'URL de la page après avoir
+soumis le formulaire avec la méthode `GET`, il partagerait également les données
+saisies dans le formulaire, ce qui pourrait poser des problèmes de
+confidentialité. Ici, ce n'est pas tellement un problème, car le champ "Titre"
+ne contient pas d'informations sensibles, mais imaginez l'utilisation de la
+méthode `GET` pour un formulaire de connexion avec un champ "Mot de passe" : la
+valeur saisie dans le champ "Mot de passe" serait visible dans l'URL, ce qui
+n'est pas recommandé pour des informations sensibles.
 
-### Utiliser les données du formulaire
+Lors de l'utilisation de la méthode `GET`, les données du formulaire sont
+visibles dans l'URL, ce qui n'est pas recommandé pour des informations
+sensibles. C'est pourquoi nous allons continuer à utiliser la méthode `POST`
+pour envoyer les données du formulaire dans les prochaines étapes.
+
+Remettez l'attribut `method` de l'élément `<form>` à la valeur `POST` pour
+continuer à utiliser la méthode `POST` pour envoyer les données du formulaire.
+
+### Récupérer les données du formulaire côté serveur
 
 Maintenant que nous avons vérifié que les données du formulaire sont bien reçues
 côté serveur, nous allons ajouter le code nécessaire pour utiliser les données
 du formulaire et les stocker dans des variables.
 
-Pour récupérer les données du formulaire, vous pouvez ajouter le code suivant à
-l'intérieur du bloc `if` qui vérifie la méthode de la requête HTTP :
+Pour récupérer les données du formulaire, vous pouvez modifier le fichier
+`public/create.php` avec le code suivant :
 
-```php
-// Récupération des données du formulaire
-$name = null;
+```diff
+diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
+index 56ffc56..c020d67 100644
+--- a/mini-projet/public/create.php
++++ b/mini-projet/public/create.php
+@@ -2,17 +2,21 @@
+ require_once __DIR__ . '/../src/constants.php';
+ require_once __DIR__ . '/../src/functions.php';
 
-if (isset($_POST["name"])) {
-    $name = $_POST["name"];
-}
+-$title = '';
+-$priority = '';
+-$description = '';
+-$deadline = '';
++$title = $_POST["title"] ?? '';
++$priority = $_POST["priority"] ?? '';
++$description = $_POST["description"] ?? '';
++$deadline = $_POST["deadline"] ?? '';
+ $errors = [];
+
+ // Gestion de la soumission du formulaire
+ if ($_SERVER["REQUEST_METHOD"] === "POST") {
+     echo "Le formulaire a été soumis avec les données suivantes :<br>";
+-    print_r($_POST);
++    echo "Titre : $title<br>";
++    echo "Priorité : $priority<br>";
++    echo "Description : $description<br>";
++    echo "Date limite : $deadline<br>";
+ }
+ ?>
 ```
 
-Ici, nous initialisons la variable `$name` avec la valeur `null` pour indiquer
-que le nom n'est pas encore défini. Ensuite, nous vérifions si la clé "name"
-existe dans la superglobale `$_POST` en utilisant la fonction `isset()`. Si la
-clé existe, cela signifie que le champ "Nom" a été soumis dans le formulaire, et
-nous assignons la valeur du champ à la variable `$name`.
-
-En utilisant la fonction `isset()`, nous nous assurons que nous ne tentons pas
-d'accéder à une clé qui n'existe pas dans le tableau `$_POST`, ce qui éviterait
-une erreur de type "Undefined index". Cela peut arriver si le formulaire est
-soumis sans que le champ "Nom" soit rempli, ou si le champ "Nom" n'est pas
-présent dans le formulaire pour une raison quelconque (modification du
-formulaire, erreur de saisie, etc.).
-
-En effet, la superglobale `$_POST` est un tableau associatif qui contient les
-données envoyées par le formulaire. Chaque champ du formulaire est représenté
-par une clé dans ce tableau, et la valeur associée à cette clé correspond à la
-valeur saisie par l'utilisateur.trice dans le champ de formulaire.
-
-Enregistrez les changements effectués et commitez les avec le message _"Utiliser
-les données du formulaire"_. Poussez les sur GitHub. Cela mettra automatiquement
-à jour la pull request créée précédemment pour inclure ces nouvelles
-modifications.
-
-### Valider les données du formulaire côté serveur
-
-Un élément important à retenir est que les données récupérées à partir de
-`$_POST` sont **toujours** de type chaîne de caractères (`string`), même si le
-champ de formulaire est de type numérique ou autre. Si aucune donnée n'est
-saisie dans un champ de formulaire, la valeur correspondante dans `$_POST` sera
-une chaîne vide (`""`).
-
-Il est donc important de faire attention au type des données lors de leur
-utilisation dans le code.
-
-Pour cela, nous pouvons améliorer la récupération des données du formulaire en
-ajoutant une validation de base pour vérifier que le champ "Nom" n'est pas vide
-avant de l'assigner à la variable `$name` :
+Ici, nous remplaçons la valeur par défaut de la variable `$title` par le code
+suivant :
 
 ```php
-// Récupération des données du formulaire
-$name = null;
-
-if (!empty($_POST["name"])) {
-    $name = $_POST["name"];
-}
+$title = $_POST["title"] ?? '';
 ```
 
-Ici, nous initialisons la variable `$name` avec la valeur `null` pour indiquer
-que le nom n'est pas encore défini. Ensuite, nous vérifions si le champ "Nom"
-n'est pas vide en utilisant la fonction `empty()` (source :
-<https://www.php.net/manual/fr/function.empty.php>). Si le champ n'est pas vide,
-nous assignons la valeur du champ à la variable `$name`.
+Pour rappel, l'opérateur de coalescence nulle (`??`) est utilisé pour vérifier
+si la clé `title` existe dans la superglobale `$_POST`. Si la clé existe, sa
+valeur est assignée à la variable `$title`. Sinon, la variable `$title` est
+assignée avec une chaîne vide (`''`).
 
-Enregistrez les changements effectués et commitez les avec le message _"Valider
-les données du formulaire côté serveur"_. Poussez les sur GitHub. Cela mettra
-automatiquement à jour la pull request créée précédemment pour inclure ces
-nouvelles modifications.
+L'opérateur de coalescence nulle est particulièrement utile pour définir des
+valeurs par défaut pour les variables lorsque les données du formulaire ne sont
+pas encore disponibles, comme c'est le cas avant la soumission du formulaire.
 
-### Retourner une erreur de validation si le champ nom est vide
-
-Maintenant que nous avons ajouté une validation de base pour vérifier que le
-champ "Nom" n'est pas vide, nous allons ajouter le code nécessaire pour
-retourner une erreur de validation si le champ est vide.
-
-Pour cela, nous pouvons ajouter une variable `$errors` pour stocker les erreurs
-de validation, et ajouter une condition pour vérifier si le champ "Nom" est vide
-et ajouter un message d'erreur à la variable `$errors` :
+Le code ci-dessus est équivalent au code suivant :
 
 ```php
-// Récupération des données du formulaire
-$name = null;
-$errors = [];
-
-if (!isset($_POST["name"]) || empty($_POST["name"])) {
-    array_push($errors, "Le champ 'Nom' est obligatoire.");
+if (isset($_POST["title"])) {
+    $title = $_POST["title"];
 } else {
-    $name = $_POST["name"];
+    $title = '';
 }
 ```
 
-Ici, nous initialisons la variable `$errors` avec un tableau vide pour stocker
-les messages d'erreur de validation. Ensuite, nous vérifions si le champ "Nom"
-est vide en utilisant les fonctions `isset()` et `empty()`. Si le champ est
-inexistant ou vide, nous ajoutons un message d'erreur à la variable `$errors` en
-utilisant la fonction `array_push()`.
+Il s'agit d'une manière plus concise et lisible d'assigner une valeur par défaut
+à la variable `$title` en fonction de la présence ou non de la clé `title` dans
+la superglobale `$_POST`.
 
-Une fois que nous avons ajouté le message d'erreur à la variable `$errors`, nous
-pouvons afficher les erreurs de validation dans la page HTML pour informer
-l'utilisateur.trice des problèmes avec les données saisies.
+Ainsi, lors de l'accès à la page `create.php` avant la soumission du formulaire,
+la variable `$title` sera initialisée avec une chaîne vide (`''`). Après la
+soumission du formulaire, la variable `$title` sera assignée avec la valeur
+saisie dans le champ "Titre" du formulaire, si elle existe à l'aide du nom
+`title` donné à l'élément `<input>`.
 
-Pour cela, nous pouvons ajouter le code suivant dans la section `<main>` de la
-page HTML, juste avant le formulaire :
+Le principe est le même pour les autres champs du formulaire, et nous allons
+donc utiliser la même approche pour récupérer les données des autres champs du
+formulaire et les stocker dans des variables correspondantes.
 
-```php
-<?php if ($_SERVER["REQUEST_METHOD"] === "POST") { ?>
-    <?php if (!empty($errors)) { ?>
-        <p style="color: red;">Le formulaire contient des erreurs :</p>
+Sauvegardez les changements effectués, rafraîchissez la page (voir note de la
+section
+[Rafraîchir la page après la soumission du formulaire](#rafraîchir-la-page-après-la-soumission-du-formulaire)),
+et effectuez un test de soumission du formulaire en saisissant une valeur dans
+le champ "Titre" et en cliquant sur le bouton de soumission. Vous devriez voir
+le contenu de la variable `$title` affiché sur la page, ce qui indique que les
+données du formulaire sont bien récupérées côté serveur avec un résultat
+similaire à celui-ci :
 
-        <ul>
-            <?php foreach ($errors as $error) { ?>
-                <li><?= $error ?></li>
-            <?php } ?>
-        </ul>
-    <?php } ?>
-<?php } ?>
+```text
+Le formulaire a été soumis avec les données suivantes :
+Titre : Titre de ma tâche
+Priorité :
+Description :
+Date limite :
 ```
 
-Même principe qu'avant : nous vérifions si la méthode de la requête HTTP est
-`POST` pour afficher les erreurs de validation uniquement après la soumission du
-formulaire. Ensuite, nous vérifions si la variable `$errors` n'est pas vide pour
-afficher les messages d'erreur. Si des erreurs sont présentes, nous affichons un
-message d'erreur en rouge et une liste des erreurs de validation.
+Le reste des champs du formulaire n'ayant pas encore été ajoutés, les variables
+correspondantes sont initialisées avec des chaînes vides (`''`) grâce à
+l'opérateur de coalescence nulle (`??`). En effet, les champs n'existent pas
+encore dans le formulaire, et donc les clés correspondantes dans la superglobale
+`$_POST` n'existent pas non plus, ce qui entraîne l'assignation des valeurs par
+défaut pour ces champs, qui sont des chaînes vides ('').
 
-Sauvegardez les changements effectués et effectuez un test de soumission du
-formulaire en laissant le champ "Nom" vide. Vous devriez voir le message
-d'erreur s'afficher sur la page, indiquant que le champ "Nom" est obligatoire.
+### Valider le titre de la tâche côté serveur
 
-Enregistrez les changements effectués et commitez les avec le message _"Afficher
-les erreurs de validation côté serveur"_. Poussez les sur GitHub. Cela mettra
-automatiquement à jour la pull request créée précédemment pour inclure ces
-nouvelles modifications.
+Avant d'ajouter les autres champs du formulaire, nous allons valider le champ
+"Titre" côté serveur pour nous assurer que les données saisies par
+l'utilisateur·trice sont correctes et respectent les contraintes définies.
 
-### Retourner une erreur de validation si le champ nom est trop court ou trop long
+Vous vous souvenez peut-être que nous avons déjà mis en place la fonction
+`validateTask()` dans le fichier `src/functions.php` pour valider les valeurs
+par défaut que nous avions définies. Nous allons maintenant utiliser cette
+fonction pour valider les données saisies dans le formulaire côté serveur.
 
-Maintenant que nous avons ajouté une validation pour vérifier que le champ "Nom"
-n'est pas vide, nous allons ajouter une validation supplémentaire pour vérifier
-que le champ "Nom" n'est pas trop court ou trop long.
+Modifiez le fichier `public/create.php` avec le code suivant pour valider le
+titre de la tâche côté serveur :
 
-De façon arbitraire, nous allons définir que le champ "Nom" doit contenir au
-moins 2 caractères et au maximum 50 caractères.
+```diff
+diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
+index 1ed8c3d..96e3573 100644
+--- a/mini-projet/public/create.php
++++ b/mini-projet/public/create.php
+@@ -10,11 +10,22 @@ $errors = [];
 
-Pour cela, nous pouvons ajouter les conditions suivantes dans le bloc de
-validation du champ "Nom" :
-
-```php
-$name = null;
-$errors = [];
-
-if (!isset($_POST["name"]) || empty($_POST["name"])) {
-    array_push($errors, "Le champ 'Nom' est obligatoire.");
-} else {
-    $name = $_POST["name"];
-
-    if (strlen($name) < 2) {
-        array_push($errors, "Le champ 'Nom' doit contenir au moins 2 caractères.");
-    } else if (strlen($name) > 50) {
-        array_push($errors, "Le champ 'Nom' doit contenir au maximum 50 caractères.");
-    }
-}
+ // Gestion de la soumission du formulaire
+ if ($_SERVER["REQUEST_METHOD"] === "POST") {
+-    echo "Le formulaire a été soumis avec les données suivantes :<br>";
+-    echo "Titre : $title<br>";
+-    echo "Priorité : $priority<br>";
+-    echo "Description : $description<br>";
+-    echo "Date limite : $deadline<br>";
++    $errors = validateTask(
++        $title,
++        $priority,
++        $description,
++        $deadline,
++    );
++
++    // S'il n'y a pas d'erreurs, ajoute la tâche à la base de données
++    if (empty($errors)) {
++        addTask(
++            $title,
++            $priority,
++            $description,
++            $deadline,
++        );
++    }
+ }
+ ?>
 ```
 
-Ici, nous utilisons la fonction `strlen()` (source :
-<https://www.php.net/manual/fr/function.strlen.php>) pour vérifier la longueur
-de la chaîne de caractères du champ "Nom". Si la longueur est inférieure à 2
-caractères, nous ajoutons un message d'erreur indiquant que le champ doit
-contenir au moins 2 caractères. Si la longueur est supérieure à 50 caractères,
-nous ajoutons un message d'erreur indiquant que le champ doit contenir au
-maximum 50 caractères.
+Ici, nous avons remplacé l'affichage temporaire des données du formulaire par un
+appel à la fonction `validateTask()` pour valider les données saisies dans le
+formulaire côté serveur.
 
-Sauvegardez les changements effectués et effectuez des tests de soumission du
-formulaire en saisissant des valeurs pour le champ "Nom" qui sont trop courtes
-ou trop longues. Vous devriez voir les messages d'erreur correspondants
-s'afficher sur la page, indiquant les problèmes de validation.
+Si des erreurs de validation sont présentes, elles seront stockées dans la
+variable `$errors`, qui sera ensuite utilisée pour afficher les messages
+d'erreur sur la page.
 
-Enregistrez les changements effectués et commitez les avec le message _"Valider
-le nom côté serveur"_. Poussez les sur GitHub. Cela mettra automatiquement à
-jour la pull request créée précédemment pour inclure ces nouvelles
-modifications.
+Ces messages d'erreur ne seront affichés que lorsque le formulaire sera soumis,
+grâce au bloc conditionnel `if` que nous avons ajouté précédemment.
 
-### Conserver les données saisies en cas d'erreur de validation
+De plus, nous profitons de cette étape pour ajouter un bloc conditionnel qui
+vérifie si la variable `$errors` est vide. Si c'est le cas, cela signifie qu'il
+n'y a pas d'erreurs de validation, et nous pouvons donc appeler la fonction
+`addTask()` pour ajouter la tâche à la base de données avec les données saisies
+dans le formulaire.
+
+Enregistrez les changements effectués et effectuez un test de soumission du
+formulaire avec des données invalides pour voir les messages d'erreur de
+validation s'afficher sur la page :
+
+- Essayez de soumettre le formulaire avec un titre vide.
+- Essayez de soumettre le formulaire avec un titre trop court (moins de 2
+  caractères).
+- Essayez de soumettre le formulaire avec un titre trop long (plus de 200
+  caractères).
+
+Les messages d'erreur de validation devraient s'afficher sur la page, indiquant
+les problèmes rencontrés avec les données saisies dans le formulaire. Il est
+normal que les messages d'erreur s'affichent pour les autres champs du
+formulaire, car nous n'avons pas encore ajouté ces champs au formulaire. Nous y
+reviendrons dans les prochaines étapes pour ajouter les autres champs.
+
+Nous voyons que la fonction `addTask` n'est pas encore appelée lorsque des
+erreurs de validation sont présentes, ce qui est le comportement attendu.
+
+### Conserver le titre en cas d'erreur de validation
 
 Vous avez peut-être remarqué que lorsque vous soumettez le formulaire avec des
 données invalides, les données saisies sont perdues et le formulaire est
 réinitialisé.
 
-Cela peut être frustrant pour l'utilisateur.trice, car la personne doit
+Cela peut être frustrant pour l'utilisateur·trice, car la personne doit
 ressaisir toutes les données du formulaire même s'il n'y a qu'une seule erreur
 de validation.
 
 Pour cela, nous pouvons utiliser l'attribut `value` de l'élément `<input>` pour
-conserver les données saisies dans le champ "Nom" en cas d'erreur de validation.
+conserver les données saisies dans le champ "Titre" en cas d'erreur de
+validation.
 
 L'attribut `value` permet de définir la valeur par défaut d'un champ de
 formulaire. En utilisant une syntaxe PHP, nous pouvons définir la valeur de
 l'attribut `value` avec la variable `$name`, qui contient la valeur saisie par
-l'utilisateur.trice dans le champ "Nom" lorsqu'une erreur de validation est
+l'utilisateur·trice dans le champ "Titre" lorsqu'une erreur de validation est
 présente.
 
-Voici comment vous pouvez modifier le champ "Nom" pour conserver les données
-saisies en cas d'erreur de validation :
+Avant de rentrer dans les détails, modifiez le fichier `public/create.php` avec
+le code suivant pour ajouter l'attribut `value` à l'élément `<input>` du champ
+"Titre" :
 
 ```php
 <input
     type="text"
-    id="name"
-    name="name"
-    value="<?= $name ?>" />
+    name="title"
+    value="Mon champ a une valeur par défaut" />
 ```
 
-Ici, nous utilisons la syntaxe `<?= $name ?>` pour insérer la valeur de la
-variable `$name` dans l'attribut `value` de l'élément `<input>`.
+Ici, nous avons ajouté l'attribut `value` à l'élément `<input>` avec une valeur
+par défaut de "Mon champ a une valeur par défaut". Cela signifie que lorsque la
+page est chargée, le champ "Titre" sera pré-rempli avec cette valeur par défaut.
 
-Ainsi, si une erreur de validation est présente et que la variable `$name`
-contient la valeur saisie par l'utilisateur.trice, cette valeur sera affichée
-dans le champ "Nom" du formulaire, permettant à la personne de corriger les
-erreurs sans perdre les données déjà saisies.
+Sauvegardez les changements effectués et rafraîchissez la page (voir note de la
+section
+[Rafraîchir la page après la soumission du formulaire](#rafraîchir-la-page-après-la-soumission-du-formulaire)).
+Vous devriez voir que le champ "Titre" est pré-rempli avec la valeur par défaut
+que nous avons définie.
 
-Sauvegardez les changements effectués et rafraîchissez la page.
+Soumettez le formulaire avec des données invalides pour voir les messages
+d'erreur de validation s'afficher sur la page. Vous remarquerez que le champ
+"Titre" est toujours pré-rempli avec la valeur par défaut, nous avons donc perdu
+les données saisies par l'utilisateur·trice.
 
-Vous devriez remarquer une erreur similaire à la suivante :
+Afin de conserver les données saisies par les utilisateur·trices, il suffit de
+remplacer la valeur par défaut de l'attribut `value` avec la variable `$title`,
+qui contient la valeur saisie par l'utilisateur·trice dans le champ "Titre"
+lorsqu'une erreur de validation est présente.
 
-```text
-<br /><b>Warning</b>:  Undefined variable $name in <b>/workspaces/[...]
-```
-
-Nous reviendrons sur cette erreur tout de suite, mais pour le moment, vous
-pouvez effacer le contenu du champ "Nom" et effectuer une soumission du
-formulaire avec un nom trop court (par exemple : "A") ou trop long (par exemple
-: une chaîne de caractères de plus de 50 caractères) pour voir les messages
-d'erreur de validation s'afficher et les données saisies être conservées dans le
-champ "Nom" du formulaire.
-
-Pourquoi cette erreur apparaît-elle ? L'erreur "Undefined variable \$name"
-signifie que la variable `$name` n'est pas définie dans le contexte où elle est
-utilisée. Cela se produit parce que la variable `$name` est initialisée à `null`
-uniquement lorsque la méthode de la requête HTTP est `POST`, c'est-à-dire
-lorsque le formulaire est soumis. Si vous accédez à la page sans soumettre le
-formulaire, la variable `$name` n'est pas définie, ce qui entraîne l'erreur.
-
-Pour cela, nous allons déplacer l'initialisation de la variable `$name` en
-dehors du bloc `if` qui vérifie la méthode de la requête HTTP, afin qu'elle soit
-définie même lorsque le formulaire n'est pas soumis :
+Modifiez le fichier `public/create.php` avec le code suivant pour utiliser la
+variable `$title` comme valeur de l'attribut `value` :
 
 ```php
-$name = null;
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Récupération des données du formulaire
-    $errors = [];
-
-    if (!isset($_POST["name"]) || empty($_POST["name"])) {
-        array_push($errors, "Le champ 'Nom' est obligatoire.");
-    } else {
-        $name = $_POST["name"];
-
-        if (strlen($name) < 2) {
-            array_push($errors, "Le champ 'Nom' doit contenir au moins 2 caractères.");
-        } else if (strlen($name) > 50) {
-            array_push($errors, "Le champ 'Nom' doit contenir au maximum 50 caractères.");
-        }
-    }
-}
+<input
+    type="text"
+    name="title"
+    value="<?= $title ?>" />
 ```
 
-Ainsi, la variable `$name` est initialisée à `null` dès le début du script, ce
-qui évite l'erreur "Undefined variable $name" lorsque la page est chargée sans
-soumission du formulaire.
+Sauvegardez les changements effectués et rafraîchissez la page (voir note de la
+section
+[Rafraîchir la page après la soumission du formulaire](#rafraîchir-la-page-après-la-soumission-du-formulaire)).
 
-Sauvegardez les changements effectués et rafraîchissez la page. Vous devriez
-voir que l'erreur "Undefined variable $name" a disparu, et vous pouvez à nouveau
-effectuer un test de soumission du formulaire avec des données invalides.
+Soumettez le formulaire avec des données invalides pour voir les messages
+d'erreur de validation s'afficher sur la page. Vous devriez voir que les données
+saisies sont conservées dans le champ "Titre" du formulaire, ce qui facilite la
+correction des erreurs de validation et offre une meilleure expérience pour vos
+utilisateur·trices.
 
-Vous devriez voir que les données saisies sont conservées dans le champ "Nom" du
-formulaire, ce qui facilite la correction des erreurs de validation et offre une
-meilleure expérience pour vos utilisateur.trices.
-
-Enregistrez les changements effectués et commitez les avec le message
-_"Conserver les données du formulaire en cas d'erreurs"_. Poussez les sur
-GitHub. Cela mettra automatiquement à jour la pull request créée précédemment
-pour inclure ces nouvelles modifications.
-
-### Valider les données du formulaire côté client
+### Valider le titre du formulaire côté client
 
 En plus de la validation côté serveur que nous avons déjà mise en place, il est
 également possible d'ajouter une validation côté client pour améliorer
-l'expérience utilisateur.trice en fournissant un retour immédiat sur les erreurs
+l'expérience utilisateur·trice en fournissant un retour immédiat sur les erreurs
 de validation avant même que le formulaire ne soit soumis.
 
 Pour cela, nous pouvons utiliser les attributs de validation HTML5 pour le champ
-"Nom". Par exemple, nous pouvons ajouter les attributs `required`, `minlength`
+"Titre". Par exemple, nous pouvons ajouter les attributs `required`, `minlength`
 et `maxlength` pour définir les règles de validation directement dans le code
 HTML du formulaire :
 
 ```php
 <input
     type="text"
-    id="name"
-    name="name"
-    value="<?= $name ?>"
+    name="title"
+    value="<?= $title ?>"
     required
     minlength="2"
-    maxlength="50" />
+    maxlength="200" />
 ```
 
 Ainsi, votre navigateur effectuera une validation côté client avant de soumettre
-le formulaire. Si le champ "Nom" est laissé vide, ou si la valeur saisie est
-trop courte ou trop longue, le navigateur affichera un message d'erreur et
-empêchera la soumission du formulaire jusqu'à ce que les données soient
-corrigées.
+le formulaire.
 
-Sauvegardez les changements effectués et effectuez un test de soumission du
-formulaire en laissant le champ "Nom" vide, ou en saisissant une valeur trop
-courte ou trop longue. Vous devriez voir les messages d'erreur de validation
-s'afficher directement dans le navigateur, offrant un retour immédiat à
-l'utilisateur.trice.
+Si le champ "Titre" est laissé vide, ou si la valeur saisie est trop courte ou
+trop longue, le navigateur affichera un message d'erreur et empêchera la
+soumission du formulaire jusqu'à ce que les données soient corrigées.
 
-Enregistrez les changements effectués et commitez les avec le message _"Valider
-les données du formulaire côté client"_. Poussez les sur GitHub. Cela mettra
-automatiquement à jour la pull request créée précédemment pour inclure ces
-nouvelles modifications.
+Sauvegardez les changements effectués, rafraîchissez la page (voir note de la
+section
+[Rafraîchir la page après la soumission du formulaire](#rafraîchir-la-page-après-la-soumission-du-formulaire))
+et effectuez un test de soumission du formulaire en laissant le champ "Titre"
+vide, ou en saisissant une valeur trop courte ou trop longue. Vous devriez voir
+les messages d'erreur de validation s'afficher directement dans le navigateur,
+avant même qu'une réelle soumission ne soit effectuée, offrant un retour
+immédiat à l'utilisateur·trice.
+
+Une fois le formulaire soumis avec des données valides, vous devriez voir les
+messages de succès s'afficher sur la page, indiquant que la tâche a été créée
+avec succès.
+
+Dans la prochaine séance, nous allons remplacer ce message de succès par
+l'enregistrement réel de la tâche dans la base de données, mais pour l'instant,
+nous validons le bon fonctionnement du formulaire et sa validation côté serveur
+et côté client.
 
 ### Contourner la validation côté client
 
@@ -842,10 +697,10 @@ Il est important de retenir que la validation client **ne remplace pas** la
 validation côté serveur.
 
 La validation côté client est une amélioration de l'expérience
-utilisateur.trice, mais elle ne doit jamais être utilisée comme la seule méthode
-de validation, car elle peut être contournée par des utilisateurs malveillants
-ou des bots. La validation côté serveur est essentielle pour garantir la
-sécurité et l'intégrité des données.
+utilisateur·trice, mais elle ne doit jamais être utilisée comme la seule méthode
+de validation, car elle peut être contournée par des utilisateur·trices
+malveillant·es ou des bots (= scripts automatisés). La validation côté serveur
+est essentielle pour garantir la sécurité et l'intégrité des données.
 
 Afin de prouver que la validation côté client ne remplace pas la validation côté
 serveur, vous pouvez contourner la validation côté client grâce aux outils de
@@ -853,90 +708,705 @@ développement de votre navigateur.
 
 1. Ouvrez les outils de développement de votre navigateur (clic droit >
    "Inspecter").
-2. Utilisez l'outil de sélection d'élément pour sélectionner le champ "Nom".
+2. Utilisez l'outil de sélection d'élément pour sélectionner le champ "Titre".
 3. Dans l'onglet "Éléments", supprimez les attributs `required`, `minlength` et
-   `maxlength` du champ "Nom".
-4. Saisissez un nom vide ou un nom de moins de 2 ou de plus de 50 caractères
-   dans le champ "Nom" et cliquez sur le bouton "Créer". Vous devriez voir les
+   `maxlength` du champ "Titre".
+4. Saisissez un titre vide ou un titre de moins de 2 ou de plus de 50 caractères
+   dans le champ "Titre" et cliquez sur le bouton "Créer". Vous devriez voir les
    messages d'erreur affichés à l'écran.
 
 Le formulaire devrait être soumis malgré les données invalides, et les erreurs
 de validation devraient être affichées, prouvant que la validation côté client
 ne remplace pas la validation côté serveur.
 
-### Déplacer la validation côté serveur dans une fonction dédiée
+Dès que vous rafraîchissez la page (voir note de la section
+[Rafraîchir la page après la soumission du formulaire](#rafraîchir-la-page-après-la-soumission-du-formulaire)),
+le champ "Titre" sera de nouveau soumis à la validation côté client, car les
+attributs de validation HTML5 sont de nouveau présents dans le code HTML du
+formulaire.
 
-Afin de garder un code propre et organisé, il est recommandé de déplacer la
-validation côté serveur dans une fonction dédiée. Cela permet de séparer la
-logique de validation du reste du code et de rendre le code plus lisible et
-maintenable.
+Validez le bon fonctionnement du formulaire à l'aide des outils de développement
+de votre navigateur pour contourner la validation côté client et vérifier que la
+validation côté serveur fonctionne correctement.
 
-Pour cela, créez une fonction `validatePet()` dans le fichier
-`mini-projet/src/functions.php` qui contiendra la logique de validation des
-données du formulaire. Cette fonction prendra en paramètre les données du
-formulaire et retournera un tableau d'erreurs de validation :
+N'oubliez pas de commiter vos changements et de pousser votre branche sur GitHub
+pour sauvegarder votre travail.
+
+> [!TIP]
+>
+> Ici serait un bon moment pour créer la pull request de votre branche de
+> travail vers la branche principale du dépôt GitHub du mini-projet. **Ne la
+> fusionnez pas encore**, car nous allons continuer à travailler sur le
+> formulaire de création d'une nouvelle tâche dans les prochaines étapes. Vous
+> pourrez fusionner la pull request une fois que toutes les fonctionnalités du
+> formulaire seront implémentées et validées.
+
+### Mettre en place les autres champs du formulaire
+
+Dans cette section, nous allons créer les autres champs du formulaire. Le
+processus est similaire à celui du champ "Titre", décomposé en plusieurs étapes
+:
+
+1. Ajout du champ.
+2. Réception des données côté serveur.
+3. Validation des données côté serveur.
+4. Conservation des données saisies en cas d'erreur de validation.
+5. Validation des données côté client.
+
+#### Mettre en place le champ "Priorité"
+
+Nous allons maintenant ajouter le champ "Priorité" au formulaire. Le champ
+"Priorité" est un champ obligatoire qui doit être l'une des valeurs suivantes :
+`low`, `medium` ou `high`. Pour cela, nous allons utiliser un élément `<select>`
+avec des options pour chaque valeur possible.
+
+##### Ajouter le champ au formulaire
+
+Modifiez le fichier `public/create.php` avec le code suivant pour ajouter le
+champ "Priorité" au formulaire :
 
 ```php
-function validatePet(
-    ?string $name,
-): array {
-    // Par défaut, il n'y a pas d'erreurs
-    $errors = [];
-
-    // Validation des données
-    if (empty($name)) {
-        array_push($errors, "Le nom est obligatoire.");
-    } else if (strlen($name) < 2) {
-        array_push($errors, "Le nom doit contenir au minimum 2 caractères.");
-    } else if (strlen($name) > 50) {
-        array_push($errors, "Le nom doit contenir au maximum 50 caractères.");
-    }
-
-    return $errors;
-}
+<label>Priorité
+    <select name="priority">
+        <option value="low">Basse</option>
+        <option value="medium">Moyenne</option>
+        <option value="high">Haute</option>
+    </select>
+</label>
 ```
 
-Vous remarquerez peut-être que le paramètre `$name` de la fonction
-`validatePet()` est défini avec le type `?string`. Le point d'interrogation
-(`?`) avant le type `string` indique que ce paramètre peut être de type `string`
-ou `null`. Cela signifie que la fonction peut accepter une valeur de type
-`string` ou une valeur de type `null` pour le paramètre `$name`. Cela permet de
-gérer le cas où le champ "Nom" n'est pas défini ou est laissé vide dans le
-formulaire, tout en conservant une signature de fonction claire et précise.
+Le champ "Priorité" est représenté par un élément `<select>` avec l'attribut
+`name` défini avec la valeur `priority`. Chaque option du champ est représentée
+par un élément `<option>` avec l'attribut `value` défini avec la valeur
+correspondante (`low`, `medium` ou `high`). L'étiquette descriptive pour le
+champ de saisie est fournie par l'élément `<label>`.
 
-Pour le moment, seul le champ nom est validé dans cette fonction, mais nous
-ajouterons la validation des autres champs du formulaire dans les prochaines
-étapes.
+Sauvegardez les changements effectués et rafraîchissez la page (voir note de la
+section
+[Rafraîchir la page après la soumission du formulaire](#rafraîchir-la-page-après-la-soumission-du-formulaire)).
+Vous devriez voir le champ "Priorité" ajouté au formulaire avec les options
+"Basse", "Moyenne" et "Haute".
 
-La fonction reprend les mêmes règles de validation que celles que nous avons
-déjà mises en place dans le fichier `create.php`, mais elles sont maintenant
-centralisées dans une fonction dédiée.
+Afin de sélectionner une valeur par défaut pour le champ "Priorité", vous pouvez
+utiliser l'attribut `selected` sur l'élément `<option>` correspondant à la
+valeur par défaut souhaitée.
 
-Dans le fichier `mini-projet/public/create.php`, vous pouvez maintenant utiliser
-cette fonction pour valider les données du formulaire :
+Par exemple, pour sélectionner la valeur "Moyenne" par défaut, vous pouvez
+modifier le code du champ "Priorité" comme suit :
+
+```php
+<label>Priorité
+    <select name="priority">
+        <option value="low">Basse</option>
+        <option value="medium" selected>Moyenne</option>
+        <option value="high">Haute</option>
+    </select>
+</label>
+```
+
+Sauvegardez les changements effectués et rafraîchissez la page (voir note de la
+section
+[Rafraîchir la page après la soumission du formulaire](#rafraîchir-la-page-après-la-soumission-du-formulaire)).
+Vous devriez voir que la valeur "Moyenne" est sélectionnée par défaut dans le
+champ "Priorité".
+
+Soumettez le formulaire avec des données valides. Vous devriez maintenant voir
+le contenu de la fonction `addTask()` affiché sur la page ainsi que le message
+de succès affiché, ce qui indique que les données du formulaire sont bien reçues
+côté serveur avec un résultat similaire à celui-ci :
+
+```text
+Ajout d'une tâche avec les données suivantes :
+Titre : Titre de ma tâche
+Priorité : low
+Description :
+Date limite :
+```
+
+En effet, comme les autres champs restants du formulaire sont optionnels dans
+l'appel de la fonction `validateTask()`, la validation côté serveur ne renverra
+pas d'erreur pour ces champs, même s'ils n'existent pas encore dans le
+formulaire.
+
+Comme il n'y a pas d'erreurs de validation, la fonction `addTask()` est appelée
+avec les données saisies dans le formulaire, ce qui permet d'afficher les
+données de la tâche ajoutée sur la page.
+
+##### Récupérer les données du champ côté serveur
+
+Les données du champ "Priorité" sont déjà récupérées côté serveur grâce à la
+variable `$priority` que nous avons définie précédemment avec le code suivant :
+
+```php
+$priority = $_POST["priority"] ?? '';
+```
+
+Pour rappel, nous utilisons l'opérateur de coalescence nulle (`??`) pour
+vérifier si la clé `priority` existe dans la superglobale `$_POST`. Si la clé
+existe, sa valeur est assignée à la variable `$priority`. Sinon, la variable
+`$priority` est assignée avec une chaîne vide (`''`).
+
+##### Valider les données du champ côté serveur
+
+La validation des données du champ "Priorité" est déjà effectuée côté serveur
+grâce à la fonction `validateTask()` que nous avons utilisée précédemment pour
+valider les données du formulaire. La fonction vérifie si la valeur saisie dans
+le champ "Priorité" est l'une des valeurs autorisées (`low`, `medium`ou `high`).
+Si la valeur saisie n'est pas valide, un message d'erreur est ajouté à la
+variable `$errors`, qui sera ensuite utilisée pour afficher les messages
+d'erreur sur la page.
+
+Pour tester la validation côté serveur, vous pouvez soumettre le formulaire avec
+une valeur invalide pour le champ "Priorité" en utilisant les outils de
+développement de votre navigateur pour modifier le code HTML du formulaire et
+ajouter une option invalide dans le champ "Priorité" :
+
+```php
+<option value="invalid">Invalide</option>
+```
+
+##### Conserver les données saisies en cas d'erreur de validation
+
+Afin de conserver les données saisies dans le champ "Priorité" en cas d'erreur
+de validation, nous pouvons utiliser l'attribut `selected` sur l'élément
+`<option>` correspondant à la valeur saisie par l'utilisateur·trice.
+
+Pour cela, nous pouvons utiliser une syntaxe PHP pour vérifier si la valeur de
+l'option correspond à la valeur de la variable `$priority`. Si c'est le cas,
+nous ajoutons l'attribut `selected` à l'élément `<option>` pour le sélectionner
+par défaut (de la même manière que présenté manuellement précédemment) à l'aide
+d'un `if` ternaire :
+
+```php
+<option value="low" <?= $priority === 'low' ? 'selected' : '' ?>>Basse</option>
+<option value="medium" <?= $priority === 'medium' ? 'selected' : '' ?>>Moyenne</option>
+<option value="high" <?= $priority === 'high' ? 'selected' : '' ?>>Haute</option>
+```
+
+Si la valeur de la variable `$priority` correspond à la valeur de l'option,
+l'attribut `selected` est ajouté à l'élément `<option>`, ce qui permet de
+conserver la valeur saisie par l'utilisateur·trice en cas d'erreur de
+validation.
+
+Si vous rafraîchissez la page après avoir soumis le formulaire (voir note de la
+section
+[Rafraîchir la page après la soumission du formulaire](#rafraîchir-la-page-après-la-soumission-du-formulaire)),
+la valeur "Basse" sera sélectionnée par défaut dans le champ "Priorité", car la
+valeur par défaut de la variable `$priority` est une chaîne vide (`''`), qui ne
+correspond à aucune des valeurs autorisées pour le champ "Priorité". Ainsi,
+aucune option n'a l'attribut `selected` et la valeur "Basse" est sélectionnée
+par défaut.
+
+##### Valider les données du champ côté client
+
+Afin d'ajouter une validation côté client pour le champ "Priorité", nous pouvons
+utiliser l'attribut `required` sur l'élément `<select>` pour indiquer que le
+champ est obligatoire. Cela empêchera la soumission du formulaire si aucune
+option n'est sélectionnée :
+
+```php
+<select name="priority" required>
+    <option value="low" <?= $priority === 'low' ? 'selected' : '' ?>>Basse</option>
+    <option value="medium" <?= $priority === 'medium' ? 'selected' : '' ?>>Moyenne</option>
+    <option value="high" <?= $priority === 'high' ? 'selected' : '' ?>>Haute</option>
+</select>
+```
+
+Si une option n'est pas sélectionnée dans le champ "Priorité", le navigateur
+affichera un message d'erreur et empêchera la soumission du formulaire jusqu'à
+ce qu'une option soit sélectionnée.
+
+Pour tester si la validation côté client fonctionne correctement, vous pouvez
+ajouter une première option vide dans le champ "Priorité" et soumettre le
+formulaire sans sélectionner une option :
+
+```php
+<option value="" disabled selected>Sélectionnez une priorité</option>
+```
+
+Si vous soumettez le formulaire avec cette option vide (voir note de la section
+[Rafraîchir la page après la soumission du formulaire](#rafraîchir-la-page-après-la-soumission-du-formulaire)),
+le navigateur affichera un message d'erreur indiquant que le champ "Priorité"
+est obligatoire.
+
+Une fois que vous avez testé la validation côté client, vous pouvez supprimer
+cette option vide pour revenir à la version précédente du champ "Priorité".
+
+Nous avons maintenant mis en place la validation côté serveur et côté client
+pour le champ "Priorité", bravo !
+
+Validez le bon fonctionnement du formulaire à l'aide des outils de développement
+de votre navigateur pour contourner la validation côté client et vérifier que la
+validation côté serveur fonctionne correctement.
+
+N'oubliez pas de commiter vos changements et de pousser votre branche sur GitHub
+pour sauvegarder votre travail.
+
+#### Mettre en place le champ "Description"
+
+Le champ "Description" est un champ optionnel qui permet à l'utilisateur·trice
+de saisir une description pour la tâche. Pour cela, nous allons utiliser un
+élément `<textarea>` pour permettre à l'utilisateur·trice de saisir du texte sur
+plusieurs lignes.
+
+##### Ajouter le champ au formulaire
+
+Ajoutez le champ "Description" au formulaire en modifiant le fichier
+`public/create.php` avec le code suivant :
+
+```php
+<label>Description (optionnelle)
+    <textarea
+        name="description"></textarea>
+</label>
+```
+
+Ici, le champ "Description" est représenté par un élément `<textarea>` avec
+l'attribut `name` défini avec la valeur `description`. L'étiquette descriptive
+pour le champ de saisie est fournie par l'élément `<label>`.
+
+Un `textarea` permet à l'utilisateur·trice de saisir du texte sur plusieurs
+lignes, ce qui est particulièrement utile pour les descriptions de tâches qui
+peuvent être plus longues qu'un champ de saisie standard (`<input>` avec le type
+`text`).
+
+##### Récupérer les données du champ côté serveur
+
+Les données du champ "Description" sont déjà récupérées côté serveur grâce à la
+variable `$description` que nous avons définie précédemment avec le code suivant
+:
+
+```php
+$description = $_POST["description"] ?? '';
+```
+
+##### Valider les données du champ côté serveur
+
+La validation des données du champ "Description" est déjà effectuée côté serveur
+grâce à la fonction `validateTask()` que nous avons utilisée précédemment pour
+valider les données du formulaire. La fonction vérifie si la valeur saisie dans
+le champ "Description" est plus grande que 10 caractères et ne dépasse pas les
+1000 caractères. Si cette condition n'est pas respectée, un message d'erreur est
+ajouté à la variable `$errors`, qui sera ensuite utilisée pour afficher les
+messages d'erreur sur la page.
+
+##### Conserver les données saisies en cas d'erreur de validation
+
+Afin de conserver les données saisies dans le champ "Description" en cas
+d'erreur de validation, nous pouvons utiliser la syntaxe PHP pour définir le
+contenu de l'élément `<textarea>` avec la variable `$description`, qui contient
+la valeur saisie par l'utilisateur·trice dans le champ "Description" lorsqu'une
+erreur de validation est présente :
+
+```php
+<textarea
+    name="description"><?= $description ?></textarea>
+```
+
+Sauvegardez les changements effectués et rafraîchissez la page (voir note de la
+section
+[Rafraîchir la page après la soumission du formulaire](#rafraîchir-la-page-après-la-soumission-du-formulaire)).
+Soumettez le formulaire avec des données invalides pour voir les messages
+d'erreur de validation s'afficher sur la page. Vous devriez voir que les données
+saisies sont conservées dans le champ "Description" du formulaire, ce qui
+facilite la correction des erreurs de validation et offre une meilleure
+expérience pour vos utilisateur·trices.
+
+##### Valider les données du champ côté client
+
+Afin d'ajouter une validation côté client pour le champ "Description", nous
+pouvons utiliser les attributs `minlength` et `maxlength` sur l'élément
+`<textarea>` pour définir les règles de validation directement dans le code HTML
+du formulaire :
+
+```php
+<textarea
+    name="description"
+    minlength="10"
+    maxlength="1000"><?= $description ?></textarea>
+```
+
+Ici, la description reste optionnelle (il n'y a donc pas d'attribut `required`),
+mais si l'utilisateur·trice saisit une valeur, elle doit respecter les
+contraintes de longueur définies par les attributs `minlength` et `maxlength`.
+Si la valeur saisie ne respecte pas ces contraintes, le navigateur affichera un
+message d'erreur et empêchera la soumission du formulaire jusqu'à ce que les
+données soient corrigées.
+
+Nous avons maintenant mis en place la validation côté serveur et côté client
+pour le champ "Description", bravo !
+
+Validez le bon fonctionnement du formulaire à l'aide des outils de développement
+de votre navigateur pour contourner la validation côté client et vérifier que la
+validation côté serveur fonctionne correctement.
+
+N'oubliez pas de commiter vos changements et de pousser votre branche sur GitHub
+pour sauvegarder votre travail.
+
+#### Mettre en place le champ "Date limite"
+
+Le champ "Date limite" est un champ optionnel qui permet à l'utilisateur·trice
+de saisir une date limite pour la tâche. Pour cela, nous allons utiliser un
+élément `<input>` avec l'attribut `type` défini avec la valeur `date`, ce qui
+permet à l'utilisateur·trice de saisir une date au format `YYYY-MM-DD`
+(année-mois-jour).
+
+##### Ajouter le champ au formulaire
+
+Ajoutez le champ "Date limite" au formulaire en modifiant le fichier
+`public/create.php` avec le code suivant :
+
+```php
+<label>Date limite (optionnelle)
+    <input
+        type="date"
+        name="deadline" />
+</label>
+```
+
+Ici, le champ "Date limite" est représenté par un élément `<input>` avec
+l'attribut `type` défini avec la valeur `date` et l'attribut `name` défini avec
+la valeur `deadline`. L'étiquette descriptive pour le champ de saisie est
+fournie par l'élément `<label>`.
+
+Un champ de saisie de type `date` permet à l'utilisateur·trice de saisir une
+date au format `YYYY-MM-DD` (année-mois-jour). Le navigateur affichera un
+sélecteur de date pour faciliter la saisie de la date.
+
+##### Récupérer les données du champ côté serveur
+
+Les données du champ "Date limite" sont déjà récupérées côté serveur grâce à la
+variable `$deadline` que nous avons définie précédemment avec le code suivant :
+
+```php
+$deadline = $_POST["deadline"] ?? '';
+```
+
+##### Valider les données du champ côté serveur
+
+La validation des données du champ "Date limite" est déjà effectuée côté serveur
+grâce à la fonction `validateTask()` que nous avons utilisée précédemment pour
+valider les données du formulaire. La fonction vérifie si la valeur saisie dans
+le champ "Date limite" est une date valide au format `YYYY-MM-DD`. Si la valeur
+saisie n'est pas valide, un message d'erreur est ajouté à la variable `$errors`,
+qui sera ensuite utilisée pour afficher les messages d'erreur sur la page.
+
+##### Conserver les données saisies en cas d'erreur de validation
+
+Tout comme pour le champ "Titre", nous pouvons utiliser l'attribut `value` de
+l'élément `<input>` pour conserver les données saisies dans le champ "Date
+limite" en cas d'erreur de validation :
+
+```php
+<input
+    type="date"
+    name="deadline"
+    value="<?= $deadline ?>" />
+```
+
+Sauvegardez les changements effectués et rafraîchissez la page (voir note de la
+section
+[Rafraîchir la page après la soumission du formulaire](#rafraîchir-la-page-après-la-soumission-du-formulaire)).
+Soumettez le formulaire avec des données invalides pour voir les messages
+d'erreur de validation s'afficher sur la page. Vous devriez voir que les données
+saisies sont conservées dans le champ "Date limite" du formulaire, ce qui
+facilite la correction des erreurs de validation et offre une meilleure
+expérience pour vos utilisateur·trices.
+
+##### Valider les données du champ côté client
+
+Afin d'ajouter une validation côté client pour le champ "Date limite", nous
+pouvons utiliser l'attribut `min` sur l'élément `<input>` pour définir la date
+minimale autorisée pour la saisie de la date limite. Par exemple, nous pouvons
+définir la date minimale à aujourd'hui pour empêcher l'utilisateur·trice de
+saisir une date passée :
+
+```php
+<input
+    type="date"
+    name="deadline"
+    min="<?= date('Y-m-d') ?>"
+    value="<?= $deadline ?>" />
+```
+
+Ici, la date limite reste optionnelle (il n'y a donc pas d'attribut `required`),
+mais si l'utilisateur·trice saisit une valeur, elle doit être supérieure ou
+égale à la date actuelle à l'aide de l'attribut `min`. La fonction
+`date('Y-m-d')` de PHP permet de récupérer la date actuelle au format
+`YYYY-MM-DD` (année-mois-jour).
+
+Si la valeur saisie ne respecte pas cette contrainte, le navigateur affichera un
+message d'erreur et empêchera la soumission du formulaire jusqu'à ce que les
+données soient corrigées.
+
+Nous avons maintenant mis en place la validation côté serveur et côté client
+pour le champ "Date limite", bravo !
+
+Validez le bon fonctionnement du formulaire à l'aide des outils de développement
+de votre navigateur pour contourner la validation côté client et vérifier que la
+validation côté serveur fonctionne correctement.
+
+N'oubliez pas de commiter vos changements et de pousser votre branche sur GitHub
+pour sauvegarder votre travail.
+
+### Tester le formulaire complet
+
+Vous pouvez maintenant tester votre formulaire. Essayez de changer les valeurs
+saisies dans les champs et de soumettre le formulaire pour voir les messages
+d'erreur de validation s'afficher à l'écran.
+
+N'hésitez pas à utiliser les outils de développement de votre navigateur pour
+contourner la validation côté client et vérifier que la validation côté serveur
+fonctionne correctement.
+
+N'oubliez de suivre le workflow Git/GitHub pour cette tâche.
+
+> [!TIP]
+>
+> Ici serait un bon moment pour valider et fusionner la pull request de votre
+> branche de travail vers la branche principale du dépôt GitHub du mini-projet.
+> Vous pourrez ensuite créer une nouvelle branche pour la prochaine
+> fonctionnalité.
+
+## Rendre dynamique la page d'accueil et de visualisation des tâches
+
+Dans cette section, nous allons voir comment utiliser la superglobale `$_GET`
+pour récupérer les données de l'URL et les utiliser pour afficher les
+informations de la tâche sélectionnée sur la page d'accueil et de visualisation.
+
+Comme nous avons étudié lors de la première séance de ce cours
+[Introduction à PHP](../../01.02-introduction-a-php/README.md), PHP repose sur
+une architecture client-serveur. Le serveur web reçoit les requêtes HTTP du
+client (navigateur web) et renvoie les réponses correspondantes.
+
+Lorsque votre navigateur demande une page web, il envoie une requête HTTP au
+serveur web. Cette requête peut contenir des paramètres dans l'URL, qui sont
+accessibles côté serveur via la superglobale `$_GET`, qui est un tableau
+associatif contenant les paramètres de la requête HTTP, exactement comme nous
+l'avons vu dans la séance
+[Tableaux et boucles](../../02-tableaux-et-boucles/README.md).
+
+Maintenant que nous avons étudié un peu plus en détail les formulaires HTML avec
+notamment l'envoi de données via la méthode `GET` ou la méthode `POST`, nous
+pouvons nous reposer sur ces acquis pour utiliser la superglobale `$_GET` pour
+récupérer les données de l'URL et les utiliser pour afficher les informations de
+la tâche sélectionnée sur la page d'accueil et de visualisation.
+
+> [!WARNING]
+>
+> N'oubliez pas de créer une issue et sa branche dédiée pour cette nouvelle
+> fonctionnalité !
+
+### Mettre à jour la page de visualisation
+
+Actuellement, la page de visualisation affiche les informations d'une tâche avec
+un identifiant fixe (ID = 1). Nous allons modifier cette page pour qu'elle
+affiche les informations de la tâche sélectionnée en fonction de l'identifiant
+passé dans l'URL via la superglobale `$_GET`.
+
+Pour cela, modifiez le fichier `public/view.php` pour récupérer l'identifiant de
+la tâche depuis l'URL :
+
+```php
+diff --git a/mini-projet/public/view.php b/mini-projet/public/view.php
+index 5e9120f..504d5a5 100644
+--- a/mini-projet/public/view.php
++++ b/mini-projet/public/view.php
+@@ -2,7 +2,12 @@
+ require_once __DIR__ . '/../src/constants.php';
+ require_once __DIR__ . '/../src/functions.php';
+
+-$taskId = 1;
++$taskId = $_GET['id'] ?? null;
++
++if ($taskId === null) {
++    header('Location: ./index.php');
++    exit;
++}
+
+ $task = getTaskById($taskId);
+```
+
+En utilisant la superglobale `$_GET`, nous récupérons l'identifiant de la tâche
+depuis l'URL. Nous cherchons la clé `id` (symbolisé par le query parameter `id`
+dans l'URL, par exemple `http://localhost:8080/view.php?id=1`) dans le tableau
+associatif `$_GET`. Si la clé n'existe pas, la variable `$taskId` sera assignée
+avec la valeur `null`.
+
+Si l'identifiant n'est pas présent dans l'URL (car la variable `$taskId` est
+`null`), nous redirigeons l'utilisateur·trice vers la page d'accueil avec la
+fonction `header()` et nous arrêtons l'exécution du script avec la fonction
+`exit()`, comme utilisé dans la séance précédente.
+
+N'oubliez pas de commiter vos changements et de pousser votre branche sur GitHub
+pour sauvegarder votre travail.
+
+> [!TIP]
+>
+> Ici serait un bon moment pour créer la pull request de votre branche de
+> travail vers la branche principale du dépôt GitHub du mini-projet. **Ne la
+> fusionnez pas encore**, car nous allons continuer à travailler sur le
+> formulaire de création d'une nouvelle tâche dans les prochaines étapes. Vous
+> pourrez fusionner la pull request une fois que toutes les fonctionnalités du
+> formulaire seront implémentées et validées.
+
+### Tester la page de visualisation
+
+Maintenant que nous avons mis à jour la page de visualisation pour qu'elle
+affiche les informations de la tâche sélectionnée en fonction de l'identifiant
+passé dans l'URL via la superglobale `$_GET`, nous pouvons tester cette
+fonctionnalité en accédant à la page de visualisation avec différents
+identifiants dans l'URL.
+
+Par exemple, testez d'accéder à la page de visualisation avec les URLs suivantes
+:
+
+1. <http://localhost:8080/view.php?id=1>
+2. <http://localhost:8080/view.php?id=2>
+3. <http://localhost:8080/view.php?id=3>
+4. <http://localhost:8080/view.php?id=4>
+5. <http://localhost:8080/view.php?id=5>
+6. <http://localhost:8080/view.php>
+7. <http://localhost:8080/view.php?id=invalid>
+
+De façon dynamique, la page de visualisation devrait afficher les informations
+de la tâche correspondante à l'identifiant passé dans l'URL (cas 1 à 4). Si
+l'identifiant n'existe pas car il n'y a pas de tâche correspondante (cas 5), ou
+si l'identifiant n'est simplement pas présent dans l'URL (cas 6), la page de
+visualisation devrait rediriger l'utilisateur·trice vers la page d'accueil.
+
+Un cas spécial est le cas 7, où l'identifiant passé dans l'URL n'est pas un
+entier. Dans ce cas, une erreur de conversion de type sera levée par la fonction
+`getTaskById()`, car elle attend un entier en paramètre.
+
+L'erreur levée sera de type `TypeError` et le message d'erreur affiché sera
+similaire à celui-ci :
+
+```text
+Fatal error: Uncaught TypeError: getTaskById(): Argument #1 ($id) must be of type int, string given, called in /workspace/mini-projet/public/view.php on line 12 and defined in /workspace/mini-projet/src/functions.php:36 Stack trace: #0 /workspace/mini-projet/public/view.php(12): getTaskById('invalid') #1 {main} thrown in /workspace/mini-projet/src/functions.php on line 36
+```
+
+Nous pouvons corriger ce problème en ajoutant une validation pour vérifier si
+l'identifiant passé dans l'URL est un entier avant de l'utiliser pour récupérer
+les informations de la tâche :
+
+```diff
+diff --git a/mini-projet/public/view.php b/mini-projet/public/view.php
+index 504d5a5..91516af 100644
+--- a/mini-projet/public/view.php
++++ b/mini-projet/public/view.php
+@@ -4,7 +4,7 @@ require_once __DIR__ . '/../src/functions.php';
+
+ $taskId = $_GET['id'] ?? null;
+
+-if ($taskId === null) {
++if ($taskId === null || !is_numeric($taskId)) {
+     header('Location: ./index.php');
+     exit;
+ }
+```
+
+Grâce à la fonction `is_numeric()`, nous vérifions si la valeur de `$taskId` est
+un nombre. Si ce n'est pas le cas, nous redirigeons l'utilisateur·trice vers la
+page d'accueil.
+
+Le cas 7 devrait maintenant rediriger l'utilisateur·trice vers la page d'accueil
+au lieu d'afficher une erreur de conversion de type.
+
+N'oubliez pas de commiter vos changements et de pousser votre branche sur GitHub
+pour sauvegarder votre travail.
+
+### Mettre à jour la page d'accueil
+
+La page d'accueil peut également être mise à jour pour rediriger
+l'utilisateur·trice pour ajouter l'identifiant de la tâche sélectionnée dans
+l'URL lors du clic sur le lien "Voir la tâche" pour chaque tâche affichée :
+
+```diff
+diff --git a/mini-projet/public/index.php b/mini-projet/public/index.php
+index e331062..96f22ed 100644
+--- a/mini-projet/public/index.php
++++ b/mini-projet/public/index.php
+@@ -61,7 +61,7 @@ $tasks = getTasks();
+                     <?php } ?>
+
+                     <footer>
+-                        <a class="btn btn-primary btn-sm" href="./view.php">
++                        <a class="btn btn-primary btn-sm" href="./view.php?id=<?= $task['id'] ?>">
+                             Visualiser la tâche
+                         </a>
+                     </footer>
+```
+
+Pour cela, nous avons ajouté l'identifiant de la tâche dans l'URL du lien "Voir
+la tâche" en utilisant la syntaxe PHP `?id=<?= $task['id'] ?>` pour récupérer
+l'identifiant de la tâche actuelle dans la boucle `foreach`.
+
+En effet, comme chaque tâche est représentée par un tableau associatif contenant
+les informations de la tâche, nous pouvons accéder à l'identifiant de la tâche
+en utilisant la clé `id` du tableau associatif `$task` et en généré le lien vers
+la page de visualisation avec l'identifiant de la tâche dans l'URL.
+
+De cette manière, lorsque l'utilisateur·trice clique sur le lien "Voir la
+tâche", il/elle sera redirigé·e vers la page de visualisation avec l'identifiant
+de la tâche sélectionnée dans l'URL, ce qui permettra d'afficher les
+informations de la tâche correspondante.
+
+N'oubliez pas de commiter vos changements et de pousser votre branche sur GitHub
+pour sauvegarder votre travail.
+
+### Tester la page d'accueil
+
+Sauvegardez les changements effectués et rafraîchissez la page d'accueil.
+
+La liste des tâches restera inchangée, mais les liens "Voir la tâche" pour
+chaque tâche devraient maintenant inclure l'identifiant de la tâche dans l'URL.
+
+Ainsi, vous accédez à la page de visualisation avec l'identifiant de la tâche
+sélectionnée dans l'URL, ce qui permettra d'afficher les informations de la
+tâche correspondante.
+
+> [!TIP]
+>
+> Ici serait un bon moment pour valider et fusionner la pull request de votre
+> branche de travail vers la branche principale du dépôt GitHub du mini-projet.
+> Vous pourrez ensuite créer une nouvelle branche pour la prochaine
+> fonctionnalité.
+
+## Mettre en place le formulaire de suppression d'une tâche
+
+Dans cette dernière section, nous allons mettre en place le formulaire de
+suppression d'une tâche. Le formulaire de suppression sera affiché sur la page
+de visualisation de la tâche et permettra à l'utilisateur·trice de supprimer la
+tâche sélectionnée en cliquant sur un bouton "Supprimer la tâche".
+
+> [!WARNING]
+>
+> N'oubliez pas de créer une issue et sa branche dédiée pour cette nouvelle
+> fonctionnalité !
+
+### Créer la base du formulaire
+
+Commencez par créer une nouvelle page publique `delete.php` dans le dossier
+`public/` avec le code suivant :
 
 ```php
 <?php
+require_once __DIR__ . '/../src/constants.php';
 require_once __DIR__ . '/../src/functions.php';
 
-// Définition des valeurs par défaut de l'animal de compagnie
-$name = $_POST["name"] ?? null;
+$taskId = $_GET['id'] ?? null;
 
-// Gestion de la soumission du formulaire
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Validation de l'animal de compagnie
-    $errors = validatePet(
-        $name,
-    );
+if ($taskId === null || !is_numeric($taskId)) {
+    header('Location: ./index.php');
+    exit;
+}
 
-    // S'il n'y a pas d'erreurs, affiche les données de l'animal de compagnie qui va être ajouté
-    if (empty($errors)) {
-        // Information de debug : affichage du contenu de la variable $_POST
-        // À supprimer une fois que le formulaire fonctionne correctement
-        echo "Succès ! L'animal de compagnie va être ajouté avec les données suivantes : ";
+$task = getTaskById($taskId);
 
-        print_r($_POST);
-    }
+if ($task === null) {
+    header('Location: ./index.php');
+    exit;
 }
 ?>
 
@@ -947,58 +1417,42 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@digicreon/mucss/dist/mu.css">
     <link rel="stylesheet" href="./css/styles.css">
 
-    <title>Page de création | ninetendogs</title>
-    <meta name="description" content="ninetendogs - Gestionnaire d'animaux de compagnie - Création d'un animal de compagnie">
+    <title>Supprimer la tâche | <?= APP_NAME; ?> <?= APP_AUTHOR; ?></title>
+    <meta name="description" content="Supprimer une tâche pour <?= APP_AUTHOR; ?>.">
 </head>
 
 <body class="container">
     <header>
         <nav>
             <ul>
-                <li><strong>ninetendogs</strong></li>
+                <li><strong>Liste de tâches</strong></li>
             </ul>
             <ul>
                 <li><a href="./index.php">Accueil</a></li>
-                <li><a href="./create.php">Nouvel animal</a></li>
+                <li><a href="./create.php">Nouvelle tâche</a></li>
             </ul>
         </nav>
-
         <nav aria-label="breadcrumb">
             <ul>
                 <li><a href="./index.php">Accueil</a></li>
-                <li>Nouvel animal</li>
+                <li><a href="./view.php?id=<?= $task['id'] ?>"><?= $task['title'] ?></a></li>
+                <li>Supprimer la tâche</li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Créer un nouvel animal de compagnie</h1>
+        <h1>Supprimer la tâche ?</h1>
 
-        <?php if ($_SERVER["REQUEST_METHOD"] === "POST") { ?>
-            <?php if (!empty($errors)) { ?>
-                <p style="color: red;">Le formulaire contient des erreurs :</p>
-                <ul>
-                    <?php foreach ($errors as $error) { ?>
-                        <li><?= $error ?></li>
-                    <?php } ?>
-                </ul>
-            <?php } ?>
-        <?php } ?>
+        <p>Souhaitez-vous vraiment supprimer la tâche <strong><?= $task['title'] ?></strong> ? Cette action est irréversible.</p>
 
-        <form action="./create.php" method="POST">
-            <label for="name">Nom</label>
-            <input
-                type="text"
-                id="name"
-                name="name"
-                value="<?= $name ?>"
-                minlength="2"
-                maxlength="50"
-                required />
-
-            <button type="submit">Créer le nouvel animal</button>
+        <form action="./delete.php" method="POST">
+            <button class="btn btn-error" type="submit">Supprimer la tâche</button>
+            <a class="btn btn-secondary full-width" href="./view.php?id=<?= $task['id'] ?>">
+                Revenir à la page de visualisation
+            </a>
         </form>
     </main>
     <footer>
@@ -1013,2436 +1467,244 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </html>
 ```
 
-La syntaxe `$name = $_POST["name"] ?? null;` permet d'initialiser la variable
-`$name` avec la valeur du champ "Nom" du formulaire si elle est présente dans
-`$_POST`, ou avec `null` si le champ n'est pas présent ou si aucune valeur n'est
-saisie.
+Prenez quelques instants pour examiner le code de la page `delete.php`.
 
-Il s'agit de l'opérateur `??` (null coalescing operator - source :
-<https://www.php.net/manual/fr/language.operators.comparison.php#language.operators.comparison.coalesce>)
-de PHP, qui est une syntaxe plus concise pour vérifier si une variable est
-définie et n'est pas `null` avant de l'utiliser. Cela permet d'éviter les
-erreurs "Undefined index" lorsque le champ "Nom" n'est pas présent dans le
-formulaire ou lorsque le formulaire n'est pas soumis.
+Vous pouvez voir que nous avons utilisé la superglobale `$_GET` pour récupérer
+l'identifiant de la tâche depuis l'URL, et nous avons utilisé la fonction
+`getTaskById()` pour récupérer les informations de la tâche correspondante.
 
-Grâce à cette organisation du code, la validation des données du formulaire est
-maintenant centralisée dans la fonction `validatePet()`, ce qui rend le code
-plus propre et plus facile à maintenir. Vous pouvez facilement ajouter la
-validation des autres champs du formulaire dans cette fonction à mesure que vous
-les ajoutez au formulaire.
+La page affiche ensuite un formulaire de confirmation demandant à
+l'utilisateur·trice s'il/elle souhaite vraiment supprimer la tâche sélectionnée,
+avec un bouton "Supprimer la tâche" et un lien pour revenir à la page de
+visualisation de la tâche, utilisant également l'identifiant de la tâche dans
+l'URL.
 
-Sauvegardez les changements effectués et effectuez un test de soumission du
-formulaire avec des données invalides pour vérifier que les erreurs de
-validation sont toujours affichées correctement.
+Pour le moment, la page ressemble beaucoup à la page de visualisation, avec un
+formulaire supplémentaire.
 
-Enregistrez les changements effectués et commitez les avec le message _"Déplacer
-la validation côté serveur dans une fonction dédiée"_. Poussez les sur GitHub.
-Cela mettra automatiquement à jour la pull request créée précédemment pour
-inclure ces nouvelles modifications.
+### Ajouter le lien de suppression à la page de visualisation
 
-Bravo, vous avez mis en place le premier champ "Nom" du formulaire ! Vous avez
-mis en place la validation des données du formulaire côté serveur et côté client
-pour le champ "Nom". Vous avez également appris à contourner la validation côté
-client pour prouver que la validation côté serveur est essentielle.
-
-### Valider la pull request, fusionner les modifications et supprimer la branche associée
-
-Maintenant que cette première tâche liée au formulaire est réalisée,retournez
-dans la pull request que vous avez créé pour celle-ci.
-
-Vous devriez remarquer que plusieurs commits ont été effectués, tous associés à
-une même pull request.
-
-Il s'agit d'une des forces des pull requests, car cela permet de réaliser
-plusieurs changements, toutes définies au même endroit, permettant ainsi de
-pouvoir mieux suivre et évaluer le travail fait.
-
-En suivant le workflow Git et GitHub décrit précédemment, validez la pull
-request en vérifiant les modifications apportées, en laissant des commentaires
-si nécessaire, et en approuvant la pull request si tout est correct.
-
-Une fois la pull request validée, vous pouvez la fusionner dans la branche
-principale `main` et supprimer la branche source de la pull request.
-
-### Récupérer les modifications fusionnées localement
-
-En suivant le workflow Git et GitHub décrit précédemment, n'oubliez pas de
-récupérer les modifications fusionnées dans votre dépôt Git local en basculant
-sur la branche `main` et en exécutant la commande `git pull`.
-
-## Mettre en place les autres champs du formulaire
-
-Dans cette section, nous allons créer les autres champs du formulaire. Le
-processus est similaire à celui du champ "Nom", décomposé en plusieurs étapes :
-
-1. Ajout du champ.
-2. Réception des données côté serveur.
-3. Validation des données côté serveur.
-4. Affichage des erreurs de validation.
-5. Validation des données côté client.
-
-Bien que cela ne sera pas décrit dans la suite du document, il est attendu à ce
-que vous continuiez à suivre le workflow Git/GitHub présenté pour chaque nouveau
-champ avec :
-
-1. Création de l'issue.
-2. Création de la branche depuis l'issue.
-3. Récupération de la branche localement.
-4. Réalisation des modifications.
-5. Commit et push régulièrement.
-6. Création de la pull request.
-7. Validation et fusion.
-8. Suppression de la branche.
-
-### Ajouter le champ espèce
-
-Dans cette section, nous allons créer le champ "Espèce" du formulaire.
-
-N'oubliez de suivre le workflow Git/GitHub pour cette tâche.
-
-#### Ajouter le champ
-
-Le champ "Espèce" est un champ de sélection qui permet à l'utilisateur.trice de
-sélectionner l'espèce de l'animal de compagnie.
-
-Pour le moment, celui-ci contiendra les espèces suivantes :
-
-- Chien (valeur : `dog`).
-- Chat (valeur : `cat`).
-- Lézard (valeur : `lizard`).
-- Serpent (valeur : `snake`).
-- Oiseau (valeur : `bird`).
-- Lapin (valeur : `rabbit`).
-- Autre (valeur : `other`).
-
-Essayez de rajouter ce champ à l'aide des ressources disponibles sur MDN :
-<https://developer.mozilla.org/fr/docs/Web/HTML/Element/select>.
-
-<details>
-<summary>Afficher la réponse</summary>
+Dans la page de visualisation d'une tâche, ajoutez un lien vers la page de
+suppression :
 
 ```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 76623c0..11246fb 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -78,10 +78,42 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-                 value="<?= $name ?>"
-                 minlength="2"
-                 maxlength="50"
-                 required />
-
-+            <label for="species">Espèce</label>
-+            <select id="species" name="species">
-+                <option
-+                    value="dog" />
-+                Chien
-+                </option>
-+                <option
-+                    value="cat" />
-+                Chat
-+                </option>
-+                <option
-+                    value="lizard" />
-+                Lézard
-+                </option>
-+                <option
-+                    value="snake" />
-+                Serpent
-+                </option>
-+                <option
-+                    value="bird" />
-+                Oiseau
-+                </option>
-+                <option
-+                    value="rabbit" />
-+                Lapin
-+                </option>
-+                <option
-+                    value="other" />
-+                Autre
-+                </option>
-+            </select>
+diff --git a/mini-projet/public/view.php b/mini-projet/public/view.php
+index 91516af..4988900 100644
+--- a/mini-projet/public/view.php
++++ b/mini-projet/public/view.php
+@@ -65,6 +65,12 @@ if ($task === null) {
+             <?php if (!empty($task['description'])) { ?>
+                 <p><?= $task['description'] ?></p>
+             <?php } ?>
 +
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
++            <footer>
++                <a class="btn btn-error btn-sm" href="./delete.php?id=<?= $task['id'] ?>">
++                    Supprimer la tâche
++                </a>
++            </footer>
+         </article>
      </main>
      <footer>
-         <center>
 ```
 
-</details>
+De la même manière que nous avons ajouté l'identifiant de la tâche dans l'URL du
+lien "Voir la tâche" sur la page d'accueil, nous avons ajouté l'identifiant de
+la tâche dans l'URL du lien "Supprimer la tâche" sur la page de visualisation.
 
-#### Réceptionner les données côté serveur
+### Visualiser le formulaire
 
-Essayez de rajouter la réception des données côté serveur pour le champ
-"Espèce".
+Accédez à la page de visualisation d'une tâche et cliquez sur le lien "Supprimer
+la tâche" pour accéder à la page de suppression. Vous devriez voir le formulaire
+de confirmation avec le titre de la tâche sélectionnée et le bouton "Supprimer
+la tâche".
 
-**Astuce** : le processus de réception des données côté serveur est similaire à
-celui du champ "Nom". Vous pouvez vous en inspirer pour implémenter la réception
-des données du champ "Espèce".
+Vous remarquez peut-être que le bouton "Revenir à la page de visualisation" ne
+prend pas la largeur complète de la page. Pour corriger cela, nous allons
+ajouter une classe CSS `full-width` aux styles CSS du mini-projet. Ouvrez le
+fichier `public/css/styles.css` et ajoutez le code suivant :
 
-<details>
-<summary>Afficher la réponse</summary>
+```css
+/* Styles pour que l'élément prenne la largeur totale de leur conteneur */
+.full-width {
+	width: 100%;
+}
+```
+
+Le lien "Revenir à la page de visualisation" ayant déjà la classe `full-width`,
+il n'y a rien à changer dans le code HTML de la page `delete.php`.
+
+Sauvegardez les changements effectués et rafraîchissez la page de suppression.
+Le lien devrait prendre maintenant la largeur complète de la page.
+
+### Tester le formulaire
+
+Si vous testez le formulaire de suppression, vous remarquerez que la soumission
+du formulaire redirige simplement l'utilisateur·trice vers la page d'accueil.
+Nous allons corriger cela dans la prochaine étape.
+
+Pourquoi cela ? En effet, lors de la soumission du formulaire, la page
+`delete.php` est appelée avec la méthode `POST`.
+
+Hors, les premières lignes de notre page `delete.php` ne vérifient que la
+présence de l'identifiant de la tâche dans l'URL via la superglobale `$_GET`.
+Comme l'identifiant n'est pas présent dans l'URL lors de la soumission du
+formulaire, la page redirige l'utilisateur·trice vers la page d'accueil.
+
+### Corriger le formulaire
+
+Pour corriger le formulaire de suppression, nous allons modifier la page
+`delete.php` pour vérifier la présence de l'identifiant de la tâche dans la
+superglobale `$_POST` lors de la soumission du formulaire avec la méthode
+`POST`.
+
+Pour cela, nous devons ajouter un champ caché dans le formulaire de suppression
+pour transmettre l'identifiant de la tâche lors de la soumission du formulaire.
+Modifiez le code HTML du formulaire de suppression dans le fichier
+`public/delete.php` comme suit :
 
 ```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 11246fb..49b4020 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -1,10 +1,11 @@
- <?php
+diff --git a/mini-projet/public/delete.php b/mini-projet/public/delete.php
+index 9847008..855288b 100644
+--- a/mini-projet/public/delete.php
++++ b/mini-projet/public/delete.php
+@@ -2,7 +2,7 @@
+ require_once __DIR__ . '/../src/constants.php';
  require_once __DIR__ . '/../src/functions.php';
 
- // Définition des valeurs par défaut de l'animal de compagnie
- $name = $_POST["name"] ?? null;
-+$species = $_POST["species"] ?? null;
+-$taskId = $_GET['id'] ?? null;
++$taskId = $_GET['id'] ?? $_POST['id'] ?? null;
 
- // Gestion de la soumission du formulaire
- if ($_SERVER["REQUEST_METHOD"] === "POST") {
-     // Validation de l'animal de compagnie
-     $errors = validatePet(
+ if ($taskId === null || !is_numeric($taskId)) {
+     header('Location: ./index.php');
+@@ -56,6 +56,8 @@ if ($task === null) {
+         <p>Souhaitez-vous vraiment supprimer la tâche <strong><?= $task['title'] ?></strong> ? Cette action est irréversible.</p>
+
+         <form action="./delete.php" method="POST">
++            <input type="hidden" name="id" value="<?= $taskId ?>" />
++
+             <button class="btn btn-error" type="submit">Supprimer la tâche</button>
+             <a class="btn btn-secondary full-width" href="./view.php?id=<?= $task['id'] ?>">
+                 Revenir à la page de visualisation
 ```
 
-</details>
+Ici, nous avons ajouté un champ caché
+`<input type="hidden" name="id" value="<?= $taskId ?>" />` dans le formulaire de
+suppression pour transmettre l'identifiant de la tâche lors de la soumission du
+formulaire avec la méthode `POST`.
 
-#### Valider les données côté serveur
+Nous avons également modifié la ligne qui récupère l'identifiant de la tâche
+pour vérifier la présence de l'identifiant dans la superglobale `$_POST` en plus
+de la superglobale `$_GET`.
 
-Le champ "Espèce" est un champ obligatoire. Vous devez donc vérifier que la
-valeur saisie n'est pas vide. Si la valeur est vide, vous devez afficher un
-message d'erreur.
+Le code ci-dessus est équivalent à :
 
-Essayez de rajouter la validation des données côté serveur pour le champ
-"Espèce".
+```php
+$taskId = null;
 
-**Astuce** : afin de valider si le champ "Espèce" contient les différentes
-valeurs possibles, vous pouvez utiliser la fonction `in_array()` de PHP (source
-: <https://www.php.net/manual/fr/function.in-array.php>) pour vérifier si la
-valeur saisie est présente dans un tableau contenant les différentes valeurs
-possibles (`dog`, `cat`, etc.).
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 49b4020..54b0648 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -8,10 +8,11 @@ $species = $_POST["species"] ?? null;
- // Gestion de la soumission du formulaire
- if ($_SERVER["REQUEST_METHOD"] === "POST") {
-     // Validation de l'animal de compagnie
-     $errors = validatePet(
-         $name,
-+        $species,
-     );
-
-     // S'il n'y a pas d'erreurs, affiche les données de l'animal de compagnie qui va être ajouté
-     if (empty($errors)) {
-         // Information de debug : affichage du contenu de la variable $_POST
+if ($_SERVER["REQUEST_METHOD"] === "GET") {
+    // Récupère l'ID de la tâche à supprimer depuis la requête GET
+    $taskId = $_GET['id'];
+} elseif ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Récupère l'ID de la tâche à supprimer depuis le formulaire POST
+    $taskId = $_POST["id"];
+}
 ```
 
+De cette manière, l'identifiant de la tâche sera correctement récupéré lors de
+la soumission du formulaire avec la méthode `POST`, et la page ne redirigera
+plus l'utilisateur·trice vers la page d'accueil.
+
+Sauvegardez les changements effectués et rafraîchissez la page de suppression.
+
+Soumettez le formulaire de suppression pour vérifier que l'identifiant de la
+tâche est correctement récupéré lors de la soumission du formulaire avec la
+méthode `POST`. Vous devriez voir que la page ne redirige plus
+l'utilisateur·trice vers la page d'accueil, mais reste sur la page de
+suppression.
+
+Il ne nous reste plus qu'à implémenter la fonction pour supprimer la tâche.
+
+### Créer la fonction pour supprimer une tâche
+
+Dans le fichier `src/functions.php`, ajoutez la fonction `deleteTask()` pour
+supprimer une tâche de la base de données :
+
+```php
+function deleteTask(int $id): bool {
+    echo "Suppression de la tâche avec l'ID $id<br>";
+
+    return false;
+}
+```
+
+Ici, nous avons créé une fonction `deleteTask()` qui prend en paramètre
+l'identifiant de la tâche à supprimer et qui retourne un booléen indiquant si la
+suppression a réussi ou non.
+
+Pour le moment, la fonction ne fait que simuler la suppression de la tâche en
+affichant un message dans le navigateur et en retournant `false` pour indiquer
+que la suppression a échoué.
+
+Dans la prochaine séance, nous allons implémenter la suppression réelle de la
+tâche dans la base de données.
+
+### Utiliser la fonction pour supprimer une tâche
+
+Dans le fichier `public/delete.php`, modifiez le code pour utiliser la fonction
+`deleteTask()` lors de la soumission du formulaire avec la méthode `POST` :
+
 ```diff
-diff --git a/mini-projet/src/functions.php b/mini-projet/src/functions.php
-index 2853c4f..e0f722d 100644
---- a/mini-projet/src/functions.php
-+++ b/mini-projet/src/functions.php
-@@ -19,10 +19,11 @@ function getPetById(int $id): ?array {
-     return null;
+diff --git a/mini-projet/public/delete.php b/mini-projet/public/delete.php
+index 855288b..cba84de 100644
+--- a/mini-projet/public/delete.php
++++ b/mini-projet/public/delete.php
+@@ -15,6 +15,20 @@ if ($task === null) {
+     header('Location: ./index.php');
+     exit;
  }
-
- function validatePet(
-     ?string $name,
-+    ?string $species,
- ): array {
-     // Par défaut, il n'y a pas d'erreurs
-     $errors = [];
-
-     // Validation des données
-@@ -36,7 +37,15 @@ function validatePet(
-
-     } else if (strlen($name) > 50) {
-         array_push($errors, "Le nom doit contenir au maximum 50 caractères.");
-     }
-
-+    if (empty($species)) {
-+        array_push($errors, "L'espèce est obligatoire.");
-+    } else if (!in_array($species, ["dog", "cat", "lizard", "snake", "bird", "rabbit", "other"])) {
-+        array_push($errors, "L'espèce n'est pas valide.");
++
++$error = null;
++
++// Gestion de la soumission du formulaire
++if ($_SERVER["REQUEST_METHOD"] === "POST") {
++    $success = deleteTask($taskId);
++
++    if ($success) {
++        header('Location: ./index.php');
++        exit;
++    } else {
++        $error = "Une erreur est survenue lors de la suppression de la tâche.";
 +    }
++}
+ ?>
+
+ <!DOCTYPE html>
+@@ -53,6 +67,10 @@ if ($task === null) {
+     <main>
+         <h1>Supprimer la tâche ?</h1>
+
++        <?php if ($_SERVER["REQUEST_METHOD"] === "POST" && !empty($error)) { ?>
++            <p style="color: red;"><?= $error ?></p>
++        <?php } ?>
 +
-     return $errors;
- }
+         <p>Souhaitez-vous vraiment supprimer la tâche <strong><?= $task['title'] ?></strong> ? Cette action est irréversible.</p>
+
+         <form action="./delete.php" method="POST">
 ```
 
-</details>
-
-#### Afficher les erreurs de validation
-
-Il n'est pas nécessaire de changer le code d'affichage des erreurs de
-validation. Le code est déjà en place pour afficher les erreurs de validation.
-Il suffit de rajouter les messages d'erreur au tableau `$errors` et les messages
-seront affichés à l'écran.
-
-#### Conserver les données saisies
-
-Essayez de conserver la valeur saisie dans le champ "Espèce" lorsque le
-formulaire est soumis et qu'il y a des erreurs de validation.
-
-**Astuce** : il faut utiliser l'attribut `selected` sur l'option sélectionnée
-dans le champ "Espèce". Regardez la documentation de l'élément `<option>` sur
-MDN pour comprendre comment utiliser l'attribut `selected` :
-<https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/option#selected>.
-
-Pour ce faire, vous devez vérifier si la valeur de l'option est égale à la
-valeur saisie dans le champ "Espèce". Si c'est le cas, vous devez ajouter
-l'attribut `selected` à l'option.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 2e117e9..f92fede 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -83,35 +83,42 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-                 required />
-
-             <label for="species">Espèce</label>
-             <select id="species" name="species">
-                 <option
--                    value="dog" />
-+                    value="dog"
-+                    <?= $species === "dog" ? "selected" : "" ?> />
-                 Chien
-                 </option>
-                 <option
--                    value="cat" />
-+                    value="cat"
-+                    <?= $species === "cat" ? "selected" : "" ?> />
-                 Chat
-                 </option>
-                 <option
--                    value="lizard" />
-+                    value="lizard"
-+                    <?= $species === "lizard" ? "selected" : "" ?> />
-                 Lézard
-                 </option>
-                 <option
--                    value="snake" />
-+                    value="snake"
-+                    <?= $species === "snake" ? "selected" : "" ?> />
-                 Serpent
-                 </option>
-                 <option
--                    value="bird" />
-+                    value="bird"
-+                    <?= $species === "bird" ? "selected" : "" ?> />
-                 Oiseau
-                 </option>
-                 <option
--                    value="rabbit" />
-+                    value="rabbit"
-+                    <?= $species === "rabbit" ? "selected" : "" ?> />
-                 Lapin
-                 </option>
-                 <option
--                    value="other" />
-+                    value="other"
-+                    <?= $species === "other" ? "selected" : "" ?> />
-                 Autre
-                 </option>
-             </select>
-
-             <button type="submit">Créer le nouvel animal</button>
-```
-
-</details>
-
-#### Valider les données côté client
-
-Maintenant que la validation des données côté serveur est en place, nous allons
-ajouter la validation des données côté client.
-
-Essayez de rajouter la validation des données côté client pour le champ
-"Espèce".
-
-Pour cela, il faut ajouter l'attribut `required` au champ "Espèce".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index f92fede..cefbde9 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -81,11 +81,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-                 minlength="2"
-                 maxlength="50"
-                 required />
-
-             <label for="species">Espèce</label>
--            <select id="species" name="species">
-+            <select id="species" name="species" required>
-                 <option
-                     value="dog"
-                     <?= $species === "dog" ? "selected" : "" ?> />
-                 Chien
-                 </option>
-```
-
-Ici, l'attribut `required` permet de rendre le champ "Espèce" obligatoire. Même
-s'il n'est techniquement pas possible de sélectionner une valeur vide dans le
-champ "Espèce", il est intéressant de le rendre obligatoire pour éviter que
-l'utilisateur.trice ne soumette le formulaire sans avoir sélectionné d'espèce en
-utilisant les outils de développement de son navigateur.
-
-</details>
-
-#### Tester le formulaire
-
-Vous pouvez maintenant tester votre formulaire. Essayez de changer les valeurs
-saisies dans les champs et de soumettre le formulaire pour voir les messages
-d'erreur de validation s'afficher à l'écran.
-
-N'hésitez pas à utiliser les outils de développement de votre navigateur pour
-contourner la validation côté client et vérifier que la validation côté serveur
-fonctionne correctement.
-
-N'oubliez de suivre le workflow Git/GitHub pour cette tâche.
-
-### Ajouter le champ surnom
-
-Dans cette section, nous allons créer le champ "Surnom" du formulaire.
-
-N'oubliez de suivre le workflow Git/GitHub pour cette tâche.
-
-#### Ajouter le champ
-
-Le champ "Surnom" est un champ de saisie qui permet à l'utilisateur.trice de
-saisir le surnom de l'animal de compagnie.
-
-Essayez de rajouter ce champ à l'aide des ressources disponibles sur MDN :
-<https://developer.mozilla.org/fr/docs/Web/HTML/Element/input/text>.
-
-**Astuce** : le champ "Surnom" est très similaire au champ "Nom". Vous pouvez
-vous en inspirer pour implémenter le champ "Surnom".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index cefbde9..7161d79 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -119,10 +119,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-                     <?= $species === "other" ? "selected" : "" ?> />
-                 Autre
-                 </option>
-             </select>
-
-+            <label for="nickname">Surnom (optionnel)</label>
-+            <input
-+                type="text"
-+                id="nickname"
-+                name="nickname" />
-+
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-     </main>
-     <footer>
-         <center>
-```
-
-</details>
-
-#### Réceptionner les données côté serveur
-
-Essayez de rajouter la réception des données côté serveur pour le champ
-"Surnom".
-
-**Astuce** : le processus de réception des données côté serveur est similaire à
-celui du champ "Nom". Vous pouvez vous en inspirer pour implémenter la réception
-des données du champ "Espèce".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 7161d79..dfe556b 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -2,10 +2,11 @@
- require_once __DIR__ . '/../src/functions.php';
-
- // Définition des valeurs par défaut de l'animal de compagnie
- $name = $_POST["name"] ?? null;
- $species = $_POST["species"] ?? null;
-+$nickname = $_POST["nickname"] ?? null;
-
- // Gestion de la soumission du formulaire
- if ($_SERVER["REQUEST_METHOD"] === "POST") {
-     // Validation de l'animal de compagnie
-     $errors = validatePet(
-```
-
-</details>
-
-#### Valider les données côté serveur
-
-Le champ "Surnom" est un champ facultatif. Il est donc nécessaire de vérifier la
-valeur que si elle est saisie.
-
-Si elle est saisie, vous devez vérifier que la valeur saisie n'est pas trop
-courte (moins de 2 caractères) ou trop longue (plus de 50 caractères). Si la
-valeur saisie ne respecte pas ces règles, vous devez afficher un message
-d'erreur.
-
-Essayez de rajouter la validation des données côté serveur pour le champ
-"Surnom".
-
-**Astuce** : vous pouvez vous inspirer de la validation du champ "Nom" pour
-implémenter la validation du champ "Surnom" en vérifiant d'abord si le champ
-"Surnom" est rempli avant de vérifier la longueur de la valeur saisie.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/src/functions.php b/mini-projet/src/functions.php
-index d11ac19..16c0ac3 100644
---- a/mini-projet/src/functions.php
-+++ b/mini-projet/src/functions.php
-@@ -20,10 +20,11 @@ function getPetById(int $id): ?array {
- }
-
- function validatePet(
-     ?string $name,
-     ?string $species,
-+    ?string $nickname,
- ): array {
-     // Par défaut, il n'y a pas d'erreurs
-     $errors = [];
-
-     // Validation des données
-@@ -39,7 +40,15 @@ function validatePet(
-         array_push($errors, "L'espèce est obligatoire.");
-     } else if (!in_array($species, ["dog", "cat", "lizard", "snake", "bird", "rabbit", "other"])) {
-         array_push($errors, "L'espèce n'est pas valide.");
-     }
-
-+    if (!empty($nickname)) {
-+        if (strlen($nickname) < 2) {
-+            array_push($errors, "Le surnom doit contenir au minimum 2 caractères.");
-+        } else if (strlen($nickname) > 50) {
-+            array_push($errors, "Le surnom doit contenir au maximum 50 caractères.");
-+        }
-+    }
-+
-     return $errors;
- }
-```
-
-</details>
-
-#### Afficher les erreurs de validation
-
-Il n'est pas nécessaire de changer le code d'affichage des erreurs de
-validation. Le code est déjà en place pour afficher les erreurs de validation.
-Il suffit de rajouter les messages d'erreur au tableau `$errors` et les messages
-seront affichés à l'écran.
-
-#### Conserver les données saisies
-
-Essayez de conserver la valeur saisie dans le champ "Surnom" lorsque le
-formulaire est soumis et qu'il y a des erreurs de validation.
-
-Pour cela, il faut utiliser l'attribut `value` sur le champ "Surnom".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 06e19c2..9d07699 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -125,11 +125,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-             <label for="nickname">Surnom (optionnel)</label>
-             <input
-                 type="text"
-                 id="nickname"
--                name="nickname" />
-+                name="nickname"
-+                value="<?= $nickname ?>" />
-
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-     </main>
-     <footer>
-```
-
-</details>
-
-#### Valider les données côté client
-
-Maintenant que la validation des données côté serveur est en place, nous allons
-ajouter la validation des données côté client.
-
-Essayez de rajouter la validation des données côté client pour le champ
-"Surnom".
-
-Pour cela, il faut ajouter les attributs `minlength` et `maxlength` au champ
-"Surnom".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 9d07699..d517e9e 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -126,11 +126,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-             <label for="nickname">Surnom (optionnel)</label>
-             <input
-                 type="text"
-                 id="nickname"
-                 name="nickname"
--                value="<?= $nickname ?>" />
-+                value="<?= $nickname ?>"
-+                minlength="2"
-+                maxlength="50" />
-
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-     </main>
-     <footer>
-```
-
-</details>
-
-#### Tester le formulaire
-
-Vous pouvez maintenant tester votre formulaire. Essayez de changer les valeurs
-saisies dans les champs et de soumettre le formulaire pour voir les messages
-d'erreur de validation s'afficher à l'écran.
-
-N'hésitez pas à utiliser les outils de développement de votre navigateur pour
-contourner la validation côté client et vérifier que la validation côté serveur
-fonctionne correctement.
-
-N'oubliez de suivre le workflow Git/GitHub pour cette tâche.
-
-### Ajouter le champ sexe
-
-Dans cette section, nous allons créer le champ "Sexe" du formulaire.
-
-N'oubliez de suivre le workflow Git/GitHub pour cette tâche.
-
-#### Ajouter le champ
-
-Le champ "Sexe" est un champ boutons radio qui permet à l'utilisateur.trice de
-sélectionner le sexe de l'animal de compagnie.
-
-Essayez de rajouter ce champ à l'aide des ressources disponibles sur MDN :
-<https://developer.mozilla.org/fr/docs/Web/HTML/Element/input/radio> et Pico CSS
-: <https://picocss.com/docs/forms/radios>.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index d517e9e..9a00d27 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -130,10 +130,29 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-                 name="nickname"
-                 value="<?= $nickname ?>"
-                 minlength="2"
-                 maxlength="50" />
-
-+            <fieldset>
-+                <legend>Sexe</legend>
-+
-+                <input
-+                    type="radio"
-+                    id="male"
-+                    name="sex"
-+                    value="male" />
-+                <label for="male">Mâle</label>
-+
-+                <input
-+                    type="radio"
-+                    id="female"
-+                    name="sex"
-+                    value="female" />
-+                <label for="female">Femelle</label>
-+            </fieldset>
-+
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-     </main>
-     <footer>
-         <center>
-```
-
-</details>
-
-#### Réceptionner les données côté serveur
-
-Essayez de rajouter la réception des données côté serveur pour le champ "Sexe".
-
-**Astuce** : le processus de réception des données côté serveur est similaire à
-celui du champ "Nom". Vous pouvez vous en inspirer pour implémenter la réception
-des données du champ "Sexe".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 9a00d27..64f14ff 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -3,10 +3,11 @@ require_once __DIR__ . '/../src/functions.php';
-
- // Définition des valeurs par défaut de l'animal de compagnie
- $name = $_POST["name"] ?? null;
- $species = $_POST["species"] ?? null;
- $nickname = $_POST["nickname"] ?? null;
-+$sex = $_POST["sex"] ?? null;
-
- // Gestion de la soumission du formulaire
- if ($_SERVER["REQUEST_METHOD"] === "POST") {
-     // Validation de l'animal de compagnie
-     $errors = validatePet(
-```
-
-</details>
-
-#### Valider les données côté serveur
-
-Le champ "Sexe" est un champ obligatoire. Vous devez donc vérifier que la valeur
-saisie n'est pas vide. Si la valeur est vide, vous devez afficher un message
-d'erreur.
-
-Essayez de rajouter la validation des données côté serveur pour le champ "Sexe".
-
-**Astuce** : afin de valider si le champ "Sexe" contient les différentes valeurs
-possibles, vous pouvez utiliser la fonction `in_array()` de PHP (source :
-<https://www.php.net/manual/fr/function.in-array.php>) pour vérifier si la
-valeur saisie est présente dans un tableau contenant les différentes valeurs
-possibles (`male` ou `female`).
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 8e4e6fd..aa24283 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -13,10 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-     // Validation de l'animal de compagnie
-     $errors = validatePet(
-         $name,
-         $species,
-         $nickname,
-+        $sex,
-     );
-
-     // S'il n'y a pas d'erreurs, affiche les données de l'animal de compagnie qui va être ajouté
-     if (empty($errors)) {
-         // Information de debug : affichage du contenu de la variable $_POST
-```
-
-```diff
-diff --git a/mini-projet/src/functions.php b/mini-projet/src/functions.php
-index 16c0ac3..f33e8f7 100644
---- a/mini-projet/src/functions.php
-+++ b/mini-projet/src/functions.php
-@@ -21,10 +21,11 @@ function getPetById(int $id): ?array {
-
- function validatePet(
-     ?string $name,
-     ?string $species,
-     ?string $nickname,
-+    ?string $sex,
- ): array {
-     // Par défaut, il n'y a pas d'erreurs
-     $errors = [];
-
-     // Validation des données
-@@ -48,7 +49,13 @@ function validatePet(
-         } else if (strlen($nickname) > 50) {
-             array_push($errors, "Le surnom doit contenir au maximum 30 caractères.");
-         }
-     }
-
-+    if (empty($sex)) {
-+        array_push($errors, "Le sexe est obligatoire.");
-+    } else if (!in_array($sex, ["male", "female"])) {
-+        array_push($errors, "Le sexe n'est pas valide.");
-+    }
-+
-     return $errors;
- }
-```
-
-</details>
-
-#### Afficher les erreurs de validation
-
-Il n'est pas nécessaire de changer le code d'affichage des erreurs de
-validation. Le code est déjà en place pour afficher les erreurs de validation.
-Il suffit de rajouter les messages d'erreur au tableau `$errors` et les messages
-seront affichés à l'écran.
-
-#### Conserver les données saisies
-
-Essayez de conserver la valeur saisie dans le champ "Sexe" lorsque le formulaire
-est soumis et qu'il y a des erreurs de validation.
-
-**Astuce** : il faut utiliser l'attribut `checked` sur l'option sélectionnée
-dans le champ "Sexe". Regardez la documentation de l'élément
-`<input type="radio">` sur MDN pour comprendre comment utiliser l'attribut
-`checked` :
-<https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/input/radio#checked>.
-
-Pour ce faire, vous devez vérifier si la valeur du champ bouton radio est égal à
-la valeur saisie dans le champ "Sexe". Si c'est le cas, vous devez ajouter
-l'attribut `checked` à l'option.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 6cb948a..5b38b23 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -140,18 +140,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-                 <input
-                     type="radio"
-                     id="male"
-                     name="sex"
--                    value="male" />
-+                    value="male"
-+                    <?= $sex === "male" ? "checked" : "" ?> />
-                 <label for="male">Mâle</label>
-
-                 <input
-                     type="radio"
-                     id="female"
-                     name="sex"
--                    value="female" />
-+                    value="female"
-+                    <?= $sex === "female" ? "checked" : "" ?> />
-                 <label for="female">Femelle</label>
-             </fieldset>
-
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-```
-
-</details>
-
-#### Valider les données côté client
-
-Maintenant que la validation des données côté serveur est en place, nous allons
-ajouter la validation des données côté client.
-
-Essayez de rajouter la validation des données côté client pour le champ "Sexe".
-
-Pour cela, vous devez ajouter l'attribut `required` sur le champ "Sexe".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index d352992..ae354d0 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -140,18 +140,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-                 <input
-                     type="radio"
-                     id="male"
-                     name="sex"
-                     value="male"
-+                    required
-                     <?= $sex === "male" ? "checked" : "" ?> />
-                 <label for="male">Mâle</label>
-
-                 <input
-                     type="radio"
-                     id="female"
-                     name="sex"
-                     value="female"
-+                    required
-                     <?= $sex === "female" ? "checked" : "" ?> />
-                 <label for="female">Femelle</label>
-             </fieldset>
-
-             <button type="submit">Créer le nouvel animal</button>
-```
-
-</details>
-
-#### Tester le formulaire
-
-Vous pouvez maintenant tester votre formulaire. Essayez de changer les valeurs
-saisies dans les champs et de soumettre le formulaire pour voir les messages
-d'erreur de validation s'afficher à l'écran.
-
-N'hésitez pas à utiliser les outils de développement de votre navigateur pour
-contourner la validation côté client et vérifier que la validation côté serveur
-fonctionne correctement.
-
-N'oubliez de suivre le workflow Git/GitHub pour cette tâche.
-
-### Ajouter le champ date de naissance
-
-Dans cette section, nous allons créer le champ "Date de naissance" du
-formulaire.
-
-N'oubliez de suivre le workflow Git/GitHub pour cette tâche.
-
-#### Ajouter le champ
-
-Le champ "Date de naissance" est un champ de type date qui permet à
-l'utilisateur.trice de saisir la date de naissance de l'animal de compagnie.
-
-Essayez de rajouter ce champ à l'aide des ressources disponibles sur MDN :
-<https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/input/date>.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index ae354d0..9e5d8ae 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -154,10 +154,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-                     required
-                     <?= $sex === "female" ? "checked" : "" ?> />
-                 <label for="female">Femelle</label>
-             </fieldset>
-
-+            <label for="birthday">Date de naissance</label>
-+            <input
-+                type="date"
-+                id="birthday"
-+                name="birthday" />
-+
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-     </main>
-     <footer>
-         <center>
-```
-
-</details>
-
-#### Réceptionner les données côté serveur
-
-Essayez de rajouter la réception des données côté serveur pour le champ "Date de
-naissance".
-
-**Astuce** : le processus de réception des données côté serveur est similaire à
-celui du champ "Nom". Vous pouvez vous en inspirer pour implémenter la réception
-des données du champ "Date de naissance".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 9e5d8ae..aa24283 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -4,10 +4,11 @@ require_once __DIR__ . '/../src/functions.php';
- // Définition des valeurs par défaut de l'animal de compagnie
- $name = $_POST["name"] ?? null;
- $species = $_POST["species"] ?? null;
- $nickname = $_POST["nickname"] ?? null;
- $sex = $_POST["sex"] ?? null;
-+$birthday = $_POST["birthday"] ?? null;
-
- // Gestion de la soumission du formulaire
- if ($_SERVER["REQUEST_METHOD"] === "POST") {
-     // Validation de l'animal de compagnie
-     $errors = validatePet(
-```
-
-</details>
-
-#### Valider les données côté serveur
-
-Le champ "Date de naissance" est un champ obligatoire. Vous devez donc vérifier
-que la valeur saisie n'est pas vide. Si la valeur est vide, vous devez afficher
-un message d'erreur.
-
-De plus, vous devez vérifier que la valeur saisie est une bien une date (et non
-pas une chaîne de caractères aléatoire) et que cette date n'est pas dans le
-futur.
-
-\*_Astuce_ : afin de valider que le champ "Date de naissance" contient une date
-valide, vous pouvez utiliser la fonction `strtotime()` (source :
-<https://www.php.net/manual/fr/function.strtotime.php>) pour vérifier si la
-valeur saisie est une date. Vous pouvez également utiliser l'opérateur de
-comparaison `<` et la fonction `time()` (source :
-<https://www.php.net/manual/fr/function.time.php>) pour vérifier que la valeur
-saisie est inférieure à l'heure actuelle.
-
-Les fonctions `strtotime()` et `time()` utilisent le timestamp Unix pour
-représenter les dates. Le timestamp Unix est un nombre entier qui représente le
-nombre de secondes écoulées depuis le 1er janvier 1970 à 00:00:00 UTC. Ainsi,
-pour comparer deux dates, il suffit de comparer leurs timestamps Unix.
-
-Essayez de rajouter la validation des données côté serveur pour le champ "Date
-de naissance".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index aa24283..628407c 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -14,10 +14,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-     $errors = validatePet(
-         $name,
-         $species,
-         $nickname,
-         $sex,
-+        $birthday,
-     );
-
-     // S'il n'y a pas d'erreurs, affiche les données de l'animal de compagnie qui va être ajouté
-     if (empty($errors)) {
-         // Information de debug : affichage du contenu de la variable $_POST
-```
-
-```diff
-diff --git a/mini-projet/src/functions.php b/mini-projet/src/functions.php
-index f33e8f7..3314687 100644
---- a/mini-projet/src/functions.php
-+++ b/mini-projet/src/functions.php
-@@ -22,10 +22,11 @@ function getPetById(int $id): ?array {
- function validatePet(
-     ?string $name,
-     ?string $species,
-     ?string $nickname,
-     ?string $sex,
-+    ?string $birthday,
- ): array {
-     // Par défaut, il n'y a pas d'erreurs
-     $errors = [];
-
-     // Validation des données
-@@ -55,7 +56,15 @@ function validatePet(
-         array_push($errors, "Le sexe est obligatoire.");
-     } else if (!in_array($species, ["male", "female"])) {
-         array_push($errors, "Le sexe n'est pas valide.");
-     }
-
-+    if (!empty($birthday)) {
-+        if (strtotime($birthday) === false) {
-+            array_push($errors, "La date de naissance n'est pas valide.");
-+        } else if (strtotime($birthday) > time()) {
-+            array_push($errors, "La date de naissance ne peut pas être dans le futur.");
-+        }
-+    }
-+
-     return $errors;
- }
-```
-
-</details>
-
-#### Afficher les erreurs de validation
-
-Il n'est pas nécessaire de changer le code d'affichage des erreurs de
-validation. Le code est déjà en place pour afficher les erreurs de validation.
-Il suffit de rajouter les messages d'erreur au tableau `$errors` et les messages
-seront affichés à l'écran.
-
-#### Conserver les données saisies
-
-Essayez de conserver la valeur saisie dans le champ "Date de naissance" lorsque
-le formulaire est soumis et qu'il y a des erreurs de validation.
-
-Pour cela, il faut utiliser l'attribut `value` sur le champ "Date de naissance".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 628407c..0fefec1 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -160,11 +160,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-             <label for="birthday">Date de naissance</label>
-             <input
-                 type="date"
-                 id="birthday"
--                name="birthday" />
-+                name="birthday"
-+                value="<?= $birthday ?>" />
-
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-     </main>
-     <footer>
-```
-
-</details>
-
-#### Valider les données côté client
-
-Maintenant que la validation des données côté serveur est en place, nous allons
-ajouter la validation des données côté client.
-
-Essayez de rajouter la validation des données côté client pour le champ "Date de
-naissance".
-
-Pour cela, il faut utiliser les attributs `required` et `max` sur le champ "Date
-de naissance".
-
-**Astuce** : l'attribut `max` permet de définir la date maximale que
-l'utilisateur.trice peut saisir. En utilisant la fonction `date("Y-m-d")`
-(source : <https://www.php.net/manual/fr/function.date.php>) de PHP, vous pouvez
-définir la date maximale au jour actuel.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 0fefec1..d3e3d81 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -161,11 +161,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-             <label for="birthday">Date de naissance</label>
-             <input
-                 type="date"
-                 id="birthday"
-                 name="birthday"
--                value="<?= $birthday ?>" />
-+                value="<?= $birthday ?>"
-+                required
-+                max="<?= date("Y-m-d") ?>" />
-
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-     </main>
-     <footer>
-```
-
-</details>
-
-#### Tester le formulaire
-
-Vous pouvez maintenant tester votre formulaire. Essayez de changer les valeurs
-saisies dans les champs et de soumettre le formulaire pour voir les messages
-d'erreur de validation s'afficher à l'écran.
-
-N'hésitez pas à utiliser les outils de développement de votre navigateur pour
-contourner la validation côté client et vérifier que la validation côté serveur
-fonctionne correctement.
-
-N'oubliez de suivre le workflow Git/GitHub pour cette tâche.
-
-### Ajouter le champ couleur
-
-Dans cette section, nous allons créer le champ "Couleur" du formulaire.
-
-N'oubliez de suivre le workflow Git/GitHub pour cette tâche.
-
-#### Ajouter le champ
-
-Le champ "Couleur" est un champ de type couleur qui permet à l'utilisateur.trice
-de saisir la couleur de l'animal de compagnie.
-
-Essayez de rajouter ce champ à l'aide des ressources disponibles sur MDN :
-<https://developer.mozilla.org/fr/docs/Web/HTML/Element/input/color>.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index d3e3d81..2d2f927 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -165,10 +165,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-                 name="birthday"
-                 value="<?= $birthday ?>"
-                 required
-                 max="<?= date("Y-m-d") ?>" />
-
-+            <label for="color">Couleur (optionnel)</label>
-+            <input
-+                type="color"
-+                id="color"
-+                name="color" />
-+
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-     </main>
-     <footer>
-         <center>
-```
-
-</details>
-
-#### Réceptionner les données côté serveur
-
-Essayez de rajouter la réception des données côté serveur pour le champ
-"Couleur".
-
-**Astuce** : le processus de réception des données côté serveur est similaire à
-celui du champ "Nom". Vous pouvez vous en inspirer pour implémenter la réception
-des données du champ "Couleur".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 2d2f927..6a8dbad 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -5,10 +5,11 @@ require_once __DIR__ . '/../src/functions.php';
- $name = $_POST["name"] ?? null;
- $species = $_POST["species"] ?? null;
- $nickname = $_POST["nickname"] ?? null;
- $sex = $_POST["sex"] ?? null;
- $birthday = $_POST["birthday"] ?? null;
-+$color = $_POST["color"] ?? null;
-
- // Gestion de la soumission du formulaire
- if ($_SERVER["REQUEST_METHOD"] === "POST") {
-     // Validation de l'animal de compagnie
-     $errors = validatePet(
-```
-
-</details>
-
-#### Valider les données côté serveur
-
-Le champ "Couleur" est un champ facultatif. Il est donc nécessaire de vérifier
-la valeur que si elle est saisie.
-
-Si elle est saisie, vous devez vérifier que la valeur saisie est bien une
-couleur au format hexadécimal. Si la valeur saisie ne respecte pas ces règles,
-vous devez afficher un message d'erreur.
-
-Essayez de rajouter la validation des données côté serveur pour le champ
-"Couleur".
-
-**Astuce** : afin de valider si le champ "Couleur" est bien une couleur valide,
-vous pouvez utiliser la fonction `preg_match()` de PHP (source :
-<https://www.php.net/manual/fr/function.preg-match.php>) pour vérifier si la
-valeur saisie correspond à une expression régulière qui représente une couleur
-au format hexadécimal. L'expression régulière pour une couleur au format
-hexadécimal est la suivante : `/^#[a-f0-9]{6}$/i`, construite de la manière
-suivante :
-
-- `^#` : la chaîne doit commencer par le caractère `#`.
-- `[a-f0-9]{6}` : la chaîne doit être suivie de 6 caractères qui peuvent être
-  des chiffres de 0 à 9 ou des lettres de a à f.
-- `$` : la chaîne doit se terminer après les 6 caractères.
-- `i` : le modificateur `i` rend la validation insensible à la casse, ce qui
-  signifie que les lettres de a à f peuvent être en majuscules ou en minuscules.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 6a8dbad..af617a3 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -16,10 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-         $name,
-         $species,
-         $nickname,
-         $sex,
-         $birthday,
-+        $color,
-     );
-
-     // S'il n'y a pas d'erreurs, affiche les données de l'animal de compagnie qui va être ajouté
-     if (empty($errors)) {
-         // Information de debug : affichage du contenu de la variable $_POST
-```
-
-```diff
-diff --git a/mini-projet/src/functions.php b/mini-projet/src/functions.php
-index 3314687..7461d77 100644
---- a/mini-projet/src/functions.php
-+++ b/mini-projet/src/functions.php
-@@ -23,10 +23,11 @@ function validatePet(
-     ?string $name,
-     ?string $species,
-     ?string $nickname,
-     ?string $sex,
-     ?string $birthday,
-+    ?string $color,
- ): array {
-     // Par défaut, il n'y a pas d'erreurs
-     $errors = [];
-
-     // Validation des données
-@@ -64,7 +65,13 @@ function validatePet(
-         } else if (strtotime($birthday) > time()) {
-             array_push($errors, "La date de naissance ne peut pas être dans le futur.");
-         }
-     }
-
-+    if (!empty($color)) {
-+        if (!preg_match("/^#[a-f0-9]{6}$/i", $color)) {
-+            array_push($errors, "La couleur n'est pas valide.");
-+        }
-+    }
-+
-     return $errors;
- }
-```
-
-</details>
-
-#### Afficher les erreurs de validation
-
-Il n'est pas nécessaire de changer le code d'affichage des erreurs de
-validation. Le code est déjà en place pour afficher les erreurs de validation.
-Il suffit de rajouter les messages d'erreur au tableau `$errors` et les messages
-seront affichés à l'écran.
-
-#### Conserver les données saisies
-
-Essayez de conserver la valeur saisie dans le champ "Couleur" lorsque le
-formulaire est soumis et qu'il y a des erreurs de validation.
-
-Pour cela, il faut utiliser l'attribut `value` sur le champ "Couleur".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index af617a3..cef21e6 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -171,11 +171,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-             <label for="color">Couleur (optionnel)</label>
-             <input
-                 type="color"
-                 id="color"
--                name="color" />
-+                name="color"
-+                value="<?= $color ?>" />
-
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-     </main>
-     <footer>
-```
-
-</details>
-
-#### Valider les données côté client
-
-Il n'est pas nécessaire de rajouter la validation des données côté client pour
-le champ "Couleur". Le champ "Couleur" est un champ facultatif. Vous pouvez
-laisser le code tel quel.
-
-#### Tester le formulaire
-
-Vous pouvez maintenant tester votre formulaire. Essayez de changer les valeurs
-saisies dans les champs et de soumettre le formulaire pour voir les messages
-d'erreur de validation s'afficher à l'écran.
-
-N'hésitez pas à utiliser les outils de développement de votre navigateur pour
-contourner la validation côté client et vérifier que la validation côté serveur
-fonctionne correctement.
-
-N'oubliez de suivre le workflow Git/GitHub pour cette tâche.
-
-### Ajouter le champ personnalité
-
-Dans cette section, nous allons créer le champ "Personnalité" du formulaire.
-
-N'oubliez de suivre le workflow Git/GitHub pour cette tâche.
-
-#### Ajouter le champ
-
-Le champ "Personnalité" est un champ cases à cocher qui permet à l'utilisateur
-de saisir la personnalité de l'animal de compagnie.
-
-Pour le moment, celui-ci contiendra les personnalités suivantes :
-
-- Gentil (valeur : `friendly`).
-- Joueur (valeur : `playful`).
-- Paresseux (valeur : `lazy`).
-- Timide (valeur : `shy`).
-- Curieux (valeur : `curious`).
-- Agressif (valeur : `aggressive`).
-
-Essayez de rajouter ce champ à l'aide des ressources disponibles sur MDN :
-<https://developer.mozilla.org/fr/docs/Web/HTML/Element/input/checkbox>.
-
-**Astuce** : pour regrouper toutes les cases à cocher sous le même nom, vous
-pouvez nommer le champ `personalities[]`. Cela permettra de récupérer les
-valeurs des cases à cocher dans un tableau.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index cef21e6..9025f6e 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -174,10 +174,58 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-                 type="color"
-                 id="color"
-                 name="color"
-                 value="<?= $color ?>" />
-
-+            <fieldset>
-+                <legend>Personnalité (optionnel)</legend>
-+
-+                <input
-+                    type="checkbox"
-+                    id="friendly"
-+                    name="personalities[]"
-+                    value="friendly" />
-+                <label for="friendly">Gentil</label>
-+
-+                <input
-+                    type="checkbox"
-+                    id="playful"
-+                    name="personalities[]"
-+                    value="playful" />
-+                <label for="playful">Joueur</label>
-+
-+                <input
-+                    type="checkbox"
-+                    id="lazy"
-+                    name="personalities[]"
-+                    value="lazy" />
-+                <label for="lazy">Paresseux</label>
-+
-+                <input
-+                    type="checkbox"
-+                    id="shy"
-+                    name="personalities[]"
-+                    value="shy" />
-+                <label for="shy">Timide</label>
-+
-+                <input
-+                    type="checkbox"
-+                    id="curious"
-+                    name="personalities[]"
-+                    value="curious" />
-+                <label for="curious">Curieux</label>
-+
-+                <input
-+                    type="checkbox"
-+                    id="aggressive"
-+                    name="personalities[]"
-+                    value="aggressive" />
-+                <label for="aggressive">Agressif</label>
-+            </fieldset>
-+
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-     </main>
-     <footer>
-         <center>
-```
-
-</details>
-
-#### Réceptionner les données côté serveur
-
-Essayez de rajouter la réception des données côté serveur pour le champ
-"Personnalité".
-
-**Astuce** : Le champ "Personnalité" est un champ cases à cocher. De ce fait, si
-des cases sont cochées, la variable `$_POST["personalities"]` contiendra un
-tableau avec les différentes valeurs des cases cochées. Si aucune case n'est
-cochée, la variable `$_POST["personalities"]` n'existera pas.
-
-Dans le cas où aucune case n'est cochée, il est important de vérifier si la
-variable `$_POST["personalities"]` existe avant de l'utiliser. En effet, si
-l'utilisateur.trice ne coche aucune case, la variable `$_POST["personalities"]`
-n'existera pas et nous aurons une erreur PHP sinon. Si aucune case n'est cochée,
-nous pouvons initialiser la variable `$personalities` à un tableau vide.
-
-Cela est possible grâce au nom `personalities[]`. Cela permet de récupérer les
-valeurs des cases à cocher dans un tableau.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 9025f6e..872abf5 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -6,10 +6,11 @@ $name = $_POST["name"] ?? null;
- $species = $_POST["species"] ?? null;
- $nickname = $_POST["nickname"] ?? null;
- $sex = $_POST["sex"] ?? null;
- $birthday = $_POST["birthday"] ?? null;
- $color = $_POST["color"] ?? null;
-+$personalities = $_POST["personalities"] ?? [];
-
- // Gestion de la soumission du formulaire
- if ($_SERVER["REQUEST_METHOD"] === "POST") {
-     // Validation de l'animal de compagnie
-     $errors = validatePet(
-```
-
-</details>
-
-#### Valider les données côté serveur
-
-Le champ "Personnalité" est un champ facultatif. Il est donc nécessaire de
-vérifier la ou les valeurs du tableau que si elles sont saisies.
-
-Essayez de rajouter la validation des données côté serveur pour le champ
-"Personnalité".
-
-**Astuce** : vous pouvez vous inspirer de la validation du champ "Sexe" pour
-implémenter la validation du champ "Personnalité" en vérifiant d'abord si le
-champ "Personnalité" est rempli avant de vérifier les valeurs du tableau à
-l'aide de la fonction `in_array()` de PHP (source :
-<https://www.php.net/manual/fr/function.in-array.php>).
-
-Pour cela, vous devez vérifier que chaque valeur du tableau `$personalities` est
-présente dans un tableau contenant les différentes valeurs possibles
-(`friendly`, `playful`, `lazy`, `shy`, `curious`, `aggressive`) à l'aide d'une
-boucle `foreach` et de la fonction `in_array()`. Si une valeur du tableau
-`$personalities` n'est pas présente dans le tableau des valeurs possibles, vous
-devez afficher un message d'erreur.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 872abf5..7b1a388 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -18,10 +18,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-         $species,
-         $nickname,
-         $sex,
-         $birthday,
-         $color,
-+        $personalities,
-     );
-
-     // S'il n'y a pas d'erreurs, affiche les données de l'animal de compagnie qui va être ajouté
-     if (empty($errors)) {
-         // Information de debug : affichage du contenu de la variable $_POST
-```
-
-```diff
-diff --git a/mini-projet/src/functions.php b/mini-projet/src/functions.php
-index 7461d77..f5592cc 100644
---- a/mini-projet/src/functions.php
-+++ b/mini-projet/src/functions.php
-@@ -24,10 +24,11 @@ function validatePet(
-     ?string $species,
-     ?string $nickname,
-     ?string $sex,
-     ?string $birthday,
-     ?string $color,
-+    ?array $personalities,
- ): array {
-     // Par défaut, il n'y a pas d'erreurs
-     $errors = [];
-
-     // Validation des données
-@@ -71,7 +72,15 @@ function validatePet(
-         if (!preg_match("/^#[a-f0-9]{6}$/i", $color)) {
-             array_push($errors, "La couleur n'est pas valide.");
-         }
-     }
-
-+    if (!empty($personalities)) {
-+        foreach ($personalities as $personality) {
-+            if (!in_array($personality, ["friendly", "playful", "lazy", "shy", "curious", "aggressive"])) {
-+                array_push($errors, "La personnalité '$personality' n'est pas valide.");
-+            }
-+        }
-+    }
-+
-     return $errors;
- }
-```
-
-</details>
-
-#### Afficher les erreurs de validation
-
-Il n'est pas nécessaire de changer le code d'affichage des erreurs de
-validation. Le code est déjà en place pour afficher les erreurs de validation.
-Il suffit de rajouter les messages d'erreur au tableau `$errors` et les messages
-seront affichés à l'écran.
-
-#### Conserver les données saisies
-
-Essayez de conserver la valeur saisie dans le champ "Personnalité" lorsque le
-formulaire est soumis et qu'il y a des erreurs de validation.
-
-Pour cela, il faut utiliser l'attribut `checked` sur le champ "Personnalité".
-
-**Astuce** : le processus de conservation des données saisies pour le champ
-"Personnalité" est similaire à celui du champ "Sexe". Vous pouvez vous en
-inspirer pour implémenter la conservation des données saisies du champ
-"Personnalité" en vérifiant si chaque valeur du tableau `$personalities` est
-présente dans le tableau des valeurs possibles (`friendly`, `playful`, `lazy`,
-`shy`, `curious`, `aggressive`) à l'aide de la fonction `in_array()`. Si une
-valeur du tableau `$personalities` est présente dans le tableau des valeurs
-possibles, vous devez ajouter l'attribut `checked` à l'option correspondante.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index f6cac63..c1b6c87 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -183,46 +183,48 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-                 <input
-                     type="checkbox"
-                     id="friendly"
-                     name="personalities[]"
--                    value="friendly" />
-+                    value="friendly"
-+                    <?= in_array("friendly", $personalities) ? "checked" : "" ?> />
-                 <label for="friendly">Gentil</label>
-
-                 <input
-                     type="checkbox"
-                     id="playful"
-                     name="personalities[]"
--                    value="playful" />
-+                    value="playful"
-+                    <?= in_array("playful", $personalities) ? "checked" : "" ?> />
-                 <label for="playful">Joueur</label>
-
-                 <input
-                     type="checkbox"
-                     id="lazy"
-                     name="personalities[]"
--                    value="lazy" />
-+                    value="lazy" <?= in_array("lazy", $personalities) ? "checked" : "" ?> />
-                 <label for="lazy">Paresseux</label>
-
-                 <input
-                     type="checkbox"
-                     id="shy"
-                     name="personalities[]"
--                    value="shy" />
-+                    value="shy" <?= in_array("shy", $personalities) ? "checked" : "" ?> />
-                 <label for="shy">Timide</label>
-
-                 <input
-                     type="checkbox"
-                     id="curious"
-                     name="personalities[]"
--                    value="curious" />
-+                    value="curious" <?= in_array("curious", $personalities) ? "checked" : "" ?> />
-                 <label for="curious">Curieux</label>
-
-                 <input
-                     type="checkbox"
-                     id="aggressive"
-                     name="personalities[]"
--                    value="aggressive" />
-+                    value="aggressive" <?= in_array("aggressive", $personalities) ? "checked" : "" ?> />
-                 <label for="aggressive">Agressif</label>
-             </fieldset>
-
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-```
-
-</details>
-
-#### Valider les données côté client
-
-Il n'est pas nécessaire de rajouter la validation des données côté client pour
-le champ "Personnalité". Le champ "Personnalité" est un champ facultatif. Vous
-pouvez laisser le code tel quel.
-
-#### Tester le formulaire
-
-Vous pouvez maintenant tester votre formulaire. Essayez de changer les valeurs
-saisies dans les champs et de soumettre le formulaire pour voir les messages
-d'erreur de validation s'afficher à l'écran.
-
-N'hésitez pas à utiliser les outils de développement de votre navigateur pour
-contourner la validation côté client et vérifier que la validation côté serveur
-fonctionne correctement.
-
-N'oubliez de suivre le workflow Git/GitHub pour cette tâche.
-
-### Ajouter le champ taille
-
-Dans cette section, nous allons créer le champ "Taille" du formulaire.
-
-N'oubliez de suivre le workflow Git/GitHub pour cette tâche.
-
-#### Ajouter le champ
-
-Le champ "Taille" est un champ de type nombre qui permet à l'utilisateur.trice
-de saisir la taille de l'animal de compagnie en centimètres.
-
-Essayez de rajouter ce champ à l'aide des ressources disponibles sur MDN :
-<https://developer.mozilla.org/fr/docs/Web/HTML/Element/input/number>.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index c1b6c87..87928e7 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -224,10 +224,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-                     name="personalities[]"
-                     value="aggressive" <?= in_array("aggressive", $personalities) ? "checked" : "" ?> />
-                 <label for="aggressive">Agressif</label>
-             </fieldset>
-
-+            <label for="size">Taille en cm (optionnel)</label>
-+            <input
-+                type="number"
-+                id="size"
-+                name="size" />
-+
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-     </main>
-     <footer>
-         <center>
-```
-
-</details>
-
-#### Réceptionner les données côté serveur
-
-Essayez de rajouter la réception des données côté serveur pour le champ
-"Taille".
-
-**Astuce** : le processus de réception des données côté serveur est similaire à
-celui du champ "Nom". Vous pouvez vous en inspirer pour implémenter la réception
-des données du champ "Taille".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 87928e7..d4e9a4a 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -7,10 +7,11 @@ $species = $_POST["species"] ?? null;
- $nickname = $_POST["nickname"] ?? null;
- $sex = $_POST["sex"] ?? null;
- $birthday = $_POST["birthday"] ?? null;
- $color = $_POST["color"] ?? null;
- $personalities = $_POST["personalities"] ?? [];
-+$size = $_POST["size"] ?? null;
-
- // Gestion de la soumission du formulaire
- if ($_SERVER["REQUEST_METHOD"] === "POST") {
-     // Validation de l'animal de compagnie
-     $errors = validatePet(
-```
-
-</details>
-
-#### Valider les données côté serveur
-
-Le champ "Taille" est un champ facultatif. Il est donc nécessaire de vérifier la
-valeur que si elle est saisie.
-
-Si elle est saisie, vous devez vérifier que la valeur saisie est bien un nombre
-numérique positif plus grand que 1. Si la valeur saisie ne respecte pas ces
-règles, vous devez afficher un message d'erreur.
-
-Essayez de rajouter la validation des données côté serveur pour le champ
-"Taille".
-
-**Astuce** : comme toutes les données saisies dans un formulaire sont des
-chaînes de caractères, il est nécessaire Vous pouvez utiliser la fonction
-[`is_numeric`](https://www.php.net/manual/fr/function.is-numeric.php) pour
-vérifier si la valeur saisie est un nombre. Vous pouvez également utiliser
-l'opérateur de comparaison `<` pour vérifier que la valeur saisie est inférieure
-à 1.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index d4e9a4a..0fe0952 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -20,10 +20,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-         $nickname,
-         $sex,
-         $birthday,
-         $color,
-         $personalities,
-+        $size,
-     );
-
-     // S'il n'y a pas d'erreurs, affiche les données de l'animal de compagnie qui va être ajouté
-     if (empty($errors)) {
-         // Information de debug : affichage du contenu de la variable $_POST
-```
-
-```diff
-diff --git a/mini-projet/src/functions.php b/mini-projet/src/functions.php
-index 38774e1..cc1b50e 100644
---- a/mini-projet/src/functions.php
-+++ b/mini-projet/src/functions.php
-@@ -25,10 +25,11 @@ function validatePet(
-     ?string $nickname,
-     ?string $sex,
-     ?string $birthday,
-     ?string $color,
-     ?array $personalities,
-+    ?string $size,
- ): array {
-     // Par défaut, il n'y a pas d'erreurs
-     $errors = [];
-
-     // Validation des données
-@@ -80,7 +81,13 @@ function validatePet(
-                 array_push($errors, "La personnalité '$personality' n'est pas valide.");
-             }
-         }
-     }
-
-+    if (!empty($size)) {
-+        if (!is_numeric($size) || $size < 1) {
-+            array_push($errors, "La taille doit être un nombre positif plus grand que 1.");
-+        }
-+    }
-+
-     return $errors;
- }
-```
-
-</details>
-
-#### Afficher les erreurs de validation
-
-Il n'est pas nécessaire de changer le code d'affichage des erreurs de
-validation. Le code est déjà en place pour afficher les erreurs de validation.
-Il suffit de rajouter les messages d'erreur au tableau `$errors` et les messages
-seront affichés à l'écran.
-
-#### Conserver les données saisies
-
-Essayez de conserver la valeur saisie dans le champ "Taille" lorsque le
-formulaire est soumis et qu'il y a des erreurs de validation.
-
-Pour cela, il faut utiliser l'attribut `value` sur le champ "Taille".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 0fe0952..ea023cd 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -230,11 +230,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-             <label for="size">Taille en cm (optionnel)</label>
-             <input
-                 type="number"
-                 id="size"
--                name="size" />
-+                name="size"
-+                value="<?= $size ?>" />
-
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-     </main>
-     <footer>
-```
-
-</details>
-
-#### Valider les données côté client
-
-Nous pouvons améliorer l'expérience utilisateur en ajoutant une validation côté
-client pour le champ "Taille".
-
-Pour cela, nous allons ajouter l'attribut `min` sur le champ "Taille" pour
-vérifier que la valeur saisie est supérieure ou égale à 1.
-
-Essayez de rajouter la validation des données côté client pour le champ
-"Taille".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index ea023cd..dc51c72 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -231,11 +231,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-             <label for="size">Taille en cm (optionnel)</label>
-             <input
-                 type="number"
-                 id="size"
-                 name="size"
--                value="<?= $size ?>" />
-+                value="<?= $size ?>"
-+                min="0" />
-
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-     </main>
-     <footer>
-```
-
-</details>
-
-#### Tester le formulaire
-
-Vous pouvez maintenant tester votre formulaire. Essayez de changer les valeurs
-saisies dans les champs et de soumettre le formulaire pour voir les messages
-d'erreur de validation s'afficher à l'écran.
-
-N'hésitez pas à utiliser les outils de développement de votre navigateur pour
-contourner la validation côté client et vérifier que la validation côté serveur
-fonctionne correctement.
-
-N'oubliez de suivre le workflow Git/GitHub pour cette tâche.
-
-### Ajouter le champ poids
-
-Dans cette section, nous allons créer le champ "Poids" du formulaire.
-
-N'oubliez de suivre le workflow Git/GitHub pour cette tâche.
-
-#### Ajouter le champ
-
-Le champ "Poids" est un champ de type nombre qui permet à l'utilisateur.trice de
-saisir le poids de l'animal de compagnie en kilogrammes.
-
-Essayez de rajouter ce champ à l'aide des ressources disponibles sur MDN :
-<https://developer.mozilla.org/fr/docs/Web/HTML/Element/input/number>.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 959c586..a64ba4d 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -234,10 +234,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-                 id="size"
-                 name="size"
-                 value="<?= $size ?>"
-                 min="1" />
-
-+            <label for="weight">Poids en kg (optionnel)</label>
-+            <input
-+                type="number"
-+                id="weight"
-+                name="weight" />
-+
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-     </main>
-     <footer>
-         <center>
-```
-
-</details>
-
-#### Réceptionner les données côté serveur
-
-Essayez de rajouter la réception des données côté serveur pour le champ "Poids".
-
-**Astuce** : le processus de réception des données côté serveur est similaire à
-celui du champ "Nom". Vous pouvez vous en inspirer pour implémenter la réception
-des données du champ "Poids".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index a64ba4d..e59a88e 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -8,10 +8,11 @@ $nickname = $_POST["nickname"] ?? null;
- $sex = $_POST["sex"] ?? null;
- $birthday = $_POST["birthday"] ?? null;
- $color = $_POST["color"] ?? null;
- $personalities = $_POST["personalities"] ?? [];
- $size = $_POST["size"] ?? null;
-+$weight = $_POST["weight"] ?? null;
-
- // Gestion de la soumission du formulaire
- if ($_SERVER["REQUEST_METHOD"] === "POST") {
-     // Validation de l'animal de compagnie
-     $errors = validatePet(
-```
-
-</details>
-
-#### Valider les données côté serveur
-
-Le champ "Poids" est un champ facultatif. Il est donc nécessaire de vérifier la
-valeur que si elle est saisie.
-
-Si elle est saisie, vous devez vérifier que la valeur saisie est bien un nombre
-numérique positif plus grand que 0. Si la valeur saisie ne respecte pas ces
-règles, vous devez afficher un message d'erreur.
-
-Essayez de rajouter la validation des données côté serveur pour le champ
-"Poids".
-
-**Astuce** : comme toutes les données saisies dans un formulaire sont des
-chaînes de caractères, il est nécessaire Vous pouvez utiliser la fonction
-[`is_numeric`](https://www.php.net/manual/fr/function.is-numeric.php) pour
-vérifier si la valeur saisie est un nombre. Vous pouvez également utiliser
-l'opérateur de comparaison `<` pour vérifier que la valeur saisie est inférieure
-à 0.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index d4e9a4a..0fe0952 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -20,10 +20,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-         $nickname,
-         $sex,
-         $birthday,
-         $color,
-         $personalities,
-         $size,
-+        $weight,
-     );
-
-     // S'il n'y a pas d'erreurs, affiche les données de l'animal de compagnie qui va être ajouté
-     if (empty($errors)) {
-         // Information de debug : affichage du contenu de la variable $_POST
-```
-
-```diff
-diff --git a/mini-projet/src/functions.php b/mini-projet/src/functions.php
-index 4bc8dfd..1c8773e 100644
---- a/mini-projet/src/functions.php
-+++ b/mini-projet/src/functions.php
-@@ -26,10 +26,11 @@ function validatePet(
-     ?string $sex,
-     ?string $birthday,
-     ?string $color,
-     ?array $personalities,
-     ?string $size,
-+    ?string $weight,
- ): array {
-     // Par défaut, il n'y a pas d'erreurs
-     $errors = [];
-
-     // Validation des données
-@@ -87,7 +88,13 @@ function validatePet(
-         if (!is_numeric($size) || $size < 1) {
-             array_push($errors, "La taille doit être un nombre positif plus grand que 1.");
-         }
-     }
-
-+    if (!empty($weight)) {
-+        if (!is_numeric($weight) || $weight < 0) {
-+            array_push($errors, "Le poids doit être un nombre positif plus grand que 0.");
-+        }
-+    }
-+
-     return $errors;
- }
-```
-
-</details>
-
-#### Afficher les erreurs de validation
-
-Il n'est pas nécessaire de changer le code d'affichage des erreurs de
-validation. Le code est déjà en place pour afficher les erreurs de validation.
-Il suffit de rajouter les messages d'erreur au tableau `$errors` et les messages
-seront affichés à l'écran.
-
-#### Conserver les données saisies
-
-Essayez de conserver la valeur saisie dans le champ "Poids" lorsque le
-formulaire est soumis et qu'il y a des erreurs de validation.
-
-Pour cela, il faut utiliser l'attribut `value` sur le champ "Poids".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 839b3ce..484fb96 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -240,13 +240,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-             <label for="weight">Poids en kg (optionnel)</label>
-             <input
-                 type="number"
-                 id="weight"
--                name="weight" />
-+                name="weight"
-+                value="<?= $weight ?>" />
-
--            <button type="submit">Créer le nouvel animal</button>
-+            <button type=" submit">Créer le nouvel animal</button>
-         </form>
-     </main>
-     <footer>
-         <center>
-             <small>
-```
-
-</details>
-
-#### Valider les données côté client
-
-Nous pouvons améliorer l'expérience utilisateur en ajoutant une validation côté
-client pour le champ "Poids".
-
-Pour cela, nous allons ajouter l'attribut `min` sur le champ "Poids" pour
-vérifier que la valeur saisie est supérieure ou égale à 0.1. En plus de
-l'attribut `min`, nous allons également ajouter l'attribut `step` pour permettre
-à l'utilisateur.trice de saisir des nombres décimaux.
-
-Essayez de rajouter la validation des données côté client pour le champ "Poids".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index ca80233..b7d83ac 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -241,11 +241,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-             <label for="weight">Poids en kg (optionnel)</label>
-             <input
-                 type="number"
-                 id="weight"
-                 name="weight"
--                value="<?= $weight ?>" />
-+                value="<?= $weight ?>"
-+                min="0.1"
-+                step="0.1" />
-
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-     </main>
-     <footer>
-```
-
-</details>
-
-#### Tester le formulaire
-
-Vous pouvez maintenant tester votre formulaire. Essayez de changer les valeurs
-saisies dans les champs et de soumettre le formulaire pour voir les messages
-d'erreur de validation s'afficher à l'écran.
-
-N'hésitez pas à utiliser les outils de développement de votre navigateur pour
-contourner la validation côté client et vérifier que la validation côté serveur
-fonctionne correctement.
-
-N'oubliez de suivre le workflow Git/GitHub pour cette tâche.
-
-### Ajouter le champ notes
-
-Dans cette section, nous allons ajouter un champ "Notes" au formulaire.
-
-N'oubliez de suivre le workflow Git/GitHub pour cette tâche.
-
-#### Ajouter le champ
-
-Le champ "Notes" est un champ de texte libre multi-lignes qui permet à
-l'utilisateur.trice de saisir des notes sur l'animal de compagnie.
-
-Essayez de rajouter ce champ à l'aide des ressources disponibles sur MDN :
-<https://developer.mozilla.org/fr/docs/Web/HTML/Element/textarea>.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index b7d83ac..49f5a4b 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -245,10 +245,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-                 name="weight"
-                 value="<?= $weight ?>"
-                 min="0.1"
-                 step="0.1" />
-
-+            <label for="notes">Notes (optionnel)</label>
-+            <textarea
-+                id="notes"
-+                name="notes"
-+                rows="4"
-+                cols="50"></textarea>
-+
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-     </main>
-     <footer>
-         <center>
-```
-
-</details>
-
-#### Réceptionner les données côté serveur
-
-Essayez de rajouter la réception des données côté serveur pour le champ "Notes".
-
-**Astuce** : le processus de réception des données côté serveur est similaire à
-celui du champ "Nom". Vous pouvez vous en inspirer pour implémenter la réception
-des données du champ "Notes".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 49f5a4b..6f9e707 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -9,10 +9,11 @@ $sex = $_POST["sex"] ?? null;
- $birthday = $_POST["birthday"] ?? null;
- $color = $_POST["color"] ?? null;
- $personalities = $_POST["personalities"] ?? [];
- $size = $_POST["size"] ?? null;
- $weight = $_POST["weight"] ?? null;
-+$notes = $_POST["notes"] ?? null;
-
- // Gestion de la soumission du formulaire
- if ($_SERVER["REQUEST_METHOD"] === "POST") {
-     // Validation de l'animal de compagnie
-     $errors = validatePet(
-```
-
-</details>
-
-#### Valider les données côté serveur
-
-Le champ "Notes" est un champ facultatif. Il est donc nécessaire de vérifier la
-valeur que si elle est saisie.
-
-Si elle est saisie, vous devez vérifier que la valeur saisie n'est pas trop
-courte (moins de 10 caractères) ou trop longue (plus de 500 caractères). Si la
-valeur saisie ne respecte pas ces règles, vous devez afficher un message
-d'erreur.
-
-Essayez de rajouter la validation des données côté serveur pour le champ
-"Notes".
-
-**Astuce** : vous pouvez vous inspirer de la validation du champ "Nom" pour
-implémenter la validation du champ "Notes" en vérifiant d'abord si le champ
-"Notes" est rempli avant de vérifier la longueur de la valeur saisie.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 6f9e707..c8f7173 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -24,10 +24,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-         $birthday,
-         $color,
-         $personalities,
-         $size,
-         $weight,
-+        $notes,
-     );
-
-     // S'il n'y a pas d'erreurs, affiche les données de l'animal de compagnie qui va être ajouté
-     if (empty($errors)) {
-         // Information de debug : affichage du contenu de la variable $_POST
-```
-
-```diff
-diff --git a/mini-projet/src/functions.php b/mini-projet/src/functions.php
-index 1c8773e..0fa0b2d 100644
---- a/mini-projet/src/functions.php
-+++ b/mini-projet/src/functions.php
-@@ -27,10 +27,11 @@ function validatePet(
-     ?string $birthday,
-     ?string $color,
-     ?array $personalities,
-     ?string $size,
-     ?string $weight,
-+    ?string $notes,
- ): array {
-     // Par défaut, il n'y a pas d'erreurs
-     $errors = [];
-
-     // Validation des données
-@@ -94,7 +95,15 @@ function validatePet(
-         if (!is_numeric($weight) || $weight < 1) {
-             array_push($errors, "Le poids doit être un nombre positif plus grand que 0.");
-         }
-     }
-
-+    if (!empty($notes)) {
-+        if (strlen($notes) < 10) {
-+            array_push($errors, "Les notes doivent contenir au minimum 10 caractères.");
-+        } else if (strlen($notes) > 500) {
-+            array_push($errors, "Les notes doivent contenir au maximum 500 caractères.");
-+        }
-+    }
-+
-     return $errors;
- }
-```
-
-</details>
-
-#### Afficher les erreurs de validation
-
-Il n'est pas nécessaire de changer le code d'affichage des erreurs de
-validation. Le code est déjà en place pour afficher les erreurs de validation.
-Il suffit de rajouter les messages d'erreur au tableau `$errors` et les messages
-seront affichés à l'écran.
-
-#### Conserver les données saisies
-
-Essayez de conserver la valeur saisie dans le champ "Notes" lorsque le
-formulaire est soumis et qu'il y a des erreurs de validation.
-
-Pour cela, il faut mettre la valeur du champ "Notes" dans la balise
-`<textarea>`.
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index c8f7173..77b36e8 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -252,11 +252,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-             <label for="notes">Notes (optionnel)</label>
-             <textarea
-                 id="notes"
-                 name="notes"
-                 rows="4"
--                cols="50"></textarea>
-+                cols="50"><?= $notes ?></textarea>
-
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-     </main>
-     <footer>
-```
-
-</details>
-
-#### Valider les données côté client
-
-Maintenant que la validation des données côté serveur est en place, nous allons
-ajouter la validation des données côté client.
-
-Essayez de rajouter la validation des données côté client pour le champ "Notes".
-
-Pour cela, il faut ajouter les attributs `minlength` et `maxlength` au champ
-"Notes".
-
-<details>
-<summary>Afficher la réponse</summary>
-
-```diff
-diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php
-index 77b36e8..030d7e0 100644
---- a/mini-projet/public/create.php
-+++ b/mini-projet/public/create.php
-@@ -252,11 +252,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
-             <label for="notes">Notes (optionnel)</label>
-             <textarea
-                 id="notes"
-                 name="notes"
-                 rows="4"
--                cols="50"><?= $notes ?></textarea>
-+                cols="50"
-+                minlength="10"
-+                maxlength="500"><?= $notes ?></textarea>
-
-             <button type="submit">Créer le nouvel animal</button>
-         </form>
-     </main>
-     <footer>
-```
-
-</details>
-
-#### Tester le formulaire
-
-Vous pouvez maintenant tester votre formulaire. Essayez de changer les valeurs
-saisies dans les champs et de soumettre le formulaire pour voir les messages
-d'erreur de validation s'afficher à l'écran.
-
-N'hésitez pas à utiliser les outils de développement de votre navigateur pour
-contourner la validation côté client et vérifier que la validation côté serveur
-fonctionne correctement.
-
-N'oubliez de suivre le workflow Git/GitHub pour cette tâche.
+Ici, nous avons ajouté une condition pour vérifier si le formulaire a été soumis
+avec la méthode `POST` et si une erreur est survenue lors de la suppression de
+la tâche. Si c'est le cas, nous affichons un message d'erreur en rouge sur la
+page.
+
+Si la suppression de la tâche réussit, nous redirigeons l'utilisateur·trice vers
+la page d'accueil avec la fonction `header()` et nous arrêtons l'exécution du
+script avec la fonction `exit()`.
 
 ## Conclusion
 
-Bravo ! Dans cette séance, vous avez créé un formulaire HTML permettant de créer
-un nouvel animal de compagnie.
+Bravo ! Dans cette séance, vous avez créé des formulaires HTML permettant de
+créer et de supprimer des tâches.
 
 Vous avez également validé les données du formulaire côté serveur et côté client
 en affichant des messages explicites en cas d'erreurs de validation.
@@ -3453,8 +1715,19 @@ prochaine séance.
 
 Vous avez passer un cap important dans la création d'une application web en PHP
 : vous avez maintenant les bases pour créer des formulaires HTML et valider les
-données saisies par les utilisateur.trices, un élément essentiel de toute
+données saisies par les utilisateur·trices, un élément essentiel de toute
 application web.
+
+Pour résumer, voici les étapes que nous avons suivies pour mettre en place des
+formulaires :
+
+1. Création du formulaire HTML avec l'action (où envoyer les données) et la
+   méthode (comment envoyer les données avec (privilégiez `POST`).
+2. Ajout des champs au formulaire.
+3. Réception des données côté serveur.
+4. Validation des données côté serveur.
+5. Conservation des données et affichage des erreurs de validation.
+6. Validation des données côté client.
 
 ## Solution
 
@@ -3493,3 +1766,7 @@ la séance comme indiqué dans le [contenu principal](../README.md).
 
 [licence]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
+
+```
+
+```
