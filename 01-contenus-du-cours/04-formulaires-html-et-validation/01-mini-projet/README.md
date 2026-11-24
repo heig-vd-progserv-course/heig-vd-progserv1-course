@@ -39,10 +39,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Créer la base du formulaire](#créer-la-base-du-formulaire-1)
   - [Ajouter le lien de suppression à la page de visualisation](#ajouter-le-lien-de-suppression-à-la-page-de-visualisation)
   - [Visualiser le formulaire](#visualiser-le-formulaire)
-  - [Tester le formulaire](#tester-le-formulaire)
-  - [Corriger le formulaire](#corriger-le-formulaire)
   - [Créer la fonction pour supprimer une tâche](#créer-la-fonction-pour-supprimer-une-tâche)
   - [Utiliser la fonction pour supprimer une tâche](#utiliser-la-fonction-pour-supprimer-une-tâche)
+  - [Tester la suppression d'une tâche](#tester-la-suppression-dune-tâche)
 - [Conclusion](#conclusion)
 - [Solution](#solution)
 
@@ -1448,7 +1447,7 @@ if ($task === null) {
 
         <p>Souhaitez-vous vraiment supprimer la tâche <strong><?= $task['title'] ?></strong> ? Cette action est irréversible.</p>
 
-        <form action="./delete.php" method="POST">
+        <form action="./delete.php?id=<?= $task['id'] ?>" method="POST">
             <button class="btn btn-error" type="submit">Supprimer la tâche</button>
             <a class="btn btn-secondary full-width" href="./view.php?id=<?= $task['id'] ?>">
                 Revenir à la page de visualisation
@@ -1479,8 +1478,25 @@ avec un bouton "Supprimer la tâche" et un lien pour revenir à la page de
 visualisation de la tâche, utilisant également l'identifiant de la tâche dans
 l'URL.
 
+L'action du formulaire est définie avec l'URL de la page `delete.php` avec
+l'identifiant de la tâche dans l'URL. Nous souhaitons envoyer l'identifiant de
+la tâche à supprimer au serveur lorsque l'utilisateur·trice clique sur le bouton
+"Supprimer la tâche".
+
 Pour le moment, la page ressemble beaucoup à la page de visualisation, avec un
-formulaire supplémentaire.
+formulaire similaire à celui de la page de création.
+
+N'oubliez pas de commiter vos changements et de pousser votre branche sur GitHub
+pour sauvegarder votre travail.
+
+> [!TIP]
+>
+> Ici serait un bon moment pour créer la pull request de votre branche de
+> travail vers la branche principale du dépôt GitHub du mini-projet. **Ne la
+> fusionnez pas encore**, car nous allons continuer à travailler sur le
+> formulaire de création d'une nouvelle tâche dans les prochaines étapes. Vous
+> pourrez fusionner la pull request une fois que toutes les fonctionnalités du
+> formulaire seront implémentées et validées.
 
 ### Ajouter le lien de suppression à la page de visualisation
 
@@ -1511,6 +1527,9 @@ De la même manière que nous avons ajouté l'identifiant de la tâche dans l'UR
 lien "Voir la tâche" sur la page d'accueil, nous avons ajouté l'identifiant de
 la tâche dans l'URL du lien "Supprimer la tâche" sur la page de visualisation.
 
+N'oubliez pas de commiter vos changements et de pousser votre branche sur GitHub
+pour sauvegarder votre travail.
+
 ### Visualiser le formulaire
 
 Accédez à la page de visualisation d'une tâche et cliquez sur le lien "Supprimer
@@ -1536,95 +1555,14 @@ il n'y a rien à changer dans le code HTML de la page `delete.php`.
 Sauvegardez les changements effectués et rafraîchissez la page de suppression.
 Le lien devrait prendre maintenant la largeur complète de la page.
 
-### Tester le formulaire
-
-Si vous testez le formulaire de suppression, vous remarquerez que la soumission
-du formulaire redirige simplement l'utilisateur·trice vers la page d'accueil.
-Nous allons corriger cela dans la prochaine étape.
-
-Pourquoi cela ? En effet, lors de la soumission du formulaire, la page
-`delete.php` est appelée avec la méthode `POST`.
-
-Hors, les premières lignes de notre page `delete.php` ne vérifient que la
-présence de l'identifiant de la tâche dans l'URL via la superglobale `$_GET`.
-Comme l'identifiant n'est pas présent dans l'URL lors de la soumission du
-formulaire, la page redirige l'utilisateur·trice vers la page d'accueil.
-
-### Corriger le formulaire
-
-Pour corriger le formulaire de suppression, nous allons modifier la page
-`delete.php` pour vérifier la présence de l'identifiant de la tâche dans la
-superglobale `$_POST` lors de la soumission du formulaire avec la méthode
-`POST`.
-
-Pour cela, nous devons ajouter un champ caché dans le formulaire de suppression
-pour transmettre l'identifiant de la tâche lors de la soumission du formulaire.
-Modifiez le code HTML du formulaire de suppression dans le fichier
-`public/delete.php` comme suit :
-
-```diff
-diff --git a/mini-projet/public/delete.php b/mini-projet/public/delete.php
-index 9847008..855288b 100644
---- a/mini-projet/public/delete.php
-+++ b/mini-projet/public/delete.php
-@@ -2,7 +2,7 @@
- require_once __DIR__ . '/../src/constants.php';
- require_once __DIR__ . '/../src/functions.php';
-
--$taskId = $_GET['id'] ?? null;
-+$taskId = $_GET['id'] ?? $_POST['id'] ?? null;
-
- if ($taskId === null || !is_numeric($taskId)) {
-     header('Location: ./index.php');
-@@ -56,6 +56,8 @@ if ($task === null) {
-         <p>Souhaitez-vous vraiment supprimer la tâche <strong><?= $task['title'] ?></strong> ? Cette action est irréversible.</p>
-
-         <form action="./delete.php" method="POST">
-+            <input type="hidden" name="id" value="<?= $taskId ?>" />
-+
-             <button class="btn btn-error" type="submit">Supprimer la tâche</button>
-             <a class="btn btn-secondary full-width" href="./view.php?id=<?= $task['id'] ?>">
-                 Revenir à la page de visualisation
-```
-
-Ici, nous avons ajouté un champ caché
-`<input type="hidden" name="id" value="<?= $taskId ?>" />` dans le formulaire de
-suppression pour transmettre l'identifiant de la tâche lors de la soumission du
-formulaire avec la méthode `POST`.
-
-Nous avons également modifié la ligne qui récupère l'identifiant de la tâche
-pour vérifier la présence de l'identifiant dans la superglobale `$_POST` en plus
-de la superglobale `$_GET`.
-
-Le code ci-dessus est équivalent à :
-
-```php
-$taskId = null;
-
-if ($_SERVER["REQUEST_METHOD"] === "GET") {
-    // Récupère l'ID de la tâche à supprimer depuis la requête GET
-    $taskId = $_GET['id'];
-} elseif ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Récupère l'ID de la tâche à supprimer depuis le formulaire POST
-    $taskId = $_POST["id"];
-}
-```
-
-De cette manière, l'identifiant de la tâche sera correctement récupéré lors de
-la soumission du formulaire avec la méthode `POST`, et la page ne redirigera
-plus l'utilisateur·trice vers la page d'accueil.
-
-Sauvegardez les changements effectués et rafraîchissez la page de suppression.
-
-Soumettez le formulaire de suppression pour vérifier que l'identifiant de la
-tâche est correctement récupéré lors de la soumission du formulaire avec la
-méthode `POST`. Vous devriez voir que la page ne redirige plus
-l'utilisateur·trice vers la page d'accueil, mais reste sur la page de
-suppression.
-
-Il ne nous reste plus qu'à implémenter la fonction pour supprimer la tâche.
+N'oubliez pas de commiter vos changements et de pousser votre branche sur GitHub
+pour sauvegarder votre travail.
 
 ### Créer la fonction pour supprimer une tâche
+
+Maintenant que nous avons la base du formulaire de suppression d'une tâche, nous
+allons créer la fonction pour supprimer une tâche de la base de données pour
+pouvoir l'utiliser ensuite dans la page `delete.php`.
 
 Dans le fichier `src/functions.php`, ajoutez la fonction `deleteTask()` pour
 supprimer une tâche de la base de données :
@@ -1647,6 +1585,9 @@ que la suppression a échoué.
 
 Dans la prochaine séance, nous allons implémenter la suppression réelle de la
 tâche dans la base de données.
+
+N'oubliez pas de commiter vos changements et de pousser votre branche sur GitHub
+pour sauvegarder votre travail.
 
 ### Utiliser la fonction pour supprimer une tâche
 
@@ -1689,7 +1630,7 @@ index 855288b..cba84de 100644
 +
          <p>Souhaitez-vous vraiment supprimer la tâche <strong><?= $task['title'] ?></strong> ? Cette action est irréversible.</p>
 
-         <form action="./delete.php" method="POST">
+         <form action="./delete.php?task_id=<?= $task['id'] ?>" method="POST">
 ```
 
 Ici, nous avons ajouté une condition pour vérifier si le formulaire a été soumis
@@ -1700,6 +1641,53 @@ page.
 Si la suppression de la tâche réussit, nous redirigeons l'utilisateur·trice vers
 la page d'accueil avec la fonction `header()` et nous arrêtons l'exécution du
 script avec la fonction `exit()`.
+
+N'oubliez pas de commiter vos changements et de pousser votre branche sur GitHub
+pour sauvegarder votre travail.
+
+### Tester la suppression d'une tâche
+
+Maintenant que nous avons mis en place la fonction pour supprimer une tâche et
+que nous l'utilisons dans la page de suppression, nous pouvons tester cette
+fonctionnalité en soumettant le formulaire de suppression d'une tâche.
+
+Sauvegardez les changements effectués et rafraîchissez la page de suppression
+d'une tâche (voir note de la section
+[Rafraîchir la page après la soumission du formulaire](#rafraîchir-la-page-après-la-soumission-du-formulaire)).
+Cliquez sur le bouton "Supprimer la tâche" pour soumettre le formulaire.
+
+Un message "Suppression de la tâche avec l'ID X" devrait s'afficher dans le
+navigateur, où X est l'identifiant de la tâche sélectionnée. Cela indique que la
+fonction `deleteTask()` a été appelée avec l'identifiant de la tâche.
+
+Que se passe-t-il derrière les décors ?
+
+Lorsque vous soumettez le formulaire de suppression d'une tâche, le navigateur
+envoie une requête HTTP POST au serveur avec l'identifiant de la tâche à
+supprimer dans l'URL.
+
+Même s'il s'agit d'une requête POST, l'identifiant de la tâche est toujours
+présent dans l'URL, car nous l'avons ajouté dans l'action du formulaire avec la
+syntaxe `?id=<?= $task['id'] ?>`.
+
+Cet identifiant est ensuite récupéré côté serveur avec la superglobale `$_GET`
+dans le fichier `delete.php`.
+
+Nous validons être dans un contexte de soumission du formulaire avec la
+condition `$_SERVER["REQUEST_METHOD"] === "POST"`, et nous appelons la fonction
+`deleteTask()` avec l'identifiant de la tâche.
+
+Comme la fonction `deleteTask()` retourne actuellement toujours `false` pour
+simuler un échec de la suppression, le message d'erreur "Une erreur est survenue
+lors de la suppression de la tâche." devrait également s'afficher sur la page.
+
+Le message d'erreur "Une erreur est survenue lors de la suppression de la
+tâche." devrait s'afficher sur la page, car la fonction `deleteTask()` retourne
+actuellement toujours `false` pour simuler un échec de la suppression.
+
+Au moins, nous avons maintenant mis en place le formulaire de suppression d'une
+tâche et la fonction pour supprimer une tâche, même si la suppression réelle
+n'est pas encore implémentée grâce à l'identifiant de la tâche.
 
 ## Conclusion
 
@@ -1766,7 +1754,3 @@ la séance comme indiqué dans le [contenu principal](../README.md).
 
 [licence]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
-
-```
-
-```
