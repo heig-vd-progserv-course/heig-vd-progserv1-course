@@ -5,13 +5,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $lastName = $_POST["lastName"];
     $email = $_POST["email"];
     $message = $_POST["message"];
-    $consent = isset($_POST["consent"]) ? true : false;
 
     echo "Prénom : " . $firstName . "<br>";
     echo "Nom : " . $lastName . "<br>";
     echo "Adresse e-mail : " . $email . "<br>";
     echo "Message : " . $message . "<br>";
-    echo "Consentement : " . ($consent ? "Oui" : "Non") . "<br>";
 }
 ?>
 

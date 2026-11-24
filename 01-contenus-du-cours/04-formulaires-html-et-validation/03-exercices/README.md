@@ -106,8 +106,6 @@ moment.
 
         <br>
 
-        <br>
-
         <label for="message">Message</label><br>
         <textarea id="message" name="message"></textarea>
 
