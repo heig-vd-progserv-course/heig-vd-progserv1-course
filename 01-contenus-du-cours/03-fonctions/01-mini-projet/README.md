@@ -1188,15 +1188,15 @@ require_once __DIR__ . '/../src/constants.php';
     <link rel="stylesheet" href="https://unpkg.com/@digicreon/mucss/dist/mu.css">
     <link rel="stylesheet" href="./css/styles.css">
 
-    <title>Créer une nouvelle tâche | <?= APP_NAME; ?> <?= APP_AUTHOR; ?></title>
-    <meta name="description" content="Créer une nouvelle tâche pour <?= APP_AUTHOR; ?>.">
+    <title>Créer une nouvelle tâche | <?= APP_NAME ?> <?= APP_AUTHOR ?></title>
+    <meta name="description" content="Créer une nouvelle tâche pour <?= APP_AUTHOR ?>.">
 </head>
 
 <body class="container">
     <header>
         <nav>
             <ul>
-                <li><strong><?= APP_NAME; ?> <?= APP_AUTHOR; ?></strong></li>
+                <li><strong><?= APP_NAME ?> <?= APP_AUTHOR ?></strong></li>
             </ul>
             <ul>
                 <li><a href="./index.php">Accueil</a></li>
@@ -1356,7 +1356,14 @@ et de retourner un tableau d'erreurs si nécessaire :
   pas fournies.
 - Au travers de différentes conditions, la fonction vérifie si les propriétés de
   la tâche sont valides selon les critères définis. Si une propriété n'est pas
-  valide, un message d'erreur correspondant est ajouté au tableau `$errors`.
+  valide, un message d'erreur correspondant est ajouté au tableau `$errors` :
+  - `strlen()` est utilisé pour vérifier la longueur des chaînes de caractères.
+  - `in_array()` est utilisé pour vérifier si la priorité est l'une des valeurs
+    autorisées.
+  - `strtotime()` est utilisé pour vérifier si la date limite est une date
+    valide et si elle n'est pas dans le passé.
+  - `array_push()` est utilisé pour ajouter un message d'erreur au tableau
+    `$errors`.
 - La fonction retourne le tableau `$errors` contenant les messages d'erreur si
   des erreurs de validation sont présentes, ou un tableau vide si la tâche est
   valide.

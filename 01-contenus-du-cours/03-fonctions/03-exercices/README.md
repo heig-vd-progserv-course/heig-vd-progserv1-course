@@ -293,7 +293,7 @@ Even
 
 ### Exercice 8
 
-Déclarez une fonction `grade` qui calcule la note finale d'un.e étudiant.e en
+Déclarez une fonction `grade` qui calcule la note finale d'un·e étudiant·e en
 fonction du barème fédéral suisse (voir ci-dessous). La fonction prend deux
 paramètres : le nombre de points obtenus et le nombre de points maximum. La
 fonction doit retourner la note finale.

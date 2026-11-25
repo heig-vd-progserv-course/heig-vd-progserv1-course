@@ -123,7 +123,7 @@ De quoi est composé une tâche dans le mini-projet ? (ex. : quelles sont les
 informations qui la composent ?)
 
 ```{=latex}
-\answerbox{3.5cm}
+\answerbox{4.5cm}
 ```
 
 ```{=latex}
@@ -198,7 +198,7 @@ Donnez l'explication complète de ce qu'il se passe lorsque vous accédez à une
 page PHP dans votre navigateur web.
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{6.5cm}
 ```
 
 ### Liste de contrôle

@@ -133,7 +133,7 @@ C'est parti !
 
 Un environnement de développement local est un ensemble d'outils et de logiciels
 nécessaires pour écrire, tester et déboguer des applications logicielles sur
-votre propre ordinateur. Il permet aux développeur.euses de créer et de tester
+votre propre ordinateur. Il permet aux développeur·euses de créer et de tester
 leur code dans un environnement contrôlé avant de le déployer sur un serveur de
 production en ligne.
 
@@ -724,12 +724,12 @@ const APP_NAME = "Page de démonstration";
 <head>
     <meta charset="utf-8">
 
-    <title><?= APP_NAME; ?></title>
+    <title><?= APP_NAME ?></title>
     <meta name="description" content="Une page de démonstration.">
 </head>
 
 <body>
-    <h1><?= APP_NAME; ?></h1>
+    <h1><?= APP_NAME ?></h1>
 
     <p>Bienvenue sur la page de démonstration. Cette page est utilisée pour illustrer le fonctionnement de PHP.</p>
 </body>
@@ -760,7 +760,7 @@ Cela illustre le fonctionnement de base d'une application web PHP.
 Vous remarquez peut-être l'utilisation de la notation `<?= ... ?>` dans le code
 PHP. Cette notation est une forme abrégée de `<?php echo ... ?>` et est utilisée
 pour afficher rapidement des valeurs dans le code HTML. Par exemple,
-`<?= APP_NAME; ?>` est équivalent à `<?php echo APP_NAME; ?>` et affichera la
+`<?= APP_NAME ?>` est équivalent à `<?php echo APP_NAME; ?>` et affichera la
 valeur de la constante `APP_NAME` dans le code HTML généré.
 
 Nous utiliserons cette notation abrégée dans le code PHP pour simplifier
@@ -809,15 +809,15 @@ const APP_AUTHOR = "Ludovic";
     <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="https://unpkg.com/@digicreon/mucss/dist/mu.css">
 
-    <title>Page d'accueil | <?= APP_NAME; ?> <?= APP_AUTHOR; ?></title>
-    <meta name="description" content="La liste de tâches de <?= APP_AUTHOR; ?>.">
+    <title>Page d'accueil | <?= APP_NAME ?> <?= APP_AUTHOR ?></title>
+    <meta name="description" content="La liste de tâches de <?= APP_AUTHOR ?>.">
 </head>
 
 <body class="container">
     <header>
         <nav>
             <ul>
-                <li><strong><?= APP_NAME; ?> <?= APP_AUTHOR; ?></strong></li>
+                <li><strong><?= APP_NAME ?> <?= APP_AUTHOR ?></strong></li>
             </ul>
             <ul>
                 <li><a href="./index.php">Accueil</a></li>
@@ -825,9 +825,9 @@ const APP_AUTHOR = "Ludovic";
         </nav>
     </header>
     <main>
-        <h1><?= APP_NAME; ?> <?= APP_AUTHOR; ?></h1>
+        <h1><?= APP_NAME ?> <?= APP_AUTHOR ?></h1>
 
-        <p>Cette application web permet de gérer une liste de tâches pour <?= APP_AUTHOR; ?>. Vous pouvez créer, visualiser, modifier et supprimer des tâches.</p>
+        <p>Cette application web permet de gérer une liste de tâches pour <?= APP_AUTHOR ?>. Vous pouvez créer, visualiser, modifier et supprimer des tâches.</p>
 
         <article>
             <h2>Exemple de tâche 1</h2>
@@ -946,15 +946,15 @@ const APP_AUTHOR = "Ludovic";
     <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="https://unpkg.com/@digicreon/mucss/dist/mu.css">
 
-    <title>Visualiser la tâche | <?= APP_NAME; ?> <?= APP_AUTHOR; ?></title>
-    <meta name="description" content="Visualiser une tâche pour <?= APP_AUTHOR; ?>.">
+    <title>Visualiser la tâche | <?= APP_NAME ?> <?= APP_AUTHOR ?></title>
+    <meta name="description" content="Visualiser une tâche pour <?= APP_AUTHOR ?>.">
 </head>
 
 <body class="container">
     <header>
         <nav>
             <ul>
-                <li><strong><?= APP_NAME; ?> <?= APP_AUTHOR; ?></strong></li>
+                <li><strong><?= APP_NAME ?> <?= APP_AUTHOR ?></strong></li>
             </ul>
             <ul>
                 <li><a href="./index.php">Accueil</a></li>
@@ -1095,10 +1095,10 @@ index a1f5b4c..bd64f6f 100644
 +            </div>
 +        </center>
 +
-         <h1><?= APP_NAME; ?> <?= APP_AUTHOR; ?></h1>
+         <h1><?= APP_NAME ?> <?= APP_AUTHOR ?></h1>
 
          <p>Cette application web permet de gérer une liste d
-e tâches pour <?= APP_AUTHOR; ?>. Vous pouvez créer, visualis
+e tâches pour <?= APP_AUTHOR ?>. Vous pouvez créer, visualis
 er, modifier et supprimer des tâches.</p>
 ```
 
@@ -1187,10 +1187,10 @@ index bd64f6f..9987494 100644
      <link rel="stylesheet" href="https://unpkg.com/@digicreon/mucss/dist/mu.css">
 +    <link rel="stylesheet" href="./css/styles.css">
 
-     <title>Page d'accueil | <?= APP_NAME; ?> <?= APP_AUTHOR;
+     <title>Page d'accueil | <?= APP_NAME ?> <?= APP_AUTHOR;
  ?></title>
      <meta name="description" content="La liste de tâches de
-<?= APP_AUTHOR; ?>.">
+<?= APP_AUTHOR ?>.">
 ```
 
 Répétez cette étape pour le fichier `mini-projet/public/view.php` pour avoir un

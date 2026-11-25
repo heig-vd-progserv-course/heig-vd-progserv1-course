@@ -338,7 +338,7 @@ index 79dcfba..5b16cbc 100644
 --- a/mini-projet/public/index.php
 +++ b/mini-projet/public/index.php
 @@ -75,15 +75,15 @@ $task4 = [
-         <p>Cette application web permet de gérer une liste de tâches pour <?= APP_AUTHOR; ?>. Vous pouvez créer, visualiser, modifier et supprimer des tâches.</p>
+         <p>Cette application web permet de gérer une liste de tâches pour <?= APP_AUTHOR ?>. Vous pouvez créer, visualiser, modifier et supprimer des tâches.</p>
 
          <article>
 -            <h2>Exemple de tâche 1</h2>
@@ -494,7 +494,7 @@ index 1c91aa2..cadcb5f 100644
 +++ b/mini-projet/public/index.php
 @@ -81,72 +81,29 @@ $tasks = [
 
-         <p>Cette application web permet de gérer une liste de tâches pour <?= APP_AUTHOR; ?>. Vous pouvez créer, visualiser, modifier et supprimer des tâches.</p>
+         <p>Cette application web permet de gérer une liste de tâches pour <?= APP_AUTHOR ?>. Vous pouvez créer, visualiser, modifier et supprimer des tâches.</p>
 
 -        <article>
 -            <h2><?= $task1['title']; ?></h2>

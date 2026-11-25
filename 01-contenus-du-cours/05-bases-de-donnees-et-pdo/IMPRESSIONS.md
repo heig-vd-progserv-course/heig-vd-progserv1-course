@@ -55,7 +55,8 @@ séance 5).
 
 ### Question 1
 
-Quelles sont les fonctionnalités principales que propose le mini-projet ?
+Quelle est la grande différence entre le mini-projet de cette séance et celui de
+la séance précédente ?
 
 ```{=latex}
 \answerbox{3cm}
@@ -63,7 +64,8 @@ Quelles sont les fonctionnalités principales que propose le mini-projet ?
 
 ### Question 2
 
-Combien de pages composent le mini-projet ?
+Avec ce que vous savez sur les bases de données, comment est construite la base
+de données du mini-projet ?
 
 ```{=latex}
 \answerbox{0.5cm}
@@ -71,8 +73,8 @@ Combien de pages composent le mini-projet ?
 
 ### Question 3
 
-Pour chaque page, quelles sont les informations affichées et les actions
-possibles ?
+Quelles sont les requêtes SQL utilisées dans le mini-projet pour interagir avec
+la base de données ?
 
 ```{=latex}
 \answerbox{3cm}
@@ -80,7 +82,7 @@ possibles ?
 
 ### Question 4
 
-Quelles sont les technologies utilisées pour implémenter le mini-projet ?
+Comment pensez-vous que
 
 ```{=latex}
 \answerbox{3cm}
@@ -144,18 +146,48 @@ la séance en répondant aux questions ci-dessous.
 
 ### Question 1
 
-Dans quel fichier se trouve la documentation du projet ? Pourquoi est-il si
-important ?
+A quoi sert PDO et comment est-il utilisé dans le mini-projet ?
+
+```{=latex}
+\answerbox{9.5cm}
+```
+
+### Question 2
+
+Comment PDO a été utilisé pour interagir avec la base de données dans le
+mini-projet ?
+
+```{=latex}
+\answerbox{9.5cm}
+```
+
+### Question 3
+
+Vous devez maintenant créer une nouvelle page d'édition pour le mini-projet.
+
+Quelles sont les étapes que vous suivriez pour la développer ? (ex. :
+planification, conception, développement, tests, déploiement, etc.)
+
+Validez votre réponse en expliquant les étapes que vous suivriez pour développer
+une nouvelle page d'édition pour le mini-projet, en vous basant sur ce que vous
+avez appris dans le cours.
+
+Une fois votre réponse formulée, présentez-la à votre enseignant·e pour
+validation avant de passer à l'implémentation de la page d'édition.
 
 ```{=latex}
 \answerbox{3cm}
 ```
 
-### Question 2
+### Question 4
 
-Comment devez-vous ouvrir le projet dans Visual Studio Code pour que
-l'environnement de développement local fonctionne correctement ? Quelle est la
-commande à exécuter pour lancer le serveur web local ?
+Vous devez refaire un projet similaire à celui que vous avez créé dans le cours.
+Quelles sont les étapes que vous suivriez pour le développer ? (ex. :
+planification, conception, développement, tests, déploiement, etc.)
+
+Soyez précis·e et détaillé·e dans votre réponse, en expliquant les étapes que
+vous suivriez pour développer un projet similaire à celui que vous avez créé
+dans le cours.
 
 ```{=latex}
 \answerbox{3cm}
@@ -163,39 +195,10 @@ commande à exécuter pour lancer le serveur web local ?
 
 ### Question 3
 
-A quelle adresse (URL) pouvez-vous accéder pour visualiser votre projet dans
-votre navigateur web ?
-
-```{=latex}
-\answerbox{0.5cm}
-```
-
-### Question 4
-
-Qu'est-ce qu'un serveur web tel que Apache et à quoi sert-il dans le mini-projet
-? De quoi est-il composé et comment fonctionne-t-il ?
-
-```{=latex}
-\answerbox{3cm}
-```
-
-```{=latex}
-\newpage
-```
-
-### Question 5
-
-Quelle est la différence entre PHP et HTML ? Comment ces deux langages sont-ils
-utilisés dans le mini-projet ?
-
-```{=latex}
-\answerbox{3cm}
-```
-
-### Question 6
-
-Donnez l'explication complète de ce qu'il se passe lorsque vous accédez à une
-page PHP dans votre navigateur web.
+Avez-vous déployé l'application en ligne sur Internet ? Si oui, comment
+avez-vous procédé et quelles sont les étapes à suivre pour déployer une
+application web sur Internet ? Si non, pourquoi n'avez-vous pas déployé
+l'application en ligne sur Internet ?
 
 ```{=latex}
 \answerbox{3cm}

@@ -27,7 +27,7 @@ L'examen est composé de deux parties :
 > de l'examen final seront exactement les mêmes.
 >
 > Il est important de réviser l'ensemble du contenu du cours et de comprendre
-> les concepts fondamentaux pour être bien préparé.e pour l'examen final.
+> les concepts fondamentaux pour être bien préparé·e pour l'examen final.
 
 ### Partie théorique
 
@@ -199,7 +199,7 @@ réponses qui soient possibles. Tout doit être correct pour obtenir les points.
 Vous devez développer une application web de gestion de projets avec PHP.
 Comment vous y prendriez-vous ?
 
-Soyez précis.e et expliquez les étapes nécessaires pour les différentes
+Soyez précis·e et expliquez les étapes nécessaires pour les différentes
 fonctionnalités de l'application et comment vous les implémenteriez.
 
 Listez la structure de votre application (fichiers, dossiers, etc.) et expliquez

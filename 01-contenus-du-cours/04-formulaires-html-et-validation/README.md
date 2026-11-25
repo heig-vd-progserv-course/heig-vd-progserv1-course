@@ -63,6 +63,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 ## Table des matières
 
 - [Table des matières](#table-des-matières)
+- [Exploration du mini-projet](#exploration-du-mini-projet)
 - [Objectifs](#objectifs)
 - [Formulaires HTML](#formulaires-html)
   - [Structure d'un formulaire](#structure-dun-formulaire)
@@ -80,6 +81,13 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 - [Mini-projet](#mini-projet)
 - [Questions d'évaluation](#questions-dévaluation)
 - [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
+
+## Exploration du mini-projet
+
+Avant de commencer, explorez le mini-project à l'aide du document
+[Activités en classe](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/04-formulaires-html-et-validation/04-formulaires-html-et-validation-impressions.pdf)
+et du site web déployé pour le mini-projet :
+<https://progserv1.heig-vd-progserv-course.ch>.
 
 ## Objectifs
 
@@ -284,7 +292,7 @@ La documentation MDN fournit des informations détaillées sur les attributs des
 
 ## Envoyer les données des formulaires
 
-Lorsqu'un.e utilisateur.trice remplit un formulaire et clique sur le bouton de
+Lorsqu'un·e utilisateur.trice remplit un formulaire et clique sur le bouton de
 soumission ( `<button type="submit">` ou `<input type="submit">`), les données
 saisies sont envoyées au serveur pour traitement. Cela permet de collecter des
 informations, d'enregistrer des données dans une base de données ou d'effectuer

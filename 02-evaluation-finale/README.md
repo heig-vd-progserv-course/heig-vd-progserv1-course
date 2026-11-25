@@ -20,12 +20,12 @@
 
 ## Objectifs
 
-L'objectif de cette évaluation est de permettre à l'étudiant.e de démontrer sa
+L'objectif de cette évaluation est de permettre à l'étudiant·e de démontrer sa
 maîtrise des concepts fondamentaux du développement web avec PHP, ainsi que sa
 capacité à les appliquer dans un contexte de projet réel.
 
 L'évaluation vise à évaluer à la fois les connaissances théoriques et les
-compétences pratiques de l'étudiant.e, en mettant l'accent la compréhension, la
+compétences pratiques de l'étudiant·e, en mettant l'accent la compréhension, la
 qualité du code, la structure de l'application, et la capacité à suivre les
 bonnes pratiques de développement avec PHP.
 
@@ -47,7 +47,7 @@ fondamentaux abordés en cours.
 
 L'évaluation dure 90 minutes (1 heure 30 minutes).
 
-L'étudiant.e devra répondre à une série de questions concernant les notions clés
+L'étudiant·e devra répondre à une série de questions concernant les notions clés
 du développement web avec PHP.
 
 Les questions peuvent porter sur des notions théoriques, des bout de code à
@@ -62,14 +62,14 @@ votre disposition pour vous aider à préparer cette partie théorique.
 
 ### Rendu
 
-Une fois la partie terminée, l'étudiant.e doit remettre sa feuille de réponses à
+Une fois la partie terminée, l'étudiant·e doit remettre sa feuille de réponses à
 l'examinateur.trice.
 
 Elle peut quitter silencieusement la salle une fois la partie terminée.
 
 ## Partie 2
 
-L'évaluation pratique sera réalisée sur l'ordinateur de l'étudiant.e à l'aide
+L'évaluation pratique sera réalisée sur l'ordinateur de l'étudiant·e à l'aide
 d'un environnement de développement adapté à PHP et portera sur la réalisation
 d'un projet concret.
 
@@ -125,7 +125,7 @@ Classroom.
 >
 > Vous êtes libre d'effectuer des commits de tests avant le début de
 > l'évaluation si vous le souhaitez pour valider votre installation. Vous ne
-> serez pas pénalisé.e.
+> serez pas pénalisé·e.
 
 ### Échelle d'évaluation
 

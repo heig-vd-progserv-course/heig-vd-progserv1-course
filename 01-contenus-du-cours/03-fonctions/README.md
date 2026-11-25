@@ -88,6 +88,13 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 - [Questions d'évaluation](#questions-dévaluation)
 - [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
 
+## Exploration du mini-projet
+
+Avant de commencer, explorez le mini-project à l'aide du document
+[Activités en classe](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/03-fonctions/03-fonctions-impressions.pdf)
+et du site web déployé pour le mini-projet :
+<https://progserv1.heig-vd-progserv-course.ch>.
+
 ## Objectifs
 
 Les fonctions sont un concept fondamental en programmation. Elles permettent de

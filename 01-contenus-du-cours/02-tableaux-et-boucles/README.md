@@ -66,6 +66,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 ## Table des matières
 
 - [Table des matières](#table-des-matières)
+- [Exploration du mini-projet](#exploration-du-mini-projet)
 - [Objectifs](#objectifs)
 - [Les tableaux](#les-tableaux)
   - [Tableaux indexés](#tableaux-indexés)
@@ -86,6 +87,13 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 - [Mini-projet](#mini-projet)
 - [Questions d'évaluation](#questions-dévaluation)
 - [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
+
+## Exploration du mini-projet
+
+Avant de commencer, explorez le mini-project à l'aide du document
+[Activités en classe](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/02-tableaux-et-boucles/02-tableaux-et-boucles-impressions.pdf)
+et du site web déployé pour le mini-projet :
+<https://progserv1.heig-vd-progserv-course.ch>.
 
 ## Objectifs
 
