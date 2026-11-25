@@ -114,8 +114,7 @@ Donnez lui le même nom que l'issue correspondante.
 ### Créer la base de données pour les tâches
 
 Maintenant que nous avons créé le fichier `database.php`, nous pouvons créer la
-base de données SQLite et la table pour stocker les données des animaux de
-compagnie.
+base de données SQLite et la table pour stocker les données des tâches.
 
 Pour cela, vous allez utiliser la classe `PDO` pour créer la base de données et
 la table.
@@ -874,8 +873,8 @@ page, elle doit être échappée avec la fonction `htmlspecialchars()`
 (<https://www.php.net/manual/fr/function.htmlspecialchars.php>).
 
 Dans cette section, nous allons mettre à jour le code de toutes les pages
-existantes pour échapper les données de l'animal de compagnie avant de les
-afficher :
+existantes pour échapper les données issues des utilisateur·trices ou de la base
+de données avant de les afficher :
 
 ```diff
 diff --git a/mini-projet/public/create.php b/mini-projet/public/create.php

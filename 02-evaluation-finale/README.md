@@ -96,12 +96,12 @@ autorisées (voir [Ressources autorisées](#ressources-autorisées-1)).
 
 ### Rendu
 
-Le dépôt du code se fera sur GitHub Classroom. Pour accéder au dépôt, utilisez
-le lien suivant : <https://classroom.github.com/a/k-kL7NQ5>.
+Le dépôt du code se fera sur Classroom. Pour accéder au dépôt, utilisez le lien
+suivant : <https://classroom50.org/>.
 
-Sélectionnez ensuite votre personne dans la liste pour rejoindre le GitHub
-Classroom. Il faudra ensuite accepter l'invitation pour accéder au dépôt privé
-qui a été créé pour vous.
+Accédez ensuite aux devoirs et cliquez sur le devoir intitulé "Évaluation
+finale". Un dépôt GitHub sera créé pour vous. Clonez ce dépôt sur votre machine
+locale.
 
 Vous pourrez ensuite y pousser votre code pendant l'évaluation.
 
@@ -110,9 +110,9 @@ Vous êtes responsable du contenu de votre travail.
 Le travail et la consigne doivent être rendus avant la fin de l'examen. Tout
 travail rendu après la fin de l'examen ne sera pas pris en compte.
 
-Pour ce travail, il n'est pas nécessaire d'utiliser le workflow Git/GitHub. Vous
-pouvez directement pousser votre code sur la branche principale du dépôt GitHub
-Classroom.
+Pour ce travail, il n'est pas nécessaire d'utiliser le workflow Git/GitHub
+comportant les issues, les pull requests, etc. Vous pouvez directement pousser
+votre code sur la branche principale du dépôt Git dédié à votre travail.
 
 > [!CAUTION]
 >
@@ -142,7 +142,7 @@ Note maximale : (nombre de points obtenus / nombre de points totaux) × 5 + 1.
 > [!NOTE]
 >
 > Il n'y a aucun critère sur l'aspect visuel de l'application. Vous pouvez
-> utiliser du HTML et du CSS de base (CSS optionnel), mais l'accent doit être
+> utiliser du HTML et du CSS de base, avec ou sans µCSS, mais l'accent doit être
 > mis sur la fonctionnalité et la structure du code.
 
 #### Contraintes
@@ -153,8 +153,8 @@ Note maximale : (nombre de points obtenus / nombre de points totaux) × 5 + 1.
 > l'examen (partie 1 + partie 2).
 
 - Votre application ne doit pas contenir de code ou de commentaires hors
-  contexte (par exemple, liés à d'autres projets comme le mini-projet sur les
-  animaux de compagnie, du code utilisant des concepts que nous n'avons pas
+  contexte (par exemple, liés à d'autres projets comme le mini-projet sur le
+  gestionnaire de tâches, du code utilisant des concepts que nous n'avons pas
   étudiés en cours, du code généré par IA, etc.).
 - Le code doit être votre propre travail. Toute tentative de plagiat ou de
   tricherie entraînera la note de 1 pour l'ensemble de l'examen.
@@ -207,6 +207,6 @@ de l'évaluation (partie 1 + partie 2).**
 
 ## S'entraîner
 
-Un examen blanc est disponible pour vous entraîner à cette évaluation,
-disponible ici :
-[Accéder au contenu](../01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-lexamen/02-examen-blanc/README.md).
+Un exemple d'évaluation finale est disponible pour vous entraîner à cette
+évaluation, disponible ici :
+[Accéder au contenu](../01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-levaluation-finale/02-exemple-devaluation-finale/README.md).

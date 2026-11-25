@@ -59,7 +59,7 @@ Quelle est la grande différence entre le mini-projet de cette séance et celui 
 la séance précédente ?
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{4cm}
 ```
 
 ### Question 2
@@ -68,7 +68,7 @@ Avec ce que vous savez sur les bases de données, comment est construite la base
 de données du mini-projet ?
 
 ```{=latex}
-\answerbox{0.5cm}
+\answerbox{4cm}
 ```
 
 ### Question 3
@@ -77,59 +77,21 @@ Quelles sont les requêtes SQL utilisées dans le mini-projet pour interagir ave
 la base de données ?
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{4cm}
+```
+
+```{=latex}
+\newpage
 ```
 
 ### Question 4
 
-Comment pensez-vous que
+Quelle nouvelle page est présente dans le mini-projet et à quoi sert-elle ?
+Quelles sont les différences ou les ressemblances avec les autres pages du
+mini-projet ?
 
 ```{=latex}
-\answerbox{3cm}
-```
-
-```{=latex}
-\newpage
-```
-
-### Question 5
-
-Comment pensez-vous que le mini-projet est structuré ? (ex. : nombre de
-fichiers, organisation des fichiers, etc.)
-
-```{=latex}
-\answerbox{3.5cm}
-```
-
-### Question 6
-
-Comment pensez-vous que les données sont échangées et stockées dans cette
-application ?
-
-```{=latex}
-\answerbox{3.5cm}
-```
-
-### Question 7
-
-Avez-vous découvert des limites ou des problèmes dans le mini-projet ? Si oui,
-lesquels ?
-
-```{=latex}
-\answerbox{3.5cm}
-```
-
-### Question 8
-
-De quoi est composé une tâche dans le mini-projet ? (ex. : quelles sont les
-informations qui la composent ?)
-
-```{=latex}
-\answerbox{3.5cm}
-```
-
-```{=latex}
-\newpage
+\answerbox{5cm}
 ```
 
 ## Partie 2 - Rétrospective de la séance
@@ -149,51 +111,43 @@ la séance en répondant aux questions ci-dessous.
 A quoi sert PDO et comment est-il utilisé dans le mini-projet ?
 
 ```{=latex}
-\answerbox{9.5cm}
+\answerbox{4cm}
 ```
 
 ### Question 2
 
-Comment PDO a été utilisé pour interagir avec la base de données dans le
-mini-projet ?
+Quelles sont les attaques communes dans une application web et comment s'en
+protéger ?
 
 ```{=latex}
-\answerbox{9.5cm}
+\answerbox{4cm}
+```
+
+```{=latex}
+\newpage
 ```
 
 ### Question 3
 
 Vous devez maintenant créer une nouvelle page d'édition pour le mini-projet.
 
-Quelles sont les étapes que vous suivriez pour la développer ? (ex. :
-planification, conception, développement, tests, déploiement, etc.)
+Quelles sont les étapes que vous suivriez pour la développer ?
 
-Validez votre réponse en expliquant les étapes que vous suivriez pour développer
-une nouvelle page d'édition pour le mini-projet, en vous basant sur ce que vous
-avez appris dans le cours.
+Soyez précis·e et détaillé·e dans votre réponse. Vous pouvez vous inspirer des
+pages existantes du mini-projet pour répondre à cette question.
 
 Une fois votre réponse formulée, présentez-la à votre enseignant·e pour
 validation avant de passer à l'implémentation de la page d'édition.
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{20cm}
+```
+
+```{=latex}
+\newpage
 ```
 
 ### Question 4
-
-Vous devez refaire un projet similaire à celui que vous avez créé dans le cours.
-Quelles sont les étapes que vous suivriez pour le développer ? (ex. :
-planification, conception, développement, tests, déploiement, etc.)
-
-Soyez précis·e et détaillé·e dans votre réponse, en expliquant les étapes que
-vous suivriez pour développer un projet similaire à celui que vous avez créé
-dans le cours.
-
-```{=latex}
-\answerbox{3cm}
-```
-
-### Question 3
 
 Avez-vous déployé l'application en ligne sur Internet ? Si oui, comment
 avez-vous procédé et quelles sont les étapes à suivre pour déployer une
@@ -201,7 +155,7 @@ application web sur Internet ? Si non, pourquoi n'avez-vous pas déployé
 l'application en ligne sur Internet ?
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{11.5cm}
 ```
 
 ### Liste de contrôle

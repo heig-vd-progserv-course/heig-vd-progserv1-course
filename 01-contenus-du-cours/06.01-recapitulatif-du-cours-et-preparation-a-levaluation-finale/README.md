@@ -11,12 +11,13 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 > **Ressources annexes**
 >
 > - Autres formats :
->   [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-lexamen/presentation.html)
+>   [Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-levaluation-finale/presentation.html)
 >   ·
->   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-lexamen/06.01-recapitulatif-du-cours-et-preparation-a-lexamen-presentation.pdf).
+>   [Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-levaluation-finale/06.01-recapitulatif-du-cours-et-preparation-a-levaluation-finale-presentation.pdf).
 > - Résultats des formulaires de feedback et évaluations GAPS :
 >   [Accéder aux résultats](./01-resultats-des-formulaires-de-feedback-et-evaluations-gaps/README.md)
-> - Examen blanc : [Accéder au contenu](./02-examen-blanc/README.md).
+> - Exemple d'évaluation finale :
+>   [Accéder au contenu](./02-exemple-devaluation-finale/README.md).
 >
 > **Objectifs**
 >
@@ -29,7 +30,8 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 > - Préparer efficacement son environnement de développement pour l'examen
 >   final.
 > - Réviser les concepts clés abordés durant l'unité d'enseignement.
-> - Mettre en pratique les concepts acquis au travers d'un examen blanc.
+> - Mettre en pratique les concepts acquis au travers d'un exemple d'évaluation
+>   finale.
 >
 > **Méthodes d'enseignement et d'apprentissage**
 >
@@ -42,8 +44,8 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 >
 > **Méthodes d'évaluation**
 >
-> L'évaluation du contenu prend la forme d'un examen blanc et d'exercices à
-> réaliser en autonomie en classe ou à la maison.
+> L'évaluation du contenu prend la forme d'un exemple d'évaluation finale et
+> d'exercices à réaliser en autonomie en classe ou à la maison.
 >
 > L'évaluation se fait en utilisant les critères suivants :
 >
@@ -74,9 +76,9 @@ bloc d'information en haut de ce contenu.
 Le contenu de ce document est décrit dans la présentation associée, disponible
 ici :
 
-[Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-lexamen/presentation.html)
+[Présentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-levaluation-finale/presentation.html)
 ·
-[Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-lexamen/06.01-recapitulatif-du-cours-et-preparation-a-lexamen-presentation.pdf).
+[Présentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-levaluation-finale/06.01-recapitulatif-du-cours-et-preparation-a-levaluation-finale-presentation.pdf).
 
 <!-- URLs -->
 
