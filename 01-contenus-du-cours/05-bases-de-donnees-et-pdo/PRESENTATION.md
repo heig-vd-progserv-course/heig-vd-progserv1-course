@@ -483,9 +483,9 @@ Les résultats seront discutés au prochain cours. **Merci beaucoup !**
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/05-bases-de-donnees-et-pdo/03-exercices/README.md
 [mini-projet]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/05-bases-de-donnees-et-pdo/01-mini-projet/README.md
-[feedback]: https://framaforms.org/progserv1-2026-2027-feedback-1778517625
+[feedback]: https://forms.gle/Q65nBBK5cU7v26LJ6
 [feedback-qr-code]:
-	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/progserv1-2026-2027-feedback-1778517625
+	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://forms.gle/Q65nBBK5cU7v26LJ6
 
 <!-- Illustrations -->
 

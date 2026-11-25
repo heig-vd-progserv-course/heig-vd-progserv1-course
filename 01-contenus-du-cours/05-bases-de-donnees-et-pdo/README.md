@@ -663,9 +663,8 @@ les attaques par injection SQL et les attaques par cross-site scripting (XSS).
 
 ## Feedback
 
-Le
-[formulaire de feedback](https://framaforms.org/progserv1-2026-2027-feedback-1778517625)
-vous **permet de partager votre retour** sur le cours _"ProgServ1"_.
+Le [formulaire de feedback](https://forms.gle/Q65nBBK5cU7v26LJ6) vous **permet
+de partager votre retour** sur le cours _"ProgServ1"_.
 
 Il ne prend **que quelques minutes** et est **anonyme**.
 
