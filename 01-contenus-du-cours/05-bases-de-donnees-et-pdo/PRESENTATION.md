@@ -120,7 +120,7 @@ sécurisée.
 
 - Consistent à insérer du code SQL malveillant dans une requête SQL existante
   pour manipuler la base de données de manière non prévue.
-- Par exemple, un.e attaquant.e pourrait insérer du code SQL pour supprimer des
+- Par exemple, un·e attaquant·e pourrait insérer du code SQL pour supprimer des
   données, voler des données sensibles ou même prendre le contrôle de la base de
   données.
 - L'attaque consiste à manipuler la base de données.
@@ -128,7 +128,7 @@ sécurisée.
 ### Les attaques par cross-site scripting (XSS)
 
 - Consistent à stocker du code JavaScript malveillant dans une base de données
-  pour qu'il soit exécuté lorsqu'un.e utilisateur.trice accède à une page web
+  pour qu'il soit exécuté lorsqu'un·e utilisateur.trice accède à une page web
   qui affiche ces données.
 - Par exemple, un attaquant pourrait insérer du code JavaScript pour voler des
   informations sensibles, rediriger les utilisateur.trices vers des sites
@@ -221,17 +221,17 @@ $stmt->execute();
 ### Insertion de données
 
 ```php
-// On définit la requête SQL pour ajouter un.e utilisateur.trice
+// On définit la requête SQL pour ajouter un·e utilisateur.trice
 $sql = "INSERT INTO users (name, email) VALUES (:username, :email)";
 
-// Préparation de la requête SQL pour ajouter un.e utilisateur.trice
+// Préparation de la requête SQL pour ajouter un·e utilisateur.trice
 $stmt = $pdo->prepare($sql);
 
 // On lie les paramètres de la requête SQL aux valeurs à insérer
 $stmt->bindValue(':username', 'John Doe');
 $stmt->bindValue(':email', 'john.doe@heig-vd.ch');
 
-// Exécution de la requête SQL pour ajouter un.e utilisateur.trice
+// Exécution de la requête SQL pour ajouter un·e utilisateur.trice
 $stmt->execute();
 ```
 
@@ -242,10 +242,10 @@ $stmt->execute();
 $stmt->bindValue(':username', 'Jane Smith');
 $stmt->bindValue(':email', 'jane.smith@heig-vd.ch');
 
-// Exécution de la requête SQL pour ajouter un.e utilisateur.trice
+// Exécution de la requête SQL pour ajouter un·e utilisateur.trice
 $stmt->execute();
 
-// On récupère l'identifiant de l'utilisateur.e inséré.e
+// On récupère l'identifiant de l'utilisateur·e inséré·e
 $lastId = $pdo->lastInsertId();
 
 // On affiche l'identifiant du dernier élément inséré
@@ -430,8 +430,7 @@ Est-ce que vous avez des questions ?
 Le [formulaire de feedback][feedback] vous **permet de partager votre retour**
 sur le cours _"ProgServ1"_.
 
-Il ne prend **que quelques minutes** et est **anonyme**. Vous pouvez aussi y
-**demander un/des cours d'appui**.
+Il ne prend **que quelques minutes** et est **anonyme**.
 
 Les résultats seront discutés au prochain cours. **Merci beaucoup !**
 

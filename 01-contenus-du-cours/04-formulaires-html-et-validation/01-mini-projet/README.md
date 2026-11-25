@@ -1419,8 +1419,8 @@ if ($task === null) {
     <link rel="stylesheet" href="https://unpkg.com/@digicreon/mucss/dist/mu.css">
     <link rel="stylesheet" href="./css/styles.css">
 
-    <title>Supprimer la tâche | <?= APP_NAME; ?> <?= APP_AUTHOR; ?></title>
-    <meta name="description" content="Supprimer une tâche pour <?= APP_AUTHOR; ?>.">
+    <title>Supprimer la tâche | <?= APP_NAME ?> <?= APP_AUTHOR ?></title>
+    <meta name="description" content="Supprimer une tâche pour <?= APP_AUTHOR ?>.">
 </head>
 
 <body class="container">
@@ -1688,6 +1688,13 @@ actuellement toujours `false` pour simuler un échec de la suppression.
 Au moins, nous avons maintenant mis en place le formulaire de suppression d'une
 tâche et la fonction pour supprimer une tâche, même si la suppression réelle
 n'est pas encore implémentée grâce à l'identifiant de la tâche.
+
+> [!TIP]
+>
+> Ici serait un bon moment pour valider et fusionner la pull request de votre
+> branche de travail vers la branche principale du dépôt GitHub du mini-projet.
+> Vous pourrez ensuite créer une nouvelle branche pour la prochaine
+> fonctionnalité.
 
 ## Conclusion
 

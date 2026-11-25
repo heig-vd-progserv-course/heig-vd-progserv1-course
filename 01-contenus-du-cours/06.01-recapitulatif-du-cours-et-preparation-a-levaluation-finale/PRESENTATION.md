@@ -5,11 +5,12 @@ size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 description:
-  Récapitulatif du cours et préparation à l'examen pour le cours ProgServ1 à la
-  HEIG-VD, Suisse
-url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-lexamen/presentation.html
+  Récapitulatif du cours et préparation à l'évaluation finale pour le cours
+  ProgServ1 à la HEIG-VD, Suisse
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-levaluation-finale/presentation.html
 header:
-  "[**Récapitulatif du cours et préparation à l'examen**][contenu-complet]"
+  "[**Récapitulatif du cours et préparation à l'évaluation
+  finale**][contenu-complet]"
 footer:
   "[**HEIG-VD**](https://heig-vd.ch) - [ProgServ1 Course
   2026-2027](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
@@ -18,7 +19,7 @@ headingDivider: 6
 math: mathjax
 ---
 
-# Récapitulatif du cours et préparation à l'examen
+# Récapitulatif du cours et préparation à l'évaluation finale
 
 <!--
 _class: lead
@@ -45,7 +46,7 @@ _Cette présentation est un résumé du contenu complet disponible sur GitHub._
 _Pour plus de détails, retrouvez le contenu complet [ici][contenu-complet] ou en
 cliquant sur l'en-tête de ce document._
 
-## Récapitulatif du cours et préparation à l'examen
+## Récapitulatif du cours et préparation à l'évaluation finale
 
 <!-- _class: lead -->
 
@@ -288,7 +289,7 @@ de vous faire renvoyer**.
 - Relire les supports de cours avec leurs objectifs respectifs (utilisez ces
   objectifs pour valider vos acquis).
 - Refaire les mini-projets et les exercices.
-- Réaliser l'[examen blanc][examen-blanc] à disposition.
+- Réaliser l'[exemple d'évaluation finale][examen-blanc] à disposition.
 
 ## Questions
 
@@ -302,7 +303,7 @@ Est-ce que vous avez des questions ?
   le mini-projet du cours.
 - Prendre connaissance du document
   [Évaluation finale](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/02-evaluation-finale/README.md).
-- Réaliser l'[examen blanc][examen-blanc] à votre disposition.
+- Réaliser l'[exemple d'évaluation finale][examen-blanc] à votre disposition.
 - Poser des questions si nécessaire.
 
 **N'allez pas trop vite, vous avez le temps !** N'hésitez pas à vous entraidez
@@ -419,9 +420,9 @@ Source :
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 [contenu-complet]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-lexamen/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-levaluation-finale/README.md
 [examen-blanc]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-lexamen/02-examen-blanc/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-levaluation-finale/02-exemple-devaluation-finale/README.md
 
 <!-- Illustrations -->
 

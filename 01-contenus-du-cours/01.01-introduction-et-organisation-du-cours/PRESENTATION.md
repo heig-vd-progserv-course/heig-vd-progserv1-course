@@ -258,7 +258,7 @@ Tout est décrit dans le document
 - Relire les supports de cours et tester les exemples de code.
 - Travailler sur le mini-projet.
 - Pratiquer les exercices.
-- Discuter avec les autres étudiant.es et poser des questions.
+- Discuter avec les autres étudiant·es et poser des questions.
 
 **Il n'y a pas de secret** : la meilleure façon de se préparer est de pratiquer
 et de travailler sur le mini-projet.
@@ -321,11 +321,11 @@ Quelques règles concernant l'utilisation de ces outils pour vos rendus :
 
 ## _"Qu'en est-il de ChatGPT, etc. ?"_ (4)
 
-- En cas de doutes de notre part, vous pourriez être questionné.e.
+- En cas de doutes de notre part, vous pourriez être questionné·e.
 - **Si vos explications ne sont pas convaincantes, injustifiées dans le contexte
-  ou si vous n'êtes pas transparent.e sur l'utilisation de ces outils**, je
+  ou si vous n'êtes pas transparent·e sur l'utilisation de ces outils**, je
   considère que vous n'avez pas acquis les compétences nécessaires du cours.
-  **Vous serez alors pénalisé.e avec la note 1 pour l'évaluation concernée**.
+  **Vous serez alors pénalisé·e avec la note 1 pour l'évaluation concernée**.
 - En cas de doutes, n'hésitez pas à me contacter pour discuter de votre
   utilisation de ces outils.
 

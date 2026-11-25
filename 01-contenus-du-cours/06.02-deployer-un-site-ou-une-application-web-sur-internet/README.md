@@ -143,9 +143,9 @@ organisation lors de votre inscription au programme étudiant.
 </details>
 
 Une fois la bonne organisation sélectionnée, vous devez fournir une preuve que
-vous êtes étudiant.e à la HEIG-VD. Pour cela, vous pouvez utiliser votre carte
-d'étudiant.e ou votre attestation d'étude. Vous devez également fournir une
-adresse e-mail HEIG-VD pour vérifier que vous êtes bien étudiant.e à la HEIG-VD.
+vous êtes étudiant·e à la HEIG-VD. Pour cela, vous pouvez utiliser votre carte
+d'étudiant·e ou votre attestation d'étude. Vous devez également fournir une
+adresse e-mail HEIG-VD pour vérifier que vous êtes bien étudiant·e à la HEIG-VD.
 
 Saisissez le nom de votre école (_"HEIG-VD"_) et votre adresse e-mail HEIG-VD
 dans le formulaire.
@@ -169,17 +169,17 @@ votre inscription au programme étudiant.
 </details>
 
 Une fois votre inscription confirmée, Infomaniak vérifiera votre statut
-d'étudiant.e auprès de la HEIG-VD. Ce processus peut prendre quelques jours.
+d'étudiant·e auprès de la HEIG-VD. Ce processus peut prendre quelques jours.
 Vous pouvez vérifier le statut de votre demande dans votre compte Infomaniak.
 
 > [!IMPORTANT]
 >
 > Infomaniak peut mettre plusieurs jours ouvrables pour vérifier votre statut
-> d'étudiant.e. Vous recevrez un e-mail de confirmation une fois que votre
+> d'étudiant·e. Vous recevrez un e-mail de confirmation une fois que votre
 > statut sera approuvé.
 >
 > Si vous ne recevez pas d'e-mail de confirmation dans les 7 jours, annoncez-le
-> à votre enseignant.e.
+> à votre enseignant·e.
 
 <details>
 <summary>Afficher les captures d'écran illustrant l'étape</summary>
@@ -190,7 +190,7 @@ Vous pouvez vérifier le statut de votre demande dans votre compte Infomaniak.
 
 </details>
 
-Une fois votre statut d'étudiant.e approuvé par Infomaniak, connectez-vous à
+Une fois votre statut d'étudiant·e approuvé par Infomaniak, connectez-vous à
 votre compte Infomaniak et accédez à la page du programme étudiant pour vérifier
 que votre statut est bien approuvé.
 
@@ -557,7 +557,7 @@ Deux options s'offrent à vous pour cela :
    avez déjà commandé le nom de domaine `mondomaine.ch` pour votre hébergement
    web, vous pouvez acheter un nouveau nom de domaine `mondomaine2.ch` pour le
    nouveau site web. La HEIG-VD ne remboursera qu'un seul nom de domaine par
-   étudiant.e, donc n'achetez un nouveau nom de domaine que si vous en avez
+   étudiant·e, donc n'achetez un nouveau nom de domaine que si vous en avez
    besoin pour votre projet.
 2. Associer le site web à un domaine/sous-domaine du domaine principal que vous
    avez déjà commandé pour votre hébergement web. Par exemple, si vous avez déjà
@@ -569,7 +569,7 @@ Deux options s'offrent à vous pour cela :
 
 > [!NOTE]
 >
-> Si vous n'êtes pas sûr.e de l'option à choisir, nous vous recommandons
+> Si vous n'êtes pas sûr·e de l'option à choisir, nous vous recommandons
 > d'associer le site web à un sous-domaine du nom de domaine que vous avez déjà
 > commandé pour votre hébergement web.
 >
@@ -1145,7 +1145,7 @@ ssh <nom d'utilisateur>@<hôte de l'hébergement web>
 Vous pourrez ensuite accepter la connexion et saisir le mot de passe pour vous
 connecter.
 
-Une fois connecté.e sur l'hébergement web, vous êtes sur un serveur Linux sur
+Une fois connecté·e sur l'hébergement web, vous êtes sur un serveur Linux sur
 lequel vous pouvez installer Node.js et/ou cloner des dépôts Git directement sur
 l'hébergement Infomaniak.
 
@@ -1271,7 +1271,7 @@ suivante :
    d'environnement que vous pourriez devoir configurer (informations de
    connexion à la base de données selon la section
    [Ajouter une base de données dédiée](#ajouter-une-base-de-données-dédiée),
-   etc.), modifier le fichier `.env` pour modifier les variables d'environnement
+   etc.), modifier le fichier `·env` pour modifier les variables d'environnement
    suivantes :
 
    ```text
@@ -1373,7 +1373,7 @@ le montant du nom de domaine en espèce ou via TWINT.
 > application web sur Internet.
 
 Le programme étudiant d'Infomaniak est valable pour une année. Il est possible
-de le renouveler pour une année supplémentaire si vous êtes toujours étudiant.e
+de le renouveler pour une année supplémentaire si vous êtes toujours étudiant·e
 à la HEIG-VD.
 
 <details>
@@ -1383,7 +1383,7 @@ de le renouveler pour une année supplémentaire si vous êtes toujours étudian
 
 </details>
 
-Si vous n'êtes plus étudiant.e, l'offre sera automatiquement révoquée mais il
+Si vous n'êtes plus étudiant·e, l'offre sera automatiquement révoquée mais il
 est nécessaire de s'assurer que le renouvellement automatique du nom de domaine
 et de l'hébergement web a bien été désactivé (voir section
 [Désactiver le renouvellement automatique](#désactiver-le-renouvellement-automatique)).

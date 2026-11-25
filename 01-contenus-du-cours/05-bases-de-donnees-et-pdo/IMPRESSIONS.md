@@ -55,79 +55,43 @@ séance 5).
 
 ### Question 1
 
-Quelles sont les fonctionnalités principales que propose le mini-projet ?
+Quelle est la grande différence entre le mini-projet de cette séance et celui de
+la séance précédente ?
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{4cm}
 ```
 
 ### Question 2
 
-Combien de pages composent le mini-projet ?
+Avec ce que vous savez sur les bases de données, comment est construite la base
+de données du mini-projet ?
 
 ```{=latex}
-\answerbox{0.5cm}
+\answerbox{4cm}
 ```
 
 ### Question 3
 
-Pour chaque page, quelles sont les informations affichées et les actions
-possibles ?
+Quelles sont les requêtes SQL utilisées dans le mini-projet pour interagir avec
+la base de données ?
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{4cm}
+```
+
+```{=latex}
+\newpage
 ```
 
 ### Question 4
 
-Quelles sont les technologies utilisées pour implémenter le mini-projet ?
+Quelle nouvelle page est présente dans le mini-projet et à quoi sert-elle ?
+Quelles sont les différences ou les ressemblances avec les autres pages du
+mini-projet ?
 
 ```{=latex}
-\answerbox{3cm}
-```
-
-```{=latex}
-\newpage
-```
-
-### Question 5
-
-Comment pensez-vous que le mini-projet est structuré ? (ex. : nombre de
-fichiers, organisation des fichiers, etc.)
-
-```{=latex}
-\answerbox{3.5cm}
-```
-
-### Question 6
-
-Comment pensez-vous que les données sont échangées et stockées dans cette
-application ?
-
-```{=latex}
-\answerbox{3.5cm}
-```
-
-### Question 7
-
-Avez-vous découvert des limites ou des problèmes dans le mini-projet ? Si oui,
-lesquels ?
-
-```{=latex}
-\answerbox{3.5cm}
-```
-
-### Question 8
-
-De quoi est composé une tâche dans le mini-projet ? (ex. : quelles sont les
-informations qui la composent ?)
-
-```{=latex}
-\answerbox{3.5cm}
-```
-
-```{=latex}
-\newpage
+\answerbox{5cm}
 ```
 
 ## Partie 2 - Rétrospective de la séance
@@ -144,61 +108,54 @@ la séance en répondant aux questions ci-dessous.
 
 ### Question 1
 
-Dans quel fichier se trouve la documentation du projet ? Pourquoi est-il si
-important ?
+A quoi sert PDO et comment est-il utilisé dans le mini-projet ?
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{4cm}
 ```
 
 ### Question 2
 
-Comment devez-vous ouvrir le projet dans Visual Studio Code pour que
-l'environnement de développement local fonctionne correctement ? Quelle est la
-commande à exécuter pour lancer le serveur web local ?
+Quelles sont les attaques communes dans une application web et comment s'en
+protéger ?
 
 ```{=latex}
-\answerbox{3cm}
-```
-
-### Question 3
-
-A quelle adresse (URL) pouvez-vous accéder pour visualiser votre projet dans
-votre navigateur web ?
-
-```{=latex}
-\answerbox{0.5cm}
-```
-
-### Question 4
-
-Qu'est-ce qu'un serveur web tel que Apache et à quoi sert-il dans le mini-projet
-? De quoi est-il composé et comment fonctionne-t-il ?
-
-```{=latex}
-\answerbox{3cm}
+\answerbox{4cm}
 ```
 
 ```{=latex}
 \newpage
 ```
 
-### Question 5
+### Question 3
 
-Quelle est la différence entre PHP et HTML ? Comment ces deux langages sont-ils
-utilisés dans le mini-projet ?
+Vous devez maintenant créer une nouvelle page d'édition pour le mini-projet.
+
+Quelles sont les étapes que vous suivriez pour la développer ?
+
+Soyez précis·e et détaillé·e dans votre réponse. Vous pouvez vous inspirer des
+pages existantes du mini-projet pour répondre à cette question.
+
+Une fois votre réponse formulée, présentez-la à votre enseignant·e pour
+validation avant de passer à l'implémentation de la page d'édition.
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{20cm}
 ```
 
-### Question 6
+```{=latex}
+\newpage
+```
 
-Donnez l'explication complète de ce qu'il se passe lorsque vous accédez à une
-page PHP dans votre navigateur web.
+### Question 4
+
+Avez-vous déployé l'application en ligne sur Internet ? Si oui, comment
+avez-vous procédé et quelles sont les étapes à suivre pour déployer une
+application web sur Internet ? Si non, pourquoi n'avez-vous pas déployé
+l'application en ligne sur Internet ?
 
 ```{=latex}
-\answerbox{3cm}
+\answerbox{11.5cm}
 ```
 
 ### Liste de contrôle

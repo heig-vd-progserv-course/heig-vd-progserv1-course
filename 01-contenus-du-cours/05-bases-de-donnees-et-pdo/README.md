@@ -60,6 +60,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 ## Table des matières
 
 - [Table des matières](#table-des-matières)
+- [Exploration du mini-projet](#exploration-du-mini-projet)
 - [Objectifs](#objectifs)
 - [Base de données](#base-de-données)
   - [Système de gestion de base de données (SGBD)](#système-de-gestion-de-base-de-données-sgbd)
@@ -80,11 +81,19 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
   - [Suppression de données](#suppression-de-données)
   - [Affichage des données de manière sécurisée](#affichage-des-données-de-manière-sécurisée)
 - [Conclusion](#conclusion)
+- [Feedback](#feedback)
 - [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
 - [Mini-projet](#mini-projet)
 - [Questions d'évaluation](#questions-dévaluation)
 - [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
+
+## Exploration du mini-projet
+
+Avant de commencer, explorez le mini-project à l'aide du document
+[Activités en classe](https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/01-contenus-du-cours/05-bases-de-donnees-et-pdo/05-bases-de-donnees-et-pdo-impressions.pdf)
+et du site web déployé pour le mini-projet :
+<https://progserv1.heig-vd-progserv-course.ch>.
 
 ## Objectifs
 
@@ -158,10 +167,10 @@ avec une base de données, nous devons être conscients des risques de sécurit�
 notamment les attaques par injection SQL et les attaques par cross-site
 scripting (XSS).
 
-En effet, comme nous allons permettre à nos utilisateur.trices de fournir des
+En effet, comme nous allons permettre à nos utilisateur·trices de fournir des
 données qui seront utilisées et stockées dans une base de données, il est
 crucial de se prémunir contre différentes types d'attaques qui peuvent nuire à
-la sécurité de notre application et de ses utilisateur.trices.
+la sécurité de notre application et de ses utilisateur·trices.
 
 Il existe principalement deux types d'attaques auxquelles nous devons faire
 attention lorsque nous travaillons avec des bases de données :
@@ -170,7 +179,7 @@ attention lorsque nous travaillons avec des bases de données :
 - Les attaques par cross-site scripting (XSS).
 
 Il s'agit de deux types d'attaques courantes qui peuvent compromettre la
-sécurité de votre application et de vos utilisateur.trices. Il est important de
+sécurité de votre application et de vos utilisateur·trices. Il est important de
 comprendre ces attaques et de mettre en place des mesures de sécurité pour les
 prévenir
 
@@ -179,7 +188,7 @@ prévenir
 Les attaques par injection SQL se produisent lorsque des données malveillantes
 sont insérées dans une requête SQL (dans le but de la modifier), ce qui peut
 compromettre la sécurité de votre application et de votre base de données. Ces
-attaques peuvent permettre à un.e attaquant.e de voler des données sensibles, de
+attaques peuvent permettre à un·e attaquant·e de voler des données sensibles, de
 modifier ou de supprimer des données, ou même de prendre le contrôle de votre
 serveur de base de données.
 
@@ -190,10 +199,10 @@ requêtes SQL envoyées à la base de données.
 
 Les attaques par cross-site scripting (XSS) se produisent lorsque des données
 malveillantes sont injectées dans une page web, ce qui peut compromettre la
-sécurité de votre application et de ses utilisateur.trices. Ces attaques peuvent
-permettre à un.e attaquant.e de voler des informations sensibles, de modifier le
+sécurité de votre application et de ses utilisateur·trices. Ces attaques peuvent
+permettre à un·e attaquant·e de voler des informations sensibles, de modifier le
 contenu de la page web, ou même de prendre le contrôle du navigateur de
-l'utilisateur.trice.
+l'utilisateur·trice.
 
 Les attaques par cross-site scripting (XSS) s'effectuent du côté du client en
 manipulant le contenu d'une page web.
@@ -201,8 +210,8 @@ manipulant le contenu d'une page web.
 ### Règles de base pour prévenir les attaques
 
 1. Ne faites **jamais** confiance aux données fournies par les
-   utilisateur.trices.
-2. Nettoyez et validez toujours les données fournies par les utilisateur.trices.
+   utilisateur·trices.
+2. Nettoyez et validez toujours les données fournies par les utilisateur·trices.
 3. Utilisez les mécanismes de sécurité intégrés à votre langage de programmation
    et à votre SGBD pour prévenir les attaques.
 
@@ -277,7 +286,7 @@ requêtes SQL sur celle-ci.
 PDO offre une fonctionnalité de requêtes préparées qui permet de se prémunir
 contre les attaques par injection SQL. Les requêtes préparées permettent de
 séparer la logique de la requête SQL des données qui y sont insérées, ce qui
-rend plus difficile pour un.e attaquant.e d'injecter du code malveillant dans la
+rend plus difficile pour un·e attaquant·e d'injecter du code malveillant dans la
 requête. En utilisant des requêtes préparées avec des paramètres liés, les
 données sont traitées de manière sécurisée par PDO, ce qui protège votre
 application contre les attaques par injection SQL.
@@ -321,7 +330,7 @@ que les colonnes `name` et `email` sont des champs de texte qui ne peuvent pas
 être nuls.
 
 La colonne `email` est également définie comme unique, ce qui signifie qu'aucun
-deux utilisateur.trices ne peuvent avoir la même adresse e-mail.
+deux utilisateur·trices ne peuvent avoir la même adresse e-mail.
 
 Nous préparons la requête SQL avec la méthode `prepare()`, puis nous exécutons
 la requête avec la méthode `execute()`.
@@ -345,34 +354,34 @@ const DATABASE_FILE = __DIR__ . '/database.db';
 // Création d'une instance de PDO pour se connecter à la base de données
 $pdo = new PDO("sqlite:" . DATABASE_FILE);
 
-// On définit la requête SQL pour ajouter un.e utilisateur.trice
+// On définit la requête SQL pour ajouter un·e utilisateur·trice
 $sql = "INSERT INTO users (name, email) VALUES (:username, :email)";
 
-// Préparation de la requête SQL pour ajouter un.e utilisateur.trice
+// Préparation de la requête SQL pour ajouter un·e utilisateur·trice
 $stmt = $pdo->prepare($sql);
 
 // On lie les paramètres de la requête SQL aux valeurs à insérer
 $stmt->bindValue(':username', 'John Doe');
 $stmt->bindValue(':email', 'john.doe@heig-vd.ch');
 
-// Exécution de la requête SQL pour ajouter un.e utilisateur.trice
+// Exécution de la requête SQL pour ajouter un·e utilisateur·trice
 $stmt->execute();
 
 // On lie les paramètres de la requête SQL aux valeurs à insérer
 $stmt->bindValue(':username', 'Jane Smith');
 $stmt->bindValue(':email', 'jane.smith@heig-vd.ch');
 
-// Exécution de la requête SQL pour ajouter un.e utilisateur.trice
+// Exécution de la requête SQL pour ajouter un·e utilisateur·trice
 $stmt->execute();
 
-// On récupère l'identifiant de l'utilisateur.e inséré.e
+// On récupère l'identifiant de l'utilisateur·e inséré·e
 $lastId = $pdo->lastInsertId();
 
 // On affiche l'identifiant du dernier élément inséré
 echo "L'identifiant du dernier élément inséré est : $lastId";
 ```
 
-Dans cet exemple, nous insérons deux nouveaux.elles utilisateur.trices dans la
+Dans cet exemple, nous insérons deux nouveaux·elles utilisateur·trices dans la
 table `users` à l'aide d'une requête SQL d'insertion qui contient des paramètres
 nommés (`:username` et `:email`).
 
@@ -406,26 +415,26 @@ const DATABASE_FILE = __DIR__ . '/database.db';
 // Création d'une instance de PDO pour se connecter à la base de données
 $pdo = new PDO("sqlite:" . DATABASE_FILE);
 
-// On définit la requête SQL pour récupérer l'utilisateur.trice spécifique
+// On définit la requête SQL pour récupérer l'utilisateur·trice spécifique
 $sql = "SELECT * FROM users WHERE name = :name";
 
-// On prépare la requête SQL pour récupérer l'utilisateur.trice spécifique
+// On prépare la requête SQL pour récupérer l'utilisateur·trice spécifique
 $stmt = $pdo->prepare($sql);
 
 // On lie les paramètres de la requête SQL aux valeurs à insérer
 $stmt->bindValue(':name', 'John Doe');
 
-// Exécution de la requête SQL pour récupérer l'utilisateur.trice spécifique
+// Exécution de la requête SQL pour récupérer l'utilisateur·trice spécifique
 $stmt->execute();
 
 // Récupère le résultat de la requête
 $user = $stmt->fetch();
 
-// On affiche l'utilisateur.trice
+// On affiche l'utilisateur·trice
 print_r($user);
 ```
 
-Dans cet exemple, nous récupérons un.e utilisateur.trice spécifique de la table
+Dans cet exemple, nous récupérons un·e utilisateur·trice spécifique de la table
 `users` en fonction de son identifiant.
 
 Ensuite, nous utilisons la méthode `fetch()` pour récupérer le résultat de la
@@ -442,28 +451,28 @@ const DATABASE_FILE = __DIR__ . '/database.db';
 // Création d'une instance de PDO pour se connecter à la base de données
 $pdo = new PDO("sqlite:" . DATABASE_FILE);
 
-// On définit la requête SQL pour récupérer l'utilisateur.trice `Jane Smith`
+// On définit la requête SQL pour récupérer l'utilisateur·trice `Jane Smith`
 $sql = "SELECT * FROM users";
 
-// On prépare la requête SQL pour récupérer l'utilisateur.trice spécifique
+// On prépare la requête SQL pour récupérer l'utilisateur·trice spécifique
 $stmt = $pdo->prepare($sql);
 
-// Exécution de la requête SQL pour récupérer l'utilisateur.trice spécifique
+// Exécution de la requête SQL pour récupérer l'utilisateur·trice spécifique
 $stmt->execute();
 
 // Récupère tous les résultats de la requête
 $users = $stmt->fetchAll();
 
-// On affiche les utilisateur.trices
+// On affiche les utilisateur·trices
 print_r($users);
 ```
 
-Dans cet exemple, nous récupérons tous les utilisateur.trices de la table
+Dans cet exemple, nous récupérons tous les utilisateur·trices de la table
 `users`.
 
 Ensuite, nous utilisons la méthode `fetchAll()` pour récupérer tous les
 résultats de la requête sous forme d'un tableau associatif multidimensionnel
-contenant tou.tes les utilisateur.trices.
+contenant tou.tes les utilisateur·trices.
 
 ### Mise à jour de données
 
@@ -478,10 +487,10 @@ const DATABASE_FILE = __DIR__ . '/database.db';
 // Création d'une instance de PDO pour se connecter à la base de données
 $pdo = new PDO("sqlite:" . DATABASE_FILE);
 
-// On définit la requête SQL pour mettre à jour l'utilisateur.trice spécifique
+// On définit la requête SQL pour mettre à jour l'utilisateur·trice spécifique
 $sql = "UPDATE users SET name = :name, email = :email WHERE id = :id";
 
-// On prépare la requête SQL pour mettre à jour l'utilisateur.trice
+// On prépare la requête SQL pour mettre à jour l'utilisateur·trice
 $stmt = $pdo->prepare($sql);
 
 // On lie les paramètres de la requête SQL aux valeurs à insérer
@@ -489,21 +498,21 @@ $stmt->bindValue(':name', 'Jane Doe');
 $stmt->bindValue(':email', 'jane.doe@heig-vd.ch');
 $stmt->bindValue(':id', 2);
 
-// On exécute la requête SQL pour mettre à jour l'utilisateur.trice
+// On exécute la requête SQL pour mettre à jour l'utilisateur·trice
 $stmt->execute();
 
-// On récupère l'utilisateur.trice mis à jour
+// On récupère l'utilisateur·trice mis à jour
 $sql = "SELECT * FROM users WHERE id = :id";
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':id', 2);
 $stmt->execute();
 $user = $stmt->fetch();
 
-// On affiche l'utilisateur.trice mis à jour
+// On affiche l'utilisateur·trice mis à jour
 print_r($user);
 ```
 
-Dans cet exemple, nous mettons à jour le nom de l'utilisateur.trice `Jane Smith`
+Dans cet exemple, nous mettons à jour le nom de l'utilisateur·trice `Jane Smith`
 en `Jane Doe` ainsi que son adresse e-mail.
 
 Nous utilisons la méthode `execute()` pour exécuter la requête SQL de mise à
@@ -511,9 +520,9 @@ jour.
 
 Nous utilisons la clause `WHERE` pour spécifier quel utilisateur nous souhaitons
 mettre à jour. Si nous ne spécifions pas de clause `WHERE`, tous les
-utilisateur.trices de la table seront mis à jour.
+utilisateur·trices de la table seront mis à jour.
 
-Puis nous récupérons l'utilisateur.trice mis à jour pour vérifier que la mise à
+Puis nous récupérons l'utilisateur·trice mis à jour pour vérifier que la mise à
 jour a été effectuée correctement.
 
 ### Suppression de données
@@ -529,33 +538,33 @@ const DATABASE_FILE = __DIR__ . '/database.db';
 // Création d'une instance de PDO pour se connecter à la base de données
 $pdo = new PDO("sqlite:" . DATABASE_FILE);
 
-// On définit la requête SQL pour supprimer l'utilisateur.trice spécifique
+// On définit la requête SQL pour supprimer l'utilisateur·trice spécifique
 $sql = "DELETE FROM users WHERE email = :email";
 
-// On prépare la requête SQL pour supprimer l'utilisateur.trice
+// On prépare la requête SQL pour supprimer l'utilisateur·trice
 $stmt = $pdo->prepare($sql);
 
 // On lie les paramètres de la requête SQL aux valeurs à insérer
 $stmt->bindValue(':email', 'jane.doe@heig-vd.ch');
 
-// On exécute la requête SQL pour supprimer l'utilisateur.trice
+// On exécute la requête SQL pour supprimer l'utilisateur·trice
 $stmt->execute();
 
-// On récupère tous les utilisateur.trices
+// On récupère tous les utilisateur·trices
 $sql = "SELECT * FROM users";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $users = $stmt->fetchAll();
 
-// On affiche les utilisateur.trices restant.es
+// On affiche les utilisateur·trices restant·es
 print_r($users);
 ```
 
-Dans cet exemple, nous supprimons l'utilisateur.trice `Jane Smith` de la table
+Dans cet exemple, nous supprimons l'utilisateur·trice `Jane Smith` de la table
 `users` en utilisant son adresse e-mail. Nous utilisons la clause `WHERE` pour
-spécifier quel utilisateur.trice nous souhaitons supprimer. Si nous ne
-spécifions pas de clause `WHERE`, tous les utilisateur.trices de la table seront
-supprimé.es.
+spécifier quel utilisateur·trice nous souhaitons supprimer. Si nous ne
+spécifions pas de clause `WHERE`, tous les utilisateur·trices de la table seront
+supprimé·es.
 
 ### Affichage des données de manière sécurisée
 
@@ -584,19 +593,19 @@ $stmt->bindValue(':email', '<script>alert("Oh no")</script>');
 
 $stmt->execute();
 
-// On définit la requête SQL pour récupérer tous les utilisateur.trices
+// On définit la requête SQL pour récupérer tous les utilisateur·trices
 $sql = "SELECT * FROM users";
 
-// On prépare la requête SQL pour récupérer tous les utilisateur.trices
+// On prépare la requête SQL pour récupérer tous les utilisateur·trices
 $stmt = $pdo->prepare($sql);
 
-// On exécute la requête SQL pour récupérer tous les utilisateur.trices
+// On exécute la requête SQL pour récupérer tous les utilisateur·trices
 $stmt->execute();
 
 // Récupère tous les résultats de la requête
 $users = $stmt->fetchAll();
 
-// On affiche les utilisateur.trices de manière non-sécurisée
+// On affiche les utilisateur·trices de manière non-sécurisée
 foreach ($users as $user) {
     echo "Nom : " . $user['name'] . "<br>";
     echo "Email : " . $user['email'] . "<br>";
@@ -604,14 +613,14 @@ foreach ($users as $user) {
 
 echo "<hr>";
 
-// On affiche les utilisateur.trices de manière sécurisée
+// On affiche les utilisateur·trices de manière sécurisée
 foreach ($users as $user) {
     echo "Nom : " . htmlspecialchars($user['name']) . "<br>";
     echo "Email : " . htmlspecialchars($user['email']) . "<br>";
 }
 ```
 
-Dans cet exemple, nous récupérons tous les utilisateur.trices de la table
+Dans cet exemple, nous récupérons tous les utilisateur·trices de la table
 `users` et nous les affichons de manière sécurisée en utilisant la fonction
 `htmlspecialchars()` pour échapper les caractères spéciaux.
 
@@ -619,13 +628,13 @@ Ce mécanisme d'échappement permet de prévenir les attaques par cross-site
 scripting (XSS) en s'assurant que les données affichées ne sont pas interprétées
 comme du code HTML ou JavaScript par le navigateur.
 
-En effet, imaginons que nous ayons dans notre base de données un.e
-utilisateur.trice avec le nom suivant : `<script>alert('Oh no');</script>` (un
+En effet, imaginons que nous ayons dans notre base de données un·e
+utilisateur·trice avec le nom suivant : `<script>alert('Oh no');</script>` (un
 bout de code JavaScript qui affiche ici un simple message d'alerte). Si nous
 affichons ce nom sans l'échapper, le navigateur interprétera ce code comme du
 JavaScript et exécutera la fonction `alert()`. Ici, une alerte n'est pas un
 problème majeur mais cela signifie que du code JavaScript peut être exécuté, ce
-qui peut être utilisé par un.e attaquant.e pour voler des informations sensibles
+qui peut être utilisé par un·e attaquant·e pour voler des informations sensibles
 ou pour compromettre la sécurité de votre application. En utilisant
 `htmlspecialchars()`, les caractères spéciaux sont convertis en entités HTML, ce
 qui empêche le navigateur d'interpréter le code comme du JavaScript et protège
@@ -635,7 +644,7 @@ Ainsi, dès que nous affichons des données qui proviennent d'une base de donné
 il est crucial de les afficher de manière sécurisée en utilisant des fonctions
 d'échappement comme `htmlspecialchars()` pour prévenir les attaques par
 cross-site scripting (XSS) et protéger la sécurité de votre application et de
-vos utilisateur.trices.
+vos utilisateur·trices.
 
 ## Conclusion
 
@@ -651,6 +660,16 @@ avons vu comment se connecter à une base de données SQLite avec PDO, créer un
 table, insérer des données, récupérer des données, mettre à jour des données,
 supprimer des données et afficher des données de manière sécurisée pour prévenir
 les attaques par injection SQL et les attaques par cross-site scripting (XSS).
+
+## Feedback
+
+Le
+[formulaire de feedback](https://framaforms.org/progserv1-2026-2027-feedback-1778517625)
+vous **permet de partager votre retour** sur le cours _"ProgServ1"_.
+
+Il ne prend **que quelques minutes** et est **anonyme**.
+
+Les résultats seront discutés au prochain cours. **Merci beaucoup !**
 
 ## Exemples de code
 
@@ -702,7 +721,7 @@ Vous trouverez les détails du mini-projet ici :
 - Comment mettre à jour des données dans une table avec PDO ?
 - Comment supprimer des données d'une table avec PDO ?
 - Pourquoi est-il important de valider et de nettoyer les données fournies par
-  les utilisateur.trices avant de les utiliser dans une application web qui
+  les utilisateur·trices avant de les utiliser dans une application web qui
   interagit avec une base de données ?
 - Quelles sont les bonnes pratiques pour prévenir les attaques par injection SQL
   et les attaques par cross-site scripting (XSS) lors de l'utilisation de bases

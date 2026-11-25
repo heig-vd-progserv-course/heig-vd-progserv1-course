@@ -1,16 +1,16 @@
-# Récapitulatif du cours et préparation à l'examen - Examen blanc
+# Récapitulatif du cours et préparation à l'évaluation finale - Exemple d'évaluation finale
 
-Cet examen blanc est conçu pour vous préparer à l'examen final du cours
-"Programmation serveur 1 (ProgServ1)".
+Cet exemple d'évaluation finale est conçu pour vous préparer à l'examen final du
+cours "Programmation serveur 1 (ProgServ1)".
 
 Plus de détails dans le contenu
-_["Récapitulatif du cours et préparation à l'examen"](../README.md)_.
+_["Récapitulatif du cours et préparation à l'évaluation finale"](../README.md)_.
 
-- [Examen blanc](#examen-blanc)
+- [Exemple d'évaluation finale](#exemple-dévaluation-finale)
   - [Partie théorique](#partie-théorique)
   - [Partie pratique](#partie-pratique)
 
-## Examen blanc
+## Exemple d'évaluation finale
 
 L'examen est composé de deux parties :
 
@@ -19,15 +19,16 @@ L'examen est composé de deux parties :
 
 > [!WARNING]
 >
-> L'examen final peut différer de cet examen blanc en termes de questions
-> posées, de fonctionnalités à implémenter, de critères d'évaluation, etc.
+> L'examen final peut différer de cet exemple d'évaluation finale en termes de
+> questions posées, de fonctionnalités à implémenter, de critères d'évaluation,
+> etc.
 >
-> Cet examen blanc est conçu pour vous aider à vous entraîner et à vous préparer
-> pour l'examen final, mais il ne garantit pas que les questions ou les tâches
-> de l'examen final seront exactement les mêmes.
+> Cet exemple d'évaluation finale est conçu pour vous aider à vous entraîner et
+> à vous préparer pour l'examen final, mais il ne garantit pas que les questions
+> ou les tâches de l'examen final seront exactement les mêmes.
 >
 > Il est important de réviser l'ensemble du contenu du cours et de comprendre
-> les concepts fondamentaux pour être bien préparé.e pour l'examen final.
+> les concepts fondamentaux pour être bien préparé·e pour l'examen final.
 
 ### Partie théorique
 
@@ -199,7 +200,7 @@ réponses qui soient possibles. Tout doit être correct pour obtenir les points.
 Vous devez développer une application web de gestion de projets avec PHP.
 Comment vous y prendriez-vous ?
 
-Soyez précis.e et expliquez les étapes nécessaires pour les différentes
+Soyez précis·e et expliquez les étapes nécessaires pour les différentes
 fonctionnalités de l'application et comment vous les implémenteriez.
 
 Listez la structure de votre application (fichiers, dossiers, etc.) et expliquez
@@ -233,10 +234,6 @@ Chaque projet a les attributs suivants :
   500 caractères).
 - Statut du projet (sélection, obligatoire, valeurs possibles : _"En cours"_,
   _"Terminé"_, _"Annulé"_).
-- Priorité du projet (boutons radio, obligatoire, valeurs possibles : _"Basse"_,
-  _"Moyenne"_, _"Haute"_).
-- Catégories du projet (cases à cocher, optionnel, valeurs possibles :
-  _"Développement"_, _"Finances"_, _"Administration"_ ou _"Marketing"_).
 
 La requête pour créer la base de données vous a été fournie afin de vous
 simplifier le travail :
@@ -246,9 +243,7 @@ CREATE TABLE IF NOT EXISTS projects (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
     description TEXT,
-    status TEXT NOT NULL,
-    priority TEXT NOT NULL,
-    categories TEXT
+    status TEXT NOT NULL
 );
 ```
 
@@ -259,10 +254,10 @@ développement web que vous avez acquises durant le cours.
 
 **Page d'accueil**
 
-|   # | Description                                                                                                                                                  | Points |
-| --: | :----------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-|   1 | La page d'accueil présente l'application, un bouton pour créer un nouveau projet ainsi que la liste des projets.                                             |      2 |
-|   2 | La liste des projets affiche les projets avec les attributs suivants : nom, description, statut, priorité et un bouton pour visualiser un projet spécifique. |      2 |
+|   # | Description                                                                                                      | Points |
+| --: | :--------------------------------------------------------------------------------------------------------------- | -----: |
+|   1 | La page d'accueil présente l'application, un bouton pour créer un nouveau projet ainsi que la liste des projets. |      2 |
+|   2 | La liste des projets affiche les projets avec leurs attributs et un bouton pour visualiser un projet spécifique. |      2 |
 
 **Page de création**
 
@@ -307,8 +302,8 @@ développement web que vous avez acquises durant le cours.
 > l'examen (partie 1 + partie 2).
 
 - Votre application ne doit pas contenir de code ou de commentaires hors
-  contexte (par exemple, liés à d'autres projets comme le mini-projet sur les
-  animaux de compagnie, du code utilisant des concepts que nous n'avons pas
+  contexte (par exemple, liés à d'autres projets comme le mini-projet sur le
+  gestionnaire de tâches, du code utilisant des concepts que nous n'avons pas
   étudiés en cours, du code généré par IA, etc.).
 - Le code doit être votre propre travail. Toute tentative de plagiat ou de
   tricherie entraînera la note de 1 pour l'ensemble de l'examen.

@@ -20,12 +20,12 @@
 
 ## Objectifs
 
-L'objectif de cette évaluation est de permettre à l'étudiant.e de démontrer sa
+L'objectif de cette évaluation est de permettre à l'étudiant·e de démontrer sa
 maîtrise des concepts fondamentaux du développement web avec PHP, ainsi que sa
 capacité à les appliquer dans un contexte de projet réel.
 
 L'évaluation vise à évaluer à la fois les connaissances théoriques et les
-compétences pratiques de l'étudiant.e, en mettant l'accent la compréhension, la
+compétences pratiques de l'étudiant·e, en mettant l'accent la compréhension, la
 qualité du code, la structure de l'application, et la capacité à suivre les
 bonnes pratiques de développement avec PHP.
 
@@ -47,7 +47,7 @@ fondamentaux abordés en cours.
 
 L'évaluation dure 90 minutes (1 heure 30 minutes).
 
-L'étudiant.e devra répondre à une série de questions concernant les notions clés
+L'étudiant·e devra répondre à une série de questions concernant les notions clés
 du développement web avec PHP.
 
 Les questions peuvent porter sur des notions théoriques, des bout de code à
@@ -62,14 +62,14 @@ votre disposition pour vous aider à préparer cette partie théorique.
 
 ### Rendu
 
-Une fois la partie terminée, l'étudiant.e doit remettre sa feuille de réponses à
+Une fois la partie terminée, l'étudiant·e doit remettre sa feuille de réponses à
 l'examinateur.trice.
 
 Elle peut quitter silencieusement la salle une fois la partie terminée.
 
 ## Partie 2
 
-L'évaluation pratique sera réalisée sur l'ordinateur de l'étudiant.e à l'aide
+L'évaluation pratique sera réalisée sur l'ordinateur de l'étudiant·e à l'aide
 d'un environnement de développement adapté à PHP et portera sur la réalisation
 d'un projet concret.
 
@@ -96,12 +96,12 @@ autorisées (voir [Ressources autorisées](#ressources-autorisées-1)).
 
 ### Rendu
 
-Le dépôt du code se fera sur GitHub Classroom. Pour accéder au dépôt, utilisez
-le lien suivant : <https://classroom.github.com/a/k-kL7NQ5>.
+Le dépôt du code se fera sur Classroom. Pour accéder au dépôt, utilisez le lien
+suivant : <https://classroom50.org/>.
 
-Sélectionnez ensuite votre personne dans la liste pour rejoindre le GitHub
-Classroom. Il faudra ensuite accepter l'invitation pour accéder au dépôt privé
-qui a été créé pour vous.
+Accédez ensuite aux devoirs et cliquez sur le devoir intitulé "Évaluation
+finale". Un dépôt GitHub sera créé pour vous. Clonez ce dépôt sur votre machine
+locale.
 
 Vous pourrez ensuite y pousser votre code pendant l'évaluation.
 
@@ -110,9 +110,9 @@ Vous êtes responsable du contenu de votre travail.
 Le travail et la consigne doivent être rendus avant la fin de l'examen. Tout
 travail rendu après la fin de l'examen ne sera pas pris en compte.
 
-Pour ce travail, il n'est pas nécessaire d'utiliser le workflow Git/GitHub. Vous
-pouvez directement pousser votre code sur la branche principale du dépôt GitHub
-Classroom.
+Pour ce travail, il n'est pas nécessaire d'utiliser le workflow Git/GitHub
+comportant les issues, les pull requests, etc. Vous pouvez directement pousser
+votre code sur la branche principale du dépôt Git dédié à votre travail.
 
 > [!CAUTION]
 >
@@ -125,7 +125,7 @@ Classroom.
 >
 > Vous êtes libre d'effectuer des commits de tests avant le début de
 > l'évaluation si vous le souhaitez pour valider votre installation. Vous ne
-> serez pas pénalisé.e.
+> serez pas pénalisé·e.
 
 ### Échelle d'évaluation
 
@@ -142,7 +142,7 @@ Note maximale : (nombre de points obtenus / nombre de points totaux) × 5 + 1.
 > [!NOTE]
 >
 > Il n'y a aucun critère sur l'aspect visuel de l'application. Vous pouvez
-> utiliser du HTML et du CSS de base (CSS optionnel), mais l'accent doit être
+> utiliser du HTML et du CSS de base, avec ou sans µCSS, mais l'accent doit être
 > mis sur la fonctionnalité et la structure du code.
 
 #### Contraintes
@@ -153,8 +153,8 @@ Note maximale : (nombre de points obtenus / nombre de points totaux) × 5 + 1.
 > l'examen (partie 1 + partie 2).
 
 - Votre application ne doit pas contenir de code ou de commentaires hors
-  contexte (par exemple, liés à d'autres projets comme le mini-projet sur les
-  animaux de compagnie, du code utilisant des concepts que nous n'avons pas
+  contexte (par exemple, liés à d'autres projets comme le mini-projet sur le
+  gestionnaire de tâches, du code utilisant des concepts que nous n'avons pas
   étudiés en cours, du code généré par IA, etc.).
 - Le code doit être votre propre travail. Toute tentative de plagiat ou de
   tricherie entraînera la note de 1 pour l'ensemble de l'examen.
@@ -207,6 +207,6 @@ de l'évaluation (partie 1 + partie 2).**
 
 ## S'entraîner
 
-Un examen blanc est disponible pour vous entraîner à cette évaluation,
-disponible ici :
-[Accéder au contenu](../01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-lexamen/02-examen-blanc/README.md).
+Un exemple d'évaluation finale est disponible pour vous entraîner à cette
+évaluation, disponible ici :
+[Accéder au contenu](../01-contenus-du-cours/06.01-recapitulatif-du-cours-et-preparation-a-levaluation-finale/02-exemple-devaluation-finale/README.md).

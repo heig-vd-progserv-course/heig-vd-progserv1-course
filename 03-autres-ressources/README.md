@@ -26,7 +26,7 @@ Je serai votre enseignant pour le cours "Programmation serveur 1 (ProgServ1)". J
 
 Vous trouverez toutes les informations sur le cours dans le dépôt GitHub suivant : https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course. Ce dépôt nous accompagnera tout au long du cours. Il n'y a rien à préparer ou lire en avance mais au moins vous avez déjà accès au point d'entrée du cours.
 
-Certaines séances sont encore en cours de relecture et de mise à jour. Pas que vous soyez étonné.es si vous voyez des changements dans les prochains jours et/ou durant le semestre.
+Certaines séances sont encore en cours de relecture et de mise à jour. Pas que vous soyez étonné·es si vous voyez des changements dans les prochains jours et/ou durant le semestre.
 
 Si vous avez des questions, n'hésitez pas à me contacter.
 
@@ -85,7 +85,7 @@ Merci pour votre collaboration !
     - J'aurais plaisir à suivre une unité d'enseignement qui reprend la même
       méthode d'enseignement
   - Description : N'hésitez pas à partager librement votre ressenti sur cette
-    unité d'enseignement. Si elle ne vous a pas satisfait.e, vos retours sont
+    unité d'enseignement. Si elle ne vous a pas satisfait·e, vos retours sont
     précieux pour nous aider à nous améliorer. Il n'y a pas de jugement sur vos
     réponses. Vous pouvez également formuler des commentaires plus spécifiques
     dans la section "Autres remarques et commentaires", si vous le souhaitez.
